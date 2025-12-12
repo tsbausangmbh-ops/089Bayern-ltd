@@ -126,7 +126,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/10">
+        <div className="mt-12 pt-6 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-white/60">
             <p>&copy; {new Date().getFullYear()} 089 Bayern Enerji Sistemleri. Tüm hakları saklıdır.</p>
             <div className="flex flex-wrap items-center justify-center gap-6">
