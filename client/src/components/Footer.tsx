@@ -17,8 +17,9 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/70 text-sm mb-6 leading-relaxed">
-              Alman mühendisliği ile tasarlanmış, Türkiye'nin Akdeniz iklimi için 
-              özelleştirilmiş 4'ü 1 arada enerji çözümleri.
+              Antalya, Muğla, İzmir, Aydın ve Mersin'de güneş enerjisi, ısı pompası ve 
+              enerji depolama sistemleri kurulumu. Alman mühendisliği, Türk hizmet anlayışı. 
+              Vaillant, Samsung ve BYD yetkili bayisi.
             </p>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 text-xs text-white/60">
@@ -55,13 +56,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-6">Sistemlerimiz</h4>
+            <h4 className="font-semibold text-white mb-6">Enerji Sistemlerimiz</h4>
             <ul className="space-y-3 text-sm">
               {[
-                { name: "Isı Pompası", desc: "Verimli ısıtma" },
-                { name: "Güneş Paneli", desc: "Elektrik üretimi" },
-                { name: "Akıllı Soğutma", desc: "Konforlu serinlik" },
-                { name: "Enerji Depolama", desc: "7/24 bağımsızlık" },
+                { name: "Vaillant Isı Pompası", desc: "Alman kalitesi ısıtma" },
+                { name: "Güneş Enerjisi Paneli", desc: "Premium solar kurulum" },
+                { name: "Samsung Klima Sistemi", desc: "Inverter teknoloji" },
+                { name: "BYD Enerji Bataryası", desc: "Lityum depolama" },
               ].map((product) => (
                 <li key={product.name} className="text-white/60">
                   <span className="text-white">{product.name}</span>

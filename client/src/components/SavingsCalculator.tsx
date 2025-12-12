@@ -18,18 +18,18 @@ interface CalculatorData {
 }
 
 const propertyTypes = [
-  { id: "villa", label: "Müstakil Villa", description: "Bahçeli ev, müstakil konut", icon: Home, gradient: "from-amber-500 to-orange-600" },
-  { id: "apartment", label: "Apartman Dairesi", description: "Çatı kullanım hakkı olan", icon: Building2, gradient: "from-sky-500 to-blue-600" },
-  { id: "commercial", label: "İşyeri / Fabrika", description: "Ticari veya endüstriyel", icon: Store, gradient: "from-emerald-500 to-green-600" },
+  { id: "villa", label: "Müstakil Villa / Konut", description: "Antalya, Bodrum, Fethiye villaları", icon: Home, gradient: "from-amber-500 to-orange-600" },
+  { id: "apartment", label: "Apartman Dairesi", description: "Çatı kullanım hakkı olan daireler", icon: Building2, gradient: "from-sky-500 to-blue-600" },
+  { id: "commercial", label: "İşyeri / Otel / Fabrika", description: "Ticari, turizm veya endüstriyel tesis", icon: Store, gradient: "from-emerald-500 to-green-600" },
 ];
 
 const locations = [
-  { id: "antalya", label: "Antalya", sun: "Çok Yüksek" },
-  { id: "mugla", label: "Muğla", sun: "Çok Yüksek" },
-  { id: "izmir", label: "İzmir", sun: "Yüksek" },
-  { id: "aydin", label: "Aydın", sun: "Yüksek" },
-  { id: "mersin", label: "Mersin", sun: "Çok Yüksek" },
-  { id: "other", label: "Diğer", sun: "Orta-Yüksek" },
+  { id: "antalya", label: "Antalya", sun: "2.900+ saat/yıl" },
+  { id: "mugla", label: "Muğla (Bodrum, Fethiye)", sun: "2.800+ saat/yıl" },
+  { id: "izmir", label: "İzmir (Çeşme, Alaçatı)", sun: "2.700+ saat/yıl" },
+  { id: "aydin", label: "Aydın (Kuşadası, Didim)", sun: "2.750+ saat/yıl" },
+  { id: "mersin", label: "Mersin (Alanya)", sun: "2.900+ saat/yıl" },
+  { id: "other", label: "Diğer Akdeniz Bölgesi", sun: "2.500+ saat/yıl" },
 ];
 
 export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps) {
@@ -178,13 +178,14 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
             <span className="text-sm font-medium text-foreground">Ücretsiz Hesaplama</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Ne Kadar{" "}
+            Antalya'da Güneş Enerjisi ile{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-              Tasarruf Edersiniz?
+              Ne Kadar Tasarruf Edersiniz?
             </span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            3 basit adımda potansiyel enerji tasarrufunuzu öğrenin - <span className="text-foreground font-medium">sadece 1 dakika!</span>
+            Akdeniz bölgesi için özel hesaplama: 3 basit adımda güneş paneli ve ısı pompası yatırımınızın 
+            potansiyel getirisini öğrenin - <span className="text-foreground font-medium">sadece 1 dakika!</span>
           </p>
         </div>
 

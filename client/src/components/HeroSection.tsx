@@ -37,18 +37,18 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
         </div>
 
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight tracking-tight">
-          Evinizi Enerji
+          Antalya ve Akdeniz'de
           <br />
           <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-            Bağımsızlığına
+            Güneş Enerjisi
           </span>
           <br />
-          Kavuşturun
+          ve Isı Pompası
         </h1>
 
         <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-          <span className="text-white font-semibold">4'ü 1 Arada Akıllı Enerji Sistemi</span> ile ısıtma, soğutma, 
-          güneş enerjisi ve enerji depolama tek bir çatı altında.
+          Alman mühendisliği ile <span className="text-white font-semibold">4'ü 1 Arada Akıllı Enerji Sistemi</span>: 
+          Güneş paneli, ısı pompası, akıllı klima ve enerji depolama. Muğla, İzmir, Aydın ve Mersin'de hizmet.
         </p>
 
         <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-2xl p-8 mb-12 max-w-xl mx-auto border border-white/10">
@@ -96,8 +96,8 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/10">
-          <p className="text-white/50 text-sm mb-2">Akdeniz Bölgesinde Güvenilen Çözüm Ortağı</p>
-          <p className="text-white text-xl font-semibold">500+ Villada Başarıyla Kurulum</p>
+          <p className="text-white/50 text-sm mb-2">Antalya, Muğla, İzmir, Aydın ve Mersin'de Güvenilen Çözüm Ortağı</p>
+          <p className="text-white text-xl font-semibold">500+ Villa ve Konutda Başarılı Güneş Enerjisi Kurulumu</p>
         </div>
       </div>
 

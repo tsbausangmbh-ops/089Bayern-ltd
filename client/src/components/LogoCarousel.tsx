@@ -19,13 +19,14 @@ export default function LogoCarousel() {
             <span className="text-sm font-medium text-foreground">Premium Markalar</span>
           </div>
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-            Dünya Lideri{" "}
+            Türkiye'de Yetkili Kurulum:{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-              Markalarla Çalışıyoruz
+              Premium Enerji Markaları
             </span>
           </h3>
           <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-            Alman ve dünya kalite standartlarında, uzun ömürlü ve garantili ürünler kullanıyoruz.
+            Vaillant, Samsung, BYD ve Fronius yetkili bayisi olarak Antalya ve Akdeniz'de 
+            orijinal ürün garantisi ile kurulum yapıyoruz. 10-25 yıl üretici garantisi.
           </p>
         </div>
 

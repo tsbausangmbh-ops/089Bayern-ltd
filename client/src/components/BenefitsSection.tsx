@@ -4,32 +4,32 @@ import { Card, CardContent } from "@/components/ui/card";
 const mainBenefits = [
   {
     icon: TrendingDown,
-    title: "Aylık Faturalarda Devrim",
-    description: "Elektrik ve doğalgaz faturalarınızda %70'e varan tasarruf. Akdeniz güneşiyle kendi enerjinizi üretin, fazlasını şebekeye satın.",
+    title: "Antalya'da %70 Enerji Tasarrufu",
+    description: "Akdeniz'in yoğun güneş ışığı sayesinde elektrik ve doğalgaz faturalarınızda %70'e varan tasarruf sağlayın. Güneş panelleri ile kendi elektriğinizi üretin, fazlasını TEDAŞ'a satarak ek gelir elde edin.",
     stat: "%70",
     statLabel: "Tasarruf",
     gradient: "from-emerald-500 to-green-600",
   },
   {
     icon: Shield,
-    title: "Tam Enerji Bağımsızlığı",
-    description: "Enerji fiyat artışlarından, şebeke kesintilerinden ve tedarikçi değişikliklerinden etkilenmeyin. Kendi enerjinizin efendisi olun.",
+    title: "Elektrik Kesintilerinden Bağımsız Yaşam",
+    description: "Enerji depolama bataryaları ile şebeke kesintilerinden ve enerji fiyat artışlarından etkilenmeyin. Antalya ve Akdeniz villalarında 7/24 kesintisiz güç kaynağı.",
     stat: "7/24",
     statLabel: "Kesintisiz",
     gradient: "from-sky-500 to-blue-600",
   },
   {
     icon: Home,
-    title: "Mülk Değeriniz Artar",
-    description: "Enerji verimli evler emlak piyasasında %15-25 daha değerli. Yatırımınız hem bugün hem yarın kazandırır.",
+    title: "Villa ve Konut Değerinde Artış",
+    description: "Güneş enerjisi ve ısı pompası kurulu evler, Antalya emlak piyasasında %15-25 daha yüksek fiyatla satılıyor. Enerji sertifikalı mülk ile yatırımınız değer kazanır.",
     stat: "+%20",
     statLabel: "Değer Artışı",
     gradient: "from-amber-500 to-orange-600",
   },
   {
     icon: Leaf,
-    title: "Doğaya Katkı Sağlayın",
-    description: "Sıfır karbon ayak izi ile çocuklarınıza temiz bir dünya bırakın. Her yıl onlarca ağaç dikmiş kadar çevreye fayda.",
+    title: "Karbon Ayak İzini Sıfırlayın",
+    description: "Sıfır emisyon enerji sistemi ile çocuklarınıza temiz bir Akdeniz bırakın. Yılda ortalama 15-20 ton CO₂ tasarrufu - 1000 ağaç dikmek kadar çevreye fayda.",
     stat: "0",
     statLabel: "CO₂ Salınımı",
     gradient: "from-teal-500 to-emerald-600",
@@ -67,14 +67,14 @@ export default function BenefitsSection() {
             <span className="text-sm font-medium text-foreground">Neden 089 Bayern?</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            Aileniz İçin{" "}
+            Akdeniz'de Güneş Enerjisi{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-              Akıllı Yatırım
+              Yatırımının Avantajları
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Türk ailelerinin enerji ihtiyaçlarını anlıyoruz. Yazın kavurucu sıcakta serinlik, 
-            kışın soğukta sıcaklık - <span className="text-foreground font-medium">hem de cebinizi yakmadan.</span>
+            Antalya, Muğla ve İzmir'de yaşayan ailelerin enerji ihtiyaçlarını anlıyoruz. Yazın 45°C sıcaklıkta serinlik, 
+            kışın ısınma konforu - <span className="text-foreground font-medium">Alman teknolojisi ile hem de cebinizi yakmadan.</span>
           </p>
         </div>
 
@@ -126,19 +126,19 @@ export default function BenefitsSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-                Akdeniz Villalarında
+                Antalya, Muğla ve İzmir'de
                 <br />
                 <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-                  Kanıtlanmış Performans
+                  Güneş Enerjisi Referanslarımız
                 </span>
               </h3>
               <div className="space-y-4">
                 {[
-                  "Antalya, Muğla, İzmir bölgelerinde 500+ başarılı kurulum",
-                  "Ortalama müşteri memnuniyeti: %98",
-                  "Kurulum sonrası 7/24 teknik destek hattı",
-                  "Yıllık ücretsiz bakım ve performans kontrolü",
-                  "10 yıl parça garantisi, 25 yıl panel garantisi",
+                  "Antalya Konyaaltı, Lara, Belek'te 300+ villa kurulumu",
+                  "Muğla Bodrum, Fethiye, Marmaris'te 150+ proje",
+                  "İzmir Çeşme, Alaçatı, Urla'da 50+ konut",
+                  "Kurulum sonrası 7/24 Türkçe teknik destek",
+                  "10 yıl Vaillant garantisi, 25 yıl panel garantisi",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center">

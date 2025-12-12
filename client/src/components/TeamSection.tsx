@@ -53,14 +53,15 @@ export default function TeamSection() {
             <span className="text-sm font-medium text-foreground">Uzman Ekip</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            Sizinle{" "}
+            Antalya Güneş Enerjisi{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-              İletişime Geçelim
+              Uzman Ekibimiz
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Almanya ve Türkiye'de konuşlanan uzman ekibimiz, projenizin her aşamasında 
-            yanınızda. Türkçe ve Almanca destek alın.
+            Almanya Münih ve Türkiye Antalya ofislerimizde konuşlanan deneyimli mühendis ve 
+            satış ekibimiz, güneş enerjisi ve ısı pompası projenizin her aşamasında yanınızda. 
+            Türkçe ve Almanca 7/24 destek.
           </p>
         </div>
 
@@ -136,15 +137,14 @@ export default function TeamSection() {
         <div className="mt-8 text-center">
           <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-white/10 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Hemen{" "}
+              Antalya'da{" "}
               <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-                Ücretsiz Danışmanlık
-              </span>{" "}
-              Alın
+                Ücretsiz Keşif ve Danışmanlık
+              </span>
             </h3>
             <p className="text-muted-foreground mb-6">
-              Sorularınızı yanıtlayalım, projenizi değerlendirelim. 
-              Satış baskısı yok, sadece bilgilendirme.
+              Villanız veya konutunuz için güneş enerjisi potansiyelini yerinde değerlendirelim. 
+              Antalya, Muğla, İzmir, Aydın ve Mersin'de ücretsiz keşif hizmeti. Satış baskısı yok.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" className="px-8 bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg shadow-accent/30">

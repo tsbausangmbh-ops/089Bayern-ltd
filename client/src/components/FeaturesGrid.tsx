@@ -4,15 +4,15 @@ import { Snowflake, Flame, Sun, Battery, Check, Sparkles } from "lucide-react";
 const features = [
   {
     icon: Snowflake,
-    title: "Akıllı Soğutma",
-    subtitle: "Yazın Serin Kalın",
-    description: "Akdeniz'in bunaltıcı yaz sıcağında evinizi serinleten, sessiz ve verimli iklimlendirme sistemi.",
+    title: "Akıllı Klima Sistemi",
+    subtitle: "Antalya ve Akdeniz İçin Verimli Soğutma",
+    description: "Akdeniz'in bunaltıcı yaz sıcaklarında evinizi serinleten Samsung ve Vaillant marka, inverter teknolojili, enerji verimli klima sistemleri. Antalya, Muğla ve İzmir'de profesyonel kurulum.",
     benefits: [
-      "Sessiz çalışma - gece bile rahatsız etmez",
-      "Güneş enerjisiyle entegre çalışır",
-      "Akıllı telefon ile uzaktan kontrol",
-      "Homojen serinlik, çekiş yapmaz",
-      "Sıcak havalarda düşük elektrik tüketimi",
+      "A+++ enerji sınıfı - düşük elektrik tüketimi",
+      "Güneş paneli ile entegre çalışır",
+      "WiFi ile akıllı telefon kontrolü",
+      "Homojen serinlik, sağlıklı hava dağılımı",
+      "7/24 teknik destek ve bakım hizmeti",
     ],
     gradient: "from-sky-500 to-blue-600",
     bgGradient: "from-sky-500/20 to-blue-600/10",
@@ -20,15 +20,15 @@ const features = [
   },
   {
     icon: Flame,
-    title: "Isı Pompası",
-    subtitle: "Kışın Sıcak Kalın",
-    description: "Doğalgaz ve elektrik bağımlılığına son! Havadan enerji çekerek evinizi ısıtan akıllı sistem.",
+    title: "Isı Pompası Sistemleri",
+    subtitle: "Vaillant Yetkili Kurulum - Türkiye",
+    description: "Alman Vaillant marka hava kaynaklı ısı pompası ile evinizi %70 daha az enerji harcayarak ısıtın. Antalya kış aylarında bile verimli çalışan, doğalgaza alternatif çevre dostu ısıtma sistemi.",
     benefits: [
-      "Elektrik ve doğalgaza kıyasla %70 tasarruf",
-      "Çevre dostu - sıfır emisyon",
-      "Yerden ısıtma ile tam uyum",
-      "Düşük bakım, uzun ömür",
-      "Tek cihazla ısıtma ve soğutma",
+      "Doğalgaz ve elektrikli ısıtmaya göre %70 tasarruf",
+      "Sıfır karbon emisyonu - çevre dostu",
+      "Yerden ısıtma ve radyatör uyumlu",
+      "10 yıl Vaillant üretici garantisi",
+      "Tek cihazla hem ısıtma hem soğutma",
     ],
     gradient: "from-orange-500 to-red-600",
     bgGradient: "from-orange-500/20 to-red-600/10",
@@ -36,15 +36,15 @@ const features = [
   },
   {
     icon: Sun,
-    title: "Güneş Paneli",
-    subtitle: "Kendi Elektriğinizi Üretin",
-    description: "Akdeniz güneşini avantaja çevirin! Yılda 300+ güneşli gün ile maksimum verim.",
+    title: "Güneş Enerjisi Panelleri",
+    subtitle: "Akdeniz'de Yılda 300+ Güneşli Gün",
+    description: "Antalya'nın yıllık 2.900+ saat güneşlenme potansiyelini değerlendirin. Premium güneş panelleri ile kendi elektriğinizi üretin, fazlasını şebekeye satarak gelir elde edin. Muğla, İzmir, Aydın ve Mersin'de kurulum.",
     benefits: [
-      "Ücretsiz güneş enerjisinden elektrik",
-      "Fazla enerjiyi şebekeye satın",
-      "Yatırımınızı 3-5 yılda geri alın",
-      "Evinizin değerini artırın",
-      "25+ yıl performans garantisi",
+      "Yıllık 15.000-25.000 TL elektrik tasarrufu",
+      "Fazla enerjiyi TEDAŞ'a satın",
+      "3-5 yıl içinde yatırım geri dönüşü",
+      "Ev değerinde %15-25 artış",
+      "25 yıl panel performans garantisi",
     ],
     gradient: "from-amber-500 to-yellow-500",
     bgGradient: "from-amber-500/20 to-yellow-500/10",
@@ -52,15 +52,15 @@ const features = [
   },
   {
     icon: Battery,
-    title: "Enerji Depolama",
-    subtitle: "Gece Gündüz Bağımsızlık",
-    description: "Ürettiğiniz enerjiyi depolayın, elektrik kesintilerinden etkilenmeyin, tam bağımsızlık.",
+    title: "Enerji Depolama Bataryaları",
+    subtitle: "Samsung SDI ve BYD Lityum Batarya",
+    description: "Gündüz ürettiğiniz güneş enerjisini Samsung SDI veya BYD lityum bataryalarda depolayın. Gece kullanın, elektrik kesintilerinde bağımsız kalın. Antalya ve Akdeniz villalarına özel çözümler.",
     benefits: [
-      "Gece bile güneş enerjisi kullanın",
-      "Elektrik kesintilerine son",
-      "Şebeke bağımsızlığı",
-      "Akıllı enerji yönetim sistemi",
-      "Modüler tasarım - ihtiyaca göre genişletin",
+      "Gece bile güneş enerjisi kullanımı",
+      "Elektrik kesintilerinde kesintisiz güç",
+      "Şebeke bağımsız yaşam imkanı",
+      "Akıllı enerji yönetim uygulaması",
+      "Modüler tasarım - ihtiyaca göre kapasite artırma",
     ],
     gradient: "from-emerald-500 to-green-600",
     bgGradient: "from-emerald-500/20 to-green-600/10",
@@ -81,14 +81,15 @@ export default function FeaturesGrid() {
             <span className="text-sm font-medium text-foreground">Komple Enerji Çözümü</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            4'ü 1 Arada{" "}
+            Antalya'da 4'ü 1 Arada{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-              Akıllı Sistem
+              Enerji Sistemi Kurulumu
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Alman mühendisliği ile tasarlanmış, Türkiye'nin Akdeniz iklimi için özelleştirilmiş 
-            entegre enerji sistemi. <span className="text-foreground font-medium">Tek yatırım, dört farklı çözüm.</span>
+            entegre güneş enerjisi ve ısı pompası sistemi. Vaillant, Samsung ve BYD markaları ile 
+            <span className="text-foreground font-medium"> tek yatırımda dört farklı çözüm.</span>
           </p>
         </div>
 
@@ -129,12 +130,15 @@ export default function FeaturesGrid() {
         <div className="mt-8 text-center">
           <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-white/10">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Neden Ayrı Ayrı Sistem Alasınız?
+              Neden Antalya'da Entegre Enerji Sistemi Tercih Etmelisiniz?
             </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              4'ü 1 arada sistemle tek seferde kurulum, tek muhatap, tek garanti. 
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
+              4'ü 1 arada güneş enerjisi, ısı pompası, klima ve batarya sisteminde tek seferde kurulum, tek muhatap, tek garanti. 
               Ayrı sistemlere kıyasla <span className="bg-gradient-to-r from-amber-400 to-accent bg-clip-text text-transparent font-semibold">%30 daha az maliyet</span>, 
               <span className="text-primary font-semibold"> %50 daha kolay yönetim</span>.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Antalya, Muğla, İzmir, Aydın ve Mersin'de 500+ başarılı kurulum. Alman kalitesi, Türk hizmet anlayışı.
             </p>
           </div>
         </div>
