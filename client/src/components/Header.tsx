@@ -42,8 +42,8 @@ export default function Header({ onCtaClick }: HeaderProps) {
               <Zap className="w-6 h-6 text-white" />
             </div>
             <div>
-              <span className="font-bold text-lg text-white">089 Bayern</span>
-              <span className="hidden md:block text-xs text-white/60">Enerji Sistemleri</span>
+              <span className={`font-bold text-lg transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}>089 Bayern</span>
+              <span className={`hidden md:block text-xs transition-colors ${isScrolled ? "text-muted-foreground" : "text-white/60"}`}>Enerji Sistemleri</span>
             </div>
           </div>
 
@@ -57,7 +57,9 @@ export default function Header({ onCtaClick }: HeaderProps) {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-sm font-medium text-white/80 hover:text-white px-4 py-2 rounded-lg hover-elevate active-elevate-2 transition-all"
+                className={`text-sm font-medium px-4 py-2 rounded-lg hover-elevate active-elevate-2 transition-all ${
+                  isScrolled ? "text-foreground/80 hover:text-foreground" : "text-white/80 hover:text-white"
+                }`}
                 data-testid={`link-nav-${item.id}`}
               >
                 {item.label}
@@ -77,7 +79,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
             <Button
               size="icon"
               variant="ghost"
-              className="md:hidden text-white"
+              className={`md:hidden transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               data-testid="button-mobile-menu"
             >
