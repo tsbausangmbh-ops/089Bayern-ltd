@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
-import { Home, Building2, Store, ArrowRight, ArrowLeft, Check, Calculator, TrendingUp, Leaf, Banknote } from "lucide-react";
+import { Home, Building2, Store, ArrowRight, ArrowLeft, Check, Calculator, TrendingUp, Leaf, Banknote, Sparkles } from "lucide-react";
 
 interface SavingsCalculatorProps {
   onComplete?: (data: CalculatorData) => void;
@@ -18,9 +18,9 @@ interface CalculatorData {
 }
 
 const propertyTypes = [
-  { id: "villa", label: "Müstakil Villa", description: "Bahçeli ev, müstakil konut", icon: Home },
-  { id: "apartment", label: "Apartman Dairesi", description: "Çatı kullanım hakkı olan", icon: Building2 },
-  { id: "commercial", label: "İşyeri / Fabrika", description: "Ticari veya endüstriyel", icon: Store },
+  { id: "villa", label: "Müstakil Villa", description: "Bahçeli ev, müstakil konut", icon: Home, gradient: "from-amber-500 to-orange-600" },
+  { id: "apartment", label: "Apartman Dairesi", description: "Çatı kullanım hakkı olan", icon: Building2, gradient: "from-sky-500 to-blue-600" },
+  { id: "commercial", label: "İşyeri / Fabrika", description: "Ticari veya endüstriyel", icon: Store, gradient: "from-emerald-500 to-green-600" },
 ];
 
 const locations = [
@@ -81,13 +81,16 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
 
   if (showResults) {
     return (
-      <section id="calculator" className="py-20 md:py-32 bg-background" data-testid="section-calculator">
-        <div className="max-w-3xl mx-auto px-6 md:px-8">
-          <Card className="overflow-hidden border-2 border-primary/20">
+      <section id="calculator" className="py-24 md:py-32 bg-background relative overflow-hidden" data-testid="section-calculator">
+        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
+        
+        <div className="max-w-3xl mx-auto px-6 md:px-8 relative">
+          <Card className="overflow-hidden border-emerald-500/30 bg-gradient-to-br from-card via-card to-emerald-500/5 shadow-2xl shadow-emerald-500/10">
             <CardContent className="p-8 md:p-12">
               <div className="text-center mb-10">
-                <div className="w-20 h-20 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-6">
-                  <Check className="w-10 h-10 text-green-500" />
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-emerald-500/30">
+                  <Check className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold text-foreground mb-3">
                   Tasarruf Analiziniz Hazır!
@@ -98,21 +101,21 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-                <div className="text-center p-6 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl">
+                <div className="text-center p-6 bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl border border-primary/20">
                   <Banknote className="w-8 h-8 text-primary mx-auto mb-3" />
                   <div className="text-4xl font-bold text-primary mb-1">
                     ₺{estimatedMonthlySavings.toLocaleString()}
                   </div>
                   <p className="text-sm text-muted-foreground">Aylık Tasarruf</p>
                 </div>
-                <div className="text-center p-6 bg-gradient-to-br from-accent/20 to-accent/10 rounded-xl">
+                <div className="text-center p-6 bg-gradient-to-br from-accent/20 to-accent/5 rounded-xl border border-accent/20">
                   <TrendingUp className="w-8 h-8 text-accent mx-auto mb-3" />
                   <div className="text-4xl font-bold text-accent mb-1">
                     ₺{yearlySavings.toLocaleString()}
                   </div>
                   <p className="text-sm text-muted-foreground">Yıllık Tasarruf</p>
                 </div>
-                <div className="text-center p-6 bg-gradient-to-br from-emerald-500/10 to-emerald-500/5 rounded-xl">
+                <div className="text-center p-6 bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 rounded-xl border border-emerald-500/20">
                   <Leaf className="w-8 h-8 text-emerald-500 mx-auto mb-3" />
                   <div className="text-4xl font-bold text-emerald-500 mb-1">
                     {treesEquivalent}
@@ -121,7 +124,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                 </div>
               </div>
 
-              <div className="bg-muted/50 rounded-xl p-6 mb-8">
+              <div className="bg-background/50 rounded-xl p-6 mb-8 border border-border/50">
                 <h4 className="font-semibold text-foreground mb-4">Yatırım Özeti</h4>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
@@ -134,7 +137,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                   </div>
                   <div>
                     <span className="text-muted-foreground">10 Yıllık Toplam Tasarruf:</span>
-                    <span className="block font-semibold text-green-600">₺{(yearlySavings * 10).toLocaleString()}</span>
+                    <span className="block font-semibold text-emerald-400">₺{(yearlySavings * 10).toLocaleString()}</span>
                   </div>
                   <div>
                     <span className="text-muted-foreground">Yıllık CO₂ Azaltma:</span>
@@ -148,12 +151,13 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
               </p>
 
               <Button
-                className="w-full py-6 text-lg"
+                className="w-full py-6 text-lg bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg shadow-accent/30"
                 size="lg"
                 onClick={() => onComplete?.(data)}
                 data-testid="button-get-quote"
               >
                 Ücretsiz Keşif Randevusu Al
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </CardContent>
           </Card>
@@ -163,10 +167,13 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
   }
 
   return (
-    <section id="calculator" className="py-20 md:py-32 bg-gradient-to-b from-background to-muted/30" data-testid="section-calculator">
-      <div className="max-w-2xl mx-auto px-6 md:px-8">
+    <section id="calculator" className="py-24 md:py-32 bg-gradient-to-b from-card/30 to-background relative overflow-hidden" data-testid="section-calculator">
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
+      
+      <div className="max-w-2xl mx-auto px-6 md:px-8 relative">
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-5 py-2 mb-6">
             <Calculator className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">Ücretsiz Hesaplama</span>
           </div>
@@ -174,11 +181,11 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
             Ne Kadar Tasarruf Edersiniz?
           </h2>
           <p className="text-lg text-muted-foreground">
-            3 basit adımda potansiyel enerji tasarrufunuzu öğrenin - sadece 1 dakika!
+            3 basit adımda potansiyel enerji tasarrufunuzu öğrenin - <span className="text-foreground font-medium">sadece 1 dakika!</span>
           </p>
         </div>
 
-        <Card className="overflow-hidden border-2 border-border">
+        <Card className="overflow-hidden border-border/50 bg-card/90 backdrop-blur-sm shadow-xl">
           <CardContent className="p-8">
             <div className="mb-8">
               <div className="flex items-center justify-between text-sm text-muted-foreground mb-3">
@@ -197,19 +204,19 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                     <button
                       key={type.id}
                       onClick={() => setData({ ...data, propertyType: type.id })}
-                      className={`p-6 rounded-xl border-2 transition-all hover-elevate active-elevate-2 text-left flex items-center gap-4 ${
+                      className={`p-6 rounded-xl border-2 transition-all hover-elevate active-elevate-2 text-left flex items-center gap-5 ${
                         data.propertyType === type.id
-                          ? "border-primary bg-primary/5"
-                          : "border-border"
+                          ? "border-primary bg-primary/10"
+                          : "border-border/50 bg-background/50"
                       }`}
                       data-testid={`button-property-${type.id}`}
                     >
-                      <div className={`w-14 h-14 rounded-lg flex items-center justify-center ${
-                        data.propertyType === type.id ? "bg-primary/10" : "bg-muted"
+                      <div className={`w-14 h-14 rounded-xl flex items-center justify-center shadow-lg ${
+                        data.propertyType === type.id 
+                          ? `bg-gradient-to-br ${type.gradient}` 
+                          : "bg-muted"
                       }`}>
-                        <type.icon className={`w-7 h-7 ${
-                          data.propertyType === type.id ? "text-primary" : "text-muted-foreground"
-                        }`} />
+                        <type.icon className={`w-7 h-7 ${data.propertyType === type.id ? "text-white" : "text-muted-foreground"}`} />
                       </div>
                       <div>
                         <span className={`block font-semibold text-lg ${
@@ -242,7 +249,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                       type="number"
                       value={data.monthlyBill}
                       onChange={(e) => setData({ ...data, monthlyBill: Number(e.target.value) })}
-                      className="h-14 text-lg"
+                      className="h-14 text-lg bg-background/50"
                       placeholder="3000"
                       data-testid="input-monthly-bill"
                     />
@@ -257,7 +264,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                       type="number"
                       value={data.propertySize}
                       onChange={(e) => setData({ ...data, propertySize: Number(e.target.value) })}
-                      className="h-14 text-lg"
+                      className="h-14 text-lg bg-background/50"
                       placeholder="200"
                       data-testid="input-property-size"
                     />
@@ -279,8 +286,8 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                       onClick={() => setData({ ...data, location: loc.label })}
                       className={`p-4 rounded-xl border-2 text-left transition-all hover-elevate active-elevate-2 ${
                         data.location === loc.label
-                          ? "border-primary bg-primary/5"
-                          : "border-border"
+                          ? "border-primary bg-primary/10"
+                          : "border-border/50 bg-background/50"
                       }`}
                       data-testid={`button-location-${loc.id}`}
                     >
@@ -296,7 +303,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
               </div>
             )}
 
-            <div className="flex items-center justify-between gap-4 mt-10 pt-6 border-t border-border">
+            <div className="flex items-center justify-between gap-4 mt-10 pt-6 border-t border-border/50">
               <Button
                 variant="outline"
                 onClick={handleBack}
@@ -310,7 +317,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
               <Button
                 onClick={handleNext}
                 disabled={!canProceed()}
-                className="h-12 px-8"
+                className="h-12 px-8 bg-gradient-to-r from-primary to-blue-600 border-0"
                 data-testid="button-calc-next"
               >
                 {step === totalSteps ? "Sonucu Gör" : "Devam Et"}

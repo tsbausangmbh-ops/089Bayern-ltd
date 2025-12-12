@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Zap } from "lucide-react";
 
 interface HeaderProps {
   onCtaClick?: () => void;
@@ -30,23 +30,24 @@ export default function Header({ onCtaClick }: HeaderProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-border"
-          : "bg-transparent"
+          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-lg"
+          : "bg-gradient-to-b from-black/50 to-transparent"
       }`}
       data-testid="header-main"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="flex items-center justify-between gap-4 h-16 md:h-20">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">089</span>
+          <div className="flex items-center gap-3">
+            <div className="w-11 h-11 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
+              <Zap className="w-6 h-6 text-white" />
             </div>
-            <span className={`font-semibold text-lg ${isScrolled ? "text-foreground" : "text-white"}`}>
-              Bayern
-            </span>
+            <div>
+              <span className="font-bold text-lg text-white">089 Bayern</span>
+              <span className="hidden md:block text-xs text-white/60">Enerji Sistemleri</span>
+            </div>
           </div>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-1">
             {[
               { label: "Sistem", id: "features" },
               { label: "Avantajlar", id: "benefits" },
@@ -56,9 +57,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-colors hover-elevate active-elevate-2 px-2 py-1 rounded-md ${
-                  isScrolled ? "text-foreground" : "text-white/90 hover:text-white"
-                }`}
+                className="text-sm font-medium text-white/80 hover:text-white px-4 py-2 rounded-lg hover-elevate active-elevate-2 transition-all"
                 data-testid={`link-nav-${item.id}`}
               >
                 {item.label}
@@ -69,16 +68,16 @@ export default function Header({ onCtaClick }: HeaderProps) {
           <div className="flex items-center gap-4">
             <Button
               onClick={onCtaClick}
-              className="hidden md:flex"
+              className="hidden md:flex bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg shadow-accent/20"
               data-testid="button-header-cta"
             >
-              Teklif Al
+              Ücretsiz Teklif Al
             </Button>
 
             <Button
               size="icon"
               variant="ghost"
-              className={`md:hidden ${isScrolled ? "" : "text-white"}`}
+              className="md:hidden text-white"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               data-testid="button-mobile-menu"
             >
@@ -89,8 +88,8 @@ export default function Header({ onCtaClick }: HeaderProps) {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-background border-b border-border">
-          <nav className="flex flex-col p-4 gap-2">
+        <div className="md:hidden bg-background/98 backdrop-blur-md border-b border-border">
+          <nav className="flex flex-col p-4 gap-1">
             {[
               { label: "Sistem", id: "features" },
               { label: "Avantajlar", id: "benefits" },
@@ -100,14 +99,18 @@ export default function Header({ onCtaClick }: HeaderProps) {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-left px-4 py-3 rounded-md hover-elevate active-elevate-2 text-foreground"
+                className="text-left px-4 py-3 rounded-lg hover-elevate active-elevate-2 text-foreground font-medium"
                 data-testid={`link-mobile-nav-${item.id}`}
               >
                 {item.label}
               </button>
             ))}
-            <Button onClick={onCtaClick} className="mt-2" data-testid="button-mobile-cta">
-              Teklif Al
+            <Button 
+              onClick={onCtaClick} 
+              className="mt-3 bg-gradient-to-r from-accent to-orange-600 border-0" 
+              data-testid="button-mobile-cta"
+            >
+              Ücretsiz Teklif Al
             </Button>
           </nav>
         </div>
