@@ -1,166 +1,178 @@
-# Design Guidelines: 089 Bayern Lead Generation Funnel
+# Design Guidelines: 089 Bayern Lead Generation Funnel (Mediterranean Edition)
 
 ## Design Approach
-**Reference-Based**: Drawing from Tesla's clean energy aesthetic, Stripe's conversion-focused clarity, and Airbnb's approachable professionalism. This approach balances technical credibility with emotional appeal for high-value B2B lead generation.
+**Reference-Based**: Drawing from Tesla's clean energy aesthetic, Stripe's conversion-focused clarity, and Airbnb's Mediterranean property listings. This creates premium positioning that balances German engineering credibility with warm, approachable Mediterranean lifestyle appeal for high-value B2B lead generation.
 
 ## Core Design Principles
-1. **Trust & Credibility**: German quality positioning requires premium, polished aesthetic
-2. **Progressive Disclosure**: Multi-step funnel guides users without overwhelming
-3. **Energy-Forward**: Visual language emphasizes sustainability, efficiency, and innovation
-4. **Conversion-Optimized**: Every section drives toward lead capture
+1. **Mediterranean Warmth**: Visual language evokes coastal living, sunshine, outdoor spaces, family gatherings
+2. **German Trust**: Premium materials, precise spacing, quality indicators throughout
+3. **Progressive Disclosure**: Multi-step funnel guides without overwhelming
+4. **Conversion-Optimized**: Every element drives toward lead capture
 
 ---
 
 ## Typography
 
-**Primary Font**: Inter (Google Fonts)
-- Headers: 600-700 weight, crisp and modern
-- Body: 400-500 weight, excellent Turkish character support
+**Primary Font**: Inter (Google Fonts) - excellent Turkish character support
 
-**Scale**:
-- Hero Headline: text-5xl md:text-6xl lg:text-7xl (bold, impactful)
-- Section Headers: text-3xl md:text-4xl (semi-bold)
-- Subsections: text-xl md:text-2xl (medium)
-- Body Text: text-base md:text-lg (regular)
-- Small Print: text-sm (light disclaimers, form hints)
+**Hierarchy**:
+- Hero Headline: text-6xl md:text-7xl lg:text-8xl font-bold
+- Section Headers: text-4xl md:text-5xl font-semibold  
+- Subsections: text-2xl md:text-3xl font-medium
+- Body Text: text-lg md:text-xl font-normal
+- Small Print/Labels: text-sm font-normal
 
 ---
 
 ## Layout System
 
-**Spacing Primitives**: Tailwind units of 4, 6, 8, 12, 16, 20, 24
-- Section padding: py-16 md:py-24 lg:py-32
+**Spacing Primitives**: Tailwind units of 4, 8, 12, 16, 24
+- Section padding: py-20 md:py-32
 - Component gaps: gap-8 md:gap-12
-- Card padding: p-6 md:p-8
+- Card padding: p-8 md:p-12
 - Form spacing: space-y-6
 
 **Container Strategy**:
-- Full-width sections with inner max-w-7xl mx-auto px-6 md:px-8
-- Form containers: max-w-2xl for single-column, max-w-5xl for multi-step
-- Text content: max-w-3xl for readability
-
-**Grid Patterns**:
-- Features: grid-cols-1 md:grid-cols-2 lg:grid-cols-4 (4-in-1 system)
-- Benefits: grid-cols-1 md:grid-cols-3
-- Team: grid-cols-1 md:grid-cols-3
-- Calculator/Form: Single column on mobile, strategic 2-column on desktop
+- Full-width sections: max-w-7xl mx-auto px-6 md:px-8
+- Form containers: max-w-2xl single-column flow
+- Text content: max-w-3xl for optimal readability
 
 ---
 
 ## Component Library
 
 ### Navigation
-- Sticky header with transparent-to-solid transition on scroll
-- Logo left, CTA button right ("Ücretsiz Danışmanlık" - Free Consultation)
-- Mobile: Hamburger menu with full-screen overlay
-- Icons: Heroicons (outline style)
+Sticky header with subtle backdrop-blur transition on scroll. Logo left, prominent "Ücretsiz Danışmanlık" (Free Consultation) CTA button right. Mobile: hamburger menu with full-screen slide-out. Icons: Heroicons outline style.
 
-### Hero Section
-- Full-viewport height (h-screen) with stunning energy-themed background image
-- Image: Modern home with solar panels at golden hour, architectural photography
-- Centered content with backdrop-blur-sm bg-white/10 container
-- Headline emphasizing "4'ü 1 Arada" (4-in-1) value proposition
-- Subheadline highlighting cost savings (70% reduction)
-- Dual CTAs: Primary "Hesaplama Başlat" (Start Calculator), Secondary "Daha Fazla Bilgi" (Learn More)
-- Trust indicators below CTAs: "✓ Alman Kalitesi ✓ 10+ Yıl Garanti ✓ Türkiye'ye Özel"
+### Hero Section  
+Full-viewport (h-screen) stunning background image of modern Mediterranean villa with solar panels, shot during golden hour - white stucco walls, terracotta roof tiles, bright blue sky, visible solar installation, lush greenery. Centered content overlay with backdrop-blur-md glass effect container.
 
-### Product Showcase (4-in-1 System)
-- 4-column grid on desktop showcasing each system component
-- Cards with large icons (heating, cooling, solar, battery)
-- Icon style: Outlined, modern, energy-themed from Heroicons
-- Hover effect: subtle lift (shadow-lg transition)
-- Each card: Icon, title, 3-4 bullet benefits
+Content structure:
+- Trust badge row: "Alman Mühendisliği | 10+ Yıl Garanti | Akdeniz'e Özel Çözümler"
+- Headline: "Evinizi Enerji Bağımsızlığına Kavuşturun" with "4'ü 1 Arada Sistem" emphasis
+- Subheadline: "Isıtma, Soğutma, Güneş Enerjisi ve Enerji Depolama - Tek Çözümde %70 Tasarruf"
+- Dual CTAs with blurred backgrounds: Primary "Ücretsiz Hesaplama Yap", Secondary "Sistemi Keşfet"
+- Social proof ticker: "500+ Akdeniz Villası'nda Güvenle Kullanılıyor"
+
+### 4-in-1 System Showcase
+4-column grid (grid-cols-1 md:grid-cols-2 lg:grid-cols-4) with large icon cards. Each system component (Isıtma Pompası, Klima, Güneş Paneli, Enerji Depolama) displayed with:
+- Large Heroicons icon (64x64 size)
+- Component title (text-xl font-semibold)
+- 4 key benefits as checkmark list
+- Hover: subtle shadow-xl lift effect
 
 ### Interactive Savings Calculator
-- Multi-step wizard interface (3-4 steps)
-- Progress indicator at top (step dots or progress bar)
-- Step 1: Property type (Ev/Villa, Apartman, İşyeri) - large icon buttons
-- Step 2: Current energy costs (slider inputs with live preview)
-- Step 3: Location/Size (dropdown + number input)
-- Results page: Animated savings visualization, estimated ROI, next steps CTA
-- Form styling: Large touch-friendly inputs (h-12), rounded-lg borders
+Multi-step wizard (4 steps) with visual progress dots at top:
 
-### Lead Capture Forms
-- Clean, spacious layout with single-column flow
-- Input fields: rounded-lg, border-2, focus:ring-2 states
-- Labels above inputs (text-sm font-medium)
-- Required field indicators (asterisk)
-- Privacy assurance text below form
-- Large CTA button: w-full py-4 rounded-lg text-lg font-semibold
+**Step 1 - Property Type**: 3 large icon cards (Müstakil Villa, Apart, İşyeri) as selection buttons (h-40, touch-friendly)
 
-### Benefits Section
-- Alternating content blocks (text left/image right, then reverse)
-- Large feature images: Professional installation photos, happy customers, system diagrams
-- Checkmark lists with Heroicons check-circle icons
-- Pull quotes highlighting key benefits in larger text-xl font-medium
+**Step 2 - Current Energy Costs**: Range sliders with live preview showing monthly/annual amounts, visual cost breakdown chart
 
-### Social Proof
-- Logo carousel: German manufacturer logos (Vaillant, Samsung, etc.)
-- Customer testimonials (if available) - card-based layout
-- Trust badges: German quality certification, warranty seals
+**Step 3 - Location & Property Size**: Dropdown for coastal region (Antalya, Muğla, İzmir, Diğer) + number inputs for m²
 
-### Team Section
-- 3-column grid with team photos
-- Each card: Photo (rounded-full or rounded-lg), name, title, languages, contact buttons
-- Contact info visible with click-to-call/email functionality
+**Step 4 - Results**: Animated savings visualization with:
+- Large savings number (text-5xl font-bold)
+- ROI timeline graphic  
+- Environmental impact (CO₂ reduction, tree equivalent)
+- Next step CTA: "Uzmanımızla Görüşün"
+
+Form styling: Extra large inputs (h-14), rounded-xl borders, generous padding
+
+### Benefits Deep-Dive
+Alternating content blocks (6 sections total):
+
+1. Energy Independence: Text left, large image right (villa with rooftop solar at sunset)
+2. Year-Round Comfort: Image left (family enjoying air-conditioned living room), text right
+3. Investment Value: Text left, infographic right (property value increase chart)
+4. German Quality: Image left (close-up German components), text right with certification badges
+5. Mediterranean Optimized: Text left, image right (coastal installation performance data)
+6. Family Peace of Mind: Image left (multi-generation family gathering), text right
+
+Each section: Large hero image (rounded-2xl shadow-2xl), checkmark benefit lists, pull quotes in text-2xl font-medium
+
+### Social Proof Section
+Three-part trust builder:
+
+**Manufacturer Logos**: Scrolling carousel with premium German brands (Vaillant, Viessmann, Samsung, Bosch)
+
+**Customer Testimonials**: 3-column grid with:
+- Customer photo (rounded-full)
+- Quote (text-lg italic)
+- Name, location, installation year
+- Star rating visualization
+
+**Installation Gallery**: Masonry grid (3-4 columns) showcasing completed Mediterranean villa installations
+
+### Expert Team Section
+3-column grid with team member cards:
+- Professional headshot (rounded-xl, large format)
+- Name + title (Enerji Danışmanı)
+- Languages spoken (Türkçe, Almanca icons)
+- Direct contact buttons: "Ara" and "WhatsApp"
+- Expertise tags below
+
+### Lead Capture Form
+Prominent section with attention-grabbing header: "Ücretsiz Ön Hesaplama ve Danışmanlık"
+
+Single-column form (max-w-2xl) with:
+- Full name, phone, email (all required)
+- Property location dropdown
+- Property type radio buttons
+- Approximate budget range (optional field for qualification)
+- KVKK consent checkbox with clear privacy text
+- Large submit: "Uzman Görüşmesi Talep Et" (w-full py-5 text-xl)
+
+Reassurance text below: "Bilgileriniz SSL ile korunur. Satış baskısı yapmıyoruz - sadece bilgilendirme."
 
 ### Footer
-- Comprehensive 4-column layout on desktop, stacked on mobile
-- Column 1: Company info + logo
-- Column 2: Quick links (Hakkımızda, Ürünler, İletişim)
-- Column 3: Contact information with icons
-- Column 4: Newsletter signup (optional lead magnet)
-- Bottom bar: Copyright, privacy policy, social media icons
+4-column desktop layout:
+- **Column 1**: Logo, company mission statement, German quality badge
+- **Column 2**: Hızlı Linkler (Anasayfa, Ürünler, Referanslar, İletişim)
+- **Column 3**: İletişim (Phone with click-to-call, Email, WhatsApp, Office address in Antalya)
+- **Column 4**: Bizi Takip Edin (Social media icons, newsletter signup with "Enerji Tasarruf İpuçları" lead magnet)
+
+Bottom bar: Copyright, KVKK Privacy Policy link, social icons
 
 ---
 
 ## Images
 
-**Hero Image**: 
-Large, high-quality architectural photograph of a modern Turkish villa with visible solar panel installation, shot during golden hour. Image should convey luxury, sustainability, and Mediterranean climate. Use as full-viewport background with subtle overlay.
+**Required Images** (all professional/premium stock):
 
-**Section Images**:
-1. Heat pump installation (professional, clean)
-2. Happy family in comfortable home interior
-3. Solar panel array on roof (bright, optimistic)
-4. Energy storage system/battery (high-tech, German engineering)
-5. Team member headshots (professional, approachable)
+1. **Hero Background**: Luxury Mediterranean villa exterior with solar panels, golden hour lighting, white walls, terracotta roof, clear blue sky, 4K resolution
+2. **Property with Solar**: Modern coastal home showcasing full rooftop installation
+3. **Family Comfort**: Multi-generation Turkish family relaxing in bright, comfortable interior
+4. **Installation Quality**: Close-up of German-manufactured heat pump/components with visible branding
+5. **Coastal Performance**: Solar panels against bright Mediterranean sun and sea backdrop
+6. **Happy Customers**: Professional photo of satisfied homeowners outside their villa
+7. **Team Headshots**: 3 professional consultant photos (diverse, approachable)
+8. **Installation Gallery**: 6-8 photos of completed projects in various Mediterranean settings
 
-**Image Treatment**: 
-- All images: High resolution, professionally shot or premium stock
-- Hero: Subtle dark overlay (bg-gradient-to-b from-transparent to-black/40) for text contrast
-- Section images: rounded-xl, shadow-2xl for depth
+All images: High-resolution, professionally shot or premium stock, rounded-xl treatment with shadow-2xl depth.
 
 ---
 
 ## Animations
 
-Use sparingly for polish:
-- Scroll-triggered fade-in for sections (opacity + translateY)
-- Calculator: Smooth step transitions
-- Hover states: scale-105 transform on cards
-- No complex animations - keep performance optimal
+Minimal and purposeful:
+- Scroll-triggered section fade-ins (opacity + translateY 20px)
+- Calculator step transitions (slide horizontal)
+- Savings counter animation on results page (count-up effect)
+- Card hover: scale-105 transform
+- No parallax or complex effects
 
 ---
 
-## Form UX Specifics
+## Form & Conversion UX
 
-**Validation**:
-- Inline validation on blur
-- Success: green check icon, error: red warning with message
-- Disabled submit until valid
+**Validation**: Real-time inline validation, green checkmark for valid, red warning with Turkish error messages
 
-**Multi-Step Flow**:
-- Persistent progress bar
-- Back/Next navigation clearly visible
-- Save progress indication
-- Mobile-optimized tap targets (min h-12)
+**Mobile Optimization**: All touch targets minimum h-12, extra padding on form inputs (h-14), thumb-friendly button placement
 
-**Privacy & Trust**:
-- GDPR-compliant consent checkbox
-- "Verileriniz güvende" (Your data is safe) messaging
-- SSL badge display
+**Trust Signals**: SSL badge visible, "Verileriniz Güvende" messaging, no spam commitment, KVKK compliance badge
+
+**Progress Saving**: Calculator shows "İlerlemeniz Kaydedildi" confirmation between steps
 
 ---
 
-This design creates a professional, conversion-optimized funnel that positions 089 Bayern as a premium German quality provider while making the complex 4-in-1 system understandable and desirable to Turkish homeowners.
+This Mediterranean-focused design positions 089 Bayern as the premium choice for coastal Turkish homeowners seeking energy independence through German engineering quality, while creating an emotional connection to Mediterranean lifestyle values.

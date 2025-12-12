@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
-import { Home, Building2, Store, ArrowRight, ArrowLeft, Check, Calculator } from "lucide-react";
+import { Home, Building2, Store, ArrowRight, ArrowLeft, Check, Calculator, TrendingUp, Leaf, Banknote } from "lucide-react";
 
 interface SavingsCalculatorProps {
   onComplete?: (data: CalculatorData) => void;
@@ -18,21 +18,26 @@ interface CalculatorData {
 }
 
 const propertyTypes = [
-  { id: "villa", label: "Ev / Villa", icon: Home },
-  { id: "apartment", label: "Apartman", icon: Building2 },
-  { id: "commercial", label: "İşyeri", icon: Store },
+  { id: "villa", label: "Müstakil Villa", description: "Bahçeli ev, müstakil konut", icon: Home },
+  { id: "apartment", label: "Apartman Dairesi", description: "Çatı kullanım hakkı olan", icon: Building2 },
+  { id: "commercial", label: "İşyeri / Fabrika", description: "Ticari veya endüstriyel", icon: Store },
 ];
 
 const locations = [
-  "Antalya", "İstanbul", "İzmir", "Ankara", "Muğla", "Aydın", "Mersin", "Diğer"
+  { id: "antalya", label: "Antalya", sun: "Çok Yüksek" },
+  { id: "mugla", label: "Muğla", sun: "Çok Yüksek" },
+  { id: "izmir", label: "İzmir", sun: "Yüksek" },
+  { id: "aydin", label: "Aydın", sun: "Yüksek" },
+  { id: "mersin", label: "Mersin", sun: "Çok Yüksek" },
+  { id: "other", label: "Diğer", sun: "Orta-Yüksek" },
 ];
 
 export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps) {
   const [step, setStep] = useState(1);
   const [data, setData] = useState<CalculatorData>({
     propertyType: "",
-    monthlyBill: 2000,
-    propertySize: 150,
+    monthlyBill: 3000,
+    propertySize: 200,
     location: "",
   });
   const [showResults, setShowResults] = useState(false);
@@ -59,7 +64,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
       case 1:
         return data.propertyType !== "";
       case 2:
-        return data.monthlyBill > 0;
+        return data.monthlyBill > 0 && data.propertySize > 0;
       case 3:
         return data.location !== "";
       default:
@@ -67,54 +72,88 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
     }
   };
 
-  const estimatedSavings = Math.round(data.monthlyBill * 0.7);
-  const yearlyySavings = estimatedSavings * 12;
-  const roiYears = Math.round((data.propertySize * 800) / yearlyySavings);
+  const estimatedMonthlySavings = Math.round(data.monthlyBill * 0.7);
+  const yearlySavings = estimatedMonthlySavings * 12;
+  const estimatedCost = data.propertySize * 1200;
+  const roiYears = Math.round(estimatedCost / yearlySavings * 10) / 10;
+  const co2Saved = Math.round(data.propertySize * 0.15);
+  const treesEquivalent = Math.round(co2Saved / 20);
 
   if (showResults) {
     return (
-      <section id="calculator" className="py-16 md:py-24 lg:py-32 bg-background" data-testid="section-calculator">
-        <div className="max-w-2xl mx-auto px-6 md:px-8">
-          <Card className="overflow-hidden">
-            <CardContent className="p-8">
-              <div className="text-center mb-8">
-                <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-4">
-                  <Check className="w-8 h-8 text-green-500" />
+      <section id="calculator" className="py-20 md:py-32 bg-background" data-testid="section-calculator">
+        <div className="max-w-3xl mx-auto px-6 md:px-8">
+          <Card className="overflow-hidden border-2 border-primary/20">
+            <CardContent className="p-8 md:p-12">
+              <div className="text-center mb-10">
+                <div className="w-20 h-20 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-6">
+                  <Check className="w-10 h-10 text-green-500" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">Tasarruf Analizi Hazır!</h3>
-                <p className="text-muted-foreground">
-                  İşte sizin için hesaplanan potansiyel enerji tasarrufunuz
+                <h3 className="text-3xl font-bold text-foreground mb-3">
+                  Tasarruf Analiziniz Hazır!
+                </h3>
+                <p className="text-lg text-muted-foreground">
+                  İşte {data.location || "bölgeniz"} için hesaplanan potansiyel kazancınız
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                <div className="text-center p-4 bg-muted/50 rounded-lg">
-                  <div className="text-3xl font-bold text-primary mb-1">
-                    ₺{estimatedSavings.toLocaleString()}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div className="text-center p-6 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl">
+                  <Banknote className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <div className="text-4xl font-bold text-primary mb-1">
+                    ₺{estimatedMonthlySavings.toLocaleString()}
                   </div>
                   <p className="text-sm text-muted-foreground">Aylık Tasarruf</p>
                 </div>
-                <div className="text-center p-4 bg-muted/50 rounded-lg">
-                  <div className="text-3xl font-bold text-primary mb-1">
-                    ₺{yearlyySavings.toLocaleString()}
+                <div className="text-center p-6 bg-gradient-to-br from-accent/20 to-accent/10 rounded-xl">
+                  <TrendingUp className="w-8 h-8 text-accent mx-auto mb-3" />
+                  <div className="text-4xl font-bold text-accent mb-1">
+                    ₺{yearlySavings.toLocaleString()}
                   </div>
                   <p className="text-sm text-muted-foreground">Yıllık Tasarruf</p>
                 </div>
-                <div className="text-center p-4 bg-muted/50 rounded-lg">
-                  <div className="text-3xl font-bold text-primary mb-1">
-                    ~{roiYears} Yıl
+                <div className="text-center p-6 bg-gradient-to-br from-emerald-500/10 to-emerald-500/5 rounded-xl">
+                  <Leaf className="w-8 h-8 text-emerald-500 mx-auto mb-3" />
+                  <div className="text-4xl font-bold text-emerald-500 mb-1">
+                    {treesEquivalent}
                   </div>
-                  <p className="text-sm text-muted-foreground">Geri Ödeme Süresi</p>
+                  <p className="text-sm text-muted-foreground">Ağaç Eşdeğeri/Yıl</p>
                 </div>
               </div>
 
+              <div className="bg-muted/50 rounded-xl p-6 mb-8">
+                <h4 className="font-semibold text-foreground mb-4">Yatırım Özeti</h4>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <span className="text-muted-foreground">Tahmini Sistem Maliyeti:</span>
+                    <span className="block font-semibold text-foreground">₺{estimatedCost.toLocaleString()}</span>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground">Geri Ödeme Süresi:</span>
+                    <span className="block font-semibold text-foreground">~{roiYears} Yıl</span>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground">10 Yıllık Toplam Tasarruf:</span>
+                    <span className="block font-semibold text-green-600">₺{(yearlySavings * 10).toLocaleString()}</span>
+                  </div>
+                  <div>
+                    <span className="text-muted-foreground">Yıllık CO₂ Azaltma:</span>
+                    <span className="block font-semibold text-foreground">{co2Saved} ton</span>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-center text-muted-foreground text-sm mb-6">
+                Bu hesaplama tahmini değerlerdir. Kesin fiyat için ücretsiz keşif randevusu alın.
+              </p>
+
               <Button
-                className="w-full"
+                className="w-full py-6 text-lg"
                 size="lg"
                 onClick={() => onComplete?.(data)}
                 data-testid="button-get-quote"
               >
-                Detaylı Teklif Al
+                Ücretsiz Keşif Randevusu Al
               </Button>
             </CardContent>
           </Card>
@@ -124,54 +163,62 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
   }
 
   return (
-    <section id="calculator" className="py-16 md:py-24 lg:py-32 bg-background" data-testid="section-calculator">
+    <section id="calculator" className="py-20 md:py-32 bg-gradient-to-b from-background to-muted/30" data-testid="section-calculator">
       <div className="max-w-2xl mx-auto px-6 md:px-8">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
             <Calculator className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Tasarruf Hesaplayıcı</span>
+            <span className="text-sm font-medium text-primary">Ücretsiz Hesaplama</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Ne Kadar Tasarruf Edebilirsiniz?
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Ne Kadar Tasarruf Edersiniz?
           </h2>
-          <p className="text-muted-foreground">
-            3 basit adımda potansiyel enerji tasarrufunuzu hesaplayın
+          <p className="text-lg text-muted-foreground">
+            3 basit adımda potansiyel enerji tasarrufunuzu öğrenin - sadece 1 dakika!
           </p>
         </div>
 
-        <Card className="overflow-hidden">
+        <Card className="overflow-hidden border-2 border-border">
           <CardContent className="p-8">
             <div className="mb-8">
-              <div className="flex items-center justify-between text-sm text-muted-foreground mb-2">
-                <span>Adım {step} / {totalSteps}</span>
-                <span>{Math.round(progress)}%</span>
+              <div className="flex items-center justify-between text-sm text-muted-foreground mb-3">
+                <span className="font-medium">Adım {step} / {totalSteps}</span>
+                <span>{Math.round(progress)}% Tamamlandı</span>
               </div>
               <Progress value={progress} className="h-2" />
             </div>
 
             {step === 1 && (
               <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-foreground">Mülk Tipinizi Seçin</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <h3 className="text-xl font-semibold text-foreground">Mülkünüzün Türünü Seçin</h3>
+                <p className="text-muted-foreground">Hangi tip yapıya sistem kurulacak?</p>
+                <div className="grid grid-cols-1 gap-4">
                   {propertyTypes.map((type) => (
                     <button
                       key={type.id}
                       onClick={() => setData({ ...data, propertyType: type.id })}
-                      className={`p-6 rounded-lg border-2 transition-all hover-elevate active-elevate-2 ${
+                      className={`p-6 rounded-xl border-2 transition-all hover-elevate active-elevate-2 text-left flex items-center gap-4 ${
                         data.propertyType === type.id
                           ? "border-primary bg-primary/5"
                           : "border-border"
                       }`}
                       data-testid={`button-property-${type.id}`}
                     >
-                      <type.icon className={`w-8 h-8 mb-3 mx-auto ${
-                        data.propertyType === type.id ? "text-primary" : "text-muted-foreground"
-                      }`} />
-                      <span className={`block font-medium ${
-                        data.propertyType === type.id ? "text-primary" : "text-foreground"
+                      <div className={`w-14 h-14 rounded-lg flex items-center justify-center ${
+                        data.propertyType === type.id ? "bg-primary/10" : "bg-muted"
                       }`}>
-                        {type.label}
-                      </span>
+                        <type.icon className={`w-7 h-7 ${
+                          data.propertyType === type.id ? "text-primary" : "text-muted-foreground"
+                        }`} />
+                      </div>
+                      <div>
+                        <span className={`block font-semibold text-lg ${
+                          data.propertyType === type.id ? "text-primary" : "text-foreground"
+                        }`}>
+                          {type.label}
+                        </span>
+                        <span className="text-sm text-muted-foreground">{type.description}</span>
+                      </div>
                     </button>
                   ))}
                 </div>
@@ -179,33 +226,39 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
             )}
 
             {step === 2 && (
-              <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-foreground">Enerji Bilgileriniz</h3>
-                <div className="space-y-4">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Enerji Harcamanız</h3>
+                  <p className="text-muted-foreground">Mevcut aylık enerji faturanız ne kadar?</p>
+                </div>
+                <div className="space-y-6">
                   <div>
-                    <Label htmlFor="monthlyBill">Aylık Enerji Faturanız (₺)</Label>
+                    <Label htmlFor="monthlyBill" className="text-base font-medium">
+                      Aylık Toplam Enerji Faturası (₺)
+                    </Label>
+                    <p className="text-sm text-muted-foreground mb-3">Elektrik + Doğalgaz toplamı</p>
                     <Input
                       id="monthlyBill"
                       type="number"
                       value={data.monthlyBill}
                       onChange={(e) => setData({ ...data, monthlyBill: Number(e.target.value) })}
-                      className="mt-2"
-                      placeholder="2000"
+                      className="h-14 text-lg"
+                      placeholder="3000"
                       data-testid="input-monthly-bill"
                     />
-                    <p className="text-sm text-muted-foreground mt-1">
-                      Elektrik ve doğalgaz toplam tutarı
-                    </p>
                   </div>
                   <div>
-                    <Label htmlFor="propertySize">Mülk Alanı (m²)</Label>
+                    <Label htmlFor="propertySize" className="text-base font-medium">
+                      Mülk Alanı (m²)
+                    </Label>
+                    <p className="text-sm text-muted-foreground mb-3">Toplam kapalı alan</p>
                     <Input
                       id="propertySize"
                       type="number"
                       value={data.propertySize}
                       onChange={(e) => setData({ ...data, propertySize: Number(e.target.value) })}
-                      className="mt-2"
-                      placeholder="150"
+                      className="h-14 text-lg"
+                      placeholder="200"
                       data-testid="input-property-size"
                     />
                   </div>
@@ -215,31 +268,40 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
 
             {step === 3 && (
               <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-foreground">Konumunuz</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Konumunuz</h3>
+                  <p className="text-muted-foreground">Mülkünüz hangi bölgede? Güneşlenme oranı tasarrufu etkiler.</p>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
                   {locations.map((loc) => (
                     <button
-                      key={loc}
-                      onClick={() => setData({ ...data, location: loc })}
-                      className={`p-3 rounded-lg border-2 text-sm font-medium transition-all hover-elevate active-elevate-2 ${
-                        data.location === loc
-                          ? "border-primary bg-primary/5 text-primary"
-                          : "border-border text-foreground"
+                      key={loc.id}
+                      onClick={() => setData({ ...data, location: loc.label })}
+                      className={`p-4 rounded-xl border-2 text-left transition-all hover-elevate active-elevate-2 ${
+                        data.location === loc.label
+                          ? "border-primary bg-primary/5"
+                          : "border-border"
                       }`}
-                      data-testid={`button-location-${loc}`}
+                      data-testid={`button-location-${loc.id}`}
                     >
-                      {loc}
+                      <span className={`block font-semibold ${
+                        data.location === loc.label ? "text-primary" : "text-foreground"
+                      }`}>
+                        {loc.label}
+                      </span>
+                      <span className="text-xs text-muted-foreground">Güneş: {loc.sun}</span>
                     </button>
                   ))}
                 </div>
               </div>
             )}
 
-            <div className="flex items-center justify-between gap-4 mt-8 pt-6 border-t border-border">
+            <div className="flex items-center justify-between gap-4 mt-10 pt-6 border-t border-border">
               <Button
                 variant="outline"
                 onClick={handleBack}
                 disabled={step === 1}
+                className="h-12"
                 data-testid="button-calc-back"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
@@ -248,14 +310,19 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
               <Button
                 onClick={handleNext}
                 disabled={!canProceed()}
+                className="h-12 px-8"
                 data-testid="button-calc-next"
               >
-                {step === totalSteps ? "Hesapla" : "Devam"}
+                {step === totalSteps ? "Sonucu Gör" : "Devam Et"}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
           </CardContent>
         </Card>
+
+        <p className="text-center text-sm text-muted-foreground mt-6">
+          Hiçbir kişisel bilgi istenmez. Sonuçlar tamamen anonim hesaplanır.
+        </p>
       </div>
     </section>
   );
