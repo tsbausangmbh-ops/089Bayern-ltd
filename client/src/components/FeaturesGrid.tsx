@@ -75,15 +75,15 @@ export default function FeaturesGrid() {
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
       
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-5 py-2 mb-6">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-4">
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">Komple Enerji Çözümü</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
             4'ü 1 Arada Akıllı Sistem
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Alman mühendisliği ile tasarlanmış, Türkiye'nin Akdeniz iklimi için özelleştirilmiş 
             entegre enerji sistemi. <span className="text-foreground font-medium">Tek yatırım, dört farklı çözüm.</span>
           </p>
@@ -97,7 +97,7 @@ export default function FeaturesGrid() {
               data-testid={`card-feature-${index}`}
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${feature.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity rounded-lg`} />
-              <CardContent className="p-8 relative">
+              <CardContent className="p-6 relative">
                 <div className="flex items-start gap-6">
                   <div className={`flex-shrink-0 w-16 h-16 rounded-xl ${feature.iconBg} flex items-center justify-center shadow-lg`}>
                     <feature.icon className="w-8 h-8 text-white" />
@@ -123,8 +123,8 @@ export default function FeaturesGrid() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-primary/10 via-card to-accent/10 rounded-2xl p-8 md:p-12 border border-border/50">
+        <div className="mt-8 text-center">
+          <div className="bg-gradient-to-r from-primary/10 via-card to-accent/10 rounded-xl p-6 md:p-8 border border-border/50">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               Neden Ayrı Ayrı Sistem Alasınız?
             </h3>

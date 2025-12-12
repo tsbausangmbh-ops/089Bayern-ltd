@@ -61,28 +61,28 @@ export default function BenefitsSection() {
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-5 py-2 mb-6">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-4 py-1.5 mb-4">
             <Award className="w-4 h-4 text-accent" />
             <span className="text-sm font-medium text-accent">Neden 089 Bayern?</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
             Aileniz İçin Akıllı Yatırım
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Türk ailelerinin enerji ihtiyaçlarını anlıyoruz. Yazın kavurucu sıcakta serinlik, 
             kışın soğukta sıcaklık - <span className="text-foreground font-medium">hem de cebinizi yakmadan.</span>
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           {mainBenefits.map((benefit, index) => (
             <Card
               key={benefit.title}
               className="overflow-visible border-border/50 bg-card/80 backdrop-blur-sm"
               data-testid={`benefit-card-${index}`}
             >
-              <CardContent className="p-8">
+              <CardContent className="p-5">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
                     <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${benefit.gradient} flex items-center justify-center shadow-lg mb-4`}>
@@ -105,10 +105,10 @@ export default function BenefitsSection() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           {additionalBenefits.map((benefit, index) => (
             <Card key={benefit.title} className="overflow-visible border-border/50 bg-card/80 hover-elevate" data-testid={`additional-benefit-${index}`}>
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-4 text-center">
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-7 h-7 text-primary" />
                 </div>
@@ -119,7 +119,7 @@ export default function BenefitsSection() {
           ))}
         </div>
 
-        <div className="bg-gradient-to-br from-card via-card/80 to-card rounded-2xl p-8 md:p-12 border border-border/50 shadow-xl">
+        <div className="bg-gradient-to-br from-card via-card/80 to-card rounded-xl p-6 md:p-8 border border-border/50 shadow-lg">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">

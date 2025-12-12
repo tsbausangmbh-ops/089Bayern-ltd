@@ -47,24 +47,24 @@ export default function TeamSection() {
   return (
     <section id="team" className="py-10 md:py-12 bg-muted/30" data-testid="section-team">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5 mb-4">
             <MessageCircle className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">Uzman Ekip</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
             Sizinle İletişime Geçelim
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Almanya ve Türkiye'de konuşlanan uzman ekibimiz, projenizin her aşamasında 
             yanınızda. Türkçe ve Almanca destek alın.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {teamMembers.map((member, index) => (
             <Card key={member.name} className="overflow-visible" data-testid={`card-team-${index}`}>
-              <CardContent className="p-8">
+              <CardContent className="p-5">
                 <div className="text-center mb-6">
                   <Avatar className={`w-24 h-24 mx-auto mb-4 ${member.bgColor}`}>
                     <AvatarFallback className={`text-2xl font-bold ${member.textColor} ${member.bgColor}`}>
@@ -130,8 +130,8 @@ export default function TeamSection() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="bg-card rounded-2xl p-8 md:p-12 border border-card-border max-w-2xl mx-auto">
+        <div className="mt-8 text-center">
+          <div className="bg-card rounded-xl p-6 md:p-8 border border-card-border max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-foreground mb-4">
               Hemen Ücretsiz Danışmanlık Alın
             </h3>
