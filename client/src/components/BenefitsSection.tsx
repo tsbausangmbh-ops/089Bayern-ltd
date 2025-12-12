@@ -56,7 +56,7 @@ const additionalBenefits = [
 
 export default function BenefitsSection() {
   return (
-    <section id="benefits" className="py-24 md:py-32 bg-gradient-to-b from-card/50 to-background relative overflow-hidden" data-testid="section-benefits">
+    <section id="benefits" className="py-10 md:py-12 bg-gradient-to-b from-card/50 to-background relative overflow-hidden" data-testid="section-benefits">
       <div className="absolute top-1/2 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
 

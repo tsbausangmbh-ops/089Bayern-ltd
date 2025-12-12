@@ -11,7 +11,7 @@ const logos = [
 
 export default function LogoCarousel() {
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-background to-card/50 border-y border-border/50" data-testid="section-logos">
+    <section className="py-8 md:py-10 bg-gradient-to-b from-background to-card/50 border-y border-border/50" data-testid="section-logos">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-5 py-2 mb-4">
