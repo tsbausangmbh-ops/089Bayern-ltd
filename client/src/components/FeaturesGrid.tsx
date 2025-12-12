@@ -76,12 +76,15 @@ export default function FeaturesGrid() {
       
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-4">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Komple Enerji Çözümü</span>
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 mb-4">
+            <Sparkles className="w-4 h-4 text-amber-400" />
+            <span className="text-sm font-medium text-foreground">Komple Enerji Çözümü</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            4'ü 1 Arada Akıllı Sistem
+            4'ü 1 Arada{" "}
+            <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
+              Akıllı Sistem
+            </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Alman mühendisliği ile tasarlanmış, Türkiye'nin Akdeniz iklimi için özelleştirilmiş 
@@ -124,13 +127,13 @@ export default function FeaturesGrid() {
         </div>
 
         <div className="mt-8 text-center">
-          <div className="bg-gradient-to-r from-primary/10 via-card to-accent/10 rounded-xl p-6 md:p-8 border border-border/50">
+          <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-white/10">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               Neden Ayrı Ayrı Sistem Alasınız?
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               4'ü 1 arada sistemle tek seferde kurulum, tek muhatap, tek garanti. 
-              Ayrı sistemlere kıyasla <span className="text-accent font-semibold">%30 daha az maliyet</span>, 
+              Ayrı sistemlere kıyasla <span className="bg-gradient-to-r from-amber-400 to-accent bg-clip-text text-transparent font-semibold">%30 daha az maliyet</span>, 
               <span className="text-primary font-semibold"> %50 daha kolay yönetim</span>.
             </p>
           </div>

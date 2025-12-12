@@ -48,12 +48,15 @@ export default function TeamSection() {
     <section id="team" className="py-10 md:py-12 bg-muted/30" data-testid="section-team">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5 mb-4">
-            <MessageCircle className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Uzman Ekip</span>
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 mb-4">
+            <MessageCircle className="w-4 h-4 text-amber-400" />
+            <span className="text-sm font-medium text-foreground">Uzman Ekip</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            Sizinle İletişime Geçelim
+            Sizinle{" "}
+            <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
+              İletişime Geçelim
+            </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Almanya ve Türkiye'de konuşlanan uzman ekibimiz, projenizin her aşamasında 
@@ -131,16 +134,20 @@ export default function TeamSection() {
         </div>
 
         <div className="mt-8 text-center">
-          <div className="bg-card rounded-xl p-6 md:p-8 border border-card-border max-w-2xl mx-auto">
+          <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-white/10 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Hemen Ücretsiz Danışmanlık Alın
+              Hemen{" "}
+              <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
+                Ücretsiz Danışmanlık
+              </span>{" "}
+              Alın
             </h3>
             <p className="text-muted-foreground mb-6">
               Sorularınızı yanıtlayalım, projenizi değerlendirelim. 
               Satış baskısı yok, sadece bilgilendirme.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="px-8">
+              <Button size="lg" className="px-8 bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg shadow-accent/30">
                 <Phone className="w-4 h-4 mr-2" />
                 Hemen Ara: +90 507 192 2036
               </Button>
