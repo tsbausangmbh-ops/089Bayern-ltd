@@ -6,6 +6,7 @@ import BenefitsSection from "@/components/BenefitsSection";
 import SavingsCalculator from "@/components/SavingsCalculator";
 import LogoCarousel from "@/components/LogoCarousel";
 import TeamSection from "@/components/TeamSection";
+import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 
@@ -67,6 +68,7 @@ export default function Home() {
       <BenefitsSection />
       <SavingsCalculator onComplete={handleCalculatorComplete} />
       <TeamSection />
+      <FAQSection />
       <Footer />
       <LeadCaptureForm
         isOpen={isLeadFormOpen}
