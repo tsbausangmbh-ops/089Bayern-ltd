@@ -533,10 +533,18 @@ export default function Rechner() {
         
         <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
           <div className="text-center">
-            <Badge variant="secondary" className="mb-6 bg-white/10 backdrop-blur-md border-white/20 text-white">
-              <Calculator className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
-              {t.badgeSub}
-            </Badge>
+            <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
+              <div className="flex items-center gap-2 bg-gradient-to-r from-accent/80 to-orange-600/80 backdrop-blur-md rounded-full px-4 py-2 border border-white/20 shadow-lg">
+                <div className="w-7 h-7 bg-white/20 rounded-md flex items-center justify-center">
+                  <span className="text-white font-bold text-xs">089</span>
+                </div>
+                <span className="text-white text-sm font-bold">Bayern 4-in-1</span>
+              </div>
+              <Badge variant="secondary" className="bg-white/10 backdrop-blur-md border-white/20 text-white">
+                <Calculator className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
+                {t.badgeSub}
+              </Badge>
+            </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" data-testid="heading-title">
               {t.title}{" "}

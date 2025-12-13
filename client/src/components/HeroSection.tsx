@@ -27,6 +27,14 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-8 text-center py-12">
         <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-4">
+          <div className="flex items-center gap-2 bg-gradient-to-r from-accent/80 to-orange-600/80 backdrop-blur-md rounded-full px-5 py-2.5 border border-white/20 shadow-lg">
+            <div className="w-8 h-8 bg-white/20 rounded-md flex items-center justify-center">
+              <span className="text-white font-bold text-xs">089</span>
+            </div>
+            <span className="text-white text-sm font-bold">Bayern 4-in-1 German System</span>
+          </div>
+        </div>
+        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-4">
           <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-4 py-2 border border-white/10">
             <Award className="w-4 h-4 text-amber-400" />
             <span className="text-white text-sm font-medium">{t.hero.badgeGerman}</span>
