@@ -140,14 +140,14 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData, initi
               <p className="text-sm text-muted-foreground">{t.formUrgentContact}</p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
-                  href="tel:+905071922036"
+                  href="tel:+905071832036"
                   className="flex items-center gap-2 text-primary hover:underline font-medium"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>+90 507 192 2036</span>
+                  <span>+90 507 183 2036</span>
                 </a>
                 <a
-                  href="https://wa.me/905071922036"
+                  href="https://wa.me/905071832036"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-green-600 hover:underline font-medium"
