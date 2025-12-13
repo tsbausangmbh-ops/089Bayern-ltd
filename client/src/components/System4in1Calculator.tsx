@@ -678,7 +678,7 @@ const translations: Record<string, {
 // EUR to TL exchange rate (approximate 2025)
 const EUR_TO_TL_RATE = 38.5;
 
-// 089 Bayern System Pricing (EUR) with 30% Turkey surcharge
+// 089 Bayern System Pricing (EUR) - Komplettpreise ohne Aufschlag
 const SYSTEM_PRICING = {
   standard: {
     baseEUR: 24000,
