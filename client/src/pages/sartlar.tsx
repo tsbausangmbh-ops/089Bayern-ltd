@@ -497,7 +497,7 @@ export default function Sartlar() {
   return (
     <div className="min-h-screen bg-background" dir={isRTL ? 'rtl' : 'ltr'}>
       <Header />
-      <div className="max-w-4xl mx-auto px-6 pt-24 pb-12">
+      <div className="max-w-4xl mx-auto px-6 pt-20 pb-8">
         <Link href="/">
           <Button variant="ghost" className="mb-8" data-testid="button-back-home">
             <ArrowLeft className={`w-4 h-4 ${isRTL ? 'ml-2 rotate-180' : 'mr-2'}`} />
