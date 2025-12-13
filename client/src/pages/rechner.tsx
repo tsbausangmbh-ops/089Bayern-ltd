@@ -526,7 +526,7 @@ export default function Rechner() {
       <Header onCtaClick={handleCtaClick} />
       
       {/* Hero Section */}
-      <section className="relative pt-20 pb-8 overflow-hidden" data-testid="section-rechner-hero">
+      <section className="relative pt-20 pb-2 overflow-hidden" data-testid="section-rechner-hero">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}

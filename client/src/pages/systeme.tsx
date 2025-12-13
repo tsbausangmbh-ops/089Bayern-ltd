@@ -182,7 +182,7 @@ export default function Systeme() {
       <SEOHead page="systeme" />
       <Header onCtaClick={scrollToCalculator} />
       
-      <section className="relative pt-20 pb-8 overflow-hidden" data-testid="section-systeme-hero">
+      <section className="relative pt-20 pb-2 overflow-hidden" data-testid="section-systeme-hero">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}

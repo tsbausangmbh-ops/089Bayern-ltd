@@ -453,7 +453,7 @@ export default function Vorteile() {
       <SEOHead page="vorteile" />
       <Header onCtaClick={scrollToCalculator} />
       
-      <section className="relative pt-20 pb-8 overflow-hidden" data-testid="section-vorteile-hero">
+      <section className="relative pt-20 pb-2 overflow-hidden" data-testid="section-vorteile-hero">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
