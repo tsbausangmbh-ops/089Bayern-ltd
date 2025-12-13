@@ -457,14 +457,14 @@ Today, we install solar panels, heat pumps and climate systems in Antalya, Alany
       </section>
 
       {/* Story Timeline */}
-      <section className="py-20 md:py-32 bg-gradient-to-b from-background to-muted/30">
+      <section className="py-8 md:py-12 bg-gradient-to-b from-background to-muted/30">
         <div className="max-w-6xl mx-auto px-6">
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent via-primary to-accent/30 hidden md:block" />
             
             {/* Chapters */}
-            <div className="space-y-12 md:space-y-24">
+            <div className="space-y-6 md:space-y-10">
               {chapters.map((chapter, index) => (
                 <div 
                   key={index}
@@ -512,7 +512,7 @@ Today, we install solar panels, heat pumps and climate systems in Antalya, Alany
       </section>
 
       {/* Quote Section */}
-      <section className="py-16 bg-gradient-to-r from-accent/10 via-primary/5 to-accent/10">
+      <section className="py-8 bg-gradient-to-r from-accent/10 via-primary/5 to-accent/10">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <Quote className="w-12 h-12 mx-auto text-accent/50 mb-6" />
           <blockquote className="text-2xl md:text-3xl font-medium text-foreground italic mb-4">
@@ -523,9 +523,9 @@ Today, we install solar panels, heat pumps and climate systems in Antalya, Alany
       </section>
 
       {/* Vision Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-b from-muted/30 to-background">
+      <section className="py-8 md:py-12 bg-gradient-to-b from-muted/30 to-background">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6" data-testid="heading-vision">
               {t.visionTitle}
             </h2>
@@ -535,7 +535,7 @@ Today, we install solar panels, heat pumps and climate systems in Antalya, Alany
           </div>
 
           {/* Values */}
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-10" data-testid="heading-values">
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-6" data-testid="heading-values">
             {t.valuesTitle}
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
@@ -555,7 +555,7 @@ Today, we install solar panels, heat pumps and climate systems in Antalya, Alany
       </section>
 
       {/* Locations */}
-      <section className="py-20 bg-muted/50">
+      <section className="py-8 bg-muted/50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-6">
             {t.locations.map((location, index) => (
@@ -579,7 +579,7 @@ Today, we install solar panels, heat pumps and climate systems in Antalya, Alany
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <section className="py-8 md:py-12 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <Sun className="w-16 h-16 mx-auto text-accent mb-8" />
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" data-testid="heading-cta">
