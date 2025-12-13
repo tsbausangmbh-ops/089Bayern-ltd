@@ -82,29 +82,27 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-6">{t.footer.contact}</h4>
             <ul className="space-y-4 text-sm">
-              <li>
+              <li className="flex flex-wrap gap-4">
                 <a
                   href="tel:+905071832036"
-                  className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
                   data-testid="link-footer-phone"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-4 h-4" />
                   <div>
-                    <span className="block text-white font-medium">+90 507 183 2036</span>
-                    <span className="text-xs text-white/60">{t.footer.turkeyLine}</span>
+                    <span className="block text-white font-medium text-sm">+90 507 183 2036</span>
+                    <span className="text-xs text-white/60">TR</span>
                   </div>
                 </a>
-              </li>
-              <li>
                 <a
                   href="tel:+491735994699"
-                  className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
                   data-testid="link-footer-phone-de"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-4 h-4" />
                   <div>
-                    <span className="block text-white font-medium">+49 173 5994699</span>
-                    <span className="text-xs text-white/60">Deutschland</span>
+                    <span className="block text-white font-medium text-sm">+49 173 5994699</span>
+                    <span className="text-xs text-white/60">DE</span>
                   </div>
                 </a>
               </li>
