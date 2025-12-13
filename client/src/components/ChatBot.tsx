@@ -12,17 +12,23 @@ export default function ChatBot() {
   const { language } = useLanguage();
   const t = translations[language];
 
+  const toggleChat = () => {
+    setIsOpen(prev => !prev);
+  };
+
+  const closeChat = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50" data-testid="chatbot-container">
       <div className="flex items-start gap-3 mb-3">
-        {isOpen && (
-          <div className="bg-card/95 backdrop-blur-sm rounded-xl px-5 py-2 shadow-xl border border-border/50 text-right w-80">
-            <p className="text-sm font-semibold text-foreground leading-tight">{t.chatbotTitle}</p>
-            <p className="text-xs text-muted-foreground leading-tight">{t.chatbotSubtitle}</p>
-          </div>
-        )}
+        <div className="bg-card/95 backdrop-blur-sm rounded-xl px-5 py-2 shadow-xl border border-border/50 text-right w-80">
+          <p className="text-sm font-semibold text-foreground leading-tight">{t.chatbotTitle}</p>
+          <p className="text-xs text-muted-foreground leading-tight">{t.chatbotSubtitle}</p>
+        </div>
         <Button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={toggleChat}
           size="icon"
           className="w-12 h-12 rounded-full shadow-xl bg-gradient-to-r from-orange-500 to-orange-600 border-0 flex-shrink-0"
           data-testid="button-open-chat"
@@ -49,7 +55,7 @@ export default function ChatBot() {
             <Button 
               size="icon" 
               variant="ghost" 
-              onClick={() => setIsOpen(false)}
+              onClick={closeChat}
               className="text-white hover:bg-white/20"
               data-testid="button-close-chat"
             >
