@@ -84,9 +84,9 @@ export default function ChatBot() {
       )}
       
       <div className="flex items-end gap-3">
-        <div className="bg-card/95 backdrop-blur-sm rounded-2xl p-5 shadow-xl border border-border/50 text-right w-80">
-          <p className="text-lg font-bold text-foreground">{t.chatbotTitle}</p>
-          <p className="text-sm text-muted-foreground mt-2">{t.chatbotSubtitle}</p>
+        <div className="bg-card/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-border/50 text-right w-72">
+          <p className="text-sm font-semibold text-foreground">{t.chatbotTitle}</p>
+          <p className="text-xs text-muted-foreground mt-1">{t.chatbotSubtitle}</p>
         </div>
         <Button
           onClick={() => setIsOpen(!isOpen)}
