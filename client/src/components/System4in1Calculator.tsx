@@ -682,17 +682,17 @@ const EUR_TO_TL_RATE = 38.5;
 const SYSTEM_PRICING = {
   standard: {
     baseEUR: 24000,
-    turkeyEUR: 31200, // +30%
+    turkeyEUR: 24000,
     powerKW: 6,
   },
   medium: {
     baseEUR: 32000,
-    turkeyEUR: 41600, // +30%
+    turkeyEUR: 32000,
     powerKW: 12,
   },
   premium: {
     baseEUR: 45000,
-    turkeyEUR: 58500, // +30%
+    turkeyEUR: 45000,
     powerKW: 16,
   },
 };
@@ -787,8 +787,8 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       label: t.systemStandard, 
       desc: t.standardDesc,
       power: "6 kW",
-      priceEUR: "€31.200",
-      priceTL: `₺${Math.round(31200 * EUR_TO_TL_RATE).toLocaleString()}`,
+      priceEUR: "€24.000",
+      priceTL: `₺${Math.round(24000 * EUR_TO_TL_RATE).toLocaleString()}`,
       icon: Star,
       gradient: "from-slate-500 to-slate-600",
       badge: null,
@@ -798,8 +798,8 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       label: t.systemMedium, 
       desc: t.mediumDesc,
       power: "12 kW",
-      priceEUR: "€41.600",
-      priceTL: `₺${Math.round(41600 * EUR_TO_TL_RATE).toLocaleString()}`,
+      priceEUR: "€32.000",
+      priceTL: `₺${Math.round(32000 * EUR_TO_TL_RATE).toLocaleString()}`,
       icon: Sparkles,
       gradient: "from-blue-500 to-blue-600",
       badge: t.popular,
@@ -809,8 +809,8 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       label: t.systemPremium, 
       desc: t.premiumDesc,
       power: "16 kW",
-      priceEUR: "€58.500",
-      priceTL: `₺${Math.round(58500 * EUR_TO_TL_RATE).toLocaleString()}`,
+      priceEUR: "€45.000",
+      priceTL: `₺${Math.round(45000 * EUR_TO_TL_RATE).toLocaleString()}`,
       icon: Crown,
       gradient: "from-amber-500 to-orange-600",
       badge: t.bestValue,
