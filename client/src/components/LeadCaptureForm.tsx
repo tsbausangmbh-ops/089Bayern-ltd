@@ -5,8 +5,9 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Check, Shield, Phone, Calendar, Clock } from "lucide-react";
+import { Check, Shield, Phone, Calendar, Clock, Globe } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
+import { translations, languageNames, isRTL, type Language } from "@/lib/translations";
 
 interface LeadCaptureFormProps {
   isOpen: boolean;
@@ -17,10 +18,13 @@ interface LeadCaptureFormProps {
     propertySize: number;
     location: string;
   };
+  initialLanguage?: Language;
 }
 
-export default function LeadCaptureForm({ isOpen, onClose, calculatorData }: LeadCaptureFormProps) {
+export default function LeadCaptureForm({ isOpen, onClose, calculatorData, initialLanguage = "de" }: LeadCaptureFormProps) {
+  const [language, setLanguage] = useState<Language>(initialLanguage);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -30,10 +34,34 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData }: Lea
     consent: false,
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const t = translations[language];
+  const rtl = isRTL(language);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Lead submitted:", { ...formData, calculatorData });
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          calculatorData,
+          language,
+        }),
+      });
+      
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        console.error("Failed to submit lead");
+      }
+    } catch (error) {
+      console.error("Error submitting lead:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleClose = () => {
@@ -42,46 +70,70 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData }: Lea
     onClose();
   };
 
+  const LanguageSelector = () => (
+    <div className="flex items-center gap-2 mb-4">
+      <Globe className="w-4 h-4 text-muted-foreground" />
+      <div className="flex flex-wrap gap-1">
+        {(Object.keys(languageNames) as Language[]).map((lang) => (
+          <button
+            key={lang}
+            type="button"
+            onClick={() => setLanguage(lang)}
+            className={`px-2 py-1 text-xs rounded-md transition-colors ${
+              language === lang
+                ? "bg-primary text-primary-foreground"
+                : "bg-muted text-muted-foreground hover:bg-muted/80"
+            }`}
+            data-testid={`button-lang-${lang}`}
+          >
+            {languageNames[lang]}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+
   if (isSubmitted) {
     return (
       <Dialog open={isOpen} onOpenChange={handleClose}>
-        <DialogContent className="sm:max-w-lg" data-testid="dialog-thank-you">
+        <DialogContent className="sm:max-w-lg" data-testid="dialog-thank-you" dir={rtl ? "rtl" : "ltr"}>
+          <LanguageSelector />
           <div className="text-center py-8">
             <div className="w-20 h-20 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-6">
               <Check className="w-10 h-10 text-green-500" />
             </div>
             <DialogTitle className="text-2xl font-bold text-foreground mb-4">
-              Ihre Anfrage wurde erfolgreich übermittelt!
+              {t.formSuccessTitle}
             </DialogTitle>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Unsere Energieberater werden sich schnellstmöglich mit Ihnen in Verbindung setzen.
+              {t.formSuccessMessage}
               <br />
-              <strong className="text-foreground">In der Regel antworten wir innerhalb von 2 Stunden.</strong>
+              <strong className="text-foreground">{t.formSuccessResponseTime}</strong>
             </p>
 
-            <div className="bg-muted/50 rounded-xl p-6 mb-8 text-left">
+            <div className="bg-muted/50 rounded-xl p-6 mb-8 text-left" dir={rtl ? "rtl" : "ltr"}>
               <h4 className="font-semibold text-foreground mb-4 flex items-center gap-2">
                 <Clock className="w-5 h-5" />
-                Nächste Schritte
+                {t.formNextStepsTitle}
               </h4>
               <ol className="space-y-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center">1</span>
-                  <span>Unser Experte wird Sie anrufen und Ihre Bedürfnisse besprechen</span>
+                  <span>{t.formNextStep1}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center">2</span>
-                  <span>Ein kostenloser Besichtigungstermin wird geplant</span>
+                  <span>{t.formNextStep2}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center">3</span>
-                  <span>Sie erhalten ein individuelles Angebot und Finanzierungsoptionen</span>
+                  <span>{t.formNextStep3}</span>
                 </li>
               </ol>
             </div>
 
             <div className="space-y-3">
-              <p className="text-sm text-muted-foreground">Für dringende Anfragen:</p>
+              <p className="text-sm text-muted-foreground">{t.formUrgentContact}</p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
                   href="tel:+905071922036"
@@ -103,7 +155,7 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData }: Lea
             </div>
 
             <Button onClick={handleClose} className="mt-8" data-testid="button-close-thank-you">
-              OK
+              {t.formOkButton}
             </Button>
           </div>
         </DialogContent>
@@ -113,83 +165,89 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData }: Lea
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto" data-testid="dialog-lead-form">
+      <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto" data-testid="dialog-lead-form" dir={rtl ? "rtl" : "ltr"}>
+        <LanguageSelector />
         <DialogHeader>
           <div className="flex items-center gap-2 text-primary mb-2">
             <Calendar className="w-5 h-5" />
-            <span className="text-sm font-medium">Kostenlose Beratung</span>
+            <span className="text-sm font-medium">{t.formBadge}</span>
           </div>
           <DialogTitle className="text-2xl font-bold">
-            Kostenlosen Besichtigungstermin vereinbaren
+            {t.formTitle}
           </DialogTitle>
           <p className="text-muted-foreground text-sm mt-2">
-            Hinterlassen Sie Ihre Daten, unsere Energieexperten rufen Sie an. Kein Verkaufsdruck!
+            {t.formSubtitle}
           </p>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-5 mt-6">
           <div>
-            <Label htmlFor="name" className="text-sm font-medium">Vor- und Nachname *</Label>
+            <Label htmlFor="name" className="text-sm font-medium">{t.formNameLabel}</Label>
             <Input
               id="name"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              placeholder="Ihr vollständiger Name"
+              placeholder={t.formNamePlaceholder}
               required
               className="mt-2 h-12"
               data-testid="input-name"
+              dir={rtl ? "rtl" : "ltr"}
             />
           </div>
 
           <div>
-            <Label htmlFor="phone" className="text-sm font-medium">Telefonnummer *</Label>
+            <Label htmlFor="phone" className="text-sm font-medium">{t.formPhoneLabel}</Label>
             <Input
               id="phone"
               type="tel"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              placeholder="+90 5XX XXX XX XX"
+              placeholder={t.formPhonePlaceholder}
               required
               className="mt-2 h-12"
               data-testid="input-phone"
+              dir="ltr"
             />
           </div>
 
           <div>
-            <Label htmlFor="email" className="text-sm font-medium">E-Mail (Optional)</Label>
+            <Label htmlFor="email" className="text-sm font-medium">{t.formEmailLabel}</Label>
             <Input
               id="email"
               type="email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              placeholder="beispiel@email.com"
+              placeholder={t.formEmailPlaceholder}
               className="mt-2 h-12"
               data-testid="input-email"
+              dir="ltr"
             />
           </div>
 
           <div>
-            <Label htmlFor="location" className="text-sm font-medium">Standort der Immobilie</Label>
+            <Label htmlFor="location" className="text-sm font-medium">{t.formLocationLabel}</Label>
             <Input
               id="location"
               value={formData.location}
               onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-              placeholder="z.B. Antalya, Konyaalti"
+              placeholder={t.formLocationPlaceholder}
               className="mt-2 h-12"
               data-testid="input-location"
+              dir={rtl ? "rtl" : "ltr"}
             />
           </div>
 
           <div>
-            <Label htmlFor="message" className="text-sm font-medium">Ihre Nachricht (Optional)</Label>
+            <Label htmlFor="message" className="text-sm font-medium">{t.formMessageLabel}</Label>
             <Textarea
               id="message"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              placeholder="Sie können uns kurz über Ihr Projekt informieren..."
+              placeholder={t.formMessagePlaceholder}
               className="mt-2 resize-none"
               rows={3}
               data-testid="input-message"
+              dir={rtl ? "rtl" : "ltr"}
             />
           </div>
 
@@ -202,7 +260,7 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData }: Lea
               data-testid="checkbox-consent"
             />
             <Label htmlFor="consent" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
-              Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der Datenschutzerklärung zu und akzeptiere, kontaktiert zu werden.
+              {t.formConsentText}
             </Label>
           </div>
 
@@ -210,15 +268,15 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData }: Lea
             type="submit"
             className="w-full py-6 text-lg"
             size="lg"
-            disabled={!formData.name || !formData.phone || !formData.consent}
+            disabled={!formData.name || !formData.phone || !formData.consent || isSubmitting}
             data-testid="button-submit-lead"
           >
-            Kostenlosen Termin anfragen
+            {isSubmitting ? "..." : t.formSubmitButton}
           </Button>
 
           <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
             <Shield className="w-4 h-4" />
-            <span>Ihre Daten werden SSL-verschlüsselt. Wir senden keinen Spam.</span>
+            <span>{t.formSecurityNote}</span>
           </div>
         </form>
       </DialogContent>
