@@ -1,5 +1,6 @@
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { useLanguage } from "@/lib/LanguageContext";
 import Header from "@/components/Header";
@@ -11,6 +12,7 @@ export default function MesafeliSatis() {
   const content = {
     tr: {
       backButton: "Ana Sayfa",
+      badge: "Mesafeli Satış",
       title: "Mesafeli Satış Sözleşmesi",
       subtitle: "6502 sayılı Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmeler Yönetmeliği kapsamında",
       lastUpdate: "Son güncelleme",
@@ -97,6 +99,7 @@ export default function MesafeliSatis() {
     },
     de: {
       backButton: "Startseite",
+      badge: "Fernabsatz",
       title: "Fernabsatzvertrag",
       subtitle: "Gemäß dem türkischen Verbraucherschutzgesetz Nr. 6502 und der Verordnung über Fernabsatzverträge",
       lastUpdate: "Letzte Aktualisierung",
@@ -183,6 +186,7 @@ export default function MesafeliSatis() {
     },
     en: {
       backButton: "Home",
+      badge: "Distance Sales",
       title: "Distance Sales Contract",
       subtitle: "Under the Turkish Consumer Protection Law No. 6502 and the Distance Contracts Regulation",
       lastUpdate: "Last updated",
@@ -269,6 +273,7 @@ export default function MesafeliSatis() {
     },
     ru: {
       backButton: "Главная",
+      badge: "Дистанционная продажа",
       title: "Договор дистанционной продажи",
       subtitle: "В соответствии с турецким Законом о защите прав потребителей № 6502 и Положением о дистанционных договорах",
       lastUpdate: "Последнее обновление",
@@ -355,6 +360,7 @@ export default function MesafeliSatis() {
     },
     uk: {
       backButton: "Головна",
+      badge: "Дистанційний продаж",
       title: "Договір дистанційного продажу",
       subtitle: "Відповідно до турецького Закону про захист прав споживачів № 6502 та Положення про дистанційні договори",
       lastUpdate: "Останнє оновлення",
@@ -441,6 +447,7 @@ export default function MesafeliSatis() {
     },
     ar: {
       backButton: "الصفحة الرئيسية",
+      badge: "البيع عن بعد",
       title: "عقد البيع عن بعد",
       subtitle: "بموجب قانون حماية المستهلك التركي رقم 6502 ولائحة العقود عن بعد",
       lastUpdate: "آخر تحديث",
@@ -531,18 +538,36 @@ export default function MesafeliSatis() {
   const isRTL = language === 'ar';
 
   return (
-    <div className="min-h-screen bg-background" dir={isRTL ? 'rtl' : 'ltr'}>
+    <div className={`min-h-screen bg-background ${isRTL ? "rtl" : ""}`} dir={isRTL ? "rtl" : "ltr"}>
       <Header />
-      <div className="max-w-4xl mx-auto px-6 pt-20 pb-8">
-        <Link href="/">
-          <Button variant="ghost" className="mb-8" data-testid="button-back-home">
-            <ArrowLeft className={`w-4 h-4 ${isRTL ? 'ml-2 rotate-180' : 'mr-2'}`} />
-            {t.backButton}
-          </Button>
-        </Link>
-
-        <h1 className="text-3xl font-bold mb-4">{t.title}</h1>
-        <p className="text-sm text-muted-foreground mb-8">{t.subtitle}</p>
+      
+      <section className="relative pt-24 pb-16 overflow-hidden" data-testid="section-hero">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-accent/5 to-transparent" />
+        <div className="relative max-w-7xl mx-auto px-6 md:px-8">
+          <div className="text-center mb-8">
+            <Badge variant="secondary" className="mb-6">
+              <ShoppingCart className="w-4 h-4 mr-2" />
+              {t.badge}
+            </Badge>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              {t.title}
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              {t.subtitle}
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <Link href="/">
+              <Button variant="ghost" data-testid="button-back-home">
+                <ArrowLeft className={`w-4 h-4 ${isRTL ? "ml-2 rotate-180" : "mr-2"}`} />
+                {t.backButton}
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+      
+      <div className="max-w-4xl mx-auto px-6 pb-8">
         <p className="text-sm text-muted-foreground mb-8">{t.lastUpdate}: {new Date().toLocaleDateString(t.dateLocale)}</p>
 
         <div className="prose prose-slate max-w-none space-y-6">

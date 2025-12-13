@@ -1,5 +1,6 @@
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { useLanguage } from "@/lib/LanguageContext";
 import Header from "@/components/Header";
@@ -11,7 +12,9 @@ export default function Gizlilik() {
   const content = {
     tr: {
       backButton: "Ana Sayfa",
+      badge: "Gizlilik",
       title: "Gizlilik Politikası",
+      subtitle: "Kişisel verilerinizi nasıl topladığımız, kullandığımız ve koruduğumuz hakkında bilgi edinin.",
       lastUpdate: "Son güncelleme",
       dateLocale: "tr-TR",
       
@@ -72,7 +75,9 @@ export default function Gizlilik() {
     },
     de: {
       backButton: "Startseite",
+      badge: "Datenschutz",
       title: "Datenschutzrichtlinie",
+      subtitle: "Erfahren Sie, wie wir Ihre persönlichen Daten erfassen, verwenden und schützen.",
       lastUpdate: "Letzte Aktualisierung",
       dateLocale: "de-DE",
       
@@ -133,7 +138,9 @@ export default function Gizlilik() {
     },
     en: {
       backButton: "Home",
+      badge: "Privacy",
       title: "Privacy Policy",
+      subtitle: "Learn how we collect, use, and protect your personal data.",
       lastUpdate: "Last updated",
       dateLocale: "en-US",
       
@@ -194,7 +201,9 @@ export default function Gizlilik() {
     },
     ru: {
       backButton: "Главная",
+      badge: "Конфиденциальность",
       title: "Политика конфиденциальности",
+      subtitle: "Узнайте, как мы собираем, используем и защищаем ваши персональные данные.",
       lastUpdate: "Последнее обновление",
       dateLocale: "ru-RU",
       
@@ -255,7 +264,9 @@ export default function Gizlilik() {
     },
     uk: {
       backButton: "Головна",
+      badge: "Конфіденційність",
       title: "Політика конфіденційності",
+      subtitle: "Дізнайтеся, як ми збираємо, використовуємо та захищаємо ваші персональні дані.",
       lastUpdate: "Останнє оновлення",
       dateLocale: "uk-UA",
       
@@ -316,7 +327,9 @@ export default function Gizlilik() {
     },
     ar: {
       backButton: "الصفحة الرئيسية",
+      badge: "الخصوصية",
       title: "سياسة الخصوصية",
+      subtitle: "تعرف على كيفية جمعنا لبياناتك الشخصية واستخدامها وحمايتها.",
       lastUpdate: "آخر تحديث",
       dateLocale: "ar-SA",
       
@@ -381,20 +394,37 @@ export default function Gizlilik() {
   const isRTL = language === 'ar';
 
   return (
-    <div className="min-h-screen bg-background" dir={isRTL ? 'rtl' : 'ltr'}>
+    <div className={`min-h-screen bg-background ${isRTL ? "rtl" : ""}`} dir={isRTL ? "rtl" : "ltr"}>
       <Header />
-      <div className="max-w-4xl mx-auto px-6 pt-20 pb-8">
-        <Link href="/">
-          <Button variant="ghost" className="mb-8" data-testid="button-back-home">
-            <ArrowLeft className={`w-4 h-4 ${isRTL ? 'ml-2 rotate-180' : 'mr-2'}`} />
-            {t.backButton}
-          </Button>
-        </Link>
-
-        <h1 className="text-3xl font-bold mb-8">{t.title}</h1>
-        <p className="text-sm text-muted-foreground mb-8">
-          {t.lastUpdate}: {new Date().toLocaleDateString(t.dateLocale)}
-        </p>
+      
+      <section className="relative pt-24 pb-16 overflow-hidden" data-testid="section-hero">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-accent/5 to-transparent" />
+        <div className="relative max-w-7xl mx-auto px-6 md:px-8">
+          <div className="text-center mb-8">
+            <Badge variant="secondary" className="mb-6">
+              <Shield className="w-4 h-4 mr-2" />
+              {t.badge}
+            </Badge>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              {t.title}
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              {t.subtitle}
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <Link href="/">
+              <Button variant="ghost" data-testid="button-back-home">
+                <ArrowLeft className={`w-4 h-4 ${isRTL ? "ml-2 rotate-180" : "mr-2"}`} />
+                {t.backButton}
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+      
+      <div className="max-w-4xl mx-auto px-6 pb-8">
+        <p className="text-sm text-muted-foreground mb-8">{t.lastUpdate}: {new Date().toLocaleDateString(t.dateLocale)}</p>
 
         <div className="prose prose-slate max-w-none space-y-6">
           <section>

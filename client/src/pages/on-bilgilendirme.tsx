@@ -1,5 +1,6 @@
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { useLanguage } from "@/lib/LanguageContext";
 import Header from "@/components/Header";
@@ -11,6 +12,7 @@ export default function OnBilgilendirme() {
   const content = {
     tr: {
       backButton: "Ana Sayfa",
+      badge: "Ön Bilgilendirme",
       title: "Ön Bilgilendirme Formu",
       subtitle: "6502 sayılı Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmeler Yönetmeliği'nin 5. maddesi uyarınca tüketicinin bilgilendirilmesi amaçlı ön bilgilendirme formu",
       lastUpdate: "Son güncelleme",
@@ -123,6 +125,7 @@ export default function OnBilgilendirme() {
     },
     de: {
       backButton: "Startseite",
+      badge: "Vorab-Information",
       title: "Vorabinformationsformular",
       subtitle: "Vorabinformationsformular zur Verbraucherinformation gemäß Artikel 5 des türkischen Verbraucherschutzgesetzes Nr. 6502 und der Verordnung über Fernabsatzverträge",
       lastUpdate: "Letzte Aktualisierung",
@@ -235,6 +238,7 @@ export default function OnBilgilendirme() {
     },
     en: {
       backButton: "Home",
+      badge: "Pre-Information",
       title: "Preliminary Information Form",
       subtitle: "Preliminary information form for consumer information pursuant to Article 5 of the Turkish Consumer Protection Law No. 6502 and the Distance Contracts Regulation",
       lastUpdate: "Last updated",
@@ -347,6 +351,7 @@ export default function OnBilgilendirme() {
     },
     ru: {
       backButton: "Главная",
+      badge: "Предварительная информация",
       title: "Форма предварительной информации",
       subtitle: "Форма предварительной информации для потребителей в соответствии со статьёй 5 турецкого Закона о защите прав потребителей № 6502 и Положения о дистанционных договорах",
       lastUpdate: "Последнее обновление",
@@ -459,6 +464,7 @@ export default function OnBilgilendirme() {
     },
     uk: {
       backButton: "Головна",
+      badge: "Попередня інформація",
       title: "Форма попередньої інформації",
       subtitle: "Форма попередньої інформації для споживачів відповідно до статті 5 турецького Закону про захист прав споживачів № 6502 та Положення про дистанційні договори",
       lastUpdate: "Останнє оновлення",
@@ -799,18 +805,36 @@ export default function OnBilgilendirme() {
   const isRTL = language === 'ar';
 
   return (
-    <div className="min-h-screen bg-background" dir={isRTL ? 'rtl' : 'ltr'}>
+    <div className={`min-h-screen bg-background ${isRTL ? "rtl" : ""}`} dir={isRTL ? "rtl" : "ltr"}>
       <Header />
-      <div className="max-w-4xl mx-auto px-6 pt-20 pb-8">
-        <Link href="/">
-          <Button variant="ghost" className="mb-8" data-testid="button-back-home">
-            <ArrowLeft className={`w-4 h-4 ${isRTL ? 'ml-2 rotate-180' : 'mr-2'}`} />
-            {t.backButton}
-          </Button>
-        </Link>
-
-        <h1 className="text-3xl font-bold mb-4">{t.title}</h1>
-        <p className="text-sm text-muted-foreground mb-8">{t.subtitle}</p>
+      
+      <section className="relative pt-24 pb-16 overflow-hidden" data-testid="section-hero">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-accent/5 to-transparent" />
+        <div className="relative max-w-7xl mx-auto px-6 md:px-8">
+          <div className="text-center mb-8">
+            <Badge variant="secondary" className="mb-6">
+              <Info className="w-4 h-4 mr-2" />
+              {t.badge}
+            </Badge>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              {t.title}
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              {t.subtitle}
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <Link href="/">
+              <Button variant="ghost" data-testid="button-back-home">
+                <ArrowLeft className={`w-4 h-4 ${isRTL ? "ml-2 rotate-180" : "mr-2"}`} />
+                {t.backButton}
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+      
+      <div className="max-w-4xl mx-auto px-6 pb-8">
         <p className="text-sm text-muted-foreground mb-8">{t.lastUpdate}: {new Date().toLocaleDateString(t.dateLocale)}</p>
 
         <div className="prose prose-slate max-w-none space-y-6">

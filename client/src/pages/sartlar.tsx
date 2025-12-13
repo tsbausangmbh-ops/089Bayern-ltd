@@ -1,5 +1,6 @@
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { useLanguage } from "@/lib/LanguageContext";
 import Header from "@/components/Header";
@@ -11,7 +12,9 @@ export default function Sartlar() {
   const content = {
     tr: {
       backButton: "Ana Sayfa",
+      badge: "Şartlar ve Koşullar",
       title: "Şartlar ve Koşullar",
+      subtitle: "Hizmetlerimizi kullanırken geçerli olan şartlar ve koşullar hakkında bilgi edinin.",
       lastUpdate: "Son güncelleme",
       dateLocale: "tr-TR",
       
@@ -91,7 +94,9 @@ export default function Sartlar() {
     },
     de: {
       backButton: "Startseite",
+      badge: "AGB",
       title: "Allgemeine Geschäftsbedingungen",
+      subtitle: "Erfahren Sie mehr über die Bedingungen für die Nutzung unserer Dienstleistungen.",
       lastUpdate: "Letzte Aktualisierung",
       dateLocale: "de-DE",
       
@@ -171,7 +176,9 @@ export default function Sartlar() {
     },
     en: {
       backButton: "Home",
+      badge: "Terms & Conditions",
       title: "Terms and Conditions",
+      subtitle: "Learn about the terms and conditions that apply when using our services.",
       lastUpdate: "Last updated",
       dateLocale: "en-US",
       
@@ -251,7 +258,9 @@ export default function Sartlar() {
     },
     ru: {
       backButton: "Главная",
+      badge: "Условия",
       title: "Условия и положения",
+      subtitle: "Узнайте об условиях и положениях, применяемых при использовании наших услуг.",
       lastUpdate: "Последнее обновление",
       dateLocale: "ru-RU",
       
@@ -331,7 +340,9 @@ export default function Sartlar() {
     },
     uk: {
       backButton: "Головна",
+      badge: "Умови",
       title: "Умови та положення",
+      subtitle: "Дізнайтеся про умови та положення, що застосовуються при використанні наших послуг.",
       lastUpdate: "Останнє оновлення",
       dateLocale: "uk-UA",
       
@@ -411,7 +422,9 @@ export default function Sartlar() {
     },
     ar: {
       backButton: "الصفحة الرئيسية",
+      badge: "الشروط والأحكام",
       title: "الشروط والأحكام",
+      subtitle: "تعرف على الشروط والأحكام التي تنطبق عند استخدام خدماتنا.",
       lastUpdate: "آخر تحديث",
       dateLocale: "ar-SA",
       
@@ -495,20 +508,37 @@ export default function Sartlar() {
   const isRTL = language === 'ar';
 
   return (
-    <div className="min-h-screen bg-background" dir={isRTL ? 'rtl' : 'ltr'}>
+    <div className={`min-h-screen bg-background ${isRTL ? "rtl" : ""}`} dir={isRTL ? "rtl" : "ltr"}>
       <Header />
-      <div className="max-w-4xl mx-auto px-6 pt-20 pb-8">
-        <Link href="/">
-          <Button variant="ghost" className="mb-8" data-testid="button-back-home">
-            <ArrowLeft className={`w-4 h-4 ${isRTL ? 'ml-2 rotate-180' : 'mr-2'}`} />
-            {t.backButton}
-          </Button>
-        </Link>
-
-        <h1 className="text-3xl font-bold mb-8">{t.title}</h1>
-        <p className="text-sm text-muted-foreground mb-8">
-          {t.lastUpdate}: {new Date().toLocaleDateString(t.dateLocale)}
-        </p>
+      
+      <section className="relative pt-24 pb-16 overflow-hidden" data-testid="section-hero">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-accent/5 to-transparent" />
+        <div className="relative max-w-7xl mx-auto px-6 md:px-8">
+          <div className="text-center mb-8">
+            <Badge variant="secondary" className="mb-6">
+              <FileText className="w-4 h-4 mr-2" />
+              {t.badge}
+            </Badge>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              {t.title}
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              {t.subtitle}
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <Link href="/">
+              <Button variant="ghost" data-testid="button-back-home">
+                <ArrowLeft className={`w-4 h-4 ${isRTL ? "ml-2 rotate-180" : "mr-2"}`} />
+                {t.backButton}
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+      
+      <div className="max-w-4xl mx-auto px-6 pb-8">
+        <p className="text-sm text-muted-foreground mb-8">{t.lastUpdate}: {new Date().toLocaleDateString(t.dateLocale)}</p>
 
         <div className="prose prose-slate max-w-none space-y-6">
           <section>
