@@ -107,6 +107,7 @@ export default function Footer() {
                   <div>
                     <span className="block text-white font-medium">{t.footer.whatsapp}</span>
                     <span className="text-xs text-white/60">{t.footer.quickComm}</span>
+                    <span className="text-xs text-white/40 block mt-0.5">WhatsApp Inc. gizlilik politikasi gecerlidir</span>
                   </div>
                 </a>
               </li>
@@ -137,7 +138,7 @@ export default function Footer() {
         <div className="mt-4 pt-3 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
             <p>&copy; {new Date().getFullYear()} {t.footer.copyright}</p>
-            <div className="flex flex-wrap items-center justify-center gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
               <a href="/kvkk" className="hover:text-white transition-colors" data-testid="link-kvkk">
                 {t.footer.privacy}
               </a>
@@ -145,12 +146,28 @@ export default function Footer() {
                 {t.footer.privacyPolicy}
               </a>
               <a href="/cerez-politikasi" className="hover:text-white transition-colors" data-testid="link-cookies">
-                Çerez Politikası
+                Cerez Politikasi
               </a>
               <a href="/sartlar" className="hover:text-white transition-colors" data-testid="link-terms">
                 {t.footer.terms}
               </a>
+              <a href="/mesafeli-satis" className="hover:text-white transition-colors" data-testid="link-mesafeli-satis">
+                Mesafeli Satis
+              </a>
+              <a href="/on-bilgilendirme" className="hover:text-white transition-colors" data-testid="link-on-bilgilendirme">
+                On Bilgilendirme
+              </a>
             </div>
+          </div>
+        </div>
+
+        <div className="mt-4 pt-3 border-t border-white/10">
+          <div className="text-xs text-white/50 text-center space-y-1" data-testid="footer-impressum">
+            <p className="font-medium text-white/70">089 Bayern Enerji Sistemleri Ltd. Sti.</p>
+            <p>Antalya Merkez, 07000 Antalya, Turkiye</p>
+            <p>Tel: +90 507 192 2036 | E-posta: info@089bayern.tr</p>
+            <p>Ticaret Sicil No: [Kayit sonrasi] | MERSIS No: [Kayit sonrasi]</p>
+            <p>Vergi Dairesi: [Kayit sonrasi] | Vergi No: [Kayit sonrasi]</p>
           </div>
         </div>
       </div>

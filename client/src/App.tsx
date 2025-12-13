@@ -10,6 +10,8 @@ import KVKK from "@/pages/kvkk";
 import Gizlilik from "@/pages/gizlilik";
 import CerezPolitikasi from "@/pages/cerez-politikasi";
 import Sartlar from "@/pages/sartlar";
+import MesafeliSatis from "@/pages/mesafeli-satis";
+import OnBilgilendirme from "@/pages/on-bilgilendirme";
 import CookieBanner from "@/components/CookieBanner";
 
 function Router() {
@@ -20,6 +22,8 @@ function Router() {
       <Route path="/gizlilik" component={Gizlilik} />
       <Route path="/cerez-politikasi" component={CerezPolitikasi} />
       <Route path="/sartlar" component={Sartlar} />
+      <Route path="/mesafeli-satis" component={MesafeliSatis} />
+      <Route path="/on-bilgilendirme" component={OnBilgilendirme} />
       <Route component={NotFound} />
     </Switch>
   );
