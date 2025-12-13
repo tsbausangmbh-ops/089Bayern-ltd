@@ -1,14 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
-import { Slider } from "@/components/ui/slider";
 import { 
   Home, Building2, Store, ArrowRight, ArrowLeft, Check, Calculator, 
   TrendingUp, Leaf, Banknote, Sun, Thermometer, Droplets, Battery,
-  Zap, Snowflake, Euro, PiggyBank
+  Zap, Snowflake, Euro, PiggyBank, Sparkles, Crown, Star
 } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -23,8 +22,7 @@ interface CalculatorData {
   monthlyHeating: number;
   monthlyHotWater: number;
   monthlyCooling: number;
-  roofArea: number;
-  batterySize: number;
+  systemTier: "standard" | "medium" | "premium";
 }
 
 const translations: Record<string, {
@@ -50,31 +48,41 @@ const translations: Record<string, {
   step3Title: string;
   step3Subtitle: string;
   electricityLabel: string;
-  heatingLabel: string;
-  hotWaterLabel: string;
-  coolingLabel: string;
-  monthlyTL: string;
+  electricityHint: string;
   step4Title: string;
   step4Subtitle: string;
-  roofAreaLabel: string;
-  roofAreaHint: string;
-  batteryLabel: string;
-  batteryHint: string;
+  heatingLabel: string;
+  heatingHint: string;
+  step5Title: string;
+  step5Subtitle: string;
+  hotWaterLabel: string;
+  hotWaterHint: string;
+  step6Title: string;
+  step6Subtitle: string;
+  coolingLabel: string;
+  coolingHint: string;
+  step7Title: string;
+  step7Subtitle: string;
+  systemStandard: string;
+  systemMedium: string;
+  systemPremium: string;
+  standardDesc: string;
+  mediumDesc: string;
+  premiumDesc: string;
+  monthlyTL: string;
   resultsTitle: string;
   resultsSubtitle: string;
   system4in1: string;
   systemComponents: string;
   solarPanels: string;
-  heatPump: string;
+  heatPumpCooling: string;
   hotWaterSystem: string;
   batteryStorage: string;
-  costBreakdown: string;
-  pvCost: string;
-  heatPumpCost: string;
-  hotWaterCost: string;
-  batteryCost: string;
-  installationCost: string;
-  totalInvestment: string;
+  yourSystem: string;
+  systemPower: string;
+  investmentEUR: string;
+  investmentTL: string;
+  currentRate: string;
   savingsBreakdown: string;
   electricitySavings: string;
   heatingSavings: string;
@@ -84,24 +92,22 @@ const translations: Record<string, {
   totalYearlySavings: string;
   paybackPeriod: string;
   years: string;
+  months: string;
   tenYearSavings: string;
   twentyFiveYearSavings: string;
   co2Saved: string;
   tonsPerYear: string;
   disclaimer: string;
   ctaButton: string;
-  systemSpecs: string;
-  pvCapacity: string;
-  kWp: string;
-  heatPumpCapacity: string;
+  recommended: string;
+  popular: string;
+  bestValue: string;
+  includes: string;
   kW: string;
-  batteryCapacity: string;
-  kWh: string;
-  freeMonths: string;
-  freeMonthsDesc: string;
+  locationAntalya: string;
 }> = {
   de: {
-    badge: "4-in-1 System Rechner",
+    badge: "089 Bayern 4-in-1 Rechner",
     title: "Berechnen Sie Ihr",
     titleHighlight: "Sparpotenzial",
     subtitle: "Komplette Kosten- und Ersparnisanalyse für Ihr 4-in-1 Energiesystem",
@@ -112,42 +118,52 @@ const translations: Record<string, {
     next: "Weiter",
     calculate: "Berechnen",
     step1Title: "Welche Immobilienart?",
-    step1Subtitle: "Wählen Sie Ihren Immobilientyp für eine genaue Berechnung",
+    step1Subtitle: "Wählen Sie Ihren Immobilientyp",
     propertyVilla: "Villa / Haus",
     propertyApartment: "Wohnung",
     propertyCommercial: "Gewerbe",
-    step2Title: "Größe Ihrer Immobilie",
-    step2Subtitle: "Geben Sie die Wohnfläche an",
-    propertySizeLabel: "Wohnfläche (m²)",
-    propertySizeHint: "Gesamte beheizte Wohnfläche",
-    step3Title: "Ihre monatlichen Energiekosten",
-    step3Subtitle: "Geben Sie Ihre aktuellen Kosten an",
+    step2Title: "Wie groß ist Ihre Immobilie?",
+    step2Subtitle: "Geben Sie die Wohnfläche in m² an",
+    propertySizeLabel: "Wohnfläche",
+    propertySizeHint: "Gesamte beheizte/gekühlte Fläche",
+    step3Title: "Ihre monatlichen Stromkosten?",
+    step3Subtitle: "Aktuelle Stromrechnung pro Monat",
     electricityLabel: "Stromkosten",
+    electricityHint: "Durchschnittliche monatliche Stromrechnung",
+    step4Title: "Ihre monatlichen Heizkosten?",
+    step4Subtitle: "Gas, Öl oder andere Heizkosten",
     heatingLabel: "Heizkosten",
+    heatingHint: "Durchschnittliche monatliche Heizkosten",
+    step5Title: "Ihre Warmwasserkosten?",
+    step5Subtitle: "Kosten für Warmwasserbereitung",
     hotWaterLabel: "Warmwasserkosten",
-    coolingLabel: "Klimaanlage/Kühlung",
+    hotWaterHint: "Falls separat erfasst",
+    step6Title: "Ihre Klimaanlagen-Kosten?",
+    step6Subtitle: "Kosten für Kühlung im Sommer",
+    coolingLabel: "Kühlungskosten",
+    coolingHint: "Klimaanlage/Split-Geräte",
+    step7Title: "Wählen Sie Ihr System",
+    step7Subtitle: "089 Bayern 4-in-1 Pakete für Antalya/Alanya",
+    systemStandard: "Standard",
+    systemMedium: "Medium",
+    systemPremium: "Premium",
+    standardDesc: "Ideal für kleinere Häuser bis 150m²",
+    mediumDesc: "Perfekt für Familienhäuser bis 250m²",
+    premiumDesc: "Maximale Leistung für große Villen",
     monthlyTL: "₺/Monat",
-    step4Title: "System-Konfiguration",
-    step4Subtitle: "Passen Sie Ihr 4-in-1 System an",
-    roofAreaLabel: "Verfügbare Dachfläche (m²)",
-    roofAreaHint: "Für Solarmodule nutzbare Fläche",
-    batteryLabel: "Batteriespeicher Größe",
-    batteryHint: "Empfohlen: 10-15 kWh für Einfamilienhaus",
-    resultsTitle: "Ihre 4-in-1 System Analyse",
+    resultsTitle: "Ihre 089 Bayern Systemanalyse",
     resultsSubtitle: "Detaillierte Kosten- und Ersparnisberechnung",
     system4in1: "4-in-1 Premium System",
     systemComponents: "System-Komponenten",
     solarPanels: "Photovoltaik-Anlage",
-    heatPump: "Wärmepumpe",
+    heatPumpCooling: "Wärmepumpe + Kühlung",
     hotWaterSystem: "Warmwasser-System",
     batteryStorage: "Batteriespeicher",
-    costBreakdown: "Kostenaufstellung",
-    pvCost: "Photovoltaik-Anlage",
-    heatPumpCost: "Wärmepumpe inkl. Installation",
-    hotWaterCost: "Warmwasser-System",
-    batteryCost: "Batteriespeicher",
-    installationCost: "Installation & Montage",
-    totalInvestment: "Gesamtinvestition",
+    yourSystem: "Ihr gewähltes System",
+    systemPower: "Systemleistung",
+    investmentEUR: "Investition (EUR)",
+    investmentTL: "Investition (TL)",
+    currentRate: "Aktueller Kurs",
     savingsBreakdown: "Monatliche Ersparnisse",
     electricitySavings: "Strom-Ersparnis",
     heatingSavings: "Heizkosten-Ersparnis",
@@ -157,24 +173,22 @@ const translations: Record<string, {
     totalYearlySavings: "Jährliche Ersparnis",
     paybackPeriod: "Amortisationszeit",
     years: "Jahre",
+    months: "Monate",
     tenYearSavings: "Ersparnis in 10 Jahren",
     twentyFiveYearSavings: "Ersparnis in 25 Jahren",
     co2Saved: "CO₂-Einsparung",
     tonsPerYear: "Tonnen/Jahr",
-    disclaimer: "* Alle Werte sind Schätzungen basierend auf durchschnittlichen Marktpreisen und können je nach Standort und Anbieter variieren.",
+    disclaimer: "* Preise inkl. 30% Türkei-Zuschlag für Installation in Antalya/Alanya. Alle Werte sind Schätzungen.",
     ctaButton: "Kostenloses Angebot anfordern",
-    systemSpecs: "System-Spezifikationen",
-    pvCapacity: "PV-Leistung",
-    kWp: "kWp",
-    heatPumpCapacity: "Wärmepumpe",
+    recommended: "Empfohlen",
+    popular: "Beliebt",
+    bestValue: "Bestes Preis-Leistung",
+    includes: "Inkl. PV + Wärmepumpe/Kühlung + Warmwasser + Batterie",
     kW: "kW",
-    batteryCapacity: "Speicherkapazität",
-    kWh: "kWh",
-    freeMonths: "10 Monate kostenlose Energie",
-    freeMonthsDesc: "Basierend auf Ihrer Amortisationszeit und 25 Jahren Systemlebensdauer",
+    locationAntalya: "Standort: Antalya/Alanya, Türkei",
   },
   tr: {
-    badge: "4'ü 1 Arada Sistem Hesaplayıcı",
+    badge: "089 Bayern 4'ü 1 Arada Hesaplayıcı",
     title: "Tasarruf",
     titleHighlight: "potansiyelinizi hesaplayın",
     subtitle: "4'ü 1 arada enerji sisteminiz için eksiksiz maliyet ve tasarruf analizi",
@@ -185,69 +199,77 @@ const translations: Record<string, {
     next: "İleri",
     calculate: "Hesapla",
     step1Title: "Mülk türünüz nedir?",
-    step1Subtitle: "Doğru hesaplama için mülk türünüzü seçin",
+    step1Subtitle: "Mülk türünüzü seçin",
     propertyVilla: "Villa / Ev",
     propertyApartment: "Daire",
     propertyCommercial: "Ticari",
-    step2Title: "Mülkünüzün büyüklüğü",
-    step2Subtitle: "Yaşam alanınızı belirtin",
-    propertySizeLabel: "Yaşam alanı (m²)",
-    propertySizeHint: "Toplam ısıtılan yaşam alanı",
-    step3Title: "Aylık enerji maliyetleriniz",
-    step3Subtitle: "Mevcut maliyetlerinizi girin",
+    step2Title: "Mülkünüz ne kadar büyük?",
+    step2Subtitle: "Yaşam alanınızı m² olarak girin",
+    propertySizeLabel: "Yaşam alanı",
+    propertySizeHint: "Toplam ısıtılan/soğutulan alan",
+    step3Title: "Aylık elektrik maliyetiniz?",
+    step3Subtitle: "Mevcut aylık elektrik faturası",
     electricityLabel: "Elektrik maliyeti",
+    electricityHint: "Ortalama aylık elektrik faturası",
+    step4Title: "Aylık ısıtma maliyetiniz?",
+    step4Subtitle: "Doğalgaz, mazot veya diğer ısıtma",
     heatingLabel: "Isıtma maliyeti",
+    heatingHint: "Ortalama aylık ısıtma maliyeti",
+    step5Title: "Sıcak su maliyetiniz?",
+    step5Subtitle: "Sıcak su hazırlama maliyeti",
     hotWaterLabel: "Sıcak su maliyeti",
-    coolingLabel: "Klima/Soğutma",
+    hotWaterHint: "Ayrı olarak takip ediliyorsa",
+    step6Title: "Klima maliyetiniz?",
+    step6Subtitle: "Yazın soğutma maliyeti",
+    coolingLabel: "Soğutma maliyeti",
+    coolingHint: "Klima/Split cihazları",
+    step7Title: "Sisteminizi seçin",
+    step7Subtitle: "Antalya/Alanya için 089 Bayern 4'ü 1 Arada paketleri",
+    systemStandard: "Standart",
+    systemMedium: "Orta",
+    systemPremium: "Premium",
+    standardDesc: "150m²'ye kadar küçük evler için ideal",
+    mediumDesc: "250m²'ye kadar aile evleri için mükemmel",
+    premiumDesc: "Büyük villalar için maksimum güç",
     monthlyTL: "₺/Ay",
-    step4Title: "Sistem yapılandırması",
-    step4Subtitle: "4'ü 1 arada sisteminizi özelleştirin",
-    roofAreaLabel: "Kullanılabilir çatı alanı (m²)",
-    roofAreaHint: "Güneş panelleri için kullanılabilir alan",
-    batteryLabel: "Batarya depolama boyutu",
-    batteryHint: "Önerilen: Tek aile evi için 10-15 kWh",
-    resultsTitle: "4'ü 1 Arada Sistem Analiziniz",
+    resultsTitle: "089 Bayern Sistem Analiziniz",
     resultsSubtitle: "Detaylı maliyet ve tasarruf hesaplaması",
     system4in1: "4'ü 1 Arada Premium Sistem",
     systemComponents: "Sistem bileşenleri",
     solarPanels: "Fotovoltaik sistem",
-    heatPump: "Isı pompası",
+    heatPumpCooling: "Isı pompası + Soğutma",
     hotWaterSystem: "Sıcak su sistemi",
     batteryStorage: "Batarya depolama",
-    costBreakdown: "Maliyet dökümü",
-    pvCost: "Fotovoltaik sistem",
-    heatPumpCost: "Isı pompası (kurulum dahil)",
-    hotWaterCost: "Sıcak su sistemi",
-    batteryCost: "Batarya depolama",
-    installationCost: "Kurulum ve montaj",
-    totalInvestment: "Toplam yatırım",
+    yourSystem: "Seçtiğiniz sistem",
+    systemPower: "Sistem gücü",
+    investmentEUR: "Yatırım (EUR)",
+    investmentTL: "Yatırım (TL)",
+    currentRate: "Güncel kur",
     savingsBreakdown: "Aylık tasarruflar",
     electricitySavings: "Elektrik tasarrufu",
     heatingSavings: "Isıtma tasarrufu",
     hotWaterSavings: "Sıcak su tasarrufu",
-    coolingSavings: "Klima tasarrufu",
+    coolingSavings: "Soğutma tasarrufu",
     totalMonthlySavings: "Aylık tasarruf",
     totalYearlySavings: "Yıllık tasarruf",
     paybackPeriod: "Amortisman süresi",
     years: "Yıl",
+    months: "Ay",
     tenYearSavings: "10 yılda tasarruf",
     twentyFiveYearSavings: "25 yılda tasarruf",
     co2Saved: "CO₂ tasarrufu",
     tonsPerYear: "Ton/Yıl",
-    disclaimer: "* Tüm değerler ortalama piyasa fiyatlarına dayanan tahminlerdir ve konuma ve sağlayıcıya göre değişebilir.",
+    disclaimer: "* Antalya/Alanya kurulumu için %30 Türkiye ek ücreti dahildir. Tüm değerler tahmindir.",
     ctaButton: "Ücretsiz teklif isteyin",
-    systemSpecs: "Sistem özellikleri",
-    pvCapacity: "PV kapasitesi",
-    kWp: "kWp",
-    heatPumpCapacity: "Isı pompası",
+    recommended: "Önerilen",
+    popular: "Popüler",
+    bestValue: "En iyi fiyat/performans",
+    includes: "PV + Isı pompası/Soğutma + Sıcak su + Batarya dahil",
     kW: "kW",
-    batteryCapacity: "Depolama kapasitesi",
-    kWh: "kWh",
-    freeMonths: "10 ay ücretsiz enerji",
-    freeMonthsDesc: "Amortisman sürenize ve 25 yıllık sistem ömrüne göre",
+    locationAntalya: "Konum: Antalya/Alanya, Türkiye",
   },
   en: {
-    badge: "4-in-1 System Calculator",
+    badge: "089 Bayern 4-in-1 Calculator",
     title: "Calculate Your",
     titleHighlight: "Savings Potential",
     subtitle: "Complete cost and savings analysis for your 4-in-1 energy system",
@@ -258,42 +280,52 @@ const translations: Record<string, {
     next: "Next",
     calculate: "Calculate",
     step1Title: "What type of property?",
-    step1Subtitle: "Select your property type for accurate calculation",
+    step1Subtitle: "Select your property type",
     propertyVilla: "Villa / House",
     propertyApartment: "Apartment",
     propertyCommercial: "Commercial",
-    step2Title: "Size of your property",
-    step2Subtitle: "Enter your living area",
-    propertySizeLabel: "Living area (m²)",
-    propertySizeHint: "Total heated living space",
-    step3Title: "Your monthly energy costs",
-    step3Subtitle: "Enter your current costs",
+    step2Title: "How large is your property?",
+    step2Subtitle: "Enter your living area in m²",
+    propertySizeLabel: "Living area",
+    propertySizeHint: "Total heated/cooled area",
+    step3Title: "Your monthly electricity costs?",
+    step3Subtitle: "Current monthly electricity bill",
     electricityLabel: "Electricity cost",
+    electricityHint: "Average monthly electricity bill",
+    step4Title: "Your monthly heating costs?",
+    step4Subtitle: "Gas, oil or other heating costs",
     heatingLabel: "Heating cost",
+    heatingHint: "Average monthly heating costs",
+    step5Title: "Your hot water costs?",
+    step5Subtitle: "Cost for hot water preparation",
     hotWaterLabel: "Hot water cost",
-    coolingLabel: "Air conditioning/Cooling",
+    hotWaterHint: "If tracked separately",
+    step6Title: "Your air conditioning costs?",
+    step6Subtitle: "Cooling costs in summer",
+    coolingLabel: "Cooling cost",
+    coolingHint: "AC/Split units",
+    step7Title: "Choose your system",
+    step7Subtitle: "089 Bayern 4-in-1 packages for Antalya/Alanya",
+    systemStandard: "Standard",
+    systemMedium: "Medium",
+    systemPremium: "Premium",
+    standardDesc: "Ideal for smaller homes up to 150m²",
+    mediumDesc: "Perfect for family homes up to 250m²",
+    premiumDesc: "Maximum power for large villas",
     monthlyTL: "₺/month",
-    step4Title: "System configuration",
-    step4Subtitle: "Customize your 4-in-1 system",
-    roofAreaLabel: "Available roof area (m²)",
-    roofAreaHint: "Area usable for solar panels",
-    batteryLabel: "Battery storage size",
-    batteryHint: "Recommended: 10-15 kWh for single-family home",
-    resultsTitle: "Your 4-in-1 System Analysis",
+    resultsTitle: "Your 089 Bayern System Analysis",
     resultsSubtitle: "Detailed cost and savings calculation",
     system4in1: "4-in-1 Premium System",
     systemComponents: "System components",
     solarPanels: "Photovoltaic system",
-    heatPump: "Heat pump",
+    heatPumpCooling: "Heat pump + Cooling",
     hotWaterSystem: "Hot water system",
     batteryStorage: "Battery storage",
-    costBreakdown: "Cost breakdown",
-    pvCost: "Photovoltaic system",
-    heatPumpCost: "Heat pump incl. installation",
-    hotWaterCost: "Hot water system",
-    batteryCost: "Battery storage",
-    installationCost: "Installation & mounting",
-    totalInvestment: "Total investment",
+    yourSystem: "Your selected system",
+    systemPower: "System power",
+    investmentEUR: "Investment (EUR)",
+    investmentTL: "Investment (TL)",
+    currentRate: "Current rate",
     savingsBreakdown: "Monthly savings",
     electricitySavings: "Electricity savings",
     heatingSavings: "Heating savings",
@@ -303,24 +335,22 @@ const translations: Record<string, {
     totalYearlySavings: "Yearly savings",
     paybackPeriod: "Payback period",
     years: "years",
+    months: "months",
     tenYearSavings: "Savings in 10 years",
     twentyFiveYearSavings: "Savings in 25 years",
     co2Saved: "CO₂ savings",
     tonsPerYear: "tons/year",
-    disclaimer: "* All values are estimates based on average market prices and may vary by location and provider.",
+    disclaimer: "* Prices incl. 30% Turkey surcharge for installation in Antalya/Alanya. All values are estimates.",
     ctaButton: "Request free quote",
-    systemSpecs: "System specifications",
-    pvCapacity: "PV capacity",
-    kWp: "kWp",
-    heatPumpCapacity: "Heat pump",
+    recommended: "Recommended",
+    popular: "Popular",
+    bestValue: "Best value",
+    includes: "Incl. PV + Heat pump/Cooling + Hot water + Battery",
     kW: "kW",
-    batteryCapacity: "Storage capacity",
-    kWh: "kWh",
-    freeMonths: "10 months of free energy",
-    freeMonthsDesc: "Based on your payback period and 25-year system lifespan",
+    locationAntalya: "Location: Antalya/Alanya, Turkey",
   },
   ru: {
-    badge: "Калькулятор системы 4-в-1",
+    badge: "Калькулятор 089 Bayern 4-в-1",
     title: "Рассчитайте свой",
     titleHighlight: "потенциал экономии",
     subtitle: "Полный анализ затрат и экономии для вашей энергосистемы 4-в-1",
@@ -331,42 +361,52 @@ const translations: Record<string, {
     next: "Далее",
     calculate: "Рассчитать",
     step1Title: "Какой тип недвижимости?",
-    step1Subtitle: "Выберите тип недвижимости для точного расчета",
+    step1Subtitle: "Выберите тип недвижимости",
     propertyVilla: "Вилла / Дом",
     propertyApartment: "Квартира",
     propertyCommercial: "Коммерческая",
-    step2Title: "Размер вашей недвижимости",
-    step2Subtitle: "Укажите жилую площадь",
-    propertySizeLabel: "Жилая площадь (м²)",
-    propertySizeHint: "Общая отапливаемая площадь",
-    step3Title: "Ваши ежемесячные расходы на энергию",
-    step3Subtitle: "Введите ваши текущие расходы",
+    step2Title: "Какой размер вашей недвижимости?",
+    step2Subtitle: "Введите жилую площадь в м²",
+    propertySizeLabel: "Жилая площадь",
+    propertySizeHint: "Общая отапливаемая/охлаждаемая площадь",
+    step3Title: "Ваши ежемесячные расходы на электричество?",
+    step3Subtitle: "Текущий ежемесячный счет за электричество",
     electricityLabel: "Расходы на электричество",
+    electricityHint: "Средний ежемесячный счет",
+    step4Title: "Ваши ежемесячные расходы на отопление?",
+    step4Subtitle: "Газ, мазут или другое отопление",
     heatingLabel: "Расходы на отопление",
+    heatingHint: "Средние ежемесячные расходы",
+    step5Title: "Ваши расходы на горячую воду?",
+    step5Subtitle: "Стоимость подготовки горячей воды",
     hotWaterLabel: "Расходы на горячую воду",
-    coolingLabel: "Кондиционер/Охлаждение",
+    hotWaterHint: "Если учитывается отдельно",
+    step6Title: "Ваши расходы на кондиционер?",
+    step6Subtitle: "Расходы на охлаждение летом",
+    coolingLabel: "Расходы на охлаждение",
+    coolingHint: "Кондиционер/Сплит-системы",
+    step7Title: "Выберите вашу систему",
+    step7Subtitle: "Пакеты 089 Bayern 4-в-1 для Анталии/Аланьи",
+    systemStandard: "Стандарт",
+    systemMedium: "Средний",
+    systemPremium: "Премиум",
+    standardDesc: "Идеально для домов до 150м²",
+    mediumDesc: "Идеально для семейных домов до 250м²",
+    premiumDesc: "Максимальная мощность для больших вилл",
     monthlyTL: "₺/месяц",
-    step4Title: "Конфигурация системы",
-    step4Subtitle: "Настройте вашу систему 4-в-1",
-    roofAreaLabel: "Доступная площадь крыши (м²)",
-    roofAreaHint: "Площадь для солнечных панелей",
-    batteryLabel: "Размер аккумулятора",
-    batteryHint: "Рекомендуется: 10-15 кВтч для частного дома",
-    resultsTitle: "Анализ вашей системы 4-в-1",
+    resultsTitle: "Анализ системы 089 Bayern",
     resultsSubtitle: "Детальный расчет затрат и экономии",
     system4in1: "Премиум-система 4-в-1",
     systemComponents: "Компоненты системы",
     solarPanels: "Фотоэлектрическая система",
-    heatPump: "Тепловой насос",
+    heatPumpCooling: "Тепловой насос + Охлаждение",
     hotWaterSystem: "Система горячего водоснабжения",
     batteryStorage: "Аккумулятор",
-    costBreakdown: "Разбивка стоимости",
-    pvCost: "Фотоэлектрическая система",
-    heatPumpCost: "Тепловой насос с установкой",
-    hotWaterCost: "Система горячего водоснабжения",
-    batteryCost: "Аккумулятор",
-    installationCost: "Установка и монтаж",
-    totalInvestment: "Общие инвестиции",
+    yourSystem: "Выбранная система",
+    systemPower: "Мощность системы",
+    investmentEUR: "Инвестиция (EUR)",
+    investmentTL: "Инвестиция (TL)",
+    currentRate: "Текущий курс",
     savingsBreakdown: "Ежемесячная экономия",
     electricitySavings: "Экономия электричества",
     heatingSavings: "Экономия на отоплении",
@@ -376,24 +416,22 @@ const translations: Record<string, {
     totalYearlySavings: "Годовая экономия",
     paybackPeriod: "Срок окупаемости",
     years: "лет",
+    months: "месяцев",
     tenYearSavings: "Экономия за 10 лет",
     twentyFiveYearSavings: "Экономия за 25 лет",
     co2Saved: "Экономия CO₂",
     tonsPerYear: "тонн/год",
-    disclaimer: "* Все значения являются оценками на основе средних рыночных цен и могут варьироваться в зависимости от местоположения.",
+    disclaimer: "* Цены вкл. 30% надбавку для установки в Анталии/Аланье. Все значения являются оценками.",
     ctaButton: "Запросить бесплатное предложение",
-    systemSpecs: "Характеристики системы",
-    pvCapacity: "Мощность PV",
-    kWp: "кВтп",
-    heatPumpCapacity: "Тепловой насос",
+    recommended: "Рекомендуется",
+    popular: "Популярный",
+    bestValue: "Лучшее соотношение",
+    includes: "Вкл. PV + Тепловой насос/Охлаждение + Горячая вода + Батарея",
     kW: "кВт",
-    batteryCapacity: "Емкость хранения",
-    kWh: "кВтч",
-    freeMonths: "10 месяцев бесплатной энергии",
-    freeMonthsDesc: "На основе срока окупаемости и 25-летнего срока службы",
+    locationAntalya: "Расположение: Анталия/Аланья, Турция",
   },
   uk: {
-    badge: "Калькулятор системи 4-в-1",
+    badge: "Калькулятор 089 Bayern 4-в-1",
     title: "Розрахуйте свій",
     titleHighlight: "потенціал заощаджень",
     subtitle: "Повний аналіз витрат і заощаджень для вашої енергосистеми 4-в-1",
@@ -404,42 +442,52 @@ const translations: Record<string, {
     next: "Далі",
     calculate: "Розрахувати",
     step1Title: "Який тип нерухомості?",
-    step1Subtitle: "Виберіть тип нерухомості для точного розрахунку",
+    step1Subtitle: "Виберіть тип нерухомості",
     propertyVilla: "Вілла / Будинок",
     propertyApartment: "Квартира",
     propertyCommercial: "Комерційна",
-    step2Title: "Розмір вашої нерухомості",
-    step2Subtitle: "Вкажіть житлову площу",
-    propertySizeLabel: "Житлова площа (м²)",
-    propertySizeHint: "Загальна опалювана площа",
-    step3Title: "Ваші щомісячні витрати на енергію",
-    step3Subtitle: "Введіть ваші поточні витрати",
+    step2Title: "Який розмір вашої нерухомості?",
+    step2Subtitle: "Введіть житлову площу в м²",
+    propertySizeLabel: "Житлова площа",
+    propertySizeHint: "Загальна опалювана/охолоджувана площа",
+    step3Title: "Ваші щомісячні витрати на електрику?",
+    step3Subtitle: "Поточний щомісячний рахунок за електрику",
     electricityLabel: "Витрати на електрику",
+    electricityHint: "Середній щомісячний рахунок",
+    step4Title: "Ваші щомісячні витрати на опалення?",
+    step4Subtitle: "Газ, мазут або інше опалення",
     heatingLabel: "Витрати на опалення",
+    heatingHint: "Середні щомісячні витрати",
+    step5Title: "Ваші витрати на гарячу воду?",
+    step5Subtitle: "Вартість підготовки гарячої води",
     hotWaterLabel: "Витрати на гарячу воду",
-    coolingLabel: "Кондиціонер/Охолодження",
+    hotWaterHint: "Якщо враховується окремо",
+    step6Title: "Ваші витрати на кондиціонер?",
+    step6Subtitle: "Витрати на охолодження влітку",
+    coolingLabel: "Витрати на охолодження",
+    coolingHint: "Кондиціонер/Спліт-системи",
+    step7Title: "Виберіть вашу систему",
+    step7Subtitle: "Пакети 089 Bayern 4-в-1 для Анталії/Аланії",
+    systemStandard: "Стандарт",
+    systemMedium: "Середній",
+    systemPremium: "Преміум",
+    standardDesc: "Ідеально для будинків до 150м²",
+    mediumDesc: "Ідеально для сімейних будинків до 250м²",
+    premiumDesc: "Максимальна потужність для великих вілл",
     monthlyTL: "₺/місяць",
-    step4Title: "Конфігурація системи",
-    step4Subtitle: "Налаштуйте вашу систему 4-в-1",
-    roofAreaLabel: "Доступна площа даху (м²)",
-    roofAreaHint: "Площа для сонячних панелей",
-    batteryLabel: "Розмір акумулятора",
-    batteryHint: "Рекомендується: 10-15 кВтг для приватного будинку",
-    resultsTitle: "Аналіз вашої системи 4-в-1",
+    resultsTitle: "Аналіз системи 089 Bayern",
     resultsSubtitle: "Детальний розрахунок витрат і заощаджень",
     system4in1: "Преміум-система 4-в-1",
     systemComponents: "Компоненти системи",
     solarPanels: "Фотоелектрична система",
-    heatPump: "Тепловий насос",
+    heatPumpCooling: "Тепловий насос + Охолодження",
     hotWaterSystem: "Система гарячого водопостачання",
     batteryStorage: "Акумулятор",
-    costBreakdown: "Розбивка вартості",
-    pvCost: "Фотоелектрична система",
-    heatPumpCost: "Тепловий насос з установкою",
-    hotWaterCost: "Система гарячого водопостачання",
-    batteryCost: "Акумулятор",
-    installationCost: "Установка та монтаж",
-    totalInvestment: "Загальні інвестиції",
+    yourSystem: "Обрана система",
+    systemPower: "Потужність системи",
+    investmentEUR: "Інвестиція (EUR)",
+    investmentTL: "Інвестиція (TL)",
+    currentRate: "Поточний курс",
     savingsBreakdown: "Щомісячні заощадження",
     electricitySavings: "Заощадження електрики",
     heatingSavings: "Заощадження на опаленні",
@@ -449,24 +497,22 @@ const translations: Record<string, {
     totalYearlySavings: "Річні заощадження",
     paybackPeriod: "Термін окупності",
     years: "років",
+    months: "місяців",
     tenYearSavings: "Заощадження за 10 років",
     twentyFiveYearSavings: "Заощадження за 25 років",
     co2Saved: "Заощадження CO₂",
     tonsPerYear: "тонн/рік",
-    disclaimer: "* Усі значення є оцінками на основі середніх ринкових цін і можуть змінюватися залежно від місця.",
+    disclaimer: "* Ціни вкл. 30% надбавку для встановлення в Анталії/Аланії. Усі значення є оцінками.",
     ctaButton: "Запитати безкоштовну пропозицію",
-    systemSpecs: "Характеристики системи",
-    pvCapacity: "Потужність PV",
-    kWp: "кВтп",
-    heatPumpCapacity: "Тепловий насос",
+    recommended: "Рекомендується",
+    popular: "Популярний",
+    bestValue: "Найкраще співвідношення",
+    includes: "Вкл. PV + Тепловий насос/Охолодження + Гаряча вода + Батарея",
     kW: "кВт",
-    batteryCapacity: "Ємність зберігання",
-    kWh: "кВтг",
-    freeMonths: "10 місяців безкоштовної енергії",
-    freeMonthsDesc: "На основі терміну окупності та 25-річного терміну служби",
+    locationAntalya: "Розташування: Анталія/Аланія, Туреччина",
   },
   ar: {
-    badge: "حاسبة نظام 4 في 1",
+    badge: "حاسبة 089 Bayern 4 في 1",
     title: "احسب",
     titleHighlight: "إمكانات التوفير",
     subtitle: "تحليل كامل للتكاليف والتوفير لنظام الطاقة 4 في 1 الخاص بك",
@@ -477,42 +523,52 @@ const translations: Record<string, {
     next: "التالي",
     calculate: "حساب",
     step1Title: "ما نوع العقار؟",
-    step1Subtitle: "اختر نوع عقارك للحصول على حساب دقيق",
+    step1Subtitle: "اختر نوع عقارك",
     propertyVilla: "فيلا / منزل",
     propertyApartment: "شقة",
     propertyCommercial: "تجاري",
-    step2Title: "حجم عقارك",
-    step2Subtitle: "أدخل مساحة المعيشة",
-    propertySizeLabel: "مساحة المعيشة (م²)",
-    propertySizeHint: "إجمالي المساحة المُدفأة",
-    step3Title: "تكاليف الطاقة الشهرية",
-    step3Subtitle: "أدخل تكاليفك الحالية",
+    step2Title: "ما حجم عقارك؟",
+    step2Subtitle: "أدخل مساحة المعيشة بالمتر المربع",
+    propertySizeLabel: "مساحة المعيشة",
+    propertySizeHint: "إجمالي المساحة المُدفأة/المُبردة",
+    step3Title: "تكاليف الكهرباء الشهرية؟",
+    step3Subtitle: "فاتورة الكهرباء الشهرية الحالية",
     electricityLabel: "تكلفة الكهرباء",
+    electricityHint: "متوسط الفاتورة الشهرية",
+    step4Title: "تكاليف التدفئة الشهرية؟",
+    step4Subtitle: "الغاز أو المازوت أو تدفئة أخرى",
     heatingLabel: "تكلفة التدفئة",
+    heatingHint: "متوسط التكاليف الشهرية",
+    step5Title: "تكاليف الماء الساخن؟",
+    step5Subtitle: "تكلفة تحضير الماء الساخن",
     hotWaterLabel: "تكلفة الماء الساخن",
-    coolingLabel: "تكييف/تبريد",
+    hotWaterHint: "إذا تم تتبعها بشكل منفصل",
+    step6Title: "تكاليف التكييف؟",
+    step6Subtitle: "تكاليف التبريد في الصيف",
+    coolingLabel: "تكلفة التبريد",
+    coolingHint: "تكييف/وحدات سبليت",
+    step7Title: "اختر نظامك",
+    step7Subtitle: "باقات 089 Bayern 4 في 1 لأنطاليا/ألانيا",
+    systemStandard: "قياسي",
+    systemMedium: "متوسط",
+    systemPremium: "بريميوم",
+    standardDesc: "مثالي للمنازل الصغيرة حتى 150م²",
+    mediumDesc: "مثالي للمنازل العائلية حتى 250م²",
+    premiumDesc: "أقصى قوة للفيلات الكبيرة",
     monthlyTL: "₺/شهر",
-    step4Title: "تكوين النظام",
-    step4Subtitle: "خصص نظام 4 في 1 الخاص بك",
-    roofAreaLabel: "مساحة السطح المتاحة (م²)",
-    roofAreaHint: "المساحة القابلة للاستخدام للألواح الشمسية",
-    batteryLabel: "حجم تخزين البطارية",
-    batteryHint: "موصى به: 10-15 كيلوواط ساعة للمنزل",
-    resultsTitle: "تحليل نظام 4 في 1 الخاص بك",
+    resultsTitle: "تحليل نظام 089 Bayern",
     resultsSubtitle: "حساب تفصيلي للتكاليف والتوفير",
     system4in1: "نظام بريميوم 4 في 1",
     systemComponents: "مكونات النظام",
     solarPanels: "نظام الطاقة الشمسية",
-    heatPump: "مضخة حرارية",
+    heatPumpCooling: "مضخة حرارية + تبريد",
     hotWaterSystem: "نظام الماء الساخن",
     batteryStorage: "تخزين البطارية",
-    costBreakdown: "تفصيل التكاليف",
-    pvCost: "نظام الطاقة الشمسية",
-    heatPumpCost: "مضخة حرارية مع التركيب",
-    hotWaterCost: "نظام الماء الساخن",
-    batteryCost: "تخزين البطارية",
-    installationCost: "التركيب والتثبيت",
-    totalInvestment: "إجمالي الاستثمار",
+    yourSystem: "النظام المختار",
+    systemPower: "قوة النظام",
+    investmentEUR: "الاستثمار (EUR)",
+    investmentTL: "الاستثمار (TL)",
+    currentRate: "السعر الحالي",
     savingsBreakdown: "التوفير الشهري",
     electricitySavings: "توفير الكهرباء",
     heatingSavings: "توفير التدفئة",
@@ -522,24 +578,22 @@ const translations: Record<string, {
     totalYearlySavings: "التوفير السنوي",
     paybackPeriod: "فترة الاسترداد",
     years: "سنوات",
+    months: "أشهر",
     tenYearSavings: "التوفير في 10 سنوات",
     twentyFiveYearSavings: "التوفير في 25 سنة",
     co2Saved: "توفير CO₂",
     tonsPerYear: "طن/سنة",
-    disclaimer: "* جميع القيم تقديرية بناءً على متوسط أسعار السوق وقد تختلف حسب الموقع.",
+    disclaimer: "* الأسعار شاملة 30% رسوم تركيا للتركيب في أنطاليا/ألانيا. جميع القيم تقديرية.",
     ctaButton: "اطلب عرض أسعار مجاني",
-    systemSpecs: "مواصفات النظام",
-    pvCapacity: "سعة PV",
-    kWp: "كيلوواط ذروة",
-    heatPumpCapacity: "مضخة حرارية",
+    recommended: "موصى به",
+    popular: "شائع",
+    bestValue: "أفضل قيمة",
+    includes: "يشمل PV + مضخة حرارية/تبريد + ماء ساخن + بطارية",
     kW: "كيلوواط",
-    batteryCapacity: "سعة التخزين",
-    kWh: "كيلوواط ساعة",
-    freeMonths: "10 أشهر طاقة مجانية",
-    freeMonthsDesc: "بناءً على فترة الاسترداد وعمر النظام 25 سنة",
+    locationAntalya: "الموقع: أنطاليا/ألانيا، تركيا",
   },
   hr: {
-    badge: "4-u-1 kalkulator sustava",
+    badge: "089 Bayern 4-u-1 kalkulator",
     title: "Izračunajte svoju",
     titleHighlight: "uštedu",
     subtitle: "Kompletna analiza troškova i ušteda za vaš 4-u-1 energetski sustav",
@@ -550,42 +604,52 @@ const translations: Record<string, {
     next: "Dalje",
     calculate: "Izračunaj",
     step1Title: "Koja vrsta nekretnine?",
-    step1Subtitle: "Odaberite vrstu nekretnine za točan izračun",
+    step1Subtitle: "Odaberite vrstu nekretnine",
     propertyVilla: "Vila / Kuća",
     propertyApartment: "Stan",
     propertyCommercial: "Poslovni",
-    step2Title: "Veličina vaše nekretnine",
-    step2Subtitle: "Unesite stambenu površinu",
-    propertySizeLabel: "Stambena površina (m²)",
-    propertySizeHint: "Ukupna grijana površina",
-    step3Title: "Vaši mjesečni troškovi energije",
-    step3Subtitle: "Unesite svoje trenutne troškove",
+    step2Title: "Kolika je vaša nekretnina?",
+    step2Subtitle: "Unesite stambenu površinu u m²",
+    propertySizeLabel: "Stambena površina",
+    propertySizeHint: "Ukupna grijana/hlađena površina",
+    step3Title: "Vaši mjesečni troškovi struje?",
+    step3Subtitle: "Trenutni mjesečni račun za struju",
     electricityLabel: "Trošak struje",
+    electricityHint: "Prosječni mjesečni račun",
+    step4Title: "Vaši mjesečni troškovi grijanja?",
+    step4Subtitle: "Plin, lož ulje ili drugo grijanje",
     heatingLabel: "Trošak grijanja",
+    heatingHint: "Prosječni mjesečni troškovi",
+    step5Title: "Vaši troškovi tople vode?",
+    step5Subtitle: "Trošak pripreme tople vode",
     hotWaterLabel: "Trošak tople vode",
-    coolingLabel: "Klimatizacija/Hlađenje",
+    hotWaterHint: "Ako se prati odvojeno",
+    step6Title: "Vaši troškovi klime?",
+    step6Subtitle: "Troškovi hlađenja ljeti",
+    coolingLabel: "Trošak hlađenja",
+    coolingHint: "Klima/Split uređaji",
+    step7Title: "Odaberite svoj sustav",
+    step7Subtitle: "089 Bayern 4-u-1 paketi za Antaliju/Alanju",
+    systemStandard: "Standard",
+    systemMedium: "Srednji",
+    systemPremium: "Premium",
+    standardDesc: "Idealno za manje kuće do 150m²",
+    mediumDesc: "Savršeno za obiteljske kuće do 250m²",
+    premiumDesc: "Maksimalna snaga za velike vile",
     monthlyTL: "₺/mjesec",
-    step4Title: "Konfiguracija sustava",
-    step4Subtitle: "Prilagodite svoj 4-u-1 sustav",
-    roofAreaLabel: "Dostupna površina krova (m²)",
-    roofAreaHint: "Površina za solarne panele",
-    batteryLabel: "Veličina baterije",
-    batteryHint: "Preporučeno: 10-15 kWh za obiteljsku kuću",
-    resultsTitle: "Vaša 4-u-1 analiza sustava",
+    resultsTitle: "Vaša 089 Bayern analiza sustava",
     resultsSubtitle: "Detaljan izračun troškova i ušteda",
     system4in1: "4-u-1 Premium sustav",
     systemComponents: "Komponente sustava",
     solarPanels: "Fotonaponski sustav",
-    heatPump: "Dizalica topline",
+    heatPumpCooling: "Dizalica topline + Hlađenje",
     hotWaterSystem: "Sustav tople vode",
     batteryStorage: "Baterijska pohrana",
-    costBreakdown: "Raspored troškova",
-    pvCost: "Fotonaponski sustav",
-    heatPumpCost: "Dizalica topline s ugradnjom",
-    hotWaterCost: "Sustav tople vode",
-    batteryCost: "Baterijska pohrana",
-    installationCost: "Ugradnja i montaža",
-    totalInvestment: "Ukupna investicija",
+    yourSystem: "Odabrani sustav",
+    systemPower: "Snaga sustava",
+    investmentEUR: "Ulaganje (EUR)",
+    investmentTL: "Ulaganje (TL)",
+    currentRate: "Trenutni tečaj",
     savingsBreakdown: "Mjesečne uštede",
     electricitySavings: "Ušteda struje",
     heatingSavings: "Ušteda grijanja",
@@ -595,21 +659,41 @@ const translations: Record<string, {
     totalYearlySavings: "Godišnja ušteda",
     paybackPeriod: "Period povrata",
     years: "godina",
+    months: "mjeseci",
     tenYearSavings: "Ušteda u 10 godina",
     twentyFiveYearSavings: "Ušteda u 25 godina",
     co2Saved: "Ušteda CO₂",
     tonsPerYear: "tona/godina",
-    disclaimer: "* Sve vrijednosti su procjene temeljene na prosječnim tržišnim cijenama i mogu varirati.",
+    disclaimer: "* Cijene uklj. 30% Turska pristojba za ugradnju u Antaliji/Alanji. Sve vrijednosti su procjene.",
     ctaButton: "Zatražite besplatnu ponudu",
-    systemSpecs: "Specifikacije sustava",
-    pvCapacity: "PV kapacitet",
-    kWp: "kWp",
-    heatPumpCapacity: "Dizalica topline",
+    recommended: "Preporučeno",
+    popular: "Popularno",
+    bestValue: "Najbolji omjer",
+    includes: "Uklj. PV + Dizalica topline/Hlađenje + Topla voda + Baterija",
     kW: "kW",
-    batteryCapacity: "Kapacitet pohrane",
-    kWh: "kWh",
-    freeMonths: "10 mjeseci besplatne energije",
-    freeMonthsDesc: "Na temelju perioda povrata i 25 godina trajanja sustava",
+    locationAntalya: "Lokacija: Antalija/Alanja, Turska",
+  },
+};
+
+// EUR to TL exchange rate (approximate 2025)
+const EUR_TO_TL_RATE = 38.5;
+
+// 089 Bayern System Pricing (EUR) with 30% Turkey surcharge
+const SYSTEM_PRICING = {
+  standard: {
+    baseEUR: 35000,
+    turkeyEUR: 45500, // +30%
+    powerKW: 8,
+  },
+  medium: {
+    baseEUR: 46000,
+    turkeyEUR: 59800, // +30%
+    powerKW: 12,
+  },
+  premium: {
+    baseEUR: 60000,
+    turkeyEUR: 78000, // +30%
+    powerKW: 18,
   },
 };
 
@@ -619,20 +703,19 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
   
   const [data, setData] = useState<CalculatorData>({
     propertyType: "",
-    propertySize: 0,
+    propertySize: 200,
     monthlyElectricity: 2000,
     monthlyHeating: 1500,
     monthlyHotWater: 500,
     monthlyCooling: 800,
-    roofArea: 50,
-    batterySize: 10,
+    systemTier: "medium",
   });
   const [showResults, setShowResults] = useState(false);
 
   const t = translations[language] || translations.de;
   const isRTL = language === "ar";
 
-  const totalSteps = 3;
+  const totalSteps = 7;
   const progress = (step / totalSteps) * 100;
 
   const handleNext = () => {
@@ -651,43 +734,29 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
 
   const canProceed = () => {
     switch (step) {
-      case 1: return data.propertyType !== "" && data.propertySize > 0;
-      case 2: return data.monthlyElectricity >= 0;
-      case 3: return data.roofArea > 0;
+      case 1: return data.propertyType !== "";
+      case 2: return data.propertySize > 0;
+      case 3: return data.monthlyElectricity >= 0;
+      case 4: return data.monthlyHeating >= 0;
+      case 5: return data.monthlyHotWater >= 0;
+      case 6: return data.monthlyCooling >= 0;
+      case 7: return data.systemTier !== "";
       default: return false;
     }
   };
 
-  // Auto-calculate roof area based on property size
-  const updatePropertySize = (size: number) => {
-    const estimatedRoof = Math.round(size * 0.3); // ~30% of property size
-    setData({ ...data, propertySize: size, roofArea: Math.max(20, Math.min(estimatedRoof, 150)) });
-  };
+  // Get selected system pricing
+  const selectedSystem = SYSTEM_PRICING[data.systemTier];
+  const investmentEUR = selectedSystem.turkeyEUR;
+  const investmentTL = Math.round(investmentEUR * EUR_TO_TL_RATE);
+  const systemPowerKW = selectedSystem.powerKW;
 
-  // Calculate system specifications based on inputs
-  const pvCapacity = Math.round(data.roofArea / 6 * 10) / 10; // ~6m² per kWp
-  const heatPumpCapacity = Math.round(data.propertySize / 25 * 10) / 10; // ~25m² per kW
-  const batteryCapacity = data.batterySize;
-
-  // Cost calculations (in TL)
-  const pvCostPerKwp = 35000; // ₺35,000 per kWp
-  const heatPumpCostPerKw = 25000; // ₺25,000 per kW
-  const hotWaterSystemCost = 45000; // Fixed cost for hot water integration
-  const batteryCostPerKwh = 15000; // ₺15,000 per kWh
-  const installationPercentage = 0.15; // 15% installation cost
-
-  const pvTotalCost = Math.round(pvCapacity * pvCostPerKwp);
-  const heatPumpTotalCost = Math.round(heatPumpCapacity * heatPumpCostPerKw);
-  const batteryTotalCost = Math.round(batteryCapacity * batteryCostPerKwh);
-  const equipmentCost = pvTotalCost + heatPumpTotalCost + hotWaterSystemCost + batteryTotalCost;
-  const installationCost = Math.round(equipmentCost * installationPercentage);
-  const totalInvestment = equipmentCost + installationCost;
-
-  // Savings calculations
-  const electricitySavingsRate = 0.85; // 85% electricity savings with PV + battery
-  const heatingSavingsRate = 0.75; // 75% heating savings with heat pump
-  const hotWaterSavingsRate = 0.90; // 90% hot water savings
-  const coolingSavingsRate = 0.70; // 70% cooling savings with heat pump
+  // Savings calculations based on system power
+  const powerMultiplier = systemPowerKW / 12; // Normalize to medium system
+  const electricitySavingsRate = Math.min(0.90, 0.75 + (powerMultiplier * 0.10));
+  const heatingSavingsRate = Math.min(0.85, 0.70 + (powerMultiplier * 0.10));
+  const hotWaterSavingsRate = 0.95;
+  const coolingSavingsRate = Math.min(0.85, 0.70 + (powerMultiplier * 0.10));
 
   const electricitySavings = Math.round(data.monthlyElectricity * electricitySavingsRate);
   const heatingSavings = Math.round(data.monthlyHeating * heatingSavingsRate);
@@ -696,18 +765,56 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
   const totalMonthlySavings = electricitySavings + heatingSavings + hotWaterSavings + coolingSavings;
   const totalYearlySavings = totalMonthlySavings * 12;
 
-  // ROI and long-term calculations
-  const paybackYears = totalYearlySavings > 0 ? Math.round(totalInvestment / totalYearlySavings * 10) / 10 : 0;
-  const tenYearSavings = totalYearlySavings * 10 - totalInvestment;
-  const twentyFiveYearSavings = totalYearlySavings * 25 - totalInvestment;
+  // ROI calculations
+  const paybackMonths = totalMonthlySavings > 0 ? Math.round(investmentTL / totalMonthlySavings) : 0;
+  const paybackYears = Math.floor(paybackMonths / 12);
+  const paybackRemainingMonths = paybackMonths % 12;
+  const tenYearSavings = totalYearlySavings * 10 - investmentTL;
+  const twentyFiveYearSavings = totalYearlySavings * 25 - investmentTL;
 
-  // CO2 savings (approximate)
-  const co2Saved = Math.round((pvCapacity * 1.2 + heatPumpCapacity * 0.8) * 10) / 10;
+  // CO2 savings
+  const co2Saved = Math.round(systemPowerKW * 1.5 * 10) / 10;
 
   const propertyTypes = [
     { id: "villa", label: t.propertyVilla, icon: Home, gradient: "from-amber-500 to-orange-600" },
     { id: "apartment", label: t.propertyApartment, icon: Building2, gradient: "from-sky-500 to-blue-600" },
     { id: "commercial", label: t.propertyCommercial, icon: Store, gradient: "from-emerald-500 to-green-600" },
+  ];
+
+  const systemTiers = [
+    { 
+      id: "standard" as const, 
+      label: t.systemStandard, 
+      desc: t.standardDesc,
+      power: "8 kW",
+      priceEUR: "€45.500",
+      priceTL: `₺${Math.round(45500 * EUR_TO_TL_RATE).toLocaleString()}`,
+      icon: Star,
+      gradient: "from-slate-500 to-slate-600",
+      badge: null,
+    },
+    { 
+      id: "medium" as const, 
+      label: t.systemMedium, 
+      desc: t.mediumDesc,
+      power: "12 kW",
+      priceEUR: "€59.800",
+      priceTL: `₺${Math.round(59800 * EUR_TO_TL_RATE).toLocaleString()}`,
+      icon: Sparkles,
+      gradient: "from-blue-500 to-blue-600",
+      badge: t.popular,
+    },
+    { 
+      id: "premium" as const, 
+      label: t.systemPremium, 
+      desc: t.premiumDesc,
+      power: "18 kW",
+      priceEUR: "€78.000",
+      priceTL: `₺${Math.round(78000 * EUR_TO_TL_RATE).toLocaleString()}`,
+      icon: Crown,
+      gradient: "from-amber-500 to-orange-600",
+      badge: t.bestValue,
+    },
   ];
 
   if (showResults) {
@@ -725,12 +832,29 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">{t.resultsTitle}</h3>
                 <p className="text-muted-foreground">{t.resultsSubtitle}</p>
+                <p className="text-sm text-primary mt-2">{t.locationAntalya}</p>
               </div>
 
-              {/* System Components */}
-              <div className="bg-primary/5 rounded-xl p-4 mb-6 border border-primary/20">
+              {/* Selected System */}
+              <div className="bg-primary/10 rounded-xl p-5 mb-6 border border-primary/30">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                  <div>
+                    <h4 className="font-bold text-lg text-foreground">{t.yourSystem}: {systemTiers.find(s => s.id === data.systemTier)?.label}</h4>
+                    <p className="text-sm text-muted-foreground">{t.systemPower}: {systemPowerKW} {t.kW}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{t.includes}</p>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-primary">€{investmentEUR.toLocaleString()}</div>
+                    <div className="text-lg text-foreground">₺{investmentTL.toLocaleString()}</div>
+                    <div className="text-xs text-muted-foreground">{t.currentRate}: 1€ = ₺{EUR_TO_TL_RATE}</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 4-in-1 System Components */}
+              <div className="bg-gradient-to-r from-accent/10 to-primary/10 rounded-xl p-4 mb-6 border border-accent/20">
                 <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
-                  <Zap className="w-5 h-5 text-primary" />
+                  <Zap className="w-5 h-5 text-accent" />
                   {t.system4in1}
                 </h4>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -738,96 +862,79 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
                     <Sun className="w-5 h-5 text-amber-500" />
                     <div>
                       <div className="text-sm font-medium">{t.solarPanels}</div>
-                      <div className="text-xs text-muted-foreground">{pvCapacity} {t.kWp}</div>
+                      <div className="text-xs text-muted-foreground">{systemPowerKW} kWp</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
-                    <Thermometer className="w-5 h-5 text-red-500" />
+                    <div className="flex">
+                      <Thermometer className="w-4 h-4 text-red-500" />
+                      <Snowflake className="w-4 h-4 text-blue-500 -ml-1" />
+                    </div>
                     <div>
-                      <div className="text-sm font-medium">{t.heatPump}</div>
-                      <div className="text-xs text-muted-foreground">{heatPumpCapacity} {t.kW}</div>
+                      <div className="text-sm font-medium">{t.heatPumpCooling}</div>
+                      <div className="text-xs text-muted-foreground">{Math.round(systemPowerKW * 0.8)} kW</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
                     <Droplets className="w-5 h-5 text-sky-500" />
                     <div>
                       <div className="text-sm font-medium">{t.hotWaterSystem}</div>
-                      <div className="text-xs text-muted-foreground">Integriert</div>
+                      <div className="text-xs text-muted-foreground">300L</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 bg-background/50 rounded-lg p-3">
                     <Battery className="w-5 h-5 text-emerald-500" />
                     <div>
                       <div className="text-sm font-medium">{t.batteryStorage}</div>
-                      <div className="text-xs text-muted-foreground">{batteryCapacity} {t.kWh}</div>
+                      <div className="text-xs text-muted-foreground">{systemPowerKW} kWh</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                {/* Cost Breakdown */}
-                <div className="bg-background/50 rounded-xl p-5 border border-border/50">
-                  <h4 className="font-semibold text-foreground mb-4 flex items-center gap-2">
-                    <Euro className="w-5 h-5 text-primary" />
-                    {t.costBreakdown}
-                  </h4>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">{t.pvCost} ({pvCapacity} kWp)</span>
-                      <span className="font-medium">₺{pvTotalCost.toLocaleString()}</span>
+              {/* Savings Breakdown */}
+              <div className="bg-emerald-500/5 rounded-xl p-5 mb-6 border border-emerald-500/20">
+                <h4 className="font-semibold text-foreground mb-4 flex items-center gap-2">
+                  <PiggyBank className="w-5 h-5 text-emerald-500" />
+                  {t.savingsBreakdown}
+                </h4>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm mb-4">
+                  <div className="bg-background/50 rounded-lg p-3">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Zap className="w-4 h-4 text-amber-500" />
+                      <span className="text-muted-foreground">{t.electricitySavings}</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">{t.heatPumpCost} ({heatPumpCapacity} kW)</span>
-                      <span className="font-medium">₺{heatPumpTotalCost.toLocaleString()}</span>
+                    <span className="font-bold text-emerald-600">₺{electricitySavings.toLocaleString()}</span>
+                    <span className="text-xs text-muted-foreground ml-1">({Math.round(electricitySavingsRate * 100)}%)</span>
+                  </div>
+                  <div className="bg-background/50 rounded-lg p-3">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Thermometer className="w-4 h-4 text-red-500" />
+                      <span className="text-muted-foreground">{t.heatingSavings}</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">{t.hotWaterCost}</span>
-                      <span className="font-medium">₺{hotWaterSystemCost.toLocaleString()}</span>
+                    <span className="font-bold text-emerald-600">₺{heatingSavings.toLocaleString()}</span>
+                    <span className="text-xs text-muted-foreground ml-1">({Math.round(heatingSavingsRate * 100)}%)</span>
+                  </div>
+                  <div className="bg-background/50 rounded-lg p-3">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Droplets className="w-4 h-4 text-sky-500" />
+                      <span className="text-muted-foreground">{t.hotWaterSavings}</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">{t.batteryCost} ({batteryCapacity} kWh)</span>
-                      <span className="font-medium">₺{batteryTotalCost.toLocaleString()}</span>
+                    <span className="font-bold text-emerald-600">₺{hotWaterSavings.toLocaleString()}</span>
+                    <span className="text-xs text-muted-foreground ml-1">({Math.round(hotWaterSavingsRate * 100)}%)</span>
+                  </div>
+                  <div className="bg-background/50 rounded-lg p-3">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Snowflake className="w-4 h-4 text-blue-500" />
+                      <span className="text-muted-foreground">{t.coolingSavings}</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">{t.installationCost}</span>
-                      <span className="font-medium">₺{installationCost.toLocaleString()}</span>
-                    </div>
-                    <div className="flex justify-between pt-3 border-t border-border">
-                      <span className="font-semibold text-foreground">{t.totalInvestment}</span>
-                      <span className="font-bold text-lg text-primary">₺{totalInvestment.toLocaleString()}</span>
-                    </div>
+                    <span className="font-bold text-emerald-600">₺{coolingSavings.toLocaleString()}</span>
+                    <span className="text-xs text-muted-foreground ml-1">({Math.round(coolingSavingsRate * 100)}%)</span>
                   </div>
                 </div>
-
-                {/* Savings Breakdown */}
-                <div className="bg-emerald-500/5 rounded-xl p-5 border border-emerald-500/20">
-                  <h4 className="font-semibold text-foreground mb-4 flex items-center gap-2">
-                    <PiggyBank className="w-5 h-5 text-emerald-500" />
-                    {t.savingsBreakdown}
-                  </h4>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">{t.electricitySavings} (85%)</span>
-                      <span className="font-medium text-emerald-600">₺{electricitySavings.toLocaleString()}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">{t.heatingSavings} (75%)</span>
-                      <span className="font-medium text-emerald-600">₺{heatingSavings.toLocaleString()}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">{t.hotWaterSavings} (90%)</span>
-                      <span className="font-medium text-emerald-600">₺{hotWaterSavings.toLocaleString()}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">{t.coolingSavings} (70%)</span>
-                      <span className="font-medium text-emerald-600">₺{coolingSavings.toLocaleString()}</span>
-                    </div>
-                    <div className="flex justify-between pt-3 border-t border-emerald-500/20">
-                      <span className="font-semibold text-foreground">{t.totalMonthlySavings}</span>
-                      <span className="font-bold text-lg text-emerald-500">₺{totalMonthlySavings.toLocaleString()}/ay</span>
-                    </div>
-                  </div>
+                <div className="flex justify-between items-center pt-4 border-t border-emerald-500/20">
+                  <span className="font-semibold text-foreground">{t.totalMonthlySavings}</span>
+                  <span className="font-bold text-2xl text-emerald-500">₺{totalMonthlySavings.toLocaleString()}/ay</span>
                 </div>
               </div>
 
@@ -840,7 +947,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
                 </div>
                 <div className="text-center p-4 bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl border border-primary/20">
                   <Banknote className="w-6 h-6 text-primary mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-primary">~{paybackYears}</div>
+                  <div className="text-2xl font-bold text-primary">{paybackYears}.{paybackRemainingMonths}</div>
                   <p className="text-xs text-muted-foreground">{t.paybackPeriod} ({t.years})</p>
                 </div>
                 <div className="text-center p-4 bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 rounded-xl border border-emerald-500/20">
@@ -853,14 +960,6 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
                   <div className="text-2xl font-bold text-sky-500">{co2Saved}</div>
                   <p className="text-xs text-muted-foreground">{t.co2Saved} ({t.tonsPerYear})</p>
                 </div>
-              </div>
-
-              {/* 10 Months Free Energy Highlight */}
-              <div className="bg-gradient-to-r from-amber-500/20 via-orange-500/20 to-accent/20 rounded-xl p-5 mb-6 border border-amber-500/30 text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-amber-500 to-accent bg-clip-text text-transparent mb-1">
-                  {t.freeMonths}
-                </div>
-                <p className="text-sm text-muted-foreground">{t.freeMonthsDesc}</p>
               </div>
 
               <p className="text-center text-muted-foreground text-xs mb-6">{t.disclaimer}</p>
@@ -911,6 +1010,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
               <Progress value={progress} className="h-2" />
             </div>
 
+            {/* Step 1: Property Type */}
             {step === 1 && (
               <div className="space-y-6">
                 <div>
@@ -938,15 +1038,25 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
                     </button>
                   ))}
                 </div>
-                <div className="pt-4 border-t border-border/30">
-                  <Label htmlFor="propertySize" className="text-base font-medium">{t.propertySizeLabel}</Label>
+              </div>
+            )}
+
+            {/* Step 2: Property Size */}
+            {step === 2 && (
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground">{t.step2Title}</h3>
+                  <p className="text-muted-foreground">{t.step2Subtitle}</p>
+                </div>
+                <div>
+                  <Label htmlFor="propertySize" className="text-base font-medium">{t.propertySizeLabel} (m²)</Label>
                   <p className="text-sm text-muted-foreground mb-3">{t.propertySizeHint}</p>
                   <Input
                     id="propertySize"
                     type="number"
-                    value={data.propertySize}
-                    onChange={(e) => updatePropertySize(Number(e.target.value))}
-                    className="h-12 text-lg bg-background/50"
+                    value={data.propertySize || ""}
+                    onChange={(e) => setData({ ...data, propertySize: Number(e.target.value) })}
+                    className="h-14 text-2xl bg-background/50 text-center font-bold"
                     placeholder="200"
                     data-testid="input-property-size"
                   />
@@ -954,113 +1064,158 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
               </div>
             )}
 
-            {step === 2 && (
-              <div className="space-y-5">
-                <h3 className="text-xl font-semibold text-foreground">{t.step3Title}</h3>
-                <p className="text-muted-foreground">{t.step3Subtitle}</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <Label className="text-sm font-medium flex items-center gap-2">
-                      <Zap className="w-4 h-4 text-amber-500" />
-                      {t.electricityLabel}
-                    </Label>
-                    <div className="relative mt-1">
-                      <Input
-                        type="number"
-                        value={data.monthlyElectricity}
-                        onChange={(e) => setData({ ...data, monthlyElectricity: Number(e.target.value) })}
-                        className="h-11 bg-background/50 pr-16"
-                        data-testid="input-electricity"
-                      />
-                      <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-muted-foreground">{t.monthlyTL}</span>
-                    </div>
-                  </div>
-                  <div>
-                    <Label className="text-sm font-medium flex items-center gap-2">
-                      <Thermometer className="w-4 h-4 text-red-500" />
-                      {t.heatingLabel}
-                    </Label>
-                    <div className="relative mt-1">
-                      <Input
-                        type="number"
-                        value={data.monthlyHeating}
-                        onChange={(e) => setData({ ...data, monthlyHeating: Number(e.target.value) })}
-                        className="h-11 bg-background/50 pr-16"
-                        data-testid="input-heating"
-                      />
-                      <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-muted-foreground">{t.monthlyTL}</span>
-                    </div>
-                  </div>
-                  <div>
-                    <Label className="text-sm font-medium flex items-center gap-2">
-                      <Droplets className="w-4 h-4 text-sky-500" />
-                      {t.hotWaterLabel}
-                    </Label>
-                    <div className="relative mt-1">
-                      <Input
-                        type="number"
-                        value={data.monthlyHotWater}
-                        onChange={(e) => setData({ ...data, monthlyHotWater: Number(e.target.value) })}
-                        className="h-11 bg-background/50 pr-16"
-                        data-testid="input-hotwater"
-                      />
-                      <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-muted-foreground">{t.monthlyTL}</span>
-                    </div>
-                  </div>
-                  <div>
-                    <Label className="text-sm font-medium flex items-center gap-2">
-                      <Snowflake className="w-4 h-4 text-blue-500" />
-                      {t.coolingLabel}
-                    </Label>
-                    <div className="relative mt-1">
-                      <Input
-                        type="number"
-                        value={data.monthlyCooling}
-                        onChange={(e) => setData({ ...data, monthlyCooling: Number(e.target.value) })}
-                        className="h-11 bg-background/50 pr-16"
-                        data-testid="input-cooling"
-                      />
-                      <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-muted-foreground">{t.monthlyTL}</span>
-                    </div>
+            {/* Step 3: Electricity Costs */}
+            {step === 3 && (
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground">{t.step3Title}</h3>
+                  <p className="text-muted-foreground">{t.step3Subtitle}</p>
+                </div>
+                <div>
+                  <Label className="text-base font-medium flex items-center gap-2">
+                    <Zap className="w-5 h-5 text-amber-500" />
+                    {t.electricityLabel}
+                  </Label>
+                  <p className="text-sm text-muted-foreground mb-3">{t.electricityHint}</p>
+                  <div className="relative">
+                    <Input
+                      type="number"
+                      value={data.monthlyElectricity || ""}
+                      onChange={(e) => setData({ ...data, monthlyElectricity: Number(e.target.value) })}
+                      className="h-14 text-2xl bg-background/50 text-center font-bold pr-20"
+                      placeholder="2000"
+                      data-testid="input-electricity"
+                    />
+                    <span className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground font-medium">{t.monthlyTL}</span>
                   </div>
                 </div>
               </div>
             )}
 
-            {step === 3 && (
+            {/* Step 4: Heating Costs */}
+            {step === 4 && (
               <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-foreground">{t.step4Title}</h3>
-                <p className="text-muted-foreground">{t.step4Subtitle}</p>
                 <div>
-                  <Label htmlFor="roofArea" className="text-base font-medium">{t.roofAreaLabel}</Label>
-                  <p className="text-sm text-muted-foreground mb-3">{t.roofAreaHint}</p>
-                  <Input
-                    id="roofArea"
-                    type="number"
-                    value={data.roofArea}
-                    onChange={(e) => setData({ ...data, roofArea: Number(e.target.value) })}
-                    className="h-12 text-lg bg-background/50"
-                    placeholder="50"
-                    data-testid="input-roof-area"
-                  />
+                  <h3 className="text-xl font-semibold text-foreground">{t.step4Title}</h3>
+                  <p className="text-muted-foreground">{t.step4Subtitle}</p>
                 </div>
                 <div>
-                  <Label className="text-base font-medium">{t.batteryLabel}: {data.batterySize} kWh</Label>
-                  <p className="text-sm text-muted-foreground mb-3">{t.batteryHint}</p>
-                  <Slider
-                    value={[data.batterySize]}
-                    onValueChange={(value) => setData({ ...data, batterySize: value[0] })}
-                    min={5}
-                    max={30}
-                    step={1}
-                    className="mt-2"
-                    data-testid="slider-battery"
-                  />
-                  <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                    <span>5 kWh</span>
-                    <span>30 kWh</span>
+                  <Label className="text-base font-medium flex items-center gap-2">
+                    <Thermometer className="w-5 h-5 text-red-500" />
+                    {t.heatingLabel}
+                  </Label>
+                  <p className="text-sm text-muted-foreground mb-3">{t.heatingHint}</p>
+                  <div className="relative">
+                    <Input
+                      type="number"
+                      value={data.monthlyHeating || ""}
+                      onChange={(e) => setData({ ...data, monthlyHeating: Number(e.target.value) })}
+                      className="h-14 text-2xl bg-background/50 text-center font-bold pr-20"
+                      placeholder="1500"
+                      data-testid="input-heating"
+                    />
+                    <span className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground font-medium">{t.monthlyTL}</span>
                   </div>
                 </div>
+              </div>
+            )}
+
+            {/* Step 5: Hot Water Costs */}
+            {step === 5 && (
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground">{t.step5Title}</h3>
+                  <p className="text-muted-foreground">{t.step5Subtitle}</p>
+                </div>
+                <div>
+                  <Label className="text-base font-medium flex items-center gap-2">
+                    <Droplets className="w-5 h-5 text-sky-500" />
+                    {t.hotWaterLabel}
+                  </Label>
+                  <p className="text-sm text-muted-foreground mb-3">{t.hotWaterHint}</p>
+                  <div className="relative">
+                    <Input
+                      type="number"
+                      value={data.monthlyHotWater || ""}
+                      onChange={(e) => setData({ ...data, monthlyHotWater: Number(e.target.value) })}
+                      className="h-14 text-2xl bg-background/50 text-center font-bold pr-20"
+                      placeholder="500"
+                      data-testid="input-hotwater"
+                    />
+                    <span className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground font-medium">{t.monthlyTL}</span>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Step 6: Cooling Costs */}
+            {step === 6 && (
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground">{t.step6Title}</h3>
+                  <p className="text-muted-foreground">{t.step6Subtitle}</p>
+                </div>
+                <div>
+                  <Label className="text-base font-medium flex items-center gap-2">
+                    <Snowflake className="w-5 h-5 text-blue-500" />
+                    {t.coolingLabel}
+                  </Label>
+                  <p className="text-sm text-muted-foreground mb-3">{t.coolingHint}</p>
+                  <div className="relative">
+                    <Input
+                      type="number"
+                      value={data.monthlyCooling || ""}
+                      onChange={(e) => setData({ ...data, monthlyCooling: Number(e.target.value) })}
+                      className="h-14 text-2xl bg-background/50 text-center font-bold pr-20"
+                      placeholder="800"
+                      data-testid="input-cooling"
+                    />
+                    <span className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground font-medium">{t.monthlyTL}</span>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Step 7: System Selection */}
+            {step === 7 && (
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground">{t.step7Title}</h3>
+                  <p className="text-muted-foreground">{t.step7Subtitle}</p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {systemTiers.map((tier) => (
+                    <button
+                      key={tier.id}
+                      onClick={() => setData({ ...data, systemTier: tier.id })}
+                      className={`p-5 rounded-xl border-2 transition-all hover-elevate active-elevate-2 text-left relative ${
+                        data.systemTier === tier.id ? "border-primary bg-primary/10" : "border-border/50 bg-background/50"
+                      }`}
+                      data-testid={`button-system-${tier.id}`}
+                    >
+                      {tier.badge && (
+                        <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                          <span className="bg-gradient-to-r from-accent to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            {tier.badge}
+                          </span>
+                        </div>
+                      )}
+                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-3 ${
+                        data.systemTier === tier.id ? `bg-gradient-to-br ${tier.gradient}` : "bg-muted"
+                      }`}>
+                        <tier.icon className={`w-6 h-6 ${data.systemTier === tier.id ? "text-white" : "text-muted-foreground"}`} />
+                      </div>
+                      <div className="font-bold text-lg text-foreground">{tier.label}</div>
+                      <div className="text-2xl font-bold text-primary mt-1">{tier.power}</div>
+                      <p className="text-xs text-muted-foreground mt-2">{tier.desc}</p>
+                      <div className="mt-3 pt-3 border-t border-border/50">
+                        <div className="text-lg font-bold text-foreground">{tier.priceEUR}</div>
+                        <div className="text-sm text-muted-foreground">{tier.priceTL}</div>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+                <p className="text-center text-xs text-muted-foreground">{t.includes}</p>
               </div>
             )}
 
