@@ -25,7 +25,7 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-background" />
       <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-accent/10" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-8 text-center py-12">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-8 text-center pt-4 pb-12">
         <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-4">
           <div className="flex items-center gap-2 bg-gradient-to-r from-accent/80 to-orange-600/80 backdrop-blur-md rounded-full px-5 py-2.5 border border-white/20 shadow-lg">
             <div className="w-8 h-8 bg-white/20 rounded-md flex items-center justify-center">
