@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Sun, TrendingUp, Zap, ThermometerSun, Sparkles, ArrowRight, Check, Battery, Coins, Leaf, Award, Snowflake, Flame, Plug, Home, Droplets, WifiIcon, Car, ChevronRight } from "lucide-react";
+import { Sun, TrendingUp, Zap, ThermometerSun, Sparkles, ArrowRight, Check, Battery, Coins, Leaf, Award, Snowflake, Flame, Plug, Home, Droplets, WifiIcon, Car, ChevronRight, Phone } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { useLocation } from "wouter";
 import Header from "@/components/Header";
@@ -410,6 +410,7 @@ export default function Vorteile() {
   };
 
   const c = content[language as keyof typeof content] || content.de;
+  const isRtl = language === "ar";
 
   const stats = [
     { value: c.stat1Value, label: c.stat1Label, icon: Sun },
@@ -447,7 +448,7 @@ export default function Vorteile() {
   ];
 
   return (
-    <div className="min-h-screen bg-background" data-testid="page-vorteile">
+    <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-vorteile">
       <Header onCtaClick={scrollToCalculator} />
       
       <section className="relative pt-20 pb-8 overflow-hidden" data-testid="section-vorteile-hero">
@@ -475,15 +476,27 @@ export default function Vorteile() {
               {c.subtitle}
             </p>
             
-            <Button 
-              onClick={scrollToCalculator}
-              size="lg"
-              className="bg-gradient-to-r from-amber-500 to-orange-600 border-0 shadow-lg"
-              data-testid="button-vorteile-cta"
-            >
-              {c.ctaButton}
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                onClick={scrollToCalculator}
+                size="lg"
+                className="bg-gradient-to-r from-amber-500 to-orange-600 border-0 shadow-lg px-8"
+                data-testid="button-vorteile-cta"
+              >
+                {c.ctaButton}
+                <ArrowRight className={`w-5 h-5 ${isRtl ? "mr-2 rotate-180" : "ml-2"}`} />
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white/30 text-white bg-white/10 backdrop-blur-sm px-8" 
+                onClick={() => window.location.href = "tel:+905071832036"}
+                data-testid="button-vorteile-phone"
+              >
+                <Phone className={`w-5 h-5 ${isRtl ? "ml-2" : "mr-2"}`} />
+                +90 507 183 2036
+              </Button>
+            </div>
           </div>
         </div>
       </section>

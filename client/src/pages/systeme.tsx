@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Snowflake, Flame, Sun, Battery, Check, Sparkles, ArrowRight, Zap, Shield, Clock, ThumbsUp } from "lucide-react";
+import { Snowflake, Flame, Sun, Battery, Check, Sparkles, ArrowRight, Zap, Shield, Clock, ThumbsUp, Phone } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
 import { useLocation } from "wouter";
@@ -124,6 +124,7 @@ export default function Systeme() {
   };
 
   const c = content[language as keyof typeof content] || content.de;
+  const isRtl = language === "ar";
 
   const features = [
     {
@@ -176,7 +177,7 @@ export default function Systeme() {
   ];
 
   return (
-    <div className="min-h-screen bg-background" data-testid="page-systeme">
+    <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-systeme">
       <Header onCtaClick={scrollToCalculator} />
       
       <section className="relative pt-20 pb-8 overflow-hidden" data-testid="section-systeme-hero">
@@ -204,15 +205,27 @@ export default function Systeme() {
               {c.subtitle}
             </p>
             
-            <Button 
-              onClick={scrollToCalculator}
-              size="lg"
-              className="bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg"
-              data-testid="button-systeme-cta"
-            >
-              {c.ctaButton}
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                onClick={scrollToCalculator}
+                size="lg"
+                className="bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg px-8"
+                data-testid="button-systeme-cta"
+              >
+                {c.ctaButton}
+                <ArrowRight className={`w-5 h-5 ${isRtl ? "mr-2 rotate-180" : "ml-2"}`} />
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white/30 text-white bg-white/10 backdrop-blur-sm px-8" 
+                onClick={() => window.location.href = "tel:+905071832036"}
+                data-testid="button-systeme-phone"
+              >
+                <Phone className={`w-5 h-5 ${isRtl ? "ml-2" : "mr-2"}`} />
+                +90 507 183 2036
+              </Button>
+            </div>
           </div>
         </div>
       </section>
