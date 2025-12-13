@@ -28,10 +28,15 @@ const countryToLanguage: Record<string, Language> = {
 
 async function detectCountryFromIP(): Promise<string | null> {
   try {
-    const response = await fetch("http://ip-api.com/json/?fields=countryCode");
+    // Try ipapi.co first (HTTPS, 1000 requests/day free)
+    const response = await fetch("https://ipapi.co/country_code/", {
+      headers: { "Accept": "text/plain" }
+    });
     if (response.ok) {
-      const data = await response.json();
-      return data.countryCode || null;
+      const countryCode = await response.text();
+      if (countryCode && countryCode.length === 2) {
+        return countryCode.trim().toUpperCase();
+      }
     }
   } catch (error) {
     console.log("IP detection failed, using default language");
