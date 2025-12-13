@@ -1,16 +1,61 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
+import { sendLeadEmails } from "./email";
 
 export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  // put application routes here
-  // prefix all routes with /api
-
-  // use storage to perform CRUD operations on the storage interface
-  // e.g. storage.insertUser(user) or storage.getUserByUsername(username)
+  // Lead submission endpoint
+  app.post("/api/leads", async (req, res) => {
+    try {
+      const { name, phone, email, location, message, consent, language, calculatorData } = req.body;
+      
+      // Validate required fields
+      if (!name || !phone || !consent) {
+        return res.status(400).json({ 
+          error: "Missing required fields: name, phone, and consent are required" 
+        });
+      }
+      
+      // Log lead data
+      console.log("New lead received:", {
+        name,
+        phone,
+        email,
+        location,
+        language,
+        calculatorData,
+        timestamp: new Date().toISOString(),
+      });
+      
+      // Send emails
+      const emailResult = await sendLeadEmails({
+        name,
+        phone,
+        email,
+        location,
+        message,
+        language: language || "de",
+        calculatorData,
+      });
+      
+      if (!emailResult.success) {
+        console.warn("Email sending failed:", emailResult.error);
+        // Still return success - lead was received even if email failed
+      }
+      
+      return res.status(200).json({ 
+        success: true,
+        message: "Lead received successfully",
+        emailSent: emailResult.success,
+      });
+    } catch (error) {
+      console.error("Error processing lead:", error);
+      return res.status(500).json({ error: "Internal server error" });
+    }
+  });
 
   return httpServer;
 }
