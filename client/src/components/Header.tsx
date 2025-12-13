@@ -58,7 +58,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
   const navItems = [
     { label: aboutLabel, id: "about", href: "/ueber-uns", isHashLink: false },
     { label: t.header.system, id: "system", href: "/systeme", isHashLink: false },
-    { label: t.header.benefits, id: "benefits", href: "/#benefits", isHashLink: true },
+    { label: t.header.benefits, id: "benefits", href: "/vorteile", isHashLink: false },
     { label: t.header.calculator, id: "calculator", href: "/#calculator", isHashLink: true },
     { label: t.header.team, id: "team", href: "/#team", isHashLink: true },
   ];
