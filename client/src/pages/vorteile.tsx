@@ -450,14 +450,14 @@ export default function Vorteile() {
     <div className="min-h-screen bg-background" data-testid="page-vorteile">
       <Header onCtaClick={scrollToCalculator} />
       
-      <section className="relative pt-24 pb-16 overflow-hidden" data-testid="section-vorteile-hero">
+      <section className="relative pt-20 pb-8 overflow-hidden" data-testid="section-vorteile-hero">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
         
-        <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24">
+        <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
           <div className="text-center">
             <Badge variant="secondary" className="mb-6 bg-amber-500/20 backdrop-blur-md border-amber-400/30 text-white">
               <Sparkles className="w-4 h-4 mr-2 text-amber-400" />

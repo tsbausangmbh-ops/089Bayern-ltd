@@ -410,14 +410,14 @@ Today, we install solar panels, heat pumps and climate systems in Antalya, Alany
       <Header />
       
       {/* Hero Section with Background */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-20">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-background" />
         
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center py-20">
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center py-10">
           <Badge className="mb-6 bg-accent/90 text-white border-0 px-4 py-1.5" data-testid="badge-story">
             <Sun className="w-4 h-4 mr-2" />
             {t.badge}

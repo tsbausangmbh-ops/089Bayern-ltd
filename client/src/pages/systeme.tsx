@@ -179,14 +179,14 @@ export default function Systeme() {
     <div className="min-h-screen bg-background" data-testid="page-systeme">
       <Header onCtaClick={scrollToCalculator} />
       
-      <section className="relative pt-24 pb-16 overflow-hidden" data-testid="section-systeme-hero">
+      <section className="relative pt-20 pb-8 overflow-hidden" data-testid="section-systeme-hero">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
         
-        <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24">
+        <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
           <div className="text-center">
             <Badge variant="secondary" className="mb-6 bg-white/10 backdrop-blur-md border-white/20 text-white">
               <Sparkles className="w-4 h-4 mr-2" />
