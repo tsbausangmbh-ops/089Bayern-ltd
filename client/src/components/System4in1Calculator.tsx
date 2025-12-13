@@ -704,10 +704,10 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
   const [data, setData] = useState<CalculatorData>({
     propertyType: "",
     propertySize: 200,
-    monthlyElectricity: 2000,
-    monthlyHeating: 1500,
-    monthlyHotWater: 500,
-    monthlyCooling: 800,
+    monthlyElectricity: 5000,
+    monthlyHeating: 3500,
+    monthlyHotWater: 1500,
+    monthlyCooling: 2000,
     systemTier: "medium",
   });
   const [showResults, setShowResults] = useState(false);
