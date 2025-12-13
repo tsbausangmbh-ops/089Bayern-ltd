@@ -3,65 +3,68 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Phone, Mail, Globe, MessageCircle } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
-
-const teamMembers = [
-  {
-    name: "Dalibor Bakmaz",
-    role: "CEO / Geschäftsführer",
-    description: "15+ Jahre Erfahrung mit deutschen Energiesystemen. Gründer des Türkei-Marktes.",
-    languages: ["Deutsch"],
-    email: "dbakmaz@089bayern.tr",
-    phones: ["+90 507 192 2036", "+49 155 68855141"],
-    whatsapp: "+905071922036",
-    initials: "DB",
-    bgColor: "bg-blue-500/10",
-    textColor: "text-blue-600",
-  },
-  {
-    name: "Mustafa Sakar",
-    role: "CEO / Mitgründer",
-    description: "Brückenbauer zwischen Türkei und Deutschland. Experte für erneuerbare Energien und Immobilieninvestitionen.",
-    languages: ["Deutsch", "Türkisch"],
-    email: "msakar@089bayern.tr",
-    phones: ["+90 507 183 2036", "+49 173 5994699"],
-    whatsapp: "+905071832036",
-    initials: "MS",
-    bgColor: "bg-emerald-500/10",
-    textColor: "text-emerald-600",
-  },
-  {
-    name: "Ahmet Imrol",
-    role: "Türkei Regionaldirektor",
-    description: "Koordinator für Installation und After-Sales-Support in der Mittelmeerregion. Vor-Ort-Service-Garantie.",
-    languages: ["Deutsch", "Türkisch"],
-    email: "info@089bayern.tr",
-    phones: ["+90 (242) 5131352"],
-    whatsapp: "+902425131352",
-    initials: "AI",
-    bgColor: "bg-amber-500/10",
-    textColor: "text-amber-600",
-  },
-];
+import { useLanguage } from "@/lib/LanguageContext";
+import { uiTranslations } from "@/lib/uiTranslations";
 
 export default function TeamSection() {
+  const { language } = useLanguage();
+  const t = uiTranslations[language];
+
+  const teamMembers = [
+    {
+      name: "Dalibor Bakmaz",
+      role: t.team.member1Role,
+      description: t.team.member1Description,
+      languages: ["Deutsch"],
+      email: "dbakmaz@089bayern.tr",
+      phones: ["+90 507 192 2036", "+49 155 68855141"],
+      whatsapp: "+905071922036",
+      initials: "DB",
+      bgColor: "bg-blue-500/10",
+      textColor: "text-blue-600",
+    },
+    {
+      name: "Mustafa Sakar",
+      role: t.team.member2Role,
+      description: t.team.member2Description,
+      languages: ["Deutsch", "Türkisch"],
+      email: "msakar@089bayern.tr",
+      phones: ["+90 507 183 2036", "+49 173 5994699"],
+      whatsapp: "+905071832036",
+      initials: "MS",
+      bgColor: "bg-emerald-500/10",
+      textColor: "text-emerald-600",
+    },
+    {
+      name: "Ahmet Imrol",
+      role: t.team.member3Role,
+      description: t.team.member3Description,
+      languages: ["Deutsch", "Türkisch"],
+      email: "info@089bayern.tr",
+      phones: ["+90 (242) 5131352"],
+      whatsapp: "+902425131352",
+      initials: "AI",
+      bgColor: "bg-amber-500/10",
+      textColor: "text-amber-600",
+    },
+  ];
+
   return (
     <section id="team" className="py-4 md:py-5 bg-muted/30" data-testid="section-team">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="text-center mb-5">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 mb-4">
             <MessageCircle className="w-4 h-4 text-amber-400" />
-            <span className="text-sm font-medium text-foreground">Experten-Team</span>
+            <span className="text-sm font-medium text-foreground">{t.team.badge}</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            Unser Solarenergie{" "}
+            {t.team.title}{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-              Experten-Team in Antalya
+              {t.team.titleHighlight}
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Unser erfahrenes Ingenieur- und Vertriebsteam in unseren Büros in München (Deutschland) und Antalya (Türkei) 
-            begleitet Sie in jeder Phase Ihres Solarenergie- und Wärmepumpenprojekts. 
-            24/7 Support auf Türkisch und Deutsch.
+            {t.team.subtitle}
           </p>
         </div>
 
@@ -118,7 +121,7 @@ export default function TeamSection() {
                     data-testid={`button-call-${index}`}
                   >
                     <Phone className="w-4 h-4 mr-2" />
-                    Anrufen
+                    {t.team.callButton}
                   </Button>
                   <Button
                     className="w-full bg-green-600 hover:bg-green-700"
@@ -138,18 +141,17 @@ export default function TeamSection() {
           <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-white/10 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-foreground mb-4">
               <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-                Kostenlose Besichtigung und Beratung
+                {t.team.consultationTitle}
               </span>
-              {" "}in Antalya
+              {" "}{t.team.consultationTitleHighlight}
             </h3>
             <p className="text-muted-foreground mb-6">
-              Lassen Sie uns das Solarpotenzial Ihrer Villa oder Ihres Hauses vor Ort bewerten. 
-              Kostenloser Besichtigungsservice in Antalya, Mugla, Izmir, Aydin und Mersin. Kein Verkaufsdruck.
+              {t.team.consultationDescription}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" className="px-8 bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg shadow-accent/30">
                 <Phone className="w-4 h-4 mr-2" />
-                Jetzt anrufen: +90 507 192 2036
+                {t.team.callNow}
               </Button>
             </div>
           </div>

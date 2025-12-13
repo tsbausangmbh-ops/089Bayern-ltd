@@ -1,7 +1,26 @@
 import { Phone, Mail, MapPin, Shield, Award } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
+import { useLanguage } from "@/lib/LanguageContext";
+import { uiTranslations } from "@/lib/uiTranslations";
 
 export default function Footer() {
+  const { language } = useLanguage();
+  const t = uiTranslations[language];
+
+  const quickLinks = [
+    { label: t.footer.system, href: "#features" },
+    { label: t.footer.benefits, href: "#benefits" },
+    { label: t.footer.calculator, href: "#calculator" },
+    { label: t.footer.ourTeam, href: "#team" },
+  ];
+
+  const products = [
+    { name: t.footer.vaillantHeatPump, desc: t.footer.vaillantDesc },
+    { name: t.footer.solarPanel, desc: t.footer.solarDesc },
+    { name: t.footer.samsungClimate, desc: t.footer.samsungDesc },
+    { name: t.footer.bydBattery, desc: t.footer.bydDesc },
+  ];
+
   return (
     <footer className="bg-gradient-to-b from-slate-900 to-slate-950 text-white" data-testid="footer-main">
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-3 md:py-4">
@@ -13,35 +32,28 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-bold text-xl text-white">Bayern</span>
-                <span className="block text-xs text-white/60">Energiesysteme</span>
+                <span className="block text-xs text-white/60">{t.footer.tagline}</span>
               </div>
             </div>
             <p className="text-white/70 text-sm mb-6 leading-relaxed">
-              Installation von Solarenergie-, Wärmepumpen- und Energiespeichersystemen in 
-              Antalya, Mugla, Izmir, Aydin und Mersin. Deutsche Ingenieurskunst, türkischer Service. 
-              Autorisierter Händler von Vaillant, Samsung und BYD.
+              {t.footer.description}
             </p>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 text-xs text-white/60">
                 <Award className="w-4 h-4" />
-                <span>Deutsche Qualität</span>
+                <span>{t.footer.germanQuality}</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-white/60">
                 <Shield className="w-4 h-4" />
-                <span>10 Jahre Garantie</span>
+                <span>{t.footer.guarantee}</span>
               </div>
             </div>
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-6">Schnelllinks</h4>
+            <h4 className="font-semibold text-white mb-6">{t.footer.quickLinks}</h4>
             <ul className="space-y-3 text-sm">
-              {[
-                { label: "4-in-1 System", href: "#features" },
-                { label: "Vorteile", href: "#benefits" },
-                { label: "Ersparnis berechnen", href: "#calculator" },
-                { label: "Unser Team", href: "#team" },
-              ].map((link) => (
+              {quickLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
@@ -56,14 +68,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-6">Unsere Energiesysteme</h4>
+            <h4 className="font-semibold text-white mb-6">{t.footer.energySystems}</h4>
             <ul className="space-y-3 text-sm">
-              {[
-                { name: "Vaillant Wärmepumpe", desc: "Deutsche Qualitätsheizung" },
-                { name: "Solarenergie-Panel", desc: "Premium Solar-Installation" },
-                { name: "Samsung Klimasystem", desc: "Inverter-Technologie" },
-                { name: "BYD Energiebatterie", desc: "Lithium-Speicher" },
-              ].map((product) => (
+              {products.map((product) => (
                 <li key={product.name} className="text-white/60">
                   <span className="text-white">{product.name}</span>
                   <span className="text-xs block">{product.desc}</span>
@@ -73,7 +80,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-6">Kontakt</h4>
+            <h4 className="font-semibold text-white mb-6">{t.footer.contact}</h4>
             <ul className="space-y-4 text-sm">
               <li>
                 <a
@@ -84,7 +91,7 @@ export default function Footer() {
                   <Phone className="w-5 h-5" />
                   <div>
                     <span className="block text-white font-medium">+90 507 192 2036</span>
-                    <span className="text-xs text-white/60">Türkei-Leitung</span>
+                    <span className="text-xs text-white/60">{t.footer.turkeyLine}</span>
                   </div>
                 </a>
               </li>
@@ -98,8 +105,8 @@ export default function Footer() {
                 >
                   <SiWhatsapp className="w-5 h-5 text-green-400" />
                   <div>
-                    <span className="block text-white font-medium">WhatsApp</span>
-                    <span className="text-xs text-white/60">Schnelle Kommunikation</span>
+                    <span className="block text-white font-medium">{t.footer.whatsapp}</span>
+                    <span className="text-xs text-white/60">{t.footer.quickComm}</span>
                   </div>
                 </a>
               </li>
@@ -112,15 +119,15 @@ export default function Footer() {
                   <Mail className="w-5 h-5" />
                   <div>
                     <span className="block text-white font-medium">info@089bayern.tr</span>
-                    <span className="text-xs text-white/60">E-Mail</span>
+                    <span className="text-xs text-white/60">{t.footer.email}</span>
                   </div>
                 </a>
               </li>
               <li className="flex items-start gap-3 text-white/70">
                 <MapPin className="w-5 h-5 mt-0.5" />
                 <div>
-                  <span className="block text-white font-medium">Antalya Büro</span>
-                  <span className="text-xs text-white/60">Mittelmeer-Regionszentrale</span>
+                  <span className="block text-white font-medium">{t.footer.antalyaOffice}</span>
+                  <span className="text-xs text-white/60">{t.footer.regionalHQ}</span>
                 </div>
               </li>
             </ul>
@@ -129,16 +136,16 @@ export default function Footer() {
 
         <div className="mt-4 pt-3 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
-            <p>&copy; {new Date().getFullYear()} 089 Bayern Energiesysteme. Alle Rechte vorbehalten.</p>
+            <p>&copy; {new Date().getFullYear()} {t.footer.copyright}</p>
             <div className="flex flex-wrap items-center justify-center gap-6">
               <a href="#" className="hover:text-white transition-colors" data-testid="link-kvkk">
-                Datenschutzerklärung
+                {t.footer.privacy}
               </a>
               <a href="#" className="hover:text-white transition-colors" data-testid="link-privacy">
-                Datenschutzrichtlinie
+                {t.footer.privacyPolicy}
               </a>
               <a href="#" className="hover:text-white transition-colors" data-testid="link-terms">
-                Nutzungsbedingungen
+                {t.footer.terms}
               </a>
             </div>
           </div>

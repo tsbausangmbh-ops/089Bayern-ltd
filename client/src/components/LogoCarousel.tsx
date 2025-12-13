@@ -1,32 +1,36 @@
-import { Shield, Award, Wrench } from "lucide-react";
-
-const logos = [
-  { name: "Vaillant", tagline: "Heizungsführer" },
-  { name: "Viessmann", tagline: "Deutsche Ingenieurskunst" },
-  { name: "Samsung", tagline: "Klima & Speicher" },
-  { name: "SMA", tagline: "Inverter-Technologie" },
-  { name: "BYD", tagline: "Batteriesysteme" },
-  { name: "Fronius", tagline: "Solar-Lösungen" },
-];
+import { Award } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
+import { uiTranslations } from "@/lib/uiTranslations";
 
 export default function LogoCarousel() {
+  const { language } = useLanguage();
+  const t = uiTranslations[language];
+
+  const logos = [
+    { name: "Vaillant", tagline: t.logos.vaillantTagline },
+    { name: "Viessmann", tagline: t.logos.viessmannTagline },
+    { name: "Samsung", tagline: t.logos.samsungTagline },
+    { name: "SMA", tagline: t.logos.smaTagline },
+    { name: "BYD", tagline: t.logos.bydTagline },
+    { name: "Fronius", tagline: t.logos.froniusTagline },
+  ];
+
   return (
     <section className="py-3 md:py-4 bg-gradient-to-b from-background to-card/50 border-y border-border/50" data-testid="section-logos">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="text-center mb-4">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 mb-3">
             <Award className="w-4 h-4 text-amber-400" />
-            <span className="text-sm font-medium text-foreground">Premium-Marken</span>
+            <span className="text-sm font-medium text-foreground">{t.logos.badge}</span>
           </div>
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-            Autorisierte Installation in der Türkei:{" "}
+            {t.logos.title}{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-              Premium-Energiemarken
+              {t.logos.titleHighlight}
             </span>
           </h3>
           <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-            Als autorisierter Händler von Vaillant, Samsung, BYD und Fronius installieren wir in Antalya und am Mittelmeer 
-            mit Original-Produktgarantie. 10-25 Jahre Herstellergarantie.
+            {t.logos.description}
           </p>
         </div>
 
@@ -48,15 +52,15 @@ export default function LogoCarousel() {
         <div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:gap-6">
           <div className="flex items-center gap-3 bg-card/50 px-4 py-2 rounded-full border border-border/50">
             <div className="w-3 h-3 rounded-full bg-emerald-500 shadow-lg shadow-emerald-500/50" />
-            <span className="text-sm text-foreground">Original-Produktgarantie</span>
+            <span className="text-sm text-foreground">{t.logos.originalGuarantee}</span>
           </div>
           <div className="flex items-center gap-3 bg-card/50 px-4 py-2 rounded-full border border-border/50">
             <div className="w-3 h-3 rounded-full bg-primary shadow-lg shadow-primary/50" />
-            <span className="text-sm text-foreground">Autorisiertes Service-Netzwerk</span>
+            <span className="text-sm text-foreground">{t.logos.authorizedService}</span>
           </div>
           <div className="flex items-center gap-3 bg-card/50 px-4 py-2 rounded-full border border-border/50">
             <div className="w-3 h-3 rounded-full bg-amber-500 shadow-lg shadow-amber-500/50" />
-            <span className="text-sm text-foreground">10+ Jahre Teilegarantie</span>
+            <span className="text-sm text-foreground">{t.logos.partsGuarantee}</span>
           </div>
         </div>
       </div>

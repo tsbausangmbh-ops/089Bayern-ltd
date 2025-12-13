@@ -1,14 +1,27 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X, Zap, Globe } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useLanguage } from "@/lib/LanguageContext";
+import { uiTranslations } from "@/lib/uiTranslations";
+import { Language, languageNames } from "@/lib/translations";
 
 interface HeaderProps {
   onCtaClick?: () => void;
 }
 
+const languages: Language[] = ["de", "tr", "en", "ru", "uk", "ar"];
+
 export default function Header({ onCtaClick }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
+  const t = uiTranslations[language];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +38,13 @@ export default function Header({ onCtaClick }: HeaderProps) {
     }
     setIsMobileMenuOpen(false);
   };
+
+  const navItems = [
+    { label: t.header.system, id: "features" },
+    { label: t.header.benefits, id: "benefits" },
+    { label: t.header.calculator, id: "calculator" },
+    { label: t.header.team, id: "team" },
+  ];
 
   return (
     <header
@@ -48,12 +68,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
           </div>
 
           <nav className="hidden md:flex items-center gap-1">
-            {[
-              { label: "System", id: "features" },
-              { label: "Vorteile", id: "benefits" },
-              { label: "Rechner", id: "calculator" },
-              { label: "Team", id: "team" },
-            ].map((item) => (
+            {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
@@ -67,13 +82,38 @@ export default function Header({ onCtaClick }: HeaderProps) {
             ))}
           </nav>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  size="icon"
+                  variant="ghost"
+                  className={`transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}
+                  data-testid="button-language-selector"
+                >
+                  <Globe className="w-5 h-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                {languages.map((lang) => (
+                  <DropdownMenuItem
+                    key={lang}
+                    onClick={() => setLanguage(lang)}
+                    className={language === lang ? "bg-accent" : ""}
+                    data-testid={`button-language-${lang}`}
+                  >
+                    {languageNames[lang]}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Button
               onClick={onCtaClick}
               className="hidden md:flex bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg shadow-accent/20"
               data-testid="button-header-cta"
             >
-              Kostenloses Angebot
+              {t.header.ctaButton}
             </Button>
 
             <Button
@@ -92,12 +132,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-background/98 backdrop-blur-md border-b border-border">
           <nav className="flex flex-col p-4 gap-1">
-            {[
-              { label: "System", id: "features" },
-              { label: "Vorteile", id: "benefits" },
-              { label: "Rechner", id: "calculator" },
-              { label: "Team", id: "team" },
-            ].map((item) => (
+            {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
@@ -112,7 +147,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
               className="mt-3 bg-gradient-to-r from-accent to-orange-600 border-0" 
               data-testid="button-mobile-cta"
             >
-              Kostenloses Angebot
+              {t.header.ctaButton}
             </Button>
           </nav>
         </div>
