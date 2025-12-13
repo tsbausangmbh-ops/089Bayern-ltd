@@ -16,6 +16,7 @@ import UeberUns from "@/pages/ueber-uns";
 import Systeme from "@/pages/systeme";
 import Vorteile from "@/pages/vorteile";
 import Rechner from "@/pages/rechner";
+import Team from "@/pages/team";
 import CookieBanner from "@/components/CookieBanner";
 
 function Router() {
@@ -32,6 +33,7 @@ function Router() {
       <Route path="/systeme" component={Systeme} />
       <Route path="/vorteile" component={Vorteile} />
       <Route path="/rechner" component={Rechner} />
+      <Route path="/team" component={Team} />
       <Route component={NotFound} />
     </Switch>
   );

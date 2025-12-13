@@ -66,3 +66,14 @@ These are bundled but not actively implemented in the current codebase.
 - Custom CSS variables for theming (light mode focused)
 - Inter font family for Turkish character support
 - Mediterranean-inspired color palette with German trust aesthetics
+
+### Pages
+- Home (/) - Landing page with hero, features, team preview, calculator
+- Systeme (/systeme) - 4-in-1 German System details
+- Vorteile (/vorteile) - Benefits and advantages
+- Rechner (/rechner) - Savings calculator with multi-step form
+- Team (/team) - Company story, values, and contact information
+- Über uns (/ueber-uns) - About page
+- Legal pages: KVKK, Gizlilik, Cerez-Politikasi, Sartlar, Mesafeli-Satis, On-Bilgilendirme
+
+All pages support 6 languages (de, tr, en, ru, uk, ar) with RTL support for Arabic.
