@@ -109,7 +109,7 @@ export default function CerezPolitikasi() {
           <section>
             <h2 className="text-xl font-semibold mb-4">6. İletişim</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Çerez politikamız hakkında sorularınız için <strong>info@089bayern.tr</strong> adresinden bizimle iletişime geçebilirsiniz.
+              Çerez politikamız hakkında sorularınız için <strong>info@089bayern.com</strong> adresinden bizimle iletişime geçebilirsiniz.
             </p>
           </section>
         </div>

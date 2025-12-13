@@ -26,8 +26,8 @@ export default function KVKK() {
               <p className="text-sm"><strong>Firma:</strong> 089 Bayern Enerji Sistemleri Ltd. Şti.</p>
               <p className="text-sm"><strong>Adres:</strong> Sekerhane, Halimaga Cd. Lale Tokus Plaza No 1, 07450 Alanya/Antalya, Turkiye</p>
               <p className="text-sm"><strong>Telefon:</strong> +90 507 192 2036</p>
-              <p className="text-sm"><strong>E-posta:</strong> info@089bayern.tr</p>
-              <p className="text-sm"><strong>KVKK Sorumlusu:</strong> kvkk@089bayern.tr</p>
+              <p className="text-sm"><strong>E-posta:</strong> info@089bayern.com</p>
+              <p className="text-sm"><strong>KVKK Sorumlusu:</strong> kvkk@089bayern.com</p>
             </div>
           </section>
 
@@ -87,7 +87,7 @@ export default function KVKK() {
           <section>
             <h2 className="text-xl font-semibold mb-4">7. Başvuru Yöntemi</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Yukarıda belirtilen haklarınızı kullanmak için <strong>kvkk@089bayern.tr</strong> adresine e-posta göndererek veya şirket adresimize yazılı başvuru yaparak bizimle iletişime geçebilirsiniz. Başvurularınız en geç 30 gün içinde yanıtlanacaktır.
+              Yukarıda belirtilen haklarınızı kullanmak için <strong>kvkk@089bayern.com</strong> adresine e-posta göndererek veya şirket adresimize yazılı başvuru yaparak bizimle iletişime geçebilirsiniz. Başvurularınız en geç 30 gün içinde yanıtlanacaktır.
             </p>
           </section>
 

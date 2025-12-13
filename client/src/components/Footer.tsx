@@ -113,13 +113,13 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@089bayern.tr"
+                  href="mailto:info@089bayern.com"
                   className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
                   data-testid="link-footer-email"
                 >
                   <Mail className="w-5 h-5" />
                   <div>
-                    <span className="block text-white font-medium">info@089bayern.tr</span>
+                    <span className="block text-white font-medium">info@089bayern.com</span>
                     <span className="text-xs text-white/60">{t.footer.email}</span>
                   </div>
                 </a>
@@ -165,7 +165,7 @@ export default function Footer() {
           <div className="text-xs text-white/50 text-center space-y-1" data-testid="footer-impressum">
             <p className="font-medium text-white/70">089 Bayern Enerji Sistemleri Ltd. Sti.</p>
             <p>Sekerhane, Halimaga Cd. Lale Tokus Plaza No 1, 07450 Alanya/Antalya, Turkiye</p>
-            <p>Tel: +90 507 192 2036 | E-posta: info@089bayern.tr</p>
+            <p>Tel: +90 507 192 2036 | E-posta: info@089bayern.com</p>
             <p>Ticaret Sicil No: [Kayit sonrasi] | MERSIS No: [Kayit sonrasi]</p>
             <p>Vergi Dairesi: [Kayit sonrasi] | Vergi No: [Kayit sonrasi]</p>
           </div>
