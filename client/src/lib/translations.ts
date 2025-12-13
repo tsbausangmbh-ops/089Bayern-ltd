@@ -82,6 +82,32 @@ export const translations: Record<Language, {
   locationMersin: string;
   sunPrefix: string;
   hoursPerYear: string;
+  // LeadCaptureForm translations
+  formBadge: string;
+  formTitle: string;
+  formSubtitle: string;
+  formNameLabel: string;
+  formNamePlaceholder: string;
+  formPhoneLabel: string;
+  formPhonePlaceholder: string;
+  formEmailLabel: string;
+  formEmailPlaceholder: string;
+  formLocationLabel: string;
+  formLocationPlaceholder: string;
+  formMessageLabel: string;
+  formMessagePlaceholder: string;
+  formConsentText: string;
+  formSubmitButton: string;
+  formSecurityNote: string;
+  formSuccessTitle: string;
+  formSuccessMessage: string;
+  formSuccessResponseTime: string;
+  formNextStepsTitle: string;
+  formNextStep1: string;
+  formNextStep2: string;
+  formNextStep3: string;
+  formUrgentContact: string;
+  formOkButton: string;
 }> = {
   tr: {
     badge: "4'ü 1 Arada Sistem Hesaplama",
@@ -165,6 +191,31 @@ export const translations: Record<Language, {
     locationMersin: "Mersin (Alanya)",
     sunPrefix: "Güneş:",
     hoursPerYear: "saat/yıl",
+    formBadge: "Ücretsiz Danışmanlık",
+    formTitle: "Ücretsiz Keşif Randevusu Alın",
+    formSubtitle: "Bilgilerinizi bırakın, enerji uzmanlarımız sizi arasın. Satış baskısı yok!",
+    formNameLabel: "Ad Soyad *",
+    formNamePlaceholder: "Tam adınız",
+    formPhoneLabel: "Telefon Numarası *",
+    formPhonePlaceholder: "+90 5XX XXX XX XX",
+    formEmailLabel: "E-posta (İsteğe bağlı)",
+    formEmailPlaceholder: "ornek@email.com",
+    formLocationLabel: "Mülk Konumu",
+    formLocationPlaceholder: "Örn. Antalya, Konyaaltı",
+    formMessageLabel: "Mesajınız (İsteğe bağlı)",
+    formMessagePlaceholder: "Projeniz hakkında kısaca bilgi verebilirsiniz...",
+    formConsentText: "Kişisel verilerimin gizlilik politikasına uygun olarak işlenmesini kabul ediyorum ve iletişime geçilmesini onaylıyorum.",
+    formSubmitButton: "Ücretsiz Randevu Talep Et",
+    formSecurityNote: "Verileriniz SSL ile şifrelenir. Spam göndermiyoruz.",
+    formSuccessTitle: "Talebiniz Başarıyla Gönderildi!",
+    formSuccessMessage: "Enerji danışmanlarımız en kısa sürede sizinle iletişime geçecek.",
+    formSuccessResponseTime: "Genellikle 2 saat içinde yanıt veriyoruz.",
+    formNextStepsTitle: "Sonraki Adımlar",
+    formNextStep1: "Uzmanımız sizi arayacak ve ihtiyaçlarınızı görüşecek",
+    formNextStep2: "Ücretsiz bir keşif randevusu planlanacak",
+    formNextStep3: "Size özel teklif ve finansman seçenekleri sunulacak",
+    formUrgentContact: "Acil talepler için:",
+    formOkButton: "Tamam",
   },
   de: {
     badge: "4-in-1 Systemrechner",
@@ -248,6 +299,31 @@ export const translations: Record<Language, {
     locationMersin: "Mersin (Alanya)",
     sunPrefix: "Sonne:",
     hoursPerYear: "Std/Jahr",
+    formBadge: "Kostenlose Beratung",
+    formTitle: "Kostenlosen Besichtigungstermin vereinbaren",
+    formSubtitle: "Hinterlassen Sie Ihre Daten, unsere Energieexperten rufen Sie an. Kein Verkaufsdruck!",
+    formNameLabel: "Vor- und Nachname *",
+    formNamePlaceholder: "Ihr vollständiger Name",
+    formPhoneLabel: "Telefonnummer *",
+    formPhonePlaceholder: "+90 5XX XXX XX XX",
+    formEmailLabel: "E-Mail (Optional)",
+    formEmailPlaceholder: "beispiel@email.com",
+    formLocationLabel: "Standort der Immobilie",
+    formLocationPlaceholder: "z.B. Antalya, Konyaalti",
+    formMessageLabel: "Ihre Nachricht (Optional)",
+    formMessagePlaceholder: "Sie können uns kurz über Ihr Projekt informieren...",
+    formConsentText: "Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der Datenschutzerklärung zu und akzeptiere, kontaktiert zu werden.",
+    formSubmitButton: "Kostenlosen Termin anfragen",
+    formSecurityNote: "Ihre Daten werden SSL-verschlüsselt. Wir senden keinen Spam.",
+    formSuccessTitle: "Ihre Anfrage wurde erfolgreich übermittelt!",
+    formSuccessMessage: "Unsere Energieberater werden sich schnellstmöglich mit Ihnen in Verbindung setzen.",
+    formSuccessResponseTime: "In der Regel antworten wir innerhalb von 2 Stunden.",
+    formNextStepsTitle: "Nächste Schritte",
+    formNextStep1: "Unser Experte wird Sie anrufen und Ihre Bedürfnisse besprechen",
+    formNextStep2: "Ein kostenloser Besichtigungstermin wird geplant",
+    formNextStep3: "Sie erhalten ein individuelles Angebot und Finanzierungsoptionen",
+    formUrgentContact: "Für dringende Anfragen:",
+    formOkButton: "OK",
   },
   en: {
     badge: "4-in-1 System Calculator",
@@ -331,6 +407,31 @@ export const translations: Record<Language, {
     locationMersin: "Mersin (Alanya)",
     sunPrefix: "Sun:",
     hoursPerYear: "hours/year",
+    formBadge: "Free Consultation",
+    formTitle: "Schedule a Free Site Visit",
+    formSubtitle: "Leave your details, our energy experts will call you. No sales pressure!",
+    formNameLabel: "Full Name *",
+    formNamePlaceholder: "Your full name",
+    formPhoneLabel: "Phone Number *",
+    formPhonePlaceholder: "+90 5XX XXX XX XX",
+    formEmailLabel: "Email (Optional)",
+    formEmailPlaceholder: "example@email.com",
+    formLocationLabel: "Property Location",
+    formLocationPlaceholder: "e.g. Antalya, Konyaalti",
+    formMessageLabel: "Your Message (Optional)",
+    formMessagePlaceholder: "Tell us briefly about your project...",
+    formConsentText: "I agree to the processing of my personal data in accordance with the privacy policy and accept to be contacted.",
+    formSubmitButton: "Request Free Appointment",
+    formSecurityNote: "Your data is SSL encrypted. We don't send spam.",
+    formSuccessTitle: "Your Request Has Been Successfully Submitted!",
+    formSuccessMessage: "Our energy consultants will contact you as soon as possible.",
+    formSuccessResponseTime: "We usually respond within 2 hours.",
+    formNextStepsTitle: "Next Steps",
+    formNextStep1: "Our expert will call you and discuss your needs",
+    formNextStep2: "A free site visit will be scheduled",
+    formNextStep3: "You will receive a personalized quote and financing options",
+    formUrgentContact: "For urgent inquiries:",
+    formOkButton: "OK",
   },
   ru: {
     badge: "Калькулятор системы 4-в-1",
@@ -414,6 +515,31 @@ export const translations: Record<Language, {
     locationMersin: "Мерсин (Аланья)",
     sunPrefix: "Солнце:",
     hoursPerYear: "часов/год",
+    formBadge: "Бесплатная консультация",
+    formTitle: "Запишитесь на бесплатный осмотр",
+    formSubtitle: "Оставьте свои данные, наши энергетические эксперты позвонят вам. Без давления!",
+    formNameLabel: "Имя и Фамилия *",
+    formNamePlaceholder: "Ваше полное имя",
+    formPhoneLabel: "Номер телефона *",
+    formPhonePlaceholder: "+90 5XX XXX XX XX",
+    formEmailLabel: "Email (Необязательно)",
+    formEmailPlaceholder: "primer@email.com",
+    formLocationLabel: "Местоположение объекта",
+    formLocationPlaceholder: "Напр. Анталья, Коньяалты",
+    formMessageLabel: "Ваше сообщение (Необязательно)",
+    formMessagePlaceholder: "Расскажите кратко о вашем проекте...",
+    formConsentText: "Я согласен на обработку моих персональных данных в соответствии с политикой конфиденциальности и принимаю возможность связаться со мной.",
+    formSubmitButton: "Запросить бесплатную встречу",
+    formSecurityNote: "Ваши данные защищены SSL-шифрованием. Мы не рассылаем спам.",
+    formSuccessTitle: "Ваш запрос успешно отправлен!",
+    formSuccessMessage: "Наши консультанты по энергетике свяжутся с вами в ближайшее время.",
+    formSuccessResponseTime: "Обычно мы отвечаем в течение 2 часов.",
+    formNextStepsTitle: "Следующие шаги",
+    formNextStep1: "Наш эксперт позвонит вам и обсудит ваши потребности",
+    formNextStep2: "Будет назначен бесплатный осмотр объекта",
+    formNextStep3: "Вы получите индивидуальное предложение и варианты финансирования",
+    formUrgentContact: "Для срочных запросов:",
+    formOkButton: "OK",
   },
   uk: {
     badge: "Калькулятор системи 4-в-1",
@@ -497,6 +623,31 @@ export const translations: Record<Language, {
     locationMersin: "Мерсін (Аланья)",
     sunPrefix: "Сонце:",
     hoursPerYear: "годин/рік",
+    formBadge: "Безкоштовна консультація",
+    formTitle: "Запишіться на безкоштовний огляд",
+    formSubtitle: "Залиште свої дані, наші енергетичні експерти зателефонують вам. Без тиску!",
+    formNameLabel: "Ім'я та Прізвище *",
+    formNamePlaceholder: "Ваше повне ім'я",
+    formPhoneLabel: "Номер телефону *",
+    formPhonePlaceholder: "+90 5XX XXX XX XX",
+    formEmailLabel: "Email (Необов'язково)",
+    formEmailPlaceholder: "priklad@email.com",
+    formLocationLabel: "Розташування об'єкта",
+    formLocationPlaceholder: "Напр. Анталья, Коньяалти",
+    formMessageLabel: "Ваше повідомлення (Необов'язково)",
+    formMessagePlaceholder: "Розкажіть коротко про ваш проект...",
+    formConsentText: "Я погоджуюся на обробку моїх персональних даних відповідно до політики конфіденційності та приймаю можливість зв'язку зі мною.",
+    formSubmitButton: "Запросити безкоштовну зустріч",
+    formSecurityNote: "Ваші дані захищені SSL-шифруванням. Ми не розсилаємо спам.",
+    formSuccessTitle: "Ваш запит успішно надіслано!",
+    formSuccessMessage: "Наші консультанти з енергетики зв'яжуться з вами найближчим часом.",
+    formSuccessResponseTime: "Зазвичай ми відповідаємо протягом 2 годин.",
+    formNextStepsTitle: "Наступні кроки",
+    formNextStep1: "Наш експерт зателефонує вам та обговорить ваші потреби",
+    formNextStep2: "Буде призначений безкоштовний огляд об'єкта",
+    formNextStep3: "Ви отримаєте індивідуальну пропозицію та варіанти фінансування",
+    formUrgentContact: "Для термінових запитів:",
+    formOkButton: "OK",
   },
   ar: {
     badge: "حاسبة نظام 4 في 1",
@@ -580,6 +731,31 @@ export const translations: Record<Language, {
     locationMersin: "مرسين (ألانيا)",
     sunPrefix: "الشمس:",
     hoursPerYear: "ساعة/سنة",
+    formBadge: "استشارة مجانية",
+    formTitle: "احجز زيارة موقع مجانية",
+    formSubtitle: "اترك بياناتك، سيتصل بك خبراء الطاقة لدينا. بدون ضغط مبيعات!",
+    formNameLabel: "الاسم الكامل *",
+    formNamePlaceholder: "اسمك الكامل",
+    formPhoneLabel: "رقم الهاتف *",
+    formPhonePlaceholder: "+90 5XX XXX XX XX",
+    formEmailLabel: "البريد الإلكتروني (اختياري)",
+    formEmailPlaceholder: "example@email.com",
+    formLocationLabel: "موقع العقار",
+    formLocationPlaceholder: "مثال: أنطاليا، كونيالتي",
+    formMessageLabel: "رسالتك (اختياري)",
+    formMessagePlaceholder: "أخبرنا باختصار عن مشروعك...",
+    formConsentText: "أوافق على معالجة بياناتي الشخصية وفقاً لسياسة الخصوصية وأقبل الاتصال بي.",
+    formSubmitButton: "طلب موعد مجاني",
+    formSecurityNote: "بياناتك مشفرة بـ SSL. نحن لا نرسل رسائل غير مرغوب فيها.",
+    formSuccessTitle: "تم إرسال طلبك بنجاح!",
+    formSuccessMessage: "سيتواصل معك مستشارو الطاقة لدينا في أقرب وقت ممكن.",
+    formSuccessResponseTime: "نرد عادةً خلال ساعتين.",
+    formNextStepsTitle: "الخطوات التالية",
+    formNextStep1: "سيتصل بك خبيرنا ويناقش احتياجاتك",
+    formNextStep2: "سيتم جدولة زيارة موقع مجانية",
+    formNextStep3: "ستحصل على عرض مخصص وخيارات تمويل",
+    formUrgentContact: "للاستفسارات العاجلة:",
+    formOkButton: "موافق",
   },
 };
 
