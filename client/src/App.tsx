@@ -13,6 +13,7 @@ import Sartlar from "@/pages/sartlar";
 import MesafeliSatis from "@/pages/mesafeli-satis";
 import OnBilgilendirme from "@/pages/on-bilgilendirme";
 import UeberUns from "@/pages/ueber-uns";
+import Systeme from "@/pages/systeme";
 import CookieBanner from "@/components/CookieBanner";
 
 function Router() {
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/mesafeli-satis" component={MesafeliSatis} />
       <Route path="/on-bilgilendirme" component={OnBilgilendirme} />
       <Route path="/ueber-uns" component={UeberUns} />
+      <Route path="/systeme" component={Systeme} />
       <Route component={NotFound} />
     </Switch>
   );
