@@ -84,20 +84,33 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li>
                 <a
-                  href="tel:+905071922036"
+                  href="tel:+905071832036"
                   className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
                   data-testid="link-footer-phone"
                 >
                   <Phone className="w-5 h-5" />
                   <div>
-                    <span className="block text-white font-medium">+90 507 192 2036</span>
+                    <span className="block text-white font-medium">+90 507 183 2036</span>
                     <span className="text-xs text-white/60">{t.footer.turkeyLine}</span>
                   </div>
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/905071922036"
+                  href="tel:+491735994699"
+                  className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
+                  data-testid="link-footer-phone-de"
+                >
+                  <Phone className="w-5 h-5" />
+                  <div>
+                    <span className="block text-white font-medium">+49 173 5994699</span>
+                    <span className="text-xs text-white/60">Deutschland</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/905071832036"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
@@ -137,7 +150,7 @@ export default function Footer() {
 
         <div className="mt-4 pt-3 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
-            <p>&copy; {new Date().getFullYear()} {t.footer.copyright}</p>
+            <p>&copy; 2024 {t.footer.copyright}</p>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
               <a href="/kvkk" className="hover:text-white transition-colors" data-testid="link-kvkk">
                 {t.footer.privacy}
@@ -164,8 +177,9 @@ export default function Footer() {
         <div className="mt-4 pt-3 border-t border-white/10">
           <div className="text-xs text-white/50 text-center space-y-1" data-testid="footer-impressum">
             <p className="font-medium text-white/70">089 Bayern Enerji Sistemleri Ltd. Sti.</p>
-            <p>Sekerhane, Halimaga Cd. Lale Tokus Plaza No 1, 07450 Alanya/Antalya, Turkiye</p>
-            <p>Tel: +90 507 192 2036 | E-posta: info@089bayern.com</p>
+            <p>Sekerhane Mah. Halimaga Sk. Lale Tokus Plaza 6/14, Alanya/Antalya, Turkiye</p>
+            <p>Tel: +90 507 183 2036 | +49 173 5994699 | E-posta: info@089bayern.com</p>
+            <p>Yoneticiler: Dalibor Bakmaz, Mustafa Sakar</p>
             <p>Ticaret Sicil No: [Kayit sonrasi] | MERSIS No: [Kayit sonrasi]</p>
             <p>Vergi Dairesi: [Kayit sonrasi] | Vergi No: [Kayit sonrasi]</p>
           </div>
