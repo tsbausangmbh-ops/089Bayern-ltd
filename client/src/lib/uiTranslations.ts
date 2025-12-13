@@ -155,6 +155,8 @@ export const uiTranslations: Record<Language, {
     terms: string;
     distanceSales: string;
     preInfo: string;
+    serviceAreas: string;
+    serviceAreasNote: string;
   };
   // Logo Carousel
   logos: {
@@ -346,6 +348,8 @@ export const uiTranslations: Record<Language, {
       distanceSales: "Mesafeli Satış Sözleşmesi",
       preInfo: "Ön Bilgilendirme Formu",
       legal: "Yasal Bilgiler",
+      serviceAreas: "Hizmet Bölgelerimiz",
+      serviceAreasNote: "Akdeniz Bölgesi ve Dalmaçya'da güneş enerjisi, ısı pompası, klima ve enerji depolama kurulumu",
     },
     logos: {
       badge: "Premium Markalar",
@@ -536,6 +540,8 @@ export const uiTranslations: Record<Language, {
       distanceSales: "Fernabsatzvertrag",
       preInfo: "Vorabinformationen",
       legal: "Rechtliches",
+      serviceAreas: "Unsere Servicegebiete",
+      serviceAreasNote: "Installation von Solarenergie, Wärmepumpe, Klimaanlage und Energiespeicher in der Mittelmeerregion und Dalmatien",
     },
     logos: {
       badge: "Premium-Marken",
@@ -726,6 +732,8 @@ export const uiTranslations: Record<Language, {
       distanceSales: "Distance Sales Agreement",
       preInfo: "Pre-Information Form",
       legal: "Legal Information",
+      serviceAreas: "Our Service Areas",
+      serviceAreasNote: "Solar energy, heat pump, air conditioning and energy storage installation in the Mediterranean region and Dalmatia",
     },
     logos: {
       badge: "Premium Brands",
@@ -916,6 +924,8 @@ export const uiTranslations: Record<Language, {
       distanceSales: "Договор дистанционной продажи",
       preInfo: "Форма предварительной информации",
       legal: "Юридическая информация",
+      serviceAreas: "Наши регионы обслуживания",
+      serviceAreasNote: "Установка солнечной энергии, теплового насоса, кондиционера и накопителя энергии в Средиземноморском регионе и Далмации",
     },
     logos: {
       badge: "Премиальные бренды",
@@ -1106,6 +1116,8 @@ export const uiTranslations: Record<Language, {
       distanceSales: "Договір дистанційного продажу",
       preInfo: "Форма попередньої інформації",
       legal: "Юридична інформація",
+      serviceAreas: "Наші регіони обслуговування",
+      serviceAreasNote: "Встановлення сонячної енергії, теплового насоса, кондиціонера та накопичувача енергії в Середземноморському регіоні та Далмації",
     },
     logos: {
       badge: "Преміальні бренди",
@@ -1296,6 +1308,8 @@ export const uiTranslations: Record<Language, {
       distanceSales: "عقد البيع عن بعد",
       preInfo: "نموذج المعلومات المسبقة",
       legal: "المعلومات القانونية",
+      serviceAreas: "مناطق خدماتنا",
+      serviceAreasNote: "تركيب الطاقة الشمسية، المضخة الحرارية، التكييف وتخزين الطاقة في منطقة البحر المتوسط ودالماتيا",
     },
     logos: {
       badge: "علامات تجارية متميزة",
