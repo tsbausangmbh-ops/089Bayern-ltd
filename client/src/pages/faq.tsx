@@ -10,6 +10,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 import { useLocation } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
 
 export default function FAQ() {
@@ -471,6 +472,7 @@ export default function FAQ() {
 
   return (
     <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-faq">
+      <SEOHead page="faq" />
       <Header onCtaClick={scrollToCalculator} />
       
       <section className="relative pt-20 pb-8 overflow-hidden" data-testid="section-faq-hero">

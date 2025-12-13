@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import System4in1Calculator from "@/components/System4in1Calculator";
+import SEOHead from "@/components/SEOHead";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -521,6 +522,7 @@ export default function Rechner() {
 
   return (
     <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-rechner">
+      <SEOHead page="rechner" />
       <Header onCtaClick={handleCtaClick} />
       
       {/* Hero Section */}

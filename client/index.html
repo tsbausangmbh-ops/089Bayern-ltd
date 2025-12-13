@@ -132,17 +132,30 @@
             "longitude": 30.7133
           },
           "areaServed": [
-            {"@type": "City", "name": "München"},
+            {"@type": "City", "name": "München", "containedInPlace": {"@type": "AdministrativeArea", "name": "Bayern, Deutschland"}},
             {"@type": "AdministrativeArea", "name": "Bayern"},
             {"@type": "Country", "name": "Deutschland"},
-            {"@type": "City", "name": "Antalya"},
-            {"@type": "City", "name": "Alanya"},
-            {"@type": "City", "name": "Muğla"},
-            {"@type": "City", "name": "İzmir"},
-            {"@type": "City", "name": "Aydın"},
-            {"@type": "City", "name": "Mersin"},
-            {"@type": "City", "name": "Split"},
-            {"@type": "AdministrativeArea", "name": "Dalmatia"}
+            {"@type": "City", "name": "Antalya", "geo": {"@type": "GeoCoordinates", "latitude": 36.8969, "longitude": 30.7133}},
+            {"@type": "City", "name": "Alanya", "geo": {"@type": "GeoCoordinates", "latitude": 36.5437, "longitude": 31.9994}},
+            {"@type": "City", "name": "Kemer", "geo": {"@type": "GeoCoordinates", "latitude": 36.5983, "longitude": 30.5567}},
+            {"@type": "City", "name": "Belek", "geo": {"@type": "GeoCoordinates", "latitude": 36.8593, "longitude": 31.0558}},
+            {"@type": "City", "name": "Side", "geo": {"@type": "GeoCoordinates", "latitude": 36.7633, "longitude": 31.3897}},
+            {"@type": "City", "name": "Manavgat", "geo": {"@type": "GeoCoordinates", "latitude": 36.7875, "longitude": 31.4433}},
+            {"@type": "City", "name": "Mahmutlar", "geo": {"@type": "GeoCoordinates", "latitude": 36.4753, "longitude": 32.0825}},
+            {"@type": "City", "name": "Konaklı", "geo": {"@type": "GeoCoordinates", "latitude": 36.5817, "longitude": 31.9000}},
+            {"@type": "City", "name": "Gazipaşa", "geo": {"@type": "GeoCoordinates", "latitude": 36.2697, "longitude": 32.3172}},
+            {"@type": "City", "name": "Kaş", "geo": {"@type": "GeoCoordinates", "latitude": 36.2000, "longitude": 29.6500}},
+            {"@type": "City", "name": "Fethiye", "geo": {"@type": "GeoCoordinates", "latitude": 36.6583, "longitude": 29.1233}},
+            {"@type": "City", "name": "Muğla", "geo": {"@type": "GeoCoordinates", "latitude": 37.2153, "longitude": 28.3636}},
+            {"@type": "City", "name": "Bodrum", "geo": {"@type": "GeoCoordinates", "latitude": 37.0344, "longitude": 27.4305}},
+            {"@type": "City", "name": "Marmaris", "geo": {"@type": "GeoCoordinates", "latitude": 36.8550, "longitude": 28.2742}},
+            {"@type": "City", "name": "İzmir", "geo": {"@type": "GeoCoordinates", "latitude": 38.4237, "longitude": 27.1428}},
+            {"@type": "City", "name": "Kuşadası", "geo": {"@type": "GeoCoordinates", "latitude": 37.8606, "longitude": 27.2622}},
+            {"@type": "City", "name": "Didim", "geo": {"@type": "GeoCoordinates", "latitude": 37.3667, "longitude": 27.2667}},
+            {"@type": "City", "name": "Aydın", "geo": {"@type": "GeoCoordinates", "latitude": 37.8560, "longitude": 27.8416}},
+            {"@type": "City", "name": "Mersin", "geo": {"@type": "GeoCoordinates", "latitude": 36.8121, "longitude": 34.6415}},
+            {"@type": "City", "name": "Split", "geo": {"@type": "GeoCoordinates", "latitude": 43.5081, "longitude": 16.4402}},
+            {"@type": "AdministrativeArea", "name": "Dalmatia", "containedInPlace": {"@type": "Country", "name": "Croatia"}}
           ],
           "priceRange": "₺₺₺",
           "currenciesAccepted": "TRY, EUR, USD",
@@ -234,7 +247,7 @@
               "name": "Which areas do you serve?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We serve the Mediterranean coast of Turkey including Antalya, Muğla, İzmir, Aydın, and Mersin. We also operate in the Dalmatia region of Croatia."
+                "text": "We serve the Mediterranean coast of Turkey including Antalya, Alanya, Kemer, Belek, Side, Manavgat, Muğla, Fethiye, Bodrum, Marmaris, İzmir, Kuşadası, Didim, Aydın, and Mersin. We also operate in Split and the Dalmatia region of Croatia."
               }
             },
             {
@@ -242,7 +255,63 @@
               "name": "How much can I save with your energy systems?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Our integrated 4-in-1 energy systems can help you save up to 70% on your energy bills through solar power generation, efficient heat pumps, and smart energy storage."
+                "text": "Our integrated 4-in-1 energy systems can help you save up to 70% on your energy bills through solar power generation, efficient heat pumps, and smart energy storage. With 300+ sunny days in the Mediterranean, you can enjoy 10 months of virtually free electricity."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the 4-in-1 German System?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The 089 Bayern 4-in-1 German System combines solar photovoltaic panels, Vaillant heat pumps, Samsung air conditioning, and lithium battery storage into one integrated energy solution. All components work together seamlessly for maximum efficiency."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does installation take in Antalya?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A typical residential installation in Antalya, Alanya, or surrounding areas takes 3-5 days depending on system size. Our German-trained technicians ensure precise installation according to DIN standards."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What warranty do you offer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We offer a comprehensive 10-year warranty on our 4-in-1 systems. Solar panels come with a 25-year performance guarantee, and all Vaillant and Samsung equipment includes manufacturer warranties."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you install solar panels for villas in Alanya?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we specialize in villa installations throughout Alanya, Mahmutlar, Konaklı, and Gazipaşa. Our systems are designed for Mediterranean villa architecture with roof-mounted or ground-mounted options."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the payback period for solar panels in Turkey?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The typical payback period for our solar energy systems in Antalya and the Mediterranean region is 4-6 years. After that, you enjoy free electricity for the remaining 20+ years of system life."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I get a free consultation?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we offer free on-site consultations throughout the Mediterranean region. Our energy experts will assess your property, calculate potential savings, and provide a customized proposal. Contact us at +90 507 183 2036."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you speak German and English?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, our team is multilingual. We offer service in Turkish, German, English, Russian, Ukrainian, Croatian, and Arabic to serve our international clients in the Mediterranean region."
               }
             }
           ]

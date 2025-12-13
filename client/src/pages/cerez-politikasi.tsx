@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import { useLanguage } from "@/lib/LanguageContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 export default function CerezPolitikasi() {
   const { language } = useLanguage();
@@ -323,6 +324,7 @@ export default function CerezPolitikasi() {
 
   return (
     <div className={`min-h-screen bg-background ${isRTL ? "rtl" : ""}`} dir={isRTL ? "rtl" : "ltr"}>
+      <SEOHead page="legal" />
       <Header />
       
       <section className="relative pt-24 pb-16 overflow-hidden" data-testid="section-hero">

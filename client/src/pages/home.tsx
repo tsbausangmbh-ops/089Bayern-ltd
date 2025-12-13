@@ -1,6 +1,7 @@
 import { useState, lazy, Suspense, useEffect } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import SEOHead from "@/components/SEOHead";
 import FeaturesGrid from "@/components/FeaturesGrid";
 import BenefitsSection from "@/components/BenefitsSection";
 import SavingsCalculator from "@/components/SavingsCalculator";
@@ -61,6 +62,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead page="home" />
       <Header onCtaClick={handleCtaClick} />
       <HeroSection onCtaClick={handleCtaClick} onLearnMoreClick={handleLearnMoreClick} />
       <FeaturesGrid />

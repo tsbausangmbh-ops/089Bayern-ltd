@@ -222,6 +222,49 @@ const seoData = {
       keywords: "089 bayern конфіденційність, умови, правова інформація"
     }
   },
+  hr: {
+    siteName: "089 Bayern Energetski Sustavi",
+    home: {
+      title: "089 Bayern | Solarni Paneli i Toplinska Pumpa Antalya | Njemački Sustav 4-u-1",
+      description: "Solarni paneli, toplinske pumpe, klima i pohrana energije u Antalyi, Alanyi, Kemeru, Beleku, Sideu, Manavgatu. Njemačka kvaliteta s uštedom do 70%. Besplatna konzultacija: +90 507 183 2036",
+      keywords: "solarni paneli antalya, toplinska pumpa turska, fotonapon mediteran, solarna energija alanya, njemački energetski sustavi turska, 089 bayern"
+    },
+    systeme: {
+      title: "Njemački Sustav 4-u-1 | Solar + Toplinska Pumpa + Klima + Baterija | 089 Bayern",
+      description: "089 Bayern 4-in-1 German System: Fotonapon, toplinska pumpa, Samsung klima i litijska baterija u jednom sustavu. Instalacija u Antalyi, Alanyi, Kemeru. 10 godina jamstva.",
+      keywords: "sustav 4 u 1, integracija solarna toplinska pumpa, hibridni energetski sustav, njemački sustav turska"
+    },
+    vorteile: {
+      title: "10 Mjeseci Besplatne Energije | Prednosti Solarnih Panela Antalya | 089 Bayern",
+      description: "S 300+ sunčanih dana na Mediteranu - 10 mjeseci besplatne struje i grijanja. Do 70% uštede u Antalyi, Alanyi, Sideu. Povrat investicije 4-6 godina.",
+      keywords: "ušteda energije antalya, prednosti solarnih panela, besplatna struja mediteran"
+    },
+    rechner: {
+      title: "Kalkulator Uštede | Cijena Solarnih Panela Antalya | 089 Bayern",
+      description: "Personalizirani izračun uštede za Antalyu, Alanyu, Kemer, Side. Cijena solarnih panela i toplinske pumpe prema veličini vile. Besplatna ponuda.",
+      keywords: "kalkulator cijene solarnih panela, izračun uštede, cijena solarnih panela antalya"
+    },
+    faq: {
+      title: "Česta Pitanja | Solarni Paneli i Toplinska Pumpa | 089 Bayern Antalya",
+      description: "20 najčešćih pitanja o solarnim panelima, toplinskim pumpama, pohrani energije i sustavu 089 Bayern 4-in-1 u Antalyi.",
+      keywords: "pitanja o solarnim panelima, faq toplinska pumpa, održavanje solarnih panela"
+    },
+    "ueber-uns": {
+      title: "O Nama | Njemački Energetski Stručnjaci u Antalyi | 089 Bayern",
+      description: "089 Bayern: Od 2018. most između Njemačke i Turske. Njemačka kvaliteta za Antalyu, Alanyu i Mediteran. 500+ zadovoljnih obitelji, 10 godina jamstva.",
+      keywords: "089 bayern o nama, njemačka tvrtka turska, stručnjaci za solarnu energiju antalya"
+    },
+    team: {
+      title: "Naš Tim | Njemačko-Turski Energetski Stručnjaci | 089 Bayern",
+      description: "Tim 089 Bayern: Pod vodstvom Dalibora Bakmaza i Mustafe Sakara. Njemačka inženjerska kvaliteta u Antalyi, Alanyi, Mugli.",
+      keywords: "tim 089 bayern, energetski savjetnik antalya"
+    },
+    legal: {
+      title: "Pravne Informacije | 089 Bayern Energetski Sustavi",
+      description: "Pravne politike 089 Bayern: Politika privatnosti, politika kolačića, uvjeti korištenja.",
+      keywords: "089 bayern privatnost, uvjeti, pravne informacije"
+    }
+  },
   ar: {
     siteName: "089 Bayern أنظمة الطاقة",
     home: {
@@ -329,5 +372,9 @@ export const geoLocations = {
 export const serviceAreas = {
   tr: "Antalya, Alanya, Kemer, Belek, Side, Manavgat, Mahmutlar, Konaklı, Gazipaşa, Muğla, Fethiye, Bodrum, Marmaris, İzmir, Kuşadası, Didim, Aydın, Mersin",
   de: "Antalya, Alanya, Kemer, Belek, Side, Manavgat, Mahmutlar, Konaklı, Gazipaşa, Muğla, Fethiye, Bodrum, Marmaris, İzmir, Kuşadası, Didim, Aydın, Mersin",
-  en: "Antalya, Alanya, Kemer, Belek, Side, Manavgat, Mahmutlar, Konaklı, Gazipaşa, Muğla, Fethiye, Bodrum, Marmaris, Izmir, Kusadasi, Didim, Aydin, Mersin"
+  en: "Antalya, Alanya, Kemer, Belek, Side, Manavgat, Mahmutlar, Konaklı, Gazipaşa, Muğla, Fethiye, Bodrum, Marmaris, Izmir, Kusadasi, Didim, Aydin, Mersin",
+  ru: "Анталия, Алания, Кемер, Белек, Сиде, Манавгат, Махмутлар, Конаклы, Газипаша, Мугла, Фетхие, Бодрум, Мармарис, Измир, Кушадасы, Дидим, Айдын, Мерсин",
+  uk: "Анталія, Аланія, Кемер, Белек, Сіде, Манавгат, Махмутлар, Конакли, Газіпаша, Мугла, Фетхіє, Бодрум, Мармаріс, Ізмір, Кушадаси, Дідім, Айдин, Мерсін",
+  ar: "أنطاليا، ألانيا، كيمير، بيليك، سيدا، مانافغات، محمودلار، كوناكلي، غازي باشا، موغلا، فتحية، بودروم، مرمريس، إزمير، كوشاداسي، ديديم، أيدين، مرسين",
+  hr: "Antalya, Alanya, Kemer, Belek, Side, Manavgat, Mahmutlar, Konaklı, Gazipaşa, Muğla, Fethiye, Bodrum, Marmaris, İzmir, Kuşadası, Didim, Aydın, Mersin"
 };
