@@ -552,7 +552,7 @@ export default function Vorteile() {
           <div className="text-center mb-14">
             <Badge variant="secondary" className="mb-4">
               <Plug className="w-4 h-4 mr-2" />
-              4 in 1
+              4 in 1 System
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               {c.systemTitle}
