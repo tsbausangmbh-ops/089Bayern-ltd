@@ -6,7 +6,7 @@ import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Calculator, Sun, Zap, TrendingUp, Shield, CheckCircle, Euro, Leaf, Home, Battery, ThermometerSun, Snowflake, ArrowRight, Clock, Award, Users } from "lucide-react";
+import { Calculator, Sun, Zap, TrendingUp, Shield, CheckCircle, Euro, Leaf, Home, Battery, ThermometerSun, Snowflake, ArrowRight, Clock, Award, Users, Phone } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
 
@@ -468,6 +468,7 @@ export default function Rechner() {
   const [calculatorData, setCalculatorData] = useState<CalculatorData | undefined>();
 
   const t = content[language as keyof typeof content] || content.tr;
+  const isRtl = language === "ar";
 
   const handleCtaClick = () => {
     setIsLeadFormOpen(true);
@@ -519,7 +520,7 @@ export default function Rechner() {
   ];
 
   return (
-    <div className="min-h-screen bg-background" data-testid="page-rechner">
+    <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-rechner">
       <Header onCtaClick={handleCtaClick} />
       
       {/* Hero Section */}
@@ -573,16 +574,28 @@ export default function Rechner() {
             </div>
           </div>
 
-          <Button 
-            size="lg" 
-            onClick={scrollToCalculator}
-            className="bg-gradient-to-r from-accent to-orange-500 text-white border-0 shadow-lg px-8"
-            data-testid="button-scroll-calculator"
-          >
-            <Calculator className="w-5 h-5 mr-2" />
-            {t.ctaTitle}
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              size="lg" 
+              onClick={scrollToCalculator}
+              className="bg-gradient-to-r from-accent to-orange-500 text-white border-0 shadow-lg px-8"
+              data-testid="button-scroll-calculator"
+            >
+              <Calculator className="w-5 h-5 mr-2" />
+              {t.ctaTitle}
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white/30 text-white bg-white/10 backdrop-blur-sm px-8"
+              onClick={() => window.location.href = "tel:+905071832036"}
+              data-testid="button-hero-phone"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              +90 507 183 2036
+            </Button>
+          </div>
         </div>
       </section>
 
