@@ -1,5 +1,6 @@
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { useLanguage } from "@/lib/LanguageContext";
 import Header from "@/components/Header";
@@ -11,7 +12,9 @@ export default function KVKK() {
   const content = {
     tr: {
       backButton: "Ana Sayfa",
+      badge: "Veri Koruma",
       title: "KVKK Aydınlatma Metni",
+      subtitle: "6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında haklarınız ve veri işleme politikalarımız hakkında bilgi edinin.",
       lastUpdate: "Son güncelleme",
       
       section1Title: "1. Veri Sorumlusu",
@@ -69,7 +72,9 @@ export default function KVKK() {
     },
     de: {
       backButton: "Startseite",
+      badge: "Datenschutz",
       title: "Datenschutzerklärung (KVKK)",
+      subtitle: "Informieren Sie sich über Ihre Rechte und unsere Datenverarbeitungsrichtlinien gemäß dem türkischen Datenschutzgesetz Nr. 6698.",
       lastUpdate: "Letzte Aktualisierung",
       
       section1Title: "1. Verantwortliche Stelle",
@@ -127,7 +132,9 @@ export default function KVKK() {
     },
     en: {
       backButton: "Home",
+      badge: "Data Protection",
       title: "Data Protection Notice (KVKK)",
+      subtitle: "Learn about your rights and our data processing policies under the Turkish Personal Data Protection Law No. 6698.",
       lastUpdate: "Last update",
       
       section1Title: "1. Data Controller",
@@ -185,7 +192,9 @@ export default function KVKK() {
     },
     ru: {
       backButton: "Главная",
+      badge: "Защита данных",
       title: "Уведомление о защите данных (KVKK)",
+      subtitle: "Узнайте о ваших правах и нашей политике обработки данных в соответствии с турецким Законом о защите персональных данных № 6698.",
       lastUpdate: "Последнее обновление",
       
       section1Title: "1. Ответственный за обработку данных",
@@ -243,7 +252,9 @@ export default function KVKK() {
     },
     uk: {
       backButton: "Головна",
+      badge: "Захист даних",
       title: "Повідомлення про захист даних (KVKK)",
+      subtitle: "Дізнайтеся про ваші права та нашу політику обробки даних відповідно до турецького Закону про захист персональних даних № 6698.",
       lastUpdate: "Останнє оновлення",
       
       section1Title: "1. Відповідальна сторона",
@@ -301,7 +312,9 @@ export default function KVKK() {
     },
     ar: {
       backButton: "الصفحة الرئيسية",
+      badge: "حماية البيانات",
       title: "إشعار حماية البيانات (KVKK)",
+      subtitle: "تعرف على حقوقك وسياسات معالجة البيانات لدينا بموجب قانون حماية البيانات الشخصية التركي رقم 6698.",
       lastUpdate: "آخر تحديث",
       
       section1Title: "1. المسؤول عن البيانات",
@@ -366,15 +379,34 @@ export default function KVKK() {
   return (
     <div className={`min-h-screen bg-background ${isRTL ? "rtl" : ""}`} dir={isRTL ? "rtl" : "ltr"}>
       <Header />
-      <div className="max-w-4xl mx-auto px-6 pt-20 pb-8">
-        <Link href="/">
-          <Button variant="ghost" className="mb-8" data-testid="button-back-home">
-            <ArrowLeft className={`w-4 h-4 ${isRTL ? "ml-2 rotate-180" : "mr-2"}`} />
-            {t.backButton}
-          </Button>
-        </Link>
-
-        <h1 className="text-3xl font-bold mb-8">{t.title}</h1>
+      
+      <section className="relative pt-24 pb-16 overflow-hidden" data-testid="section-hero">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-accent/5 to-transparent" />
+        <div className="relative max-w-7xl mx-auto px-6 md:px-8">
+          <div className="text-center mb-8">
+            <Badge variant="secondary" className="mb-6">
+              <Shield className="w-4 h-4 mr-2" />
+              {t.badge}
+            </Badge>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              {t.title}
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              {t.subtitle}
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <Link href="/">
+              <Button variant="ghost" data-testid="button-back-home">
+                <ArrowLeft className={`w-4 h-4 ${isRTL ? "ml-2 rotate-180" : "mr-2"}`} />
+                {t.backButton}
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+      
+      <div className="max-w-4xl mx-auto px-6 pb-8">
         <p className="text-sm text-muted-foreground mb-8">{t.lastUpdate}: {new Date().toLocaleDateString(dateLocale)}</p>
 
         <div className="prose prose-slate max-w-none space-y-6">
