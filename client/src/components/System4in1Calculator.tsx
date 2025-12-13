@@ -751,42 +751,59 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
   const investmentTL = Math.round(investmentEUR * EUR_TO_TL_RATE);
   const systemPowerKW = selectedSystem.powerKW;
 
-  // Savings calculations - Antalya: 10 Monate Sonne = 10 Monate kostenloser Strom
-  const sunnyMonths = 10; // Antalya hat 10 Monate starke Sonneneinstrahlung
-  const yearMonths = 12;
+  // ============================================================
+  // ERSPARNIS-BERECHNUNG - Antalya: 10 Monate Sonneneinstrahlung
+  // ============================================================
   
-  // PV-Strom: 10 Monate komplett kostenlos, 2 Monate reduziert (50%)
+  // Monatliche Gesamtkosten des Kunden (vor Installation)
+  const totalMonthlyEnergyCosts = data.monthlyElectricity + data.monthlyHeating + data.monthlyHotWater + data.monthlyCooling;
+  
+  // 10 Monate Sonne = 10 Monate KOSTENLOSE Energie vom 4-in-1 System
+  // 2 Monate (Dez/Jan) = reduzierte Produktion, aber Batteriespeicher hilft
+  const sunnyMonths = 10;
+  const winterMonths = 2;
+  
+  // STROM: 10 Monate 100% kostenlos, 2 Monate 40% vom Netz
   const electricitySavingsYearly = Math.round(
-    (data.monthlyElectricity * sunnyMonths) + // 10 Monate 100% kostenlos
-    (data.monthlyElectricity * 0.5 * (yearMonths - sunnyMonths)) // 2 Monate 50%
+    (data.monthlyElectricity * sunnyMonths * 1.00) +  // 10 Monate: 100% kostenlos
+    (data.monthlyElectricity * winterMonths * 0.60)   // 2 Monate: 60% kostenlos (Batterie)
   );
-  const electricitySavings = Math.round(electricitySavingsYearly / 12);
   
-  // Wärmepumpe läuft mit kostenlosem Solarstrom
+  // HEIZUNG: Wärmepumpe läuft mit Solarstrom - 10 Monate kostenlos
   const heatingSavingsYearly = Math.round(
-    (data.monthlyHeating * sunnyMonths * 0.90) + // 10 Monate 90% (Wärmepumpe mit Solarstrom)
-    (data.monthlyHeating * (yearMonths - sunnyMonths) * 0.70) // 2 Monate 70%
+    (data.monthlyHeating * sunnyMonths * 1.00) +      // 10 Monate: 100% kostenlos
+    (data.monthlyHeating * winterMonths * 0.60)       // 2 Monate: 60% kostenlos
   );
-  const heatingSavings = Math.round(heatingSavingsYearly / 12);
   
-  // Warmwasser: Solar-Thermie 10 Monate kostenlos
+  // WARMWASSER: Solarthermie + Wärmepumpe - 10 Monate komplett kostenlos
   const hotWaterSavingsYearly = Math.round(
-    (data.monthlyHotWater * sunnyMonths) + // 10 Monate 100% kostenlos
-    (data.monthlyHotWater * 0.6 * (yearMonths - sunnyMonths)) // 2 Monate 60%
+    (data.monthlyHotWater * sunnyMonths * 1.00) +     // 10 Monate: 100% kostenlos
+    (data.monthlyHotWater * winterMonths * 0.70)      // 2 Monate: 70% kostenlos
   );
-  const hotWaterSavings = Math.round(hotWaterSavingsYearly / 12);
   
-  // Kühlung: Wärmepumpe mit kostenlosem Solarstrom (hauptsächlich im Sommer)
-  const coolingSavingsYearly = Math.round(data.monthlyCooling * sunnyMonths * 0.95); // Kühlung nur in sonnigen Monaten
+  // KÜHLUNG: Nur in sonnigen Monaten nötig - komplett mit Solarstrom
+  const coolingSavingsYearly = Math.round(
+    data.monthlyCooling * sunnyMonths * 1.00          // Kühlung nur im Sommer = 100% kostenlos
+  );
+  
+  // Monatliche Durchschnitts-Ersparnis für Anzeige
+  const electricitySavings = Math.round(electricitySavingsYearly / 12);
+  const heatingSavings = Math.round(heatingSavingsYearly / 12);
+  const hotWaterSavings = Math.round(hotWaterSavingsYearly / 12);
   const coolingSavings = Math.round(coolingSavingsYearly / 12);
   
+  // Gesamt-Ersparnisse
   const totalMonthlySavings = electricitySavings + heatingSavings + hotWaterSavings + coolingSavings;
   const totalYearlySavings = electricitySavingsYearly + heatingSavingsYearly + hotWaterSavingsYearly + coolingSavingsYearly;
 
-  // ROI calculations - basierend auf jährlichen Ersparnissen
+  // ============================================================
+  // AMORTISATION - Berechnung in Jahren
+  // ============================================================
   const paybackYearsExact = totalYearlySavings > 0 ? investmentTL / totalYearlySavings : 0;
   const paybackYears = Math.floor(paybackYearsExact);
   const paybackRemainingMonths = Math.round((paybackYearsExact - paybackYears) * 12);
+  
+  // Langzeit-Ersparnisse (nach Abzug der Investition)
   const tenYearSavings = totalYearlySavings * 10 - investmentTL;
   const twentyFiveYearSavings = totalYearlySavings * 25 - investmentTL;
 
