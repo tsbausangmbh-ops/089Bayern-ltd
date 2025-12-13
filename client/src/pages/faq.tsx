@@ -10,6 +10,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 import { useLocation } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
 
 export default function FAQ() {
   const { language } = useLanguage();
@@ -472,25 +473,52 @@ export default function FAQ() {
     <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-faq">
       <Header onCtaClick={scrollToCalculator} />
       
-      <section className="relative pt-24 pb-16 overflow-hidden" data-testid="section-faq-hero">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-accent/5 to-transparent" />
-        <div className="relative max-w-7xl mx-auto px-6 md:px-8">
-          <div className="text-center mb-8">
-            <Badge variant="secondary" className="mb-6">
+      <section className="relative pt-20 pb-8 overflow-hidden" data-testid="section-faq-hero">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
+        
+        <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
+          <div className="text-center">
+            <Badge variant="secondary" className="mb-6 bg-white/10 backdrop-blur-md border-white/20 text-white">
               <HelpCircle className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
               {c.badge}
             </Badge>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               {c.title}{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
                 {c.titleHighlight}
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8">
               {c.subtitle}
             </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                onClick={scrollToCalculator}
+                size="lg"
+                className="bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg px-8"
+                data-testid="button-faq-hero-cta"
+              >
+                {c.ctaButton}
+                <ArrowRight className={`w-5 h-5 ${isRtl ? "mr-2 rotate-180" : "ml-2"}`} />
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white/30 text-white bg-white/10 backdrop-blur-sm px-8" 
+                onClick={() => window.location.href = "tel:+905071832036"}
+                data-testid="button-faq-hero-phone"
+              >
+                <Phone className={`w-5 h-5 ${isRtl ? "ml-2" : "mr-2"}`} />
+                +90 507 183 2036
+              </Button>
+            </div>
           </div>
         </div>
       </section>
