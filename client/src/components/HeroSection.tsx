@@ -42,7 +42,7 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
         >
           Antalya ve Akdeniz'de
           <br />
-          <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent drop-shadow-lg">
+          <span className="bg-gradient-to-r from-amber-400 to-accent bg-clip-text text-transparent drop-shadow-lg">
             Güneş Enerjisi
           </span>
           <br />
