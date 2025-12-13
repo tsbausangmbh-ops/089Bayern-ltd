@@ -4,8 +4,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
-import { Home, Building2, Store, ArrowRight, ArrowLeft, Check, Calculator, TrendingUp, Leaf, Banknote, Flame, Snowflake, Battery, Zap, Globe } from "lucide-react";
-import { translations, languageNames, isRTL, type Language } from "@/lib/translations";
+import { Home, Building2, Store, ArrowRight, ArrowLeft, Check, Calculator, TrendingUp, Leaf, Banknote, Flame, Snowflake, Battery, Zap } from "lucide-react";
+import { translations, isRTL } from "@/lib/translations";
+import { useLanguage } from "@/lib/LanguageContext";
 
 interface SavingsCalculatorProps {
   onComplete?: (data: CalculatorData) => void;
@@ -32,7 +33,7 @@ const locationData = [
 
 export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps) {
   const [step, setStep] = useState(1);
-  const [lang, setLang] = useState<Language>("tr");
+  const { language: lang } = useLanguage();
   const [data, setData] = useState<CalculatorData>({
     propertyType: "",
     location: "",
@@ -128,25 +129,6 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
     { id: "no", label: t.batteryNo, description: t.batteryNoDesc },
   ];
 
-  const LanguageSelector = () => (
-    <div className="flex items-center justify-center gap-2 mb-6 flex-wrap">
-      {(Object.keys(languageNames) as Language[]).map((l) => (
-        <button
-          key={l}
-          onClick={() => setLang(l)}
-          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
-            lang === l
-              ? "bg-primary text-primary-foreground"
-              : "bg-muted text-muted-foreground hover-elevate"
-          }`}
-          data-testid={`button-lang-${l}`}
-        >
-          {languageNames[l]}
-        </button>
-      ))}
-    </div>
-  );
-
   if (showResults) {
     return (
       <section id="calculator" className="py-4 md:py-5 bg-background relative overflow-hidden" dir={rtl ? "rtl" : "ltr"} data-testid="section-calculator">
@@ -154,7 +136,6 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
         <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
         
         <div className="max-w-3xl mx-auto px-6 md:px-8 relative">
-          <LanguageSelector />
           <Card className="overflow-hidden border-emerald-500/30 bg-gradient-to-br from-card via-card to-emerald-500/5 shadow-2xl shadow-emerald-500/10">
             <CardContent className="p-8 md:p-12">
               <div className="text-center mb-10">
@@ -240,7 +221,6 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
       <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
       
       <div className="max-w-2xl mx-auto px-6 md:px-8 relative">
-        <LanguageSelector />
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-5 py-2 mb-6">
             <Calculator className="w-4 h-4 text-amber-400" />
