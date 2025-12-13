@@ -80,7 +80,7 @@ export default function ChatBot() {
       )}
       
       <div className="flex items-end gap-1.5">
-        <div className="bg-card/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-border/50 text-right w-56">
+        <div className="bg-card/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-border/50 text-right w-72">
           <p className="text-sm font-semibold text-foreground">KI Assistent von 089Bayern</p>
           <p className="text-xs text-muted-foreground mt-1">Beratung, Tipps und 24h Termine vereinbaren</p>
         </div>
