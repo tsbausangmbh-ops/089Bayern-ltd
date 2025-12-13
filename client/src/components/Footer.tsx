@@ -7,11 +7,13 @@ export default function Footer() {
   const { language } = useLanguage();
   const t = uiTranslations[language];
 
-  const quickLinks = [
-    { label: t.footer.system, href: "#features" },
-    { label: t.footer.benefits, href: "#benefits" },
-    { label: t.footer.calculator, href: "#calculator" },
-    { label: t.footer.ourTeam, href: "#team" },
+  const legalLinks = [
+    { label: t.footer.privacy, href: "/kvkk" },
+    { label: t.footer.privacyPolicy, href: "/gizlilik" },
+    { label: t.footer.cookiePolicy, href: "/cerez-politikasi" },
+    { label: t.footer.terms, href: "/sartlar" },
+    { label: t.footer.distanceSales, href: "/mesafeli-satis" },
+    { label: t.footer.preInfo, href: "/on-bilgilendirme" },
   ];
 
   const products = [
@@ -51,14 +53,14 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-6">{t.footer.quickLinks}</h4>
+            <h4 className="font-semibold text-white mb-6">{t.footer.legal}</h4>
             <ul className="space-y-3 text-sm">
-              {quickLinks.map((link) => (
+              {legalLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     className="text-white/70 hover:text-white transition-colors"
-                    data-testid={`link-footer-${link.label.toLowerCase().replace(/\s/g, "-")}`}
+                    data-testid={`link-footer-${link.href.replace("/", "")}`}
                   >
                     {link.label}
                   </a>
@@ -149,26 +151,6 @@ export default function Footer() {
         <div className="mt-4 pt-3 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
             <p>&copy; 2024 {t.footer.copyright}</p>
-            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-              <a href="/kvkk" className="hover:text-white transition-colors" data-testid="link-kvkk">
-                {t.footer.privacy}
-              </a>
-              <a href="/gizlilik" className="hover:text-white transition-colors" data-testid="link-privacy">
-                {t.footer.privacyPolicy}
-              </a>
-              <a href="/cerez-politikasi" className="hover:text-white transition-colors" data-testid="link-cookies">
-                Cerez Politikasi
-              </a>
-              <a href="/sartlar" className="hover:text-white transition-colors" data-testid="link-terms">
-                {t.footer.terms}
-              </a>
-              <a href="/mesafeli-satis" className="hover:text-white transition-colors" data-testid="link-mesafeli-satis">
-                Mesafeli Satis
-              </a>
-              <a href="/on-bilgilendirme" className="hover:text-white transition-colors" data-testid="link-on-bilgilendirme">
-                On Bilgilendirme
-              </a>
-            </div>
           </div>
         </div>
 

@@ -126,6 +126,7 @@ export const uiTranslations: Record<Language, {
     germanQuality: string;
     guarantee: string;
     quickLinks: string;
+    legal: string;
     system: string;
     benefits: string;
     calculator: string;
@@ -149,7 +150,10 @@ export const uiTranslations: Record<Language, {
     copyright: string;
     privacy: string;
     privacyPolicy: string;
+    cookiePolicy: string;
     terms: string;
+    distanceSales: string;
+    preInfo: string;
   };
   // Logo Carousel
   logos: {
@@ -333,9 +337,13 @@ export const uiTranslations: Record<Language, {
       antalyaOffice: "Antalya Ofis",
       regionalHQ: "Akdeniz Bölge Merkezi",
       copyright: "089 Bayern Enerji Sistemleri. Tüm hakları saklıdır.",
-      privacy: "Gizlilik Sözleşmesi",
+      privacy: "KVKK Aydınlatma Metni",
       privacyPolicy: "Gizlilik Politikası",
+      cookiePolicy: "Çerez Politikası",
       terms: "Kullanım Şartları",
+      distanceSales: "Mesafeli Satış Sözleşmesi",
+      preInfo: "Ön Bilgilendirme Formu",
+      legal: "Yasal Bilgiler",
     },
     logos: {
       badge: "Premium Markalar",
@@ -518,9 +526,13 @@ export const uiTranslations: Record<Language, {
       antalyaOffice: "Antalya Büro",
       regionalHQ: "Mittelmeer-Regionszentrale",
       copyright: "089 Bayern Energiesysteme. Alle Rechte vorbehalten.",
-      privacy: "Datenschutzerklärung",
+      privacy: "KVKK Datenschutzhinweis",
       privacyPolicy: "Datenschutzrichtlinie",
+      cookiePolicy: "Cookie-Richtlinie",
       terms: "Nutzungsbedingungen",
+      distanceSales: "Fernabsatzvertrag",
+      preInfo: "Vorabinformationen",
+      legal: "Rechtliches",
     },
     logos: {
       badge: "Premium-Marken",
@@ -703,9 +715,13 @@ export const uiTranslations: Record<Language, {
       antalyaOffice: "Antalya Office",
       regionalHQ: "Mediterranean Regional HQ",
       copyright: "089 Bayern Energy Systems. All rights reserved.",
-      privacy: "Privacy Notice",
+      privacy: "KVKK Privacy Notice",
       privacyPolicy: "Privacy Policy",
+      cookiePolicy: "Cookie Policy",
       terms: "Terms of Use",
+      distanceSales: "Distance Sales Agreement",
+      preInfo: "Pre-Information Form",
+      legal: "Legal Information",
     },
     logos: {
       badge: "Premium Brands",
@@ -888,9 +904,13 @@ export const uiTranslations: Record<Language, {
       antalyaOffice: "Офис в Анталье",
       regionalHQ: "Региональный центр Средиземноморья",
       copyright: "089 Bayern Энергосистемы. Все права защищены.",
-      privacy: "Политика конфиденциальности",
+      privacy: "Уведомление KVKK",
       privacyPolicy: "Политика защиты данных",
+      cookiePolicy: "Политика файлов cookie",
       terms: "Условия использования",
+      distanceSales: "Договор дистанционной продажи",
+      preInfo: "Форма предварительной информации",
+      legal: "Юридическая информация",
     },
     logos: {
       badge: "Премиальные бренды",
@@ -1073,9 +1093,13 @@ export const uiTranslations: Record<Language, {
       antalyaOffice: "Офіс в Анталії",
       regionalHQ: "Регіональний центр Середземномор'я",
       copyright: "089 Bayern Енергосистеми. Всі права захищені.",
-      privacy: "Політика конфіденційності",
+      privacy: "Повідомлення KVKK",
       privacyPolicy: "Політика захисту даних",
+      cookiePolicy: "Політика файлів cookie",
       terms: "Умови використання",
+      distanceSales: "Договір дистанційного продажу",
+      preInfo: "Форма попередньої інформації",
+      legal: "Юридична інформація",
     },
     logos: {
       badge: "Преміальні бренди",
@@ -1258,9 +1282,13 @@ export const uiTranslations: Record<Language, {
       antalyaOffice: "مكتب أنطاليا",
       regionalHQ: "المقر الإقليمي للبحر المتوسط",
       copyright: "089 Bayern أنظمة الطاقة. جميع الحقوق محفوظة.",
-      privacy: "إشعار الخصوصية",
+      privacy: "إشعار KVKK",
       privacyPolicy: "سياسة الخصوصية",
+      cookiePolicy: "سياسة ملفات تعريف الارتباط",
       terms: "شروط الاستخدام",
+      distanceSales: "عقد البيع عن بعد",
+      preInfo: "نموذج المعلومات المسبقة",
+      legal: "المعلومات القانونية",
     },
     logos: {
       badge: "علامات تجارية متميزة",
