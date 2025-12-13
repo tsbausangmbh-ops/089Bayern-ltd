@@ -681,19 +681,19 @@ const EUR_TO_TL_RATE = 38.5;
 // 089 Bayern System Pricing (EUR) with 30% Turkey surcharge
 const SYSTEM_PRICING = {
   standard: {
-    baseEUR: 35000,
-    turkeyEUR: 45500, // +30%
-    powerKW: 8,
+    baseEUR: 28000,
+    turkeyEUR: 36400, // +30%
+    powerKW: 6,
   },
   medium: {
-    baseEUR: 46000,
-    turkeyEUR: 59800, // +30%
+    baseEUR: 42000,
+    turkeyEUR: 54600, // +30%
     powerKW: 12,
   },
   premium: {
-    baseEUR: 60000,
-    turkeyEUR: 78000, // +30%
-    powerKW: 18,
+    baseEUR: 65000,
+    turkeyEUR: 84500, // +30%
+    powerKW: 16,
   },
 };
 
@@ -786,9 +786,9 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       id: "standard" as const, 
       label: t.systemStandard, 
       desc: t.standardDesc,
-      power: "8 kW",
-      priceEUR: "€45.500",
-      priceTL: `₺${Math.round(45500 * EUR_TO_TL_RATE).toLocaleString()}`,
+      power: "6 kW",
+      priceEUR: "€36.400",
+      priceTL: `₺${Math.round(36400 * EUR_TO_TL_RATE).toLocaleString()}`,
       icon: Star,
       gradient: "from-slate-500 to-slate-600",
       badge: null,
@@ -798,8 +798,8 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       label: t.systemMedium, 
       desc: t.mediumDesc,
       power: "12 kW",
-      priceEUR: "€59.800",
-      priceTL: `₺${Math.round(59800 * EUR_TO_TL_RATE).toLocaleString()}`,
+      priceEUR: "€54.600",
+      priceTL: `₺${Math.round(54600 * EUR_TO_TL_RATE).toLocaleString()}`,
       icon: Sparkles,
       gradient: "from-blue-500 to-blue-600",
       badge: t.popular,
@@ -808,9 +808,9 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       id: "premium" as const, 
       label: t.systemPremium, 
       desc: t.premiumDesc,
-      power: "18 kW",
-      priceEUR: "€78.000",
-      priceTL: `₺${Math.round(78000 * EUR_TO_TL_RATE).toLocaleString()}`,
+      power: "16 kW",
+      priceEUR: "€84.500",
+      priceTL: `₺${Math.round(84500 * EUR_TO_TL_RATE).toLocaleString()}`,
       icon: Crown,
       gradient: "from-amber-500 to-orange-600",
       badge: t.bestValue,
