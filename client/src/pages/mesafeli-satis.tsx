@@ -61,7 +61,7 @@ export default function MesafeliSatis() {
 
       article6Title: "Madde 6 - Cayma Hakkı Kullanımında Usul",
       article6Intro: "Cayma hakkının kullanılması halinde:",
-      procedure1: "ALICI, cayma kararı hakkında SATICI'yı info@089bayern.com adresine e-posta göndererek veya +90 507 183 2036 numarasını arayarak bilgilendirir.",
+      procedure1: "ALICI, cayma kararı hakkında SATICI'yı info@089bayern.com adresine e-posta göndererek veya +90 507 183 2036 / +49 173 5994699 numarasını arayarak bilgilendirir.",
       procedure2: "Cayma bildiriminin SATICI'ya ulaşması tarihinden itibaren 14 gün içinde ürün iade edilir.",
       procedure3: "Ürün, SATICI tarafından teslim alınmasından itibaren 14 gün içinde ödeme iade edilir.",
       procedure4: "İade edilen ürünün kargo ücreti ALICI tarafından karşılanır.",
@@ -147,7 +147,7 @@ export default function MesafeliSatis() {
 
       article6Title: "Artikel 6 - Verfahren bei Widerrufsrecht",
       article6Intro: "Bei Ausübung des Widerrufsrechts:",
-      procedure1: "Der KÄUFER informiert den VERKÄUFER über seinen Widerruf per E-Mail an info@089bayern.com oder telefonisch unter +90 507 183 2036.",
+      procedure1: "Der KÄUFER informiert den VERKÄUFER über seinen Widerruf per E-Mail an info@089bayern.com oder telefonisch unter +90 507 183 2036 / +49 173 5994699.",
       procedure2: "Das Produkt wird innerhalb von 14 Tagen nach Eingang der Widerrufsmitteilung beim VERKÄUFER zurückgesandt.",
       procedure3: "Die Zahlung wird innerhalb von 14 Tagen nach Erhalt des Produkts durch den VERKÄUFER erstattet.",
       procedure4: "Die Versandkosten für die Rücksendung trägt der KÄUFER.",
@@ -233,7 +233,7 @@ export default function MesafeliSatis() {
 
       article6Title: "Article 6 - Procedure for Exercising Right of Withdrawal",
       article6Intro: "When exercising the right of withdrawal:",
-      procedure1: "The BUYER informs the SELLER about their withdrawal decision by sending an email to info@089bayern.com or calling +90 507 183 2036.",
+      procedure1: "The BUYER informs the SELLER about their withdrawal decision by sending an email to info@089bayern.com or calling +90 507 183 2036 / +49 173 5994699.",
       procedure2: "The product is returned within 14 days from the date the withdrawal notice reaches the SELLER.",
       procedure3: "Payment is refunded within 14 days from the date the product is received by the SELLER.",
       procedure4: "The shipping cost of the returned product is borne by the BUYER.",
@@ -319,7 +319,7 @@ export default function MesafeliSatis() {
 
       article6Title: "Статья 6 - Порядок осуществления права на отказ",
       article6Intro: "При осуществлении права на отказ:",
-      procedure1: "ПОКУПАТЕЛЬ информирует ПРОДАВЦА о своём решении об отказе по электронной почте info@089bayern.com или по телефону +90 507 183 2036.",
+      procedure1: "ПОКУПАТЕЛЬ информирует ПРОДАВЦА о своём решении об отказе по электронной почте info@089bayern.com или по телефону +90 507 183 2036 / +49 173 5994699.",
       procedure2: "Товар возвращается в течение 14 дней с даты получения ПРОДАВЦОМ уведомления об отказе.",
       procedure3: "Оплата возвращается в течение 14 дней с даты получения товара ПРОДАВЦОМ.",
       procedure4: "Стоимость доставки возвращённого товара несёт ПОКУПАТЕЛЬ.",
@@ -405,7 +405,7 @@ export default function MesafeliSatis() {
 
       article6Title: "Стаття 6 - Порядок здійснення права на відмову",
       article6Intro: "При здійсненні права на відмову:",
-      procedure1: "ПОКУПЕЦЬ інформує ПРОДАВЦЯ про своє рішення про відмову електронною поштою info@089bayern.com або за телефоном +90 507 183 2036.",
+      procedure1: "ПОКУПЕЦЬ інформує ПРОДАВЦЯ про своє рішення про відмову електронною поштою info@089bayern.com або за телефоном +90 507 183 2036 / +49 173 5994699.",
       procedure2: "Товар повертається протягом 14 днів з дати отримання ПРОДАВЦЕМ повідомлення про відмову.",
       procedure3: "Оплата повертається протягом 14 днів з дати отримання товару ПРОДАВЦЕМ.",
       procedure4: "Вартість доставки поверненого товару несе ПОКУПЕЦЬ.",
@@ -491,7 +491,7 @@ export default function MesafeliSatis() {
 
       article6Title: "المادة 6 - إجراءات ممارسة حق الانسحاب",
       article6Intro: "عند ممارسة حق الانسحاب:",
-      procedure1: "يقوم المشتري بإبلاغ البائع بقرار الانسحاب عبر البريد الإلكتروني info@089bayern.com أو الاتصال على +90 507 183 2036.",
+      procedure1: "يقوم المشتري بإبلاغ البائع بقرار الانسحاب عبر البريد الإلكتروني info@089bayern.com أو الاتصال على +90 507 183 2036 / +49 173 5994699.",
       procedure2: "يتم إرجاع المنتج خلال 14 يوماً من تاريخ وصول إشعار الانسحاب إلى البائع.",
       procedure3: "يتم استرداد المبلغ خلال 14 يوماً من تاريخ استلام البائع للمنتج.",
       procedure4: "يتحمل المشتري تكلفة شحن المنتج المرتجع.",
@@ -552,7 +552,7 @@ export default function MesafeliSatis() {
               <h3 className="font-medium">{t.seller}</h3>
               <p className="text-sm"><strong>{t.tradeName}:</strong> {t.tradeNameValue}</p>
               <p className="text-sm"><strong>{t.address}:</strong> {t.addressValue}</p>
-              <p className="text-sm"><strong>{t.phone}:</strong> +90 507 183 2036</p>
+              <p className="text-sm"><strong>{t.phone}:</strong> +90 507 183 2036 | +49 173 5994699</p>
               <p className="text-sm"><strong>{t.email}:</strong> info@089bayern.com</p>
               <p className="text-sm"><strong>{t.tradeRegNo}:</strong> {t.toBeUpdated}</p>
               <p className="text-sm"><strong>{t.mersisNo}:</strong> {t.toBeUpdated}</p>
@@ -654,7 +654,7 @@ export default function MesafeliSatis() {
           <section className="bg-muted/50 p-6 rounded-lg">
             <h2 className="text-xl font-semibold mb-4">{t.contactTitle}</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">{t.contactText}</p>
-            <p className="text-sm"><strong>{t.phone}:</strong> +90 507 183 2036</p>
+            <p className="text-sm"><strong>{t.phone}:</strong> +90 507 183 2036 | +49 173 5994699</p>
             <p className="text-sm"><strong>{t.email}:</strong> info@089bayern.com</p>
             <p className="text-sm"><strong>{t.whatsapp}:</strong> +90 507 183 2036</p>
           </section>

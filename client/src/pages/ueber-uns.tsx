@@ -606,7 +606,7 @@ Today, we install solar panels, heat pumps and climate systems in Antalya, Alany
               data-testid="button-cta-phone"
             >
               <Phone className="mr-2 w-5 h-5" />
-              +90 507 183 2036
+              +90 507 183 2036 | +49 173 5994699
             </Button>
           </div>
         </div>
