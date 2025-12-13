@@ -36,18 +36,24 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
           </div>
         </div>
 
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight tracking-tight">
+        <h1 
+          className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tight"
+          style={{ textShadow: '0 4px 20px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.4)' }}
+        >
           Antalya ve Akdeniz'de
           <br />
-          <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent drop-shadow-lg">
             Güneş Enerjisi
           </span>
           <br />
           ve Isı Pompası
         </h1>
 
-        <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Alman mühendisliği ile <span className="text-white font-semibold">4'ü 1 Arada Akıllı Enerji Sistemi</span>: 
+        <p 
+          className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed font-medium"
+          style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}
+        >
+          Alman mühendisliği ile <span className="text-amber-300 font-bold">4'ü 1 Arada Akıllı Enerji Sistemi</span>: 
           Güneş paneli, ısı pompası, akıllı klima ve enerji depolama. Muğla, İzmir, Aydın ve Mersin'de hizmet.
         </p>
 
