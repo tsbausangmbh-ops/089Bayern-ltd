@@ -28,6 +28,14 @@ const locationData = [
   { id: "izmir", key: "locationIzmir" as const, sun: "2.700+" },
   { id: "aydin", key: "locationAydin" as const, sun: "2.750+" },
   { id: "mersin", key: "locationMersin" as const, sun: "2.900+" },
+  { id: "istanbul", key: "locationIstanbul" as const, sun: "2.600+" },
+  { id: "bodrum", key: "locationBodrum" as const, sun: "2.850+" },
+  { id: "alanya", key: "locationAlanya" as const, sun: "2.950+" },
+  { id: "fethiye", key: "locationFethiye" as const, sun: "2.850+" },
+  { id: "kas", key: "locationKas" as const, sun: "2.900+" },
+  { id: "side", key: "locationSide" as const, sun: "2.950+" },
+  { id: "kusadasi", key: "locationKusadasi" as const, sun: "2.800+" },
+  { id: "dalaman", key: "locationDalaman" as const, sun: "2.850+" },
   { id: "other", key: "otherRegion" as const, sun: "2.500+" },
 ];
 
