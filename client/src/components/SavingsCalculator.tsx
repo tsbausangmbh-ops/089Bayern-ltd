@@ -8,6 +8,34 @@ import { Home, Building2, Store, ArrowRight, ArrowLeft, Check, Calculator, Trend
 import { translations, isRTL } from "@/lib/translations";
 import { useLanguage } from "@/lib/LanguageContext";
 
+const turkishLocations = [
+  { id: "antalya", key: "locationAntalya" as const, sun: "2.900+" },
+  { id: "kemer", key: "locationKemer" as const, sun: "2.900+" },
+  { id: "belek", key: "locationBelek" as const, sun: "2.920+" },
+  { id: "serik", key: "locationSerik" as const, sun: "2.910+" },
+  { id: "manavgat", key: "locationManavgat" as const, sun: "2.940+" },
+  { id: "side", key: "locationSide" as const, sun: "2.950+" },
+  { id: "alanya", key: "locationAlanya" as const, sun: "2.950+" },
+  { id: "mahmutlar", key: "locationMahmutlar" as const, sun: "2.950+" },
+  { id: "konakli", key: "locationKonakli" as const, sun: "2.950+" },
+  { id: "gazipasa", key: "locationGazipasa" as const, sun: "2.940+" },
+  { id: "other", key: "otherRegion" as const, sun: "2.900+" },
+];
+
+const croatianLocations = [
+  { id: "split", key: "locationSplit" as const, sun: "2.700+" },
+  { id: "dubrovnik", key: "locationDubrovnik" as const, sun: "2.600+" },
+  { id: "zadar", key: "locationZadar" as const, sun: "2.650+" },
+  { id: "sibenik", key: "locationSibenik" as const, sun: "2.680+" },
+  { id: "pula", key: "locationPula" as const, sun: "2.400+" },
+  { id: "rovinj", key: "locationRovinj" as const, sun: "2.450+" },
+  { id: "rijeka", key: "locationRijeka" as const, sun: "2.200+" },
+  { id: "opatija", key: "locationOpatija" as const, sun: "2.250+" },
+  { id: "makarska", key: "locationMakarska" as const, sun: "2.750+" },
+  { id: "hvar", key: "locationHvar" as const, sun: "2.800+" },
+  { id: "other", key: "otherRegion" as const, sun: "2.500+" },
+];
+
 interface SavingsCalculatorProps {
   onComplete?: (data: CalculatorData) => void;
 }
@@ -22,23 +50,12 @@ interface CalculatorData {
   batteryInterest: string;
 }
 
-const locationData = [
-  { id: "antalya", key: "locationAntalya" as const, sun: "2.900+" },
-  { id: "kemer", key: "locationKemer" as const, sun: "2.900+" },
-  { id: "belek", key: "locationBelek" as const, sun: "2.920+" },
-  { id: "serik", key: "locationSerik" as const, sun: "2.910+" },
-  { id: "manavgat", key: "locationManavgat" as const, sun: "2.940+" },
-  { id: "side", key: "locationSide" as const, sun: "2.950+" },
-  { id: "alanya", key: "locationAlanya" as const, sun: "2.950+" },
-  { id: "mahmutlar", key: "locationMahmutlar" as const, sun: "2.950+" },
-  { id: "konakli", key: "locationKonakli" as const, sun: "2.950+" },
-  { id: "gazipasa", key: "locationGazipasa" as const, sun: "2.940+" },
-  { id: "other", key: "otherRegion" as const, sun: "2.900+" },
-];
-
 export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps) {
   const [step, setStep] = useState(1);
-  const { language: lang } = useLanguage();
+  const { language: lang, detectedCountry } = useLanguage();
+  
+  const isCroatian = detectedCountry === "HR" || lang === "hr";
+  const locationData = isCroatian ? croatianLocations : turkishLocations;
   const [data, setData] = useState<CalculatorData>({
     propertyType: "",
     location: "",
