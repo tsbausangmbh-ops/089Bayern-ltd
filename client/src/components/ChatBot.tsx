@@ -12,7 +12,7 @@ export default function ChatBot() {
     <div className="fixed right-4 bottom-24 z-50" data-testid="chatbot-container">
       {isOpen && (
         <Card className="mb-3 w-72 shadow-2xl border-primary/20 overflow-hidden">
-          <div className="bg-gradient-to-r from-primary to-blue-600 p-3 flex items-center justify-between gap-2">
+          <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-3 flex items-center justify-between gap-2">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                 <MessageCircle className="w-5 h-5 text-white" />
@@ -69,7 +69,7 @@ export default function ChatBot() {
               <Button 
                 type="submit" 
                 size="icon"
-                className="bg-gradient-to-r from-primary to-blue-600"
+                className="bg-gradient-to-r from-orange-500 to-orange-600"
                 data-testid="button-send-message"
               >
                 <Send className="w-4 h-4" />
@@ -88,7 +88,7 @@ export default function ChatBot() {
         <Button
           onClick={() => setIsOpen(!isOpen)}
           size="lg"
-          className="w-14 h-14 rounded-full shadow-xl bg-gradient-to-r from-primary to-blue-600 border-0 flex-shrink-0"
+          className="w-14 h-14 rounded-full shadow-xl bg-gradient-to-r from-orange-500 to-orange-600 border-0 flex-shrink-0"
           data-testid="button-open-chat"
         >
           {isOpen ? (
