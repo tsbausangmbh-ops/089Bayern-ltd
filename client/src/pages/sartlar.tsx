@@ -21,7 +21,7 @@ export default function Sartlar() {
             <h2 className="text-xl font-semibold mb-4">1. Firma Bilgileri</h2>
             <div className="bg-muted/50 p-4 rounded-lg">
               <p className="text-sm"><strong>Ticari Unvan:</strong> 089 Bayern Enerji Sistemleri Ltd. Şti.</p>
-              <p className="text-sm"><strong>Adres:</strong> Antalya Merkez, 07000 Antalya, Türkiye</p>
+              <p className="text-sm"><strong>Adres:</strong> Sekerhane, Halimaga Cd. Lale Tokus Plaza No 1, 07450 Alanya/Antalya, Turkiye</p>
               <p className="text-sm"><strong>Telefon:</strong> +90 507 192 2036</p>
               <p className="text-sm"><strong>E-posta:</strong> info@089bayern.tr</p>
               <p className="text-sm"><strong>Web:</strong> www.089bayern.tr</p>

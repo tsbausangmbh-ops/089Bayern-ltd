@@ -164,7 +164,7 @@ export default function Footer() {
         <div className="mt-4 pt-3 border-t border-white/10">
           <div className="text-xs text-white/50 text-center space-y-1" data-testid="footer-impressum">
             <p className="font-medium text-white/70">089 Bayern Enerji Sistemleri Ltd. Sti.</p>
-            <p>Antalya Merkez, 07000 Antalya, Turkiye</p>
+            <p>Sekerhane, Halimaga Cd. Lale Tokus Plaza No 1, 07450 Alanya/Antalya, Turkiye</p>
             <p>Tel: +90 507 192 2036 | E-posta: info@089bayern.tr</p>
             <p>Ticaret Sicil No: [Kayit sonrasi] | MERSIS No: [Kayit sonrasi]</p>
             <p>Vergi Dairesi: [Kayit sonrasi] | Vergi No: [Kayit sonrasi]</p>

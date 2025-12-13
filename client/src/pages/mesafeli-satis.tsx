@@ -25,7 +25,7 @@ export default function MesafeliSatis() {
             <div className="bg-muted/50 p-4 rounded-lg space-y-2">
               <h3 className="font-medium">SATICI:</h3>
               <p className="text-sm"><strong>Ticari Unvan:</strong> 089 Bayern Enerji Sistemleri Ltd. Sti.</p>
-              <p className="text-sm"><strong>Adres:</strong> Antalya Merkez, 07000 Antalya, Turkiye</p>
+              <p className="text-sm"><strong>Adres:</strong> Sekerhane, Halimaga Cd. Lale Tokus Plaza No 1, 07450 Alanya/Antalya, Turkiye</p>
               <p className="text-sm"><strong>Telefon:</strong> +90 507 192 2036</p>
               <p className="text-sm"><strong>E-posta:</strong> info@089bayern.tr</p>
               <p className="text-sm"><strong>Ticaret Sicil No:</strong> [Kayit sonrasi guncellenecektir]</p>
