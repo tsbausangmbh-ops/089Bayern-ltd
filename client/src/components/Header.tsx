@@ -74,7 +74,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="flex items-center justify-between gap-4 h-16 md:h-20">
-          <div className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-3 hover-elevate active-elevate-2 rounded-lg" data-testid="link-logo-home">
             <div className="w-11 h-11 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
               <Zap className="w-6 h-6 text-white" />
             </div>
@@ -82,7 +82,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
               <span className={`font-bold text-lg transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}>089 Bayern</span>
               <span className={`hidden md:block text-xs transition-colors ${isScrolled ? "text-muted-foreground" : "text-white/60"}`}>Energiesysteme</span>
             </div>
-          </div>
+          </a>
 
           <nav className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
