@@ -8,6 +8,7 @@ import LogoCarousel from "@/components/LogoCarousel";
 import TeamSection from "@/components/TeamSection";
 import Footer from "@/components/Footer";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import ChatBot from "@/components/ChatBot";
 
 interface CalculatorData {
   propertyType: string;
@@ -51,6 +52,7 @@ export default function Home() {
         onClose={() => setIsLeadFormOpen(false)}
         calculatorData={calculatorData}
       />
+      <ChatBot />
     </div>
   );
 }
