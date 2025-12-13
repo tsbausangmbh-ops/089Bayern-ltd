@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { sendLeadEmails } from "./email";
+import { leadSchema } from "@shared/schema";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -10,12 +11,20 @@ export async function registerRoutes(
   // Lead submission endpoint
   app.post("/api/leads", async (req, res) => {
     try {
-      const { name, phone, email, location, message, consent, language, calculatorData } = req.body;
+      const validation = leadSchema.safeParse(req.body);
       
-      // Validate required fields
-      if (!name || !phone || !consent) {
+      if (!validation.success) {
         return res.status(400).json({ 
-          error: "Missing required fields: name, phone, and consent are required" 
+          error: "Validation failed",
+          details: validation.error.flatten().fieldErrors
+        });
+      }
+      
+      const { name, phone, email, location, message, consent, language, calculatorData } = validation.data;
+      
+      if (!consent) {
+        return res.status(400).json({ 
+          error: "Consent is required" 
         });
       }
       

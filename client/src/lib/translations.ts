@@ -108,6 +108,7 @@ export const translations: Record<Language, {
   formNextStep3: string;
   formUrgentContact: string;
   formOkButton: string;
+  formErrorGeneric: string;
 }> = {
   tr: {
     badge: "4'ü 1 Arada Sistem Hesaplama",
@@ -216,6 +217,7 @@ export const translations: Record<Language, {
     formNextStep3: "Size özel teklif ve finansman seçenekleri sunulacak",
     formUrgentContact: "Acil talepler için:",
     formOkButton: "Tamam",
+    formErrorGeneric: "Bir hata oluştu. Lütfen tekrar deneyin.",
   },
   de: {
     badge: "4-in-1 Systemrechner",
@@ -324,6 +326,7 @@ export const translations: Record<Language, {
     formNextStep3: "Sie erhalten ein individuelles Angebot und Finanzierungsoptionen",
     formUrgentContact: "Für dringende Anfragen:",
     formOkButton: "OK",
+    formErrorGeneric: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
   },
   en: {
     badge: "4-in-1 System Calculator",
@@ -432,6 +435,7 @@ export const translations: Record<Language, {
     formNextStep3: "You will receive a personalized quote and financing options",
     formUrgentContact: "For urgent inquiries:",
     formOkButton: "OK",
+    formErrorGeneric: "An error occurred. Please try again.",
   },
   ru: {
     badge: "Калькулятор системы 4-в-1",
@@ -540,6 +544,7 @@ export const translations: Record<Language, {
     formNextStep3: "Вы получите индивидуальное предложение и варианты финансирования",
     formUrgentContact: "Для срочных запросов:",
     formOkButton: "OK",
+    formErrorGeneric: "Произошла ошибка. Пожалуйста, попробуйте еще раз.",
   },
   uk: {
     badge: "Калькулятор системи 4-в-1",
@@ -648,6 +653,7 @@ export const translations: Record<Language, {
     formNextStep3: "Ви отримаєте індивідуальну пропозицію та варіанти фінансування",
     formUrgentContact: "Для термінових запитів:",
     formOkButton: "OK",
+    formErrorGeneric: "Сталася помилка. Будь ласка, спробуйте ще раз.",
   },
   ar: {
     badge: "حاسبة نظام 4 في 1",
@@ -756,6 +762,7 @@ export const translations: Record<Language, {
     formNextStep3: "ستحصل على عرض مخصص وخيارات تمويل",
     formUrgentContact: "للاستفسارات العاجلة:",
     formOkButton: "موافق",
+    formErrorGeneric: "حدث خطأ. يرجى المحاولة مرة أخرى.",
   },
 };
 

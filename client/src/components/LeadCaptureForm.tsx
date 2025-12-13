@@ -25,6 +25,7 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData, initi
   const [language, setLanguage] = useState<Language>(initialLanguage);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -40,6 +41,7 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData, initi
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
     
     try {
       const response = await fetch("/api/leads", {
@@ -55,10 +57,11 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData, initi
       if (response.ok) {
         setIsSubmitted(true);
       } else {
-        console.error("Failed to submit lead");
+        const errorData = await response.json().catch(() => ({}));
+        setError(errorData.error || t.formErrorGeneric || "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.");
       }
-    } catch (error) {
-      console.error("Error submitting lead:", error);
+    } catch (err) {
+      setError(t.formErrorGeneric || "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.");
     } finally {
       setIsSubmitting(false);
     }
@@ -66,6 +69,7 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData, initi
 
   const handleClose = () => {
     setIsSubmitted(false);
+    setError(null);
     setFormData({ name: "", phone: "", email: "", location: "", message: "", consent: false });
     onClose();
   };
@@ -263,6 +267,12 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData, initi
               {t.formConsentText}
             </Label>
           </div>
+
+          {error && (
+            <div className="p-3 bg-destructive/10 text-destructive text-sm rounded-lg" data-testid="error-message">
+              {error}
+            </div>
+          )}
 
           <Button
             type="submit"
