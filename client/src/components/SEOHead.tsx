@@ -340,8 +340,62 @@ export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
       updateMetaTag('og:title', pageTitle || data.title, true);
       updateMetaTag('og:description', data.description, true);
       updateMetaTag('og:site_name', siteName, true);
+      updateMetaTag('og:type', 'website', true);
+      updateMetaTag('og:locale', language === 'tr' ? 'tr_TR' : language === 'de' ? 'de_DE' : language === 'ru' ? 'ru_RU' : language === 'uk' ? 'uk_UA' : language === 'ar' ? 'ar_SA' : language === 'hr' ? 'hr_HR' : 'en_US', true);
+      updateMetaTag('twitter:card', 'summary_large_image');
       updateMetaTag('twitter:title', pageTitle || data.title);
       updateMetaTag('twitter:description', data.description);
+      updateMetaTag('geo.region', 'TR-07');
+      updateMetaTag('geo.placename', 'Antalya');
+      updateMetaTag('geo.position', '36.8969;30.7133');
+      updateMetaTag('ICBM', '36.8969, 30.7133');
+
+      const existingSchema = document.querySelector('script[type="application/ld+json"]');
+      if (existingSchema) existingSchema.remove();
+      
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "089 Bayern Energiesysteme",
+        "description": data.description,
+        "url": "https://089bayern.com",
+        "telephone": "+90 507 183 2036",
+        "email": "info@089bayern.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Antalya",
+          "addressRegion": "Antalya",
+          "addressCountry": "TR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 36.8969,
+          "longitude": 30.7133
+        },
+        "areaServed": [
+          "Antalya", "Alanya", "Kemer", "Belek", "Side", "Manavgat", 
+          "Mahmutlar", "Konaklı", "Gazipaşa", "Muğla", "Fethiye", 
+          "Bodrum", "Marmaris", "İzmir", "Kuşadası", "Didim", "Aydın", "Mersin"
+        ],
+        "priceRange": "$$",
+        "openingHours": "Mo-Sa 09:00-18:00",
+        "sameAs": [],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Energy Systems",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Solar Panel Installation" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Heat Pump Installation" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Air Conditioning" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Battery Storage" } }
+          ]
+        }
+      };
+      
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(schema);
+      document.head.appendChild(script);
     }
   }, [language, page, pageTitle]);
 
