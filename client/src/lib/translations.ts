@@ -114,6 +114,14 @@ export const translations: Record<Language, {
   formUrgentContact: string;
   formOkButton: string;
   formErrorGeneric: string;
+  // ChatBot translations
+  chatbotTitle: string;
+  chatbotSubtitle: string;
+  chatbotAssistant: string;
+  chatbotOnline: string;
+  chatbotGreeting: string;
+  chatbotHelpText: string;
+  chatbotPlaceholder: string;
 }> = {
   tr: {
     badge: "4'ü 1 Arada Sistem Hesaplama",
@@ -228,6 +236,13 @@ export const translations: Record<Language, {
     formUrgentContact: "Acil talepler için:",
     formOkButton: "Tamam",
     formErrorGeneric: "Bir hata oluştu. Lütfen tekrar deneyin.",
+    chatbotTitle: "089Bayern KI Asistan",
+    chatbotSubtitle: "Danışmanlık, ipuçları ve 7/24 randevu",
+    chatbotAssistant: "089 Bayern Asistan",
+    chatbotOnline: "Çevrimiçi - Şimdi yanıtlıyor",
+    chatbotGreeting: "Merhaba! Ben 089 Bayern enerji danışmanınızım. Size nasıl yardımcı olabilirim?",
+    chatbotHelpText: "Güneş panelleri, ısı pompaları veya enerji tasarrufu hakkındaki sorularınızı yanıtlayabilirim.",
+    chatbotPlaceholder: "Mesajınız...",
   },
   de: {
     badge: "4-in-1 Systemrechner",
@@ -342,6 +357,13 @@ export const translations: Record<Language, {
     formUrgentContact: "Für dringende Anfragen:",
     formOkButton: "OK",
     formErrorGeneric: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+    chatbotTitle: "089Bayern KI-Assistent",
+    chatbotSubtitle: "Beratung, Tipps und 24/7 Terminvereinbarung",
+    chatbotAssistant: "089 Bayern Assistent",
+    chatbotOnline: "Online - Antwortet jetzt",
+    chatbotGreeting: "Hallo! Ich bin Ihr 089 Bayern Energieberater. Wie kann ich Ihnen helfen?",
+    chatbotHelpText: "Ich kann Ihre Fragen zu Solarpanelen, Wärmepumpen oder Energieeinsparungen beantworten.",
+    chatbotPlaceholder: "Ihre Nachricht...",
   },
   en: {
     badge: "4-in-1 System Calculator",
@@ -456,6 +478,13 @@ export const translations: Record<Language, {
     formUrgentContact: "For urgent inquiries:",
     formOkButton: "OK",
     formErrorGeneric: "An error occurred. Please try again.",
+    chatbotTitle: "089Bayern AI Assistant",
+    chatbotSubtitle: "Consultation, tips and 24/7 appointments",
+    chatbotAssistant: "089 Bayern Assistant",
+    chatbotOnline: "Online - Responding now",
+    chatbotGreeting: "Hello! I'm your 089 Bayern energy consultant. How can I help you?",
+    chatbotHelpText: "I can answer your questions about solar panels, heat pumps or energy savings.",
+    chatbotPlaceholder: "Your message...",
   },
   ru: {
     badge: "Калькулятор системы 4-в-1",
@@ -570,6 +599,13 @@ export const translations: Record<Language, {
     formUrgentContact: "Для срочных запросов:",
     formOkButton: "OK",
     formErrorGeneric: "Произошла ошибка. Пожалуйста, попробуйте еще раз.",
+    chatbotTitle: "089Bayern ИИ-Ассистент",
+    chatbotSubtitle: "Консультации, советы и запись 24/7",
+    chatbotAssistant: "089 Bayern Ассистент",
+    chatbotOnline: "Онлайн - Отвечает сейчас",
+    chatbotGreeting: "Здравствуйте! Я ваш энергетический консультант 089 Bayern. Чем могу помочь?",
+    chatbotHelpText: "Я могу ответить на ваши вопросы о солнечных панелях, тепловых насосах или энергосбережении.",
+    chatbotPlaceholder: "Ваше сообщение...",
   },
   uk: {
     badge: "Калькулятор системи 4-в-1",
@@ -684,6 +720,13 @@ export const translations: Record<Language, {
     formUrgentContact: "Для термінових запитів:",
     formOkButton: "OK",
     formErrorGeneric: "Сталася помилка. Будь ласка, спробуйте ще раз.",
+    chatbotTitle: "089Bayern ШІ-Асистент",
+    chatbotSubtitle: "Консультації, поради та запис 24/7",
+    chatbotAssistant: "089 Bayern Асистент",
+    chatbotOnline: "Онлайн - Відповідає зараз",
+    chatbotGreeting: "Вітаю! Я ваш енергетичний консультант 089 Bayern. Чим можу допомогти?",
+    chatbotHelpText: "Я можу відповісти на ваші питання про сонячні панелі, теплові насоси або енергозбереження.",
+    chatbotPlaceholder: "Ваше повідомлення...",
   },
   ar: {
     badge: "حاسبة نظام 4 في 1",
@@ -798,6 +841,13 @@ export const translations: Record<Language, {
     formUrgentContact: "للاستفسارات العاجلة:",
     formOkButton: "موافق",
     formErrorGeneric: "حدث خطأ. يرجى المحاولة مرة أخرى.",
+    chatbotTitle: "مساعد 089Bayern الذكي",
+    chatbotSubtitle: "استشارات ونصائح ومواعيد على مدار الساعة",
+    chatbotAssistant: "مساعد 089 Bayern",
+    chatbotOnline: "متصل - يرد الآن",
+    chatbotGreeting: "مرحباً! أنا مستشار الطاقة الخاص بك من 089 Bayern. كيف يمكنني مساعدتك؟",
+    chatbotHelpText: "يمكنني الإجابة على أسئلتك حول الألواح الشمسية أو مضخات الحرارة أو توفير الطاقة.",
+    chatbotPlaceholder: "رسالتك...",
   },
 };
 

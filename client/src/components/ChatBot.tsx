@@ -3,10 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MessageCircle, X, Send } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { translations } from "@/lib/translations";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("");
+  const { language } = useLanguage();
+  const t = translations[language];
 
   return (
     <div className="fixed right-4 bottom-24 z-50" data-testid="chatbot-container">
@@ -18,8 +22,8 @@ export default function ChatBot() {
                 <MessageCircle className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h4 className="text-white font-semibold text-sm">089 Bayern Assistent</h4>
-                <p className="text-white/70 text-xs">Online - Jetzt antworten</p>
+                <h4 className="text-white font-semibold text-sm">{t.chatbotAssistant}</h4>
+                <p className="text-white/70 text-xs">{t.chatbotOnline}</p>
               </div>
             </div>
             <Button 
@@ -41,10 +45,10 @@ export default function ChatBot() {
                 </div>
                 <div className="bg-card rounded-xl rounded-tl-none p-3 shadow-sm max-w-[85%]">
                   <p className="text-sm text-foreground">
-                    Hallo! Ich bin Ihr 089 Bayern Energieberater. Wie kann ich Ihnen helfen?
+                    {t.chatbotGreeting}
                   </p>
                   <p className="text-xs text-muted-foreground mt-2">
-                    Ich kann Ihre Fragen zu Solarpanelen, Wärmepumpen oder Energieeinsparungen beantworten.
+                    {t.chatbotHelpText}
                   </p>
                 </div>
               </div>
@@ -62,7 +66,7 @@ export default function ChatBot() {
               <Input
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Ihre Nachricht..."
+                placeholder={t.chatbotPlaceholder}
                 className="flex-1"
                 data-testid="input-chat-message"
               />
@@ -81,8 +85,8 @@ export default function ChatBot() {
       
       <div className="flex items-end gap-1.5">
         <div className="bg-card/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-border/50 text-right w-72">
-          <p className="text-sm font-semibold text-foreground">089Bayern KI-Assistent</p>
-          <p className="text-xs text-muted-foreground mt-1">Beratung, Tipps und 24/7 Terminvereinbarung</p>
+          <p className="text-sm font-semibold text-foreground">{t.chatbotTitle}</p>
+          <p className="text-xs text-muted-foreground mt-1">{t.chatbotSubtitle}</p>
         </div>
         <Button
           onClick={() => setIsOpen(!isOpen)}
