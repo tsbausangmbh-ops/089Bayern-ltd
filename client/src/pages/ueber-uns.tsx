@@ -65,7 +65,7 @@ Bugün, üç şubeyle Antalya, Alanya ve tüm Akdeniz bölgesine güneş enerjis
       ctaText: "Siz de güneş paneli ve ısı pompası ile evinizi enerji bağımsızlığına kavuşturmak ister misiniz?",
       ctaButton: "Ücretsiz Keşif Al",
 
-      statsInstallations: "Akdeniz'de Kurulum",
+      statsInstallations: "4 in 1 Sistemler Akdeniz'de",
       statsSavings: "Enerji Tasarrufu",
       statsYears: "Yıl Deneyim",
       statsCustomers: "Mutlu Müşteri",
@@ -127,7 +127,7 @@ Heute installieren wir mit drei Niederlassungen Solaranlagen, Wärmepumpen und K
       ctaText: "Möchten auch Sie mit Solarpanels und Wärmepumpe Energieunabhängigkeit erreichen?",
       ctaButton: "Kostenlose Beratung",
 
-      statsInstallations: "Installationen am Mittelmeer",
+      statsInstallations: "4 in 1 Systeme am Mittelmeer",
       statsSavings: "Energieersparnis",
       statsYears: "Jahre Erfahrung",
       statsCustomers: "Zufriedene Kunden",
@@ -189,7 +189,7 @@ Today, we install solar panels, heat pumps and climate systems in Antalya, Alany
       ctaText: "Would you also like to achieve energy independence with solar panels and heat pumps?",
       ctaButton: "Free Consultation",
 
-      statsInstallations: "Mediterranean Installations",
+      statsInstallations: "4 in 1 Systems Mediterranean",
       statsSavings: "Energy Savings",
       statsYears: "Years Experience",
       statsCustomers: "Happy Customers",
@@ -251,7 +251,7 @@ Today, we install solar panels, heat pumps and climate systems in Antalya, Alany
       ctaText: "Хотите и вы достичь энергонезависимости с солнечными панелями и тепловыми насосами?",
       ctaButton: "Бесплатная консультация",
 
-      statsInstallations: "Установок на Средиземноморье",
+      statsInstallations: "4 в 1 Системы Средиземноморье",
       statsSavings: "Экономия энергии",
       statsYears: "Лет опыта",
       statsCustomers: "Довольных клиентов",
@@ -313,7 +313,7 @@ Today, we install solar panels, heat pumps and climate systems in Antalya, Alany
       ctaText: "Хочете і ви досягти енергонезалежності з сонячними панелями та тепловими насосами?",
       ctaButton: "Безкоштовна консультація",
 
-      statsInstallations: "Установок на Середземномор'ї",
+      statsInstallations: "4 в 1 Системи Середземномор'я",
       statsSavings: "Економія енергії",
       statsYears: "Років досвіду",
       statsCustomers: "Задоволених клієнтів",
@@ -375,7 +375,7 @@ Today, we install solar panels, heat pumps and climate systems in Antalya, Alany
       ctaText: "هل تريد أيضاً تحقيق استقلال الطاقة مع الألواح الشمسية والمضخات الحرارية؟",
       ctaButton: "استشارة مجانية",
 
-      statsInstallations: "تركيب في البحر المتوسط",
+      statsInstallations: "4 في 1 أنظمة البحر المتوسط",
       statsSavings: "توفير الطاقة",
       statsYears: "سنوات خبرة",
       statsCustomers: "عملاء سعداء",
