@@ -15,7 +15,7 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative pt-20 pb-8 overflow-hidden"
       data-testid="section-hero"
     >
       <div
@@ -104,12 +104,6 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
         <div className="mt-6 pt-4 border-t border-white/10">
           <p className="text-white/50 text-sm mb-2">{t.hero.trustText}</p>
           <p className="text-white text-xl font-semibold">{t.hero.successText}</p>
-        </div>
-      </div>
-
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/40 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-white/60 rounded-full" />
         </div>
       </div>
     </section>
