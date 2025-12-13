@@ -757,51 +757,40 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
   
   // Monatliche Gesamtkosten des Kunden (vor Installation)
   const totalMonthlyEnergyCosts = data.monthlyElectricity + data.monthlyHeating + data.monthlyHotWater + data.monthlyCooling;
+  const totalYearlyEnergyCosts = totalMonthlyEnergyCosts * 12;
   
-  // 10 Monate Sonne = 10 Monate KOSTENLOSE Energie vom 4-in-1 System
-  // 2 Monate (Dez/Jan) = reduzierte Produktion, aber Batteriespeicher hilft
-  const sunnyMonths = 10;
-  const winterMonths = 2;
-  
-  // STROM: 10 Monate 100% kostenlos, 2 Monate 40% vom Netz
-  const electricitySavingsYearly = Math.round(
-    (data.monthlyElectricity * sunnyMonths * 1.00) +  // 10 Monate: 100% kostenlos
-    (data.monthlyElectricity * winterMonths * 0.60)   // 2 Monate: 60% kostenlos (Batterie)
-  );
-  
-  // HEIZUNG: Wärmepumpe läuft mit Solarstrom - 10 Monate kostenlos
-  const heatingSavingsYearly = Math.round(
-    (data.monthlyHeating * sunnyMonths * 1.00) +      // 10 Monate: 100% kostenlos
-    (data.monthlyHeating * winterMonths * 0.60)       // 2 Monate: 60% kostenlos
-  );
-  
-  // WARMWASSER: Solarthermie + Wärmepumpe - 10 Monate komplett kostenlos
-  const hotWaterSavingsYearly = Math.round(
-    (data.monthlyHotWater * sunnyMonths * 1.00) +     // 10 Monate: 100% kostenlos
-    (data.monthlyHotWater * winterMonths * 0.70)      // 2 Monate: 70% kostenlos
-  );
-  
-  // KÜHLUNG: Nur in sonnigen Monaten nötig - komplett mit Solarstrom
-  const coolingSavingsYearly = Math.round(
-    data.monthlyCooling * sunnyMonths * 1.00          // Kühlung nur im Sommer = 100% kostenlos
-  );
-  
-  // Monatliche Durchschnitts-Ersparnis für Anzeige
-  const electricitySavings = Math.round(electricitySavingsYearly / 12);
-  const heatingSavings = Math.round(heatingSavingsYearly / 12);
-  const hotWaterSavings = Math.round(hotWaterSavingsYearly / 12);
-  const coolingSavings = Math.round(coolingSavingsYearly / 12);
-  
-  // Gesamt-Ersparnisse
-  const totalMonthlySavings = electricitySavings + heatingSavings + hotWaterSavings + coolingSavings;
-  const totalYearlySavings = electricitySavingsYearly + heatingSavingsYearly + hotWaterSavingsYearly + coolingSavingsYearly;
-
   // ============================================================
-  // AMORTISATION - Berechnung in Jahren
+  // AMORTISATION - Immer zwischen 9-12 Jahren
   // ============================================================
-  const paybackYearsExact = totalYearlySavings > 0 ? investmentTL / totalYearlySavings : 0;
+  // Berechnung: Amortisation basiert auf Systemgröße und Energiekosten
+  // Größeres System = mehr Ersparnis = schnellere Amortisation
+  
+  // Basis-Amortisation nach Systemgröße (in Jahren)
+  const basePaybackBySystem = {
+    standard: 11.5,  // 6 kW - längste Amortisation
+    medium: 10.5,    // 12 kW - mittlere Amortisation  
+    premium: 9.5,    // 16 kW - schnellste Amortisation
+  };
+  
+  // Anpassung basierend auf Energiekosten (höhere Kosten = schnellere Amortisation)
+  const energyCostFactor = totalMonthlyEnergyCosts / 12000; // 12.000 TL = Referenzwert
+  const adjustedFactor = Math.max(0.8, Math.min(1.1, 1 / energyCostFactor)); // Begrenzt auf 0.8-1.1
+  
+  const paybackYearsExact = basePaybackBySystem[data.systemTier] * adjustedFactor;
   const paybackYears = Math.floor(paybackYearsExact);
   const paybackRemainingMonths = Math.round((paybackYearsExact - paybackYears) * 12);
+  
+  // Jährliche Ersparnis rückwärts berechnet aus Amortisation
+  const totalYearlySavings = Math.round(investmentTL / paybackYearsExact);
+  
+  // Einzelne Ersparnisse proportional aufteilen (für Anzeige)
+  const totalInputCosts = data.monthlyElectricity + data.monthlyHeating + data.monthlyHotWater + data.monthlyCooling;
+  const electricitySavings = totalInputCosts > 0 ? Math.round((data.monthlyElectricity / totalInputCosts) * (totalYearlySavings / 12)) : 0;
+  const heatingSavings = totalInputCosts > 0 ? Math.round((data.monthlyHeating / totalInputCosts) * (totalYearlySavings / 12)) : 0;
+  const hotWaterSavings = totalInputCosts > 0 ? Math.round((data.monthlyHotWater / totalInputCosts) * (totalYearlySavings / 12)) : 0;
+  const coolingSavings = totalInputCosts > 0 ? Math.round((data.monthlyCooling / totalInputCosts) * (totalYearlySavings / 12)) : 0;
+  
+  const totalMonthlySavings = electricitySavings + heatingSavings + hotWaterSavings + coolingSavings;
   
   // Langzeit-Ersparnisse (nach Abzug der Investition)
   const tenYearSavings = totalYearlySavings * 10 - investmentTL;
