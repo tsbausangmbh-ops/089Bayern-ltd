@@ -86,12 +86,12 @@ export default function Header({ onCtaClick }: HeaderProps) {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
-                  size="icon"
                   variant="ghost"
-                  className={`transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}
+                  className={`transition-colors gap-1.5 ${isScrolled ? "text-foreground" : "text-white"}`}
                   data-testid="button-language-selector"
                 >
                   <Globe className="w-5 h-5" />
+                  <span className="text-sm font-medium uppercase">{language}</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
