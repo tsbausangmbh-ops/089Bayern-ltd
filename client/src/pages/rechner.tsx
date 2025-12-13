@@ -524,77 +524,52 @@ export default function Rechner() {
       <Header onCtaClick={handleCtaClick} />
       
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20" data-testid="section-rechner-hero">
+      <section className="relative pt-20 pb-8 overflow-hidden" data-testid="section-rechner-hero">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
         
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center py-10">
-          <div className="flex flex-wrap justify-center gap-3 mb-6">
-            <Badge className="bg-accent/90 text-white border-0 px-4 py-1.5" data-testid="badge-german-system">
-              <Zap className="w-4 h-4 mr-2" />
-              {t.badge}
-            </Badge>
-            <Badge className="bg-white/20 text-white border-0 px-4 py-1.5 backdrop-blur-sm" data-testid="badge-calculator">
-              <Calculator className="w-4 h-4 mr-2" />
+        <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
+          <div className="text-center">
+            <Badge variant="secondary" className="mb-6 bg-white/10 backdrop-blur-md border-white/20 text-white">
+              <Calculator className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
               {t.badgeSub}
             </Badge>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6" data-testid="heading-title">
-            {t.title}{" "}
-            <span className="bg-gradient-to-r from-accent to-orange-400 bg-clip-text text-transparent">
-              {t.titleHighlight}
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-10" data-testid="text-subtitle">
-            {t.subtitle}
-          </p>
-
-          {/* Stats Row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-8">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-              <div className="text-2xl md:text-3xl font-bold text-white">500+</div>
-              <div className="text-xs md:text-sm text-white/70">{t.statsInstallations}</div>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" data-testid="heading-title">
+              {t.title}{" "}
+              <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
+                {t.titleHighlight}
+              </span>
+            </h1>
+            
+            <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8" data-testid="text-subtitle">
+              {t.subtitle}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                onClick={scrollToCalculator}
+                size="lg"
+                className="bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg px-8"
+                data-testid="button-rechner-cta"
+              >
+                {t.ctaTitle}
+                <ArrowRight className={`w-5 h-5 ${isRtl ? "mr-2 rotate-180" : "ml-2"}`} />
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white/30 text-white bg-white/10 backdrop-blur-sm px-8" 
+                onClick={() => window.location.href = "tel:+905071832036"}
+                data-testid="button-rechner-phone"
+              >
+                <Phone className={`w-5 h-5 ${isRtl ? "ml-2" : "mr-2"}`} />
+                +90 507 183 2036
+              </Button>
             </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-              <div className="text-2xl md:text-3xl font-bold text-accent">70%</div>
-              <div className="text-xs md:text-sm text-white/70">{t.statsSavings}</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-              <div className="text-2xl md:text-3xl font-bold text-white">4-6</div>
-              <div className="text-xs md:text-sm text-white/70">{t.statsYears}</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-              <div className="text-2xl md:text-3xl font-bold text-white">98%</div>
-              <div className="text-xs md:text-sm text-white/70">{t.statsCustomers}</div>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              onClick={scrollToCalculator}
-              className="bg-gradient-to-r from-accent to-orange-500 text-white border-0 shadow-lg px-8"
-              data-testid="button-scroll-calculator"
-            >
-              <Calculator className="w-5 h-5 mr-2" />
-              {t.ctaTitle}
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white/30 text-white bg-white/10 backdrop-blur-sm px-8"
-              onClick={() => window.location.href = "tel:+905071832036"}
-              data-testid="button-hero-phone"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              +90 507 183 2036
-            </Button>
           </div>
         </div>
       </section>
