@@ -59,7 +59,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
     { label: aboutLabel, id: "about", href: "/ueber-uns", isHashLink: false },
     { label: t.header.system, id: "system", href: "/systeme", isHashLink: false },
     { label: t.header.benefits, id: "benefits", href: "/vorteile", isHashLink: false },
-    { label: t.header.calculator, id: "calculator", href: "/#calculator", isHashLink: true },
+    { label: t.header.calculator, id: "calculator", href: "/rechner", isHashLink: false },
     { label: t.header.team, id: "team", href: "/#team", isHashLink: true },
   ];
 
