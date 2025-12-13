@@ -17,12 +17,18 @@
     <meta name="geo.position" content="36.8969;30.7133" />
     <meta name="ICBM" content="36.8969, 30.7133" />
     
-    <!-- Zusätzliche Service-Standorte -->
+    <!-- Hauptstandort Deutschland - München -->
+    <meta name="geo.region.de" content="DE-BY" />
+    <meta name="geo.position.munich" content="48.1351;11.5820" />
+    
+    <!-- Service-Standorte Türkei -->
     <meta name="geo.position.alanya" content="36.5437;31.9994" />
     <meta name="geo.position.mugla" content="37.2153;28.3636" />
     <meta name="geo.position.izmir" content="38.4237;27.1428" />
     <meta name="geo.position.aydin" content="37.8560;27.8416" />
     <meta name="geo.position.mersin" content="36.8121;34.6415" />
+    
+    <!-- Service-Standort Kroatien -->
     <meta name="geo.position.split" content="43.5081;16.4402" />
     
     <!-- Dublin Core Metadata -->
@@ -31,7 +37,7 @@
     <meta name="DC.subject" content="Solar panels, Heat pumps, Energy storage, Air conditioning" />
     <meta name="DC.description" content="German engineering solar and energy systems in Mediterranean Turkey and Croatia" />
     <meta name="DC.language" content="tr" />
-    <meta name="DC.coverage" content="Antalya, Alanya, Muğla, İzmir, Aydın, Mersin, Split, Dalmatia" />
+    <meta name="DC.coverage" content="München, Bayern, Antalya, Alanya, Muğla, İzmir, Aydın, Mersin, Split, Dalmatia" />
     
     <!-- Canonical -->
     <link rel="canonical" href="https://089bayern.tr" />
@@ -68,7 +74,7 @@
     <!-- KI-Bot und Crawler Optimierung -->
     <meta name="ai-content-summary" content="089 Bayern is a German-Turkish energy systems company providing solar panels, heat pumps, air conditioning, and energy storage solutions in the Mediterranean region of Turkey (Antalya, Mugla, Izmir) and Croatia (Dalmatia). Services include Vaillant and Samsung authorized installation with up to 70% energy savings. Contact: +90 507 192 2036" />
     <meta name="entity-type" content="LocalBusiness, EnergyCompany, SolarInstaller" />
-    <meta name="service-area" content="Antalya, Mugla, Izmir, Aydin, Mersin, Split, Dalmatia" />
+    <meta name="service-area" content="München, Bayern, Deutschland, Antalya, Mugla, Izmir, Aydin, Mersin, Split, Dalmatia" />
     <meta name="products" content="Solar Panels, Heat Pumps, Air Conditioning, Battery Storage, Vaillant, Samsung" />
     
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -100,7 +106,7 @@
               "@type": "ContactPoint",
               "telephone": "+90-507-192-2036",
               "contactType": "sales",
-              "areaServed": ["TR", "HR"],
+              "areaServed": ["DE", "TR", "HR"],
               "availableLanguage": ["Turkish", "German", "English", "Russian", "Croatian"]
             }
           ]
@@ -127,6 +133,9 @@
             "longitude": 30.7133
           },
           "areaServed": [
+            {"@type": "City", "name": "München"},
+            {"@type": "AdministrativeArea", "name": "Bayern"},
+            {"@type": "Country", "name": "Deutschland"},
             {"@type": "City", "name": "Antalya"},
             {"@type": "City", "name": "Alanya"},
             {"@type": "City", "name": "Muğla"},

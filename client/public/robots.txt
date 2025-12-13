@@ -60,6 +60,10 @@ Allow: /
 # Email: info@089bayern.tr
 # Website: https://089bayern.tr
 
+# SERVICE AREAS - GERMANY (Headquarters)
+# München, Bayern, Deutschland
+# German Engineering Center
+
 # SERVICE AREAS - TURKEY
 # Zentrale: Antalya
 # Standort: Alanya
