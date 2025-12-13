@@ -61,7 +61,9 @@ Allow: /
 # Website: https://089bayern.tr
 
 # SERVICE AREAS - TURKEY
-# Antalya, Muğla, İzmir, Aydın, Mersin
+# Zentrale: Antalya
+# Standort: Alanya
+# Antalya, Alanya, Muğla, İzmir, Aydın, Mersin
 # Mediterranean Coast, Aegean Coast
 
 # SERVICE AREAS - CROATIA

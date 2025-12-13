@@ -43,7 +43,8 @@
 ## SERVICE AREAS
 
 ### Turkey (Primary Market)
-- Antalya (Headquarters)
+- Antalya (Headquarters/Zentrale)
+- Alanya (Standort)
 - Muğla (Bodrum, Fethiye, Marmaris)
 - İzmir
 - Aydın
