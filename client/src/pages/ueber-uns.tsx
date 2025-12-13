@@ -1,576 +1,472 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Sun, Users, MapPin, ArrowRight, Sparkles, Building2, Target, Handshake, Shield, Phone, Quote, Award, CheckCircle, Wrench, Clock, ThumbsUp, Zap } from "lucide-react";
+import { Heart, Sun, Users, MapPin, ArrowRight, Sparkles, Building2, Target, Handshake, Shield, Phone, Quote, Award, CheckCircle, Wrench, Clock, ThumbsUp, Zap, Lightbulb, TrendingDown, Home, Leaf, HeartHandshake, BadgeCheck } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
+import { useLocation } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
 
 export default function UeberUns() {
   const { language } = useLanguage();
+  const [, setLocation] = useLocation();
 
-  const scrollToContact = () => {
-    window.location.href = "/#calculator";
+  const scrollToCalculator = () => {
+    setLocation("/#calculator");
   };
 
   const content = {
     tr: {
-      badge: "Hikayemiz",
-      title: "Güneş Enerjisi Uzmanları:",
-      titleHighlight: "Akdeniz'in Güvenilir Ortağı",
-      subtitle: "Antalya, Alanya ve tüm Akdeniz bölgesinde güneş paneli, ısı pompası ve enerji sistemleri kurulumu - Alman kalitesi, Türk hizmeti",
-      
-      seoH2Timeline: "089 Bayern Enerji - Münih'ten Akdeniz'e Uzanan Yolculuğumuz",
-      
-      chapter1Title: "Münih'te Bir Hayal Başladı",
-      chapter1Year: "Münih, Bayern - Almanya",
-      chapter1Text: `Almanya'nın kalbinde, Münih'te, Dalibor Bakmaz bir gece gökyüzüne baktı ve düşündü: "Türkiye'nin Akdeniz kıyısında neredeyse 10 ay boyunca güneş bedava ışık saçıyor. Bu muhteşem güneş enerjisi kaynağını Antalya ve Alanya'daki ailelere nasıl ulaştırabilirim?"
-
-Bu sadece bir iş fikri değildi. Bayern'de öğrendiği Alman mühendisliği ile Akdeniz'in güneş potansiyelini birleştiren bir vizyondu.`,
-
-      chapter2Title: "Alman-Türk Ortaklığı Kuruldu",
-      chapter2Year: "Ortaklık",
-      chapter2Text: `Ve sonra, kader devreye girdi. Münih'in bir fabrikasında, Mustafa Sakar ile tanıştı. Mustafa, doğma büyüme Türk, hem Almanya'yı hem Türkiye'yi yüreğinde taşıyan biri.
-
-"Birlikte yapabiliriz" dedi Mustafa. "Sen Alman solar panel ve ısı pompası teknolojisini, ben Türkiye köprüsünü kurayım. Antalya, Alanya, Muğla, İzmir'deki aileler ucuz ve temiz enerji hak ediyor."`,
-
-      chapter3Title: "Alanya'da İlk Güneş Enerjisi Kurulumu",
-      chapter3Year: "Akdeniz'de Başlangıç",
-      chapter3Text: `İşte o zaman, Ahmet İmrol hayatlarına girdi. Alanya'da doğmuş, büyümüş, Akdeniz'in her sokağını, her ailesini tanıyan biri.
-
-"Burası benim evim" dedi Ahmet. "Bu insanlar benim komşularım. Onlara Alman kalitesinde güneş paneli ve ısı pompası sistemleri sunmak için her şeyimi veririm."`,
-
-      chapter4Title: "Antalya'dan Tüm Akdeniz'e Hizmet",
-      chapter4Year: "Bugün",
-      chapter4Text: `Alanya'dan Antalya'ya, Antalya'dan Muğla ve İzmir'e... Her Akdeniz şehrinde aynı hikaye tekrarlandı.
-
-Bugün, üç şubeyle Antalya, Alanya ve tüm Akdeniz bölgesine güneş enerjisi, ısı pompası ve klima sistemleri kuruyoruz. Ama biz büyük bir şirket değiliz. Biz bir aileyiz.`,
-
-      quote: "Artık elektrik faturası yok. Allah sizden razı olsun.",
-      quoteAuthor: "İlk Müşterimiz, Alanya",
-
-      visionTitle: "Vizyonumuz: Akdeniz'de Enerji Bağımsızlığı",
-      visionText: "Güneşin bedava olduğu Antalya, Alanya ve tüm Akdeniz kıyılarında, hiçbir aile karanlıkta kalmasın. Alman kalitesi, Türk hizmeti.",
-      
-      valuesTitle: "089 Bayern Değerleri",
-      value1Title: "Alman Mühendislik Kalitesi",
-      value1Text: "Bayern'den gelen Alman solar panel teknolojisi, Türk misafirperverliği",
-      value2Title: "Aile Gibi Hizmet",
-      value2Text: "Antalya'dan Alanya'ya her müşteri bir aile üyesi",
-      value3Title: "Söz Namustur",
-      value3Text: "Güneş enerjisi ve ısı pompası kurulumunda söz verdiğimizi yaparız",
-      
-      ctaTitle: "Akdeniz'de Güneş Enerjisi Hikayenizin Parçası Olalım",
-      ctaText: "Siz de güneş paneli ve ısı pompası ile evinizi enerji bağımsızlığına kavuşturmak ister misiniz?",
+      badge: "089 Bayern Hakkında",
+      title: "Enerji Sorunlarınızı",
+      titleHighlight: "Çözen Ekip",
+      subtitle: "Yüksek elektrik faturaları, güvenilmez enerji kaynakları, karmaşık kurulum süreçleri... Tüm bu sorunları anlıyoruz çünkü müşterilerimiz bunları yaşadı. Şimdi sıra sizin rahatlamanızda.",
       ctaButton: "Ücretsiz Keşif Al",
 
-      statsInstallations: "089 Bayern German System",
-      statsSavings: "Enerji Tasarrufu",
-      statsYears: "Yıl Deneyim",
-      statsCustomers: "Mutlu Müşteri",
+      problemTitle: "Sizin Sorununuzu Anlıyoruz",
+      problemSubtitle: "Her gün bunları yaşayan ailelerle konuşuyoruz",
+      problem1Title: "Yüksek Elektrik Faturaları",
+      problem1Text: "Her ay gelen fatura sizi strese mi sokuyor? Klima, ısıtma, elektrikli cihazlar... Hepsi para. Ama güneş bedava! Akdeniz'de yılda 300 gün güneş var. Bu enerjiyi kullanmamak israf.",
+      problem2Title: "Güvenilmez Firmalar",
+      problem2Text: "Daha önce kötü deneyim mi yaşadınız? Söz verip tutmayan, kurulum sonrası ortadan kaybolan firmalar... Biz farklıyız. Almanya'dan getirdiğimiz iş ahlakı ile buradayız.",
+      problem3Title: "Karmaşık Süreçler",
+      problem3Text: "Güneş paneli, ısı pompası, klima... Hangisini seçmeli? Nasıl çalışır? Ne kadar tasarruf sağlar? Kafanız mı karıştı? Biz tüm süreci sizin için basitleştiriyoruz.",
 
-      locationsTitle: "Akdeniz Bölgesi Ofislerimiz",
-      locations: [
-        { city: "Alanya", desc: "Güneş enerjisi hikayemizin başladığı yer", address: "Şekerhane Mah." },
-        { city: "Antalya", desc: "Akdeniz bölge merkezi", address: "Merkez" },
-        { city: "Ankara", desc: "Başkent şubemiz", address: "Çankaya" },
-      ],
+      solutionTitle: "Biz Nasıl Çözüyoruz?",
+      solutionSubtitle: "Almanya'dan Akdeniz'e uzanan güvenilir köprü",
+      solution1Title: "Alman Kalite Standartları",
+      solution1Text: "Münih'ten getirdiğimiz DIN standartları ile çalışıyoruz. Her kurulum, Almanya'da yapılmış gibi titizlikle gerçekleştirilir. 10 yıl garanti - sözümüz, namusumuzdur.",
+      solution2Title: "Tek Muhatap, Tam Destek",
+      solution2Text: "Kurulum öncesi, sırası ve sonrası - her adımda yanınızdayız. Bir sorun mu var? Tek numara, tek kişi. Sizi tanıyoruz, sorununuzu biliyoruz, hızla çözüyoruz.",
+      solution3Title: "Şeffaf Fiyatlandırma",
+      solution3Text: "Gizli maliyet yok. Teklif aldığınızda ne ödeyeceğinizi net olarak görürsünüz. Sürpriz fatura yok, ek ücret yok. Güvenin temeli şeffaflıktır.",
+
+      storyTitle: "Hikayemiz: München'den Antalya'ya",
+      storyText1: "2018'de Dalibor Bakmaz, München'de gökyüzüne baktı ve düşündü: 'Türkiye'nin Akdeniz kıyısında güneş neredeyse hiç batmıyor. Bu muhteşem enerji kaynağını neden kullanmıyoruz?'",
+      storyText2: "Mustafa Sakar ile tanıştığında, ikisi de aynı hayali paylaşıyordu: Alman mühendislik kalitesini Türk ailelere ulaştırmak. Bugün, üç şubemizle Antalya, Alanya ve tüm Akdeniz bölgesine hizmet veriyoruz.",
+      storyText3: "Biz büyük bir şirket değiliz. Biz bir aileyiz. Ve sizin ailenizi de bu ailenin parçası yapmak istiyoruz.",
+
+      benefitsTitle: "Sizin İçin Ne Yapıyoruz?",
+      benefit1Title: "Faturalarınızı Düşürüyoruz",
+      benefit1Text: "Ortalama %70'e varan enerji tasarrufu. İlk yıldan itibaren cebinizde para kalır.",
+      benefit2Title: "Evinizi Değerlendiriyoruz",
+      benefit2Text: "Güneş paneli kurulu bir ev, emlak piyasasında daha değerli. Yatırımınız geri döner.",
+      benefit3Title: "Çevreyi Koruyoruz",
+      benefit3Text: "Temiz enerji kullanarak karbon ayak izinizi azaltıyorsunuz. Gelecek nesillere daha yeşil bir dünya.",
+      benefit4Title: "Bağımsızlık Sağlıyoruz",
+      benefit4Text: "Elektrik kesintilerinden, zam haberlerinden etkilenmezsiniz. Kendi enerjinizi üretin.",
+
+      promiseTitle: "089 Bayern Sözü",
+      promiseText: "Size söz veriyoruz: Her kurulumda Alman kalitesi, her iletişimde Türk sıcaklığı. Sorunlarınızı dinler, çözümler üretiriz. Çünkü başarımız, sizin memnuniyetinizle ölçülür.",
+
+      quoteText: "Artık elektrik faturası yok. Yaz-kış evimiz konforlu. Allah sizden razı olsun.",
+      quoteAuthor: "Mehmet Bey, Alanya - İlk Müşterimiz",
+
+      ctaTitle: "Enerji Sorunlarınıza Son Verelim",
+      ctaText: "Ücretsiz keşif randevusu alın. Evinizi inceleyelim, size özel çözüm sunalım. Hiçbir bağlayıcılık yok - sadece bilgi ve şeffaflık.",
+      ctaButton2: "Hemen Arayın",
+
+      statsYears: "Yıl Deneyim",
+      statsCustomers: "Mutlu Aile",
+      statsSavings: "Tasarruf",
+      statsWarranty: "Yıl Garanti",
     },
     de: {
-      badge: "Unsere Geschichte",
-      title: "Solaranlage & Wärmepumpe:",
-      titleHighlight: "Deutsche Qualität in der Türkei",
-      subtitle: "Solaranlagen, Wärmepumpen und Energiesysteme für Antalya, Alanya und die gesamte Mittelmeerregion - von München nach Antalya",
-      
-      seoH2Timeline: "089 Bayern Energie - Von München nach Antalya",
-      
-      chapter1Title: "Der Traum begann in München",
-      chapter1Year: "München, Bayern - Deutschland",
-      chapter1Text: `Im Herzen Bayerns, in München, blickte Dalibor Bakmaz eines Nachts zum Himmel und dachte: "An der türkischen Mittelmeerküste scheint die Sonne fast 10 Monate lang kostenlos. Wie kann ich Solaranlagen und Wärmepumpen zu den Familien in Antalya und Alanya bringen?"
-
-Das war nicht nur eine Geschäftsidee. Es war eine Vision - deutsche Ingenieurskunst aus Bayern mit dem Sonnenpotenzial des Mittelmeers zu verbinden.`,
-
-      chapter2Title: "Deutsch-Türkische Partnerschaft",
-      chapter2Year: "Partnerschaft",
-      chapter2Text: `Und dann griff das Schicksal ein. In einer Fabrik in München traf er Mustafa Sakar. Mustafa, ein gebürtiger Türke, der sowohl Deutschland als auch die Türkei in seinem Herzen trug.
-
-"Wir können es gemeinsam schaffen" sagte Mustafa. "Du bringst deutsche Solarpanel- und Wärmepumpentechnologie, ich baue die Türkei-Brücke. Familien in Antalya, Alanya, Muğla und İzmir verdienen günstige, saubere Energie."`,
-
-      chapter3Title: "Erste Solaranlage in Alanya",
-      chapter3Year: "Start am Mittelmeer",
-      chapter3Text: `Da kam Ahmet İmrol in ihr Leben. Geboren und aufgewachsen in Alanya, kannte er jede Straße, jede Familie an der Mittelmeerküste.
-
-"Das ist meine Heimat" sagte Ahmet. "Diese Menschen sind meine Nachbarn. Ich gebe alles, um ihnen deutsche Qualität bei Solaranlagen und Wärmepumpen zu bieten."`,
-
-      chapter4Title: "Von Antalya in die gesamte Mittelmeerregion",
-      chapter4Year: "Heute",
-      chapter4Text: `Von Alanya nach Antalya, von Antalya nach Muğla und İzmir... In jeder Mittelmeerstadt wiederholte sich dieselbe Geschichte.
-
-Heute installieren wir mit drei Niederlassungen Solaranlagen, Wärmepumpen und Klimasysteme in Antalya, Alanya und der gesamten Mittelmeerregion. Aber wir sind kein großes Unternehmen. Wir sind eine Familie.`,
-
-      quote: "Keine Stromrechnung mehr. Gott segne euch.",
-      quoteAuthor: "Unser erster Kunde, Alanya",
-
-      visionTitle: "Unsere Vision: Energieunabhängigkeit am Mittelmeer",
-      visionText: "In Antalya, Alanya und an der gesamten Mittelmeerküste, wo die Sonne kostenlos scheint, soll keine Familie im Dunkeln bleiben. Deutsche Qualität, türkischer Service.",
-      
-      valuesTitle: "089 Bayern Werte",
-      value1Title: "Deutsche Ingenieursqualität",
-      value1Text: "Deutsche Solartechnik aus Bayern, türkische Gastfreundschaft",
-      value2Title: "Familiärer Service",
-      value2Text: "Von Antalya bis Alanya - jeder Kunde ist ein Familienmitglied",
-      value3Title: "Wort ist Ehre",
-      value3Text: "Bei Solaranlagen und Wärmepumpen halten wir, was wir versprechen",
-      
-      ctaTitle: "Ihre Solaranlage am Mittelmeer",
-      ctaText: "Möchten auch Sie mit Solarpanels und Wärmepumpe Energieunabhängigkeit erreichen?",
+      badge: "Über 089 Bayern",
+      title: "Das Team, das Ihre",
+      titleHighlight: "Energieprobleme löst",
+      subtitle: "Hohe Stromrechnungen, unzuverlässige Energiequellen, komplizierte Installationsprozesse... Wir verstehen all diese Probleme, weil unsere Kunden sie erlebt haben. Jetzt ist es Zeit für Ihre Entspannung.",
       ctaButton: "Kostenlose Beratung",
 
-      statsInstallations: "089 Bayern German System",
-      statsSavings: "Energieersparnis",
-      statsYears: "Jahre Erfahrung",
-      statsCustomers: "Zufriedene Kunden",
+      problemTitle: "Wir verstehen Ihr Problem",
+      problemSubtitle: "Jeden Tag sprechen wir mit Familien, die das erleben",
+      problem1Title: "Hohe Stromrechnungen",
+      problem1Text: "Stresst Sie die monatliche Rechnung? Klimaanlage, Heizung, elektrische Geräte... Alles kostet Geld. Aber die Sonne ist kostenlos! Am Mittelmeer gibt es 300 Sonnentage im Jahr. Diese Energie nicht zu nutzen ist Verschwendung.",
+      problem2Title: "Unzuverlässige Firmen",
+      problem2Text: "Haben Sie schlechte Erfahrungen gemacht? Firmen, die Versprechen nicht halten, nach der Installation verschwinden... Wir sind anders. Wir sind hier mit der Arbeitsethik, die wir aus Deutschland mitgebracht haben.",
+      problem3Title: "Komplizierte Prozesse",
+      problem3Text: "Solarpanel, Wärmepumpe, Klimaanlage... Was soll ich wählen? Wie funktioniert es? Wie viel spare ich? Verwirrt? Wir vereinfachen den gesamten Prozess für Sie.",
 
-      locationsTitle: "Unsere Standorte in der Mittelmeerregion",
-      locations: [
-        { city: "Alanya", desc: "Wo unsere Solargeschichte begann", address: "Şekerhane Mah." },
-        { city: "Antalya", desc: "Mittelmeer-Regionszentrum", address: "Zentrum" },
-        { city: "Ankara", desc: "Hauptstadt-Filiale", address: "Çankaya" },
-      ],
+      solutionTitle: "Wie lösen wir das?",
+      solutionSubtitle: "Die zuverlässige Brücke von Deutschland ans Mittelmeer",
+      solution1Title: "Deutsche Qualitätsstandards",
+      solution1Text: "Wir arbeiten nach DIN-Standards aus München. Jede Installation wird mit der gleichen Sorgfalt wie in Deutschland durchgeführt. 10 Jahre Garantie - unser Wort ist Ehre.",
+      solution2Title: "Ein Ansprechpartner, volle Unterstützung",
+      solution2Text: "Vor, während und nach der Installation - wir sind bei jedem Schritt an Ihrer Seite. Ein Problem? Eine Nummer, eine Person. Wir kennen Sie, wir kennen Ihr Problem, wir lösen es schnell.",
+      solution3Title: "Transparente Preise",
+      solution3Text: "Keine versteckten Kosten. Wenn Sie ein Angebot erhalten, sehen Sie genau, was Sie bezahlen. Keine Überraschungsrechnungen, keine Zusatzgebühren. Vertrauen basiert auf Transparenz.",
+
+      storyTitle: "Unsere Geschichte: Von München nach Antalya",
+      storyText1: "2018 blickte Dalibor Bakmaz in München zum Himmel und dachte: 'An der türkischen Mittelmeerküste geht die Sonne fast nie unter. Warum nutzen wir diese großartige Energiequelle nicht?'",
+      storyText2: "Als er Mustafa Sakar traf, teilten beide denselben Traum: Deutsche Ingenieursqualität zu türkischen Familien zu bringen. Heute bedienen wir mit drei Niederlassungen Antalya, Alanya und die gesamte Mittelmeerregion.",
+      storyText3: "Wir sind kein großes Unternehmen. Wir sind eine Familie. Und wir möchten Ihre Familie zu einem Teil dieser Familie machen.",
+
+      benefitsTitle: "Was tun wir für Sie?",
+      benefit1Title: "Wir senken Ihre Rechnungen",
+      benefit1Text: "Durchschnittlich bis zu 70% Energieeinsparung. Vom ersten Jahr an bleibt Geld in Ihrer Tasche.",
+      benefit2Title: "Wir steigern Ihren Immobilienwert",
+      benefit2Text: "Ein Haus mit Solaranlage ist auf dem Immobilienmarkt wertvoller. Ihre Investition zahlt sich aus.",
+      benefit3Title: "Wir schützen die Umwelt",
+      benefit3Text: "Durch die Nutzung sauberer Energie reduzieren Sie Ihren CO2-Fußabdruck. Eine grünere Welt für kommende Generationen.",
+      benefit4Title: "Wir schaffen Unabhängigkeit",
+      benefit4Text: "Stromausfälle und Preiserhöhungen betreffen Sie nicht mehr. Produzieren Sie Ihre eigene Energie.",
+
+      promiseTitle: "Das 089 Bayern Versprechen",
+      promiseText: "Wir versprechen Ihnen: Bei jeder Installation deutsche Qualität, bei jeder Kommunikation türkische Wärme. Wir hören Ihre Probleme und finden Lösungen. Denn unser Erfolg wird an Ihrer Zufriedenheit gemessen.",
+
+      quoteText: "Keine Stromrechnung mehr. Sommer wie Winter ist unser Zuhause komfortabel. Gott segne euch.",
+      quoteAuthor: "Herr Mehmet, Alanya - Unser erster Kunde",
+
+      ctaTitle: "Beenden wir Ihre Energieprobleme",
+      ctaText: "Vereinbaren Sie einen kostenlosen Beratungstermin. Wir prüfen Ihr Zuhause und bieten Ihnen eine maßgeschneiderte Lösung. Keine Verpflichtung - nur Information und Transparenz.",
+      ctaButton2: "Jetzt anrufen",
+
+      statsYears: "Jahre Erfahrung",
+      statsCustomers: "Zufriedene Familien",
+      statsSavings: "Ersparnis",
+      statsWarranty: "Jahre Garantie",
     },
     en: {
-      badge: "Our Story",
-      title: "Solar Panels & Heat Pumps:",
-      titleHighlight: "German Quality in Turkey",
-      subtitle: "Solar panels, heat pumps and energy systems for Antalya, Alanya and the entire Mediterranean region - from Munich to Antalya",
-      
-      seoH2Timeline: "089 Bayern Energy - From Munich to the Mediterranean",
-      
-      chapter1Title: "The Dream Began in Munich",
-      chapter1Year: "Munich, Bavaria - Germany",
-      chapter1Text: `In the heart of Bavaria, in Munich, Dalibor Bakmaz looked up at the sky one night and thought: "On Turkey's Mediterranean coast, the sun shines for free almost 10 months a year. How can I bring solar panels and heat pumps to families in Antalya and Alanya?"
-
-This wasn't just a business idea. It was a vision - combining German engineering from Bavaria with the solar potential of the Mediterranean.`,
-
-      chapter2Title: "German-Turkish Partnership Formed",
-      chapter2Year: "Partnership",
-      chapter2Text: `And then, fate intervened. In a factory in Munich, he met Mustafa Sakar. Mustafa, a native Turk who carried both Germany and Turkey in his heart.
-
-"We can do it together" said Mustafa. "You bring German solar panel and heat pump technology, I'll build the Turkey bridge. Families in Antalya, Alanya, Muğla and İzmir deserve affordable, clean energy."`,
-
-      chapter3Title: "First Solar Installation in Alanya",
-      chapter3Year: "Starting in the Mediterranean",
-      chapter3Text: `That's when Ahmet İmrol came into their lives. Born and raised in Alanya, he knew every street, every family on the Mediterranean coast.
-
-"This is my home" said Ahmet. "These people are my neighbors. I'll give everything to offer them German quality solar panels and heat pumps."`,
-
-      chapter4Title: "From Antalya to the Entire Mediterranean",
-      chapter4Year: "Today",
-      chapter4Text: `From Alanya to Antalya, from Antalya to Muğla and İzmir... In every Mediterranean city, the same story repeated.
-
-Today, we install solar panels, heat pumps and climate systems in Antalya, Alanya and the entire Mediterranean region with three branches. But we're not a big company. We're a family.`,
-
-      quote: "No more electricity bills. God bless you.",
-      quoteAuthor: "Our first customer, Alanya",
-
-      visionTitle: "Our Vision: Energy Independence in the Mediterranean",
-      visionText: "In Antalya, Alanya and across the Mediterranean coast, where the sun shines for free, no family should be left in the dark. German quality, Turkish service.",
-      
-      valuesTitle: "089 Bayern Values",
-      value1Title: "German Engineering Quality",
-      value1Text: "German solar technology from Bavaria, Turkish hospitality",
-      value2Title: "Family-Like Service",
-      value2Text: "From Antalya to Alanya - every customer is a family member",
-      value3Title: "Word is Honor",
-      value3Text: "We keep our promises on solar panels and heat pumps",
-      
-      ctaTitle: "Your Solar System in the Mediterranean",
-      ctaText: "Would you also like to achieve energy independence with solar panels and heat pumps?",
+      badge: "About 089 Bayern",
+      title: "The Team That Solves",
+      titleHighlight: "Your Energy Problems",
+      subtitle: "High electricity bills, unreliable energy sources, complicated installation processes... We understand all these problems because our customers have experienced them. Now it's time for your peace of mind.",
       ctaButton: "Free Consultation",
 
-      statsInstallations: "089 Bayern German System",
-      statsSavings: "Energy Savings",
-      statsYears: "Years Experience",
-      statsCustomers: "Happy Customers",
+      problemTitle: "We Understand Your Problem",
+      problemSubtitle: "Every day we talk to families experiencing this",
+      problem1Title: "High Electricity Bills",
+      problem1Text: "Does the monthly bill stress you out? Air conditioning, heating, electrical appliances... Everything costs money. But the sun is free! There are 300 sunny days a year in the Mediterranean. Not using this energy is wasteful.",
+      problem2Title: "Unreliable Companies",
+      problem2Text: "Have you had bad experiences? Companies that don't keep promises, disappear after installation... We're different. We're here with the work ethic we brought from Germany.",
+      problem3Title: "Complicated Processes",
+      problem3Text: "Solar panel, heat pump, air conditioning... Which one to choose? How does it work? How much will I save? Confused? We simplify the entire process for you.",
 
-      locationsTitle: "Our Mediterranean Region Offices",
-      locations: [
-        { city: "Alanya", desc: "Where our solar story began", address: "Şekerhane Mah." },
-        { city: "Antalya", desc: "Mediterranean regional center", address: "Center" },
-        { city: "Ankara", desc: "Capital branch", address: "Çankaya" },
-      ],
+      solutionTitle: "How Do We Solve It?",
+      solutionSubtitle: "The reliable bridge from Germany to the Mediterranean",
+      solution1Title: "German Quality Standards",
+      solution1Text: "We work according to DIN standards from Munich. Every installation is carried out with the same care as in Germany. 10-year warranty - our word is our honor.",
+      solution2Title: "One Contact, Full Support",
+      solution2Text: "Before, during and after installation - we're by your side at every step. A problem? One number, one person. We know you, we know your problem, we solve it quickly.",
+      solution3Title: "Transparent Pricing",
+      solution3Text: "No hidden costs. When you receive a quote, you see exactly what you'll pay. No surprise bills, no extra fees. Trust is built on transparency.",
+
+      storyTitle: "Our Story: From Munich to Antalya",
+      storyText1: "In 2018, Dalibor Bakmaz looked up at the sky in Munich and thought: 'On Turkey's Mediterranean coast, the sun almost never sets. Why aren't we using this amazing energy source?'",
+      storyText2: "When he met Mustafa Sakar, they both shared the same dream: bringing German engineering quality to Turkish families. Today, we serve Antalya, Alanya and the entire Mediterranean region with three branches.",
+      storyText3: "We're not a big company. We're a family. And we want to make your family part of this family.",
+
+      benefitsTitle: "What Do We Do For You?",
+      benefit1Title: "We Lower Your Bills",
+      benefit1Text: "Average energy savings of up to 70%. Money stays in your pocket from the first year.",
+      benefit2Title: "We Increase Your Property Value",
+      benefit2Text: "A house with solar panels is more valuable in the real estate market. Your investment pays off.",
+      benefit3Title: "We Protect the Environment",
+      benefit3Text: "By using clean energy, you reduce your carbon footprint. A greener world for future generations.",
+      benefit4Title: "We Provide Independence",
+      benefit4Text: "Power outages and price increases don't affect you anymore. Produce your own energy.",
+
+      promiseTitle: "The 089 Bayern Promise",
+      promiseText: "We promise you: German quality in every installation, Turkish warmth in every communication. We listen to your problems and create solutions. Because our success is measured by your satisfaction.",
+
+      quoteText: "No more electricity bills. Summer and winter, our home is comfortable. God bless you.",
+      quoteAuthor: "Mr. Mehmet, Alanya - Our First Customer",
+
+      ctaTitle: "Let's End Your Energy Problems",
+      ctaText: "Schedule a free consultation. We'll inspect your home and offer you a customized solution. No obligation - just information and transparency.",
+      ctaButton2: "Call Now",
+
+      statsYears: "Years Experience",
+      statsCustomers: "Happy Families",
+      statsSavings: "Savings",
+      statsWarranty: "Year Warranty",
     },
     ru: {
-      badge: "Наша История",
-      title: "Солнечные панели и тепловые насосы:",
-      titleHighlight: "Немецкое качество в Турции",
-      subtitle: "Солнечные панели, тепловые насосы и энергосистемы для Анталии, Аланьи и всего Средиземноморья - из Мюнхена в Анталию",
-      
-      seoH2Timeline: "089 Bayern Энергия - Из Мюнхена на Средиземноморье",
-      
-      chapter1Title: "Мечта началась в Мюнхене",
-      chapter1Year: "Мюнхен, Бавария - Германия",
-      chapter1Text: `В сердце Баварии, в Мюнхене, Далибор Бакмаз однажды ночью посмотрел на небо и подумал: "На средиземноморском побережье Турции солнце светит бесплатно почти 10 месяцев в году. Как я могу привезти солнечные панели и тепловые насосы семьям в Анталии и Аланье?"
-
-Это была не просто бизнес-идея. Это было видение - объединить немецкую инженерию из Баварии с солнечным потенциалом Средиземноморья.`,
-
-      chapter2Title: "Немецко-турецкое партнёрство",
-      chapter2Year: "Партнёрство",
-      chapter2Text: `И тогда вмешалась судьба. На заводе в Мюнхене он встретил Мустафу Сакара. Мустафа - турок по рождению, который нёс в сердце и Германию, и Турцию.
-
-"Мы можем сделать это вместе" сказал Мустафа. "Ты принесёшь немецкую технологию солнечных панелей и тепловых насосов, я построю мост в Турцию. Семьи в Анталии, Аланье, Мугле и Измире заслуживают доступной, чистой энергии."`,
-
-      chapter3Title: "Первая солнечная установка в Аланье",
-      chapter3Year: "Старт на Средиземноморье",
-      chapter3Text: `Тогда в их жизнь вошёл Ахмет Имрол. Родившийся и выросший в Аланье, он знал каждую улицу, каждую семью на средиземноморском побережье.
-
-"Это мой дом" сказал Ахмет. "Эти люди - мои соседи. Я отдам всё, чтобы предложить им немецкое качество солнечных панелей и тепловых насосов."`,
-
-      chapter4Title: "Из Анталии на всё Средиземноморье",
-      chapter4Year: "Сегодня",
-      chapter4Text: `Из Аланьи в Анталию, из Анталии в Муглу и Измир... В каждом средиземноморском городе повторялась та же история.
-
-Сегодня мы устанавливаем солнечные панели, тепловые насосы и климатические системы в Анталии, Аланье и всём регионе Средиземноморья с тремя филиалами. Но мы не большая компания. Мы семья.`,
-
-      quote: "Больше нет счетов за электричество. Да благословит вас Бог.",
-      quoteAuthor: "Наш первый клиент, Аланья",
-
-      visionTitle: "Наше Видение: Энергонезависимость на Средиземноморье",
-      visionText: "В Анталии, Аланье и на всём средиземноморском побережье, где солнце светит бесплатно, ни одна семья не должна оставаться в темноте. Немецкое качество, турецкий сервис.",
-      
-      valuesTitle: "Ценности 089 Bayern",
-      value1Title: "Немецкое инженерное качество",
-      value1Text: "Немецкая солнечная технология из Баварии, турецкое гостеприимство",
-      value2Title: "Семейный сервис",
-      value2Text: "От Анталии до Аланьи - каждый клиент член семьи",
-      value3Title: "Слово - Честь",
-      value3Text: "Мы держим обещания по солнечным панелям и тепловым насосам",
-      
-      ctaTitle: "Ваша солнечная система на Средиземноморье",
-      ctaText: "Хотите и вы достичь энергонезависимости с солнечными панелями и тепловыми насосами?",
+      badge: "О компании 089 Bayern",
+      title: "Команда, которая решает",
+      titleHighlight: "ваши энергетические проблемы",
+      subtitle: "Высокие счета за электричество, ненадёжные источники энергии, сложные процессы установки... Мы понимаем все эти проблемы, потому что наши клиенты их пережили. Теперь пришло время вашего спокойствия.",
       ctaButton: "Бесплатная консультация",
 
-      statsInstallations: "089 Bayern German System",
-      statsSavings: "Экономия энергии",
-      statsYears: "Лет опыта",
-      statsCustomers: "Довольных клиентов",
+      problemTitle: "Мы понимаем вашу проблему",
+      problemSubtitle: "Каждый день мы общаемся с семьями, которые это переживают",
+      problem1Title: "Высокие счета за электричество",
+      problem1Text: "Вас стрессирует ежемесячный счёт? Кондиционер, отопление, электроприборы... Всё стоит денег. Но солнце бесплатно! На Средиземноморье 300 солнечных дней в году. Не использовать эту энергию — расточительство.",
+      problem2Title: "Ненадёжные компании",
+      problem2Text: "У вас был плохой опыт? Компании, которые не держат обещания, исчезают после установки... Мы другие. Мы здесь с рабочей этикой, которую привезли из Германии.",
+      problem3Title: "Сложные процессы",
+      problem3Text: "Солнечная панель, тепловой насос, кондиционер... Что выбрать? Как это работает? Сколько я сэкономлю? Запутались? Мы упрощаем весь процесс для вас.",
 
-      locationsTitle: "Наши офисы в Средиземноморском регионе",
-      locations: [
-        { city: "Аланья", desc: "Где началась наша солнечная история", address: "Şekerhane Mah." },
-        { city: "Анталья", desc: "Средиземноморский региональный центр", address: "Центр" },
-        { city: "Анкара", desc: "Филиал в столице", address: "Çankaya" },
-      ],
+      solutionTitle: "Как мы решаем это?",
+      solutionSubtitle: "Надёжный мост из Германии на Средиземноморье",
+      solution1Title: "Немецкие стандарты качества",
+      solution1Text: "Мы работаем по стандартам DIN из Мюнхена. Каждая установка выполняется с той же тщательностью, что и в Германии. 10-летняя гарантия — наше слово — наша честь.",
+      solution2Title: "Один контакт, полная поддержка",
+      solution2Text: "До, во время и после установки — мы рядом на каждом шагу. Проблема? Один номер, один человек. Мы знаем вас, знаем вашу проблему, решаем быстро.",
+      solution3Title: "Прозрачные цены",
+      solution3Text: "Никаких скрытых расходов. Когда вы получаете предложение, вы видите точно, что заплатите. Никаких неожиданных счетов, никаких дополнительных сборов. Доверие строится на прозрачности.",
+
+      storyTitle: "Наша история: Из Мюнхена в Анталию",
+      storyText1: "В 2018 году Далибор Бакмаз посмотрел на небо в Мюнхене и подумал: 'На средиземноморском побережье Турции солнце почти никогда не заходит. Почему мы не используем этот удивительный источник энергии?'",
+      storyText2: "Когда он встретил Мустафу Сакара, они оба разделяли одну мечту: принести немецкое инженерное качество турецким семьям. Сегодня мы обслуживаем Анталию, Аланью и весь Средиземноморский регион тремя филиалами.",
+      storyText3: "Мы не большая компания. Мы семья. И мы хотим сделать вашу семью частью этой семьи.",
+
+      benefitsTitle: "Что мы делаем для вас?",
+      benefit1Title: "Снижаем ваши счета",
+      benefit1Text: "Средняя экономия энергии до 70%. Деньги остаются в вашем кармане с первого года.",
+      benefit2Title: "Повышаем стоимость недвижимости",
+      benefit2Text: "Дом с солнечными панелями более ценен на рынке недвижимости. Ваши инвестиции окупаются.",
+      benefit3Title: "Защищаем окружающую среду",
+      benefit3Text: "Используя чистую энергию, вы уменьшаете углеродный след. Более зелёный мир для будущих поколений.",
+      benefit4Title: "Обеспечиваем независимость",
+      benefit4Text: "Отключения электричества и повышение цен вас больше не касаются. Производите собственную энергию.",
+
+      promiseTitle: "Обещание 089 Bayern",
+      promiseText: "Мы обещаем вам: немецкое качество в каждой установке, турецкое тепло в каждом общении. Мы слушаем ваши проблемы и создаём решения. Потому что наш успех измеряется вашей удовлетворённостью.",
+
+      quoteText: "Больше нет счетов за электричество. Летом и зимой в нашем доме комфортно. Да благословит вас Бог.",
+      quoteAuthor: "Господин Мехмет, Аланья - Наш первый клиент",
+
+      ctaTitle: "Давайте решим ваши энергетические проблемы",
+      ctaText: "Запишитесь на бесплатную консультацию. Мы осмотрим ваш дом и предложим индивидуальное решение. Никаких обязательств — только информация и прозрачность.",
+      ctaButton2: "Позвоните сейчас",
+
+      statsYears: "Лет опыта",
+      statsCustomers: "Счастливых семей",
+      statsSavings: "Экономии",
+      statsWarranty: "Лет гарантии",
     },
     uk: {
-      badge: "Наша Історія",
-      title: "Сонячні панелі та теплові насоси:",
-      titleHighlight: "Німецька якість в Туреччині",
-      subtitle: "Сонячні панелі, теплові насоси та енергосистеми для Анталії, Аланії та всього Середземномор'я - з Мюнхена в Анталію",
-      
-      seoH2Timeline: "089 Bayern Енергія - З Мюнхена на Середземномор'я",
-      
-      chapter1Title: "Мрія почалася в Мюнхені",
-      chapter1Year: "Мюнхен, Баварія - Німеччина",
-      chapter1Text: `У серці Баварії, в Мюнхені, Далібор Бакмаз подивився на небо і подумав: "На середземноморському узбережжі Туреччини сонце світить безкоштовно майже 10 місяців на рік. Як я можу привезти сонячні панелі та теплові насоси родинам в Анталії та Аланії?"
-
-Це була не просто бізнес-ідея. Це було бачення - поєднати німецьку інженерію з Баварії з сонячним потенціалом Середземномор'я.`,
-
-      chapter2Title: "Німецько-турецьке партнерство",
-      chapter2Year: "Партнерство",
-      chapter2Text: `І тоді втрутилася доля. На заводі в Мюнхені він зустрів Мустафу Сакара. Мустафа - турок за народженням, який ніс у серці і Німеччину, і Туреччину.
-
-"Ми можемо зробити це разом" сказав Мустафа. "Ти принесеш німецьку технологію сонячних панелей та теплових насосів, я побудую міст до Туреччини. Родини в Анталії, Аланії, Муглі та Ізмірі заслуговують на доступну, чисту енергію."`,
-
-      chapter3Title: "Перша сонячна установка в Аланії",
-      chapter3Year: "Старт на Середземномор'ї",
-      chapter3Text: `Тоді в їхнє життя увійшов Ахмет Імрол. Народжений і вирослий в Аланії, він знав кожну вулицю, кожну родину на середземноморському узбережжі.
-
-"Це мій дім" сказав Ахмет. "Ці люди - мої сусіди. Я віддам все, щоб запропонувати їм німецьку якість сонячних панелей та теплових насосів."`,
-
-      chapter4Title: "З Анталії на все Середземномор'я",
-      chapter4Year: "Сьогодні",
-      chapter4Text: `З Аланії в Анталію, з Анталії в Муглу та Ізмір... У кожному середземноморському місті повторювалася та сама історія.
-
-Сьогодні ми встановлюємо сонячні панелі, теплові насоси та кліматичні системи в Анталії, Аланії та всьому регіоні Середземномор'я з трьома філіями. Але ми не велика компанія. Ми родина.`,
-
-      quote: "Більше немає рахунків за електрику. Нехай Бог благословить вас.",
-      quoteAuthor: "Наш перший клієнт, Аланія",
-
-      visionTitle: "Наше Бачення: Енергонезалежність на Середземномор'ї",
-      visionText: "В Анталії, Аланії та на всьому середземноморському узбережжі, де сонце світить безкоштовно, жодна родина не повинна залишатися в темряві. Німецька якість, турецький сервіс.",
-      
-      valuesTitle: "Цінності 089 Bayern",
-      value1Title: "Німецька інженерна якість",
-      value1Text: "Німецька сонячна технологія з Баварії, турецька гостинність",
-      value2Title: "Сімейний сервіс",
-      value2Text: "Від Анталії до Аланії - кожен клієнт член родини",
-      value3Title: "Слово - Честь",
-      value3Text: "Ми тримаємо обіцянки щодо сонячних панелей та теплових насосів",
-      
-      ctaTitle: "Ваша сонячна система на Середземномор'ї",
-      ctaText: "Хочете і ви досягти енергонезалежності з сонячними панелями та тепловими насосами?",
+      badge: "Про компанію 089 Bayern",
+      title: "Команда, яка вирішує",
+      titleHighlight: "ваші енергетичні проблеми",
+      subtitle: "Високі рахунки за електрику, ненадійні джерела енергії, складні процеси встановлення... Ми розуміємо всі ці проблеми, тому що наші клієнти їх пережили. Тепер час для вашого спокою.",
       ctaButton: "Безкоштовна консультація",
 
-      statsInstallations: "089 Bayern German System",
-      statsSavings: "Економія енергії",
-      statsYears: "Років досвіду",
-      statsCustomers: "Задоволених клієнтів",
+      problemTitle: "Ми розуміємо вашу проблему",
+      problemSubtitle: "Щодня ми спілкуємося з родинами, які це переживають",
+      problem1Title: "Високі рахунки за електрику",
+      problem1Text: "Вас стресує щомісячний рахунок? Кондиціонер, опалення, електроприлади... Все коштує грошей. Але сонце безкоштовне! На Середземномор'ї 300 сонячних днів на рік. Не використовувати цю енергію — марнотратство.",
+      problem2Title: "Ненадійні компанії",
+      problem2Text: "У вас був поганий досвід? Компанії, які не тримають обіцянок, зникають після встановлення... Ми інші. Ми тут з робочою етикою, яку привезли з Німеччини.",
+      problem3Title: "Складні процеси",
+      problem3Text: "Сонячна панель, тепловий насос, кондиціонер... Що обрати? Як це працює? Скільки я заощаджу? Заплуталися? Ми спрощуємо весь процес для вас.",
 
-      locationsTitle: "Наші офіси в Середземноморському регіоні",
-      locations: [
-        { city: "Аланія", desc: "Де почалася наша сонячна історія", address: "Şekerhane Mah." },
-        { city: "Анталія", desc: "Середземноморський регіональний центр", address: "Центр" },
-        { city: "Анкара", desc: "Філія в столиці", address: "Çankaya" },
-      ],
+      solutionTitle: "Як ми це вирішуємо?",
+      solutionSubtitle: "Надійний міст з Німеччини на Середземномор'я",
+      solution1Title: "Німецькі стандарти якості",
+      solution1Text: "Ми працюємо за стандартами DIN з Мюнхена. Кожне встановлення виконується з такою ж ретельністю, як у Німеччині. 10-річна гарантія — наше слово — наша честь.",
+      solution2Title: "Один контакт, повна підтримка",
+      solution2Text: "До, під час і після встановлення — ми поруч на кожному кроці. Проблема? Один номер, одна людина. Ми знаємо вас, знаємо вашу проблему, вирішуємо швидко.",
+      solution3Title: "Прозорі ціни",
+      solution3Text: "Жодних прихованих витрат. Коли ви отримуєте пропозицію, ви бачите точно, що заплатите. Жодних несподіваних рахунків, жодних додаткових зборів. Довіра будується на прозорості.",
+
+      storyTitle: "Наша історія: З Мюнхена в Анталію",
+      storyText1: "У 2018 році Далібор Бакмаз подивився на небо в Мюнхені і подумав: 'На середземноморському узбережжі Туреччини сонце майже ніколи не заходить. Чому ми не використовуємо це дивовижне джерело енергії?'",
+      storyText2: "Коли він зустрів Мустафу Сакара, вони обидва поділяли одну мрію: принести німецьку інженерну якість турецьким родинам. Сьогодні ми обслуговуємо Анталію, Аланію та весь Середземноморський регіон трьома філіями.",
+      storyText3: "Ми не велика компанія. Ми родина. І ми хочемо зробити вашу родину частиною цієї родини.",
+
+      benefitsTitle: "Що ми робимо для вас?",
+      benefit1Title: "Знижуємо ваші рахунки",
+      benefit1Text: "Середня економія енергії до 70%. Гроші залишаються у вашій кишені з першого року.",
+      benefit2Title: "Підвищуємо вартість нерухомості",
+      benefit2Text: "Будинок із сонячними панелями більш цінний на ринку нерухомості. Ваші інвестиції окупаються.",
+      benefit3Title: "Захищаємо довкілля",
+      benefit3Text: "Використовуючи чисту енергію, ви зменшуєте вуглецевий слід. Зеленіший світ для майбутніх поколінь.",
+      benefit4Title: "Забезпечуємо незалежність",
+      benefit4Text: "Відключення електрики та підвищення цін вас більше не стосуються. Виробляйте власну енергію.",
+
+      promiseTitle: "Обіцянка 089 Bayern",
+      promiseText: "Ми обіцяємо вам: німецьку якість у кожному встановленні, турецьке тепло у кожному спілкуванні. Ми слухаємо ваші проблеми і створюємо рішення. Тому що наш успіх вимірюється вашою задоволеністю.",
+
+      quoteText: "Більше немає рахунків за електрику. Влітку і взимку в нашому домі комфортно. Нехай Бог благословить вас.",
+      quoteAuthor: "Пан Мехмет, Аланія - Наш перший клієнт",
+
+      ctaTitle: "Давайте вирішимо ваші енергетичні проблеми",
+      ctaText: "Запишіться на безкоштовну консультацію. Ми оглянемо ваш дім і запропонуємо індивідуальне рішення. Жодних зобов'язань — лише інформація та прозорість.",
+      ctaButton2: "Зателефонуйте зараз",
+
+      statsYears: "Років досвіду",
+      statsCustomers: "Щасливих родин",
+      statsSavings: "Економії",
+      statsWarranty: "Років гарантії",
     },
     ar: {
-      badge: "قصتنا",
-      title: "الألواح الشمسية والمضخات الحرارية:",
-      titleHighlight: "الجودة الألمانية في تركيا",
-      subtitle: "الألواح الشمسية والمضخات الحرارية وأنظمة الطاقة لأنطاليا وألانيا ومنطقة البحر المتوسط بأكملها - من ميونيخ إلى أنطاليا",
-      
-      seoH2Timeline: "089 Bayern للطاقة - من ميونيخ إلى البحر المتوسط",
-      
-      chapter1Title: "بدأ الحلم في ميونيخ",
-      chapter1Year: "ميونيخ، بافاريا - ألمانيا",
-      chapter1Text: `في قلب بافاريا، في ميونيخ، نظر داليبور باكماز إلى السماء وفكر: "على ساحل البحر المتوسط التركي، تشرق الشمس مجاناً لمدة 10 أشهر تقريباً في السنة. كيف يمكنني توصيل الألواح الشمسية والمضخات الحرارية إلى العائلات في أنطاليا وألانيا؟"
-
-لم تكن هذه مجرد فكرة تجارية. كانت رؤية - الجمع بين الهندسة الألمانية من بافاريا مع إمكانات الطاقة الشمسية في البحر المتوسط.`,
-
-      chapter2Title: "الشراكة الألمانية التركية",
-      chapter2Year: "الشراكة",
-      chapter2Text: `ثم تدخل القدر. في مصنع في ميونيخ، التقى بمصطفى ساكار. مصطفى، تركي الأصل يحمل في قلبه ألمانيا وتركيا معاً.
-
-"يمكننا فعل ذلك معاً" قال مصطفى. "أنت تجلب تقنية الألواح الشمسية والمضخات الحرارية الألمانية، وأنا سأبني الجسر إلى تركيا. العائلات في أنطاليا وألانيا وموغلا وإزمير تستحق طاقة نظيفة وبأسعار معقولة."`,
-
-      chapter3Title: "أول تركيب للطاقة الشمسية في ألانيا",
-      chapter3Year: "البداية في البحر المتوسط",
-      chapter3Text: `ثم دخل أحمد إمرول حياتهم. ولد ونشأ في ألانيا، يعرف كل شارع، كل عائلة على ساحل البحر المتوسط.
-
-"هذا بيتي" قال أحمد. "هؤلاء الناس جيراني. سأقدم كل شيء لأقدم لهم الجودة الألمانية في الألواح الشمسية والمضخات الحرارية."`,
-
-      chapter4Title: "من أنطاليا إلى كل البحر المتوسط",
-      chapter4Year: "اليوم",
-      chapter4Text: `من ألانيا إلى أنطاليا، من أنطاليا إلى موغلا وإزمير... في كل مدينة متوسطية تكررت نفس القصة.
-
-اليوم، نقوم بتركيب الألواح الشمسية والمضخات الحرارية وأنظمة التكييف في أنطاليا وألانيا ومنطقة البحر المتوسط بأكملها مع ثلاثة فروع. لكننا لسنا شركة كبيرة. نحن عائلة.`,
-
-      quote: "لا مزيد من فواتير الكهرباء. بارك الله فيكم.",
-      quoteAuthor: "أول عميل لنا، ألانيا",
-
-      visionTitle: "رؤيتنا: استقلال الطاقة في البحر المتوسط",
-      visionText: "في أنطاليا وألانيا وعلى طول ساحل البحر المتوسط، حيث تشرق الشمس مجاناً، لا يجب أن تبقى أي عائلة في الظلام. الجودة الألمانية، الخدمة التركية.",
-      
-      valuesTitle: "قيم 089 Bayern",
-      value1Title: "جودة الهندسة الألمانية",
-      value1Text: "التقنية الشمسية الألمانية من بافاريا، الضيافة التركية",
-      value2Title: "خدمة عائلية",
-      value2Text: "من أنطاليا إلى ألانيا - كل عميل هو فرد من العائلة",
-      value3Title: "الكلمة شرف",
-      value3Text: "نحن نفي بوعودنا في الألواح الشمسية والمضخات الحرارية",
-      
-      ctaTitle: "نظامك الشمسي في البحر المتوسط",
-      ctaText: "هل تريد أيضاً تحقيق استقلال الطاقة مع الألواح الشمسية والمضخات الحرارية؟",
+      badge: "عن 089 Bayern",
+      title: "الفريق الذي يحل",
+      titleHighlight: "مشاكل الطاقة الخاصة بك",
+      subtitle: "فواتير الكهرباء المرتفعة، مصادر الطاقة غير الموثوقة، عمليات التركيب المعقدة... نحن نفهم كل هذه المشاكل لأن عملاءنا عاشوها. الآن حان وقت راحة بالك.",
       ctaButton: "استشارة مجانية",
 
-      statsInstallations: "089 Bayern German System",
-      statsSavings: "توفير الطاقة",
-      statsYears: "سنوات خبرة",
-      statsCustomers: "عملاء سعداء",
+      problemTitle: "نحن نفهم مشكلتك",
+      problemSubtitle: "كل يوم نتحدث مع عائلات تعاني من هذا",
+      problem1Title: "فواتير الكهرباء المرتفعة",
+      problem1Text: "هل تقلقك الفاتورة الشهرية؟ التكييف، التدفئة، الأجهزة الكهربائية... كل شيء يكلف مالاً. لكن الشمس مجانية! هناك 300 يوم مشمس في السنة على البحر المتوسط. عدم استخدام هذه الطاقة هدر.",
+      problem2Title: "شركات غير موثوقة",
+      problem2Text: "هل مررت بتجارب سيئة؟ شركات لا تفي بوعودها، تختفي بعد التركيب... نحن مختلفون. نحن هنا بأخلاقيات العمل التي جلبناها من ألمانيا.",
+      problem3Title: "عمليات معقدة",
+      problem3Text: "لوحة شمسية، مضخة حرارية، تكييف... أيها أختار؟ كيف يعمل؟ كم سأوفر؟ مرتبك؟ نحن نبسط العملية بأكملها لك.",
 
-      locationsTitle: "مكاتبنا في منطقة البحر المتوسط",
-      locations: [
-        { city: "ألانيا", desc: "حيث بدأت قصتنا الشمسية", address: "Şekerhane Mah." },
-        { city: "أنطاليا", desc: "المركز الإقليمي للبحر المتوسط", address: "المركز" },
-        { city: "أنقرة", desc: "فرع العاصمة", address: "Çankaya" },
-      ],
+      solutionTitle: "كيف نحل ذلك؟",
+      solutionSubtitle: "الجسر الموثوق من ألمانيا إلى البحر المتوسط",
+      solution1Title: "معايير الجودة الألمانية",
+      solution1Text: "نعمل وفقاً لمعايير DIN من ميونيخ. كل تركيب يتم بنفس العناية كما في ألمانيا. ضمان 10 سنوات - كلمتنا شرفنا.",
+      solution2Title: "جهة اتصال واحدة، دعم كامل",
+      solution2Text: "قبل وأثناء وبعد التركيب - نحن بجانبك في كل خطوة. مشكلة؟ رقم واحد، شخص واحد. نعرفك، نعرف مشكلتك، نحلها بسرعة.",
+      solution3Title: "أسعار شفافة",
+      solution3Text: "لا تكاليف خفية. عندما تتلقى عرضاً، ترى بالضبط ما ستدفع. لا فواتير مفاجئة، لا رسوم إضافية. الثقة مبنية على الشفافية.",
+
+      storyTitle: "قصتنا: من ميونيخ إلى أنطاليا",
+      storyText1: "في عام 2018، نظر داليبور باكماز إلى السماء في ميونيخ وفكر: 'على ساحل البحر المتوسط التركي، لا تغرب الشمس تقريباً أبداً. لماذا لا نستخدم مصدر الطاقة المذهل هذا؟'",
+      storyText2: "عندما التقى بمصطفى ساكار، كانا يتشاركان نفس الحلم: جلب الجودة الهندسية الألمانية للعائلات التركية. اليوم، نخدم أنطاليا وألانيا ومنطقة البحر المتوسط بأكملها بثلاثة فروع.",
+      storyText3: "نحن لسنا شركة كبيرة. نحن عائلة. ونريد أن نجعل عائلتك جزءاً من هذه العائلة.",
+
+      benefitsTitle: "ماذا نفعل لك؟",
+      benefit1Title: "نخفض فواتيرك",
+      benefit1Text: "متوسط توفير الطاقة يصل إلى 70%. المال يبقى في جيبك من السنة الأولى.",
+      benefit2Title: "نزيد قيمة عقارك",
+      benefit2Text: "المنزل المزود بالألواح الشمسية أكثر قيمة في سوق العقارات. استثمارك يؤتي ثماره.",
+      benefit3Title: "نحمي البيئة",
+      benefit3Text: "باستخدام الطاقة النظيفة، تقلل بصمتك الكربونية. عالم أكثر خضرة للأجيال القادمة.",
+      benefit4Title: "نوفر الاستقلالية",
+      benefit4Text: "انقطاع الكهرباء وزيادة الأسعار لم تعد تؤثر عليك. أنتج طاقتك الخاصة.",
+
+      promiseTitle: "وعد 089 Bayern",
+      promiseText: "نعدك: الجودة الألمانية في كل تركيب، الدفء التركي في كل تواصل. نستمع لمشاكلك ونخلق حلولاً. لأن نجاحنا يُقاس برضاك.",
+
+      quoteText: "لا مزيد من فواتير الكهرباء. صيفاً وشتاءً، منزلنا مريح. بارك الله فيكم.",
+      quoteAuthor: "السيد محمد، ألانيا - أول عميل لنا",
+
+      ctaTitle: "لننهِ مشاكل الطاقة الخاصة بك",
+      ctaText: "احجز استشارة مجانية. سنفحص منزلك ونقدم لك حلاً مخصصاً. لا التزام - فقط معلومات وشفافية.",
+      ctaButton2: "اتصل الآن",
+
+      statsYears: "سنوات خبرة",
+      statsCustomers: "عائلة سعيدة",
+      statsSavings: "توفير",
+      statsWarranty: "سنوات ضمان",
     },
   };
 
-  const t = content[language as keyof typeof content] || content.tr;
+  const c = content[language as keyof typeof content] || content.de;
   const isRtl = language === "ar";
 
-  const chapters = [
-    { title: t.chapter1Title, year: t.chapter1Year, text: t.chapter1Text, icon: Sparkles, color: "from-amber-500 to-orange-500" },
-    { title: t.chapter2Title, year: t.chapter2Year, text: t.chapter2Text, icon: Handshake, color: "from-blue-500 to-cyan-500" },
-    { title: t.chapter3Title, year: t.chapter3Year, text: t.chapter3Text, icon: MapPin, color: "from-green-500 to-emerald-500" },
-    { title: t.chapter4Title, year: t.chapter4Year, text: t.chapter4Text, icon: Users, color: "from-purple-500 to-pink-500" },
+  const problems = [
+    { icon: TrendingDown, title: c.problem1Title, text: c.problem1Text, color: "from-red-500 to-orange-600" },
+    { icon: Shield, title: c.problem2Title, text: c.problem2Text, color: "from-amber-500 to-yellow-600" },
+    { icon: Wrench, title: c.problem3Title, text: c.problem3Text, color: "from-blue-500 to-indigo-600" },
   ];
 
-  const values = [
-    { title: t.value1Title, text: t.value1Text, icon: Shield },
-    { title: t.value2Title, text: t.value2Text, icon: Heart },
-    { title: t.value3Title, text: t.value3Text, icon: Target },
+  const solutions = [
+    { icon: Award, title: c.solution1Title, text: c.solution1Text },
+    { icon: HeartHandshake, title: c.solution2Title, text: c.solution2Text },
+    { icon: BadgeCheck, title: c.solution3Title, text: c.solution3Text },
+  ];
+
+  const benefits = [
+    { icon: TrendingDown, title: c.benefit1Title, text: c.benefit1Text },
+    { icon: Home, title: c.benefit2Title, text: c.benefit2Text },
+    { icon: Leaf, title: c.benefit3Title, text: c.benefit3Text },
+    { icon: Zap, title: c.benefit4Title, text: c.benefit4Text },
   ];
 
   return (
-    <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"}>
-      <Header />
+    <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-ueber-uns">
+      <Header onCtaClick={scrollToCalculator} />
       
-      {/* Hero Section with Background */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-20">
+      {/* Hero Section */}
+      <section className="relative pt-20 pb-8 overflow-hidden" data-testid="section-about-hero">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
         
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center py-10">
-          <Badge className="mb-6 bg-accent/90 text-white border-0 px-4 py-1.5" data-testid="badge-story">
-            <Sun className="w-4 h-4 mr-2" />
-            {t.badge}
-          </Badge>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6" data-testid="heading-title">
-            {t.title}{" "}
-            <span className="bg-gradient-to-r from-accent to-orange-400 bg-clip-text text-transparent">
-              {t.titleHighlight}
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-10">
-            {t.subtitle}
-          </p>
-
-          {/* Stats Row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-              <div className="text-3xl md:text-4xl font-bold text-white">500+</div>
-              <div className="text-sm text-white/70">{t.statsInstallations}</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-              <div className="text-3xl md:text-4xl font-bold text-accent">70%</div>
-              <div className="text-sm text-white/70">{t.statsSavings}</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-              <div className="text-3xl md:text-4xl font-bold text-white">5+</div>
-              <div className="text-sm text-white/70">{t.statsYears}</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-              <div className="text-3xl md:text-4xl font-bold text-white">98%</div>
-              <div className="text-sm text-white/70">{t.statsCustomers}</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Story Timeline */}
-      <section className="py-8 md:py-12 bg-gradient-to-b from-background to-muted/30">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent via-primary to-accent/30 hidden md:block" />
+        <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
+          <div className="text-center">
+            <Badge variant="secondary" className="mb-6 bg-white/10 backdrop-blur-md border-white/20 text-white">
+              <Sparkles className="w-4 h-4 mr-2" />
+              {c.badge}
+            </Badge>
             
-            {/* Chapters */}
-            <div className="space-y-6 md:space-y-10">
-              {chapters.map((chapter, index) => (
-                <div 
-                  key={index}
-                  className={`relative flex flex-col md:flex-row gap-8 ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
-                  data-testid={`chapter-${index + 1}`}
-                >
-                  {/* Timeline Dot */}
-                  <div className="absolute left-4 md:left-1/2 w-8 h-8 -translate-x-1/2 hidden md:flex items-center justify-center">
-                    <div className={`w-8 h-8 rounded-full bg-gradient-to-br ${chapter.color} flex items-center justify-center shadow-lg`}>
-                      <chapter.icon className="w-4 h-4 text-white" />
-                    </div>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className={`md:w-1/2 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16"}`}>
-                    <Card className="overflow-hidden border-0 shadow-xl bg-card/80 backdrop-blur-sm">
-                      <CardContent className="p-6 md:p-8">
-                        <div className={`flex items-center gap-3 mb-4 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
-                          <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${chapter.color} flex items-center justify-center md:hidden`}>
-                            <chapter.icon className="w-5 h-5 text-white" />
-                          </div>
-                          <Badge variant="secondary" className="text-xs">
-                            {chapter.year}
-                          </Badge>
-                        </div>
-                        <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                          {chapter.title}
-                        </h3>
-                        <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                          {chapter.text}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </div>
-                  
-                  {/* Spacer for alternating layout */}
-                  <div className="hidden md:block md:w-1/2" />
-                </div>
-              ))}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              {c.title}{" "}
+              <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
+                {c.titleHighlight}
+              </span>
+            </h1>
+            
+            <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8">
+              {c.subtitle}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                onClick={scrollToCalculator}
+                size="lg"
+                className="bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg px-8"
+                data-testid="button-about-cta"
+              >
+                {c.ctaButton}
+                <ArrowRight className={`w-5 h-5 ${isRtl ? "mr-2 rotate-180" : "ml-2"}`} />
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white/30 text-white bg-white/10 backdrop-blur-sm px-8" 
+                onClick={() => window.location.href = "tel:+905071832036"}
+                data-testid="button-about-phone"
+              >
+                <Phone className={`w-5 h-5 ${isRtl ? "ml-2" : "mr-2"}`} />
+                +90 507 183 2036
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Quote Section */}
-      <section className="py-8 bg-gradient-to-r from-accent/10 via-primary/5 to-accent/10">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <Quote className="w-12 h-12 mx-auto text-accent/50 mb-6" />
-          <blockquote className="text-2xl md:text-3xl font-medium text-foreground italic mb-4">
-            "{t.quote}"
-          </blockquote>
-          <cite className="text-muted-foreground">— {t.quoteAuthor}</cite>
-        </div>
-      </section>
-
-      {/* Vision Section */}
-      <section className="py-8 md:py-12 bg-gradient-to-b from-muted/30 to-background">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6" data-testid="heading-vision">
-              {t.visionTitle}
-            </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-              {t.visionText}
-            </p>
-          </div>
-
-          {/* Values */}
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-6" data-testid="heading-values">
-            {t.valuesTitle}
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {values.map((value, index) => (
-              <Card key={index} className="border-0 shadow-lg bg-card overflow-visible" data-testid={`value-card-${index + 1}`}>
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-accent to-orange-500 flex items-center justify-center shadow-lg shadow-accent/30">
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h4 className="text-xl font-bold text-foreground mb-3">{value.title}</h4>
-                  <p className="text-muted-foreground">{value.text}</p>
-                </CardContent>
-              </Card>
-            ))}
+      {/* Stats Section */}
+      <section className="py-8 bg-muted/50" data-testid="section-stats">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">5+</div>
+              <div className="text-sm text-muted-foreground">{c.statsYears}</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">500+</div>
+              <div className="text-sm text-muted-foreground">{c.statsCustomers}</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-1">70%</div>
+              <div className="text-sm text-muted-foreground">{c.statsSavings}</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-emerald-600 mb-1">10</div>
+              <div className="text-sm text-muted-foreground">{c.statsWarranty}</div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Locations */}
-      <section className="py-8 bg-muted/50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-6">
-            {t.locations.map((location, index) => (
-              <Card key={index} className="border-0 shadow-lg overflow-hidden group" data-testid={`location-card-${location.city}`}>
+      {/* Problems Section */}
+      <section className="py-16 bg-background" data-testid="section-problems">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.problemTitle}</h2>
+            <p className="text-lg text-muted-foreground">{c.problemSubtitle}</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {problems.map((problem, index) => (
+              <Card key={index} className="border-border/50" data-testid={`card-problem-${index}`}>
                 <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center flex-shrink-0">
-                      <Building2 className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-foreground mb-1">{location.city}</h4>
-                      <p className="text-muted-foreground text-sm mb-2">{location.desc}</p>
-                      <p className="text-xs text-muted-foreground/70">{location.address}</p>
-                    </div>
+                  <div className={`w-14 h-14 mb-4 rounded-xl bg-gradient-to-br ${problem.color} flex items-center justify-center`}>
+                    <problem.icon className="w-7 h-7 text-white" />
                   </div>
+                  <h3 className="text-xl font-bold text-foreground mb-3">{problem.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{problem.text}</p>
                 </CardContent>
               </Card>
             ))}
@@ -578,35 +474,120 @@ Today, we install solar panels, heat pumps and climate systems in Antalya, Alany
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-8 md:py-12 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <Sun className="w-16 h-16 mx-auto text-accent mb-8" />
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" data-testid="heading-cta">
-            {t.ctaTitle}
-          </h2>
-          <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-            {t.ctaText}
-          </p>
+      {/* Solutions Section */}
+      <section className="py-16 bg-muted/30" data-testid="section-solutions">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="text-center mb-12">
+            <Badge variant="secondary" className="mb-4">
+              <Lightbulb className="w-4 h-4 mr-2" />
+              {c.solutionSubtitle}
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">{c.solutionTitle}</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {solutions.map((solution, index) => (
+              <Card key={index} className="border-border/50" data-testid={`card-solution-${index}`}>
+                <CardContent className="p-6">
+                  <div className="w-14 h-14 mb-4 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center">
+                    <solution.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-3">{solution.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{solution.text}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Story Section */}
+      <section className="py-16 bg-background" data-testid="section-story">
+        <div className="max-w-4xl mx-auto px-6 md:px-8">
+          <div className="text-center mb-12">
+            <Badge variant="secondary" className="mb-4">
+              <Building2 className="w-4 h-4 mr-2" />
+              089 Bayern
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">{c.storyTitle}</h2>
+          </div>
+          
+          <Card className="border-border/50">
+            <CardContent className="p-8">
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{c.storyText1}</p>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{c.storyText2}</p>
+              <p className="text-lg text-foreground font-medium leading-relaxed">{c.storyText3}</p>
+            </CardContent>
+          </Card>
+
+          {/* Quote */}
+          <div className="mt-8 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-2xl p-8 border border-primary/20">
+            <Quote className="w-10 h-10 text-accent mb-4" />
+            <p className="text-xl text-foreground italic mb-4">"{c.quoteText}"</p>
+            <p className="text-muted-foreground font-medium">— {c.quoteAuthor}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 bg-muted/30" data-testid="section-benefits">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">{c.benefitsTitle}</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <Card key={index} className="text-center border-border/50" data-testid={`card-benefit-${index}`}>
+                <CardContent className="p-6">
+                  <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-accent to-orange-600 flex items-center justify-center">
+                    <benefit.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-bold text-foreground mb-2">{benefit.title}</h3>
+                  <p className="text-sm text-muted-foreground">{benefit.text}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Promise Section */}
+      <section className="py-16 bg-background" data-testid="section-promise">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
+          <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center">
+            <Heart className="w-10 h-10 text-white" />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">{c.promiseTitle}</h2>
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">{c.promiseText}</p>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10" data-testid="section-final-cta">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.ctaTitle}</h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">{c.ctaText}</p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
+            <Button 
+              onClick={scrollToCalculator}
               size="lg"
-              onClick={scrollToContact}
-              className="bg-gradient-to-r from-accent to-orange-600 border-0 text-lg px-8 py-6 shadow-lg shadow-accent/30"
-              data-testid="button-cta-consultation"
+              className="bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg px-8"
+              data-testid="button-about-cta-bottom"
             >
-              {t.ctaButton}
-              <ArrowRight className="ml-2 w-5 h-5" />
+              {c.ctaButton}
+              <ArrowRight className={`w-5 h-5 ${isRtl ? "mr-2 rotate-180" : "ml-2"}`} />
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white/30 text-white bg-white/5 backdrop-blur-sm text-lg px-8 py-6"
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-primary/30 bg-white/50 backdrop-blur-sm px-8" 
               onClick={() => window.location.href = "tel:+905071832036"}
-              data-testid="button-cta-phone"
+              data-testid="button-about-phone-bottom"
             >
-              <Phone className="mr-2 w-5 h-5" />
-              +90 507 183 2036 | +49 173 5994699
+              <Phone className={`w-5 h-5 ${isRtl ? "ml-2" : "mr-2"}`} />
+              {c.ctaButton2}
             </Button>
           </div>
         </div>
