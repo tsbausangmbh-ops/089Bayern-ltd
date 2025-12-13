@@ -2,8 +2,8 @@ import { Shield, Award, Wrench } from "lucide-react";
 
 const logos = [
   { name: "Vaillant", tagline: "Isıtma Lideri" },
-  { name: "Samsung", tagline: "Klima & Depolama" },
   { name: "Viessmann", tagline: "Alman Mühendisliği" },
+  { name: "Samsung", tagline: "Klima & Depolama" },
   { name: "SMA", tagline: "İnverter Teknolojisi" },
   { name: "BYD", tagline: "Batarya Sistemleri" },
   { name: "Fronius", tagline: "Solar Çözümler" },
