@@ -632,7 +632,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
   const t = translations[language] || translations.de;
   const isRTL = language === "ar";
 
-  const totalSteps = 4;
+  const totalSteps = 3;
   const progress = (step / totalSteps) * 100;
 
   const handleNext = () => {
@@ -651,12 +651,17 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
 
   const canProceed = () => {
     switch (step) {
-      case 1: return data.propertyType !== "";
-      case 2: return data.propertySize > 0;
-      case 3: return data.monthlyElectricity >= 0;
-      case 4: return data.roofArea > 0;
+      case 1: return data.propertyType !== "" && data.propertySize > 0;
+      case 2: return data.monthlyElectricity >= 0;
+      case 3: return data.roofArea > 0;
       default: return false;
     }
+  };
+
+  // Auto-calculate roof area based on property size
+  const updatePropertySize = (size: number) => {
+    const estimatedRoof = Math.round(size * 0.3); // ~30% of property size
+    setData({ ...data, propertySize: size, roofArea: Math.max(20, Math.min(estimatedRoof, 150)) });
   };
 
   // Calculate system specifications based on inputs
@@ -907,45 +912,40 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
             </div>
 
             {step === 1 && (
-              <div className="space-y-5">
-                <h3 className="text-xl font-semibold text-foreground">{t.step1Title}</h3>
-                <p className="text-muted-foreground">{t.step1Subtitle}</p>
-                <div className="grid grid-cols-1 gap-3">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground">{t.step1Title}</h3>
+                  <p className="text-muted-foreground">{t.step1Subtitle}</p>
+                </div>
+                <div className="grid grid-cols-3 gap-3">
                   {propertyTypes.map((type) => (
                     <button
                       key={type.id}
                       onClick={() => setData({ ...data, propertyType: type.id })}
-                      className={`p-5 rounded-xl border-2 transition-all hover-elevate active-elevate-2 text-left flex items-center gap-4 ${
+                      className={`p-4 rounded-xl border-2 transition-all hover-elevate active-elevate-2 flex flex-col items-center gap-3 ${
                         data.propertyType === type.id ? "border-primary bg-primary/10" : "border-border/50 bg-background/50"
                       }`}
                       data-testid={`button-property-${type.id}`}
                     >
-                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center shadow-lg ${
+                      <div className={`w-14 h-14 rounded-xl flex items-center justify-center shadow-lg ${
                         data.propertyType === type.id ? `bg-gradient-to-br ${type.gradient}` : "bg-muted"
                       }`}>
-                        <type.icon className={`w-6 h-6 ${data.propertyType === type.id ? "text-white" : "text-muted-foreground"}`} />
+                        <type.icon className={`w-7 h-7 ${data.propertyType === type.id ? "text-white" : "text-muted-foreground"}`} />
                       </div>
-                      <span className={`font-semibold text-lg ${data.propertyType === type.id ? "text-primary" : "text-foreground"}`}>
+                      <span className={`font-semibold text-sm text-center ${data.propertyType === type.id ? "text-primary" : "text-foreground"}`}>
                         {type.label}
                       </span>
                     </button>
                   ))}
                 </div>
-              </div>
-            )}
-
-            {step === 2 && (
-              <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-foreground">{t.step2Title}</h3>
-                <p className="text-muted-foreground">{t.step2Subtitle}</p>
-                <div>
+                <div className="pt-4 border-t border-border/30">
                   <Label htmlFor="propertySize" className="text-base font-medium">{t.propertySizeLabel}</Label>
                   <p className="text-sm text-muted-foreground mb-3">{t.propertySizeHint}</p>
                   <Input
                     id="propertySize"
                     type="number"
                     value={data.propertySize}
-                    onChange={(e) => setData({ ...data, propertySize: Number(e.target.value) })}
+                    onChange={(e) => updatePropertySize(Number(e.target.value))}
                     className="h-12 text-lg bg-background/50"
                     placeholder="200"
                     data-testid="input-property-size"
@@ -954,7 +954,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
               </div>
             )}
 
-            {step === 3 && (
+            {step === 2 && (
               <div className="space-y-5">
                 <h3 className="text-xl font-semibold text-foreground">{t.step3Title}</h3>
                 <p className="text-muted-foreground">{t.step3Subtitle}</p>
@@ -1027,7 +1027,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
               </div>
             )}
 
-            {step === 4 && (
+            {step === 3 && (
               <div className="space-y-6">
                 <h3 className="text-xl font-semibold text-foreground">{t.step4Title}</h3>
                 <p className="text-muted-foreground">{t.step4Subtitle}</p>
