@@ -1,0 +1,115 @@
+1. Unternehmens- & Impressumsangaben (ZORUNLU)
+
+In der Türkei gibt es kein „Impressum“ wie in DE, aber gleichwertige Pflichtinfos nach dem Türkischen Handelsgesetzbuch (TTK).
+
+Pflichtangaben auf der Website (meist Footer):
+
+Firmenname (tam ticari unvan)
+
+Rechtsform (Ltd. Şti., A.Ş. etc.)
+
+Eingetragene Geschäftsadresse
+
+Handelsregister (Ticaret Sicil No)
+
+MERSİS-Nummer
+
+Steuernummer & Finanzamt (Vergi No & Vergi Dairesi)
+
+Telefonnummer & E-Mail
+
+ggf. Geschäftsführer / Yönetici
+
+👉 Fehlt etwas → Abmahnung oder Bußgeld möglich
+
+2. Datenschutz nach KVKK (sehr wichtig!)
+
+Die Türkei hat ein eigenes Datenschutzgesetz:
+KVKK – Kişisel Verilerin Korunması Kanunu (vergleichbar mit DSGVO)
+
+Pflichtdokumente:
+
+KVKK Aydınlatma Metni (Datenschutzerklärung)
+
+Gizlilik Politikası (Privacy Policy)
+
+Çerez Politikası (Cookie-Richtlinie)
+
+Cookie-Banner mit Zustimmung (aktiv, nicht nur Hinweis!)
+
+Besonders wichtig:
+
+Datenspeicherung in der Türkei oder rechtlich abgesichert
+
+Klare Info, welche Daten, warum, wie lange
+
+Kontakt für Datenschutzanfragen
+
+3. Bei Dienstleistungen / Bau / Beratung
+
+Wenn ihr Bau-, Sanierungs- oder Beratungsleistungen anbietet:
+
+Pflichtangaben:
+
+Leistungsbeschreibung
+
+Preisstruktur oder Angebotsverfahren
+
+Haftungsausschlüsse
+
+Vertragsbedingungen (Şartlar ve Koşullar)
+
+Empfohlen:
+
+Referenzen
+
+Projektbilder
+
+Gewerbezulassungen (falls vorhanden)
+
+4. E-Commerce / Anfragen / Online-Verträge
+
+Wenn Anfragen, Angebote oder Online-Verträge möglich sind:
+
+Zwingend erforderlich:
+
+Mesafeli Satış Sözleşmesi (Fernabsatzvertrag)
+
+Ön Bilgilendirme Formu (Vorab-Info)
+
+İade & Cayma Hakkı (Widerrufsrecht – meist 14 Tage)
+
+Klare Zahlungs- & Lieferbedingungen
+
+5. Sprache & Darstellung (oft unterschätzt!)
+
+Türkisch ist Pflichtsprache
+Englisch oder Deutsch → nur zusätzlich
+
+Rechtstexte immer auf Türkisch
+
+Preise in TRY (₺) anzeigen
+
+Seriöses, sachliches Design (Vertrauen ist extrem wichtig)
+
+6. Technische & rechtliche Basics
+
+SSL-Zertifikat (HTTPS) → Pflicht
+
+E-Mails mit Abmeldefunktion
+
+WhatsApp-Kontakt erlaubt, aber mit Datenschutzhinweis
+
+Social-Media-Verlinkungen → Datenschutz erwähnen
+
+7. Typische Fehler (unbedingt vermeiden ❌)
+
+Deutsche DSGVO-Texte 1:1 übersetzen
+
+Kein Cookie-Banner
+
+Nur WhatsApp, keine offizielle E-Mail
+
+Keine Firmenadresse
+
+Website nur auf Englisch
