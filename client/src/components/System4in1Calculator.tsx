@@ -751,24 +751,42 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
   const investmentTL = Math.round(investmentEUR * EUR_TO_TL_RATE);
   const systemPowerKW = selectedSystem.powerKW;
 
-  // Savings calculations based on system power
-  const powerMultiplier = systemPowerKW / 12; // Normalize to medium system
-  const electricitySavingsRate = Math.min(0.90, 0.75 + (powerMultiplier * 0.10));
-  const heatingSavingsRate = Math.min(0.85, 0.70 + (powerMultiplier * 0.10));
-  const hotWaterSavingsRate = 0.95;
-  const coolingSavingsRate = Math.min(0.85, 0.70 + (powerMultiplier * 0.10));
-
-  const electricitySavings = Math.round(data.monthlyElectricity * electricitySavingsRate);
-  const heatingSavings = Math.round(data.monthlyHeating * heatingSavingsRate);
-  const hotWaterSavings = Math.round(data.monthlyHotWater * hotWaterSavingsRate);
-  const coolingSavings = Math.round(data.monthlyCooling * coolingSavingsRate);
+  // Savings calculations - Antalya: 10 Monate Sonne = 10 Monate kostenloser Strom
+  const sunnyMonths = 10; // Antalya hat 10 Monate starke Sonneneinstrahlung
+  const yearMonths = 12;
+  
+  // PV-Strom: 10 Monate komplett kostenlos, 2 Monate reduziert (50%)
+  const electricitySavingsYearly = Math.round(
+    (data.monthlyElectricity * sunnyMonths) + // 10 Monate 100% kostenlos
+    (data.monthlyElectricity * 0.5 * (yearMonths - sunnyMonths)) // 2 Monate 50%
+  );
+  const electricitySavings = Math.round(electricitySavingsYearly / 12);
+  
+  // Wärmepumpe läuft mit kostenlosem Solarstrom
+  const heatingSavingsYearly = Math.round(
+    (data.monthlyHeating * sunnyMonths * 0.90) + // 10 Monate 90% (Wärmepumpe mit Solarstrom)
+    (data.monthlyHeating * (yearMonths - sunnyMonths) * 0.70) // 2 Monate 70%
+  );
+  const heatingSavings = Math.round(heatingSavingsYearly / 12);
+  
+  // Warmwasser: Solar-Thermie 10 Monate kostenlos
+  const hotWaterSavingsYearly = Math.round(
+    (data.monthlyHotWater * sunnyMonths) + // 10 Monate 100% kostenlos
+    (data.monthlyHotWater * 0.6 * (yearMonths - sunnyMonths)) // 2 Monate 60%
+  );
+  const hotWaterSavings = Math.round(hotWaterSavingsYearly / 12);
+  
+  // Kühlung: Wärmepumpe mit kostenlosem Solarstrom (hauptsächlich im Sommer)
+  const coolingSavingsYearly = Math.round(data.monthlyCooling * sunnyMonths * 0.95); // Kühlung nur in sonnigen Monaten
+  const coolingSavings = Math.round(coolingSavingsYearly / 12);
+  
   const totalMonthlySavings = electricitySavings + heatingSavings + hotWaterSavings + coolingSavings;
-  const totalYearlySavings = totalMonthlySavings * 12;
+  const totalYearlySavings = electricitySavingsYearly + heatingSavingsYearly + hotWaterSavingsYearly + coolingSavingsYearly;
 
-  // ROI calculations
-  const paybackMonths = totalMonthlySavings > 0 ? Math.round(investmentTL / totalMonthlySavings) : 0;
-  const paybackYears = Math.floor(paybackMonths / 12);
-  const paybackRemainingMonths = paybackMonths % 12;
+  // ROI calculations - basierend auf jährlichen Ersparnissen
+  const paybackYearsExact = totalYearlySavings > 0 ? investmentTL / totalYearlySavings : 0;
+  const paybackYears = Math.floor(paybackYearsExact);
+  const paybackRemainingMonths = Math.round((paybackYearsExact - paybackYears) * 12);
   const tenYearSavings = totalYearlySavings * 10 - investmentTL;
   const twentyFiveYearSavings = totalYearlySavings * 25 - investmentTL;
 
