@@ -41,10 +41,10 @@ export default function ChatBot() {
                 </div>
                 <div className="bg-card rounded-xl rounded-tl-none p-3 shadow-sm max-w-[85%]">
                   <p className="text-sm text-foreground">
-                    Merhaba! Ben 089 Bayern enerji danışmanınızım. Size nasıl yardımcı olabilirim?
+                    Hallo! Ich bin Ihr 089 Bayern Energieberater. Wie kann ich Ihnen helfen?
                   </p>
                   <p className="text-xs text-muted-foreground mt-2">
-                    Güneş paneli, ısı pompası veya enerji tasarrufu hakkında sorularınızı yanıtlayabilirim.
+                    Ich kann Ihre Fragen zu Solarpanelen, Wärmepumpen oder Energieeinsparungen beantworten.
                   </p>
                 </div>
               </div>
@@ -62,7 +62,7 @@ export default function ChatBot() {
               <Input
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Mesajınızı yazın..."
+                placeholder="Ihre Nachricht..."
                 className="flex-1"
                 data-testid="input-chat-message"
               />
@@ -81,8 +81,8 @@ export default function ChatBot() {
       
       <div className="flex items-end gap-1.5">
         <div className="bg-card/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-border/50 text-right w-72">
-          <p className="text-sm font-semibold text-foreground">089Bayern Yapay Zeka Asistanı</p>
-          <p className="text-xs text-muted-foreground mt-1">Danışmanlık, ipuçları ve 7/24 randevu alma</p>
+          <p className="text-sm font-semibold text-foreground">089Bayern KI-Assistent</p>
+          <p className="text-xs text-muted-foreground mt-1">Beratung, Tipps und 24/7 Terminvereinbarung</p>
         </div>
         <Button
           onClick={() => setIsOpen(!isOpen)}

@@ -24,15 +24,15 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
         <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-4">
           <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-4 py-2 border border-white/10">
             <Award className="w-4 h-4 text-amber-400" />
-            <span className="text-white text-sm font-medium">Alman Mühendisliği</span>
+            <span className="text-white text-sm font-medium">Deutsche Ingenieurskunst</span>
           </div>
           <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-4 py-2 border border-white/10">
             <Shield className="w-4 h-4 text-emerald-400" />
-            <span className="text-white text-sm font-medium">10+ Yıl Garanti</span>
+            <span className="text-white text-sm font-medium">10+ Jahre Garantie</span>
           </div>
           <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-4 py-2 border border-white/10">
             <MapPin className="w-4 h-4 text-sky-400" />
-            <span className="text-white text-sm font-medium">Akdeniz'e Özel</span>
+            <span className="text-white text-sm font-medium">Speziell für die Mittelmeerregion</span>
           </div>
         </div>
 
@@ -40,30 +40,30 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
           className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 leading-tight tracking-tight"
           style={{ textShadow: '0 4px 20px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.4)' }}
         >
-          Antalya ve Akdeniz'de
+          Antalya und Mittelmeer
           <br />
           <span className="bg-gradient-to-r from-amber-400 to-accent bg-clip-text text-transparent drop-shadow-lg">
-            Güneş Enerjisi
+            Solarenergie
           </span>
           <br />
-          ve Isı Pompası
+          und Wärmepumpen
         </h1>
 
         <p 
           className="text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto leading-relaxed font-medium"
           style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}
         >
-          Alman mühendisliği ile <span className="text-amber-300 font-bold">4'ü 1 Arada Akıllı Enerji Sistemi</span>: 
-          Güneş paneli, ısı pompası, akıllı klima ve enerji depolama. Muğla, İzmir, Aydın ve Mersin'de hizmet.
+          Mit deutscher Ingenieurskunst: <span className="text-amber-300 font-bold">4-in-1 Smart Energy System</span>: 
+          Solarpanele, Wärmepumpe, Smart-Klima und Energiespeicher. Service in Mugla, Izmir, Aydin und Mersin.
         </p>
 
         <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-2xl p-6 mb-5 max-w-xl mx-auto border border-white/10">
           <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-amber-400 to-accent bg-clip-text text-transparent mb-2">
-            %70'e Kadar
+            Bis zu 70%
           </div>
-          <div className="text-xl text-white font-medium mb-2">Enerji Tasarrufu</div>
+          <div className="text-xl text-white font-medium mb-2">Energieeinsparung</div>
           <p className="text-white/60 text-sm">
-            Akdeniz güneşiyle yılda binlerce TL kazanın
+            Mit der Mittelmeersonne Tausende TL pro Jahr sparen
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
             className="text-lg px-10 py-7 bg-gradient-to-r from-accent to-orange-600 border-0 shadow-xl shadow-accent/30 group"
             data-testid="button-hero-cta"
           >
-            Ücretsiz Hesaplama Yap
+            Kostenlose Berechnung
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
           <Button
@@ -84,15 +84,15 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
             className="text-lg px-10 py-7 bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10"
             data-testid="button-hero-learn-more"
           >
-            Sistemi Keşfet
+            System entdecken
           </Button>
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
           {[
-            "Vaillant & Samsung Ürünleri",
-            "Profesyonel Kurulum",
-            "Ücretsiz Keşif",
+            "Vaillant & Samsung Produkte",
+            "Professionelle Installation",
+            "Kostenlose Besichtigung",
           ].map((item) => (
             <div key={item} className="flex items-center gap-2 text-white/80">
               <Check className="w-5 h-5 text-emerald-400" />
@@ -102,8 +102,8 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
         </div>
 
         <div className="mt-6 pt-4 border-t border-white/10">
-          <p className="text-white/50 text-sm mb-2">Antalya, Muğla, İzmir, Aydın ve Mersin'de Güvenilen Çözüm Ortağı</p>
-          <p className="text-white text-xl font-semibold">500+ Villa ve Konutda Başarılı Güneş Enerjisi Kurulumu</p>
+          <p className="text-white/50 text-sm mb-2">Ihr vertrauenswürdiger Partner in Antalya, Mugla, Izmir, Aydin und Mersin</p>
+          <p className="text-white text-xl font-semibold">500+ erfolgreiche Solarinstallationen in Villen und Wohnhäusern</p>
         </div>
       </div>
 

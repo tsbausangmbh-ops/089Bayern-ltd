@@ -13,34 +13,34 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-bold text-xl text-white">Bayern</span>
-                <span className="block text-xs text-white/60">Enerji Sistemleri</span>
+                <span className="block text-xs text-white/60">Energiesysteme</span>
               </div>
             </div>
             <p className="text-white/70 text-sm mb-6 leading-relaxed">
-              Antalya, Muğla, İzmir, Aydın ve Mersin'de güneş enerjisi, ısı pompası ve 
-              enerji depolama sistemleri kurulumu. Alman mühendisliği, Türk hizmet anlayışı. 
-              Vaillant, Samsung ve BYD yetkili bayisi.
+              Installation von Solarenergie-, Wärmepumpen- und Energiespeichersystemen in 
+              Antalya, Mugla, Izmir, Aydin und Mersin. Deutsche Ingenieurskunst, türkischer Service. 
+              Autorisierter Händler von Vaillant, Samsung und BYD.
             </p>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 text-xs text-white/60">
                 <Award className="w-4 h-4" />
-                <span>Alman Kalitesi</span>
+                <span>Deutsche Qualität</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-white/60">
                 <Shield className="w-4 h-4" />
-                <span>10 Yıl Garanti</span>
+                <span>10 Jahre Garantie</span>
               </div>
             </div>
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-6">Hızlı Bağlantılar</h4>
+            <h4 className="font-semibold text-white mb-6">Schnelllinks</h4>
             <ul className="space-y-3 text-sm">
               {[
-                { label: "4'ü 1 Arada Sistem", href: "#features" },
-                { label: "Avantajlar", href: "#benefits" },
-                { label: "Tasarruf Hesapla", href: "#calculator" },
-                { label: "Ekibimiz", href: "#team" },
+                { label: "4-in-1 System", href: "#features" },
+                { label: "Vorteile", href: "#benefits" },
+                { label: "Ersparnis berechnen", href: "#calculator" },
+                { label: "Unser Team", href: "#team" },
               ].map((link) => (
                 <li key={link.href}>
                   <a
@@ -56,13 +56,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-6">Enerji Sistemlerimiz</h4>
+            <h4 className="font-semibold text-white mb-6">Unsere Energiesysteme</h4>
             <ul className="space-y-3 text-sm">
               {[
-                { name: "Vaillant Isı Pompası", desc: "Alman kalitesi ısıtma" },
-                { name: "Güneş Enerjisi Paneli", desc: "Premium solar kurulum" },
-                { name: "Samsung Klima Sistemi", desc: "Inverter teknoloji" },
-                { name: "BYD Enerji Bataryası", desc: "Lityum depolama" },
+                { name: "Vaillant Wärmepumpe", desc: "Deutsche Qualitätsheizung" },
+                { name: "Solarenergie-Panel", desc: "Premium Solar-Installation" },
+                { name: "Samsung Klimasystem", desc: "Inverter-Technologie" },
+                { name: "BYD Energiebatterie", desc: "Lithium-Speicher" },
               ].map((product) => (
                 <li key={product.name} className="text-white/60">
                   <span className="text-white">{product.name}</span>
@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-6">İletişim</h4>
+            <h4 className="font-semibold text-white mb-6">Kontakt</h4>
             <ul className="space-y-4 text-sm">
               <li>
                 <a
@@ -84,7 +84,7 @@ export default function Footer() {
                   <Phone className="w-5 h-5" />
                   <div>
                     <span className="block text-white font-medium">+90 507 192 2036</span>
-                    <span className="text-xs text-white/60">Türkiye Hattı</span>
+                    <span className="text-xs text-white/60">Türkei-Leitung</span>
                   </div>
                 </a>
               </li>
@@ -99,7 +99,7 @@ export default function Footer() {
                   <SiWhatsapp className="w-5 h-5 text-green-400" />
                   <div>
                     <span className="block text-white font-medium">WhatsApp</span>
-                    <span className="text-xs text-white/60">Hızlı İletişim</span>
+                    <span className="text-xs text-white/60">Schnelle Kommunikation</span>
                   </div>
                 </a>
               </li>
@@ -112,15 +112,15 @@ export default function Footer() {
                   <Mail className="w-5 h-5" />
                   <div>
                     <span className="block text-white font-medium">info@089bayern.tr</span>
-                    <span className="text-xs text-white/60">E-posta</span>
+                    <span className="text-xs text-white/60">E-Mail</span>
                   </div>
                 </a>
               </li>
               <li className="flex items-start gap-3 text-white/70">
                 <MapPin className="w-5 h-5 mt-0.5" />
                 <div>
-                  <span className="block text-white font-medium">Antalya Ofis</span>
-                  <span className="text-xs text-white/60">Akdeniz Bölge Merkezi</span>
+                  <span className="block text-white font-medium">Antalya Büro</span>
+                  <span className="text-xs text-white/60">Mittelmeer-Regionszentrale</span>
                 </div>
               </li>
             </ul>
@@ -129,16 +129,16 @@ export default function Footer() {
 
         <div className="mt-4 pt-3 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
-            <p>&copy; {new Date().getFullYear()} 089 Bayern Enerji Sistemleri. Tüm hakları saklıdır.</p>
+            <p>&copy; {new Date().getFullYear()} 089 Bayern Energiesysteme. Alle Rechte vorbehalten.</p>
             <div className="flex flex-wrap items-center justify-center gap-6">
               <a href="#" className="hover:text-white transition-colors" data-testid="link-kvkk">
-                KVKK Aydınlatma Metni
+                Datenschutzerklärung
               </a>
               <a href="#" className="hover:text-white transition-colors" data-testid="link-privacy">
-                Gizlilik Politikası
+                Datenschutzrichtlinie
               </a>
               <a href="#" className="hover:text-white transition-colors" data-testid="link-terms">
-                Kullanım Koşulları
+                Nutzungsbedingungen
               </a>
             </div>
           </div>

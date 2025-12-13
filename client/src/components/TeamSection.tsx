@@ -7,9 +7,9 @@ import { SiWhatsapp } from "react-icons/si";
 const teamMembers = [
   {
     name: "Dalibor Bakmaz",
-    role: "CEO / Genel Müdür",
-    description: "Alman enerji sistemleri konusunda 15+ yıl deneyim. Türkiye pazarının kurucusu.",
-    languages: ["Almanca"],
+    role: "CEO / Geschäftsführer",
+    description: "15+ Jahre Erfahrung mit deutschen Energiesystemen. Gründer des Türkei-Marktes.",
+    languages: ["Deutsch"],
     email: "dbakmaz@089bayern.tr",
     phones: ["+90 507 192 2036", "+49 155 68855141"],
     whatsapp: "+905071922036",
@@ -19,9 +19,9 @@ const teamMembers = [
   },
   {
     name: "Mustafa Sakar",
-    role: "CEO / Kurucu Ortak",
-    description: "Türkiye-Almanya iş köprüsü. Yenilenebilir enerji ve gayrimenkul yatırımları uzmanı.",
-    languages: ["Almanca", "Türkçe"],
+    role: "CEO / Mitgründer",
+    description: "Brückenbauer zwischen Türkei und Deutschland. Experte für erneuerbare Energien und Immobilieninvestitionen.",
+    languages: ["Deutsch", "Türkisch"],
     email: "msakar@089bayern.tr",
     phones: ["+90 507 183 2036", "+49 173 5994699"],
     whatsapp: "+905071832036",
@@ -31,9 +31,9 @@ const teamMembers = [
   },
   {
     name: "Ahmet Imrol",
-    role: "Türkiye Bölge Müdürü",
-    description: "Akdeniz bölgesi kurulum ve satış sonrası destek koordinatörü. Yerinde hizmet garantisi.",
-    languages: ["Almanca", "Türkçe"],
+    role: "Türkei Regionaldirektor",
+    description: "Koordinator für Installation und After-Sales-Support in der Mittelmeerregion. Vor-Ort-Service-Garantie.",
+    languages: ["Deutsch", "Türkisch"],
     email: "info@089bayern.tr",
     phones: ["+90 (242) 5131352"],
     whatsapp: "+902425131352",
@@ -50,18 +50,18 @@ export default function TeamSection() {
         <div className="text-center mb-5">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 mb-4">
             <MessageCircle className="w-4 h-4 text-amber-400" />
-            <span className="text-sm font-medium text-foreground">Uzman Ekip</span>
+            <span className="text-sm font-medium text-foreground">Experten-Team</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            Antalya Güneş Enerjisi{" "}
+            Unser Solarenergie{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-              Uzman Ekibimiz
+              Experten-Team in Antalya
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Almanya Münih ve Türkiye Antalya ofislerimizde konuşlanan deneyimli mühendis ve 
-            satış ekibimiz, güneş enerjisi ve ısı pompası projenizin her aşamasında yanınızda. 
-            Türkçe ve Almanca 7/24 destek.
+            Unser erfahrenes Ingenieur- und Vertriebsteam in unseren Büros in München (Deutschland) und Antalya (Türkei) 
+            begleitet Sie in jeder Phase Ihres Solarenergie- und Wärmepumpenprojekts. 
+            24/7 Support auf Türkisch und Deutsch.
           </p>
         </div>
 
@@ -118,7 +118,7 @@ export default function TeamSection() {
                     data-testid={`button-call-${index}`}
                   >
                     <Phone className="w-4 h-4 mr-2" />
-                    Ara
+                    Anrufen
                   </Button>
                   <Button
                     className="w-full bg-green-600 hover:bg-green-700"
@@ -137,19 +137,19 @@ export default function TeamSection() {
         <div className="mt-5 text-center">
           <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-white/10 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Antalya'da{" "}
               <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-                Ücretsiz Keşif ve Danışmanlık
+                Kostenlose Besichtigung und Beratung
               </span>
+              {" "}in Antalya
             </h3>
             <p className="text-muted-foreground mb-6">
-              Villanız veya konutunuz için güneş enerjisi potansiyelini yerinde değerlendirelim. 
-              Antalya, Muğla, İzmir, Aydın ve Mersin'de ücretsiz keşif hizmeti. Satış baskısı yok.
+              Lassen Sie uns das Solarpotenzial Ihrer Villa oder Ihres Hauses vor Ort bewerten. 
+              Kostenloser Besichtigungsservice in Antalya, Mugla, Izmir, Aydin und Mersin. Kein Verkaufsdruck.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" className="px-8 bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg shadow-accent/30">
                 <Phone className="w-4 h-4 mr-2" />
-                Hemen Ara: +90 507 192 2036
+                Jetzt anrufen: +90 507 192 2036
               </Button>
             </div>
           </div>

@@ -51,37 +51,37 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData }: Lea
               <Check className="w-10 h-10 text-green-500" />
             </div>
             <DialogTitle className="text-2xl font-bold text-foreground mb-4">
-              Talebiniz Başarıyla Alındı!
+              Ihre Anfrage wurde erfolgreich übermittelt!
             </DialogTitle>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Enerji danışmanlarımız en kısa sürede sizinle iletişime geçecektir.
+              Unsere Energieberater werden sich schnellstmöglich mit Ihnen in Verbindung setzen.
               <br />
-              <strong className="text-foreground">Genellikle 2 saat içinde dönüş yapıyoruz.</strong>
+              <strong className="text-foreground">In der Regel antworten wir innerhalb von 2 Stunden.</strong>
             </p>
 
             <div className="bg-muted/50 rounded-xl p-6 mb-8 text-left">
               <h4 className="font-semibold text-foreground mb-4 flex items-center gap-2">
                 <Clock className="w-5 h-5" />
-                Sonraki Adımlar
+                Nächste Schritte
               </h4>
               <ol className="space-y-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center">1</span>
-                  <span>Uzmanımız sizi arayarak ihtiyaçlarınızı dinleyecek</span>
+                  <span>Unser Experte wird Sie anrufen und Ihre Bedürfnisse besprechen</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center">2</span>
-                  <span>Ücretsiz keşif için randevu planlanacak</span>
+                  <span>Ein kostenloser Besichtigungstermin wird geplant</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center">3</span>
-                  <span>Size özel teklif ve finansman seçenekleri sunulacak</span>
+                  <span>Sie erhalten ein individuelles Angebot und Finanzierungsoptionen</span>
                 </li>
               </ol>
             </div>
 
             <div className="space-y-3">
-              <p className="text-sm text-muted-foreground">Acil iletişim için:</p>
+              <p className="text-sm text-muted-foreground">Für dringende Anfragen:</p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
                   href="tel:+905071922036"
@@ -103,7 +103,7 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData }: Lea
             </div>
 
             <Button onClick={handleClose} className="mt-8" data-testid="button-close-thank-you">
-              Tamam
+              OK
             </Button>
           </div>
         </DialogContent>
@@ -117,24 +117,24 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData }: Lea
         <DialogHeader>
           <div className="flex items-center gap-2 text-primary mb-2">
             <Calendar className="w-5 h-5" />
-            <span className="text-sm font-medium">Ücretsiz Danışmanlık</span>
+            <span className="text-sm font-medium">Kostenlose Beratung</span>
           </div>
           <DialogTitle className="text-2xl font-bold">
-            Ücretsiz Keşif Randevusu Alın
+            Kostenlosen Besichtigungstermin vereinbaren
           </DialogTitle>
           <p className="text-muted-foreground text-sm mt-2">
-            Bilgilerinizi bırakın, enerji uzmanlarımız sizi arasın. Satış baskısı yok!
+            Hinterlassen Sie Ihre Daten, unsere Energieexperten rufen Sie an. Kein Verkaufsdruck!
           </p>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-5 mt-6">
           <div>
-            <Label htmlFor="name" className="text-sm font-medium">Ad Soyad *</Label>
+            <Label htmlFor="name" className="text-sm font-medium">Vor- und Nachname *</Label>
             <Input
               id="name"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              placeholder="Adınız Soyadınız"
+              placeholder="Ihr vollständiger Name"
               required
               className="mt-2 h-12"
               data-testid="input-name"
@@ -142,13 +142,13 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData }: Lea
           </div>
 
           <div>
-            <Label htmlFor="phone" className="text-sm font-medium">Telefon Numarası *</Label>
+            <Label htmlFor="phone" className="text-sm font-medium">Telefonnummer *</Label>
             <Input
               id="phone"
               type="tel"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              placeholder="0 5XX XXX XX XX"
+              placeholder="+90 5XX XXX XX XX"
               required
               className="mt-2 h-12"
               data-testid="input-phone"
@@ -156,37 +156,37 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData }: Lea
           </div>
 
           <div>
-            <Label htmlFor="email" className="text-sm font-medium">E-posta (Opsiyonel)</Label>
+            <Label htmlFor="email" className="text-sm font-medium">E-Mail (Optional)</Label>
             <Input
               id="email"
               type="email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              placeholder="ornek@email.com"
+              placeholder="beispiel@email.com"
               className="mt-2 h-12"
               data-testid="input-email"
             />
           </div>
 
           <div>
-            <Label htmlFor="location" className="text-sm font-medium">Mülk Konumu</Label>
+            <Label htmlFor="location" className="text-sm font-medium">Standort der Immobilie</Label>
             <Input
               id="location"
               value={formData.location}
               onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-              placeholder="Örn: Antalya, Konyaaltı"
+              placeholder="z.B. Antalya, Konyaalti"
               className="mt-2 h-12"
               data-testid="input-location"
             />
           </div>
 
           <div>
-            <Label htmlFor="message" className="text-sm font-medium">Mesajınız (Opsiyonel)</Label>
+            <Label htmlFor="message" className="text-sm font-medium">Ihre Nachricht (Optional)</Label>
             <Textarea
               id="message"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              placeholder="Projeniz hakkında kısaca bilgi verebilirsiniz..."
+              placeholder="Sie können uns kurz über Ihr Projekt informieren..."
               className="mt-2 resize-none"
               rows={3}
               data-testid="input-message"
@@ -202,7 +202,7 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData }: Lea
               data-testid="checkbox-consent"
             />
             <Label htmlFor="consent" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
-              KVKK kapsamında kişisel verilerimin işlenmesini ve tarafımla iletişime geçilmesini kabul ediyorum.
+              Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der Datenschutzerklärung zu und akzeptiere, kontaktiert zu werden.
             </Label>
           </div>
 
@@ -213,12 +213,12 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData }: Lea
             disabled={!formData.name || !formData.phone || !formData.consent}
             data-testid="button-submit-lead"
           >
-            Ücretsiz Randevu Talep Et
+            Kostenlosen Termin anfragen
           </Button>
 
           <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
             <Shield className="w-4 h-4" />
-            <span>Bilgileriniz SSL ile korunur. Spam göndermiyoruz.</span>
+            <span>Ihre Daten werden SSL-verschlüsselt. Wir senden keinen Spam.</span>
           </div>
         </form>
       </DialogContent>

@@ -43,16 +43,16 @@ export default function Header({ onCtaClick }: HeaderProps) {
             </div>
             <div>
               <span className={`font-bold text-lg transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}>089 Bayern</span>
-              <span className={`hidden md:block text-xs transition-colors ${isScrolled ? "text-muted-foreground" : "text-white/60"}`}>Enerji Sistemleri</span>
+              <span className={`hidden md:block text-xs transition-colors ${isScrolled ? "text-muted-foreground" : "text-white/60"}`}>Energiesysteme</span>
             </div>
           </div>
 
           <nav className="hidden md:flex items-center gap-1">
             {[
-              { label: "Sistem", id: "features" },
-              { label: "Avantajlar", id: "benefits" },
-              { label: "Hesaplama", id: "calculator" },
-              { label: "Ekip", id: "team" },
+              { label: "System", id: "features" },
+              { label: "Vorteile", id: "benefits" },
+              { label: "Rechner", id: "calculator" },
+              { label: "Team", id: "team" },
             ].map((item) => (
               <button
                 key={item.id}
@@ -73,7 +73,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
               className="hidden md:flex bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg shadow-accent/20"
               data-testid="button-header-cta"
             >
-              Ücretsiz Teklif Al
+              Kostenloses Angebot
             </Button>
 
             <Button
@@ -93,10 +93,10 @@ export default function Header({ onCtaClick }: HeaderProps) {
         <div className="md:hidden bg-background/98 backdrop-blur-md border-b border-border">
           <nav className="flex flex-col p-4 gap-1">
             {[
-              { label: "Sistem", id: "features" },
-              { label: "Avantajlar", id: "benefits" },
-              { label: "Hesaplama", id: "calculator" },
-              { label: "Ekip", id: "team" },
+              { label: "System", id: "features" },
+              { label: "Vorteile", id: "benefits" },
+              { label: "Rechner", id: "calculator" },
+              { label: "Team", id: "team" },
             ].map((item) => (
               <button
                 key={item.id}
@@ -112,7 +112,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
               className="mt-3 bg-gradient-to-r from-accent to-orange-600 border-0" 
               data-testid="button-mobile-cta"
             >
-              Ücretsiz Teklif Al
+              Kostenloses Angebot
             </Button>
           </nav>
         </div>

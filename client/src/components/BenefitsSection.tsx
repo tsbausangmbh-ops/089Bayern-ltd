@@ -4,34 +4,34 @@ import { Card, CardContent } from "@/components/ui/card";
 const mainBenefits = [
   {
     icon: TrendingDown,
-    title: "Antalya'da %70 Enerji Tasarrufu",
-    description: "Akdeniz'in yoğun güneş ışığı sayesinde elektrik ve doğalgaz faturalarınızda %70'e varan tasarruf sağlayın. Güneş panelleri ile kendi elektriğinizi üretin, fazlasını TEDAŞ'a satarak ek gelir elde edin.",
-    stat: "%70",
-    statLabel: "Tasarruf",
+    title: "70% Energieeinsparung in Antalya",
+    description: "Sparen Sie dank der intensiven Sonneneinstrahlung am Mittelmeer bis zu 70% bei Ihren Strom- und Gasrechnungen. Erzeugen Sie mit Solarpanelen Ihren eigenen Strom und verkaufen Sie den Überschuss an TEDAS für zusätzliches Einkommen.",
+    stat: "70%",
+    statLabel: "Ersparnis",
     gradient: "from-emerald-500 to-green-600",
   },
   {
     icon: Shield,
-    title: "Elektrik Kesintilerinden Bağımsız Yaşam",
-    description: "Enerji depolama bataryaları ile şebeke kesintilerinden ve enerji fiyat artışlarından etkilenmeyin. Antalya ve Akdeniz villalarında 7/24 kesintisiz güç kaynağı.",
-    stat: "7/24",
-    statLabel: "Kesintisiz",
+    title: "Unabhängig von Stromausfällen",
+    description: "Mit Energiespeicherbatterien sind Sie unabhängig von Netzausfällen und Energiepreiserhöhungen. 24/7 unterbrechungsfreie Stromversorgung für Villen in Antalya und am Mittelmeer.",
+    stat: "24/7",
+    statLabel: "Unterbrechungsfrei",
     gradient: "from-sky-500 to-blue-600",
   },
   {
     icon: Home,
-    title: "Villa ve Konut Değerinde Artış",
-    description: "Güneş enerjisi ve ısı pompası kurulu evler, Antalya emlak piyasasında %15-25 daha yüksek fiyatla satılıyor. Enerji sertifikalı mülk ile yatırımınız değer kazanır.",
-    stat: "+%20",
-    statLabel: "Değer Artışı",
+    title: "Wertsteigerung Ihrer Immobilie",
+    description: "Häuser mit Solarenergie und Wärmepumpe werden auf dem Antalya-Immobilienmarkt 15-25% teurer verkauft. Ihre Investition gewinnt mit energiezertifizierter Immobilie an Wert.",
+    stat: "+20%",
+    statLabel: "Wertsteigerung",
     gradient: "from-amber-500 to-orange-600",
   },
   {
     icon: Leaf,
-    title: "Karbon Ayak İzini Sıfırlayın",
-    description: "Sıfır emisyon enerji sistemi ile çocuklarınıza temiz bir Akdeniz bırakın. Yılda ortalama 15-20 ton CO₂ tasarrufu - 1000 ağaç dikmek kadar çevreye fayda.",
+    title: "Reduzieren Sie Ihren CO2-Fußabdruck",
+    description: "Hinterlassen Sie Ihren Kindern mit einem emissionsfreien Energiesystem ein sauberes Mittelmeer. Durchschnittlich 15-20 Tonnen CO2-Einsparung pro Jahr - so viel Nutzen für die Umwelt wie 1000 gepflanzte Bäume.",
     stat: "0",
-    statLabel: "CO₂ Salınımı",
+    statLabel: "CO2-Emission",
     gradient: "from-teal-500 to-emerald-600",
   },
 ];
@@ -39,18 +39,18 @@ const mainBenefits = [
 const additionalBenefits = [
   {
     icon: Wallet,
-    title: "Hızlı Yatırım Geri Dönüşü",
-    description: "Akdeniz'in yoğun güneşi sayesinde 3-5 yılda yatırımınızı geri alın, sonrası tamamen kazanç.",
+    title: "Schneller ROI",
+    description: "Amortisieren Sie Ihre Investition in 3-5 Jahren dank der intensiven Mittelmeersonne, danach ist alles Gewinn.",
   },
   {
     icon: Users,
-    title: "Tek Muhatap, Sıfır Karmaşa",
-    description: "Kurulum, bakım, garanti - her şey tek elden. Farklı firmalarla uğraşmaya son.",
+    title: "Ein Ansprechpartner, null Komplikationen",
+    description: "Installation, Wartung, Garantie - alles aus einer Hand. Schluss mit verschiedenen Firmen.",
   },
   {
     icon: Zap,
-    title: "Akıllı Enerji Yönetimi",
-    description: "Mobil uygulama ile evinizin enerji tüketimini gerçek zamanlı takip edin ve optimize edin.",
+    title: "Smartes Energiemanagement",
+    description: "Überwachen und optimieren Sie den Energieverbrauch Ihres Hauses in Echtzeit über die mobile App.",
   },
 ];
 
@@ -64,17 +64,17 @@ export default function BenefitsSection() {
         <div className="text-center mb-5">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 mb-3">
             <Award className="w-4 h-4 text-amber-400" />
-            <span className="text-sm font-medium text-foreground">Neden 089 Bayern?</span>
+            <span className="text-sm font-medium text-foreground">Warum 089 Bayern?</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-            Akdeniz'de Güneş Enerjisi{" "}
+            Vorteile einer Solarenergie-Investition{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-              Yatırımının Avantajları
+              am Mittelmeer
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Antalya, Muğla ve İzmir'de yaşayan ailelerin enerji ihtiyaçlarını anlıyoruz. Yazın 45°C sıcaklıkta serinlik, 
-            kışın ısınma konforu - <span className="text-foreground font-medium">Alman teknolojisi ile hem de cebinizi yakmadan.</span>
+            Wir verstehen die Energiebedürfnisse von Familien in Antalya, Mugla und Izmir. Kühlung bei 45°C im Sommer, 
+            Heizkomfort im Winter - <span className="text-foreground font-medium">mit deutscher Technologie und ohne Ihr Budget zu belasten.</span>
           </p>
         </div>
 
@@ -126,19 +126,19 @@ export default function BenefitsSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-                Antalya, Muğla ve İzmir'de
+                Unsere Solarenergie-Referenzen in
                 <br />
                 <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-                  Güneş Enerjisi Referanslarımız
+                  Antalya, Mugla und Izmir
                 </span>
               </h3>
               <div className="space-y-4">
                 {[
-                  "Antalya Konyaaltı, Lara, Belek'te 300+ villa kurulumu",
-                  "Muğla Bodrum, Fethiye, Marmaris'te 150+ proje",
-                  "İzmir Çeşme, Alaçatı, Urla'da 50+ konut",
-                  "Kurulum sonrası 7/24 Türkçe teknik destek",
-                  "10 yıl Vaillant garantisi, 25 yıl panel garantisi",
+                  "300+ Villa-Installationen in Antalya Konyaalti, Lara, Belek",
+                  "150+ Projekte in Mugla Bodrum, Fethiye, Marmaris",
+                  "50+ Wohnhäuser in Izmir Cesme, Alacati, Urla",
+                  "24/7 türkischer technischer Support nach der Installation",
+                  "10 Jahre Vaillant-Garantie, 25 Jahre Panel-Garantie",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
@@ -152,10 +152,10 @@ export default function BenefitsSection() {
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { value: "500+", label: "Mutlu Aile", gradient: "from-sky-500 to-blue-600" },
-                { value: "%98", label: "Memnuniyet", gradient: "from-emerald-500 to-green-600" },
-                { value: "10+", label: "Yıl Garanti", gradient: "from-amber-500 to-orange-600" },
-                { value: "24/7", label: "Destek", gradient: "from-violet-500 to-purple-600" },
+                { value: "500+", label: "Zufriedene Familien", gradient: "from-sky-500 to-blue-600" },
+                { value: "98%", label: "Zufriedenheit", gradient: "from-emerald-500 to-green-600" },
+                { value: "10+", label: "Jahre Garantie", gradient: "from-amber-500 to-orange-600" },
+                { value: "24/7", label: "Support", gradient: "from-violet-500 to-purple-600" },
               ].map((stat, index) => (
                 <div key={index} className="bg-background/50 rounded-xl p-6 text-center border border-border/50 hover-elevate">
                   <div className={`text-3xl md:text-4xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent mb-1`}>

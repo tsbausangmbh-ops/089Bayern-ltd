@@ -4,15 +4,15 @@ import { Snowflake, Flame, Sun, Battery, Check, Sparkles } from "lucide-react";
 const features = [
   {
     icon: Snowflake,
-    title: "Akıllı Klima Sistemi",
-    subtitle: "Antalya ve Akdeniz İçin Verimli Soğutma",
-    description: "Akdeniz'in bunaltıcı yaz sıcaklarında evinizi serinleten Samsung ve Vaillant marka, inverter teknolojili, enerji verimli klima sistemleri. Antalya, Muğla ve İzmir'de profesyonel kurulum.",
+    title: "Smart-Klimasystem",
+    subtitle: "Effiziente Kühlung für Antalya und Mittelmeer",
+    description: "Halten Sie Ihr Zuhause in der drückenden Sommerhitze des Mittelmeers kühl mit Samsung und Vaillant Marken-Klimaanlagen mit Inverter-Technologie und Energieeffizienz. Professionelle Installation in Antalya, Mugla und Izmir.",
     benefits: [
-      "A+++ enerji sınıfı - düşük elektrik tüketimi",
-      "Güneş paneli ile entegre çalışır",
-      "WiFi ile akıllı telefon kontrolü",
-      "Homojen serinlik, sağlıklı hava dağılımı",
-      "7/24 teknik destek ve bakım hizmeti",
+      "A+++ Energieklasse - niedriger Stromverbrauch",
+      "Integriert mit Solarpanelen",
+      "WiFi-Steuerung per Smartphone",
+      "Homogene Kühlung, gesunde Luftverteilung",
+      "24/7 technischer Support und Wartung",
     ],
     gradient: "from-sky-500 to-blue-600",
     bgGradient: "from-sky-500/20 to-blue-600/10",
@@ -20,15 +20,15 @@ const features = [
   },
   {
     icon: Flame,
-    title: "Isı Pompası Sistemleri",
-    subtitle: "Vaillant Yetkili Kurulum - Türkiye",
-    description: "Alman Vaillant marka hava kaynaklı ısı pompası ile evinizi %70 daha az enerji harcayarak ısıtın. Antalya kış aylarında bile verimli çalışan, doğalgaza alternatif çevre dostu ısıtma sistemi.",
+    title: "Wärmepumpen-Systeme",
+    subtitle: "Vaillant Autorisierte Installation - Türkei",
+    description: "Heizen Sie Ihr Zuhause mit der deutschen Vaillant Luft-Wärmepumpe und verbrauchen Sie 70% weniger Energie. Umweltfreundliches Heizsystem als Alternative zu Erdgas, das auch in Antalyas Wintermonaten effizient arbeitet.",
     benefits: [
-      "Doğalgaz ve elektrikli ısıtmaya göre %70 tasarruf",
-      "Sıfır karbon emisyonu - çevre dostu",
-      "Yerden ısıtma ve radyatör uyumlu",
-      "10 yıl Vaillant üretici garantisi",
-      "Tek cihazla hem ısıtma hem soğutma",
+      "70% Ersparnis im Vergleich zu Erdgas und Elektroheizung",
+      "Null Kohlenstoffemission - umweltfreundlich",
+      "Kompatibel mit Fußbodenheizung und Heizkörpern",
+      "10 Jahre Vaillant Herstellergarantie",
+      "Heizen und Kühlen mit einem Gerät",
     ],
     gradient: "from-orange-500 to-red-600",
     bgGradient: "from-orange-500/20 to-red-600/10",
@@ -36,15 +36,15 @@ const features = [
   },
   {
     icon: Sun,
-    title: "Güneş Enerjisi Panelleri",
-    subtitle: "Akdeniz'de Yılda 300+ Güneşli Gün",
-    description: "Antalya'nın yıllık 2.900+ saat güneşlenme potansiyelini değerlendirin. Premium güneş panelleri ile kendi elektriğinizi üretin, fazlasını şebekeye satarak gelir elde edin. Muğla, İzmir, Aydın ve Mersin'de kurulum.",
+    title: "Solarenergie-Panele",
+    subtitle: "300+ Sonnentage im Jahr am Mittelmeer",
+    description: "Nutzen Sie Antalyas jährliches 2.900+ Stunden Sonnenpotenzial. Erzeugen Sie mit Premium-Solarpanelen Ihren eigenen Strom und verkaufen Sie den Überschuss an das Netz. Installation in Mugla, Izmir, Aydin und Mersin.",
     benefits: [
-      "Yıllık 15.000-25.000 TL elektrik tasarrufu",
-      "Fazla enerjiyi TEDAŞ'a satın",
-      "3-5 yıl içinde yatırım geri dönüşü",
-      "Ev değerinde %15-25 artış",
-      "25 yıl panel performans garantisi",
+      "15.000-25.000 TL jährliche Stromersparnis",
+      "Verkaufen Sie überschüssige Energie an TEDAS",
+      "Investitionsrückfluss in 3-5 Jahren",
+      "15-25% Wertsteigerung der Immobilie",
+      "25 Jahre Panel-Leistungsgarantie",
     ],
     gradient: "from-amber-500 to-yellow-500",
     bgGradient: "from-amber-500/20 to-yellow-500/10",
@@ -52,15 +52,15 @@ const features = [
   },
   {
     icon: Battery,
-    title: "Enerji Depolama Bataryaları",
-    subtitle: "Samsung SDI ve BYD Lityum Batarya",
-    description: "Gündüz ürettiğiniz güneş enerjisini Samsung SDI veya BYD lityum bataryalarda depolayın. Gece kullanın, elektrik kesintilerinde bağımsız kalın. Antalya ve Akdeniz villalarına özel çözümler.",
+    title: "Energiespeicher-Batterien",
+    subtitle: "Samsung SDI und BYD Lithium-Batterie",
+    description: "Speichern Sie tagsüber erzeugte Solarenergie in Samsung SDI oder BYD Lithium-Batterien. Nutzen Sie sie nachts und bleiben Sie bei Stromausfällen unabhängig. Spezielle Lösungen für Villen in Antalya und am Mittelmeer.",
     benefits: [
-      "Gece bile güneş enerjisi kullanımı",
-      "Elektrik kesintilerinde kesintisiz güç",
-      "Şebeke bağımsız yaşam imkanı",
-      "Akıllı enerji yönetim uygulaması",
-      "Modüler tasarım - ihtiyaca göre kapasite artırma",
+      "Solarenergienutzung auch nachts",
+      "Unterbrechungsfreie Stromversorgung bei Ausfällen",
+      "Netzunabhängiges Leben möglich",
+      "Smart Energy Management App",
+      "Modulares Design - Kapazität nach Bedarf erweiterbar",
     ],
     gradient: "from-emerald-500 to-green-600",
     bgGradient: "from-emerald-500/20 to-green-600/10",
@@ -78,18 +78,18 @@ export default function FeaturesGrid() {
         <div className="text-center mb-5">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 mb-4">
             <Sparkles className="w-4 h-4 text-amber-400" />
-            <span className="text-sm font-medium text-foreground">Komple Enerji Çözümü</span>
+            <span className="text-sm font-medium text-foreground">Komplette Energielösung</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            Antalya'da 4'ü 1 Arada{" "}
+            4-in-1{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-              Enerji Sistemi Kurulumu
+              Energiesystem-Installation in Antalya
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Alman mühendisliği ile tasarlanmış, Türkiye'nin Akdeniz iklimi için özelleştirilmiş 
-            entegre güneş enerjisi ve ısı pompası sistemi. Vaillant, Samsung ve BYD markaları ile 
-            <span className="text-foreground font-medium"> tek yatırımda dört farklı çözüm.</span>
+            Mit deutscher Ingenieurskunst entwickelt, speziell angepasst an das Mittelmeerklima der Türkei - 
+            integriertes Solarenergie- und Wärmepumpensystem. Mit Vaillant, Samsung und BYD Marken: 
+            <span className="text-foreground font-medium"> vier verschiedene Lösungen in einer Investition.</span>
           </p>
         </div>
 
@@ -130,15 +130,15 @@ export default function FeaturesGrid() {
         <div className="mt-5 text-center">
           <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-white/10">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Neden Antalya'da Entegre Enerji Sistemi Tercih Etmelisiniz?
+              Warum sollten Sie in Antalya ein integriertes Energiesystem wählen?
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
-              4'ü 1 arada güneş enerjisi, ısı pompası, klima ve batarya sisteminde tek seferde kurulum, tek muhatap, tek garanti. 
-              Ayrı sistemlere kıyasla <span className="bg-gradient-to-r from-amber-400 to-accent bg-clip-text text-transparent font-semibold">%30 daha az maliyet</span>, 
-              <span className="text-primary font-semibold"> %50 daha kolay yönetim</span>.
+              4-in-1 Solarenergie, Wärmepumpe, Klima und Batteriesystem mit einmaliger Installation, einem Ansprechpartner, einer Garantie. 
+              Im Vergleich zu separaten Systemen <span className="bg-gradient-to-r from-amber-400 to-accent bg-clip-text text-transparent font-semibold">30% weniger Kosten</span>, 
+              <span className="text-primary font-semibold"> 50% einfachere Verwaltung</span>.
             </p>
             <p className="text-sm text-muted-foreground">
-              Antalya, Muğla, İzmir, Aydın ve Mersin'de 500+ başarılı kurulum. Alman kalitesi, Türk hizmet anlayışı.
+              500+ erfolgreiche Installationen in Antalya, Mugla, Izmir, Aydin und Mersin. Deutsche Qualität, türkischer Service.
             </p>
           </div>
         </div>
