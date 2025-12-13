@@ -17,355 +17,373 @@ export default function UeberUns() {
   const content = {
     tr: {
       badge: "Hikayemiz",
-      title: "Bir Hayalden",
-      titleHighlight: "Gerçeğe",
-      subtitle: "Güneşin gücünü insanlara ulaştırma tutkusuyla başlayan yolculuğumuz",
+      title: "Güneş Enerjisi Uzmanları:",
+      titleHighlight: "Akdeniz'in Güvenilir Ortağı",
+      subtitle: "Antalya, Alanya ve tüm Akdeniz bölgesinde güneş paneli, ısı pompası ve enerji sistemleri kurulumu - Alman kalitesi, Türk hizmeti",
       
-      chapter1Title: "Bir Hayal Başladı",
-      chapter1Year: "Münih, Almanya",
-      chapter1Text: `Almanya'nın kalbinde, Münih'te, Dalibor Bakmaz bir gece gökyüzüne baktı ve düşündü: "Türkiye'de neredeyse 10 ay boyunca güneş bedava ışık saçıyor. Bu muhteşem enerji kaynağını insanlara nasıl ulaştırabilirim?"
+      seoH2Timeline: "089 Bayern Enerji - Münih'ten Akdeniz'e Uzanan Yolculuğumuz",
+      
+      chapter1Title: "Münih'te Bir Hayal Başladı",
+      chapter1Year: "Münih, Bayern - Almanya",
+      chapter1Text: `Almanya'nın kalbinde, Münih'te, Dalibor Bakmaz bir gece gökyüzüne baktı ve düşündü: "Türkiye'nin Akdeniz kıyısında neredeyse 10 ay boyunca güneş bedava ışık saçıyor. Bu muhteşem güneş enerjisi kaynağını Antalya ve Alanya'daki ailelere nasıl ulaştırabilirim?"
 
-Bu sadece bir iş fikri değildi. Bu, bir vizyondu. Yıllar boyunca Almanya'nın soğuk kışlarında çalışırken, aklı hep güneşin sıcaklığındaydı.`,
+Bu sadece bir iş fikri değildi. Bayern'de öğrendiği Alman mühendisliği ile Akdeniz'in güneş potansiyelini birleştiren bir vizyondu.`,
 
-      chapter2Title: "Kader İki Yolu Birleştirdi",
+      chapter2Title: "Alman-Türk Ortaklığı Kuruldu",
       chapter2Year: "Ortaklık",
       chapter2Text: `Ve sonra, kader devreye girdi. Münih'in bir fabrikasında, Mustafa Sakar ile tanıştı. Mustafa, doğma büyüme Türk, hem Almanya'yı hem Türkiye'yi yüreğinde taşıyan biri.
 
-"Birlikte yapabiliriz" dedi Mustafa. "Sen mühendislik bilgini, ben köprü olayım. Türkiye'deki aileler ucuz enerji hak ediyor."`,
+"Birlikte yapabiliriz" dedi Mustafa. "Sen Alman solar panel ve ısı pompası teknolojisini, ben Türkiye köprüsünü kurayım. Antalya, Alanya, Muğla, İzmir'deki aileler ucuz ve temiz enerji hak ediyor."`,
 
-      chapter3Title: "Alanya'da İlk Adım",
-      chapter3Year: "Türkiye'de Başlangıç",
-      chapter3Text: `İşte o zaman, Ahmet İmrol hayatlarına girdi. Alanya'da doğmuş, büyümüş, her sokağı, her aileyi tanıyan biri.
+      chapter3Title: "Alanya'da İlk Güneş Enerjisi Kurulumu",
+      chapter3Year: "Akdeniz'de Başlangıç",
+      chapter3Text: `İşte o zaman, Ahmet İmrol hayatlarına girdi. Alanya'da doğmuş, büyümüş, Akdeniz'in her sokağını, her ailesini tanıyan biri.
 
-"Burası benim evim" dedi Ahmet. "Bu insanlar benim komşularım. Onlara en iyisini sunmak için her şeyimi veririm."`,
+"Burası benim evim" dedi Ahmet. "Bu insanlar benim komşularım. Onlara Alman kalitesinde güneş paneli ve ısı pompası sistemleri sunmak için her şeyimi veririm."`,
 
-      chapter4Title: "Üç Şehir, Bir Aile",
+      chapter4Title: "Antalya'dan Tüm Akdeniz'e Hizmet",
       chapter4Year: "Bugün",
-      chapter4Text: `Alanya'dan Antalya'ya, Antalya'dan Ankara'ya... Her şehirde aynı hikaye tekrarlandı.
+      chapter4Text: `Alanya'dan Antalya'ya, Antalya'dan Muğla ve İzmir'e... Her Akdeniz şehrinde aynı hikaye tekrarlandı.
 
-Bugün, üç şubeyle Türkiye'nin dört bir yanına hizmet veriyoruz. Ama biz büyük bir şirket değiliz. Biz bir aileyiz.`,
+Bugün, üç şubeyle Antalya, Alanya ve tüm Akdeniz bölgesine güneş enerjisi, ısı pompası ve klima sistemleri kuruyoruz. Ama biz büyük bir şirket değiliz. Biz bir aileyiz.`,
 
       quote: "Artık elektrik faturası yok. Allah sizden razı olsun.",
       quoteAuthor: "İlk Müşterimiz, Alanya",
 
-      visionTitle: "Vizyonumuz",
-      visionText: "Güneşin bedava olduğu bu topraklarda, hiçbir aile karanlıkta kalmasın.",
+      visionTitle: "Vizyonumuz: Akdeniz'de Enerji Bağımsızlığı",
+      visionText: "Güneşin bedava olduğu Antalya, Alanya ve tüm Akdeniz kıyılarında, hiçbir aile karanlıkta kalmasın. Alman kalitesi, Türk hizmeti.",
       
-      valuesTitle: "Değerlerimiz",
-      value1Title: "Alman Kalitesi",
-      value1Text: "Alman mühendisliği, Türk misafirperverliği",
-      value2Title: "Aile Gibi",
-      value2Text: "Her müşteri bir aile üyesi",
+      valuesTitle: "089 Bayern Değerleri",
+      value1Title: "Alman Mühendislik Kalitesi",
+      value1Text: "Bayern'den gelen Alman solar panel teknolojisi, Türk misafirperverliği",
+      value2Title: "Aile Gibi Hizmet",
+      value2Text: "Antalya'dan Alanya'ya her müşteri bir aile üyesi",
       value3Title: "Söz Namustur",
-      value3Text: "Söz verdiğimizi yaparız",
+      value3Text: "Güneş enerjisi ve ısı pompası kurulumunda söz verdiğimizi yaparız",
       
-      ctaTitle: "Hikayenizin Bir Parçası Olmak İstiyoruz",
-      ctaText: "Siz de güneşin gücünü evinize taşımak ister misiniz?",
+      ctaTitle: "Akdeniz'de Güneş Enerjisi Hikayenizin Parçası Olalım",
+      ctaText: "Siz de güneş paneli ve ısı pompası ile evinizi enerji bağımsızlığına kavuşturmak ister misiniz?",
       ctaButton: "Ücretsiz Keşif Al",
 
-      statsInstallations: "Kurulum",
-      statsSavings: "Tasarruf",
+      statsInstallations: "Akdeniz'de Kurulum",
+      statsSavings: "Enerji Tasarrufu",
       statsYears: "Yıl Deneyim",
       statsCustomers: "Mutlu Müşteri",
 
+      locationsTitle: "Akdeniz Bölgesi Ofislerimiz",
       locations: [
-        { city: "Alanya", desc: "Hikayemizin başladığı yer", address: "Şekerhane Mah." },
-        { city: "Antalya", desc: "Bölge merkezi", address: "Merkez" },
+        { city: "Alanya", desc: "Güneş enerjisi hikayemizin başladığı yer", address: "Şekerhane Mah." },
+        { city: "Antalya", desc: "Akdeniz bölge merkezi", address: "Merkez" },
         { city: "Ankara", desc: "Başkent şubemiz", address: "Çankaya" },
       ],
     },
     de: {
       badge: "Unsere Geschichte",
-      title: "Von einem Traum",
-      titleHighlight: "zur Realität",
-      subtitle: "Eine Reise, die mit der Leidenschaft begann, die Kraft der Sonne zu den Menschen zu bringen",
+      title: "Solaranlage & Wärmepumpe:",
+      titleHighlight: "Deutsche Qualität in der Türkei",
+      subtitle: "Solaranlagen, Wärmepumpen und Energiesysteme für Antalya, Alanya und die gesamte Mittelmeerregion - von München nach Antalya",
       
-      chapter1Title: "Ein Traum begann",
-      chapter1Year: "München, Deutschland",
-      chapter1Text: `Im Herzen Deutschlands, in München, blickte Dalibor Bakmaz eines Nachts zum Himmel und dachte: "In der Türkei scheint die Sonne fast 10 Monate lang kostenlos. Wie kann ich diese wunderbare Energiequelle zu den Menschen bringen?"
+      seoH2Timeline: "089 Bayern Energie - Von München nach Antalya",
+      
+      chapter1Title: "Der Traum begann in München",
+      chapter1Year: "München, Bayern - Deutschland",
+      chapter1Text: `Im Herzen Bayerns, in München, blickte Dalibor Bakmaz eines Nachts zum Himmel und dachte: "An der türkischen Mittelmeerküste scheint die Sonne fast 10 Monate lang kostenlos. Wie kann ich Solaranlagen und Wärmepumpen zu den Familien in Antalya und Alanya bringen?"
 
-Das war nicht nur eine Geschäftsidee. Es war eine Vision. Jahre lang arbeitete er in den kalten Wintern Deutschlands, aber seine Gedanken waren immer bei der Wärme der Sonne.`,
+Das war nicht nur eine Geschäftsidee. Es war eine Vision - deutsche Ingenieurskunst aus Bayern mit dem Sonnenpotenzial des Mittelmeers zu verbinden.`,
 
-      chapter2Title: "Das Schicksal führte zusammen",
+      chapter2Title: "Deutsch-Türkische Partnerschaft",
       chapter2Year: "Partnerschaft",
       chapter2Text: `Und dann griff das Schicksal ein. In einer Fabrik in München traf er Mustafa Sakar. Mustafa, ein gebürtiger Türke, der sowohl Deutschland als auch die Türkei in seinem Herzen trug.
 
-"Wir können es gemeinsam schaffen" sagte Mustafa. "Du bringst das Ingenieurwissen, ich bin die Brücke."`,
+"Wir können es gemeinsam schaffen" sagte Mustafa. "Du bringst deutsche Solarpanel- und Wärmepumpentechnologie, ich baue die Türkei-Brücke. Familien in Antalya, Alanya, Muğla und İzmir verdienen günstige, saubere Energie."`,
 
-      chapter3Title: "Der erste Schritt in Alanya",
-      chapter3Year: "Start in der Türkei",
-      chapter3Text: `Da kam Ahmet İmrol in ihr Leben. Geboren und aufgewachsen in Alanya, kannte er jede Straße, jede Familie.
+      chapter3Title: "Erste Solaranlage in Alanya",
+      chapter3Year: "Start am Mittelmeer",
+      chapter3Text: `Da kam Ahmet İmrol in ihr Leben. Geboren und aufgewachsen in Alanya, kannte er jede Straße, jede Familie an der Mittelmeerküste.
 
-"Das ist meine Heimat" sagte Ahmet. "Diese Menschen sind meine Nachbarn. Ich gebe alles, um ihnen das Beste zu bieten."`,
+"Das ist meine Heimat" sagte Ahmet. "Diese Menschen sind meine Nachbarn. Ich gebe alles, um ihnen deutsche Qualität bei Solaranlagen und Wärmepumpen zu bieten."`,
 
-      chapter4Title: "Drei Städte, eine Familie",
+      chapter4Title: "Von Antalya in die gesamte Mittelmeerregion",
       chapter4Year: "Heute",
-      chapter4Text: `Von Alanya nach Antalya, von Antalya nach Ankara... In jeder Stadt wiederholte sich dieselbe Geschichte.
+      chapter4Text: `Von Alanya nach Antalya, von Antalya nach Muğla und İzmir... In jeder Mittelmeerstadt wiederholte sich dieselbe Geschichte.
 
-Heute bedienen wir mit drei Niederlassungen ganz Türkei. Aber wir sind kein großes Unternehmen. Wir sind eine Familie.`,
+Heute installieren wir mit drei Niederlassungen Solaranlagen, Wärmepumpen und Klimasysteme in Antalya, Alanya und der gesamten Mittelmeerregion. Aber wir sind kein großes Unternehmen. Wir sind eine Familie.`,
 
       quote: "Keine Stromrechnung mehr. Gott segne euch.",
       quoteAuthor: "Unser erster Kunde, Alanya",
 
-      visionTitle: "Unsere Vision",
-      visionText: "In diesem Land, wo die Sonne kostenlos scheint, soll keine Familie im Dunkeln bleiben.",
+      visionTitle: "Unsere Vision: Energieunabhängigkeit am Mittelmeer",
+      visionText: "In Antalya, Alanya und an der gesamten Mittelmeerküste, wo die Sonne kostenlos scheint, soll keine Familie im Dunkeln bleiben. Deutsche Qualität, türkischer Service.",
       
-      valuesTitle: "Unsere Werte",
-      value1Title: "Deutsche Qualität",
-      value1Text: "Deutsche Ingenieurskunst, türkische Gastfreundschaft",
-      value2Title: "Wie Familie",
-      value2Text: "Jeder Kunde ist ein Familienmitglied",
+      valuesTitle: "089 Bayern Werte",
+      value1Title: "Deutsche Ingenieursqualität",
+      value1Text: "Deutsche Solartechnik aus Bayern, türkische Gastfreundschaft",
+      value2Title: "Familiärer Service",
+      value2Text: "Von Antalya bis Alanya - jeder Kunde ist ein Familienmitglied",
       value3Title: "Wort ist Ehre",
-      value3Text: "Wir halten, was wir versprechen",
+      value3Text: "Bei Solaranlagen und Wärmepumpen halten wir, was wir versprechen",
       
-      ctaTitle: "Wir möchten Teil Ihrer Geschichte werden",
-      ctaText: "Möchten auch Sie die Kraft der Sonne in Ihr Zuhause bringen?",
+      ctaTitle: "Ihre Solaranlage am Mittelmeer",
+      ctaText: "Möchten auch Sie mit Solarpanels und Wärmepumpe Energieunabhängigkeit erreichen?",
       ctaButton: "Kostenlose Beratung",
 
-      statsInstallations: "Installationen",
-      statsSavings: "Ersparnis",
+      statsInstallations: "Installationen am Mittelmeer",
+      statsSavings: "Energieersparnis",
       statsYears: "Jahre Erfahrung",
       statsCustomers: "Zufriedene Kunden",
 
+      locationsTitle: "Unsere Standorte in der Mittelmeerregion",
       locations: [
-        { city: "Alanya", desc: "Wo unsere Geschichte begann", address: "Şekerhane Mah." },
-        { city: "Antalya", desc: "Regionales Zentrum", address: "Zentrum" },
+        { city: "Alanya", desc: "Wo unsere Solargeschichte begann", address: "Şekerhane Mah." },
+        { city: "Antalya", desc: "Mittelmeer-Regionszentrum", address: "Zentrum" },
         { city: "Ankara", desc: "Hauptstadt-Filiale", address: "Çankaya" },
       ],
     },
     en: {
       badge: "Our Story",
-      title: "From a Dream",
-      titleHighlight: "to Reality",
-      subtitle: "A journey that began with the passion to bring the power of the sun to the people",
+      title: "Solar Panels & Heat Pumps:",
+      titleHighlight: "German Quality in Turkey",
+      subtitle: "Solar panels, heat pumps and energy systems for Antalya, Alanya and the entire Mediterranean region - from Munich to Antalya",
       
-      chapter1Title: "A Dream Began",
-      chapter1Year: "Munich, Germany",
-      chapter1Text: `In the heart of Germany, in Munich, Dalibor Bakmaz looked up at the sky one night and thought: "In Turkey, the sun shines for free almost 10 months a year. How can I bring this wonderful energy source to the people?"
+      seoH2Timeline: "089 Bayern Energy - From Munich to the Mediterranean",
+      
+      chapter1Title: "The Dream Began in Munich",
+      chapter1Year: "Munich, Bavaria - Germany",
+      chapter1Text: `In the heart of Bavaria, in Munich, Dalibor Bakmaz looked up at the sky one night and thought: "On Turkey's Mediterranean coast, the sun shines for free almost 10 months a year. How can I bring solar panels and heat pumps to families in Antalya and Alanya?"
 
-This wasn't just a business idea. It was a vision. For years he worked in Germany's cold winters, but his mind was always on the warmth of the sun.`,
+This wasn't just a business idea. It was a vision - combining German engineering from Bavaria with the solar potential of the Mediterranean.`,
 
-      chapter2Title: "Fate Brought Two Together",
+      chapter2Title: "German-Turkish Partnership Formed",
       chapter2Year: "Partnership",
       chapter2Text: `And then, fate intervened. In a factory in Munich, he met Mustafa Sakar. Mustafa, a native Turk who carried both Germany and Turkey in his heart.
 
-"We can do it together" said Mustafa. "You bring the engineering knowledge, I'll be the bridge."`,
+"We can do it together" said Mustafa. "You bring German solar panel and heat pump technology, I'll build the Turkey bridge. Families in Antalya, Alanya, Muğla and İzmir deserve affordable, clean energy."`,
 
-      chapter3Title: "The First Step in Alanya",
-      chapter3Year: "Starting in Turkey",
-      chapter3Text: `That's when Ahmet İmrol came into their lives. Born and raised in Alanya, he knew every street, every family.
+      chapter3Title: "First Solar Installation in Alanya",
+      chapter3Year: "Starting in the Mediterranean",
+      chapter3Text: `That's when Ahmet İmrol came into their lives. Born and raised in Alanya, he knew every street, every family on the Mediterranean coast.
 
-"This is my home" said Ahmet. "These people are my neighbors. I'll give everything to offer them the best."`,
+"This is my home" said Ahmet. "These people are my neighbors. I'll give everything to offer them German quality solar panels and heat pumps."`,
 
-      chapter4Title: "Three Cities, One Family",
+      chapter4Title: "From Antalya to the Entire Mediterranean",
       chapter4Year: "Today",
-      chapter4Text: `From Alanya to Antalya, from Antalya to Ankara... In every city, the same story repeated.
+      chapter4Text: `From Alanya to Antalya, from Antalya to Muğla and İzmir... In every Mediterranean city, the same story repeated.
 
-Today, we serve all of Turkey with three branches. But we're not a big company. We're a family.`,
+Today, we install solar panels, heat pumps and climate systems in Antalya, Alanya and the entire Mediterranean region with three branches. But we're not a big company. We're a family.`,
 
       quote: "No more electricity bills. God bless you.",
       quoteAuthor: "Our first customer, Alanya",
 
-      visionTitle: "Our Vision",
-      visionText: "In this land where the sun shines for free, no family should be left in the dark.",
+      visionTitle: "Our Vision: Energy Independence in the Mediterranean",
+      visionText: "In Antalya, Alanya and across the Mediterranean coast, where the sun shines for free, no family should be left in the dark. German quality, Turkish service.",
       
-      valuesTitle: "Our Values",
-      value1Title: "German Quality",
-      value1Text: "German engineering, Turkish hospitality",
-      value2Title: "Like Family",
-      value2Text: "Every customer is a family member",
+      valuesTitle: "089 Bayern Values",
+      value1Title: "German Engineering Quality",
+      value1Text: "German solar technology from Bavaria, Turkish hospitality",
+      value2Title: "Family-Like Service",
+      value2Text: "From Antalya to Alanya - every customer is a family member",
       value3Title: "Word is Honor",
-      value3Text: "We keep our promises",
+      value3Text: "We keep our promises on solar panels and heat pumps",
       
-      ctaTitle: "We Want to Be Part of Your Story",
-      ctaText: "Would you also like to bring the power of the sun to your home?",
+      ctaTitle: "Your Solar System in the Mediterranean",
+      ctaText: "Would you also like to achieve energy independence with solar panels and heat pumps?",
       ctaButton: "Free Consultation",
 
-      statsInstallations: "Installations",
-      statsSavings: "Savings",
+      statsInstallations: "Mediterranean Installations",
+      statsSavings: "Energy Savings",
       statsYears: "Years Experience",
       statsCustomers: "Happy Customers",
 
+      locationsTitle: "Our Mediterranean Region Offices",
       locations: [
-        { city: "Alanya", desc: "Where our story began", address: "Şekerhane Mah." },
-        { city: "Antalya", desc: "Regional center", address: "Center" },
+        { city: "Alanya", desc: "Where our solar story began", address: "Şekerhane Mah." },
+        { city: "Antalya", desc: "Mediterranean regional center", address: "Center" },
         { city: "Ankara", desc: "Capital branch", address: "Çankaya" },
       ],
     },
     ru: {
       badge: "Наша История",
-      title: "От Мечты",
-      titleHighlight: "к Реальности",
-      subtitle: "Путешествие, которое началось со страсти донести силу солнца до людей",
+      title: "Солнечные панели и тепловые насосы:",
+      titleHighlight: "Немецкое качество в Турции",
+      subtitle: "Солнечные панели, тепловые насосы и энергосистемы для Анталии, Аланьи и всего Средиземноморья - из Мюнхена в Анталию",
       
-      chapter1Title: "Мечта началась",
-      chapter1Year: "Мюнхен, Германия",
-      chapter1Text: `В сердце Германии, в Мюнхене, Далибор Бакмаз однажды ночью посмотрел на небо и подумал: "В Турции солнце светит бесплатно почти 10 месяцев в году. Как я могу донести этот источник энергии до людей?"
+      seoH2Timeline: "089 Bayern Энергия - Из Мюнхена на Средиземноморье",
+      
+      chapter1Title: "Мечта началась в Мюнхене",
+      chapter1Year: "Мюнхен, Бавария - Германия",
+      chapter1Text: `В сердце Баварии, в Мюнхене, Далибор Бакмаз однажды ночью посмотрел на небо и подумал: "На средиземноморском побережье Турции солнце светит бесплатно почти 10 месяцев в году. Как я могу привезти солнечные панели и тепловые насосы семьям в Анталии и Аланье?"
 
-Это была не просто бизнес-идея. Это было видение.`,
+Это была не просто бизнес-идея. Это было видение - объединить немецкую инженерию из Баварии с солнечным потенциалом Средиземноморья.`,
 
-      chapter2Title: "Судьба свела двоих",
+      chapter2Title: "Немецко-турецкое партнёрство",
       chapter2Year: "Партнёрство",
-      chapter2Text: `И тогда вмешалась судьба. На заводе в Мюнхене он встретил Мустафу Сакара.
+      chapter2Text: `И тогда вмешалась судьба. На заводе в Мюнхене он встретил Мустафу Сакара. Мустафа - турок по рождению, который нёс в сердце и Германию, и Турцию.
 
-"Мы можем сделать это вместе" сказал Мустафа. "Ты принесёшь инженерные знания, я буду мостом."`,
+"Мы можем сделать это вместе" сказал Мустафа. "Ты принесёшь немецкую технологию солнечных панелей и тепловых насосов, я построю мост в Турцию. Семьи в Анталии, Аланье, Мугле и Измире заслуживают доступной, чистой энергии."`,
 
-      chapter3Title: "Первый шаг в Аланье",
-      chapter3Year: "Старт в Турции",
-      chapter3Text: `Тогда в их жизнь вошёл Ахмет Имрол. Родившийся и выросший в Аланье, он знал каждую улицу, каждую семью.
+      chapter3Title: "Первая солнечная установка в Аланье",
+      chapter3Year: "Старт на Средиземноморье",
+      chapter3Text: `Тогда в их жизнь вошёл Ахмет Имрол. Родившийся и выросший в Аланье, он знал каждую улицу, каждую семью на средиземноморском побережье.
 
-"Это мой дом" сказал Ахмет. "Эти люди - мои соседи."`,
+"Это мой дом" сказал Ахмет. "Эти люди - мои соседи. Я отдам всё, чтобы предложить им немецкое качество солнечных панелей и тепловых насосов."`,
 
-      chapter4Title: "Три города, одна семья",
+      chapter4Title: "Из Анталии на всё Средиземноморье",
       chapter4Year: "Сегодня",
-      chapter4Text: `Из Аланьи в Анталью, из Антальи в Анкару... В каждом городе повторялась та же история.
+      chapter4Text: `Из Аланьи в Анталию, из Анталии в Муглу и Измир... В каждом средиземноморском городе повторялась та же история.
 
-Сегодня мы обслуживаем всю Турцию. Но мы не большая компания. Мы семья.`,
+Сегодня мы устанавливаем солнечные панели, тепловые насосы и климатические системы в Анталии, Аланье и всём регионе Средиземноморья с тремя филиалами. Но мы не большая компания. Мы семья.`,
 
       quote: "Больше нет счетов за электричество. Да благословит вас Бог.",
       quoteAuthor: "Наш первый клиент, Аланья",
 
-      visionTitle: "Наше Видение",
-      visionText: "В этой стране, где солнце светит бесплатно, ни одна семья не должна оставаться в темноте.",
+      visionTitle: "Наше Видение: Энергонезависимость на Средиземноморье",
+      visionText: "В Анталии, Аланье и на всём средиземноморском побережье, где солнце светит бесплатно, ни одна семья не должна оставаться в темноте. Немецкое качество, турецкий сервис.",
       
-      valuesTitle: "Наши Ценности",
-      value1Title: "Немецкое Качество",
-      value1Text: "Немецкая инженерия, турецкое гостеприимство",
-      value2Title: "Как Семья",
-      value2Text: "Каждый клиент - член семьи",
+      valuesTitle: "Ценности 089 Bayern",
+      value1Title: "Немецкое инженерное качество",
+      value1Text: "Немецкая солнечная технология из Баварии, турецкое гостеприимство",
+      value2Title: "Семейный сервис",
+      value2Text: "От Анталии до Аланьи - каждый клиент член семьи",
       value3Title: "Слово - Честь",
-      value3Text: "Мы держим свои обещания",
+      value3Text: "Мы держим обещания по солнечным панелям и тепловым насосам",
       
-      ctaTitle: "Мы хотим стать частью вашей истории",
-      ctaText: "Хотите и вы принести силу солнца в свой дом?",
+      ctaTitle: "Ваша солнечная система на Средиземноморье",
+      ctaText: "Хотите и вы достичь энергонезависимости с солнечными панелями и тепловыми насосами?",
       ctaButton: "Бесплатная консультация",
 
-      statsInstallations: "Установок",
-      statsSavings: "Экономия",
+      statsInstallations: "Установок на Средиземноморье",
+      statsSavings: "Экономия энергии",
       statsYears: "Лет опыта",
       statsCustomers: "Довольных клиентов",
 
+      locationsTitle: "Наши офисы в Средиземноморском регионе",
       locations: [
-        { city: "Аланья", desc: "Где началась наша история", address: "Şekerhane Mah." },
-        { city: "Анталья", desc: "Региональный центр", address: "Центр" },
+        { city: "Аланья", desc: "Где началась наша солнечная история", address: "Şekerhane Mah." },
+        { city: "Анталья", desc: "Средиземноморский региональный центр", address: "Центр" },
         { city: "Анкара", desc: "Филиал в столице", address: "Çankaya" },
       ],
     },
     uk: {
       badge: "Наша Історія",
-      title: "Від Мрії",
-      titleHighlight: "до Реальності",
-      subtitle: "Подорож, яка почалася з пристрасті донести силу сонця до людей",
+      title: "Сонячні панелі та теплові насоси:",
+      titleHighlight: "Німецька якість в Туреччині",
+      subtitle: "Сонячні панелі, теплові насоси та енергосистеми для Анталії, Аланії та всього Середземномор'я - з Мюнхена в Анталію",
       
-      chapter1Title: "Мрія почалася",
-      chapter1Year: "Мюнхен, Німеччина",
-      chapter1Text: `У серці Німеччини, в Мюнхені, Далібор Бакмаз подивився на небо і подумав: "У Туреччині сонце світить безкоштовно майже 10 місяців на рік. Як я можу донести це джерело енергії до людей?"
+      seoH2Timeline: "089 Bayern Енергія - З Мюнхена на Середземномор'я",
+      
+      chapter1Title: "Мрія почалася в Мюнхені",
+      chapter1Year: "Мюнхен, Баварія - Німеччина",
+      chapter1Text: `У серці Баварії, в Мюнхені, Далібор Бакмаз подивився на небо і подумав: "На середземноморському узбережжі Туреччини сонце світить безкоштовно майже 10 місяців на рік. Як я можу привезти сонячні панелі та теплові насоси родинам в Анталії та Аланії?"
 
-Це була не просто бізнес-ідея. Це було бачення.`,
+Це була не просто бізнес-ідея. Це було бачення - поєднати німецьку інженерію з Баварії з сонячним потенціалом Середземномор'я.`,
 
-      chapter2Title: "Доля звела двох",
+      chapter2Title: "Німецько-турецьке партнерство",
       chapter2Year: "Партнерство",
-      chapter2Text: `І тоді втрутилася доля. На заводі в Мюнхені він зустрів Мустафу Сакара.
+      chapter2Text: `І тоді втрутилася доля. На заводі в Мюнхені він зустрів Мустафу Сакара. Мустафа - турок за народженням, який ніс у серці і Німеччину, і Туреччину.
 
-"Ми можемо зробити це разом" сказав Мустафа. "Ти принесеш інженерні знання, я буду мостом."`,
+"Ми можемо зробити це разом" сказав Мустафа. "Ти принесеш німецьку технологію сонячних панелей та теплових насосів, я побудую міст до Туреччини. Родини в Анталії, Аланії, Муглі та Ізмірі заслуговують на доступну, чисту енергію."`,
 
-      chapter3Title: "Перший крок в Аланії",
-      chapter3Year: "Старт в Туреччині",
-      chapter3Text: `Тоді в їхнє життя увійшов Ахмет Імрол. Народжений і вирослий в Аланії, він знав кожну вулицю.
+      chapter3Title: "Перша сонячна установка в Аланії",
+      chapter3Year: "Старт на Середземномор'ї",
+      chapter3Text: `Тоді в їхнє життя увійшов Ахмет Імрол. Народжений і вирослий в Аланії, він знав кожну вулицю, кожну родину на середземноморському узбережжі.
 
-"Це мій дім" сказав Ахмет. "Ці люди - мої сусіди."`,
+"Це мій дім" сказав Ахмет. "Ці люди - мої сусіди. Я віддам все, щоб запропонувати їм німецьку якість сонячних панелей та теплових насосів."`,
 
-      chapter4Title: "Три міста, одна родина",
+      chapter4Title: "З Анталії на все Середземномор'я",
       chapter4Year: "Сьогодні",
-      chapter4Text: `З Аланії в Анталію, з Анталії в Анкару... У кожному місті повторювалася та сама історія.
+      chapter4Text: `З Аланії в Анталію, з Анталії в Муглу та Ізмір... У кожному середземноморському місті повторювалася та сама історія.
 
-Сьогодні ми обслуговуємо всю Туреччину. Але ми не велика компанія. Ми родина.`,
+Сьогодні ми встановлюємо сонячні панелі, теплові насоси та кліматичні системи в Анталії, Аланії та всьому регіоні Середземномор'я з трьома філіями. Але ми не велика компанія. Ми родина.`,
 
       quote: "Більше немає рахунків за електрику. Нехай Бог благословить вас.",
       quoteAuthor: "Наш перший клієнт, Аланія",
 
-      visionTitle: "Наше Бачення",
-      visionText: "У цій країні, де сонце світить безкоштовно, жодна родина не повинна залишатися в темряві.",
+      visionTitle: "Наше Бачення: Енергонезалежність на Середземномор'ї",
+      visionText: "В Анталії, Аланії та на всьому середземноморському узбережжі, де сонце світить безкоштовно, жодна родина не повинна залишатися в темряві. Німецька якість, турецький сервіс.",
       
-      valuesTitle: "Наші Цінності",
-      value1Title: "Німецька Якість",
-      value1Text: "Німецька інженерія, турецька гостинність",
-      value2Title: "Як Родина",
-      value2Text: "Кожен клієнт - член родини",
+      valuesTitle: "Цінності 089 Bayern",
+      value1Title: "Німецька інженерна якість",
+      value1Text: "Німецька сонячна технологія з Баварії, турецька гостинність",
+      value2Title: "Сімейний сервіс",
+      value2Text: "Від Анталії до Аланії - кожен клієнт член родини",
       value3Title: "Слово - Честь",
-      value3Text: "Ми тримаємо свої обіцянки",
+      value3Text: "Ми тримаємо обіцянки щодо сонячних панелей та теплових насосів",
       
-      ctaTitle: "Ми хочемо стати частиною вашої історії",
-      ctaText: "Хочете і ви принести силу сонця у свій дім?",
+      ctaTitle: "Ваша сонячна система на Середземномор'ї",
+      ctaText: "Хочете і ви досягти енергонезалежності з сонячними панелями та тепловими насосами?",
       ctaButton: "Безкоштовна консультація",
 
-      statsInstallations: "Установок",
-      statsSavings: "Економія",
+      statsInstallations: "Установок на Середземномор'ї",
+      statsSavings: "Економія енергії",
       statsYears: "Років досвіду",
       statsCustomers: "Задоволених клієнтів",
 
+      locationsTitle: "Наші офіси в Середземноморському регіоні",
       locations: [
-        { city: "Аланія", desc: "Де почалася наша історія", address: "Şekerhane Mah." },
-        { city: "Анталія", desc: "Регіональний центр", address: "Центр" },
+        { city: "Аланія", desc: "Де почалася наша сонячна історія", address: "Şekerhane Mah." },
+        { city: "Анталія", desc: "Середземноморський регіональний центр", address: "Центр" },
         { city: "Анкара", desc: "Філія в столиці", address: "Çankaya" },
       ],
     },
     ar: {
       badge: "قصتنا",
-      title: "من حلم",
-      titleHighlight: "إلى واقع",
-      subtitle: "رحلة بدأت بشغف إيصال قوة الشمس إلى الناس",
+      title: "الألواح الشمسية والمضخات الحرارية:",
+      titleHighlight: "الجودة الألمانية في تركيا",
+      subtitle: "الألواح الشمسية والمضخات الحرارية وأنظمة الطاقة لأنطاليا وألانيا ومنطقة البحر المتوسط بأكملها - من ميونيخ إلى أنطاليا",
       
-      chapter1Title: "بدأ الحلم",
-      chapter1Year: "ميونيخ، ألمانيا",
-      chapter1Text: `في قلب ألمانيا، في ميونيخ، نظر داليبور باكماز إلى السماء وفكر: "في تركيا، تشرق الشمس مجاناً لمدة 10 أشهر في السنة. كيف يمكنني إيصال مصدر الطاقة هذا إلى الناس؟"
+      seoH2Timeline: "089 Bayern للطاقة - من ميونيخ إلى البحر المتوسط",
+      
+      chapter1Title: "بدأ الحلم في ميونيخ",
+      chapter1Year: "ميونيخ، بافاريا - ألمانيا",
+      chapter1Text: `في قلب بافاريا، في ميونيخ، نظر داليبور باكماز إلى السماء وفكر: "على ساحل البحر المتوسط التركي، تشرق الشمس مجاناً لمدة 10 أشهر تقريباً في السنة. كيف يمكنني توصيل الألواح الشمسية والمضخات الحرارية إلى العائلات في أنطاليا وألانيا؟"
 
-لم تكن هذه مجرد فكرة تجارية. كانت رؤية.`,
+لم تكن هذه مجرد فكرة تجارية. كانت رؤية - الجمع بين الهندسة الألمانية من بافاريا مع إمكانات الطاقة الشمسية في البحر المتوسط.`,
 
-      chapter2Title: "القدر جمع اثنين",
+      chapter2Title: "الشراكة الألمانية التركية",
       chapter2Year: "الشراكة",
-      chapter2Text: `ثم تدخل القدر. في مصنع في ميونيخ، التقى بمصطفى ساكار.
+      chapter2Text: `ثم تدخل القدر. في مصنع في ميونيخ، التقى بمصطفى ساكار. مصطفى، تركي الأصل يحمل في قلبه ألمانيا وتركيا معاً.
 
-"يمكننا فعل ذلك معاً" قال مصطفى. "أنت تجلب المعرفة الهندسية، وأنا سأكون الجسر."`,
+"يمكننا فعل ذلك معاً" قال مصطفى. "أنت تجلب تقنية الألواح الشمسية والمضخات الحرارية الألمانية، وأنا سأبني الجسر إلى تركيا. العائلات في أنطاليا وألانيا وموغلا وإزمير تستحق طاقة نظيفة وبأسعار معقولة."`,
 
-      chapter3Title: "الخطوة الأولى في ألانيا",
-      chapter3Year: "البداية في تركيا",
-      chapter3Text: `ثم دخل أحمد إمرول حياتهم. ولد ونشأ في ألانيا، يعرف كل شارع، كل عائلة.
+      chapter3Title: "أول تركيب للطاقة الشمسية في ألانيا",
+      chapter3Year: "البداية في البحر المتوسط",
+      chapter3Text: `ثم دخل أحمد إمرول حياتهم. ولد ونشأ في ألانيا، يعرف كل شارع، كل عائلة على ساحل البحر المتوسط.
 
-"هذا بيتي" قال أحمد. "هؤلاء الناس جيراني."`,
+"هذا بيتي" قال أحمد. "هؤلاء الناس جيراني. سأقدم كل شيء لأقدم لهم الجودة الألمانية في الألواح الشمسية والمضخات الحرارية."`,
 
-      chapter4Title: "ثلاث مدن، عائلة واحدة",
+      chapter4Title: "من أنطاليا إلى كل البحر المتوسط",
       chapter4Year: "اليوم",
-      chapter4Text: `من ألانيا إلى أنطاليا، من أنطاليا إلى أنقرة... في كل مدينة تكررت نفس القصة.
+      chapter4Text: `من ألانيا إلى أنطاليا، من أنطاليا إلى موغلا وإزمير... في كل مدينة متوسطية تكررت نفس القصة.
 
-اليوم، نخدم كل تركيا. لكننا لسنا شركة كبيرة. نحن عائلة.`,
+اليوم، نقوم بتركيب الألواح الشمسية والمضخات الحرارية وأنظمة التكييف في أنطاليا وألانيا ومنطقة البحر المتوسط بأكملها مع ثلاثة فروع. لكننا لسنا شركة كبيرة. نحن عائلة.`,
 
       quote: "لا مزيد من فواتير الكهرباء. بارك الله فيكم.",
       quoteAuthor: "أول عميل لنا، ألانيا",
 
-      visionTitle: "رؤيتنا",
-      visionText: "في هذه الأرض حيث تشرق الشمس مجاناً، لا يجب أن تبقى أي عائلة في الظلام.",
+      visionTitle: "رؤيتنا: استقلال الطاقة في البحر المتوسط",
+      visionText: "في أنطاليا وألانيا وعلى طول ساحل البحر المتوسط، حيث تشرق الشمس مجاناً، لا يجب أن تبقى أي عائلة في الظلام. الجودة الألمانية، الخدمة التركية.",
       
-      valuesTitle: "قيمنا",
-      value1Title: "الجودة الألمانية",
-      value1Text: "الهندسة الألمانية، الضيافة التركية",
-      value2Title: "مثل العائلة",
-      value2Text: "كل عميل هو فرد من العائلة",
+      valuesTitle: "قيم 089 Bayern",
+      value1Title: "جودة الهندسة الألمانية",
+      value1Text: "التقنية الشمسية الألمانية من بافاريا، الضيافة التركية",
+      value2Title: "خدمة عائلية",
+      value2Text: "من أنطاليا إلى ألانيا - كل عميل هو فرد من العائلة",
       value3Title: "الكلمة شرف",
-      value3Text: "نحن نفي بوعودنا",
+      value3Text: "نحن نفي بوعودنا في الألواح الشمسية والمضخات الحرارية",
       
-      ctaTitle: "نريد أن نكون جزءاً من قصتك",
-      ctaText: "هل تريد أيضاً جلب قوة الشمس إلى منزلك؟",
+      ctaTitle: "نظامك الشمسي في البحر المتوسط",
+      ctaText: "هل تريد أيضاً تحقيق استقلال الطاقة مع الألواح الشمسية والمضخات الحرارية؟",
       ctaButton: "استشارة مجانية",
 
-      statsInstallations: "تركيب",
-      statsSavings: "توفير",
+      statsInstallations: "تركيب في البحر المتوسط",
+      statsSavings: "توفير الطاقة",
       statsYears: "سنوات خبرة",
       statsCustomers: "عملاء سعداء",
 
+      locationsTitle: "مكاتبنا في منطقة البحر المتوسط",
       locations: [
-        { city: "ألانيا", desc: "حيث بدأت قصتنا", address: "Şekerhane Mah." },
-        { city: "أنطاليا", desc: "المركز الإقليمي", address: "المركز" },
+        { city: "ألانيا", desc: "حيث بدأت قصتنا الشمسية", address: "Şekerhane Mah." },
+        { city: "أنطاليا", desc: "المركز الإقليمي للبحر المتوسط", address: "المركز" },
         { city: "أنقرة", desc: "فرع العاصمة", address: "Çankaya" },
       ],
     },
