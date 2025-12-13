@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import FeaturesGrid from "@/components/FeaturesGrid";
@@ -8,7 +8,8 @@ import LogoCarousel from "@/components/LogoCarousel";
 import TeamSection from "@/components/TeamSection";
 import Footer from "@/components/Footer";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
-import ChatBot from "@/components/ChatBot";
+
+const ChatBot = lazy(() => import("@/components/ChatBot"));
 
 interface CalculatorData {
   propertyType: string;
@@ -52,7 +53,9 @@ export default function Home() {
         onClose={() => setIsLeadFormOpen(false)}
         calculatorData={calculatorData}
       />
-      <ChatBot />
+      <Suspense fallback={null}>
+        <ChatBot />
+      </Suspense>
     </div>
   );
 }
