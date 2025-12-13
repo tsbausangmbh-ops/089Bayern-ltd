@@ -13,7 +13,7 @@ export default function ChatBot() {
   const t = translations[language];
 
   return (
-    <div className="fixed right-4 top-24 z-50" data-testid="chatbot-container">
+    <div className="fixed left-1/2 -translate-x-1/2 top-24 z-50" data-testid="chatbot-container">
       <div className="flex items-start gap-3 mb-3">
         <div className="bg-card/95 backdrop-blur-sm rounded-xl px-5 py-2 shadow-xl border border-border/50 text-right w-80">
           <p className="text-sm font-semibold text-foreground leading-tight">{t.chatbotTitle}</p>
