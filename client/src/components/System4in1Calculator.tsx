@@ -982,7 +982,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
                 </div>
               </div>
 
-              <p className="text-center text-muted-foreground text-xs mb-6">{t.disclaimer}</p>
+              <p className="text-center text-muted-foreground text-sm font-bold mb-6">{t.disclaimer}</p>
 
               <Button
                 className="w-full py-6 text-lg bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg shadow-accent/30"
