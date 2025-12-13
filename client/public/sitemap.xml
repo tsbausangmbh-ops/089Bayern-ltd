@@ -1,11 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage - All Languages -->
   <url>
     <loc>https://089bayern.com/</loc>
     <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://089bayern.com/"/>
   </url>
+
+  <!-- Systeme / 4-in-1 System Page -->
+  <url>
+    <loc>https://089bayern.com/systeme</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/systeme?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/systeme?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/systeme?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/systeme?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/systeme?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/systeme?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/systeme?lang=hr"/>
+  </url>
+
+  <!-- Vorteile / Benefits Page -->
+  <url>
+    <loc>https://089bayern.com/vorteile</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/vorteile?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/vorteile?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/vorteile?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/vorteile?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/vorteile?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/vorteile?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/vorteile?lang=hr"/>
+  </url>
+
+  <!-- Rechner / Calculator Page -->
+  <url>
+    <loc>https://089bayern.com/rechner</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/rechner?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/rechner?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/rechner?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/rechner?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/rechner?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/rechner?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/rechner?lang=hr"/>
+  </url>
+
+  <!-- Über Uns / About Page -->
+  <url>
+    <loc>https://089bayern.com/ueber-uns</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/ueber-uns?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/ueber-uns?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/ueber-uns?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/ueber-uns?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/ueber-uns?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/ueber-uns?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/ueber-uns?lang=hr"/>
+  </url>
+
+  <!-- Team Page -->
+  <url>
+    <loc>https://089bayern.com/team</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/team?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/team?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/team?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/team?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/team?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/team?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/team?lang=hr"/>
+  </url>
+
+  <!-- FAQ Page -->
+  <url>
+    <loc>https://089bayern.com/faq</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/faq?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/faq?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/faq?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/faq?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/faq?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/faq?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/faq?lang=hr"/>
+  </url>
+
+  <!-- Legal Pages -->
   <url>
     <loc>https://089bayern.com/kvkk</loc>
     <lastmod>2024-12-13</lastmod>
