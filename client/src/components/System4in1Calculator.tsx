@@ -619,7 +619,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
   
   const [data, setData] = useState<CalculatorData>({
     propertyType: "",
-    propertySize: 200,
+    propertySize: 0,
     monthlyElectricity: 2000,
     monthlyHeating: 1500,
     monthlyHotWater: 500,
