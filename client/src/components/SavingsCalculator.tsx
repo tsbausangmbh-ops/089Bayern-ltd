@@ -4,7 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
-import { Home, Building2, Store, ArrowRight, ArrowLeft, Check, Calculator, TrendingUp, Leaf, Banknote, Flame, Snowflake, Battery, MapPin, Zap } from "lucide-react";
+import { Home, Building2, Store, ArrowRight, ArrowLeft, Check, Calculator, TrendingUp, Leaf, Banknote, Flame, Snowflake, Battery, Zap, Globe } from "lucide-react";
+import { translations, languageNames, isRTL, type Language } from "@/lib/translations";
 
 interface SavingsCalculatorProps {
   onComplete?: (data: CalculatorData) => void;
@@ -20,41 +21,18 @@ interface CalculatorData {
   batteryInterest: string;
 }
 
-const propertyTypes = [
-  { id: "villa", label: "Müstakil Villa / Konut", description: "Antalya, Bodrum, Fethiye villaları", icon: Home, gradient: "from-amber-500 to-orange-600" },
-  { id: "apartment", label: "Apartman Dairesi", description: "Çatı kullanım hakkı olan daireler", icon: Building2, gradient: "from-sky-500 to-blue-600" },
-  { id: "commercial", label: "İşyeri / Otel / Fabrika", description: "Ticari, turizm veya endüstriyel tesis", icon: Store, gradient: "from-emerald-500 to-green-600" },
-];
-
-const locations = [
-  { id: "antalya", label: "Antalya", sun: "2.900+ saat/yıl" },
-  { id: "mugla", label: "Muğla (Bodrum, Fethiye)", sun: "2.800+ saat/yıl" },
-  { id: "izmir", label: "İzmir (Çeşme, Alaçatı)", sun: "2.700+ saat/yıl" },
-  { id: "aydin", label: "Aydın (Kuşadası, Didim)", sun: "2.750+ saat/yıl" },
-  { id: "mersin", label: "Mersin (Alanya)", sun: "2.900+ saat/yıl" },
-  { id: "other", label: "Diğer Akdeniz Bölgesi", sun: "2.500+ saat/yıl" },
-];
-
-const heatingSystems = [
-  { id: "gas", label: "Doğalgaz Kombisi", description: "Mevcut doğalgaz ısıtması", icon: Flame },
-  { id: "electric", label: "Elektrikli Isıtma", description: "Elektrikli radyatör veya ısıtıcı", icon: Zap },
-  { id: "coal", label: "Kömür / Odun Sobası", description: "Geleneksel yakıt sistemi", icon: Flame },
-  { id: "none", label: "Isıtma Yok", description: "Sadece yazlık kullanım", icon: Home },
-];
-
-const coolingOptions = [
-  { id: "yes", label: "Evet, Klima Kullanıyorum", description: "Yaz aylarında aktif klima kullanımı" },
-  { id: "partial", label: "Kısmen İhtiyacım Var", description: "Bazı odalarda klima mevcut" },
-  { id: "no", label: "Hayır, Klima Kullanmıyorum", description: "Doğal havalandırma yeterli" },
-];
-
-const batteryOptions = [
-  { id: "yes", label: "Evet, Enerji Bağımsızlığı İstiyorum", description: "Elektrik kesintilerine karşı koruma + gece kullanımı" },
-  { id: "no", label: "Hayır, Şebekeye Bağlı Kalabilirim", description: "Sadece gündüz üretim yeterli" },
+const locationData = [
+  { id: "antalya", key: "locationAntalya" as const, sun: "2.900+" },
+  { id: "mugla", key: "locationMugla" as const, sun: "2.800+" },
+  { id: "izmir", key: "locationIzmir" as const, sun: "2.700+" },
+  { id: "aydin", key: "locationAydin" as const, sun: "2.750+" },
+  { id: "mersin", key: "locationMersin" as const, sun: "2.900+" },
+  { id: "other", key: "otherRegion" as const, sun: "2.500+" },
 ];
 
 export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps) {
   const [step, setStep] = useState(1);
+  const [lang, setLang] = useState<Language>("tr");
   const [data, setData] = useState<CalculatorData>({
     propertyType: "",
     location: "",
@@ -65,6 +43,9 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
     batteryInterest: "",
   });
   const [showResults, setShowResults] = useState(false);
+
+  const t = translations[lang];
+  const rtl = isRTL(lang);
 
   const totalSteps = 7;
   const progress = (step / totalSteps) * 100;
@@ -85,22 +66,14 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
 
   const canProceed = () => {
     switch (step) {
-      case 1:
-        return data.propertyType !== "";
-      case 2:
-        return data.location !== "";
-      case 3:
-        return data.monthlyBill > 0;
-      case 4:
-        return data.propertySize > 0;
-      case 5:
-        return data.heatingSystem !== "";
-      case 6:
-        return data.coolingNeed !== "";
-      case 7:
-        return data.batteryInterest !== "";
-      default:
-        return false;
+      case 1: return data.propertyType !== "";
+      case 2: return data.location !== "";
+      case 3: return data.monthlyBill > 0;
+      case 4: return data.propertySize > 0;
+      case 5: return data.heatingSystem !== "";
+      case 6: return data.coolingNeed !== "";
+      case 7: return data.batteryInterest !== "";
+      default: return false;
     }
   };
 
@@ -124,36 +97,76 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
   const treesEquivalent = Math.round(co2Saved / 20);
 
   const getSystemComponents = () => {
-    const components = ["Güneş Paneli Sistemi"];
-    if (data.heatingSystem !== "none") components.push("Isı Pompası (Vaillant)");
-    if (data.coolingNeed !== "no") components.push("Akıllı Klima (Samsung)");
-    if (data.batteryInterest === "yes") components.push("Enerji Depolama (BYD)");
+    const components = [t.solarPanel];
+    if (data.heatingSystem !== "none") components.push(t.heatPump);
+    if (data.coolingNeed !== "no") components.push(t.smartAC);
+    if (data.batteryInterest === "yes") components.push(t.batteryStorage);
     return components;
   };
 
+  const propertyTypes = [
+    { id: "villa", label: t.propertyVilla, description: t.propertyVillaDesc, icon: Home, gradient: "from-amber-500 to-orange-600" },
+    { id: "apartment", label: t.propertyApartment, description: t.propertyApartmentDesc, icon: Building2, gradient: "from-sky-500 to-blue-600" },
+    { id: "commercial", label: t.propertyCommercial, description: t.propertyCommercialDesc, icon: Store, gradient: "from-emerald-500 to-green-600" },
+  ];
+
+  const heatingSystems = [
+    { id: "gas", label: t.heatingGas, description: t.heatingGasDesc, icon: Flame },
+    { id: "electric", label: t.heatingElectric, description: t.heatingElectricDesc, icon: Zap },
+    { id: "coal", label: t.heatingCoal, description: t.heatingCoalDesc, icon: Flame },
+    { id: "none", label: t.heatingNone, description: t.heatingNoneDesc, icon: Home },
+  ];
+
+  const coolingOptions = [
+    { id: "yes", label: t.coolingYes, description: t.coolingYesDesc },
+    { id: "partial", label: t.coolingPartial, description: t.coolingPartialDesc },
+    { id: "no", label: t.coolingNo, description: t.coolingNoDesc },
+  ];
+
+  const batteryOptions = [
+    { id: "yes", label: t.batteryYes, description: t.batteryYesDesc },
+    { id: "no", label: t.batteryNo, description: t.batteryNoDesc },
+  ];
+
+  const LanguageSelector = () => (
+    <div className="flex items-center justify-center gap-2 mb-6 flex-wrap">
+      {(Object.keys(languageNames) as Language[]).map((l) => (
+        <button
+          key={l}
+          onClick={() => setLang(l)}
+          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
+            lang === l
+              ? "bg-primary text-primary-foreground"
+              : "bg-muted text-muted-foreground hover-elevate"
+          }`}
+          data-testid={`button-lang-${l}`}
+        >
+          {languageNames[l]}
+        </button>
+      ))}
+    </div>
+  );
+
   if (showResults) {
     return (
-      <section id="calculator" className="py-6 md:py-8 bg-background relative overflow-hidden" data-testid="section-calculator">
+      <section id="calculator" className="py-6 md:py-8 bg-background relative overflow-hidden" dir={rtl ? "rtl" : "ltr"} data-testid="section-calculator">
         <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
         
         <div className="max-w-3xl mx-auto px-6 md:px-8 relative">
+          <LanguageSelector />
           <Card className="overflow-hidden border-emerald-500/30 bg-gradient-to-br from-card via-card to-emerald-500/5 shadow-2xl shadow-emerald-500/10">
             <CardContent className="p-8 md:p-12">
               <div className="text-center mb-10">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-emerald-500/30">
                   <Check className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold text-foreground mb-3">
-                  4'ü 1 Arada Sistem Analiziniz Hazır!
-                </h3>
-                <p className="text-lg text-muted-foreground">
-                  İşte {data.location || "bölgeniz"} için özel hesaplanan potansiyel kazancınız
-                </p>
+                <h3 className="text-3xl font-bold text-foreground mb-3">{t.resultsTitle}</h3>
+                <p className="text-lg text-muted-foreground">{t.resultsSubtitle}</p>
               </div>
 
               <div className="bg-primary/5 rounded-xl p-4 mb-8 border border-primary/20">
-                <h4 className="font-semibold text-foreground mb-3 text-sm">Önerilen Sistem Bileşenleri:</h4>
+                <h4 className="font-semibold text-foreground mb-3 text-sm">{t.systemComponents}</h4>
                 <div className="flex flex-wrap gap-2">
                   {getSystemComponents().map((comp, i) => (
                     <span key={i} className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium text-primary">
@@ -166,52 +179,44 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                 <div className="text-center p-6 bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl border border-primary/20">
                   <Banknote className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <div className="text-4xl font-bold text-primary mb-1">
-                    ₺{estimatedMonthlySavings.toLocaleString()}
-                  </div>
-                  <p className="text-sm text-muted-foreground">Aylık Tasarruf</p>
+                  <div className="text-4xl font-bold text-primary mb-1">₺{estimatedMonthlySavings.toLocaleString()}</div>
+                  <p className="text-sm text-muted-foreground">{t.monthlySavings}</p>
                 </div>
                 <div className="text-center p-6 bg-gradient-to-br from-accent/20 to-accent/5 rounded-xl border border-accent/20">
                   <TrendingUp className="w-8 h-8 text-accent mx-auto mb-3" />
-                  <div className="text-4xl font-bold text-accent mb-1">
-                    ₺{yearlySavings.toLocaleString()}
-                  </div>
-                  <p className="text-sm text-muted-foreground">Yıllık Tasarruf</p>
+                  <div className="text-4xl font-bold text-accent mb-1">₺{yearlySavings.toLocaleString()}</div>
+                  <p className="text-sm text-muted-foreground">{t.yearlySavings}</p>
                 </div>
                 <div className="text-center p-6 bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 rounded-xl border border-emerald-500/20">
                   <Leaf className="w-8 h-8 text-emerald-500 mx-auto mb-3" />
-                  <div className="text-4xl font-bold text-emerald-500 mb-1">
-                    {treesEquivalent}
-                  </div>
-                  <p className="text-sm text-muted-foreground">Ağaç Eşdeğeri/Yıl</p>
+                  <div className="text-4xl font-bold text-emerald-500 mb-1">{treesEquivalent}</div>
+                  <p className="text-sm text-muted-foreground">{t.treesEquivalent}</p>
                 </div>
               </div>
 
               <div className="bg-background/50 rounded-xl p-6 mb-8 border border-border/50">
-                <h4 className="font-semibold text-foreground mb-4">Yatırım Özeti</h4>
+                <h4 className="font-semibold text-foreground mb-4">{t.investmentSummary}</h4>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
-                    <span className="text-muted-foreground">Tahmini Sistem Maliyeti:</span>
+                    <span className="text-muted-foreground">{t.estimatedCost}</span>
                     <span className="block font-semibold text-foreground">₺{estimatedCost.toLocaleString()}</span>
                   </div>
                   <div>
-                    <span className="text-muted-foreground">Geri Ödeme Süresi:</span>
-                    <span className="block font-semibold text-foreground">~{roiYears} Yıl</span>
+                    <span className="text-muted-foreground">{t.paybackPeriod}</span>
+                    <span className="block font-semibold text-foreground">~{roiYears} {t.years}</span>
                   </div>
                   <div>
-                    <span className="text-muted-foreground">10 Yıllık Toplam Tasarruf:</span>
+                    <span className="text-muted-foreground">{t.tenYearSavings}</span>
                     <span className="block font-semibold text-emerald-400">₺{(yearlySavings * 10).toLocaleString()}</span>
                   </div>
                   <div>
-                    <span className="text-muted-foreground">Yıllık CO₂ Azaltma:</span>
-                    <span className="block font-semibold text-foreground">{co2Saved} ton</span>
+                    <span className="text-muted-foreground">{t.yearlyCO2}</span>
+                    <span className="block font-semibold text-foreground">{co2Saved} {t.tons}</span>
                   </div>
                 </div>
               </div>
 
-              <p className="text-center text-muted-foreground text-sm mb-6">
-                Bu hesaplama tahmini değerlerdir. Kesin fiyat için ücretsiz keşif randevusu alın.
-              </p>
+              <p className="text-center text-muted-foreground text-sm mb-6">{t.disclaimer}</p>
 
               <Button
                 className="w-full py-6 text-lg bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg shadow-accent/30"
@@ -219,8 +224,8 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                 onClick={() => onComplete?.(data)}
                 data-testid="button-get-quote"
               >
-                Ücretsiz Keşif Randevusu Al
-                <ArrowRight className="w-5 h-5 ml-2" />
+                {t.ctaButton}
+                <ArrowRight className={`w-5 h-5 ${rtl ? "mr-2 rotate-180" : "ml-2"}`} />
               </Button>
             </CardContent>
           </Card>
@@ -230,65 +235,57 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
   }
 
   return (
-    <section id="calculator" className="py-6 md:py-8 bg-gradient-to-b from-card/30 to-background relative overflow-hidden" data-testid="section-calculator">
+    <section id="calculator" className="py-6 md:py-8 bg-gradient-to-b from-card/30 to-background relative overflow-hidden" dir={rtl ? "rtl" : "ltr"} data-testid="section-calculator">
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
       
       <div className="max-w-2xl mx-auto px-6 md:px-8 relative">
+        <LanguageSelector />
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-5 py-2 mb-6">
             <Calculator className="w-4 h-4 text-amber-400" />
-            <span className="text-sm font-medium text-foreground">4'ü 1 Arada Sistem Hesaplama</span>
+            <span className="text-sm font-medium text-foreground">{t.badge}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Antalya'da Enerji Sistemi ile{" "}
+            {t.title}{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
-              Ne Kadar Tasarruf Edersiniz?
+              {t.titleHighlight}
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Akdeniz bölgesi için özel 4'ü 1 arada hesaplama: Güneş paneli, ısı pompası, klima ve batarya 
-            yatırımınızın potansiyel getirisini öğrenin - <span className="text-foreground font-medium">sadece 2 dakika!</span>
-          </p>
+          <p className="text-lg text-muted-foreground">{t.subtitle}</p>
         </div>
 
         <Card className="overflow-hidden border-border/50 bg-card/90 backdrop-blur-sm shadow-xl">
           <CardContent className="p-8">
             <div className="mb-8">
               <div className="flex items-center justify-between text-sm text-muted-foreground mb-3">
-                <span className="font-medium">Adım {step} / {totalSteps}</span>
-                <span>{Math.round(progress)}% Tamamlandı</span>
+                <span className="font-medium">{t.step} {step} {t.of} {totalSteps}</span>
+                <span>{Math.round(progress)}% {t.completed}</span>
               </div>
               <Progress value={progress} className="h-2" />
             </div>
 
             {step === 1 && (
               <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-foreground">Mülkünüzün Türünü Seçin</h3>
-                <p className="text-muted-foreground">Hangi tip yapıya sistem kurulacak?</p>
+                <h3 className="text-xl font-semibold text-foreground">{t.step1Title}</h3>
+                <p className="text-muted-foreground">{t.step1Subtitle}</p>
                 <div className="grid grid-cols-1 gap-4">
                   {propertyTypes.map((type) => (
                     <button
                       key={type.id}
                       onClick={() => setData({ ...data, propertyType: type.id })}
                       className={`p-6 rounded-xl border-2 transition-all hover-elevate active-elevate-2 text-left flex items-center gap-5 ${
-                        data.propertyType === type.id
-                          ? "border-primary bg-primary/10"
-                          : "border-border/50 bg-background/50"
+                        data.propertyType === type.id ? "border-primary bg-primary/10" : "border-border/50 bg-background/50"
                       }`}
                       data-testid={`button-property-${type.id}`}
                     >
                       <div className={`w-14 h-14 rounded-xl flex items-center justify-center shadow-lg ${
-                        data.propertyType === type.id 
-                          ? `bg-gradient-to-br ${type.gradient}` 
-                          : "bg-muted"
+                        data.propertyType === type.id ? `bg-gradient-to-br ${type.gradient}` : "bg-muted"
                       }`}>
                         <type.icon className={`w-7 h-7 ${data.propertyType === type.id ? "text-white" : "text-muted-foreground"}`} />
                       </div>
                       <div>
-                        <span className={`block font-semibold text-lg ${
-                          data.propertyType === type.id ? "text-primary" : "text-foreground"
-                        }`}>
+                        <span className={`block font-semibold text-lg ${data.propertyType === type.id ? "text-primary" : "text-foreground"}`}>
                           {type.label}
                         </span>
                         <span className="text-sm text-muted-foreground">{type.description}</span>
@@ -301,30 +298,27 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
 
             {step === 2 && (
               <div className="space-y-6">
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Konumunuz</h3>
-                  <p className="text-muted-foreground">Mülkünüz hangi bölgede? Güneşlenme oranı tasarrufu etkiler.</p>
-                </div>
+                <h3 className="text-xl font-semibold text-foreground">{t.step2Title}</h3>
+                <p className="text-muted-foreground">{t.step2Subtitle}</p>
                 <div className="grid grid-cols-2 gap-4">
-                  {locations.map((loc) => (
-                    <button
-                      key={loc.id}
-                      onClick={() => setData({ ...data, location: loc.label })}
-                      className={`p-4 rounded-xl border-2 text-left transition-all hover-elevate active-elevate-2 ${
-                        data.location === loc.label
-                          ? "border-primary bg-primary/10"
-                          : "border-border/50 bg-background/50"
-                      }`}
-                      data-testid={`button-location-${loc.id}`}
-                    >
-                      <span className={`block font-semibold ${
-                        data.location === loc.label ? "text-primary" : "text-foreground"
-                      }`}>
-                        {loc.label}
-                      </span>
-                      <span className="text-xs text-muted-foreground">Güneş: {loc.sun}</span>
-                    </button>
-                  ))}
+                  {locationData.map((loc) => {
+                    const locLabel = t[loc.key];
+                    return (
+                      <button
+                        key={loc.id}
+                        onClick={() => setData({ ...data, location: loc.id })}
+                        className={`p-4 rounded-xl border-2 text-left transition-all hover-elevate active-elevate-2 ${
+                          data.location === loc.id ? "border-primary bg-primary/10" : "border-border/50 bg-background/50"
+                        }`}
+                        data-testid={`button-location-${loc.id}`}
+                      >
+                        <span className={`block font-semibold ${data.location === loc.id ? "text-primary" : "text-foreground"}`}>
+                          {locLabel}
+                        </span>
+                        <span className="text-xs text-muted-foreground">{t.sunPrefix} {loc.sun} {t.hoursPerYear}</span>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             )}
@@ -332,14 +326,12 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
             {step === 3 && (
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Aylık Enerji Faturanız</h3>
-                  <p className="text-muted-foreground">Mevcut aylık toplam enerji harcamanız ne kadar?</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{t.step3Title}</h3>
+                  <p className="text-muted-foreground">{t.step3Subtitle}</p>
                 </div>
                 <div>
-                  <Label htmlFor="monthlyBill" className="text-base font-medium">
-                    Aylık Toplam Enerji Faturası (₺)
-                  </Label>
-                  <p className="text-sm text-muted-foreground mb-3">Elektrik + Doğalgaz toplamı</p>
+                  <Label htmlFor="monthlyBill" className="text-base font-medium">{t.step3Label}</Label>
+                  <p className="text-sm text-muted-foreground mb-3">{t.step3Hint}</p>
                   <Input
                     id="monthlyBill"
                     type="number"
@@ -356,14 +348,12 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
             {step === 4 && (
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Mülk Alanı</h3>
-                  <p className="text-muted-foreground">Toplam kapalı alanı belirtin - sistem boyutlandırması için gerekli.</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{t.step4Title}</h3>
+                  <p className="text-muted-foreground">{t.step4Subtitle}</p>
                 </div>
                 <div>
-                  <Label htmlFor="propertySize" className="text-base font-medium">
-                    Mülk Alanı (m²)
-                  </Label>
-                  <p className="text-sm text-muted-foreground mb-3">Toplam kapalı alan (brüt)</p>
+                  <Label htmlFor="propertySize" className="text-base font-medium">{t.step4Label}</Label>
+                  <p className="text-sm text-muted-foreground mb-3">{t.step4Hint}</p>
                   <Input
                     id="propertySize"
                     type="number"
@@ -380,8 +370,8 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
             {step === 5 && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Mevcut Isıtma Sisteminiz</h3>
-                  <p className="text-muted-foreground">Şu an hangi ısıtma yöntemini kullanıyorsunuz? Isı pompası ile değiştirilebilir.</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{t.step5Title}</h3>
+                  <p className="text-muted-foreground">{t.step5Subtitle}</p>
                 </div>
                 <div className="grid grid-cols-1 gap-4">
                   {heatingSystems.map((system) => (
@@ -389,23 +379,17 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                       key={system.id}
                       onClick={() => setData({ ...data, heatingSystem: system.id })}
                       className={`p-5 rounded-xl border-2 text-left transition-all hover-elevate active-elevate-2 flex items-center gap-4 ${
-                        data.heatingSystem === system.id
-                          ? "border-primary bg-primary/10"
-                          : "border-border/50 bg-background/50"
+                        data.heatingSystem === system.id ? "border-primary bg-primary/10" : "border-border/50 bg-background/50"
                       }`}
                       data-testid={`button-heating-${system.id}`}
                     >
                       <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
-                        data.heatingSystem === system.id 
-                          ? "bg-primary/20" 
-                          : "bg-muted"
+                        data.heatingSystem === system.id ? "bg-primary/20" : "bg-muted"
                       }`}>
                         <system.icon className={`w-6 h-6 ${data.heatingSystem === system.id ? "text-primary" : "text-muted-foreground"}`} />
                       </div>
                       <div>
-                        <span className={`block font-semibold ${
-                          data.heatingSystem === system.id ? "text-primary" : "text-foreground"
-                        }`}>
+                        <span className={`block font-semibold ${data.heatingSystem === system.id ? "text-primary" : "text-foreground"}`}>
                           {system.label}
                         </span>
                         <span className="text-sm text-muted-foreground">{system.description}</span>
@@ -419,8 +403,8 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
             {step === 6 && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Klima / Soğutma İhtiyacınız</h3>
-                  <p className="text-muted-foreground">Yaz aylarında klima kullanıyor musunuz? Akıllı klima sistemi önerilir.</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{t.step6Title}</h3>
+                  <p className="text-muted-foreground">{t.step6Subtitle}</p>
                 </div>
                 <div className="grid grid-cols-1 gap-4">
                   {coolingOptions.map((option) => (
@@ -428,23 +412,17 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                       key={option.id}
                       onClick={() => setData({ ...data, coolingNeed: option.id })}
                       className={`p-5 rounded-xl border-2 text-left transition-all hover-elevate active-elevate-2 flex items-center gap-4 ${
-                        data.coolingNeed === option.id
-                          ? "border-primary bg-primary/10"
-                          : "border-border/50 bg-background/50"
+                        data.coolingNeed === option.id ? "border-primary bg-primary/10" : "border-border/50 bg-background/50"
                       }`}
                       data-testid={`button-cooling-${option.id}`}
                     >
                       <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
-                        data.coolingNeed === option.id 
-                          ? "bg-primary/20" 
-                          : "bg-muted"
+                        data.coolingNeed === option.id ? "bg-primary/20" : "bg-muted"
                       }`}>
                         <Snowflake className={`w-6 h-6 ${data.coolingNeed === option.id ? "text-primary" : "text-muted-foreground"}`} />
                       </div>
                       <div>
-                        <span className={`block font-semibold ${
-                          data.coolingNeed === option.id ? "text-primary" : "text-foreground"
-                        }`}>
+                        <span className={`block font-semibold ${data.coolingNeed === option.id ? "text-primary" : "text-foreground"}`}>
                           {option.label}
                         </span>
                         <span className="text-sm text-muted-foreground">{option.description}</span>
@@ -458,8 +436,8 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
             {step === 7 && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Enerji Bağımsızlığı</h3>
-                  <p className="text-muted-foreground">Batarya depolama sistemi ile 24 saat enerji bağımsızlığı ister misiniz?</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{t.step7Title}</h3>
+                  <p className="text-muted-foreground">{t.step7Subtitle}</p>
                 </div>
                 <div className="grid grid-cols-1 gap-4">
                   {batteryOptions.map((option) => (
@@ -467,23 +445,17 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                       key={option.id}
                       onClick={() => setData({ ...data, batteryInterest: option.id })}
                       className={`p-5 rounded-xl border-2 text-left transition-all hover-elevate active-elevate-2 flex items-center gap-4 ${
-                        data.batteryInterest === option.id
-                          ? "border-primary bg-primary/10"
-                          : "border-border/50 bg-background/50"
+                        data.batteryInterest === option.id ? "border-primary bg-primary/10" : "border-border/50 bg-background/50"
                       }`}
                       data-testid={`button-battery-${option.id}`}
                     >
                       <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
-                        data.batteryInterest === option.id 
-                          ? "bg-primary/20" 
-                          : "bg-muted"
+                        data.batteryInterest === option.id ? "bg-primary/20" : "bg-muted"
                       }`}>
                         <Battery className={`w-6 h-6 ${data.batteryInterest === option.id ? "text-primary" : "text-muted-foreground"}`} />
                       </div>
                       <div>
-                        <span className={`block font-semibold ${
-                          data.batteryInterest === option.id ? "text-primary" : "text-foreground"
-                        }`}>
+                        <span className={`block font-semibold ${data.batteryInterest === option.id ? "text-primary" : "text-foreground"}`}>
                           {option.label}
                         </span>
                         <span className="text-sm text-muted-foreground">{option.description}</span>
@@ -494,7 +466,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
               </div>
             )}
 
-            <div className="flex items-center justify-between gap-4 mt-10 pt-6 border-t border-border/50">
+            <div className={`flex items-center justify-between gap-4 mt-10 pt-6 border-t border-border/50 ${rtl ? "flex-row-reverse" : ""}`}>
               <Button
                 variant="outline"
                 onClick={handleBack}
@@ -502,8 +474,8 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                 className="h-12"
                 data-testid="button-calc-back"
               >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Geri
+                <ArrowLeft className={`w-4 h-4 ${rtl ? "ml-2 rotate-180" : "mr-2"}`} />
+                {t.back}
               </Button>
               <Button
                 onClick={handleNext}
@@ -511,16 +483,14 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                 className="h-12 px-8 bg-gradient-to-r from-primary to-blue-600 border-0"
                 data-testid="button-calc-next"
               >
-                {step === totalSteps ? "Sonucu Gör" : "Devam Et"}
-                <ArrowRight className="w-4 h-4 ml-2" />
+                {step === totalSteps ? t.seeResults : t.continue}
+                <ArrowRight className={`w-4 h-4 ${rtl ? "mr-2 rotate-180" : "ml-2"}`} />
               </Button>
             </div>
           </CardContent>
         </Card>
 
-        <p className="text-center text-sm text-muted-foreground mt-6">
-          Hiçbir kişisel bilgi istenmez. Sonuçlar tamamen anonim hesaplanır.
-        </p>
+        <p className="text-center text-sm text-muted-foreground mt-6">{t.privacyNote}</p>
       </div>
     </section>
   );
