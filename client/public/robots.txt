@@ -26,30 +26,8 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-# AI Crawlers - Allowed for training and indexing
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: Anthropic-AI
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
 # ============================================
-# KEYWORDS & SERVICES - For AI/Bot Extraction
+# KEYWORDS & SERVICES - For Search Engines
 # ============================================
 
 # COMPANY INFO
