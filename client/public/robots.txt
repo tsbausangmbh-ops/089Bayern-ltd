@@ -59,11 +59,11 @@ Allow: /
 # Type: LocalBusiness, EnergyCompany, SolarInstaller
 # Founded: Munich, Germany
 # Contact: +90 507 183 2036
-# Email: info@089bayern.com
+# Emails (all countries): info@089bayern.com
 # Websites: 
-#   Main:     https://089bayern.com
-#   Germany:  https://089bayern.de
-#   Croatia:  https://089bayern.hr
+#   Main:     https://089bayern.com   | info@089bayern.com
+#   Germany:  https://089bayern.de    | info@089bayern.com
+#   Croatia:  https://089bayern.hr    | info@089bayern.com
 
 # SERVICE AREAS - GERMANY (Headquarters)
 # München, Bayern, Deutschland
