@@ -15,7 +15,7 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
 
   return (
     <section
-      className="relative pt-12 pb-8 overflow-hidden"
+      className="relative pt-6 pb-8 overflow-hidden"
       data-testid="section-hero"
     >
       <div
