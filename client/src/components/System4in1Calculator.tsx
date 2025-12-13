@@ -681,18 +681,18 @@ const EUR_TO_TL_RATE = 38.5;
 // 089 Bayern System Pricing (EUR) with 30% Turkey surcharge
 const SYSTEM_PRICING = {
   standard: {
-    baseEUR: 28000,
-    turkeyEUR: 36400, // +30%
+    baseEUR: 24000,
+    turkeyEUR: 31200, // +30%
     powerKW: 6,
   },
   medium: {
-    baseEUR: 42000,
-    turkeyEUR: 54600, // +30%
+    baseEUR: 32000,
+    turkeyEUR: 41600, // +30%
     powerKW: 12,
   },
   premium: {
-    baseEUR: 65000,
-    turkeyEUR: 84500, // +30%
+    baseEUR: 45000,
+    turkeyEUR: 58500, // +30%
     powerKW: 16,
   },
 };
@@ -787,8 +787,8 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       label: t.systemStandard, 
       desc: t.standardDesc,
       power: "6 kW",
-      priceEUR: "€36.400",
-      priceTL: `₺${Math.round(36400 * EUR_TO_TL_RATE).toLocaleString()}`,
+      priceEUR: "€31.200",
+      priceTL: `₺${Math.round(31200 * EUR_TO_TL_RATE).toLocaleString()}`,
       icon: Star,
       gradient: "from-slate-500 to-slate-600",
       badge: null,
@@ -798,8 +798,8 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       label: t.systemMedium, 
       desc: t.mediumDesc,
       power: "12 kW",
-      priceEUR: "€54.600",
-      priceTL: `₺${Math.round(54600 * EUR_TO_TL_RATE).toLocaleString()}`,
+      priceEUR: "€41.600",
+      priceTL: `₺${Math.round(41600 * EUR_TO_TL_RATE).toLocaleString()}`,
       icon: Sparkles,
       gradient: "from-blue-500 to-blue-600",
       badge: t.popular,
@@ -809,8 +809,8 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       label: t.systemPremium, 
       desc: t.premiumDesc,
       power: "16 kW",
-      priceEUR: "€84.500",
-      priceTL: `₺${Math.round(84500 * EUR_TO_TL_RATE).toLocaleString()}`,
+      priceEUR: "€58.500",
+      priceTL: `₺${Math.round(58500 * EUR_TO_TL_RATE).toLocaleString()}`,
       icon: Crown,
       gradient: "from-amber-500 to-orange-600",
       badge: t.bestValue,
