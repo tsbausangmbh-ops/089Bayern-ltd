@@ -488,9 +488,9 @@ export default function Vorteile() {
         </div>
       </section>
 
-      <section className="py-16 bg-muted/30" data-testid="section-stats">
+      <section className="py-12 md:py-16 bg-muted/30" data-testid="section-stats">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.statsTitle}</h2>
           </div>
           
@@ -512,9 +512,9 @@ export default function Vorteile() {
         </div>
       </section>
 
-      <section className="py-16 bg-background" data-testid="section-free-energy">
+      <section className="py-12 md:py-16 bg-background" data-testid="section-free-energy">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-14">
             <Badge variant="secondary" className="mb-4">
               <Sun className="w-4 h-4 mr-2" />
               {c.badge}
@@ -527,7 +527,7 @@ export default function Vorteile() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {freeEnergy.map((item, index) => (
               <Card
                 key={index}
@@ -547,9 +547,9 @@ export default function Vorteile() {
         </div>
       </section>
 
-      <section className="py-16 bg-muted/30" data-testid="section-4in1-system">
+      <section className="py-12 md:py-16 bg-muted/30" data-testid="section-4in1-system">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-14">
             <Badge variant="secondary" className="mb-4">
               <Plug className="w-4 h-4 mr-2" />
               4 in 1
@@ -562,7 +562,7 @@ export default function Vorteile() {
             </p>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-10">
             {systems.map((system, index) => (
               <Card
                 key={index}
@@ -597,9 +597,9 @@ export default function Vorteile() {
         </div>
       </section>
 
-      <section className="py-16 bg-background" data-testid="section-expansions">
+      <section className="py-12 md:py-16 bg-background" data-testid="section-expansions">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-14">
             <Badge variant="secondary" className="mb-4">
               <Home className="w-4 h-4 mr-2" />
               Modular
@@ -612,7 +612,7 @@ export default function Vorteile() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {expansions.map((expansion, index) => (
               <Card
                 key={index}
@@ -635,13 +635,13 @@ export default function Vorteile() {
         </div>
       </section>
 
-      <section className="py-16 bg-muted/30" data-testid="section-comparison">
+      <section className="py-12 md:py-16 bg-muted/30" data-testid="section-comparison">
         <div className="max-w-5xl mx-auto px-6 md:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.comparisonTitle}</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <Card className="border-border/50 bg-card/50" data-testid="card-comparison-traditional">
               <CardContent className="p-8">
                 <div className="flex items-center gap-3 mb-6">
@@ -679,9 +679,9 @@ export default function Vorteile() {
         </div>
       </section>
 
-      <section className="py-16 bg-background" data-testid="section-cta-bottom">
+      <section className="py-12 md:py-16 bg-background" data-testid="section-cta-bottom">
         <div className="max-w-4xl mx-auto px-6 md:px-8">
-          <div className="bg-gradient-to-r from-amber-500/20 via-orange-500/10 to-yellow-500/20 backdrop-blur-lg rounded-2xl p-8 md:p-12 border border-amber-500/20 text-center">
+          <div className="bg-gradient-to-r from-amber-500/20 via-orange-500/10 to-yellow-500/20 backdrop-blur-lg rounded-2xl p-10 md:p-14 border border-amber-500/20 text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               {c.ctaTitle}
             </h3>
