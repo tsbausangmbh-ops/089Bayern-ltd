@@ -31,7 +31,7 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
             <div className="w-8 h-8 bg-white/20 rounded-md flex items-center justify-center">
               <span className="text-white font-bold text-xs">089</span>
             </div>
-            <span className="text-white text-sm font-bold">Bayern 4-in-1 German System</span>
+            <span className="text-white text-sm font-bold">{t.hero.systemBadge}</span>
           </div>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-4">
