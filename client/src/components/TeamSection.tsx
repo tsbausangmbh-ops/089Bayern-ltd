@@ -45,9 +45,9 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section id="team" className="py-6 md:py-8 bg-muted/30" data-testid="section-team">
+    <section id="team" className="py-4 md:py-5 bg-muted/30" data-testid="section-team">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="text-center mb-8">
+        <div className="text-center mb-5">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 mb-4">
             <MessageCircle className="w-4 h-4 text-amber-400" />
             <span className="text-sm font-medium text-foreground">Uzman Ekip</span>
@@ -134,7 +134,7 @@ export default function TeamSection() {
           ))}
         </div>
 
-        <div className="mt-8 text-center">
+        <div className="mt-5 text-center">
           <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-white/10 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-foreground mb-4">
               Antalya'da{" "}

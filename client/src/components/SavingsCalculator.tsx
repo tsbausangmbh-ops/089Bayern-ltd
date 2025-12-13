@@ -149,7 +149,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
 
   if (showResults) {
     return (
-      <section id="calculator" className="py-6 md:py-8 bg-background relative overflow-hidden" dir={rtl ? "rtl" : "ltr"} data-testid="section-calculator">
+      <section id="calculator" className="py-4 md:py-5 bg-background relative overflow-hidden" dir={rtl ? "rtl" : "ltr"} data-testid="section-calculator">
         <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
         
@@ -235,7 +235,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
   }
 
   return (
-    <section id="calculator" className="py-6 md:py-8 bg-gradient-to-b from-card/30 to-background relative overflow-hidden" dir={rtl ? "rtl" : "ltr"} data-testid="section-calculator">
+    <section id="calculator" className="py-4 md:py-5 bg-gradient-to-b from-card/30 to-background relative overflow-hidden" dir={rtl ? "rtl" : "ltr"} data-testid="section-calculator">
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
       

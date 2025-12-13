@@ -70,12 +70,12 @@ const features = [
 
 export default function FeaturesGrid() {
   return (
-    <section id="features" className="py-6 md:py-8 bg-background relative overflow-hidden" data-testid="section-features">
+    <section id="features" className="py-4 md:py-5 bg-background relative overflow-hidden" data-testid="section-features">
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
       
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative">
-        <div className="text-center mb-8">
+        <div className="text-center mb-5">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 mb-4">
             <Sparkles className="w-4 h-4 text-amber-400" />
             <span className="text-sm font-medium text-foreground">Komple Enerji Çözümü</span>
@@ -127,7 +127,7 @@ export default function FeaturesGrid() {
           ))}
         </div>
 
-        <div className="mt-8 text-center">
+        <div className="mt-5 text-center">
           <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-white/10">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               Neden Antalya'da Entegre Enerji Sistemi Tercih Etmelisiniz?

@@ -56,17 +56,17 @@ const additionalBenefits = [
 
 export default function BenefitsSection() {
   return (
-    <section id="benefits" className="py-6 md:py-8 bg-gradient-to-b from-card/50 to-background relative overflow-hidden" data-testid="section-benefits">
+    <section id="benefits" className="py-4 md:py-5 bg-gradient-to-b from-card/50 to-background relative overflow-hidden" data-testid="section-benefits">
       <div className="absolute top-1/2 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 mb-4">
+        <div className="text-center mb-5">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 mb-3">
             <Award className="w-4 h-4 text-amber-400" />
             <span className="text-sm font-medium text-foreground">Neden 089 Bayern?</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
             Akdeniz'de Güneş Enerjisi{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
               Yatırımının Avantajları
@@ -78,7 +78,7 @@ export default function BenefitsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">
           {mainBenefits.map((benefit, index) => (
             <Card
               key={benefit.title}
@@ -108,7 +108,7 @@ export default function BenefitsSection() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-5">
           {additionalBenefits.map((benefit, index) => (
             <Card key={benefit.title} className="overflow-visible border-border/50 bg-card/80 hover-elevate" data-testid={`additional-benefit-${index}`}>
               <CardContent className="p-4 text-center">

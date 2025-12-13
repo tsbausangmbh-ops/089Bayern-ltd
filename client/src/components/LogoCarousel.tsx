@@ -11,9 +11,9 @@ const logos = [
 
 export default function LogoCarousel() {
   return (
-    <section className="py-4 md:py-6 bg-gradient-to-b from-background to-card/50 border-y border-border/50" data-testid="section-logos">
+    <section className="py-3 md:py-4 bg-gradient-to-b from-background to-card/50 border-y border-border/50" data-testid="section-logos">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="text-center mb-6">
+        <div className="text-center mb-4">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 mb-3">
             <Award className="w-4 h-4 text-amber-400" />
             <span className="text-sm font-medium text-foreground">Premium Markalar</span>
@@ -45,7 +45,7 @@ export default function LogoCarousel() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-6 md:gap-10">
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:gap-6">
           <div className="flex items-center gap-3 bg-card/50 px-4 py-2 rounded-full border border-border/50">
             <div className="w-3 h-3 rounded-full bg-emerald-500 shadow-lg shadow-emerald-500/50" />
             <span className="text-sm text-foreground">Orijinal Ürün Garantisi</span>

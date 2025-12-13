@@ -79,18 +79,24 @@ export default function ChatBot() {
         </Card>
       )}
       
-      <Button
-        onClick={() => setIsOpen(!isOpen)}
-        size="lg"
-        className="w-14 h-14 rounded-full shadow-xl bg-gradient-to-r from-primary to-blue-600 border-0"
-        data-testid="button-open-chat"
-      >
-        {isOpen ? (
-          <X className="w-6 h-6" />
-        ) : (
-          <MessageCircle className="w-6 h-6" />
-        )}
-      </Button>
+      <div className="flex items-end gap-3">
+        <div className="bg-card/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-border/50 text-right max-w-48">
+          <p className="text-sm font-semibold text-foreground">089Bayern Agent für Beratung</p>
+          <p className="text-xs text-muted-foreground mt-1">Beratung, Tipps und 24h Termine vereinbaren</p>
+        </div>
+        <Button
+          onClick={() => setIsOpen(!isOpen)}
+          size="lg"
+          className="w-14 h-14 rounded-full shadow-xl bg-gradient-to-r from-primary to-blue-600 border-0 flex-shrink-0"
+          data-testid="button-open-chat"
+        >
+          {isOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <MessageCircle className="w-6 h-6" />
+          )}
+        </Button>
+      </div>
     </div>
   );
 }
