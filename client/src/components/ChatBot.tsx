@@ -90,14 +90,14 @@ export default function ChatBot() {
         </div>
         <Button
           onClick={() => setIsOpen(!isOpen)}
-          size="lg"
-          className="w-18 h-18 min-w-[72px] min-h-[72px] rounded-full shadow-xl bg-gradient-to-r from-orange-500 to-orange-600 border-0 flex-shrink-0"
+          size="icon"
+          className="w-12 h-12 rounded-full shadow-xl bg-gradient-to-r from-orange-500 to-orange-600 border-0 flex-shrink-0"
           data-testid="button-open-chat"
         >
           {isOpen ? (
-            <X className="w-8 h-8" />
+            <X className="w-5 h-5" />
           ) : (
-            <MessageCircle className="w-8 h-8" />
+            <MessageCircle className="w-5 h-5" />
           )}
         </Button>
       </div>
