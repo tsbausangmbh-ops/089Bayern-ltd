@@ -80,7 +80,7 @@ export default function ChatBot() {
       )}
       
       <div className="flex items-end gap-1.5">
-        <div className="bg-card/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-border/50 text-right max-w-48">
+        <div className="bg-card/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-border/50 text-right w-56">
           <p className="text-sm font-semibold text-foreground">089Bayern Agent für Beratung</p>
           <p className="text-xs text-muted-foreground mt-1">Beratung, Tipps und 24h Termine vereinbaren</p>
         </div>

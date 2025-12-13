@@ -20,8 +20,8 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-background" />
       <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-accent/10" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-8 text-center py-32">
-        <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-10">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-8 text-center py-20">
+        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-4">
           <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-4 py-2 border border-white/10">
             <Award className="w-4 h-4 text-amber-400" />
             <span className="text-white text-sm font-medium">Alman Mühendisliği</span>
@@ -37,7 +37,7 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
         </div>
 
         <h1 
-          className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tight"
+          className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 leading-tight tracking-tight"
           style={{ textShadow: '0 4px 20px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.4)' }}
         >
           Antalya ve Akdeniz'de
@@ -50,14 +50,14 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
         </h1>
 
         <p 
-          className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed font-medium"
+          className="text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto leading-relaxed font-medium"
           style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}
         >
           Alman mühendisliği ile <span className="text-amber-300 font-bold">4'ü 1 Arada Akıllı Enerji Sistemi</span>: 
           Güneş paneli, ısı pompası, akıllı klima ve enerji depolama. Muğla, İzmir, Aydın ve Mersin'de hizmet.
         </p>
 
-        <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-2xl p-8 mb-12 max-w-xl mx-auto border border-white/10">
+        <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-2xl p-6 mb-5 max-w-xl mx-auto border border-white/10">
           <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-amber-400 to-accent bg-clip-text text-transparent mb-2">
             %70'e Kadar
           </div>
@@ -67,7 +67,7 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-5">
           <Button
             size="lg"
             onClick={onCtaClick}
@@ -88,7 +88,7 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
           </Button>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-8">
+        <div className="flex flex-wrap items-center justify-center gap-4">
           {[
             "Vaillant & Samsung Ürünleri",
             "Profesyonel Kurulum",
@@ -101,7 +101,7 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
           ))}
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/10">
+        <div className="mt-6 pt-4 border-t border-white/10">
           <p className="text-white/50 text-sm mb-2">Antalya, Muğla, İzmir, Aydın ve Mersin'de Güvenilen Çözüm Ortağı</p>
           <p className="text-white text-xl font-semibold">500+ Villa ve Konutda Başarılı Güneş Enerjisi Kurulumu</p>
         </div>
