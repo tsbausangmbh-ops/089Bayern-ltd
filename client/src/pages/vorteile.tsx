@@ -503,7 +503,7 @@ export default function Vorteile() {
         </div>
       </section>
 
-      <section className="py-6 md:py-8 bg-muted/30" data-testid="section-stats">
+      <section className="py-4 md:py-5 bg-muted/30" data-testid="section-stats">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.statsTitle}</h2>
@@ -527,7 +527,7 @@ export default function Vorteile() {
         </div>
       </section>
 
-      <section className="py-6 md:py-8 bg-background" data-testid="section-free-energy">
+      <section className="py-4 md:py-5 bg-background" data-testid="section-free-energy">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-8">
             <Badge variant="secondary" className="mb-4">
@@ -562,7 +562,7 @@ export default function Vorteile() {
         </div>
       </section>
 
-      <section className="py-6 md:py-8 bg-muted/30" data-testid="section-4in1-system">
+      <section className="py-4 md:py-5 bg-muted/30" data-testid="section-4in1-system">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-8">
             <Badge variant="secondary" className="mb-4">
@@ -612,7 +612,7 @@ export default function Vorteile() {
         </div>
       </section>
 
-      <section className="py-6 md:py-8 bg-background" data-testid="section-expansions">
+      <section className="py-4 md:py-5 bg-background" data-testid="section-expansions">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-8">
             <Badge variant="secondary" className="mb-4">
@@ -650,7 +650,7 @@ export default function Vorteile() {
         </div>
       </section>
 
-      <section className="py-6 md:py-8 bg-muted/30" data-testid="section-comparison">
+      <section className="py-4 md:py-5 bg-muted/30" data-testid="section-comparison">
         <div className="max-w-5xl mx-auto px-6 md:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.comparisonTitle}</h2>
@@ -694,7 +694,7 @@ export default function Vorteile() {
         </div>
       </section>
 
-      <section className="py-6 md:py-8 bg-background" data-testid="section-cta-bottom">
+      <section className="py-4 md:py-5 bg-background" data-testid="section-cta-bottom">
         <div className="max-w-4xl mx-auto px-6 md:px-8">
           <div className="bg-gradient-to-r from-amber-500/20 via-orange-500/10 to-yellow-500/20 backdrop-blur-lg rounded-2xl p-10 md:p-14 border border-amber-500/20 text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">

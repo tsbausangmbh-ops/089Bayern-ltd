@@ -232,7 +232,7 @@ export default function Systeme() {
         </div>
       </section>
 
-      <section className="py-16 bg-muted/30" data-testid="section-why-integrated">
+      <section className="py-4 md:py-5 bg-muted/30" data-testid="section-why-integrated">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.whyTitle}</h2>
@@ -255,7 +255,7 @@ export default function Systeme() {
         </div>
       </section>
 
-      <section className="py-16 bg-background" data-testid="section-features-detail">
+      <section className="py-4 md:py-5 bg-background" data-testid="section-features-detail">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <Badge variant="secondary" className="mb-4">

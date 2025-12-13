@@ -585,7 +585,7 @@ export default function Rechner() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-16 px-6 bg-muted/30" data-testid="section-how-it-works">
+      <section className="py-4 md:py-5 px-6 bg-muted/30" data-testid="section-how-it-works">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-how-it-works">
@@ -616,7 +616,7 @@ export default function Rechner() {
       </section>
 
       {/* Why Calculate Section */}
-      <section className="py-16 px-6" data-testid="section-why-calculate">
+      <section className="py-4 md:py-5 px-6" data-testid="section-why-calculate">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-why-calculate">
@@ -644,7 +644,7 @@ export default function Rechner() {
       </section>
 
       {/* Systems Overview */}
-      <section className="py-16 px-6 bg-muted/30" data-testid="section-systems">
+      <section className="py-4 md:py-5 px-6 bg-muted/30" data-testid="section-systems">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-accent/10 text-accent border-accent/20">
@@ -677,7 +677,7 @@ export default function Rechner() {
       </section>
 
       {/* CTA to Calculator */}
-      <section className="py-12 px-6 bg-gradient-to-r from-accent to-orange-500" data-testid="section-cta">
+      <section className="py-4 md:py-5 px-6 bg-gradient-to-r from-accent to-orange-500" data-testid="section-cta">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4" data-testid="heading-cta">
             {t.ctaTitle}
@@ -704,7 +704,7 @@ export default function Rechner() {
       </section>
 
       {/* Guarantee Section */}
-      <section className="py-16 px-6 bg-muted/30" data-testid="section-guarantee">
+      <section className="py-4 md:py-5 px-6 bg-muted/30" data-testid="section-guarantee">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-guarantee">
@@ -729,7 +729,7 @@ export default function Rechner() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-6" data-testid="section-faq">
+      <section className="py-4 md:py-5 px-6" data-testid="section-faq">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-faq">
