@@ -84,7 +84,7 @@ export default function FAQSection() {
   return (
     <section 
       id="faq" 
-      className={`py-16 bg-gradient-to-b from-muted/30 to-background ${isRtl ? "rtl" : ""}`} 
+      className={`py-4 md:py-5 bg-gradient-to-b from-muted/30 to-background ${isRtl ? "rtl" : ""}`} 
       dir={isRtl ? "rtl" : "ltr"} 
       data-testid="section-faq-home"
     >

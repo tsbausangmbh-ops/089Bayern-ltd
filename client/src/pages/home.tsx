@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import SEOHead from "@/components/SEOHead";
 import FeaturesGrid from "@/components/FeaturesGrid";
+import ProblemSolverSection from "@/components/ProblemSolverSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import SavingsCalculator from "@/components/SavingsCalculator";
 import LogoCarousel from "@/components/LogoCarousel";
@@ -66,6 +67,7 @@ export default function Home() {
       <Header onCtaClick={handleCtaClick} />
       <HeroSection onCtaClick={handleCtaClick} onLearnMoreClick={handleLearnMoreClick} />
       <FeaturesGrid />
+      <ProblemSolverSection />
       <LogoCarousel />
       <BenefitsSection />
       <SavingsCalculator onComplete={handleCalculatorComplete} />
