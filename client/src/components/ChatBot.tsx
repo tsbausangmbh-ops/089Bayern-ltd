@@ -43,11 +43,11 @@ export default function ChatBot() {
                 <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                   <MessageCircle className="w-4 h-4 text-primary" />
                 </div>
-                <div className="bg-card rounded-xl rounded-tl-none p-4 shadow-sm max-w-[90%]">
-                  <p className="text-base text-foreground">
+                <div className="bg-card rounded-xl rounded-tl-none p-5 shadow-sm max-w-[95%]">
+                  <p className="text-lg font-medium text-foreground">
                     {t.chatbotGreeting}
                   </p>
-                  <p className="text-sm text-muted-foreground mt-3">
+                  <p className="text-base text-muted-foreground mt-3">
                     {t.chatbotHelpText}
                   </p>
                 </div>
