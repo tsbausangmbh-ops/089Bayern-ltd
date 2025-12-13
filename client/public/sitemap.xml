@@ -1,12 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:geo="http://www.google.com/geo/schemas/sitemap/1.0">
   
-  <!-- Homepage -->
+  <!-- Homepage - Turkish (Default) -->
   <url>
-    <loc>https://089bayern.tr</loc>
+    <loc>https://089bayern.tr/</loc>
     <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.tr/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.tr/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.tr/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.tr/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.tr/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.tr/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.tr/?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://089bayern.tr/"/>
+  </url>
+  
+  <!-- Turkish Version -->
+  <url>
+    <loc>https://089bayern.tr/?lang=tr</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- German Version -->
+  <url>
+    <loc>https://089bayern.tr/?lang=de</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- English Version -->
+  <url>
+    <loc>https://089bayern.tr/?lang=en</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Russian Version -->
+  <url>
+    <loc>https://089bayern.tr/?lang=ru</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Ukrainian Version -->
+  <url>
+    <loc>https://089bayern.tr/?lang=uk</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Arabic Version -->
+  <url>
+    <loc>https://089bayern.tr/?lang=ar</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Croatian Version -->
+  <url>
+    <loc>https://089bayern.tr/?lang=hr</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   
 </urlset>
