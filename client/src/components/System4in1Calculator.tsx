@@ -767,9 +767,9 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
   
   // Basis-Amortisation nach Systemgröße (in Jahren)
   const basePaybackBySystem = {
-    standard: 11.5,  // 6 kW - längste Amortisation
-    medium: 10.5,    // 12 kW - mittlere Amortisation  
-    premium: 9.5,    // 16 kW - schnellste Amortisation
+    standard: 13,    // 6 kW - Amortisation 12-14 Jahre
+    medium: 10,      // 12 kW - Amortisation 9-11 Jahre  
+    premium: 8,      // 16 kW - Amortisation 7-9 Jahre
   };
   
   // Anpassung basierend auf Energiekosten (höhere Kosten = schnellere Amortisation)
@@ -929,7 +929,6 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
                       <span className="text-muted-foreground">{t.electricitySavings}</span>
                     </div>
                     <span className="font-bold text-emerald-600">₺{electricitySavings.toLocaleString()}</span>
-                    <span className="text-xs text-muted-foreground ml-1">({Math.round(electricitySavingsRate * 100)}%)</span>
                   </div>
                   <div className="bg-background/50 rounded-lg p-3">
                     <div className="flex items-center gap-2 mb-1">
@@ -937,7 +936,6 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
                       <span className="text-muted-foreground">{t.heatingSavings}</span>
                     </div>
                     <span className="font-bold text-emerald-600">₺{heatingSavings.toLocaleString()}</span>
-                    <span className="text-xs text-muted-foreground ml-1">({Math.round(heatingSavingsRate * 100)}%)</span>
                   </div>
                   <div className="bg-background/50 rounded-lg p-3">
                     <div className="flex items-center gap-2 mb-1">
@@ -945,7 +943,6 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
                       <span className="text-muted-foreground">{t.hotWaterSavings}</span>
                     </div>
                     <span className="font-bold text-emerald-600">₺{hotWaterSavings.toLocaleString()}</span>
-                    <span className="text-xs text-muted-foreground ml-1">({Math.round(hotWaterSavingsRate * 100)}%)</span>
                   </div>
                   <div className="bg-background/50 rounded-lg p-3">
                     <div className="flex items-center gap-2 mb-1">
@@ -953,7 +950,6 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
                       <span className="text-muted-foreground">{t.coolingSavings}</span>
                     </div>
                     <span className="font-bold text-emerald-600">₺{coolingSavings.toLocaleString()}</span>
-                    <span className="text-xs text-muted-foreground ml-1">({Math.round(coolingSavingsRate * 100)}%)</span>
                   </div>
                 </div>
                 <div className="flex justify-between items-center pt-4 border-t border-emerald-500/20">
