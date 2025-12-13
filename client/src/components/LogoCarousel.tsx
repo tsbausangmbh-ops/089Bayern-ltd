@@ -34,13 +34,13 @@ export default function LogoCarousel() {
           {logos.map((logo) => (
             <div
               key={logo.name}
-              className="bg-card/80 rounded-xl p-6 text-center border border-border/50 hover-elevate transition-all group"
+              className="bg-card/80 rounded-xl p-6 border border-border/50 hover-elevate transition-all group flex flex-col items-center justify-center"
               data-testid={`logo-${logo.name.toLowerCase()}`}
             >
-              <div className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors mb-1">
+              <div className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors mb-1 text-center">
                 {logo.name}
               </div>
-              <div className="text-xs text-muted-foreground">{logo.tagline}</div>
+              <div className="text-xs text-muted-foreground text-center">{logo.tagline}</div>
             </div>
           ))}
         </div>
