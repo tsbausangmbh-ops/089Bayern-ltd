@@ -13,9 +13,27 @@ export default function ChatBot() {
   const t = translations[language];
 
   return (
-    <div className="fixed right-4 bottom-24 z-50" data-testid="chatbot-container">
+    <div className="fixed right-4 top-24 z-50" data-testid="chatbot-container">
+      <div className="flex items-start gap-3 mb-3">
+        <div className="bg-card/95 backdrop-blur-sm rounded-xl px-5 py-2 shadow-xl border border-border/50 text-right w-80">
+          <p className="text-sm font-semibold text-foreground leading-tight">{t.chatbotTitle}</p>
+          <p className="text-xs text-muted-foreground leading-tight">{t.chatbotSubtitle}</p>
+        </div>
+        <Button
+          onClick={() => setIsOpen(!isOpen)}
+          size="icon"
+          className="w-12 h-12 rounded-full shadow-xl bg-gradient-to-r from-orange-500 to-orange-600 border-0 flex-shrink-0"
+          data-testid="button-open-chat"
+        >
+          {isOpen ? (
+            <X className="w-5 h-5" />
+          ) : (
+            <MessageCircle className="w-5 h-5" />
+          )}
+        </Button>
+      </div>
       {isOpen && (
-        <Card className="mb-3 w-96 shadow-2xl border-primary/20 overflow-hidden">
+        <Card className="w-96 shadow-2xl border-primary/20 overflow-hidden">
           <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-3 flex items-center justify-between gap-2">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
@@ -82,25 +100,6 @@ export default function ChatBot() {
           </div>
         </Card>
       )}
-      
-      <div className="flex items-end gap-3">
-        <div className="bg-card/95 backdrop-blur-sm rounded-xl px-5 py-2 shadow-xl border border-border/50 text-right w-80">
-          <p className="text-sm font-semibold text-foreground leading-tight">{t.chatbotTitle}</p>
-          <p className="text-xs text-muted-foreground leading-tight">{t.chatbotSubtitle}</p>
-        </div>
-        <Button
-          onClick={() => setIsOpen(!isOpen)}
-          size="icon"
-          className="w-12 h-12 rounded-full shadow-xl bg-gradient-to-r from-orange-500 to-orange-600 border-0 flex-shrink-0"
-          data-testid="button-open-chat"
-        >
-          {isOpen ? (
-            <X className="w-5 h-5" />
-          ) : (
-            <MessageCircle className="w-5 h-5" />
-          )}
-        </Button>
-      </div>
     </div>
   );
 }
