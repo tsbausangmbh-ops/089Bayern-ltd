@@ -138,13 +138,16 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
             <p>&copy; {new Date().getFullYear()} {t.footer.copyright}</p>
             <div className="flex flex-wrap items-center justify-center gap-6">
-              <a href="#" className="hover:text-white transition-colors" data-testid="link-kvkk">
+              <a href="/kvkk" className="hover:text-white transition-colors" data-testid="link-kvkk">
                 {t.footer.privacy}
               </a>
-              <a href="#" className="hover:text-white transition-colors" data-testid="link-privacy">
+              <a href="/gizlilik" className="hover:text-white transition-colors" data-testid="link-privacy">
                 {t.footer.privacyPolicy}
               </a>
-              <a href="#" className="hover:text-white transition-colors" data-testid="link-terms">
+              <a href="/cerez-politikasi" className="hover:text-white transition-colors" data-testid="link-cookies">
+                Çerez Politikası
+              </a>
+              <a href="/sartlar" className="hover:text-white transition-colors" data-testid="link-terms">
                 {t.footer.terms}
               </a>
             </div>

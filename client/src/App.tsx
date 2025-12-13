@@ -6,11 +6,20 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
+import KVKK from "@/pages/kvkk";
+import Gizlilik from "@/pages/gizlilik";
+import CerezPolitikasi from "@/pages/cerez-politikasi";
+import Sartlar from "@/pages/sartlar";
+import CookieBanner from "@/components/CookieBanner";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/kvkk" component={KVKK} />
+      <Route path="/gizlilik" component={Gizlilik} />
+      <Route path="/cerez-politikasi" component={CerezPolitikasi} />
+      <Route path="/sartlar" component={Sartlar} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -23,6 +32,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <CookieBanner />
         </TooltipProvider>
       </LanguageProvider>
     </QueryClientProvider>
