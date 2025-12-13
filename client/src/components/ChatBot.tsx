@@ -83,21 +83,21 @@ export default function ChatBot() {
         </Card>
       )}
       
-      <div className="flex items-end gap-1.5">
-        <div className="bg-card/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-border/50 text-right w-72">
-          <p className="text-sm font-semibold text-foreground">{t.chatbotTitle}</p>
-          <p className="text-xs text-muted-foreground mt-1">{t.chatbotSubtitle}</p>
+      <div className="flex items-end gap-3">
+        <div className="bg-card/95 backdrop-blur-sm rounded-2xl p-5 shadow-xl border border-border/50 text-right w-80">
+          <p className="text-lg font-bold text-foreground">{t.chatbotTitle}</p>
+          <p className="text-sm text-muted-foreground mt-2">{t.chatbotSubtitle}</p>
         </div>
         <Button
           onClick={() => setIsOpen(!isOpen)}
           size="lg"
-          className="w-14 h-14 rounded-full shadow-xl bg-gradient-to-r from-orange-500 to-orange-600 border-0 flex-shrink-0"
+          className="w-18 h-18 min-w-[72px] min-h-[72px] rounded-full shadow-xl bg-gradient-to-r from-orange-500 to-orange-600 border-0 flex-shrink-0"
           data-testid="button-open-chat"
         >
           {isOpen ? (
-            <X className="w-6 h-6" />
+            <X className="w-8 h-8" />
           ) : (
-            <MessageCircle className="w-6 h-6" />
+            <MessageCircle className="w-8 h-8" />
           )}
         </Button>
       </div>
