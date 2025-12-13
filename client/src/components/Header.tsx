@@ -39,7 +39,10 @@ export default function Header({ onCtaClick }: HeaderProps) {
     setIsMobileMenuOpen(false);
   };
 
+  const aboutLabel = language === "de" ? "Über uns" : language === "en" ? "About" : language === "ru" ? "О нас" : language === "uk" ? "Про нас" : language === "ar" ? "من نحن" : "Hakkımızda";
+
   const navItems = [
+    { label: aboutLabel, id: "about", isLink: true, href: "/ueber-uns" },
     { label: t.header.system, id: "features" },
     { label: t.header.benefits, id: "benefits" },
     { label: t.header.calculator, id: "calculator" },
@@ -69,16 +72,29 @@ export default function Header({ onCtaClick }: HeaderProps) {
 
           <nav className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium px-4 py-2 rounded-lg hover-elevate active-elevate-2 transition-all ${
-                  isScrolled ? "text-foreground/80 hover:text-foreground" : "text-white/80 hover:text-white"
-                }`}
-                data-testid={`link-nav-${item.id}`}
-              >
-                {item.label}
-              </button>
+              item.isLink ? (
+                <a
+                  key={item.id}
+                  href={item.href}
+                  className={`text-sm font-medium px-4 py-2 rounded-lg hover-elevate active-elevate-2 transition-all ${
+                    isScrolled ? "text-foreground/80 hover:text-foreground" : "text-white/80 hover:text-white"
+                  }`}
+                  data-testid={`link-nav-${item.id}`}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`text-sm font-medium px-4 py-2 rounded-lg hover-elevate active-elevate-2 transition-all ${
+                    isScrolled ? "text-foreground/80 hover:text-foreground" : "text-white/80 hover:text-white"
+                  }`}
+                  data-testid={`link-nav-${item.id}`}
+                >
+                  {item.label}
+                </button>
+              )
             ))}
           </nav>
 
@@ -133,14 +149,25 @@ export default function Header({ onCtaClick }: HeaderProps) {
         <div className="md:hidden bg-background/98 backdrop-blur-md border-b border-border">
           <nav className="flex flex-col p-4 gap-1">
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-left px-4 py-3 rounded-lg hover-elevate active-elevate-2 text-foreground font-medium"
-                data-testid={`link-mobile-nav-${item.id}`}
-              >
-                {item.label}
-              </button>
+              item.isLink ? (
+                <a
+                  key={item.id}
+                  href={item.href}
+                  className="text-left px-4 py-3 rounded-lg hover-elevate active-elevate-2 text-foreground font-medium"
+                  data-testid={`link-mobile-nav-${item.id}`}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-left px-4 py-3 rounded-lg hover-elevate active-elevate-2 text-foreground font-medium"
+                  data-testid={`link-mobile-nav-${item.id}`}
+                >
+                  {item.label}
+                </button>
+              )
             ))}
             <Button 
               onClick={onCtaClick} 

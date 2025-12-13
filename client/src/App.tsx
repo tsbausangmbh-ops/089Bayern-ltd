@@ -12,6 +12,7 @@ import CerezPolitikasi from "@/pages/cerez-politikasi";
 import Sartlar from "@/pages/sartlar";
 import MesafeliSatis from "@/pages/mesafeli-satis";
 import OnBilgilendirme from "@/pages/on-bilgilendirme";
+import UeberUns from "@/pages/ueber-uns";
 import CookieBanner from "@/components/CookieBanner";
 
 function Router() {
@@ -24,6 +25,7 @@ function Router() {
       <Route path="/sartlar" component={Sartlar} />
       <Route path="/mesafeli-satis" component={MesafeliSatis} />
       <Route path="/on-bilgilendirme" component={OnBilgilendirme} />
+      <Route path="/ueber-uns" component={UeberUns} />
       <Route component={NotFound} />
     </Switch>
   );
