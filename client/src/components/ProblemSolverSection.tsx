@@ -521,14 +521,14 @@ export default function ProblemSolverSection() {
   const isRTL = language === "ar";
 
   return (
-    <section className="py-4 md:py-5 bg-gradient-to-b from-background to-muted/30" dir={isRTL ? "rtl" : "ltr"}>
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="text-center mb-5">
-          <Badge variant="secondary" className="mb-3" data-testid="badge-problemsolver">
+    <section className="py-12 md:py-16 bg-gradient-to-b from-background to-muted/30" dir={isRTL ? "rtl" : "ltr"}>
+      <div className="max-w-5xl mx-auto px-6 md:px-8">
+        <div className="text-center mb-10">
+          <Badge variant="secondary" className="mb-4" data-testid="badge-problemsolver">
             <AlertTriangle className="w-4 h-4 mr-2" />
             {t.badge}
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-2" data-testid="text-problemsolver-title">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3" data-testid="text-problemsolver-title">
             {t.title}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -536,57 +536,49 @@ export default function ProblemSolverSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {t.problems.map((item, index) => (
-            <Card key={index} className="overflow-visible group" data-testid={`card-problem-${index}`}>
-              <CardContent className="p-4 md:p-5">
-                <div className="flex items-start gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-6 h-6 text-destructive" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
-                      <X className="w-4 h-4 text-destructive" />
-                      {item.problem}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
+            <Card key={index} className="overflow-visible hover-elevate h-full" data-testid={`card-problem-${index}`}>
+              <CardContent className="p-6 flex flex-col h-full">
+                <div className="mb-4 flex-1">
+                  <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-4 h-4 text-destructive" />
+                    </div>
+                    {item.problem}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed min-h-[60px]">
+                    {item.description}
+                  </p>
                 </div>
 
                 <div className="border-t pt-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Sun className="w-6 h-6 text-primary" />
+                  <h4 className="font-bold text-base mb-2 flex items-center gap-2 text-primary">
+                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Check className="w-3 h-3" />
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-lg mb-2 flex items-center gap-2 text-primary">
-                        <Check className="w-4 h-4" />
-                        {item.solution}
-                      </h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                        {item.solutionDesc}
-                      </p>
-                      <Badge variant="outline" className="text-xs">
-                        {item.stats}
-                      </Badge>
-                    </div>
-                  </div>
+                    {item.solution}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3 min-h-[48px]">
+                    {item.solutionDesc}
+                  </p>
+                  <Badge variant="outline" className="text-sm font-medium">
+                    {item.stats}
+                  </Badge>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="mt-5 text-center">
-          <Card className="bg-primary/5 border-primary/20 max-w-3xl mx-auto">
+        <div className="mt-10 text-center">
+          <Card className="bg-primary/5 border-primary/20 max-w-2xl mx-auto">
             <CardContent className="p-6 md:p-8">
               <Lightbulb className="w-10 h-10 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl md:text-3xl font-bold mb-4" data-testid="text-problemsolver-cta-title">
+              <h3 className="text-2xl md:text-3xl font-bold mb-3" data-testid="text-problemsolver-cta-title">
                 {t.ctaTitle}
               </h3>
-              <p className="text-muted-foreground mb-4 text-lg">
+              <p className="text-muted-foreground mb-5 text-lg">
                 {t.ctaSubtitle}
               </p>
               <Button 
