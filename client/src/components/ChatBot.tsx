@@ -9,10 +9,10 @@ export default function ChatBot() {
   const [message, setMessage] = useState("");
 
   return (
-    <div className="fixed right-6 bottom-1/3 z-50" data-testid="chatbot-container">
+    <div className="fixed right-4 bottom-24 z-50" data-testid="chatbot-container">
       {isOpen && (
-        <Card className="mb-4 w-80 shadow-2xl border-primary/20 overflow-hidden">
-          <div className="bg-gradient-to-r from-primary to-blue-600 p-4 flex items-center justify-between">
+        <Card className="mb-3 w-72 shadow-2xl border-primary/20 overflow-hidden">
+          <div className="bg-gradient-to-r from-primary to-blue-600 p-3 flex items-center justify-between gap-2">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                 <MessageCircle className="w-5 h-5 text-white" />
@@ -33,7 +33,7 @@ export default function ChatBot() {
             </Button>
           </div>
           
-          <div className="h-72 p-4 bg-muted/30 overflow-y-auto">
+          <div className="h-56 p-3 bg-muted/30 overflow-y-auto">
             <div className="space-y-3">
               <div className="flex gap-2">
                 <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
@@ -51,7 +51,7 @@ export default function ChatBot() {
             </div>
           </div>
           
-          <div className="p-3 border-t border-border bg-card">
+          <div className="p-2 border-t border-border bg-card">
             <form 
               className="flex gap-2"
               onSubmit={(e) => {
