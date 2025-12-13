@@ -7,10 +7,8 @@ User-agent: *
 Allow: /
 Crawl-delay: 1
 
-# Sitemap locations - All Countries
-Sitemap: https://089bayern.tr/sitemap.xml
-Sitemap: https://089bayern.de/sitemap.xml
-Sitemap: https://089bayern.hr/sitemap.xml
+# Sitemap location
+Sitemap: https://089bayern.com/sitemap.xml
 
 # Google
 User-agent: Googlebot
@@ -59,11 +57,8 @@ Allow: /
 # Type: LocalBusiness, EnergyCompany, SolarInstaller
 # Founded: Munich, Germany
 # Contact: +90 507 183 2036
-# Email: info@089bayern.tr
-# Websites: 
-#   Turkey:   https://089bayern.tr
-#   Germany:  https://089bayern.de
-#   Croatia:  https://089bayern.hr
+# Email: info@089bayern.com
+# Website: https://089bayern.com
 
 # SERVICE AREAS - GERMANY (Headquarters)
 # München, Bayern, Deutschland
