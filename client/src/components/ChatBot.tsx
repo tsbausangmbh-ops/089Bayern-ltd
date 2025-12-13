@@ -37,7 +37,7 @@ export default function ChatBot() {
             </Button>
           </div>
           
-          <div className="h-56 p-3 bg-muted/30 overflow-y-auto">
+          <div className="h-80 p-4 bg-muted/30 overflow-y-auto">
             <div className="space-y-3">
               <div className="flex gap-2">
                 <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
