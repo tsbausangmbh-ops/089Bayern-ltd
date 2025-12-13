@@ -6,6 +6,7 @@ export const uiTranslations: Record<Language, {
     system: string;
     benefits: string;
     calculator: string;
+    faq: string;
     team: string;
     ctaButton: string;
   };
@@ -177,6 +178,7 @@ export const uiTranslations: Record<Language, {
       system: "Sistem",
       benefits: "Avantajlar",
       calculator: "Hesaplayıcı",
+      faq: "SSS",
       team: "Ekip",
       ctaButton: "Ücretsiz Teklif",
     },
@@ -366,6 +368,7 @@ export const uiTranslations: Record<Language, {
       system: "System",
       benefits: "Vorteile",
       calculator: "Rechner",
+      faq: "FAQ",
       team: "Team",
       ctaButton: "Kostenloses Angebot",
     },
@@ -555,6 +558,7 @@ export const uiTranslations: Record<Language, {
       system: "System",
       benefits: "Benefits",
       calculator: "Calculator",
+      faq: "FAQ",
       team: "Team",
       ctaButton: "Free Quote",
     },
@@ -744,6 +748,7 @@ export const uiTranslations: Record<Language, {
       system: "Система",
       benefits: "Преимущества",
       calculator: "Калькулятор",
+      faq: "Вопросы",
       team: "Команда",
       ctaButton: "Бесплатное предложение",
     },
@@ -933,6 +938,7 @@ export const uiTranslations: Record<Language, {
       system: "Система",
       benefits: "Переваги",
       calculator: "Калькулятор",
+      faq: "Питання",
       team: "Команда",
       ctaButton: "Безкоштовна пропозиція",
     },
@@ -1122,6 +1128,7 @@ export const uiTranslations: Record<Language, {
       system: "النظام",
       benefits: "المزايا",
       calculator: "الحاسبة",
+      faq: "الأسئلة",
       team: "الفريق",
       ctaButton: "عرض مجاني",
     },
