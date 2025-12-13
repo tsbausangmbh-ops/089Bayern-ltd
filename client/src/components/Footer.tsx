@@ -159,7 +159,7 @@ export default function Footer() {
             <p className="font-medium text-white/70">089 Bayern Enerji Sistemleri Ltd. Sti.</p>
             <p>Sekerhane Mah. Halimaga Sk. Lale Tokus Plaza 6/14, Alanya/Antalya, Turkiye</p>
             <p>Tel: +90 507 183 2036 | +49 173 5994699 | E-posta: info@089bayern.com</p>
-            <p>Yoneticiler: Dalibor Bakmaz (dbakmaz@089bayern.tr) | Mustafa Sakar (msakar@089bayern.tr)</p>
+            <p>Yoneticiler: Dalibor Bakmaz (dbakmaz@089bayern.com) | Mustafa Sakar (msakar@089bayern.com)</p>
             <p>Ticaret Sicil No: [Kayit sonrasi] | MERSIS No: [Kayit sonrasi]</p>
             <p>Vergi Dairesi: [Kayit sonrasi] | Vergi No: [Kayit sonrasi]</p>
           </div>
