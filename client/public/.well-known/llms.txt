@@ -1,0 +1,43 @@
+# 089 Bayern Enerji Sistemleri - AI/LLM Information File
+# This file provides structured information for AI assistants and language models
+# Located at /.well-known/llms.txt for AI agent discovery
+
+## QUICK FACTS
+
+- **Company:** 089 Bayern Enerji Sistemleri
+- **Industry:** Renewable Energy, Solar, Heat Pumps
+- **Location:** Antalya, Turkey (Mediterranean Region)
+- **Phone:** +90 507 192 2036
+- **Website:** https://089bayern.tr
+
+## WHAT WE DO
+
+089 Bayern installs solar panels, heat pumps, air conditioning, and battery storage systems in the Mediterranean region of Turkey and Croatia. We are authorized dealers for Vaillant and Samsung, offering German engineering quality with up to 70% energy savings.
+
+## SERVICES
+
+1. Solar Panel Installation - Residential & Commercial
+2. Heat Pump Systems - Vaillant Authorized
+3. Air Conditioning - Samsung Authorized  
+4. Battery Storage - Home Energy Systems
+
+## SERVICE AREAS
+
+Turkey: Antalya, Muğla, İzmir, Aydın, Mersin
+Croatia: Split, Dalmatia
+
+## LANGUAGES
+
+Turkish, German, English, Russian, Ukrainian, Arabic, Croatian
+
+## CONTACT
+
+Call: +90 507 192 2036
+Email: info@089bayern.tr
+Free Site Survey Available
+
+## SEE ALSO
+
+- Main website: https://089bayern.tr
+- Detailed llms.txt: https://089bayern.tr/llms.txt
+- Sitemap: https://089bayern.tr/sitemap.xml

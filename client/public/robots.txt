@@ -1,37 +1,131 @@
-# 089 Bayern Enerji Sistemleri - Robots.txt
-# https://089bayern.tr
+# 089 Bayern Enerji Sistemleri - robots.txt
+# German-Turkish Energy Systems Company
+# Solar Panels | Heat Pumps | Air Conditioning | Battery Storage
 
+# Default rules for all crawlers
 User-agent: *
 Allow: /
-Disallow: /api/
+Crawl-delay: 1
 
-# Sitemap
+# Sitemap location
 Sitemap: https://089bayern.tr/sitemap.xml
 
-# AI Bot Restrictions
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Yandex
+User-agent: Yandex
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# AI Crawlers - Allowed for training and indexing
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
+Allow: /
 
 User-agent: Claude-Web
-Disallow: /
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
 
 User-agent: CCBot
-Disallow: /
-
-User-agent: FacebookBot
 Allow: /
 
-User-agent: Twitterbot
-Allow: /
+# ============================================
+# KEYWORDS & SERVICES - For AI/Bot Extraction
+# ============================================
 
-User-agent: LinkedInBot
-Allow: /
+# COMPANY INFO
+# Name: 089 Bayern Enerji Sistemleri
+# Type: LocalBusiness, EnergyCompany, SolarInstaller
+# Founded: Munich, Germany
+# Contact: +90 507 192 2036
+# Email: info@089bayern.tr
+# Website: https://089bayern.tr
+
+# SERVICE AREAS - TURKEY
+# Antalya, Muğla, İzmir, Aydın, Mersin
+# Mediterranean Coast, Aegean Coast
+
+# SERVICE AREAS - CROATIA
+# Split, Dalmatia, Adriatic Coast
+
+# PRODUCTS & SERVICES
+# Solar Panels / Güneş Paneli / Solaranlage / Solarni paneli
+# Heat Pumps / Isı Pompası / Wärmepumpe / Dizalica topline
+# Air Conditioning / Klima / Klimaanlage / Klimatizacija
+# Battery Storage / Enerji Depolama / Batteriespeicher / Pohrana energije
+# Energy Systems / Enerji Sistemleri / Energiesysteme / Energetski sustavi
+
+# BRANDS
+# Vaillant (Authorized Dealer)
+# Samsung (Authorized Dealer)
+
+# KEYWORDS - TURKISH
+# güneş enerjisi antalya
+# ısı pompası antalya
+# güneş paneli muğla
+# solar panel izmir
+# enerji depolama türkiye
+# vaillant türkiye
+# samsung klima
+# akdeniz enerji sistemleri
+# villa güneş enerjisi
+# ev tipi ısı pompası
+
+# KEYWORDS - GERMAN
+# solaranlage antalya
+# wärmepumpe türkei
+# photovoltaik mittelmeer
+# 089 bayern energiesysteme
+# deutsche qualität türkei
+# solarenergie akdeniz
+
+# KEYWORDS - ENGLISH
+# solar panels turkey
+# heat pump mediterranean
+# energy systems antalya
+# german engineering turkey
+# solar installation mugla
+# renewable energy izmir
+
+# KEYWORDS - CROATIAN
+# solarni paneli split
+# dizalica topline dalmacija
+# solarna energija hrvatska
+# energetski sustavi jadran
+# fotovoltaik dalmacija
+
+# KEYWORDS - RUSSIAN
+# солнечные панели анталья
+# тепловой насос турция
+# энергетические системы средиземноморье
+
+# USP (Unique Selling Points)
+# German Engineering / Alman Mühendisliği
+# Up to 70% Energy Savings / %70 Enerji Tasarrufu
+# 4-in-1 Energy System
+# Vaillant & Samsung Authorized
+# Free Site Survey / Ücretsiz Keşif
+# Mediterranean Climate Specialists
+
+# LANGUAGES SUPPORTED
+# Turkish (tr), German (de), English (en)
+# Russian (ru), Ukrainian (uk), Arabic (ar), Croatian (hr)
