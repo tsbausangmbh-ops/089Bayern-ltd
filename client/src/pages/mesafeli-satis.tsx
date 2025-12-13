@@ -26,7 +26,7 @@ export default function MesafeliSatis() {
               <h3 className="font-medium">SATICI:</h3>
               <p className="text-sm"><strong>Ticari Unvan:</strong> 089 Bayern Enerji Sistemleri Ltd. Sti.</p>
               <p className="text-sm"><strong>Adres:</strong> Sekerhane, Halimaga Cd. Lale Tokus Plaza No 1, 07450 Alanya/Antalya, Turkiye</p>
-              <p className="text-sm"><strong>Telefon:</strong> +90 507 192 2036</p>
+              <p className="text-sm"><strong>Telefon:</strong> +90 507 183 2036</p>
               <p className="text-sm"><strong>E-posta:</strong> info@089bayern.com</p>
               <p className="text-sm"><strong>Ticaret Sicil No:</strong> [Kayit sonrasi guncellenecektir]</p>
               <p className="text-sm"><strong>MERSIS No:</strong> [Kayit sonrasi guncellenecektir]</p>
@@ -105,7 +105,7 @@ export default function MesafeliSatis() {
               Cayma hakkinin kullanilmasi halinde:
             </p>
             <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-              <li>ALICI, cayma karari hakkinda SATICI'yi info@089bayern.com adresine e-posta gondererek veya +90 507 192 2036 numarasini arayarak bilgilendirir.</li>
+              <li>ALICI, cayma karari hakkinda SATICI'yi info@089bayern.com adresine e-posta gondererek veya +90 507 183 2036 numarasini arayarak bilgilendirir.</li>
               <li>Cayma bildiriminin SATICI'ya ulasmasi tarihinden itibaren 14 gun icinde urun iade edilir.</li>
               <li>Urun, SATICI tarafindan teslim alinmasindan itibaren 14 gun icinde odeme iade edilir.</li>
               <li>Iade edilen urunun kargo ucreti ALICI tarafindan karsilanir.</li>
@@ -156,9 +156,9 @@ export default function MesafeliSatis() {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Sorulariniz ve cayma hakki kullaniminiz icin:
             </p>
-            <p className="text-sm"><strong>Telefon:</strong> +90 507 192 2036</p>
+            <p className="text-sm"><strong>Telefon:</strong> +90 507 183 2036</p>
             <p className="text-sm"><strong>E-posta:</strong> info@089bayern.com</p>
-            <p className="text-sm"><strong>WhatsApp:</strong> +90 507 192 2036</p>
+            <p className="text-sm"><strong>WhatsApp:</strong> +90 507 183 2036</p>
           </section>
         </div>
       </div>

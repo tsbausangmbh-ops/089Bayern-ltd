@@ -99,7 +99,7 @@ export default function Gizlilik() {
             <div className="bg-muted/50 p-4 rounded-lg mt-4">
               <p className="text-sm"><strong>E-posta:</strong> info@089bayern.com</p>
               <p className="text-sm"><strong>KVKK İletişim:</strong> kvkk@089bayern.com</p>
-              <p className="text-sm"><strong>Telefon:</strong> +90 507 192 2036</p>
+              <p className="text-sm"><strong>Telefon:</strong> +90 507 183 2036</p>
             </div>
           </section>
 

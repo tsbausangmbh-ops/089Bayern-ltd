@@ -26,7 +26,7 @@ export default function OnBilgilendirme() {
             <div className="bg-muted/50 p-4 rounded-lg space-y-2">
               <p className="text-sm"><strong>Ticari Unvan:</strong> 089 Bayern Enerji Sistemleri Ltd. Sti.</p>
               <p className="text-sm"><strong>Adres:</strong> Sekerhane, Halimaga Cd. Lale Tokus Plaza No 1, 07450 Alanya/Antalya, Turkiye</p>
-              <p className="text-sm"><strong>Telefon:</strong> +90 507 192 2036</p>
+              <p className="text-sm"><strong>Telefon:</strong> +90 507 183 2036</p>
               <p className="text-sm"><strong>E-posta:</strong> info@089bayern.com</p>
               <p className="text-sm"><strong>Web Sitesi:</strong> www.089bayern.com</p>
               <p className="text-sm"><strong>Ticaret Sicil No:</strong> [Kayit sonrasi guncellenecektir]</p>
@@ -127,7 +127,7 @@ export default function OnBilgilendirme() {
             <h3 className="font-medium mt-4 mb-2">Cayma Bildirimi:</h3>
             <p className="text-muted-foreground leading-relaxed">
               Cayma hakkinizi kullanmak icin 14 gun icinde info@089bayern.com adresine 
-              e-posta gondererek veya +90 507 192 2036 numarasini arayarak bildirimde bulunabilirsiniz.
+              e-posta gondererek veya +90 507 183 2036 numarasini arayarak bildirimde bulunabilirsiniz.
             </p>
           </section>
 
@@ -205,9 +205,9 @@ export default function OnBilgilendirme() {
             <div className="grid gap-4 md:grid-cols-2">
               <div>
                 <h3 className="font-medium mb-2">Genel Iletisim</h3>
-                <p className="text-sm text-muted-foreground">Telefon: +90 507 192 2036</p>
+                <p className="text-sm text-muted-foreground">Telefon: +90 507 183 2036</p>
                 <p className="text-sm text-muted-foreground">E-posta: info@089bayern.com</p>
-                <p className="text-sm text-muted-foreground">WhatsApp: +90 507 192 2036</p>
+                <p className="text-sm text-muted-foreground">WhatsApp: +90 507 183 2036</p>
               </div>
               <div>
                 <h3 className="font-medium mb-2">Calisma Saatleri</h3>

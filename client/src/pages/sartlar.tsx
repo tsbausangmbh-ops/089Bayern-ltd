@@ -22,7 +22,7 @@ export default function Sartlar() {
             <div className="bg-muted/50 p-4 rounded-lg">
               <p className="text-sm"><strong>Ticari Unvan:</strong> 089 Bayern Enerji Sistemleri Ltd. Şti.</p>
               <p className="text-sm"><strong>Adres:</strong> Sekerhane, Halimaga Cd. Lale Tokus Plaza No 1, 07450 Alanya/Antalya, Turkiye</p>
-              <p className="text-sm"><strong>Telefon:</strong> +90 507 192 2036</p>
+              <p className="text-sm"><strong>Telefon:</strong> +90 507 183 2036</p>
               <p className="text-sm"><strong>E-posta:</strong> info@089bayern.com</p>
               <p className="text-sm"><strong>Web:</strong> www.089bayern.com</p>
             </div>
@@ -130,9 +130,9 @@ export default function Sartlar() {
               Şartlar ve koşullarımız hakkında sorularınız için bizimle iletişime geçebilirsiniz:
             </p>
             <div className="bg-muted/50 p-4 rounded-lg mt-4">
-              <p className="text-sm"><strong>Telefon:</strong> +90 507 192 2036</p>
+              <p className="text-sm"><strong>Telefon:</strong> +90 507 183 2036</p>
               <p className="text-sm"><strong>E-posta:</strong> info@089bayern.com</p>
-              <p className="text-sm"><strong>WhatsApp:</strong> +90 507 192 2036</p>
+              <p className="text-sm"><strong>WhatsApp:</strong> +90 507 183 2036</p>
             </div>
           </section>
         </div>
