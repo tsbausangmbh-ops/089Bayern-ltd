@@ -83,6 +83,7 @@ export default function ChatBot() {
         <div className="bg-card/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-border/50 text-right w-72">
           <p className="text-sm font-semibold text-foreground">KI Assistent von 089Bayern</p>
           <p className="text-xs text-muted-foreground mt-1">Beratung, Tipps und 24h Termine vereinbaren</p>
+          <p className="text-xs text-primary font-medium mt-1">DE | TR | EN | PL | HR | RU | UK</p>
         </div>
         <Button
           onClick={() => setIsOpen(!isOpen)}
