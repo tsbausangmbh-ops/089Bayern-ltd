@@ -36,7 +36,7 @@ export default function ChatBot() {
             className="text-white text-xs font-semibold whitespace-nowrap"
             style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
           >
-            {t.chatbotTitle || "KI Berater"}
+089Bayern - KI Agent
           </span>
         </div>
       </div>
