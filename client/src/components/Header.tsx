@@ -75,12 +75,18 @@ export default function Header({ onCtaClick }: HeaderProps) {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="flex items-center justify-between gap-4 h-16 md:h-20">
-          <a href="/" className="flex items-center gap-2 hover-elevate active-elevate-2 rounded-lg" data-testid="link-logo-home">
-            <img 
-              src={logoImage} 
-              alt="089 Bayern Logo" 
-              className="h-12 md:h-14 w-auto object-contain"
-            />
+          <a href="/" className="flex items-center gap-3 hover-elevate active-elevate-2 rounded-lg" data-testid="link-logo-home">
+            <div className="bg-white/90 rounded-lg p-1.5">
+              <img 
+                src={logoImage} 
+                alt="089 Bayern Logo" 
+                className="h-10 md:h-12 w-auto object-contain"
+              />
+            </div>
+            <div className="hidden sm:block">
+              <span className={`block text-lg font-bold ${isScrolled ? "text-foreground" : "text-white"}`}>089 Bayern</span>
+              <span className={`block text-xs ${isScrolled ? "text-muted-foreground" : "text-white/70"}`}>Germany</span>
+            </div>
           </a>
 
           <nav className="hidden md:flex items-center gap-1">
