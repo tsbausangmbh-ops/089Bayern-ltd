@@ -34,6 +34,8 @@ export default function Footer() {
       { label: "PV Anlage Side", href: "/systeme", title: "Side PV sistemleri güneş enerjisi" },
       { label: "Villa Güneş Paneli", href: "/systeme", title: "Villa için güneş paneli sistemi Akdeniz" },
       { label: "Çatı Solar Panel", href: "/systeme", title: "Çatı tipi solar panel kurulumu Türkiye" },
+      { label: "Solar Panel Fiyat 2024", href: "/rechner", title: "2024 güneş paneli fiyatları hesaplama" },
+      { label: "10kW Solar Sistem", href: "/systeme", title: "10kW güneş paneli sistemi villa için" },
     ],
     heatPumps: [
       { label: "Isı Pompası Antalya", href: "/systeme", title: "Antalya ısı pompası kurulumu fiyat" },
@@ -42,6 +44,8 @@ export default function Footer() {
       { label: "Vaillant Isı Pompası", href: "/systeme", title: "Vaillant ısı pompası yetkili bayi Türkiye" },
       { label: "Havuz Isıtma Sistemi", href: "/systeme", title: "Villa havuz ısıtma ısı pompası Antalya" },
       { label: "Yerden Isıtma", href: "/systeme", title: "Yerden ısıtma sistemi ısı pompası" },
+      { label: "Isı Pompası Kurulum Maliyeti", href: "/rechner", title: "Isı pompası kurulum maliyeti hesaplama 2024" },
+      { label: "Hava Kaynaklı Isı Pompası", href: "/systeme", title: "Hava kaynaklı ısı pompası villa Antalya" },
     ],
     climate: [
       { label: "Klima Sistemi Antalya", href: "/systeme", title: "Antalya klima kurulumu Samsung inverter" },
@@ -50,6 +54,8 @@ export default function Footer() {
       { label: "Soğutma Sistemi Bodrum", href: "/systeme", title: "Bodrum villa soğutma çözümleri" },
       { label: "VRF Klima Sistemi", href: "/systeme", title: "VRF multi split klima sistemi villa" },
       { label: "Merkezi Klima", href: "/systeme", title: "Merkezi klima sistemi villa otel" },
+      { label: "Enerji Tasarruflu Klima", href: "/vorteile", title: "Enerji tasarruflu inverter klima A++" },
+      { label: "Villa Klima Montaj", href: "/systeme", title: "Villa klima montaj kurulum Antalya" },
     ],
     battery: [
       { label: "Enerji Depolama Türkiye", href: "/systeme", title: "Türkiye enerji depolama sistemleri lityum" },
@@ -58,6 +64,8 @@ export default function Footer() {
       { label: "Stromspeicher Türkei", href: "/systeme", title: "Stromspeicher Türkiye elektrik depolama" },
       { label: "Ev Bataryası", href: "/systeme", title: "Ev tipi batarya depolama sistemi" },
       { label: "Off-Grid Sistem", href: "/systeme", title: "Off-grid bağımsız enerji sistemi" },
+      { label: "Lityum Batarya Fiyat", href: "/rechner", title: "Lityum batarya enerji depolama fiyat 2024" },
+      { label: "Kesintisiz Enerji", href: "/systeme", title: "Kesintisiz enerji depolama sistemi villa" },
     ],
     brand: [
       { label: "089 Bayern Enerji", href: "/", title: "089 Bayern Alman enerji teknolojisi Türkiye" },
@@ -66,6 +74,8 @@ export default function Footer() {
       { label: "German Engineering Turkey", href: "/ueber-uns", title: "German engineering solar systems Turkey" },
       { label: "München Antalya", href: "/ueber-uns", title: "München Antalya enerji köprüsü 089 Bayern" },
       { label: "DIN Standartları", href: "/systeme", title: "DIN standartları Alman kalite sertifikası" },
+      { label: "TÜV Sertifikalı", href: "/vorteile", title: "TÜV sertifikalı enerji sistemleri Almanya" },
+      { label: "Made in Germany", href: "/ueber-uns", title: "Made in Germany Alman üretimi solar sistem" },
     ],
     services: [
       { label: "Enerji Tasarruf Hesaplama", href: "/rechner", title: "Ücretsiz enerji tasarruf hesaplayıcı online" },
@@ -74,8 +84,10 @@ export default function Footer() {
       { label: "Enerji Danışmanlığı", href: "/faq", title: "Profesyonel enerji danışmanlık hizmetleri" },
       { label: "10 Yıl Garanti", href: "/vorteile", title: "10 yıl sistem garantisi Alman kalite" },
       { label: "%70 Tasarruf", href: "/vorteile", title: "Yıllık %70 enerji tasarrufu hesaplama" },
+      { label: "Anahtar Teslim Kurulum", href: "/systeme", title: "Anahtar teslim solar panel kurulum hizmeti" },
+      { label: "7/24 Teknik Destek", href: "/faq", title: "7/24 teknik destek enerji sistemleri" },
     ],
-    regions: [
+    regionsturkey: [
       { label: "Antalya", href: "/systeme", title: "Antalya güneş paneli ısı pompası kurulum" },
       { label: "Alanya", href: "/systeme", title: "Alanya solar panel ısı pompası montaj" },
       { label: "Fethiye", href: "/systeme", title: "Fethiye güneş enerjisi sistemleri kurulum" },
@@ -94,6 +106,36 @@ export default function Footer() {
       { label: "Gazipaşa", href: "/systeme", title: "Gazipaşa güneş paneli kurulum" },
       { label: "Mahmutlar", href: "/systeme", title: "Mahmutlar solar panel montaj" },
       { label: "Avsallar", href: "/systeme", title: "Avsallar enerji sistemleri" },
+      { label: "Kalkan", href: "/systeme", title: "Kalkan villa güneş enerjisi kurulum" },
+      { label: "Dalyan", href: "/systeme", title: "Dalyan solar panel ısı pompası" },
+    ],
+    regionscroatia: [
+      { label: "Split", href: "/systeme", title: "Split solarni paneli toplinska pumpa Hrvatska" },
+      { label: "Dubrovnik", href: "/systeme", title: "Dubrovnik solarna energija instalacija" },
+      { label: "Zadar", href: "/systeme", title: "Zadar fotonapon toplinska pumpa montaža" },
+      { label: "Šibenik", href: "/systeme", title: "Šibenik solarni sustavi vila" },
+      { label: "Hvar", href: "/systeme", title: "Hvar otok solarna energija" },
+      { label: "Makarska", href: "/systeme", title: "Makarska solarni paneli klima" },
+      { label: "Trogir", href: "/systeme", title: "Trogir energetski sustavi" },
+      { label: "Dalmatia", href: "/systeme", title: "Dalmacija solarni paneli toplinska pumpa" },
+    ],
+    regionsgreece: [
+      { label: "Rhodes", href: "/systeme", title: "Rhodes solar panels heat pump installation" },
+      { label: "Crete", href: "/systeme", title: "Crete photovoltaic systems German quality" },
+      { label: "Corfu", href: "/systeme", title: "Corfu solar energy villa installation" },
+      { label: "Kos", href: "/systeme", title: "Kos island solar panel heat pump" },
+      { label: "Santorini", href: "/systeme", title: "Santorini solar energy systems" },
+      { label: "Mykonos", href: "/systeme", title: "Mykonos villa solar installation" },
+    ],
+    longtail: [
+      { label: "Villa Güneş Paneli Fiyat 2024", href: "/rechner", title: "Villa güneş paneli fiyat 2024 hesaplama Antalya" },
+      { label: "Enerji Bağımsızlığı Hesaplama", href: "/rechner", title: "Enerji bağımsızlığı maliyet hesaplama 2024" },
+      { label: "Solar Panel Elektrik Faturası", href: "/vorteile", title: "Solar panel ile elektrik faturası düşürme" },
+      { label: "Güneş Enerjisi Yatırım Geri Dönüş", href: "/vorteile", title: "Güneş enerjisi yatırım geri dönüş süresi" },
+      { label: "Yazlık Ev Enerji Çözümü", href: "/systeme", title: "Yazlık ev için enerji çözümü Akdeniz" },
+      { label: "Alman Teknoloji Türkiye", href: "/ueber-uns", title: "Alman teknoloji enerji sistemleri Türkiye" },
+      { label: "Akdeniz Villa Enerji", href: "/systeme", title: "Akdeniz villa enerji bağımsızlığı çözümü" },
+      { label: "Hibrit Enerji Sistemi", href: "/systeme", title: "Hibrit enerji sistemi solar ısı pompası batarya" },
     ],
   };
 
@@ -267,14 +309,14 @@ export default function Footer() {
               {t.footer.serviceAreas || "Hizmet Bölgelerimiz"}
             </h4>
             <div className="flex flex-wrap justify-center gap-2 text-xs text-white/60">
-              {["Antalya", "Alanya", "Kemer", "Belek", "Side", "Manavgat", "Mahmutlar", "Konaklı", "Gazipaşa", "Kaş", "Fethiye", "Muğla", "Bodrum", "Marmaris", "İzmir", "Kuşadası", "Didim", "Aydın", "Mersin", "Split", "Dalmatia"].map((city) => (
+              {["Antalya", "Alanya", "Kemer", "Belek", "Side", "Manavgat", "Mahmutlar", "Konaklı", "Gazipaşa", "Kaş", "Fethiye", "Muğla", "Bodrum", "Marmaris", "İzmir", "Kuşadası", "Didim", "Aydın", "Mersin", "Kalkan", "Dalyan", "Split", "Dubrovnik", "Zadar", "Šibenik", "Hvar", "Makarska", "Trogir", "Dalmatia", "Rhodes", "Crete", "Corfu", "Kos", "Santorini", "Mykonos"].map((city) => (
                 <span key={city} className="px-2 py-1 bg-white/5 rounded-md hover:bg-white/10 transition-colors">
                   {city}
                 </span>
               ))}
             </div>
             <p className="text-xs text-white/40 mt-3">
-              {t.footer.serviceAreasNote || "Akdeniz Bölgesi ve Dalmaçya'da güneş enerjisi, ısı pompası, klima ve enerji depolama kurulumu"}
+              {t.footer.serviceAreasNote || "Akdeniz, Ege, Dalmaçya ve Yunan Adaları'nda güneş enerjisi, ısı pompası, klima ve enerji depolama kurulumu"}
             </p>
           </div>
         </div>
@@ -345,10 +387,43 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
-            <h5 className="text-xs font-semibold text-white/80 mb-2 text-center">Hizmet Bölgelerimiz</h5>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div>
+              <h5 className="text-xs font-semibold text-rose-400 mb-2 text-center">Türkiye</h5>
+              <div className="flex flex-wrap justify-center gap-1">
+                {seoLinks.regionsturkey.map((link) => (
+                  <a key={link.label} href={link.href} title={link.title} className="px-2 py-1 bg-white/5 rounded text-xs text-white/60 hover:text-white hover:bg-white/10 transition-colors">
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h5 className="text-xs font-semibold text-blue-400 mb-2 text-center">Hrvatska / Croatia</h5>
+              <div className="flex flex-wrap justify-center gap-1">
+                {seoLinks.regionscroatia.map((link) => (
+                  <a key={link.label} href={link.href} title={link.title} className="px-2 py-1 bg-white/5 rounded text-xs text-white/60 hover:text-white hover:bg-white/10 transition-colors">
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h5 className="text-xs font-semibold text-cyan-400 mb-2 text-center">Greece</h5>
+              <div className="flex flex-wrap justify-center gap-1">
+                {seoLinks.regionsgreece.map((link) => (
+                  <a key={link.label} href={link.href} title={link.title} className="px-2 py-1 bg-white/5 rounded text-xs text-white/60 hover:text-white hover:bg-white/10 transition-colors">
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-4">
+            <h5 className="text-xs font-semibold text-yellow-400 mb-2 text-center">Popüler Aramalar</h5>
             <div className="flex flex-wrap justify-center gap-1">
-              {seoLinks.regions.map((link) => (
+              {seoLinks.longtail.map((link) => (
                 <a key={link.label} href={link.href} title={link.title} className="px-2 py-1 bg-white/5 rounded text-xs text-white/60 hover:text-white hover:bg-white/10 transition-colors">
                   {link.label}
                 </a>
