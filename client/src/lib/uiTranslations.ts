@@ -127,6 +127,7 @@ export const uiTranslations: Record<Language, {
     description: string;
     germanQuality: string;
     guarantee: string;
+    home: string;
     quickLinks: string;
     legal: string;
     system: string;
@@ -321,6 +322,7 @@ export const uiTranslations: Record<Language, {
       description: "Antalya, Muğla, İzmir, Aydın ve Mersin'de güneş enerjisi, ısı pompası ve enerji depolama sistemleri kurulumu. Alman mühendisliği, Türk hizmeti. Vaillant, Samsung ve BYD yetkili satıcısı.",
       germanQuality: "Alman Kalitesi",
       guarantee: "10 Yıl Garanti",
+      home: "Ana Sayfa",
       quickLinks: "Hızlı Bağlantılar",
       system: "4'ü 1 Arada Sistem",
       benefits: "Avantajlar",
@@ -514,6 +516,7 @@ export const uiTranslations: Record<Language, {
       description: "Installation von Solarenergie-, Wärmepumpen- und Energiespeichersystemen in Antalya, Mugla, Izmir, Aydin und Mersin. Deutsche Ingenieurskunst, türkischer Service. Autorisierter Händler von Vaillant, Samsung und BYD.",
       germanQuality: "Deutsche Qualität",
       guarantee: "10 Jahre Garantie",
+      home: "Startseite",
       quickLinks: "Schnelllinks",
       system: "4-in-1 System",
       benefits: "Vorteile",
@@ -707,6 +710,7 @@ export const uiTranslations: Record<Language, {
       description: "Installation of solar energy, heat pump and energy storage systems in Antalya, Mugla, Izmir, Aydin and Mersin. German engineering, Turkish service. Authorized dealer of Vaillant, Samsung and BYD.",
       germanQuality: "German Quality",
       guarantee: "10 Years Warranty",
+      home: "Home",
       quickLinks: "Quick Links",
       system: "4-in-1 System",
       benefits: "Benefits",
@@ -900,6 +904,7 @@ export const uiTranslations: Record<Language, {
       description: "Установка систем солнечной энергии, тепловых насосов и накопителей энергии в Анталье, Мугле, Измире, Айдыне и Мерсине. Немецкое качество, турецкий сервис. Авторизованный дилер Vaillant, Samsung и BYD.",
       germanQuality: "Немецкое качество",
       guarantee: "10 лет гарантии",
+      home: "Главная",
       quickLinks: "Быстрые ссылки",
       system: "Система 4-в-1",
       benefits: "Преимущества",
@@ -1093,6 +1098,7 @@ export const uiTranslations: Record<Language, {
       description: "Установка систем сонячної енергії, теплових насосів та накопичувачів енергії в Анталії, Мугла, Ізмірі, Айдині та Мерсіні. Німецька якість, турецький сервіс. Авторизований дилер Vaillant, Samsung та BYD.",
       germanQuality: "Німецька якість",
       guarantee: "10 років гарантії",
+      home: "Головна",
       quickLinks: "Швидкі посилання",
       system: "Система 4-в-1",
       benefits: "Переваги",
@@ -1286,6 +1292,7 @@ export const uiTranslations: Record<Language, {
       description: "تركيب أنظمة الطاقة الشمسية، المضخات الحرارية وتخزين الطاقة في أنطاليا، موغلا، إزمير، أيدين ومرسين. الهندسة الألمانية، الخدمة التركية. وكيل معتمد لـ Vaillant، Samsung وBYD.",
       germanQuality: "الجودة الألمانية",
       guarantee: "10 سنوات ضمان",
+      home: "الصفحة الرئيسية",
       quickLinks: "روابط سريعة",
       system: "نظام 4 في 1",
       benefits: "المزايا",
@@ -1479,6 +1486,7 @@ export const uiTranslations: Record<Language, {
       description: "Instalacija sustava solarne energije, toplinske pumpe i pohrane energije u Antaliji, Mugla, Izmir, Aydin i Mersin. Njemačko inženjerstvo, turska usluga. Ovlašteni prodavač Vaillant, Samsung i BYD.",
       germanQuality: "Njemačka kvaliteta",
       guarantee: "10 godina jamstva",
+      home: "Početna",
       quickLinks: "Brze veze",
       system: "4-u-1 sustav",
       benefits: "Prednosti",

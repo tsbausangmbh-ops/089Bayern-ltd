@@ -26,7 +26,7 @@ export default function Footer() {
   ];
 
   const mainNavLinks = [
-    { label: "Ana Sayfa", href: "/" },
+    { label: t.footer.home, href: "/" },
     { label: t.header.system, href: "/systeme" },
     { label: t.header.benefits, href: "/vorteile" },
     { label: t.header.calculator, href: "/rechner" },
