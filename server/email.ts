@@ -105,9 +105,9 @@ function createTransporter() {
   }
   
   return nodemailer.createTransport({
-    host: "smtp.ionos.com",
-    port: 587,
-    secure: false,
+    host: "smtp.ionos.de",
+    port: 465,
+    secure: true,
     auth: { user, pass },
   });
 }
