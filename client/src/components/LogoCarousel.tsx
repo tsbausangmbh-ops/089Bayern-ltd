@@ -55,10 +55,6 @@ export default function LogoCarousel() {
             <span className="text-sm text-foreground">{t.logos.originalGuarantee}</span>
           </div>
           <div className="flex items-center gap-3 bg-card/50 px-4 py-2 rounded-full border border-border/50">
-            <div className="w-3 h-3 rounded-full bg-primary shadow-lg shadow-primary/50" />
-            <span className="text-sm text-foreground">{t.logos.authorizedService}</span>
-          </div>
-          <div className="flex items-center gap-3 bg-card/50 px-4 py-2 rounded-full border border-border/50">
             <div className="w-3 h-3 rounded-full bg-amber-500 shadow-lg shadow-amber-500/50" />
             <span className="text-sm text-foreground">{t.logos.partsGuarantee}</span>
           </div>
