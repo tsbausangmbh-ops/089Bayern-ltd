@@ -8,6 +8,7 @@ import { Home, Building2, Store, ArrowRight, ArrowLeft, Check, Calculator, Trend
 import { translations, isRTL } from "@/lib/translations";
 import { useLanguage } from "@/lib/LanguageContext";
 import { useExchangeRate, formatTL } from "@/hooks/useExchangeRate";
+import logoImage from "@assets/Logo_1765790073992.png";
 
 const turkishLocations = [
   { id: "antalya", key: "locationAntalya" as const, sun: "2.900+" },
@@ -159,7 +160,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
         <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
         
-        <div className="max-w-3xl mx-auto px-6 md:px-8 relative">
+        <div className="max-w-5xl mx-auto px-6 md:px-8 relative">
           <Card className="overflow-hidden border-emerald-500/30 bg-gradient-to-br from-card via-card to-emerald-500/5 shadow-2xl shadow-emerald-500/10">
             <CardContent className="p-8 md:p-12">
               <div className="text-center mb-10">
@@ -257,8 +258,19 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
       
-      <div className="max-w-2xl mx-auto px-6 md:px-8 relative">
+      <div className="max-w-4xl mx-auto px-6 md:px-8 relative">
         <div className="text-center mb-10">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <img 
+              src={logoImage} 
+              alt="089 Bayern Logo" 
+              className="h-12 w-auto object-contain"
+            />
+            <div className="text-left">
+              <span className="block text-xl font-bold text-foreground">089 Bayern</span>
+              <span className="block text-sm text-muted-foreground">Germany</span>
+            </div>
+          </div>
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-5 py-2 mb-6">
             <Calculator className="w-4 h-4 text-amber-400" />
             <span className="text-sm font-medium text-foreground">{t.badge}</span>
