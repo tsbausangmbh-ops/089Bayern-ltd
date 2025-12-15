@@ -144,7 +144,7 @@ export default function Standorte() {
     <div className="min-h-screen bg-background" dir={isRTL ? "rtl" : "ltr"}>
       <Header />
       
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-10 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -165,7 +165,7 @@ export default function Standorte() {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-b from-background to-muted/30">
+      <section className="py-8 bg-gradient-to-b from-background to-muted/30">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category) => {
@@ -198,7 +198,7 @@ export default function Standorte() {
         </div>
       </section>
 
-      <section className="py-16 bg-muted/30">
+      <section className="py-8 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-5 py-2 mb-4">
@@ -243,7 +243,7 @@ export default function Standorte() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-8">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <Card className="overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5">
             <CardContent className="p-8">
@@ -265,7 +265,7 @@ export default function Standorte() {
         </div>
       </section>
 
-      <section className="py-16 bg-primary/5">
+      <section className="py-8 bg-primary/5">
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">
             Ücretsiz Enerji Analizi

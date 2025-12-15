@@ -559,7 +559,7 @@ export default function FAQ() {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10" data-testid="section-faq-cta">
+      <section className="py-8 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10" data-testid="section-faq-cta">
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.ctaTitle}</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">{c.ctaText}</p>

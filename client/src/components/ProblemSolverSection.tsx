@@ -524,7 +524,7 @@ export default function ProblemSolverSection() {
   const isRTL = language === "ar";
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-b from-background to-muted/30" dir={isRTL ? "rtl" : "ltr"}>
+    <section className="py-6 md:py-8 bg-gradient-to-b from-background to-muted/30" dir={isRTL ? "rtl" : "ltr"}>
       <div className="max-w-5xl mx-auto px-6 md:px-8">
         <div className="text-center mb-10">
           <Badge variant="secondary" className="mb-4" data-testid="badge-problemsolver">

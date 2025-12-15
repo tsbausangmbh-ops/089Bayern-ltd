@@ -453,7 +453,7 @@ export default function UeberUns() {
       </section>
 
       {/* Problems Section */}
-      <section className="py-16 bg-background" data-testid="section-problems">
+      <section className="py-8 bg-background" data-testid="section-problems">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.problemTitle}</h2>
@@ -477,7 +477,7 @@ export default function UeberUns() {
       </section>
 
       {/* Solutions Section */}
-      <section className="py-16 bg-muted/30" data-testid="section-solutions">
+      <section className="py-8 bg-muted/30" data-testid="section-solutions">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <Badge variant="secondary" className="mb-4">
@@ -504,7 +504,7 @@ export default function UeberUns() {
       </section>
 
       {/* Story Section */}
-      <section className="py-16 bg-background" data-testid="section-story">
+      <section className="py-8 bg-background" data-testid="section-story">
         <div className="max-w-4xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <Badge variant="secondary" className="mb-4">
@@ -532,7 +532,7 @@ export default function UeberUns() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-muted/30" data-testid="section-benefits">
+      <section className="py-8 bg-muted/30" data-testid="section-benefits">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">{c.benefitsTitle}</h2>
@@ -555,7 +555,7 @@ export default function UeberUns() {
       </section>
 
       {/* Promise Section */}
-      <section className="py-16 bg-background" data-testid="section-promise">
+      <section className="py-8 bg-background" data-testid="section-promise">
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
           <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center">
             <Heart className="w-10 h-10 text-white" />
@@ -566,7 +566,7 @@ export default function UeberUns() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10" data-testid="section-final-cta">
+      <section className="py-8 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10" data-testid="section-final-cta">
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.ctaTitle}</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">{c.ctaText}</p>

@@ -250,7 +250,7 @@ export default function EnerjiDepolama() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(16,185,129,0.3),transparent_50%)]" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         
-        <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24">
+        <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
           <div className="max-w-3xl">
             <Badge variant="secondary" className="mb-6 bg-emerald-500/20 backdrop-blur-md border-emerald-500/30 text-emerald-300">
               <Battery className="w-4 h-4 mr-2" />
@@ -333,7 +333,7 @@ export default function EnerjiDepolama() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-muted/30" data-testid="section-problems">
+      <section className="py-8 md:py-10 bg-muted/30" data-testid="section-problems">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.problemTitle}</h2>
@@ -353,7 +353,7 @@ export default function EnerjiDepolama() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gradient-to-b from-emerald-500/10 to-background" data-testid="section-solution">
+      <section className="py-8 md:py-10 bg-gradient-to-b from-emerald-500/10 to-background" data-testid="section-solution">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <Badge variant="secondary" className="mb-4 bg-emerald-500/20 border-emerald-500/30">
@@ -384,7 +384,7 @@ export default function EnerjiDepolama() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-muted/30" data-testid="section-how-it-works">
+      <section className="py-8 md:py-10 bg-muted/30" data-testid="section-how-it-works">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.howItWorksTitle}</h2>
@@ -406,7 +406,7 @@ export default function EnerjiDepolama() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20" data-testid="section-trust">
+      <section className="py-8 md:py-10" data-testid="section-trust">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.trustTitle}</h2>
@@ -427,7 +427,7 @@ export default function EnerjiDepolama() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-muted/30" data-testid="section-testimonials">
+      <section className="py-8 md:py-10 bg-muted/30" data-testid="section-testimonials">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.testimonialTitle}</h2>
@@ -459,7 +459,7 @@ export default function EnerjiDepolama() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20" data-testid="section-faq">
+      <section className="py-8 md:py-10" data-testid="section-faq">
         <div className="max-w-3xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.faqTitle}</h2>
@@ -492,7 +492,7 @@ export default function EnerjiDepolama() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gradient-to-b from-emerald-500/10 to-emerald-500/5" data-testid="section-urgency">
+      <section className="py-8 md:py-10 bg-gradient-to-b from-emerald-500/10 to-emerald-500/5" data-testid="section-urgency">
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.urgencyTitle}</h2>
           <p className="text-lg text-emerald-600 font-medium mb-4">{c.urgencySubtitle}</p>
