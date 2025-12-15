@@ -140,12 +140,12 @@ export default function Footer() {
   };
 
   const mainNavLinks = [
-    { label: t.nav?.home || "Ana Sayfa", href: "/" },
-    { label: t.nav?.systems || "4-in-1 Sistem", href: "/systeme" },
-    { label: t.nav?.benefits || "Avantajlar", href: "/vorteile" },
-    { label: t.nav?.calculator || "Tasarruf Hesaplama", href: "/rechner" },
-    { label: t.nav?.about || "Hakkımızda", href: "/ueber-uns" },
-    { label: t.nav?.faq || "SSS", href: "/faq" },
+    { label: "Ana Sayfa", href: "/" },
+    { label: t.header.system, href: "/systeme" },
+    { label: t.header.benefits, href: "/vorteile" },
+    { label: t.header.calculator, href: "/rechner" },
+    { label: t.header.team, href: "/ueber-uns" },
+    { label: t.header.faq, href: "/faq" },
   ];
 
   return (
@@ -219,7 +219,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-6">{t.nav?.pages || "Sayfalar"}</h4>
+            <h4 className="font-semibold text-white mb-6">Sayfalar</h4>
             <ul className="space-y-3 text-sm">
               {mainNavLinks.map((link) => (
                 <li key={link.href}>
