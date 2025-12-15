@@ -132,6 +132,7 @@ export const translations: Record<Language, {
   chatbotGreeting: string;
   chatbotHelpText: string;
   chatbotPlaceholder: string;
+  chatbotError: string;
 }> = {
   tr: {
     badge: "4'ü 1 Arada Sistem Hesaplama",
@@ -263,6 +264,7 @@ export const translations: Record<Language, {
     chatbotGreeting: "Merhaba! Ben 089 Bayern enerji danışmanınızım. Size nasıl yardımcı olabilirim?",
     chatbotHelpText: "Güneş panelleri, ısı pompaları veya enerji tasarrufu hakkındaki sorularınızı yanıtlayabilirim.",
     chatbotPlaceholder: "Mesajınız...",
+    chatbotError: "Bir hata olustu. Lutfen tekrar deneyin.",
   },
   de: {
     badge: "4-in-1 Systemrechner",
@@ -394,6 +396,7 @@ export const translations: Record<Language, {
     chatbotGreeting: "Hallo! Ich bin Ihr 089 Bayern Energieberater. Wie kann ich Ihnen helfen?",
     chatbotHelpText: "Ich kann Ihre Fragen zu Solarpanelen, Wärmepumpen oder Energieeinsparungen beantworten.",
     chatbotPlaceholder: "Ihre Nachricht...",
+    chatbotError: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
   },
   en: {
     badge: "4-in-1 System Calculator",
@@ -525,6 +528,7 @@ export const translations: Record<Language, {
     chatbotGreeting: "Hello! I'm your 089 Bayern energy consultant. How can I help you?",
     chatbotHelpText: "I can answer your questions about solar panels, heat pumps or energy savings.",
     chatbotPlaceholder: "Your message...",
+    chatbotError: "An error occurred. Please try again.",
   },
   ru: {
     badge: "Калькулятор системы 4-в-1",
@@ -656,6 +660,7 @@ export const translations: Record<Language, {
     chatbotGreeting: "Здравствуйте! Я ваш энергетический консультант 089 Bayern. Чем могу помочь?",
     chatbotHelpText: "Я могу ответить на ваши вопросы о солнечных панелях, тепловых насосах или энергосбережении.",
     chatbotPlaceholder: "Ваше сообщение...",
+    chatbotError: "Произошла ошибка. Пожалуйста, попробуйте снова.",
   },
   uk: {
     badge: "Калькулятор системи 4-в-1",
@@ -787,6 +792,7 @@ export const translations: Record<Language, {
     chatbotGreeting: "Вітаю! Я ваш енергетичний консультант 089 Bayern. Чим можу допомогти?",
     chatbotHelpText: "Я можу відповісти на ваші питання про сонячні панелі, теплові насоси або енергозбереження.",
     chatbotPlaceholder: "Ваше повідомлення...",
+    chatbotError: "Сталася помилка. Будь ласка, спробуйте ще раз.",
   },
   ar: {
     badge: "حاسبة نظام 4 في 1",
@@ -918,6 +924,7 @@ export const translations: Record<Language, {
     chatbotGreeting: "مرحباً! أنا مستشار الطاقة الخاص بك من 089 Bayern. كيف يمكنني مساعدتك؟",
     chatbotHelpText: "يمكنني الإجابة على أسئلتك حول الألواح الشمسية أو مضخات الحرارة أو توفير الطاقة.",
     chatbotPlaceholder: "رسالتك...",
+    chatbotError: "حدث خطأ. يرجى المحاولة مرة أخرى.",
   },
   hr: {
     badge: "4-u-1 Kalkulator sustava",
@@ -1049,6 +1056,7 @@ export const translations: Record<Language, {
     chatbotGreeting: "Bok! Ja sam vaš 089 Bayern energetski savjetnik. Kako vam mogu pomoći?",
     chatbotHelpText: "Mogu odgovoriti na vaša pitanja o solarnim panelima, dizalicama topline ili uštedi energije.",
     chatbotPlaceholder: "Vaša poruka...",
+    chatbotError: "Došlo je do greške. Molimo pokušajte ponovo.",
   },
 };
 
