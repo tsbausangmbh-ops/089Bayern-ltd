@@ -7,7 +7,7 @@ import { Progress } from "@/components/ui/progress";
 import { Home, Building2, Store, ArrowRight, ArrowLeft, Check, Calculator, TrendingUp, Leaf, Banknote, Flame, Snowflake, Battery, Zap, RefreshCw } from "lucide-react";
 import { translations, isRTL } from "@/lib/translations";
 import { useLanguage } from "@/lib/LanguageContext";
-import { useExchangeRate, formatTL } from "@/hooks/useExchangeRate";
+import { useExchangeRate, formatTL, formatEUR } from "@/hooks/useExchangeRate";
 import logoImage from "@assets/Logo_1765790073992.png";
 
 const turkishLocations = [
@@ -198,12 +198,14 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                 <div className="text-center p-6 bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl border border-primary/20">
                   <Banknote className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <div className="text-4xl font-bold text-primary mb-1">{formatTL(estimatedMonthlySavings)}</div>
+                  <div className="text-3xl font-bold text-primary mb-1">{formatEUR(Math.round(estimatedMonthlySavings / exchangeRate))}</div>
+                  <div className="text-lg text-primary/70 mb-1">{formatTL(estimatedMonthlySavings)}</div>
                   <p className="text-sm text-muted-foreground">{t.monthlySavings}</p>
                 </div>
                 <div className="text-center p-6 bg-gradient-to-br from-accent/20 to-accent/5 rounded-xl border border-accent/20">
                   <TrendingUp className="w-8 h-8 text-accent mx-auto mb-3" />
-                  <div className="text-4xl font-bold text-accent mb-1">{formatTL(yearlySavings)}</div>
+                  <div className="text-3xl font-bold text-accent mb-1">{formatEUR(Math.round(yearlySavings / exchangeRate))}</div>
+                  <div className="text-lg text-accent/70 mb-1">{formatTL(yearlySavings)}</div>
                   <p className="text-sm text-muted-foreground">{t.yearlySavings}</p>
                 </div>
                 <div className="text-center p-6 bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 rounded-xl border border-emerald-500/20">
@@ -218,7 +220,8 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
                     <span className="text-muted-foreground">{t.estimatedCost}</span>
-                    <span className="block font-semibold text-foreground">{formatTL(estimatedCost)}</span>
+                    <span className="block font-semibold text-foreground">{formatEUR(Math.round(estimatedCost / exchangeRate))}</span>
+                    <span className="block text-xs text-muted-foreground">{formatTL(estimatedCost)}</span>
                   </div>
                   <div>
                     <span className="text-muted-foreground">{t.paybackPeriod}</span>
@@ -226,7 +229,8 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                   </div>
                   <div>
                     <span className="text-muted-foreground">{t.tenYearSavings}</span>
-                    <span className="block font-semibold text-emerald-400">{formatTL(yearlySavings * 10)}</span>
+                    <span className="block font-semibold text-emerald-400">{formatEUR(Math.round((yearlySavings * 10) / exchangeRate))}</span>
+                    <span className="block text-xs text-muted-foreground">{formatTL(yearlySavings * 10)}</span>
                   </div>
                   <div>
                     <span className="text-muted-foreground">{t.yearlyCO2}</span>
