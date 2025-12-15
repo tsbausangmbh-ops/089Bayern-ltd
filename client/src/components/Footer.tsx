@@ -186,25 +186,6 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 pt-4 border-t border-white/10">
-          <div className="text-center mb-4">
-            <h4 className="font-semibold text-white mb-3 flex items-center justify-center gap-2">
-              <MapPin className="w-4 h-4 text-primary" />
-              {t.footer.serviceAreas || "Hizmet Bölgelerimiz"}
-            </h4>
-            <div className="flex flex-wrap justify-center gap-2 text-xs text-white/60">
-              {["Antalya", "Alanya", "Kemer", "Belek", "Side", "Manavgat", "Mahmutlar", "Konaklı", "Gazipaşa", "Kaş", "Fethiye", "Muğla", "Bodrum", "Marmaris", "İzmir", "Kuşadası", "Didim", "Aydın", "Mersin", "Kalkan", "Dalyan", "Split", "Dubrovnik", "Zadar", "Šibenik", "Hvar", "Makarska", "Trogir", "Dalmatia", "Rhodes", "Crete", "Corfu", "Kos", "Santorini", "Mykonos"].map((city) => (
-                <span key={city} className="px-2 py-1 bg-white/5 rounded-md hover:bg-white/10 transition-colors">
-                  {city}
-                </span>
-              ))}
-            </div>
-            <p className="text-xs text-white/40 mt-3">
-              {t.footer.serviceAreasNote || "Akdeniz, Ege, Dalmaçya ve Yunan Adaları'nda güneş enerjisi, ısı pompası, klima ve enerji depolama kurulumu"}
-            </p>
-          </div>
-        </div>
-
         <div className="mt-6 pt-4 border-t border-white/10 text-center">
           <a 
             href="/standorte" 
