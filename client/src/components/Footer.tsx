@@ -189,6 +189,16 @@ export default function Footer() {
         <div className="mt-6 pt-4 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
             <p>&copy; 2024 <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline" data-testid="link-extrucon">{t.footer.copyright}</a></p>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <Award className="w-4 h-4" />
+                <span>{t.footer.germanQuality}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4" />
+                <span>{t.footer.guarantee}</span>
+              </div>
+            </div>
           </div>
         </div>
 
