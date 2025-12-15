@@ -7,7 +7,7 @@ import { Progress } from "@/components/ui/progress";
 import { 
   Home, Building2, Store, ArrowRight, ArrowLeft, Check, Calculator, 
   TrendingUp, Leaf, Banknote, Sun, Thermometer, Droplets, Battery,
-  Zap, Snowflake, Euro, PiggyBank, Sparkles, Crown, Star
+  Zap, Snowflake, Euro, PiggyBank, Sparkles, Crown, Star, MapPin
 } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -17,6 +17,7 @@ interface System4in1CalculatorProps {
 
 interface CalculatorData {
   propertyType: string;
+  location: string;
   propertySize: number;
   monthlyElectricity: number;
   monthlyHeating: number;
@@ -105,6 +106,20 @@ const translations: Record<string, {
   includes: string;
   kW: string;
   locationAntalya: string;
+  locationStepTitle: string;
+  locationStepSubtitle: string;
+  locationAntalyaCity: string;
+  locationAlanya: string;
+  locationKemer: string;
+  locationBelek: string;
+  locationSide: string;
+  locationManavgat: string;
+  locationFethiye: string;
+  locationBodrum: string;
+  locationMarmaris: string;
+  locationKas: string;
+  locationKalkan: string;
+  locationDalyan: string;
 }> = {
   de: {
     badge: "089 Bayern 4-in-1 Rechner",
@@ -186,6 +201,20 @@ const translations: Record<string, {
     includes: "Inkl. PV + Wärmepumpe/Kühlung + Warmwasser + Batterie",
     kW: "kW",
     locationAntalya: "Standort: Antalya/Alanya, Türkei",
+    locationStepTitle: "Ihr Standort",
+    locationStepSubtitle: "In welcher Region befindet sich Ihre Immobilie? Die Sonneneinstrahlung beeinflusst die Ersparnis.",
+    locationAntalyaCity: "Antalya",
+    locationAlanya: "Alanya",
+    locationKemer: "Kemer",
+    locationBelek: "Belek",
+    locationSide: "Side",
+    locationManavgat: "Manavgat",
+    locationFethiye: "Fethiye",
+    locationBodrum: "Bodrum",
+    locationMarmaris: "Marmaris",
+    locationKas: "Kaş",
+    locationKalkan: "Kalkan",
+    locationDalyan: "Dalyan",
   },
   tr: {
     badge: "089 Bayern 4'ü 1 Arada Hesaplayıcı",
@@ -267,6 +296,20 @@ const translations: Record<string, {
     includes: "PV + Isı pompası/Soğutma + Sıcak su + Batarya dahil",
     kW: "kW",
     locationAntalya: "Konum: Antalya/Alanya, Türkiye",
+    locationStepTitle: "Konumunuz",
+    locationStepSubtitle: "Mülkünüz hangi bölgede? Güneş ışınımı tasarrufu etkiler.",
+    locationAntalyaCity: "Antalya",
+    locationAlanya: "Alanya",
+    locationKemer: "Kemer",
+    locationBelek: "Belek",
+    locationSide: "Side",
+    locationManavgat: "Manavgat",
+    locationFethiye: "Fethiye",
+    locationBodrum: "Bodrum",
+    locationMarmaris: "Marmaris",
+    locationKas: "Kaş",
+    locationKalkan: "Kalkan",
+    locationDalyan: "Dalyan",
   },
   en: {
     badge: "089 Bayern 4-in-1 Calculator",
@@ -348,6 +391,20 @@ const translations: Record<string, {
     includes: "Incl. PV + Heat pump/Cooling + Hot water + Battery",
     kW: "kW",
     locationAntalya: "Location: Antalya/Alanya, Turkey",
+    locationStepTitle: "Your Location",
+    locationStepSubtitle: "In which region is your property? Sun exposure affects savings.",
+    locationAntalyaCity: "Antalya",
+    locationAlanya: "Alanya",
+    locationKemer: "Kemer",
+    locationBelek: "Belek",
+    locationSide: "Side",
+    locationManavgat: "Manavgat",
+    locationFethiye: "Fethiye",
+    locationBodrum: "Bodrum",
+    locationMarmaris: "Marmaris",
+    locationKas: "Kas",
+    locationKalkan: "Kalkan",
+    locationDalyan: "Dalyan",
   },
   ru: {
     badge: "Калькулятор 089 Bayern 4-в-1",
@@ -429,6 +486,20 @@ const translations: Record<string, {
     includes: "Вкл. PV + Тепловой насос/Охлаждение + Горячая вода + Батарея",
     kW: "кВт",
     locationAntalya: "Расположение: Анталия/Аланья, Турция",
+    locationStepTitle: "Ваше местоположение",
+    locationStepSubtitle: "В каком регионе находится ваша недвижимость? Солнечная радиация влияет на экономию.",
+    locationAntalyaCity: "Анталия",
+    locationAlanya: "Аланья",
+    locationKemer: "Кемер",
+    locationBelek: "Белек",
+    locationSide: "Сиде",
+    locationManavgat: "Манавгат",
+    locationFethiye: "Фетхие",
+    locationBodrum: "Бодрум",
+    locationMarmaris: "Мармарис",
+    locationKas: "Каш",
+    locationKalkan: "Калкан",
+    locationDalyan: "Дальян",
   },
   uk: {
     badge: "Калькулятор 089 Bayern 4-в-1",
@@ -510,6 +581,20 @@ const translations: Record<string, {
     includes: "Вкл. PV + Тепловий насос/Охолодження + Гаряча вода + Батарея",
     kW: "кВт",
     locationAntalya: "Розташування: Анталія/Аланія, Туреччина",
+    locationStepTitle: "Ваше місцезнаходження",
+    locationStepSubtitle: "В якому регіоні знаходиться ваша нерухомість? Сонячне випромінювання впливає на заощадження.",
+    locationAntalyaCity: "Анталія",
+    locationAlanya: "Аланія",
+    locationKemer: "Кемер",
+    locationBelek: "Белек",
+    locationSide: "Сіде",
+    locationManavgat: "Манавгат",
+    locationFethiye: "Фетхіє",
+    locationBodrum: "Бодрум",
+    locationMarmaris: "Мармаріс",
+    locationKas: "Каш",
+    locationKalkan: "Калкан",
+    locationDalyan: "Дальян",
   },
   ar: {
     badge: "حاسبة 089 Bayern 4 في 1",
@@ -591,6 +676,20 @@ const translations: Record<string, {
     includes: "يشمل PV + مضخة حرارية/تبريد + ماء ساخن + بطارية",
     kW: "كيلوواط",
     locationAntalya: "الموقع: أنطاليا/ألانيا، تركيا",
+    locationStepTitle: "موقعك",
+    locationStepSubtitle: "في أي منطقة تقع عقارك؟ يؤثر التعرض للشمس على التوفير.",
+    locationAntalyaCity: "أنطاليا",
+    locationAlanya: "ألانيا",
+    locationKemer: "كيمير",
+    locationBelek: "بيليك",
+    locationSide: "سيدي",
+    locationManavgat: "مانافغات",
+    locationFethiye: "فتحية",
+    locationBodrum: "بودروم",
+    locationMarmaris: "مرمريس",
+    locationKas: "كاش",
+    locationKalkan: "كالكان",
+    locationDalyan: "داليان",
   },
   hr: {
     badge: "089 Bayern 4-u-1 kalkulator",
@@ -672,6 +771,20 @@ const translations: Record<string, {
     includes: "Uklj. PV + Dizalica topline/Hlađenje + Topla voda + Baterija",
     kW: "kW",
     locationAntalya: "Lokacija: Antalija/Alanja, Turska",
+    locationStepTitle: "Vaša lokacija",
+    locationStepSubtitle: "U kojoj regiji se nalazi vaša nekretnina? Sunčevo zračenje utječe na uštedu.",
+    locationAntalyaCity: "Antalija",
+    locationAlanya: "Alanja",
+    locationKemer: "Kemer",
+    locationBelek: "Belek",
+    locationSide: "Side",
+    locationManavgat: "Manavgat",
+    locationFethiye: "Fethiye",
+    locationBodrum: "Bodrum",
+    locationMarmaris: "Marmaris",
+    locationKas: "Kaš",
+    locationKalkan: "Kalkan",
+    locationDalyan: "Dalyan",
   },
 };
 
@@ -703,6 +816,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
   
   const [data, setData] = useState<CalculatorData>({
     propertyType: "",
+    location: "",
     propertySize: 200,
     monthlyElectricity: 5000,
     monthlyHeating: 3500,
@@ -715,7 +829,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
   const t = translations[language] || translations.de;
   const isRTL = language === "ar";
 
-  const totalSteps = 7;
+  const totalSteps = 8;
   const progress = (step / totalSteps) * 100;
 
   const handleNext = () => {
@@ -735,12 +849,13 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
   const canProceed = () => {
     switch (step) {
       case 1: return data.propertyType !== "";
-      case 2: return data.propertySize > 0;
-      case 3: return data.monthlyElectricity >= 0;
-      case 4: return data.monthlyHeating >= 0;
-      case 5: return data.monthlyHotWater >= 0;
-      case 6: return data.monthlyCooling >= 0;
-      case 7: return data.systemTier !== "";
+      case 2: return data.location !== "";
+      case 3: return data.propertySize > 0;
+      case 4: return data.monthlyElectricity >= 0;
+      case 5: return data.monthlyHeating >= 0;
+      case 6: return data.monthlyHotWater >= 0;
+      case 7: return data.monthlyCooling >= 0;
+      case 8: return data.systemTier !== "";
       default: return false;
     }
   };
@@ -1061,8 +1176,48 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
               </div>
             )}
 
-            {/* Step 2: Property Size */}
+            {/* Step 2: Location */}
             {step === 2 && (
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground">{t.locationStepTitle}</h3>
+                  <p className="text-muted-foreground">{t.locationStepSubtitle}</p>
+                </div>
+                <div className="grid grid-cols-3 md:grid-cols-4 gap-3">
+                  {[
+                    { id: "antalya", label: t.locationAntalyaCity },
+                    { id: "alanya", label: t.locationAlanya },
+                    { id: "kemer", label: t.locationKemer },
+                    { id: "belek", label: t.locationBelek },
+                    { id: "side", label: t.locationSide },
+                    { id: "manavgat", label: t.locationManavgat },
+                    { id: "fethiye", label: t.locationFethiye },
+                    { id: "bodrum", label: t.locationBodrum },
+                    { id: "marmaris", label: t.locationMarmaris },
+                    { id: "kas", label: t.locationKas },
+                    { id: "kalkan", label: t.locationKalkan },
+                    { id: "dalyan", label: t.locationDalyan },
+                  ].map((loc) => (
+                    <button
+                      key={loc.id}
+                      onClick={() => setData({ ...data, location: loc.id })}
+                      className={`p-3 rounded-xl border-2 transition-all hover-elevate active-elevate-2 flex items-center justify-center gap-2 ${
+                        data.location === loc.id ? "border-primary bg-primary/10" : "border-border/50 bg-background/50"
+                      }`}
+                      data-testid={`button-location-${loc.id}`}
+                    >
+                      <MapPin className={`w-4 h-4 ${data.location === loc.id ? "text-primary" : "text-muted-foreground"}`} />
+                      <span className={`font-medium text-sm ${data.location === loc.id ? "text-primary" : "text-foreground"}`}>
+                        {loc.label}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Step 3: Property Size */}
+            {step === 3 && (
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-semibold text-foreground">{t.step2Title}</h3>
@@ -1084,8 +1239,8 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
               </div>
             )}
 
-            {/* Step 3: Electricity Costs */}
-            {step === 3 && (
+            {/* Step 4: Electricity Costs */}
+            {step === 4 && (
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-semibold text-foreground">{t.step3Title}</h3>
@@ -1112,8 +1267,8 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
               </div>
             )}
 
-            {/* Step 4: Heating Costs */}
-            {step === 4 && (
+            {/* Step 5: Heating Costs */}
+            {step === 5 && (
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-semibold text-foreground">{t.step4Title}</h3>
@@ -1140,8 +1295,8 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
               </div>
             )}
 
-            {/* Step 5: Hot Water Costs */}
-            {step === 5 && (
+            {/* Step 6: Hot Water Costs */}
+            {step === 6 && (
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-semibold text-foreground">{t.step5Title}</h3>
@@ -1168,8 +1323,8 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
               </div>
             )}
 
-            {/* Step 6: Cooling Costs */}
-            {step === 6 && (
+            {/* Step 7: Cooling Costs */}
+            {step === 7 && (
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-semibold text-foreground">{t.step6Title}</h3>
@@ -1196,8 +1351,8 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
               </div>
             )}
 
-            {/* Step 7: System Selection */}
-            {step === 7 && (
+            {/* Step 8: System Selection */}
+            {step === 8 && (
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-semibold text-foreground">{t.step7Title}</h3>
