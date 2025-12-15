@@ -962,7 +962,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
         <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
         
-        <div className="max-w-5xl mx-auto px-6 md:px-8 relative">
+        <div className="max-w-6xl mx-auto px-6 md:px-8 relative">
           <Card className="overflow-hidden border-primary/30 bg-gradient-to-br from-card via-card to-primary/5 shadow-2xl">
             <CardContent className="p-6 md:p-10">
               <div className="text-center mb-8">
@@ -1120,7 +1120,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
       
-      <div className="max-w-4xl mx-auto px-6 md:px-8 relative">
+      <div className="max-w-5xl mx-auto px-6 md:px-8 relative">
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-5 py-2 mb-4">
             <Calculator className="w-4 h-4 text-primary" />
