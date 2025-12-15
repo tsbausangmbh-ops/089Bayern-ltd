@@ -4,9 +4,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
-import { Home, Building2, Store, ArrowRight, ArrowLeft, Check, Calculator, TrendingUp, Leaf, Banknote, Flame, Snowflake, Battery, Zap } from "lucide-react";
+import { Home, Building2, Store, ArrowRight, ArrowLeft, Check, Calculator, TrendingUp, Leaf, Banknote, Flame, Snowflake, Battery, Zap, RefreshCw } from "lucide-react";
 import { translations, isRTL } from "@/lib/translations";
 import { useLanguage } from "@/lib/LanguageContext";
+import { useExchangeRate, formatTL } from "@/hooks/useExchangeRate";
 
 const turkishLocations = [
   { id: "antalya", key: "locationAntalya" as const, sun: "2.900+" },
@@ -53,6 +54,7 @@ interface CalculatorData {
 export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps) {
   const [step, setStep] = useState(1);
   const { language: lang, detectedCountry } = useLanguage();
+  const { rate: exchangeRate, loading: rateLoading, lastUpdated } = useExchangeRate();
   
   const isCroatian = detectedCountry === "HR" || lang === "hr";
   const locationData = isCroatian ? croatianLocations : turkishLocations;
@@ -179,15 +181,28 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                 </div>
               </div>
 
+              <div className="bg-muted/30 rounded-lg p-3 mb-6 flex items-center justify-center gap-2 text-sm">
+                <RefreshCw className={`w-4 h-4 text-muted-foreground ${rateLoading ? "animate-spin" : ""}`} />
+                <span className="text-muted-foreground">
+                  {lang === "de" ? "Aktueller Kurs" : lang === "en" ? "Current rate" : "Güncel kur"}: 
+                  <span className="font-semibold text-foreground ml-1">1 EUR = {exchangeRate.toFixed(2)} TL</span>
+                </span>
+                {lastUpdated && (
+                  <span className="text-xs text-muted-foreground">
+                    ({lastUpdated.toLocaleTimeString()})
+                  </span>
+                )}
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                 <div className="text-center p-6 bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl border border-primary/20">
                   <Banknote className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <div className="text-4xl font-bold text-primary mb-1">₺{estimatedMonthlySavings.toLocaleString()}</div>
+                  <div className="text-4xl font-bold text-primary mb-1">{formatTL(estimatedMonthlySavings)}</div>
                   <p className="text-sm text-muted-foreground">{t.monthlySavings}</p>
                 </div>
                 <div className="text-center p-6 bg-gradient-to-br from-accent/20 to-accent/5 rounded-xl border border-accent/20">
                   <TrendingUp className="w-8 h-8 text-accent mx-auto mb-3" />
-                  <div className="text-4xl font-bold text-accent mb-1">₺{yearlySavings.toLocaleString()}</div>
+                  <div className="text-4xl font-bold text-accent mb-1">{formatTL(yearlySavings)}</div>
                   <p className="text-sm text-muted-foreground">{t.yearlySavings}</p>
                 </div>
                 <div className="text-center p-6 bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 rounded-xl border border-emerald-500/20">
@@ -202,7 +217,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
                     <span className="text-muted-foreground">{t.estimatedCost}</span>
-                    <span className="block font-semibold text-foreground">₺{estimatedCost.toLocaleString()}</span>
+                    <span className="block font-semibold text-foreground">{formatTL(estimatedCost)}</span>
                   </div>
                   <div>
                     <span className="text-muted-foreground">{t.paybackPeriod}</span>
@@ -210,7 +225,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                   </div>
                   <div>
                     <span className="text-muted-foreground">{t.tenYearSavings}</span>
-                    <span className="block font-semibold text-emerald-400">₺{(yearlySavings * 10).toLocaleString()}</span>
+                    <span className="block font-semibold text-emerald-400">{formatTL(yearlySavings * 10)}</span>
                   </div>
                   <div>
                     <span className="text-muted-foreground">{t.yearlyCO2}</span>
