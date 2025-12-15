@@ -18,10 +18,30 @@ export default function Footer() {
   ];
 
   const products = [
-    { name: t.footer.vaillantHeatPump, desc: t.footer.vaillantDesc },
-    { name: t.footer.solarPanel, desc: t.footer.solarDesc },
-    { name: t.footer.samsungClimate, desc: t.footer.samsungDesc },
-    { name: t.footer.bydBattery, desc: t.footer.bydDesc },
+    { name: t.footer.vaillantHeatPump, desc: t.footer.vaillantDesc, href: "/systeme" },
+    { name: t.footer.solarPanel, desc: t.footer.solarDesc, href: "/systeme" },
+    { name: t.footer.samsungClimate, desc: t.footer.samsungDesc, href: "/systeme" },
+    { name: t.footer.bydBattery, desc: t.footer.bydDesc, href: "/systeme" },
+  ];
+
+  const seoLinks = [
+    { label: "Güneş Paneli Antalya", href: "/systeme", title: "Antalya'da güneş paneli kurulumu" },
+    { label: "Isı Pompası Alanya", href: "/systeme", title: "Alanya'da ısı pompası sistemleri" },
+    { label: "4'ü 1 Arada Sistem", href: "/systeme", title: "Entegre enerji çözümleri" },
+    { label: "Enerji Tasarruf Hesaplama", href: "/rechner", title: "Tasarruf hesaplayıcı" },
+    { label: "Solar Panel Fethiye", href: "/systeme", title: "Fethiye güneş enerjisi" },
+    { label: "Klima Sistemi Bodrum", href: "/systeme", title: "Bodrum klima çözümleri" },
+    { label: "Enerji Depolama Türkiye", href: "/systeme", title: "Batarya depolama sistemleri" },
+    { label: "Alman Kalitesi Türkiye", href: "/ueber-uns", title: "089 Bayern hakkında" },
+  ];
+
+  const mainNavLinks = [
+    { label: t.nav?.home || "Ana Sayfa", href: "/" },
+    { label: t.nav?.systems || "4-in-1 Sistem", href: "/systeme" },
+    { label: t.nav?.benefits || "Avantajlar", href: "/vorteile" },
+    { label: t.nav?.calculator || "Tasarruf Hesaplama", href: "/rechner" },
+    { label: t.nav?.about || "Hakkımızda", href: "/ueber-uns" },
+    { label: t.nav?.faq || "SSS", href: "/faq" },
   ];
 
   return (
@@ -33,7 +53,7 @@ export default function Footer() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/85 to-black/90" />
       
       <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-6">
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
@@ -81,8 +101,31 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               {products.map((product) => (
                 <li key={product.name} className="text-white/60">
-                  <span className="text-white">{product.name}</span>
+                  <a 
+                    href={product.href} 
+                    className="text-white hover:text-primary transition-colors"
+                    data-testid={`link-product-${product.name.replace(/\s+/g, '-').toLowerCase()}`}
+                  >
+                    {product.name}
+                  </a>
                   <span className="text-xs block">{product.desc}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-white mb-6">{t.nav?.pages || "Sayfalar"}</h4>
+            <ul className="space-y-3 text-sm">
+              {mainNavLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="text-white/70 hover:text-white transition-colors"
+                    data-testid={`link-nav-${link.href.replace("/", "") || "home"}`}
+                  >
+                    {link.label}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -171,6 +214,23 @@ export default function Footer() {
             <p className="text-xs text-white/40 mt-3">
               {t.footer.serviceAreasNote || "Akdeniz Bölgesi ve Dalmaçya'da güneş enerjisi, ısı pompası, klima ve enerji depolama kurulumu"}
             </p>
+          </div>
+        </div>
+
+        <div className="mt-6 pt-4 border-t border-white/10">
+          <h4 className="font-semibold text-white mb-3 text-center text-sm">Türkiye'de Enerji Çözümleri</h4>
+          <div className="flex flex-wrap justify-center gap-2 text-xs">
+            {seoLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                title={link.title}
+                className="px-3 py-1.5 bg-white/5 rounded-md text-white/70 hover:text-white hover:bg-white/10 transition-colors"
+                data-testid={`link-seo-${link.label.replace(/\s+/g, '-').toLowerCase()}`}
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
 
