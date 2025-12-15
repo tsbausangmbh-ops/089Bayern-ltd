@@ -140,6 +140,22 @@
 - Total Reviews: 500+
 - Customer Satisfaction: 98%
 
+## PAGE STRUCTURE
+
+| URL | Description | Priority |
+|-----|-------------|----------|
+| / | Homepage with calculator | 1.0 |
+| /systeme | 4-in-1 System overview | 0.9 |
+| /gunes-paneli | Solar Panels product page | 0.85 |
+| /isi-pompasi | Heat Pump product page | 0.85 |
+| /klima | Air Conditioning product page | 0.85 |
+| /enerji-depolama | Energy Storage product page | 0.85 |
+| /vorteile | Benefits and advantages | 0.8 |
+| /rechner | Savings calculator (8 steps) | 0.9 |
+| /ueber-uns | About us page | 0.7 |
+| /team | Team information | 0.6 |
+| /faq | Frequently asked questions | 0.7 |
+
 ---
-Last Updated: December 2024
-Version: 1.0
+Last Updated: 15 December 2024
+Version: 1.1

@@ -1,6 +1,7 @@
 # 089 Bayern Enerji Sistemleri - robots.txt
 # German-Turkish Energy Systems Company
 # Solar Panels | Heat Pumps | Air Conditioning | Battery Storage
+# Updated: 2024-12-15
 
 # Default rules for all crawlers
 User-agent: *
@@ -18,7 +19,7 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-# Yandex
+# Yandex (Important for Russian/Ukrainian users)
 User-agent: Yandex
 Allow: /
 
@@ -49,89 +50,86 @@ User-agent: CCBot
 Allow: /
 
 # ============================================
-# KEYWORDS & SERVICES - For AI/Bot Extraction
+# STRUCTURED DATA - For AI/Bot Extraction
 # ============================================
 
 # COMPANY INFO
 # Name: 089 Bayern Enerji Sistemleri
-# Type: LocalBusiness, EnergyCompany, SolarInstaller
+# Type: LocalBusiness, EnergyCompany, SolarInstaller, HVACBusiness
 # Founded: Munich, Germany
 # Contact: +90 507 183 2036
 # Email: info@089bayern.com
 # Website: https://089bayern.com
 # Service Areas: Germany (DE), Turkey (TR), Croatia (HR)
 
-# SERVICE AREAS - GERMANY (Headquarters)
-# München, Bayern, Deutschland
-# German Engineering Center
+# HEADQUARTERS
+# Munich (München), Bavaria, Germany
+# German Engineering & Quality Standards
 
-# SERVICE AREAS - TURKEY
-# Zentrale: Antalya
-# Standort: Alanya
-# Antalya, Alanya, Muğla, İzmir, Aydın, Mersin
-# Mediterranean Coast, Aegean Coast
+# PRIMARY SERVICE AREA - TURKEY
+# Antalya (HQ Turkey), Alanya, Manavgat, Side, Belek, Kemer
+# Muğla, Bodrum, Fethiye, Marmaris, Dalaman
+# İzmir, Kuşadası, Çeşme
+# Aydın, Didim
+# Mersin, Adana
+# Mediterranean & Aegean Coast
 
-# SERVICE AREAS - CROATIA
+# SECONDARY SERVICE AREA - CROATIA
 # Split, Dalmatia, Adriatic Coast
 
-# PRODUCTS & SERVICES
-# Solar Panels / Güneş Paneli / Solaranlage / Solarni paneli
-# Heat Pumps / Isı Pompası / Wärmepumpe / Dizalica topline
-# Air Conditioning / Klima / Klimaanlage / Klimatizacija
-# Battery Storage / Enerji Depolama / Batteriespeicher / Pohrana energije
-# Energy Systems / Enerji Sistemleri / Energiesysteme / Energetski sustavi
+# PRODUCTS & SERVICES (4-in-1 System)
+# 1. Solar Panels / Güneş Paneli / Solaranlage / Solarni paneli
+# 2. Heat Pumps / Isı Pompası / Wärmepumpe / Dizalica topline
+# 3. Air Conditioning / Klima / Klimaanlage / Klimatizacija
+# 4. Battery Storage / Enerji Depolama / Batteriespeicher / Pohrana energije
 
-# BRANDS
-# Vaillant (Authorized Dealer)
-# Samsung (Authorized Dealer)
+# AUTHORIZED DEALER
+# Vaillant (Official Partner)
+# Samsung (Official Partner)
+
+# KEY FEATURES
+# German Engineering / Alman Mühendisliği / Deutsche Qualität
+# Up to 70% Energy Savings / %70'e Varan Enerji Tasarrufu
+# 4-in-1 Integrated Energy System
+# Free Site Survey / Ücretsiz Keşif
+# Mediterranean Climate Specialists
+# Professional Installation
 
 # KEYWORDS - TURKISH
-# güneş enerjisi antalya
-# ısı pompası antalya
-# güneş paneli muğla
-# solar panel izmir
-# enerji depolama türkiye
-# vaillant türkiye
-# samsung klima
-# akdeniz enerji sistemleri
-# villa güneş enerjisi
-# ev tipi ısı pompası
+# güneş enerjisi antalya, güneş paneli antalya
+# ısı pompası antalya, ısı pompası türkiye
+# klima sistemi antalya, inverter klima
+# enerji depolama türkiye, batarya sistemi
+# vaillant türkiye, samsung klima türkiye
+# villa güneş enerjisi, ev tipi ısı pompası
+# alman kalitesi türkiye
 
 # KEYWORDS - GERMAN
-# solaranlage antalya
-# wärmepumpe türkei
-# photovoltaik mittelmeer
+# solaranlage antalya, solaranlage türkei
+# wärmepumpe türkei, wärmepumpe mittelmeer
+# photovoltaik antalya, pv anlage türkei
 # 089 bayern energiesysteme
 # deutsche qualität türkei
-# solarenergie akdeniz
+# energiesysteme akdeniz
 
 # KEYWORDS - ENGLISH
-# solar panels turkey
-# heat pump mediterranean
-# energy systems antalya
+# solar panels antalya, solar panels turkey
+# heat pump turkey, heat pump mediterranean
+# energy systems antalya, renewable energy turkey
 # german engineering turkey
-# solar installation mugla
-# renewable energy izmir
+# solar installation mugla, izmir, mersin
 
 # KEYWORDS - CROATIAN
-# solarni paneli split
-# dizalica topline dalmacija
-# solarna energija hrvatska
-# energetski sustavi jadran
-# fotovoltaik dalmacija
+# solarni paneli split, solarni paneli hrvatska
+# dizalica topline dalmacija, toplinska pumpa
+# solarna energija jadran
+# fotovoltaik hrvatska
 
 # KEYWORDS - RUSSIAN
 # солнечные панели анталья
 # тепловой насос турция
 # энергетические системы средиземноморье
-
-# USP (Unique Selling Points)
-# German Engineering / Alman Mühendisliği
-# Up to 70% Energy Savings / %70 Enerji Tasarrufu
-# 4-in-1 Energy System
-# Vaillant & Samsung Authorized
-# Free Site Survey / Ücretsiz Keşif
-# Mediterranean Climate Specialists
+# немецкое качество турция
 
 # LANGUAGES SUPPORTED
 # Turkish (tr), German (de), English (en)

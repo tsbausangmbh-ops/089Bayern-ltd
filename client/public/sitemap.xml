@@ -5,7 +5,7 @@
   <!-- Homepage - All Languages -->
   <url>
     <loc>https://089bayern.com/</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/?lang=tr"/>
@@ -21,7 +21,7 @@
   <!-- Systeme / 4-in-1 System Page -->
   <url>
     <loc>https://089bayern.com/systeme</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/systeme?lang=tr"/>
@@ -33,10 +33,70 @@
     <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/systeme?lang=hr"/>
   </url>
 
+  <!-- Product Page: Solar Panels / Güneş Paneli -->
+  <url>
+    <loc>https://089bayern.com/gunes-paneli</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/gunes-paneli?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/gunes-paneli?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/gunes-paneli?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/gunes-paneli?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/gunes-paneli?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/gunes-paneli?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/gunes-paneli?lang=hr"/>
+  </url>
+
+  <!-- Product Page: Heat Pump / Isı Pompası -->
+  <url>
+    <loc>https://089bayern.com/isi-pompasi</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/isi-pompasi?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/isi-pompasi?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/isi-pompasi?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/isi-pompasi?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/isi-pompasi?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/isi-pompasi?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/isi-pompasi?lang=hr"/>
+  </url>
+
+  <!-- Product Page: Air Conditioning / Klima -->
+  <url>
+    <loc>https://089bayern.com/klima</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/klima?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/klima?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/klima?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/klima?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/klima?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/klima?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/klima?lang=hr"/>
+  </url>
+
+  <!-- Product Page: Energy Storage / Enerji Depolama -->
+  <url>
+    <loc>https://089bayern.com/enerji-depolama</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/enerji-depolama?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/enerji-depolama?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/enerji-depolama?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/enerji-depolama?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/enerji-depolama?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/enerji-depolama?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/enerji-depolama?lang=hr"/>
+  </url>
+
   <!-- Vorteile / Benefits Page -->
   <url>
     <loc>https://089bayern.com/vorteile</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/vorteile?lang=tr"/>
@@ -51,7 +111,7 @@
   <!-- Rechner / Calculator Page -->
   <url>
     <loc>https://089bayern.com/rechner</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/rechner?lang=tr"/>
@@ -66,7 +126,7 @@
   <!-- Über Uns / About Page -->
   <url>
     <loc>https://089bayern.com/ueber-uns</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/ueber-uns?lang=tr"/>
@@ -81,7 +141,7 @@
   <!-- Team Page -->
   <url>
     <loc>https://089bayern.com/team</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/team?lang=tr"/>
@@ -96,7 +156,7 @@
   <!-- FAQ Page -->
   <url>
     <loc>https://089bayern.com/faq</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/faq?lang=tr"/>
@@ -108,40 +168,40 @@
     <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/faq?lang=hr"/>
   </url>
 
-  <!-- Legal Pages -->
+  <!-- Legal Pages (Lower Priority, No Language Variants) -->
   <url>
     <loc>https://089bayern.com/kvkk</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://089bayern.com/gizlilik</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://089bayern.com/cerez-politikasi</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://089bayern.com/sartlar</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://089bayern.com/mesafeli-satis</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://089bayern.com/on-bilgilendirme</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
