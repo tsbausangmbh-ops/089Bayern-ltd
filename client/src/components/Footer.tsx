@@ -24,16 +24,63 @@ export default function Footer() {
     { name: t.footer.bydBattery, desc: t.footer.bydDesc, href: "/systeme" },
   ];
 
-  const seoLinks = [
-    { label: "Güneş Paneli Antalya", href: "/systeme", title: "Antalya'da güneş paneli kurulumu" },
-    { label: "Isı Pompası Alanya", href: "/systeme", title: "Alanya'da ısı pompası sistemleri" },
-    { label: "4'ü 1 Arada Sistem", href: "/systeme", title: "Entegre enerji çözümleri" },
-    { label: "Enerji Tasarruf Hesaplama", href: "/rechner", title: "Tasarruf hesaplayıcı" },
-    { label: "Solar Panel Fethiye", href: "/systeme", title: "Fethiye güneş enerjisi" },
-    { label: "Klima Sistemi Bodrum", href: "/systeme", title: "Bodrum klima çözümleri" },
-    { label: "Enerji Depolama Türkiye", href: "/systeme", title: "Batarya depolama sistemleri" },
-    { label: "Alman Kalitesi Türkiye", href: "/ueber-uns", title: "089 Bayern hakkında" },
-  ];
+  const seoLinks = {
+    systems: [
+      { label: "Güneş Paneli Antalya", href: "/systeme", title: "Antalya güneş paneli kurulumu - 089 Bayern" },
+      { label: "Solar Panel Alanya", href: "/systeme", title: "Alanya solar panel sistemleri" },
+      { label: "Güneş Enerjisi Fethiye", href: "/systeme", title: "Fethiye güneş enerjisi kurulumu" },
+      { label: "Solar Sistem Bodrum", href: "/systeme", title: "Bodrum solar panel montajı" },
+      { label: "Fotovoltaik Kaş", href: "/systeme", title: "Kaş fotovoltaik sistemler" },
+      { label: "PV Anlage Side", href: "/systeme", title: "Side PV sistemleri" },
+    ],
+    heatPumps: [
+      { label: "Isı Pompası Antalya", href: "/systeme", title: "Antalya ısı pompası kurulumu" },
+      { label: "Wärmepumpe Alanya", href: "/systeme", title: "Alanya ısı pompası sistemleri" },
+      { label: "Isıtma Sistemi Türkiye", href: "/systeme", title: "Türkiye ısıtma çözümleri" },
+      { label: "Vaillant Isı Pompası", href: "/systeme", title: "Vaillant ısı pompası Türkiye" },
+    ],
+    climate: [
+      { label: "Klima Sistemi Antalya", href: "/systeme", title: "Antalya klima kurulumu" },
+      { label: "Samsung Klima Türkiye", href: "/systeme", title: "Samsung klima sistemleri" },
+      { label: "Inverter Klima Alanya", href: "/systeme", title: "Alanya inverter klima" },
+      { label: "Soğutma Sistemi Bodrum", href: "/systeme", title: "Bodrum soğutma çözümleri" },
+    ],
+    battery: [
+      { label: "Enerji Depolama Türkiye", href: "/systeme", title: "Türkiye enerji depolama sistemleri" },
+      { label: "BYD Batarya Antalya", href: "/systeme", title: "BYD batarya depolama" },
+      { label: "Akü Sistemi Alanya", href: "/systeme", title: "Alanya akü depolama" },
+      { label: "Stromspeicher Türkei", href: "/systeme", title: "Türkiye elektrik depolama" },
+    ],
+    brand: [
+      { label: "089 Bayern Enerji", href: "/", title: "089 Bayern - Alman enerji teknolojisi" },
+      { label: "Alman Kalitesi Türkiye", href: "/ueber-uns", title: "Almanya kalitesi Türkiye'de" },
+      { label: "Deutsche Qualität Antalya", href: "/ueber-uns", title: "Alman kalitesi Antalya" },
+      { label: "German Engineering Turkey", href: "/ueber-uns", title: "German engineering in Turkey" },
+    ],
+    services: [
+      { label: "Enerji Tasarruf Hesaplama", href: "/rechner", title: "Tasarruf hesaplayıcı" },
+      { label: "Ücretsiz Teklif Al", href: "/rechner", title: "Ücretsiz enerji teklifi" },
+      { label: "4'ü 1 Arada Sistem", href: "/systeme", title: "Entegre enerji çözümleri" },
+      { label: "Enerji Danışmanlığı", href: "/faq", title: "Enerji danışmanlık hizmetleri" },
+    ],
+    regions: [
+      { label: "Antalya", href: "/systeme", title: "Antalya enerji sistemleri" },
+      { label: "Alanya", href: "/systeme", title: "Alanya enerji sistemleri" },
+      { label: "Fethiye", href: "/systeme", title: "Fethiye enerji sistemleri" },
+      { label: "Bodrum", href: "/systeme", title: "Bodrum enerji sistemleri" },
+      { label: "Marmaris", href: "/systeme", title: "Marmaris enerji sistemleri" },
+      { label: "Kaş", href: "/systeme", title: "Kaş enerji sistemleri" },
+      { label: "Side", href: "/systeme", title: "Side enerji sistemleri" },
+      { label: "Kemer", href: "/systeme", title: "Kemer enerji sistemleri" },
+      { label: "Belek", href: "/systeme", title: "Belek enerji sistemleri" },
+      { label: "Manavgat", href: "/systeme", title: "Manavgat enerji sistemleri" },
+      { label: "İzmir", href: "/systeme", title: "İzmir enerji sistemleri" },
+      { label: "Muğla", href: "/systeme", title: "Muğla enerji sistemleri" },
+      { label: "Mersin", href: "/systeme", title: "Mersin enerji sistemleri" },
+      { label: "Kuşadası", href: "/systeme", title: "Kuşadası enerji sistemleri" },
+      { label: "Didim", href: "/systeme", title: "Didim enerji sistemleri" },
+    ],
+  };
 
   const mainNavLinks = [
     { label: t.nav?.home || "Ana Sayfa", href: "/" },
@@ -218,19 +265,80 @@ export default function Footer() {
         </div>
 
         <div className="mt-6 pt-4 border-t border-white/10">
-          <h4 className="font-semibold text-white mb-3 text-center text-sm">Türkiye'de Enerji Çözümleri</h4>
-          <div className="flex flex-wrap justify-center gap-2 text-xs">
-            {seoLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                title={link.title}
-                className="px-3 py-1.5 bg-white/5 rounded-md text-white/70 hover:text-white hover:bg-white/10 transition-colors"
-                data-testid={`link-seo-${link.label.replace(/\s+/g, '-').toLowerCase()}`}
-              >
-                {link.label}
-              </a>
-            ))}
+          <h4 className="font-semibold text-white mb-4 text-center">Türkiye'de Enerji Çözümleri</h4>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+            <div>
+              <h5 className="text-xs font-semibold text-primary mb-2">Güneş Enerjisi</h5>
+              <div className="flex flex-wrap gap-1">
+                {seoLinks.systems.map((link) => (
+                  <a key={link.label} href={link.href} title={link.title} className="px-2 py-1 bg-white/5 rounded text-xs text-white/70 hover:text-white hover:bg-white/10 transition-colors">
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h5 className="text-xs font-semibold text-orange-400 mb-2">Isı Pompası</h5>
+              <div className="flex flex-wrap gap-1">
+                {seoLinks.heatPumps.map((link) => (
+                  <a key={link.label} href={link.href} title={link.title} className="px-2 py-1 bg-white/5 rounded text-xs text-white/70 hover:text-white hover:bg-white/10 transition-colors">
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h5 className="text-xs font-semibold text-sky-400 mb-2">Klima Sistemleri</h5>
+              <div className="flex flex-wrap gap-1">
+                {seoLinks.climate.map((link) => (
+                  <a key={link.label} href={link.href} title={link.title} className="px-2 py-1 bg-white/5 rounded text-xs text-white/70 hover:text-white hover:bg-white/10 transition-colors">
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h5 className="text-xs font-semibold text-emerald-400 mb-2">Enerji Depolama</h5>
+              <div className="flex flex-wrap gap-1">
+                {seoLinks.battery.map((link) => (
+                  <a key={link.label} href={link.href} title={link.title} className="px-2 py-1 bg-white/5 rounded text-xs text-white/70 hover:text-white hover:bg-white/10 transition-colors">
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h5 className="text-xs font-semibold text-amber-400 mb-2">089 Bayern</h5>
+              <div className="flex flex-wrap gap-1">
+                {seoLinks.brand.map((link) => (
+                  <a key={link.label} href={link.href} title={link.title} className="px-2 py-1 bg-white/5 rounded text-xs text-white/70 hover:text-white hover:bg-white/10 transition-colors">
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h5 className="text-xs font-semibold text-violet-400 mb-2">Hizmetlerimiz</h5>
+              <div className="flex flex-wrap gap-1">
+                {seoLinks.services.map((link) => (
+                  <a key={link.label} href={link.href} title={link.title} className="px-2 py-1 bg-white/5 rounded text-xs text-white/70 hover:text-white hover:bg-white/10 transition-colors">
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h5 className="text-xs font-semibold text-white/80 mb-2 text-center">Hizmet Bölgelerimiz</h5>
+            <div className="flex flex-wrap justify-center gap-1">
+              {seoLinks.regions.map((link) => (
+                <a key={link.label} href={link.href} title={link.title} className="px-2 py-1 bg-white/5 rounded text-xs text-white/60 hover:text-white hover:bg-white/10 transition-colors">
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
