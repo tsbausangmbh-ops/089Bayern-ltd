@@ -46,11 +46,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-6">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <img 
-                src={logoImage} 
-                alt="089 Bayern Logo" 
-                className="h-16 w-auto object-contain"
-              />
+              <div className="bg-white/90 rounded-lg p-2">
+                <img 
+                  src={logoImage} 
+                  alt="089 Bayern Logo" 
+                  className="h-14 w-auto object-contain"
+                />
+              </div>
+              <div>
+                <span className="block text-xl font-bold text-white">089 Bayern</span>
+                <span className="block text-sm text-white/70">Germany</span>
+              </div>
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
               {t.footer.description}
