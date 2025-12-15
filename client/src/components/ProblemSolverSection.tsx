@@ -21,14 +21,17 @@ import {
   Sun
 } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
-import { useLocation } from "wouter";
 
 export default function ProblemSolverSection() {
   const { language } = useLanguage();
-  const [, setLocation] = useLocation();
 
   const scrollToCalculator = () => {
-    setLocation("/#calculator");
+    const calculatorElement = document.getElementById('calculator');
+    if (calculatorElement) {
+      calculatorElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      window.location.href = '/#calculator';
+    }
   };
 
   const content = {
