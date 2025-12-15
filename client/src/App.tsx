@@ -18,6 +18,10 @@ import Systeme from "@/pages/systeme";
 import Vorteile from "@/pages/vorteile";
 import Rechner from "@/pages/rechner";
 import FAQ from "@/pages/faq";
+import GunesPaneli from "@/pages/gunes-paneli";
+import IsiPompasi from "@/pages/isi-pompasi";
+import Klima from "@/pages/klima";
+import EnerjiDepolama from "@/pages/enerji-depolama";
 import CookieBanner from "@/components/CookieBanner";
 
 const ChatBot = lazy(() => import("@/components/ChatBot"));
@@ -37,6 +41,10 @@ function Router() {
       <Route path="/vorteile" component={Vorteile} />
       <Route path="/rechner" component={Rechner} />
       <Route path="/faq" component={FAQ} />
+      <Route path="/gunes-paneli" component={GunesPaneli} />
+      <Route path="/isi-pompasi" component={IsiPompasi} />
+      <Route path="/klima" component={Klima} />
+      <Route path="/enerji-depolama" component={EnerjiDepolama} />
       <Route component={NotFound} />
     </Switch>
   );
