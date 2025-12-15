@@ -22,6 +22,7 @@ import GunesPaneli from "@/pages/gunes-paneli";
 import IsiPompasi from "@/pages/isi-pompasi";
 import Klima from "@/pages/klima";
 import EnerjiDepolama from "@/pages/enerji-depolama";
+import Standorte from "@/pages/standorte";
 import CookieBanner from "@/components/CookieBanner";
 
 const ChatBot = lazy(() => import("@/components/ChatBot"));
@@ -45,6 +46,7 @@ function Router() {
       <Route path="/isi-pompasi" component={IsiPompasi} />
       <Route path="/klima" component={Klima} />
       <Route path="/enerji-depolama" component={EnerjiDepolama} />
+      <Route path="/standorte" component={Standorte} />
       <Route component={NotFound} />
     </Switch>
   );
