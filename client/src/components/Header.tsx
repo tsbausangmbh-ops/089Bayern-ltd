@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Globe } from "lucide-react";
-import logoImage from "@assets/Logo_1765789080238.png";
+import logoImage from "@assets/Logo_1765790073992.png";
 import {
   DropdownMenu,
   DropdownMenuContent,

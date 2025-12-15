@@ -3,7 +3,7 @@ import { SiWhatsapp } from "react-icons/si";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
 import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
-import logoImage from "@assets/Logo_1765789080238.png";
+import logoImage from "@assets/Logo_1765790073992.png";
 
 export default function Footer() {
   const { language } = useLanguage();
