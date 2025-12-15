@@ -176,7 +176,7 @@ export default function Footer() {
 
         <div className="mt-4 pt-3 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
-            <p>&copy; 2024 {t.footer.copyright}</p>
+            <p>&copy; 2024 <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline" data-testid="link-extrucon">{t.footer.copyright}</a></p>
           </div>
         </div>
 
