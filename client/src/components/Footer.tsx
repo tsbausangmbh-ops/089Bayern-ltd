@@ -3,6 +3,7 @@ import { SiWhatsapp } from "react-icons/si";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
 import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
+import logoImage from "@assets/Logo_1765789080238.png";
 
 export default function Footer() {
   const { language } = useLanguage();
@@ -160,13 +161,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-6">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
-                <span className="text-white font-bold text-xl">089</span>
-              </div>
-              <div>
-                <span className="font-bold text-xl text-white">Bayern</span>
-                <span className="block text-xs text-white/60">{t.footer.tagline}</span>
-              </div>
+              <img 
+                src={logoImage} 
+                alt="089 Bayern Logo" 
+                className="h-16 w-auto object-contain"
+              />
             </div>
             <p className="text-white/70 text-sm mb-6 leading-relaxed">
               {t.footer.description}
