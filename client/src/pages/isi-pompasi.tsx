@@ -332,6 +332,46 @@ export default function IsiPompasi() {
         </div>
       </section>
 
+      {/* 4in1 System Banner */}
+      <section className="py-12 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 border-y border-primary/20" data-testid="section-4in1-banner">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg">
+                <span className="text-2xl font-bold text-white">4in1</span>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground">
+                  {language === "de" ? "Teil des 089 Bayern 4in1 Systems" : 
+                   language === "en" ? "Part of 089 Bayern 4in1 System" : 
+                   "089 Bayern 4in1 Sisteminin Parçası"}
+                </h3>
+                <p className="text-muted-foreground">
+                  {language === "de" ? "Kühlen + Heizen + Speichern + Energie & Warmwasser = EINE Lösung" : 
+                   language === "en" ? "Cooling + Heating + Storage + Energy & Hot Water = ONE Solution" : 
+                   "Soğutma + Isıtma + Depolama + Enerji & Sıcak Su = TEK Çözüm"}
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+              <div className="flex items-center gap-2 px-4 py-2 bg-orange-500/20 rounded-lg border border-orange-500/30">
+                <Flame className="w-5 h-5 text-orange-500" />
+                <span className="font-semibold text-foreground">
+                  {language === "de" ? "10 Monate Sonne" : 
+                   language === "en" ? "10 Months Sun" : 
+                   "10 Ay Güneş"}
+                </span>
+              </div>
+              <div className="text-lg font-bold text-primary">
+                = {language === "de" ? "Kostenlose Energie!" : 
+                   language === "en" ? "Free Energy!" : 
+                   "Bedava Enerji!"}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 md:py-20 bg-muted/30" data-testid="section-problems">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
