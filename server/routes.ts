@@ -72,6 +72,65 @@ export async function registerRoutes(
     }
   });
 
+  // NLP Marketing Text Optimization endpoint
+  app.post("/api/optimize-text", async (req, res) => {
+    try {
+      const { text, targetLanguage = "tr", context = "turkish_market" } = req.body;
+      
+      if (!text || typeof text !== "string") {
+        return res.status(400).json({ error: "Text is required" });
+      }
+
+      const systemPrompt = `Du bist ein Marketing-Texter für 089 Bayern, ein deutsch-türkisches Energieunternehmen.
+      
+ZIELMARKT: Türkei (Mittelmeerregion - Antalya, Alanya, Bodrum, etc.)
+
+KERNPROBLEME DER KUNDEN:
+- Extreme Hitze im Sommer (bis 50°C)
+- Hohe Stromkosten für Klimaanlagen
+- Stromausfälle bei Hitzewellen
+- Steigende Energiepreise
+- Wunsch nach Energieunabhängigkeit
+
+UNSERE LÖSUNG: 4-in-1 System
+- Solaranlagen: 300+ Sonnentage nutzen
+- Wärmepumpen: Effiziente Heizung & Kühlung
+- Samsung Klimaanlagen: Energiesparende Inverter-Technik
+- BYD Batteriespeicher: 24/7 Energie auch bei Stromausfall
+
+EMOTIONALER ANSATZ:
+- Empathie zeigen: "Wir verstehen die Herausforderungen bei 50°C..."
+- Lösungsorientiert: "Nie wieder schwitzen, nie wieder hohe Stromrechnungen"
+- Vertrauen: "Deutsche Qualität, 10 Jahre Garantie"
+- Dringlichkeit: "Jetzt handeln, bevor der nächste Sommer kommt"
+
+SPRACHE: ${targetLanguage === "tr" ? "Türkisch" : targetLanguage === "de" ? "Deutsch" : "Englisch"}
+
+Optimiere den folgenden Text mit mehr Empathie und Problemlösung. Mache ihn emotionaler und überzeugender für den türkischen Markt.`;
+
+      const response = await openai.chat.completions.create({
+        model: "gpt-4o-mini",
+        messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user", content: `Optimiere diesen Text: "${text}"` }
+        ],
+        max_tokens: 800,
+        temperature: 0.8,
+      });
+
+      const optimizedText = response.choices[0]?.message?.content || text;
+
+      return res.status(200).json({ 
+        success: true,
+        original: text,
+        optimized: optimizedText,
+      });
+    } catch (error) {
+      console.error("Error in optimize-text endpoint:", error);
+      return res.status(500).json({ error: "Internal server error" });
+    }
+  });
+
   // ChatBot AI endpoint
   app.post("/api/chat", async (req, res) => {
     try {
