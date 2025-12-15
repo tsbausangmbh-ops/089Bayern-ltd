@@ -52,19 +52,9 @@ export default function Footer() {
                 className="h-16 w-auto object-contain"
               />
             </div>
-            <p className="text-white/70 text-sm mb-6 leading-relaxed">
+            <p className="text-white/70 text-sm leading-relaxed">
               {t.footer.description}
             </p>
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2 text-xs text-white/60">
-                <Award className="w-4 h-4" />
-                <span>{t.footer.germanQuality}</span>
-              </div>
-              <div className="flex items-center gap-2 text-xs text-white/60">
-                <Shield className="w-4 h-4" />
-                <span>{t.footer.guarantee}</span>
-              </div>
-            </div>
           </div>
 
           <div>
