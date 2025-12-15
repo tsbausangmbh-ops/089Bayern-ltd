@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "wouter";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import SEOHead from "@/components/SEOHead";
@@ -22,6 +23,7 @@ interface CalculatorData {
 export default function Home() {
   const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
   const [calculatorData, setCalculatorData] = useState<CalculatorData | undefined>();
+  const [, setLocation] = useLocation();
 
   useEffect(() => {
     const scrollToHash = () => {
@@ -44,7 +46,7 @@ export default function Home() {
   }, []);
 
   const handleCtaClick = () => {
-    setIsLeadFormOpen(true);
+    setLocation("/rechner");
   };
 
   const handleLearnMoreClick = () => {
