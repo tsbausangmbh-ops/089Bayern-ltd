@@ -23,14 +23,14 @@ const chatTranslations: Record<string, {
 }> = {
   de: {
     headline: "Haben Sie Energieprobleme im Mittelmeerraum?",
-    title: "Ihr Energieberater Mustafa",
+    title: "Ihr Energieberater Dalibor",
     subtitle: "Stellen Sie Ihre Fragen zu Solar, Wärmepumpe & Klimaanlage",
     placeholder: "Ihre Frage eingeben...",
-    welcome: "Merhaba!\n\nIch bin Mustafa Sakar, Ihr Energieberater bei 089 Bayern.\n\nIch helfe Deutschen und Türken seit 15 Jahren mit Energielösungen im Mittelmeerraum. Wie kann ich Ihnen heute helfen?",
+    welcome: "Grüß Gott!\n\nIch bin Dalibor Bakmaz, Ihr Energieberater bei 089 Bayern.\n\nIch helfe Deutschen und Kroaten seit 15 Jahren mit Energielösungen im Mittelmeerraum. Wie kann ich Ihnen heute helfen?",
     suggestions: [
-      "Ich habe ein Ferienhaus in Antalya",
+      "Ich habe ein Ferienhaus in Kroatien",
       "Wie funktioniert das 4-in-1 System?",
-      "Gibt es Förderungen in der Türkei?",
+      "Gibt es Förderungen in Kroatien?",
     ],
   },
   tr: {
@@ -95,14 +95,14 @@ const chatTranslations: Record<string, {
   },
   hr: {
     headline: "Imate li energetske probleme na Mediteranu?",
-    title: "Vaš energetski savjetnik Mustafa",
+    title: "Vaš energetski savjetnik Dalibor",
     subtitle: "Postavite pitanja o solarnim panelima, toplinskoj pumpi i klimi",
     placeholder: "Unesite vaše pitanje...",
-    welcome: "Merhaba!\n\nJa sam Mustafa Sakar, vaš energetski savjetnik u 089 Bayern.\n\nVeć 15 godina pomažem Nijemcima i Turcima s energetskim rješenjima na Mediteranu. Kako vam mogu pomoći?",
+    welcome: "Pozdrav!\n\nJa sam Dalibor Bakmaz, vaš energetski savjetnik u 089 Bayern.\n\nVeć 15 godina pomažem Nijemcima i Hrvatima s energetskim rješenjima na Mediteranu. Kako vam mogu pomoći?",
     suggestions: [
-      "Imam kuću u Antaliji",
+      "Imam kuću u Hrvatskoj",
       "Kako radi sustav 4-u-1?",
-      "Postoje li poticaji u Turskoj?",
+      "Postoje li poticaji u Hrvatskoj?",
     ],
   },
 };
@@ -198,7 +198,7 @@ export default function EmbeddedChatSection() {
                 <Bot className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-white font-semibold">Mustafa Sakar - 089 Bayern</h3>
+                <h3 className="text-white font-semibold">{language === "de" || language === "hr" ? "Dalibor Bakmaz" : "Mustafa Sakar"} - 089 Bayern</h3>
                 <p className="text-white/80 text-sm">Online - {language === "tr" ? "Yardıma hazır" : language === "de" ? "Bereit zu helfen" : language === "ar" ? "جاهز للمساعدة" : language === "ru" ? "Готов помочь" : language === "uk" ? "Готовий допомогти" : language === "hr" ? "Spreman pomoći" : "Ready to help"}</p>
               </div>
             </div>
