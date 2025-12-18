@@ -26,7 +26,7 @@ const chatTranslations: Record<string, {
     title: "Ihr Energieberater Dalibor",
     subtitle: "Stellen Sie Ihre Fragen zu Solar, Wärmepumpe & Klimaanlage",
     placeholder: "Ihre Frage eingeben...",
-    welcome: "Grüß Gott!\nIch bin Dalko, Ihr Digitaler Energieberater bei 089 Bayern.\nMeine Familie Bakmaz hat türkische Wurzeln aus der Osmanenzeit - deshalb verstehe ich beide Kulturen wie kein anderer.\nSeit 15 Jahren verbinde ich deutsche Ingenieurskunst mit mediterraner Lebensart. Wie kann ich Ihnen heute helfen?",
+    welcome: "Grüß Gott!\nIch bin Dalko, Ihr Digitaler Energieberater bei 089 Bayern.\nIch helfe Deutschen und Kroaten seit 15 Jahren mit Energielösungen im Mittelmeerraum. Wie kann ich Ihnen heute helfen?",
     suggestions: [
       "Ich habe ein Ferienhaus in Kroatien",
       "Wie funktioniert das 4-in-1 System?",
@@ -98,7 +98,7 @@ const chatTranslations: Record<string, {
     title: "Vaš energetski savjetnik Dalibor",
     subtitle: "Postavite pitanja o solarnim panelima, toplinskoj pumpi i klimi",
     placeholder: "Unesite vaše pitanje...",
-    welcome: "Pozdrav!\nJa sam Dalko, vaš digitalni energetski savjetnik u 089 Bayern.\nMoja obitelj Bakmaz ima turske korijene iz osmanskog doba - zato razumijem obje kulture kao nitko drugi.\nVeć 15 godina povezujem njemačku inženjersku kvalitetu s mediteranskim načinom života. Kako vam mogu pomoći?",
+    welcome: "Pozdrav!\nJa sam Dalko, vaš digitalni energetski savjetnik u 089 Bayern.\nVeć 15 godina pomažem Nijemcima i Hrvatima s energetskim rješenjima na Mediteranu. Kako vam mogu pomoći?",
     suggestions: [
       "Imam kuću u Hrvatskoj",
       "Kako radi sustav 4-u-1?",
