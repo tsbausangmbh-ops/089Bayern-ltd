@@ -14,6 +14,7 @@ interface Message {
 }
 
 const chatTranslations: Record<string, {
+  headline: string;
   title: string;
   subtitle: string;
   placeholder: string;
@@ -21,6 +22,7 @@ const chatTranslations: Record<string, {
   suggestions: string[];
 }> = {
   de: {
+    headline: "Haben Sie Energieprobleme im Mittelmeerraum?",
     title: "KI-Energieberater",
     subtitle: "Stellen Sie Ihre Fragen zu Solar, Wärmepumpe & Klimaanlage",
     placeholder: "Ihre Frage eingeben...",
@@ -32,6 +34,7 @@ const chatTranslations: Record<string, {
     ],
   },
   tr: {
+    headline: "Akdeniz bölgesinde enerji sorununuz mu var?",
     title: "Yapay Zeka Enerji Danışmanı",
     subtitle: "Güneş enerjisi, ısı pompası ve klima hakkında sorularınızı sorun",
     placeholder: "Sorunuzu yazın...",
@@ -43,6 +46,7 @@ const chatTranslations: Record<string, {
     ],
   },
   en: {
+    headline: "Do you have energy problems in the Mediterranean?",
     title: "AI Energy Advisor",
     subtitle: "Ask your questions about solar, heat pump & air conditioning",
     placeholder: "Enter your question...",
@@ -54,6 +58,7 @@ const chatTranslations: Record<string, {
     ],
   },
   ru: {
+    headline: "У вас проблемы с энергией в Средиземноморье?",
     title: "ИИ Энергетический Консультант",
     subtitle: "Задайте вопросы о солнечных панелях, тепловом насосе и кондиционере",
     placeholder: "Введите ваш вопрос...",
@@ -65,6 +70,7 @@ const chatTranslations: Record<string, {
     ],
   },
   uk: {
+    headline: "У вас проблеми з енергією в Середземномор'ї?",
     title: "ШІ Енергетичний Консультант",
     subtitle: "Задайте питання про сонячні панелі, тепловий насос та кондиціонер",
     placeholder: "Введіть ваше питання...",
@@ -76,6 +82,7 @@ const chatTranslations: Record<string, {
     ],
   },
   ar: {
+    headline: "هل لديك مشاكل في الطاقة في منطقة البحر الأبيض المتوسط؟",
     title: "مستشار الطاقة بالذكاء الاصطناعي",
     subtitle: "اطرح أسئلتك حول الطاقة الشمسية ومضخة الحرارة والتكييف",
     placeholder: "أدخل سؤالك...",
@@ -87,6 +94,7 @@ const chatTranslations: Record<string, {
     ],
   },
   hr: {
+    headline: "Imate li energetske probleme na Mediteranu?",
     title: "AI Energetski Savjetnik",
     subtitle: "Postavite pitanja o solarnim panelima, toplinskoj pumpi i klimi",
     placeholder: "Unesite vaše pitanje...",
@@ -168,13 +176,16 @@ export default function EmbeddedChatSection() {
     >
       <div className="max-w-4xl mx-auto px-4 md:px-6">
         <div className="text-center mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            {chatT.headline}
+          </h2>
           <div className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 px-3 py-1 rounded-full text-sm font-medium mb-3">
             <Sparkles className="w-4 h-4" />
             <span>KI-Powered</span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+          <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-2">
             {chatT.title}
-          </h2>
+          </h3>
           <p className="text-muted-foreground">
             {chatT.subtitle}
           </p>
