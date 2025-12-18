@@ -44,9 +44,9 @@ export default function UeberUns() {
       solution3Text: "Gizli maliyet yok. Teklif aldığınızda ne ödeyeceğinizi net olarak görürsünüz. Sürpriz fatura yok, ek ücret yok. Güvenin temeli şeffaflıktır.",
 
       storyTitle: "Hikayemiz: München'den Antalya'ya",
-      storyText1: "'Bakmaz' soyadı Osmanlı İmparatorluğu'ndan geliyor - belki de Dalibor'u Türkiye'ye çeken şey tam da bu bağ. Hırvat olmasına rağmen, çocukluğundan beri Türkiye'ye karşı derin bir bağlılık hissetti. Vizyonu? Alman kalitesi ve Akdeniz tutkusuyla Türkiye'deki insanlara gerçek değer katmak.",
-      storyText2: "2018'de Dalibor, Ankaralı Mustafa Sakar ile tanıştı. Mustafa'nın Türkiye'deki güçlü iş ilişkileri ve yerel bilgisi, projeyi gerçeğe dönüştürmek için eksik parçaydı. Birlikte karar verdiler: 089 Bayern'i kurmak ve Alman mühendisliğini Türk misafirperverliğiyle birleştirmek.",
-      storyText3: "Bugün bir şirketten daha fazlasıyız. Dalibor'un Almanya'dan getirdiği kalite standartları ve Mustafa'nın Türkiye'deki özel bağlantıları sayesinde ailelere yardım eden bir aile olduk. Her kurulum bizim için kişisel - çünkü sizin için en iyisini istiyoruz.",
+      storyText1: "Biz bunu bizzat yaşadık: Her ay elektrik faturası geldiğinde şok olan aileler. 'Bunu nasıl ödeyeceğiz?' diye düşünenler. Fiyatlar yükselirken çaresiz hissedenler. Bu bizi rahat bırakmadı. Dalibor Bakmaz - soyadı Osmanlı İmparatorluğu'ndan geliyor - her zaman Türkiye'ye derin bir bağ hissetti. Vizyonu açıktı: Bu insanların bu yükten kurtulmasına yardım etmek.",
+      storyText2: "2018'de Dalibor, Ankaralı Mustafa Sakar ile tanıştı. Mustafa bu sorunu yakından biliyordu - ailelerin patlayan enerji maliyetleri altında nasıl ezildiğini görmüştü. Güçlü iş ilişkileri ve yerel bilgisiyle eksik parçaydı. Birlikte karar verdiler: 089 Bayern'i kurmak ve Alman mühendisliğini Türk misafirperverliğiyle birleştirmek - aileleri elektrik faturası korkusundan kurtarmak için.",
+      storyText3: "Bugün misyonumuz için yanıyoruz. Bir müşterimiz elektrik faturasının %70 düştüğünü söylediğinde biliyoruz: İşte bunun için yapıyoruz. Bir şirketten fazlasıyız - rahat nefes almalarına yardım eden bir aileyiz. Dalibor'un Almanya'dan getirdiği kalite standartları ve Mustafa'nın Türkiye'deki özel bağlantıları sayesinde size söz veriyoruz: Siz de bu yükten kurtulana kadar durmayacağız.",
 
       benefitsTitle: "Sizin İçin Ne Yapıyoruz?",
       benefit1Title: "Faturalarınızı Düşürüyoruz",
@@ -99,9 +99,9 @@ export default function UeberUns() {
       solution3Text: "Keine versteckten Kosten. Wenn Sie ein Angebot erhalten, sehen Sie genau, was Sie bezahlen. Keine Überraschungsrechnungen, keine Zusatzgebühren. Vertrauen basiert auf Transparenz.",
 
       storyTitle: "Unsere Geschichte: Von München nach Antalya",
-      storyText1: "Der Name 'Bakmaz' stammt aus dem Osmanischen Reich - und vielleicht war es genau diese Verbindung, die Dalibor schon immer zur Türkei gezogen hat. Obwohl er Kroate ist, spürte er seit seiner Kindheit eine tiefe Verbundenheit mit dem Land am Bosporus. Seine Vision? Den Menschen in der Türkei echten Mehrwert bringen - mit deutscher Qualität und mediterranem Herzblut.",
-      storyText2: "2018 traf Dalibor Mustafa Sakar aus Ankara. Mustafas starke Geschäftsbeziehungen und lokales Wissen in der Türkei waren das fehlende Puzzlestück, um das Projekt Realität werden zu lassen. Gemeinsam beschlossen sie: 089 Bayern gründen und deutsche Ingenieurskunst mit türkischer Gastfreundschaft vereinen.",
-      storyText3: "Heute sind wir mehr als ein Unternehmen. Dank Dalibors Qualitätsstandards aus Deutschland und Mustafas besonderen Verbindungen in der Türkei sind wir eine Familie geworden, die Familien hilft. Jede Installation ist für uns persönlich - weil wir das Beste für Sie wollen.",
+      storyText1: "Wir haben es selbst erlebt: Familien, die jeden Monat vor ihrer Stromrechnung erschrecken. Die sich fragen, wie sie das noch bezahlen sollen. Die sich hilflos fühlen, während die Preise immer weiter steigen. Das hat uns keine Ruhe gelassen. Dalibor Bakmaz - dessen Name aus dem Osmanischen Reich stammt - fühlte schon immer eine tiefe Verbindung zur Türkei. Seine Vision war klar: Diesen Menschen helfen, endlich frei von dieser Last zu werden.",
+      storyText2: "2018 traf Dalibor Mustafa Sakar aus Ankara. Mustafa kannte das Problem aus erster Hand - er hatte gesehen, wie Familien unter den explodierenden Energiekosten litten. Mit seinen starken Geschäftsbeziehungen und seinem lokalen Wissen war er das fehlende Puzzlestück. Gemeinsam beschlossen sie: 089 Bayern gründen und deutsche Ingenieurskunst mit türkischer Gastfreundschaft vereinen - um Familien von der Strompreis-Angst zu befreien.",
+      storyText3: "Heute brennen wir für unsere Mission. Jedes Mal, wenn ein Kunde uns erzählt, dass seine Stromrechnung um 70% gesunken ist, wissen wir: Dafür machen wir das. Wir sind mehr als ein Unternehmen - wir sind eine Familie, die Familien hilft, wieder durchzuatmen. Dank Dalibors Qualitätsstandards aus Deutschland und Mustafas besonderen Verbindungen in der Türkei können wir Ihnen versprechen: Wir werden nicht ruhen, bis auch Sie diese Last loswerden.",
 
       benefitsTitle: "Was tun wir für Sie?",
       benefit1Title: "Wir senken Ihre Rechnungen",
@@ -154,9 +154,9 @@ export default function UeberUns() {
       solution3Text: "No hidden costs. When you receive a quote, you see exactly what you'll pay. No surprise bills, no extra fees. Trust is built on transparency.",
 
       storyTitle: "Our Story: From Munich to Antalya",
-      storyText1: "The name 'Bakmaz' originates from the Ottoman Empire - perhaps that's exactly what has always drawn Dalibor to Turkey. Although he's Croatian, he felt a deep connection to this land since childhood. His vision? To bring real value to people in Turkey - with German quality and Mediterranean passion.",
-      storyText2: "In 2018, Dalibor met Mustafa Sakar from Ankara. Mustafa's strong business relationships and local knowledge in Turkey were the missing piece to make the project a reality. Together they decided: to found 089 Bayern and unite German engineering with Turkish hospitality.",
-      storyText3: "Today we're more than a company. Thanks to Dalibor's quality standards from Germany and Mustafa's special connections in Turkey, we've become a family that helps families. Every installation is personal to us - because we want the best for you.",
+      storyText1: "We've seen it ourselves: Families shocked every month when their electricity bill arrives. Asking themselves how they'll pay for it. Feeling helpless as prices keep climbing. This gave us no peace. Dalibor Bakmaz - whose name originates from the Ottoman Empire - always felt a deep connection to Turkey. His vision was clear: Help these people finally break free from this burden.",
+      storyText2: "In 2018, Dalibor met Mustafa Sakar from Ankara. Mustafa knew the problem firsthand - he had seen families crushed by exploding energy costs. With his strong business relationships and local knowledge, he was the missing piece. Together they decided: to found 089 Bayern and unite German engineering with Turkish hospitality - to free families from the fear of electricity bills.",
+      storyText3: "Today we burn for our mission. Every time a customer tells us their electricity bill dropped by 70%, we know: This is why we do it. We're more than a company - we're a family helping families breathe again. Thanks to Dalibor's quality standards from Germany and Mustafa's special connections in Turkey, we promise you: We won't rest until you're free from this burden too.",
 
       benefitsTitle: "What Do We Do For You?",
       benefit1Title: "We Lower Your Bills",
@@ -209,9 +209,9 @@ export default function UeberUns() {
       solution3Text: "Никаких скрытых расходов. Когда вы получаете предложение, вы видите точно, что заплатите. Никаких неожиданных счетов, никаких дополнительных сборов. Доверие строится на прозрачности.",
 
       storyTitle: "Наша история: Из Мюнхена в Анталию",
-      storyText1: "Фамилия 'Бакмаз' происходит из Османской империи - возможно, именно эта связь всегда притягивала Далибора к Турции. Хотя он хорват, с детства он чувствовал глубокую связь с этой землёй. Его видение? Принести людям в Турции реальную ценность - с немецким качеством и средиземноморской страстью.",
-      storyText2: "В 2018 году Далибор встретил Мустафу Сакара из Анкары. Сильные деловые связи и местные знания Мустафы в Турции стали недостающим элементом для воплощения проекта в реальность. Вместе они решили: основать 089 Bayern и объединить немецкую инженерию с турецким гостеприимством.",
-      storyText3: "Сегодня мы больше, чем компания. Благодаря стандартам качества Далибора из Германии и особым связям Мустафы в Турции, мы стали семьёй, которая помогает семьям. Каждая установка для нас личная - потому что мы хотим для вас лучшего.",
+      storyText1: "Мы видели это сами: Семьи, которые каждый месяц в шоке от счёта за электричество. Которые спрашивают себя, как это оплатить. Которые чувствуют беспомощность, пока цены растут. Это не давало нам покоя. Далибор Бакмаз - чья фамилия происходит из Османской империи - всегда чувствовал глубокую связь с Турцией. Его видение было ясным: Помочь этим людям наконец освободиться от этого бремени.",
+      storyText2: "В 2018 году Далибор встретил Мустафу Сакара из Анкары. Мустафа знал проблему из первых рук - он видел, как семьи страдают от взлетающих расходов на энергию. С его сильными деловыми связями и местными знаниями он стал недостающим элементом. Вместе они решили: основать 089 Bayern и объединить немецкую инженерию с турецким гостеприимством - чтобы освободить семьи от страха перед счетами за электричество.",
+      storyText3: "Сегодня мы горим нашей миссией. Каждый раз, когда клиент говорит, что его счёт за электричество упал на 70%, мы знаем: Вот для чего мы это делаем. Мы больше, чем компания - мы семья, которая помогает семьям снова дышать свободно. Благодаря стандартам качества Далибора из Германии и особым связям Мустафы в Турции, мы обещаем вам: Мы не остановимся, пока вы тоже не освободитесь от этого бремени.",
 
       benefitsTitle: "Что мы делаем для вас?",
       benefit1Title: "Снижаем ваши счета",
@@ -264,9 +264,9 @@ export default function UeberUns() {
       solution3Text: "Жодних прихованих витрат. Коли ви отримуєте пропозицію, ви бачите точно, що заплатите. Жодних несподіваних рахунків, жодних додаткових зборів. Довіра будується на прозорості.",
 
       storyTitle: "Наша історія: З Мюнхена в Анталію",
-      storyText1: "Прізвище 'Бакмаз' походить з Османської імперії - можливо, саме цей зв'язок завжди притягував Далібора до Туреччини. Хоча він хорват, з дитинства він відчував глибокий зв'язок з цією землею. Його бачення? Принести людям у Туреччині реальну цінність - з німецькою якістю та середземноморською пристрастю.",
-      storyText2: "У 2018 році Далібор зустрів Мустафу Сакара з Анкари. Сильні ділові зв'язки та місцеві знання Мустафи в Туреччині стали недостаючим елементом для втілення проекту в реальність. Разом вони вирішили: заснувати 089 Bayern та об'єднати німецьку інженерію з турецькою гостинністю.",
-      storyText3: "Сьогодні ми більше, ніж компанія. Завдяки стандартам якості Далібора з Німеччини та особливим зв'язкам Мустафи в Туреччині, ми стали родиною, яка допомагає родинам. Кожне встановлення для нас особисте - бо ми хочемо для вас найкращого.",
+      storyText1: "Ми бачили це самі: Родини, які щомісяця в шоці від рахунку за електрику. Які питають себе, як це оплатити. Які відчувають безпорадність, поки ціни ростуть. Це не давало нам спокою. Далібор Бакмаз - чиє прізвище походить з Османської імперії - завжди відчував глибокий зв'язок з Туреччиною. Його бачення було ясним: Допомогти цим людям нарешті звільнитися від цього тягаря.",
+      storyText2: "У 2018 році Далібор зустрів Мустафу Сакара з Анкари. Мустафа знав проблему з перших рук - він бачив, як родини страждають від вибухових витрат на енергію. З його сильними діловими зв'язками та місцевими знаннями він став недостаючим елементом. Разом вони вирішили: заснувати 089 Bayern та об'єднати німецьку інженерію з турецькою гостинністю - щоб звільнити родини від страху перед рахунками за електрику.",
+      storyText3: "Сьогодні ми горимо нашою місією. Кожного разу, коли клієнт каже, що його рахунок за електрику впав на 70%, ми знаємо: Ось для чого ми це робимо. Ми більше, ніж компанія - ми родина, яка допомагає родинам знову вільно дихати. Завдяки стандартам якості Далібора з Німеччини та особливим зв'язкам Мустафи в Туреччині, ми обіцяємо вам: Ми не зупинимося, поки ви теж не звільнитеся від цього тягаря.",
 
       benefitsTitle: "Що ми робимо для вас?",
       benefit1Title: "Знижуємо ваші рахунки",
@@ -319,9 +319,9 @@ export default function UeberUns() {
       solution3Text: "لا تكاليف خفية. عندما تتلقى عرضاً، ترى بالضبط ما ستدفع. لا فواتير مفاجئة، لا رسوم إضافية. الثقة مبنية على الشفافية.",
 
       storyTitle: "قصتنا: من ميونيخ إلى أنطاليا",
-      storyText1: "اسم 'باكماز' يعود أصله إلى الإمبراطورية العثمانية - ربما هذا هو ما جذب داليبور دائماً إلى تركيا. رغم أنه كرواتي، شعر بارتباط عميق بهذه الأرض منذ طفولته. رؤيته؟ تقديم قيمة حقيقية للناس في تركيا - بجودة ألمانية وشغف متوسطي.",
-      storyText2: "في عام 2018، التقى داليبور بمصطفى صقر من أنقرة. علاقات مصطفى التجارية القوية ومعرفته المحلية في تركيا كانت القطعة المفقودة لتحويل المشروع إلى واقع. معاً قرروا: تأسيس 089 Bayern ودمج الهندسة الألمانية مع الضيافة التركية.",
-      storyText3: "اليوم نحن أكثر من شركة. بفضل معايير الجودة من داليبور من ألمانيا وعلاقات مصطفى الخاصة في تركيا، أصبحنا عائلة تساعد العائلات. كل تركيب شخصي بالنسبة لنا - لأننا نريد الأفضل لك.",
+      storyText1: "رأينا ذلك بأنفسنا: عائلات مصدومة كل شهر عند وصول فاتورة الكهرباء. يسألون أنفسهم كيف سيدفعون. يشعرون بالعجز بينما الأسعار ترتفع. هذا لم يمنحنا الراحة. داليبور باكماز - الذي يعود اسمه إلى الإمبراطورية العثمانية - شعر دائماً بارتباط عميق بتركيا. رؤيته كانت واضحة: مساعدة هؤلاء الناس للتحرر أخيراً من هذا العبء.",
+      storyText2: "في عام 2018، التقى داليبور بمصطفى صقر من أنقرة. مصطفى عرف المشكلة عن كثب - رأى كيف تعاني العائلات من تكاليف الطاقة المتفجرة. بعلاقاته التجارية القوية ومعرفته المحلية، كان القطعة المفقودة. معاً قرروا: تأسيس 089 Bayern ودمج الهندسة الألمانية مع الضيافة التركية - لتحرير العائلات من خوف فواتير الكهرباء.",
+      storyText3: "اليوم نحترق من أجل مهمتنا. في كل مرة يخبرنا عميل أن فاتورة الكهرباء انخفضت بنسبة 70%، نعرف: لهذا نفعل ذلك. نحن أكثر من شركة - نحن عائلة تساعد العائلات على التنفس مرة أخرى. بفضل معايير الجودة من داليبور من ألمانيا وعلاقات مصطفى الخاصة في تركيا، نعدكم: لن نتوقف حتى تتحرروا أيضاً من هذا العبء.",
 
       benefitsTitle: "ماذا نفعل لك؟",
       benefit1Title: "نخفض فواتيرك",
