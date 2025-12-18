@@ -1,5 +1,4 @@
 import { Switch, Route } from "wouter";
-import { lazy, Suspense } from "react";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -24,8 +23,6 @@ import Klima from "@/pages/klima";
 import EnerjiDepolama from "@/pages/enerji-depolama";
 import Standorte from "@/pages/standorte";
 import CookieBanner from "@/components/CookieBanner";
-
-const ChatBot = lazy(() => import("@/components/ChatBot"));
 
 function Router() {
   return (
@@ -60,9 +57,6 @@ function App() {
           <Toaster />
           <Router />
           <CookieBanner />
-          <Suspense fallback={null}>
-            <ChatBot />
-          </Suspense>
         </TooltipProvider>
       </LanguageProvider>
     </QueryClientProvider>

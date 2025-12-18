@@ -13,6 +13,7 @@ import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import AiAdvisorSection from "@/components/AiAdvisorSection";
+import EmbeddedChatSection from "@/components/EmbeddedChatSection";
 
 interface CalculatorData {
   propertyType: string;
@@ -72,6 +73,7 @@ export default function Home() {
       <LogoCarousel />
       <BenefitsSection />
       <AiAdvisorSection />
+      <EmbeddedChatSection />
       <SavingsCalculator onComplete={handleCalculatorComplete} />
       <TeamSection />
       <FAQSection />
