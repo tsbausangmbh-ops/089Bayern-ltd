@@ -59,6 +59,10 @@ export default function LogoCarousel() {
             <span className="text-sm text-foreground">{t.logos.partsGuarantee}</span>
           </div>
         </div>
+        
+        <div className="mt-4 text-center">
+          <span className="text-xs text-muted-foreground">Stand 12/2025</span>
+        </div>
       </div>
     </section>
   );
