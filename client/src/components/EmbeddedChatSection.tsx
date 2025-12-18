@@ -129,11 +129,13 @@ export default function EmbeddedChatSection() {
   const { language } = useLanguage();
   const t = translations[language];
   const chatT = chatTranslations[language] || chatTranslations.en;
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
   const isRTL = language === "ar";
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+    }
   };
 
   useEffect(() => {
@@ -233,7 +235,7 @@ export default function EmbeddedChatSection() {
             </div>
           </div>
 
-          <div className="h-80 overflow-y-auto p-4 bg-muted/30" data-testid="chat-messages">
+          <div ref={messagesContainerRef} className="h-80 overflow-y-auto p-4 bg-muted/30" data-testid="chat-messages">
             {messages.map((msg, index) => (
               <div
                 key={index}
@@ -274,8 +276,6 @@ export default function EmbeddedChatSection() {
                 </div>
               </div>
             )}
-
-            <div ref={messagesEndRef} />
           </div>
 
           {messages.length <= 1 && (
