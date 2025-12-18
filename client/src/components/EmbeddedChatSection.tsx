@@ -29,7 +29,7 @@ const chatTranslations: Record<string, {
     title: "Ihr Energieberater Dalibor",
     subtitle: "Stellen Sie Ihre Fragen zu Kosten, Ablauf, Materialien und mehr. Unser KI-Berater gibt Ihnen sofort Auskunft.",
     placeholder: "Ihre Frage eingeben...",
-    welcome: "Grüß Gott!\nIch bin Dalko, Ihr Digitaler Energieberater bei 089 Bayern.\nIch helfe Deutschen und Kroaten seit 15 Jahren mit Energielösungen im Mittelmeerraum. Wie kann ich Ihnen heute helfen?",
+    welcome: "Grüß Gott!\nIch bin Dalibor, Ihr Digitaler Energieberater bei 089 Bayern.\nIch helfe Deutschen und Kroaten seit 15 Jahren mit Energielösungen im Mittelmeerraum. Wie kann ich Ihnen heute helfen?",
     suggestions: [
       "Ich habe ein Ferienhaus in Kroatien",
       "Wie funktioniert das 4-in-1 System?",
@@ -43,7 +43,7 @@ const chatTranslations: Record<string, {
     title: "Enerji Danışmanınız Mustafa",
     subtitle: "Maliyet, süreç, malzeme ve daha fazlası hakkında sorularınızı sorun. Yapay zeka danışmanımız size anında bilgi verir.",
     placeholder: "Sorunuzu yazın...",
-    welcome: "Merhaba!\nBen Musti, 089 Bayern'de dijital enerji danışmanınızım.\n15 yıldır Akdeniz bölgesinde Almanlara ve Türklere enerji çözümleri sunuyorum. Size nasıl yardımcı olabilirim?",
+    welcome: "Merhaba!\nBen Mustafa, 089 Bayern'de dijital enerji danışmanınızım.\n15 yıldır Akdeniz bölgesinde Almanlara ve Türklere enerji çözümleri sunuyorum. Size nasıl yardımcı olabilirim?",
     suggestions: [
       "Antalya'da yazlık evim var",
       "4'ü 1 arada sistem nasıl çalışır?",
@@ -57,7 +57,7 @@ const chatTranslations: Record<string, {
     title: "Your Energy Advisor Mustafa",
     subtitle: "Ask your questions about costs, processes, materials and more. Our AI advisor provides instant answers.",
     placeholder: "Enter your question...",
-    welcome: "Merhaba!\nI'm Musti, your digital energy advisor at 089 Bayern.\nI've been helping Germans and Turks with energy solutions in the Mediterranean for 15 years. How can I help you today?",
+    welcome: "Merhaba!\nI'm Mustafa, your digital energy advisor at 089 Bayern.\nI've been helping Germans and Turks with energy solutions in the Mediterranean for 15 years. How can I help you today?",
     suggestions: [
       "I have a holiday home in Antalya",
       "How does the 4-in-1 system work?",
@@ -71,7 +71,7 @@ const chatTranslations: Record<string, {
     title: "Ваш энергетический консультант Мустафа",
     subtitle: "Задайте вопросы о стоимости, процессе, материалах и многом другом. Наш ИИ-консультант даст вам мгновенный ответ.",
     placeholder: "Введите ваш вопрос...",
-    welcome: "Мерхаба!\nЯ Мусти, ваш цифровой энергетический консультант в 089 Bayern.\nУже 15 лет помогаю немцам и туркам с энергетическими решениями в Средиземноморье. Чем могу помочь?",
+    welcome: "Мерхаба!\nЯ Мустафа, ваш цифровой энергетический консультант в 089 Bayern.\nУже 15 лет помогаю немцам и туркам с энергетическими решениями в Средиземноморье. Чем могу помочь?",
     suggestions: [
       "У меня дом в Анталии",
       "Как работает система 4-в-1?",
@@ -85,7 +85,7 @@ const chatTranslations: Record<string, {
     title: "Ваш енергетичний консультант Мустафа",
     subtitle: "Задайте питання про вартість, процес, матеріали та інше. Наш ШІ-консультант надасть вам миттєву відповідь.",
     placeholder: "Введіть ваше питання...",
-    welcome: "Мерхаба!\nЯ Мусті, ваш цифровий енергетичний консультант у 089 Bayern.\nВже 15 років допомагаю німцям та туркам з енергетичними рішеннями в Середземномор'ї. Чим можу допомогти?",
+    welcome: "Мерхаба!\nЯ Мустафа, ваш цифровий енергетичний консультант у 089 Bayern.\nВже 15 років допомагаю німцям та туркам з енергетичними рішеннями в Середземномор'ї. Чим можу допомогти?",
     suggestions: [
       "У мене будинок в Анталії",
       "Як працює система 4-в-1?",
@@ -113,7 +113,7 @@ const chatTranslations: Record<string, {
     title: "Vaš energetski savjetnik Dalibor",
     subtitle: "Postavite pitanja o troškovima, procesu, materijalima i više. Naš AI savjetnik daje vam trenutne odgovore.",
     placeholder: "Unesite vaše pitanje...",
-    welcome: "Pozdrav!\nJa sam Dalko, vaš digitalni energetski savjetnik u 089 Bayern.\nVeć 15 godina pomažem Nijemcima i Hrvatima s energetskim rješenjima na Mediteranu. Kako vam mogu pomoći?",
+    welcome: "Pozdrav!\nJa sam Dalibor, vaš digitalni energetski savjetnik u 089 Bayern.\nVeć 15 godina pomažem Nijemcima i Hrvatima s energetskim rješenjima na Mediteranu. Kako vam mogu pomoći?",
     suggestions: [
       "Imam kuću u Hrvatskoj",
       "Kako radi sustav 4-u-1?",
