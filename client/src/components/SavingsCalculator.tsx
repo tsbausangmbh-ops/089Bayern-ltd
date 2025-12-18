@@ -112,10 +112,11 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
   const estimatedMonthlySavings = Math.round(data.monthlyBill * totalSavingsRate);
   const yearlySavings = estimatedMonthlySavings * 12;
   
-  const baseCostPerSqm = 1200;
-  const heatPumpCost = data.heatingSystem !== "none" ? data.propertySize * 300 : 0;
-  const climateCost = data.coolingNeed !== "no" ? data.propertySize * 150 : 0;
-  const batteryCost = data.batteryInterest === "yes" ? 80000 : 0;
+  // Preise mit 30% Aufschlag
+  const baseCostPerSqm = 1560; // 1200 + 30%
+  const heatPumpCost = data.heatingSystem !== "none" ? data.propertySize * 390 : 0; // 300 + 30%
+  const climateCost = data.coolingNeed !== "no" ? data.propertySize * 195 : 0; // 150 + 30%
+  const batteryCost = data.batteryInterest === "yes" ? 104000 : 0; // 80000 + 30%
   const estimatedCost = (data.propertySize * baseCostPerSqm) + heatPumpCost + climateCost + batteryCost;
   
   const roiYears = yearlySavings > 0 ? Math.round(estimatedCost / yearlySavings * 10) / 10 : 0;

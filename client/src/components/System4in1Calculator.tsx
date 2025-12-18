@@ -791,21 +791,21 @@ const translations: Record<string, {
 // EUR to TL exchange rate (approximate 2025)
 const EUR_TO_TL_RATE = 38.5;
 
-// 089 Bayern System Pricing (EUR) - Komplettpreise ohne Aufschlag
+// 089 Bayern System Pricing (EUR) - Komplettpreise mit 30% Aufschlag
 const SYSTEM_PRICING = {
   standard: {
-    baseEUR: 24000,
-    turkeyEUR: 24000,
+    baseEUR: 31200, // 24000 + 30%
+    turkeyEUR: 31200,
     powerKW: 6,
   },
   medium: {
-    baseEUR: 32000,
-    turkeyEUR: 32000,
+    baseEUR: 41600, // 32000 + 30%
+    turkeyEUR: 41600,
     powerKW: 12,
   },
   premium: {
-    baseEUR: 45000,
-    turkeyEUR: 45000,
+    baseEUR: 58500, // 45000 + 30%
+    turkeyEUR: 58500,
     powerKW: 16,
   },
 };
