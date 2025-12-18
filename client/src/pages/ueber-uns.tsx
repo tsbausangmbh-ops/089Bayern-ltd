@@ -44,9 +44,9 @@ export default function UeberUns() {
       solution3Text: "Gizli maliyet yok. Teklif aldığınızda ne ödeyeceğinizi net olarak görürsünüz. Sürpriz fatura yok, ek ücret yok. Güvenin temeli şeffaflıktır.",
 
       storyTitle: "Hikayemiz: München'den Antalya'ya",
-      storyText1: "2018'de Dalibor Bakmaz, München'de gökyüzüne baktı ve düşündü: 'Türkiye'nin Akdeniz kıyısında güneş neredeyse hiç batmıyor. Bu muhteşem enerji kaynağını neden kullanmıyoruz?'",
-      storyText2: "Mustafa Sakar ile tanıştığında, ikisi de aynı hayali paylaşıyordu: Alman mühendislik kalitesini Türk ailelere ulaştırmak. Bugün, üç şubemizle Antalya, Alanya ve tüm Akdeniz bölgesine hizmet veriyoruz.",
-      storyText3: "Biz büyük bir şirket değiliz. Biz bir aileyiz. Ve sizin ailenizi de bu ailenin parçası yapmak istiyoruz.",
+      storyText1: "'Bakmaz' soyadı Osmanlı İmparatorluğu'ndan geliyor - belki de Dalibor'u Türkiye'ye çeken şey tam da bu bağ. Hırvat olmasına rağmen, çocukluğundan beri Türkiye'ye karşı derin bir bağlılık hissetti. Vizyonu? Alman kalitesi ve Akdeniz tutkusuyla Türkiye'deki insanlara gerçek değer katmak.",
+      storyText2: "2018'de München'de gökyüzüne baktı ve sordu: 'Akdeniz'de yılda 300 gün güneş var - neden bu enerjiyi kullanmıyoruz?' Mustafa ile tanıştığında, birlikte özel bir şey yaratabileceğimiz belli oldu. Alman mühendisliği Türk misafirperverliğiyle buluşuyor.",
+      storyText3: "Bugün bir şirketten daha fazlasıyız. Biz, ailelere yardım eden bir aileyiz. Her kurulum bizim için kişisel - çünkü yüksek elektrik faturalarının ve güvenilmez firmaların ne kadar sinir bozucu olduğunu biliyoruz. Bunu değiştiriyoruz. Sizin için.",
 
       benefitsTitle: "Sizin İçin Ne Yapıyoruz?",
       benefit1Title: "Faturalarınızı Düşürüyoruz",
@@ -99,9 +99,9 @@ export default function UeberUns() {
       solution3Text: "Keine versteckten Kosten. Wenn Sie ein Angebot erhalten, sehen Sie genau, was Sie bezahlen. Keine Überraschungsrechnungen, keine Zusatzgebühren. Vertrauen basiert auf Transparenz.",
 
       storyTitle: "Unsere Geschichte: Von München nach Antalya",
-      storyText1: "2018 blickte Dalibor Bakmaz in München zum Himmel und dachte: 'An der türkischen Mittelmeerküste geht die Sonne fast nie unter. Warum nutzen wir diese großartige Energiequelle nicht?'",
-      storyText2: "Als er Mustafa Sakar traf, teilten beide denselben Traum: Deutsche Ingenieursqualität zu türkischen Familien zu bringen. Heute bedienen wir mit drei Niederlassungen Antalya, Alanya und die gesamte Mittelmeerregion.",
-      storyText3: "Wir sind kein großes Unternehmen. Wir sind eine Familie. Und wir möchten Ihre Familie zu einem Teil dieser Familie machen.",
+      storyText1: "Der Name 'Bakmaz' stammt aus dem Osmanischen Reich - und vielleicht war es genau diese Verbindung, die Dalibor schon immer zur Türkei gezogen hat. Obwohl er Kroate ist, spürte er seit seiner Kindheit eine tiefe Verbundenheit mit dem Land am Bosporus. Seine Vision? Den Menschen in der Türkei echten Mehrwert bringen - mit deutscher Qualität und mediterranem Herzblut.",
+      storyText2: "2018 schaute er in München zum Himmel und fragte sich: 'Am Mittelmeer scheint 300 Tage die Sonne - warum lassen wir diese Energie ungenutzt?' Als er Mustafa traf, war klar: Zusammen können wir etwas Besonderes schaffen. Deutsche Ingenieurskunst trifft türkische Gastfreundschaft.",
+      storyText3: "Heute sind wir mehr als ein Unternehmen. Wir sind eine Familie, die Familien hilft. Jede Installation ist für uns persönlich - weil wir wissen, wie frustrierend hohe Stromrechnungen und unzuverlässige Anbieter sind. Das ändern wir. Für Sie.",
 
       benefitsTitle: "Was tun wir für Sie?",
       benefit1Title: "Wir senken Ihre Rechnungen",
@@ -154,9 +154,9 @@ export default function UeberUns() {
       solution3Text: "No hidden costs. When you receive a quote, you see exactly what you'll pay. No surprise bills, no extra fees. Trust is built on transparency.",
 
       storyTitle: "Our Story: From Munich to Antalya",
-      storyText1: "In 2018, Dalibor Bakmaz looked up at the sky in Munich and thought: 'On Turkey's Mediterranean coast, the sun almost never sets. Why aren't we using this amazing energy source?'",
-      storyText2: "When he met Mustafa Sakar, they both shared the same dream: bringing German engineering quality to Turkish families. Today, we serve Antalya, Alanya and the entire Mediterranean region with three branches.",
-      storyText3: "We're not a big company. We're a family. And we want to make your family part of this family.",
+      storyText1: "The name 'Bakmaz' originates from the Ottoman Empire - perhaps that's exactly what has always drawn Dalibor to Turkey. Although he's Croatian, he felt a deep connection to this land since childhood. His vision? To bring real value to people in Turkey - with German quality and Mediterranean passion.",
+      storyText2: "In 2018, he looked up at the Munich sky and asked: 'The Mediterranean has 300 days of sunshine - why are we letting this energy go to waste?' When he met Mustafa, it was clear: together we could create something special. German engineering meets Turkish hospitality.",
+      storyText3: "Today we're more than a company. We're a family that helps families. Every installation is personal to us - because we know how frustrating high electricity bills and unreliable providers are. We're changing that. For you.",
 
       benefitsTitle: "What Do We Do For You?",
       benefit1Title: "We Lower Your Bills",
@@ -209,9 +209,9 @@ export default function UeberUns() {
       solution3Text: "Никаких скрытых расходов. Когда вы получаете предложение, вы видите точно, что заплатите. Никаких неожиданных счетов, никаких дополнительных сборов. Доверие строится на прозрачности.",
 
       storyTitle: "Наша история: Из Мюнхена в Анталию",
-      storyText1: "В 2018 году Далибор Бакмаз посмотрел на небо в Мюнхене и подумал: 'На средиземноморском побережье Турции солнце почти никогда не заходит. Почему мы не используем этот удивительный источник энергии?'",
-      storyText2: "Когда он встретил Мустафу Сакара, они оба разделяли одну мечту: принести немецкое инженерное качество турецким семьям. Сегодня мы обслуживаем Анталию, Аланью и весь Средиземноморский регион тремя филиалами.",
-      storyText3: "Мы не большая компания. Мы семья. И мы хотим сделать вашу семью частью этой семьи.",
+      storyText1: "Фамилия 'Бакмаз' происходит из Османской империи - возможно, именно эта связь всегда притягивала Далибора к Турции. Хотя он хорват, с детства он чувствовал глубокую связь с этой землёй. Его видение? Принести людям в Турции реальную ценность - с немецким качеством и средиземноморской страстью.",
+      storyText2: "В 2018 году он посмотрел на мюнхенское небо и спросил: 'На Средиземноморье 300 солнечных дней - почему мы теряем эту энергию?' Когда он встретил Мустафу, стало ясно: вместе мы можем создать что-то особенное. Немецкая инженерия встречает турецкое гостеприимство.",
+      storyText3: "Сегодня мы больше, чем компания. Мы семья, которая помогает семьям. Каждая установка для нас личная - потому что мы знаем, как раздражают высокие счета и ненадёжные поставщики. Мы это меняем. Для вас.",
 
       benefitsTitle: "Что мы делаем для вас?",
       benefit1Title: "Снижаем ваши счета",
@@ -264,9 +264,9 @@ export default function UeberUns() {
       solution3Text: "Жодних прихованих витрат. Коли ви отримуєте пропозицію, ви бачите точно, що заплатите. Жодних несподіваних рахунків, жодних додаткових зборів. Довіра будується на прозорості.",
 
       storyTitle: "Наша історія: З Мюнхена в Анталію",
-      storyText1: "У 2018 році Далібор Бакмаз подивився на небо в Мюнхені і подумав: 'На середземноморському узбережжі Туреччини сонце майже ніколи не заходить. Чому ми не використовуємо це дивовижне джерело енергії?'",
-      storyText2: "Коли він зустрів Мустафу Сакара, вони обидва поділяли одну мрію: принести німецьку інженерну якість турецьким родинам. Сьогодні ми обслуговуємо Анталію, Аланію та весь Середземноморський регіон трьома філіями.",
-      storyText3: "Ми не велика компанія. Ми родина. І ми хочемо зробити вашу родину частиною цієї родини.",
+      storyText1: "Прізвище 'Бакмаз' походить з Османської імперії - можливо, саме цей зв'язок завжди притягував Далібора до Туреччини. Хоча він хорват, з дитинства він відчував глибокий зв'язок з цією землею. Його бачення? Принести людям у Туреччині реальну цінність - з німецькою якістю та середземноморською пристрастю.",
+      storyText2: "У 2018 році він подивився на мюнхенське небо і запитав: 'На Середземномор'ї 300 сонячних днів - чому ми втрачаємо цю енергію?' Коли він зустрів Мустафу, стало ясно: разом ми можемо створити щось особливе. Німецька інженерія зустрічає турецьку гостинність.",
+      storyText3: "Сьогодні ми більше, ніж компанія. Ми родина, яка допомагає родинам. Кожне встановлення для нас особисте - бо ми знаємо, як дратують високі рахунки та ненадійні постачальники. Ми це змінюємо. Для вас.",
 
       benefitsTitle: "Що ми робимо для вас?",
       benefit1Title: "Знижуємо ваші рахунки",
@@ -319,9 +319,9 @@ export default function UeberUns() {
       solution3Text: "لا تكاليف خفية. عندما تتلقى عرضاً، ترى بالضبط ما ستدفع. لا فواتير مفاجئة، لا رسوم إضافية. الثقة مبنية على الشفافية.",
 
       storyTitle: "قصتنا: من ميونيخ إلى أنطاليا",
-      storyText1: "في عام 2018، نظر داليبور باكماز إلى السماء في ميونيخ وفكر: 'على ساحل البحر المتوسط التركي، لا تغرب الشمس تقريباً أبداً. لماذا لا نستخدم مصدر الطاقة المذهل هذا؟'",
-      storyText2: "عندما التقى بمصطفى ساكار، كانا يتشاركان نفس الحلم: جلب الجودة الهندسية الألمانية للعائلات التركية. اليوم، نخدم أنطاليا وألانيا ومنطقة البحر المتوسط بأكملها بثلاثة فروع.",
-      storyText3: "نحن لسنا شركة كبيرة. نحن عائلة. ونريد أن نجعل عائلتك جزءاً من هذه العائلة.",
+      storyText1: "اسم 'باكماز' يعود أصله إلى الإمبراطورية العثمانية - ربما هذا هو ما جذب داليبور دائماً إلى تركيا. رغم أنه كرواتي، شعر بارتباط عميق بهذه الأرض منذ طفولته. رؤيته؟ تقديم قيمة حقيقية للناس في تركيا - بجودة ألمانية وشغف متوسطي.",
+      storyText2: "في عام 2018، نظر إلى سماء ميونيخ وسأل: 'البحر المتوسط لديه 300 يوم مشمس - لماذا نهدر هذه الطاقة؟' عندما التقى بمصطفى، كان واضحاً: معاً يمكننا خلق شيء مميز. الهندسة الألمانية تلتقي بالضيافة التركية.",
+      storyText3: "اليوم نحن أكثر من شركة. نحن عائلة تساعد العائلات. كل تركيب شخصي بالنسبة لنا - لأننا نعرف كم هي محبطة الفواتير العالية والمزودين غير الموثوقين. نحن نغير ذلك. من أجلك.",
 
       benefitsTitle: "ماذا نفعل لك؟",
       benefit1Title: "نخفض فواتيرك",
