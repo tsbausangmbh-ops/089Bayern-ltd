@@ -1,4 +1,4 @@
-import { MapPin, Sun, Flame, Wind, Battery, CheckCircle, ArrowRight, Phone, Star, Shield, Award, Clock, Users, TrendingUp, Home, Zap, Percent, Rocket, Thermometer, Snowflake, HelpCircle } from "lucide-react";
+import { MapPin, Sun, Flame, Wind, Battery, CheckCircle, ArrowRight, Phone, Star, Shield, Award, Clock, Users, TrendingUp, Home, Zap, Percent, Rocket, Thermometer, Snowflake, HelpCircle, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,12 +11,17 @@ import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.p
 
 const content = {
   de: {
+    badgeType: "Niederlassung",
     badge: "4-in-1 Installation Ankara",
     title: "Energiesystem-Installation",
     titleHighlight: "in Ankara",
-    subtitle: "Deutsche Qualität in der türkischen Hauptstadt. Wir installieren Ihr komplettes 4-in-1 Energiesystem in Ankara und Umgebung - inklusive 30 km Umkreis.",
+    subtitle: "089 Bayern Niederlassung Ankara - Deutsche Qualität in der türkischen Hauptstadt. Mit der Stärke unserer Zentrale in Antalya installieren wir Ihr komplettes 4-in-1 Energiesystem in Ankara und Umgebung.",
     ctaButton: "Kostenlose Beratung",
     callButton: "Jetzt anrufen",
+    
+    officeTitle: "089 Bayern Niederlassung Ankara",
+    officeSubtitle: "Ihr lokaler Partner für Zentralanatolien - mit der Stärke unserer Antalya Zentrale",
+    officeDesc: "Als Niederlassung von 089 Bayern bieten wir Ihnen den kompletten Service vor Ort in Ankara. Von der Beratung bis zur Installation - alles aus einer Hand, unterstützt durch unser Expertenteam aus der Zentrale Antalya.",
     
     whyAnkaraTitle: "Warum Ankara ideal für Energiesysteme ist",
     whyAnkaraSubtitle: "Kontinentales Klima erfordert intelligente Lösungen für Sommer und Winter",
@@ -149,12 +154,17 @@ const content = {
     faq5A: "Ja, die türkische Regierung fördert erneuerbare Energien. Zusätzlich profitieren Sie von reduzierten Stromtarifen für Eigenproduktion. Wir beraten Sie gerne zu allen verfügbaren Fördermöglichkeiten.",
   },
   tr: {
+    badgeType: "Şube",
     badge: "4'ü 1 Arada Kurulum Ankara",
     title: "Enerji Sistemi Kurulumu",
     titleHighlight: "Ankara'da",
-    subtitle: "Türkiye'nin başkentinde Alman kalitesi. Ankara ve çevresinde komple 4'ü 1 arada enerji sisteminizi kuruyoruz - 30 km yarıçap dahil.",
+    subtitle: "089 Bayern Ankara Şubesi - Türkiye'nin başkentinde Alman kalitesi. Antalya merkezimizin gücüyle Ankara ve çevresinde komple 4'ü 1 arada enerji sisteminizi kuruyoruz.",
     ctaButton: "Ücretsiz Danışmanlık",
     callButton: "Hemen Arayın",
+    
+    officeTitle: "089 Bayern Ankara Şubesi",
+    officeSubtitle: "İç Anadolu için yerel ortağınız - Antalya merkezimizin gücüyle",
+    officeDesc: "089 Bayern şubesi olarak Ankara'da tam hizmet sunuyoruz. Danışmanlıktan kuruluma kadar tek elden, Antalya merkez uzman ekibimizin desteğiyle.",
     
     whyAnkaraTitle: "Ankara Neden Enerji Sistemleri İçin İdeal",
     whyAnkaraSubtitle: "Karasal iklim, yaz ve kış için akıllı çözümler gerektiriyor",
@@ -287,12 +297,17 @@ const content = {
     faq5A: "Evet, Türk hükümeti yenilenebilir enerjiyi destekliyor. Ayrıca kendi üretiminiz için indirimli elektrik tarifelerinden yararlanırsınız. Tüm mevcut teşvik imkanları hakkında size danışmanlık yapmaktan memnuniyet duyarız.",
   },
   en: {
+    badgeType: "Branch Office",
     badge: "4-in-1 Installation Ankara",
     title: "Energy System Installation",
     titleHighlight: "in Ankara",
-    subtitle: "German quality in Turkey's capital. We install your complete 4-in-1 energy system in Ankara and surroundings - including a 30 km radius.",
+    subtitle: "089 Bayern Ankara Branch - German quality in Turkey's capital. With the strength of our Antalya headquarters, we install your complete 4-in-1 energy system in Ankara and surroundings.",
     ctaButton: "Free Consultation",
     callButton: "Call Now",
+    
+    officeTitle: "089 Bayern Ankara Branch",
+    officeSubtitle: "Your local partner for Central Anatolia - with the strength of our Antalya headquarters",
+    officeDesc: "As a branch of 089 Bayern, we offer complete on-site service in Ankara. From consultation to installation - everything from one source, supported by our expert team from Antalya headquarters.",
     
     whyAnkaraTitle: "Why Ankara is Ideal for Energy Systems",
     whyAnkaraSubtitle: "Continental climate requires smart solutions for summer and winter",
@@ -425,12 +440,17 @@ const content = {
     faq5A: "Yes, the Turkish government supports renewable energy. Additionally, you benefit from reduced electricity tariffs for self-production. We're happy to advise you on all available funding opportunities.",
   },
   ru: {
+    badgeType: "Филиал",
     badge: "Установка 4-в-1 Анкара",
     title: "Установка энергосистемы",
     titleHighlight: "в Анкаре",
-    subtitle: "Немецкое качество в столице Турции. Устанавливаем вашу полную энергосистему 4-в-1 в Анкаре и окрестностях - включая 30 км радиус.",
+    subtitle: "Филиал 089 Bayern Анкара - Немецкое качество в столице Турции. С поддержкой нашего главного офиса в Анталии устанавливаем вашу полную энергосистему 4-в-1 в Анкаре и окрестностях.",
     ctaButton: "Бесплатная консультация",
     callButton: "Позвонить",
+    
+    officeTitle: "Филиал 089 Bayern Анкара",
+    officeSubtitle: "Ваш местный партнер для Центральной Анатолии - с силой нашего главного офиса в Анталии",
+    officeDesc: "Как филиал 089 Bayern, мы предлагаем полный сервис на месте в Анкаре. От консультации до установки - всё из одних рук, при поддержке нашей экспертной команды из главного офиса в Анталии.",
     
     whyAnkaraTitle: "Почему Анкара идеальна для энергосистем",
     whyAnkaraSubtitle: "Континентальный климат требует умных решений для лета и зимы",
@@ -563,12 +583,17 @@ const content = {
     faq5A: "Да, турецкое правительство поддерживает возобновляемую энергию. Кроме того, вы получаете сниженные тарифы на электричество за собственное производство. Мы с радостью проконсультируем вас обо всех доступных возможностях финансирования.",
   },
   uk: {
+    badgeType: "Філія",
     badge: "Встановлення 4-в-1 Анкара",
     title: "Встановлення енергосистеми",
     titleHighlight: "в Анкарі",
-    subtitle: "Німецька якість у столиці Туреччини. Встановлюємо вашу повну енергосистему 4-в-1 в Анкарі та околицях - включаючи 30 км радіус.",
+    subtitle: "Філія 089 Bayern Анкара - Німецька якість у столиці Туреччини. За підтримки нашого головного офісу в Анталії встановлюємо вашу повну енергосистему 4-в-1 в Анкарі та околицях.",
     ctaButton: "Безкоштовна консультація",
     callButton: "Зателефонувати",
+    
+    officeTitle: "Філія 089 Bayern Анкара",
+    officeSubtitle: "Ваш місцевий партнер для Центральної Анатолії - з силою нашого головного офісу в Анталії",
+    officeDesc: "Як філія 089 Bayern, ми пропонуємо повний сервіс на місці в Анкарі. Від консультації до встановлення - все з одних рук, за підтримки нашої експертної команди з головного офісу в Анталії.",
     
     whyAnkaraTitle: "Чому Анкара ідеальна для енергосистем",
     whyAnkaraSubtitle: "Континентальний клімат потребує розумних рішень для літа і зими",
@@ -701,12 +726,17 @@ const content = {
     faq5A: "Так, турецький уряд підтримує відновлювану енергію. Крім того, ви отримуєте знижені тарифи на електрику за власне виробництво. Ми з радістю проконсультуємо вас щодо всіх доступних можливостей фінансування.",
   },
   ar: {
+    badgeType: "فرع",
     badge: "تركيب 4 في 1 أنقرة",
     title: "تركيب نظام الطاقة",
     titleHighlight: "في أنقرة",
-    subtitle: "الجودة الألمانية في العاصمة التركية. نقوم بتركيب نظام الطاقة الكامل 4 في 1 في أنقرة والمناطق المحيطة - بما في ذلك 30 كم نصف قطر.",
+    subtitle: "فرع 089 Bayern أنقرة - الجودة الألمانية في العاصمة التركية. بدعم من مقرنا الرئيسي في أنطاليا، نقوم بتركيب نظام الطاقة الكامل 4 في 1 في أنقرة والمناطق المحيطة.",
     ctaButton: "استشارة مجانية",
     callButton: "اتصل الآن",
+    
+    officeTitle: "فرع 089 Bayern أنقرة",
+    officeSubtitle: "شريكك المحلي لوسط الأناضول - بقوة مقرنا الرئيسي في أنطاليا",
+    officeDesc: "كفرع من 089 Bayern، نقدم خدمة كاملة في الموقع في أنقرة. من الاستشارة إلى التركيب - كل شيء من مصدر واحد، بدعم من فريق خبرائنا في المقر الرئيسي بأنطاليا.",
     
     whyAnkaraTitle: "لماذا أنقرة مثالية لأنظمة الطاقة",
     whyAnkaraSubtitle: "المناخ القاري يتطلب حلولاً ذكية للصيف والشتاء",
@@ -839,12 +869,17 @@ const content = {
     faq5A: "نعم، الحكومة التركية تدعم الطاقة المتجددة. بالإضافة إلى ذلك، تستفيد من تعريفات كهرباء مخفضة للإنتاج الذاتي. يسعدنا تقديم المشورة لك حول جميع فرص التمويل المتاحة.",
   },
   hr: {
+    badgeType: "Podružnica",
     badge: "4-u-1 Instalacija Ankara",
     title: "Instalacija Energetskog Sustava",
     titleHighlight: "u Ankari",
-    subtitle: "Njemačka kvaliteta u turskoj prijestolnici. Instaliramo vaš kompletan 4-u-1 energetski sustav u Ankari i okolici - uključujući 30 km radius.",
+    subtitle: "Podružnica 089 Bayern Ankara - Njemačka kvaliteta u turskoj prijestolnici. Uz snagu našeg sjedišta u Antalyi, instaliramo vaš kompletan 4-u-1 energetski sustav u Ankari i okolici.",
     ctaButton: "Besplatna Konzultacija",
     callButton: "Nazovite Odmah",
+    
+    officeTitle: "Podružnica 089 Bayern Ankara",
+    officeSubtitle: "Vaš lokalni partner za Središnju Anatoliju - uz snagu našeg sjedišta u Antalyi",
+    officeDesc: "Kao podružnica 089 Bayern, nudimo kompletnu uslugu na licu mjesta u Ankari. Od konzultacije do instalacije - sve iz jednog izvora, uz podršku našeg stručnog tima iz sjedišta u Antalyi.",
     
     whyAnkaraTitle: "Zašto je Ankara Idealna za Energetske Sustave",
     whyAnkaraSubtitle: "Kontinentalna klima zahtijeva pametna rješenja za ljeto i zimu",
@@ -1016,10 +1051,16 @@ export default function InstallationAnkara() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 py-20">
-          <Badge variant="secondary" className="mb-6 bg-primary/20 text-primary-foreground border-primary/30">
-            <MapPin className="w-3 h-3 mr-1" />
-            {c.badge}
-          </Badge>
+          <div className="flex flex-wrap gap-2 mb-6">
+            <Badge variant="secondary" className="bg-primary/20 text-white border-primary/30">
+              <Building2 className="w-3 h-3 mr-1" />
+              {c.badgeType}
+            </Badge>
+            <Badge variant="outline" className="bg-white/10 text-white border-white/30">
+              <MapPin className="w-3 h-3 mr-1" />
+              {c.badge}
+            </Badge>
+          </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             {c.title}{" "}
@@ -1058,6 +1099,25 @@ export default function InstallationAnkara() {
               <div className="text-sm text-gray-300">{c.statsWarrantyLabel}</div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Office Info Section */}
+      <section className="py-16" data-testid="section-office-info">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
+          <div className="mb-8">
+            <Badge variant="secondary" className="mb-4">
+              <Building2 className="w-4 h-4 mr-2" />
+              {c.badgeType}
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.officeTitle}</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{c.officeSubtitle}</p>
+          </div>
+          <Card className="max-w-3xl mx-auto">
+            <CardContent className="p-8 text-center">
+              <p className="text-lg leading-relaxed">{c.officeDesc}</p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

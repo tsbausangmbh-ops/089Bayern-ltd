@@ -1,4 +1,4 @@
-import { MapPin, Sun, Flame, Wind, Battery, CheckCircle, ArrowRight, Phone, Star, Shield, Award, Clock, Users } from "lucide-react";
+import { MapPin, Sun, Flame, Wind, Battery, CheckCircle, ArrowRight, Phone, Star, Shield, Award, Clock, Users, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,12 +11,17 @@ import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.p
 
 const content = {
   de: {
+    badgeType: "Zentrale",
     badge: "4-in-1 Installation Antalya",
     title: "Energiesystem-Installation",
     titleHighlight: "in Antalya",
-    subtitle: "Deutsche Qualität trifft mediterranes Klima. Wir installieren Ihr komplettes 4-in-1 Energiesystem entlang der gesamten Küste von Antalya bis Alanya - inklusive 20 km Umkreis ins Landesinnere.",
+    subtitle: "089 Bayern Zentrale Antalya - Deutsche Qualität trifft mediterranes Klima. Wir installieren Ihr komplettes 4-in-1 Energiesystem entlang der gesamten Küste von Antalya bis Alanya - inklusive 20 km Umkreis ins Landesinnere.",
     ctaButton: "Kostenlose Beratung",
     callButton: "Jetzt anrufen",
+    
+    officeTitle: "089 Bayern Zentrale Antalya",
+    officeSubtitle: "Unser Hauptstandort für die Mittelmeerregion",
+    officeDesc: "Von unserem Hauptsitz in Antalya aus koordinieren wir alle Installationen an der Mittelmeerküste. Mit Niederlassungen in Alanya und Ankara sind wir immer in Ihrer Nähe.",
     
     whyAntalyaTitle: "Warum Antalya perfekt für Solarenergie ist",
     whyAntalyaSubtitle: "300+ Sonnentage im Jahr machen Antalya zum idealen Standort",
@@ -78,12 +83,17 @@ const content = {
     statsWarrantyLabel: "Jahre Garantie",
   },
   tr: {
+    badgeType: "Merkez",
     badge: "4'ü 1 Arada Kurulum Antalya",
     title: "Enerji Sistemi Kurulumu",
     titleHighlight: "Antalya'da",
-    subtitle: "Alman kalitesi Akdeniz ikliminde. Antalya'dan Alanya'ya tüm kıyı boyunca ve 20 km iç bölge dahil komple 4'ü 1 arada enerji sisteminizi kuruyoruz.",
+    subtitle: "089 Bayern Antalya Merkezi - Alman kalitesi Akdeniz ikliminde. Antalya'dan Alanya'ya tüm kıyı boyunca ve 20 km iç bölge dahil komple 4'ü 1 arada enerji sisteminizi kuruyoruz.",
     ctaButton: "Ücretsiz Danışmanlık",
     callButton: "Hemen Arayın",
+    
+    officeTitle: "089 Bayern Antalya Merkezi",
+    officeSubtitle: "Akdeniz bölgesi için ana merkezimiz",
+    officeDesc: "Antalya merkezimizden tüm Akdeniz kıyısı kurulumlarını koordine ediyoruz. Alanya ve Ankara şubelerimizle her zaman yanınızdayız.",
     
     whyAntalyaTitle: "Antalya Neden Güneş Enerjisi İçin Mükemmel",
     whyAntalyaSubtitle: "Yılda 300+ güneşli gün Antalya'yı ideal lokasyon yapıyor",
@@ -145,12 +155,17 @@ const content = {
     statsWarrantyLabel: "Yıl Garanti",
   },
   en: {
+    badgeType: "Headquarters",
     badge: "4-in-1 Installation Antalya",
     title: "Energy System Installation",
     titleHighlight: "in Antalya",
-    subtitle: "German quality meets Mediterranean climate. We install your complete 4-in-1 energy system along the entire coast from Antalya to Alanya - including a 20 km inland radius.",
+    subtitle: "089 Bayern Headquarters Antalya - German quality meets Mediterranean climate. We install your complete 4-in-1 energy system along the entire coast from Antalya to Alanya - including a 20 km inland radius.",
     ctaButton: "Free Consultation",
     callButton: "Call Now",
+    
+    officeTitle: "089 Bayern Headquarters Antalya",
+    officeSubtitle: "Our main location for the Mediterranean region",
+    officeDesc: "From our headquarters in Antalya, we coordinate all installations along the Mediterranean coast. With branches in Alanya and Ankara, we are always near you.",
     
     whyAntalyaTitle: "Why Antalya is Perfect for Solar Energy",
     whyAntalyaSubtitle: "300+ sunny days per year make Antalya the ideal location",
@@ -212,12 +227,17 @@ const content = {
     statsWarrantyLabel: "Year Warranty",
   },
   ru: {
+    badgeType: "Главный офис",
     badge: "Установка 4-в-1 Анталия",
     title: "Установка энергосистемы",
     titleHighlight: "в Анталии",
-    subtitle: "Немецкое качество встречает средиземноморский климат. Устанавливаем вашу полную энергосистему 4-в-1 вдоль всего побережья от Анталии до Алании - включая 20 км вглубь.",
+    subtitle: "Главный офис 089 Bayern Анталия - Немецкое качество встречает средиземноморский климат. Устанавливаем вашу полную энергосистему 4-в-1 вдоль всего побережья от Анталии до Алании.",
     ctaButton: "Бесплатная консультация",
     callButton: "Позвонить",
+    
+    officeTitle: "Главный офис 089 Bayern Анталия",
+    officeSubtitle: "Наша основная локация для Средиземноморского региона",
+    officeDesc: "Из нашего главного офиса в Анталии мы координируем все установки на Средиземноморском побережье. С филиалами в Аланье и Анкаре мы всегда рядом с вами.",
     
     whyAntalyaTitle: "Почему Анталия идеальна для солнечной энергии",
     whyAntalyaSubtitle: "300+ солнечных дней в году делают Анталию идеальным местом",
@@ -279,12 +299,17 @@ const content = {
     statsWarrantyLabel: "Лет гарантии",
   },
   uk: {
+    badgeType: "Головний офіс",
     badge: "Встановлення 4-в-1 Анталія",
     title: "Встановлення енергосистеми",
     titleHighlight: "в Анталії",
-    subtitle: "Німецька якість зустрічає середземноморський клімат. Встановлюємо вашу повну енергосистему 4-в-1 вздовж усього узбережжя від Анталії до Аланії - включаючи 20 км углиб.",
+    subtitle: "Головний офіс 089 Bayern Анталія - Німецька якість зустрічає середземноморський клімат. Встановлюємо вашу повну енергосистему 4-в-1 вздовж усього узбережжя від Анталії до Аланії.",
     ctaButton: "Безкоштовна консультація",
     callButton: "Зателефонувати",
+    
+    officeTitle: "Головний офіс 089 Bayern Анталія",
+    officeSubtitle: "Наша основна локація для Середземноморського регіону",
+    officeDesc: "З нашого головного офісу в Анталії ми координуємо всі встановлення на Середземноморському узбережжі. З філіями в Аланії та Анкарі ми завжди поруч з вами.",
     
     whyAntalyaTitle: "Чому Анталія ідеальна для сонячної енергії",
     whyAntalyaSubtitle: "300+ сонячних днів на рік роблять Анталію ідеальним місцем",
@@ -346,12 +371,17 @@ const content = {
     statsWarrantyLabel: "Років гарантії",
   },
   ar: {
+    badgeType: "المقر الرئيسي",
     badge: "تركيب 4 في 1 أنطاليا",
     title: "تركيب نظام الطاقة",
     titleHighlight: "في أنطاليا",
-    subtitle: "الجودة الألمانية تلتقي بمناخ البحر المتوسط. نقوم بتركيب نظام الطاقة الكامل 4 في 1 على طول الساحل بأكمله من أنطاليا إلى ألانيا - بما في ذلك 20 كم داخلياً.",
+    subtitle: "المقر الرئيسي 089 Bayern أنطاليا - الجودة الألمانية تلتقي بمناخ البحر المتوسط. نقوم بتركيب نظام الطاقة الكامل 4 في 1 على طول الساحل بأكمله من أنطاليا إلى ألانيا.",
     ctaButton: "استشارة مجانية",
     callButton: "اتصل الآن",
+    
+    officeTitle: "المقر الرئيسي 089 Bayern أنطاليا",
+    officeSubtitle: "موقعنا الرئيسي لمنطقة البحر المتوسط",
+    officeDesc: "من مقرنا الرئيسي في أنطاليا، ننسق جميع التركيبات على ساحل البحر المتوسط. مع فروع في ألانيا وأنقرة، نحن دائماً بالقرب منك.",
     
     whyAntalyaTitle: "لماذا أنطاليا مثالية للطاقة الشمسية",
     whyAntalyaSubtitle: "300+ يوم مشمس في السنة تجعل أنطاليا الموقع المثالي",
@@ -413,12 +443,17 @@ const content = {
     statsWarrantyLabel: "سنوات ضمان",
   },
   hr: {
+    badgeType: "Sjedište",
     badge: "4-u-1 Instalacija Antalya",
     title: "Instalacija Energetskog Sustava",
     titleHighlight: "u Antalyi",
-    subtitle: "Njemačka kvaliteta susreće mediteransku klimu. Instaliramo vaš kompletan 4-u-1 energetski sustav duž cijele obale od Antalye do Alanye - uključujući 20 km u unutrašnjost.",
+    subtitle: "Sjedište 089 Bayern Antalya - Njemačka kvaliteta susreće mediteransku klimu. Instaliramo vaš kompletan 4-u-1 energetski sustav duž cijele obale od Antalye do Alanye.",
     ctaButton: "Besplatna Konzultacija",
     callButton: "Nazovite Odmah",
+    
+    officeTitle: "Sjedište 089 Bayern Antalya",
+    officeSubtitle: "Naša glavna lokacija za mediteransku regiju",
+    officeDesc: "Iz našeg sjedišta u Antalyi koordiniramo sve instalacije na mediteranskoj obali. S podružnicama u Alanyi i Ankari, uvijek smo blizu vas.",
     
     whyAntalyaTitle: "Zašto je Antalya Savršena za Solarnu Energiju",
     whyAntalyaSubtitle: "300+ sunčanih dana godišnje čini Antalyu idealnom lokacijom",
@@ -517,10 +552,16 @@ export default function InstallationAntalya() {
         
         <div className="relative max-w-7xl mx-auto px-6 md:px-8">
           <div className="max-w-3xl">
-            <Badge variant="secondary" className="mb-4 bg-primary/20 text-primary border-primary/30">
-              <MapPin className="w-3 h-3 mr-1" />
-              {c.badge}
-            </Badge>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <Badge variant="secondary" className="bg-primary/20 text-white border-primary/30">
+                <Building2 className="w-3 h-3 mr-1" />
+                {c.badgeType}
+              </Badge>
+              <Badge variant="outline" className="bg-white/10 text-white border-white/30">
+                <MapPin className="w-3 h-3 mr-1" />
+                {c.badge}
+              </Badge>
+            </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
               {c.title} <span className="text-primary">{c.titleHighlight}</span>
@@ -566,8 +607,27 @@ export default function InstallationAntalya() {
         </div>
       </section>
 
+      {/* Office Info Section */}
+      <section className="py-16" data-testid="section-office-info">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
+          <div className="mb-8">
+            <Badge variant="secondary" className="mb-4">
+              <Building2 className="w-4 h-4 mr-2" />
+              {c.badgeType}
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.officeTitle}</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{c.officeSubtitle}</p>
+          </div>
+          <Card className="max-w-3xl mx-auto">
+            <CardContent className="p-8 text-center">
+              <p className="text-lg leading-relaxed">{c.officeDesc}</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Why Antalya Section */}
-      <section className="py-16" data-testid="section-why-antalya">
+      <section className="py-16 bg-muted/30" data-testid="section-why-antalya">
         <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.whyAntalyaTitle}</h2>
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">{c.whyAntalyaSubtitle}</p>

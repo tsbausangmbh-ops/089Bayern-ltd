@@ -76,9 +76,21 @@ These are bundled but not actively implemented in the current codebase.
 - Über uns (/ueber-uns) - About page
 - Legal pages: KVKK, Gizlilik, Cerez-Politikasi, Sartlar, Mesafeli-Satis, On-Bilgilendirme
 
-### Installation/Regional Pages
-- Installation Antalya (/installation-antalya) - Covers entire coast from Antalya to Alanya + 20 km inland radius (34+ locations)
-- Installation Ankara (/installation-ankara) - Covers Ankara center + 30 km radius (20+ locations: Çankaya, Keçiören, Yenimahalle, etc.)
+### Installation/Regional Pages - Organizational Hierarchy
+
+**Zentrale (Headquarters):**
+- Installation Antalya (/installation-antalya) - Main headquarters for Mediterranean region. Covers entire coast from Antalya to Alanya + 20 km inland radius (34+ locations). Badge: "Zentrale"
+
+**Niederlassungen (Branch Offices):**
+- Installation Alanya (/installation-alanya) - Branch office backed by Antalya headquarters. Covers Alanya coastal area + 30 km radius. Badge: "Niederlassung"
+- Installation Ankara (/installation-ankara) - Branch office backed by Antalya headquarters. Covers Ankara center + 30 km radius (20+ locations: Çankaya, Keçiören, Yenimahalle, etc.). Badge: "Niederlassung"
+
+**Office Info Section Structure:**
+Each regional page includes an "Office Info Section" that:
+- Displays the location type badge (Zentrale/Niederlassung)
+- Shows the office title and subtitle
+- Explains the organizational relationship to headquarters
+- Available in all 7 languages
 
 All pages support 7 languages (de, tr, en, ru, uk, ar, hr) with RTL support for Arabic.
 

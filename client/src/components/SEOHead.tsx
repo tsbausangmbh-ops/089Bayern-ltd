@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 
 interface SEOHeadProps {
-  page: "home" | "systeme" | "vorteile" | "rechner" | "faq" | "ueber-uns" | "team" | "legal" | "installation-antalya" | "installation-ankara";
+  page: "home" | "systeme" | "vorteile" | "rechner" | "faq" | "ueber-uns" | "team" | "legal" | "installation-antalya" | "installation-ankara" | "installation-alanya";
   pageTitle?: string;
 }
 
@@ -58,6 +58,11 @@ const seoData = {
       title: "4'ü 1 Arada Enerji Sistemi Kurulumu Ankara | Güneş Paneli & Isı Pompası | 089 Bayern",
       description: "Ankara ve çevresinde profesyonel 4'ü 1 arada enerji sistemi kurulumu. Güneş paneli, Vaillant ısı pompası, Samsung klima ve batarya depolama. Alman kalitesi, 10 yıl garanti. Çankaya, Keçiören, Yenimahalle.",
       keywords: "enerji sistemi kurulum ankara, güneş paneli montaj çankaya, ısı pompası kurulum keçiören, solar panel ankara, 4 in 1 sistem türkiye başkent"
+    },
+    "installation-alanya": {
+      title: "4'ü 1 Arada Enerji Sistemi Kurulumu Alanya | Güneş Paneli & Isı Pompası | 089 Bayern Şubesi",
+      description: "Alanya ve çevresinde profesyonel 4'ü 1 arada enerji sistemi kurulumu. 089 Bayern Alanya şubesi. Güneş paneli, Vaillant ısı pompası, Samsung klima ve batarya depolama. Mahmutlar, Kestel, Oba.",
+      keywords: "enerji sistemi kurulum alanya, güneş paneli montaj mahmutlar, ısı pompası kurulum kestel, solar panel alanya, 4 in 1 sistem akdeniz"
     }
   },
   de: {
@@ -111,6 +116,11 @@ const seoData = {
       title: "4-in-1 Energiesystem-Installation Ankara | Solaranlage & Wärmepumpe | 089 Bayern",
       description: "Professionelle 4-in-1 Energiesystem-Installation in Ankara und Umgebung. Solaranlage, Vaillant Wärmepumpe, Samsung Klimaanlage und Batteriespeicher. Deutsche Qualität, 10 Jahre Garantie. Çankaya, Keçiören, Yenimahalle.",
       keywords: "energiesystem installation ankara, solaranlage montage türkei hauptstadt, wärmepumpe installation ankara, solar panel ankara, 4 in 1 system türkei"
+    },
+    "installation-alanya": {
+      title: "4-in-1 Energiesystem-Installation Alanya | Solaranlage & Wärmepumpe | 089 Bayern Niederlassung",
+      description: "Professionelle 4-in-1 Energiesystem-Installation in Alanya und Umgebung. 089 Bayern Niederlassung Alanya. Solaranlage, Vaillant Wärmepumpe, Samsung Klimaanlage und Batteriespeicher. Mahmutlar, Kestel, Oba.",
+      keywords: "energiesystem installation alanya, solaranlage montage mahmutlar, wärmepumpe installation kestel, solar panel alanya, 4 in 1 system mittelmeer"
     }
   },
   en: {
@@ -164,6 +174,11 @@ const seoData = {
       title: "4-in-1 Energy System Installation Ankara | Solar Panels & Heat Pump | 089 Bayern",
       description: "Professional 4-in-1 energy system installation in Ankara and surroundings. Solar panels, Vaillant heat pump, Samsung AC and battery storage. German quality, 10-year warranty. Çankaya, Keçiören, Yenimahalle.",
       keywords: "energy system installation ankara, solar panel installation turkey capital, heat pump installation ankara, solar panel ankara, 4 in 1 system turkey"
+    },
+    "installation-alanya": {
+      title: "4-in-1 Energy System Installation Alanya | Solar Panels & Heat Pump | 089 Bayern Branch",
+      description: "Professional 4-in-1 energy system installation in Alanya and surroundings. 089 Bayern Alanya branch. Solar panels, Vaillant heat pump, Samsung AC and battery storage. Mahmutlar, Kestel, Oba.",
+      keywords: "energy system installation alanya, solar panel installation mahmutlar, heat pump installation kestel, solar panel alanya, 4 in 1 system mediterranean"
     }
   },
   ru: {
@@ -217,6 +232,11 @@ const seoData = {
       title: "Установка Энергосистемы 4-в-1 Анкара | Солнечные Панели и Тепловой Насос | 089 Bayern",
       description: "Профессиональная установка энергосистемы 4-в-1 в Анкаре и окрестностях. Солнечные панели, тепловой насос Vaillant, кондиционер Samsung и аккумуляторное хранение. Немецкое качество, 10 лет гарантии. Чанкая, Кечиорен, Йенимахалле.",
       keywords: "установка энергосистемы анкара, монтаж солнечных панелей столица турции, установка теплового насоса анкара, солнечные панели анкара, система 4 в 1 турция"
+    },
+    "installation-alanya": {
+      title: "Установка Энергосистемы 4-в-1 Аланья | Солнечные Панели и Тепловой Насос | 089 Bayern Филиал",
+      description: "Профессиональная установка энергосистемы 4-в-1 в Аланье и окрестностях. Филиал 089 Bayern Аланья. Солнечные панели, тепловой насос Vaillant, кондиционер Samsung и аккумуляторное хранение. Махмутлар, Кестель, Оба.",
+      keywords: "установка энергосистемы аланья, монтаж солнечных панелей махмутлар, установка теплового насоса кестель, солнечные панели аланья, система 4 в 1 средиземноморье"
     }
   },
   uk: {
@@ -270,6 +290,11 @@ const seoData = {
       title: "Встановлення Енергосистеми 4-в-1 Анкара | Сонячні Панелі та Тепловий Насос | 089 Bayern",
       description: "Професійне встановлення енергосистеми 4-в-1 в Анкарі та околицях. Сонячні панелі, тепловий насос Vaillant, кондиціонер Samsung та акумуляторне зберігання. Німецька якість, 10 років гарантії. Чанкая, Кечіорен, Єнімахалле.",
       keywords: "встановлення енергосистеми анкара, монтаж сонячних панелей столиця туреччини, встановлення теплового насоса анкара, сонячні панелі анкара, система 4 в 1 туреччина"
+    },
+    "installation-alanya": {
+      title: "Встановлення Енергосистеми 4-в-1 Аланья | Сонячні Панелі та Тепловий Насос | 089 Bayern Філія",
+      description: "Професійне встановлення енергосистеми 4-в-1 в Аланії та околицях. Філія 089 Bayern Аланья. Сонячні панелі, тепловий насос Vaillant, кондиціонер Samsung та акумуляторне зберігання. Махмутлар, Кестель, Оба.",
+      keywords: "встановлення енергосистеми аланья, монтаж сонячних панелей махмутлар, встановлення теплового насоса кестель, сонячні панелі аланья, система 4 в 1 середземномор'я"
     }
   },
   hr: {
@@ -323,6 +348,11 @@ const seoData = {
       title: "Instalacija Energetskog Sustava 4-u-1 Ankara | Solarni Paneli i Toplinska Pumpa | 089 Bayern",
       description: "Profesionalna instalacija energetskog sustava 4-u-1 u Ankari i okolici. Solarni paneli, Vaillant toplinska pumpa, Samsung klima i pohrana baterije. Njemačka kvaliteta, 10 godina jamstva. Çankaya, Keçiören, Yenimahalle.",
       keywords: "instalacija energetskog sustava ankara, montaža solarnih panela turska prijestolnica, instalacija toplinske pumpe ankara, solarni paneli ankara, sustav 4 u 1 turska"
+    },
+    "installation-alanya": {
+      title: "Instalacija Energetskog Sustava 4-u-1 Alanya | Solarni Paneli i Toplinska Pumpa | 089 Bayern Podružnica",
+      description: "Profesionalna instalacija energetskog sustava 4-u-1 u Alanyi i okolici. 089 Bayern podružnica Alanya. Solarni paneli, Vaillant toplinska pumpa, Samsung klima i pohrana baterije. Mahmutlar, Kestel, Oba.",
+      keywords: "instalacija energetskog sustava alanya, montaža solarnih panela mahmutlar, instalacija toplinske pumpe kestel, solarni paneli alanya, sustav 4 u 1 sredozemlje"
     }
   },
   ar: {
@@ -376,6 +406,11 @@ const seoData = {
       title: "تركيب نظام الطاقة 4 في 1 أنقرة | الألواح الشمسية ومضخة الحرارة | 089 Bayern",
       description: "تركيب احترافي لنظام الطاقة 4 في 1 في أنقرة والمناطق المحيطة. الألواح الشمسية، مضخة حرارة Vaillant، تكييف Samsung وتخزين البطارية. جودة ألمانية، ضمان 10 سنوات. تشانكايا، كيتشيورين، ينيماهالله.",
       keywords: "تركيب نظام الطاقة أنقرة، تركيب الألواح الشمسية عاصمة تركيا، تركيب مضخة الحرارة أنقرة، الألواح الشمسية أنقرة، نظام 4 في 1 تركيا"
+    },
+    "installation-alanya": {
+      title: "تركيب نظام الطاقة 4 في 1 ألانيا | الألواح الشمسية ومضخة الحرارة | 089 Bayern فرع",
+      description: "تركيب احترافي لنظام الطاقة 4 في 1 في ألانيا والمناطق المحيطة. فرع 089 Bayern ألانيا. الألواح الشمسية، مضخة حرارة Vaillant، تكييف Samsung وتخزين البطارية. محمودلار، كستل، أوبا.",
+      keywords: "تركيب نظام الطاقة ألانيا، تركيب الألواح الشمسية محمودلار، تركيب مضخة الحرارة كستل، الألواح الشمسية ألانيا، نظام 4 في 1 البحر المتوسط"
     }
   }
 };
