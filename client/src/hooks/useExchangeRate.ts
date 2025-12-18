@@ -7,7 +7,7 @@ interface ExchangeRateData {
   lastUpdated: Date | null;
 }
 
-const FALLBACK_RATE = 38.5;
+const FALLBACK_RATE = 49.50; // Dezember 2025 Kurs
 const CACHE_KEY = "eurTryRate";
 const CACHE_DURATION = 60 * 60 * 1000;
 

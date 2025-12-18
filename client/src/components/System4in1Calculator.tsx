@@ -193,7 +193,7 @@ const translations: Record<string, {
     twentyFiveYearSavings: "Ersparnis in 25 Jahren",
     co2Saved: "CO₂-Einsparung",
     tonsPerYear: "Tonnen/Jahr",
-    disclaimer: "* Alle Preise und Berechnungen sind unverbindliche Richtwerte. Preise können variieren. Keine Gewährleistung. Komplettpreis inkl. PV, Wärmepumpe, Kühlung, Warmwasser & Speicher.",
+    disclaimer: "* KEINE GEWÄHR - Alle Angaben sind ca. Preise und unverbindliche Richtwerte. Preise in TL (Türkische Lira), EUR-Umrechnung zum aktuellen Kurs 12/2025. Komplettpreis inkl. PV, Wärmepumpe, Kühlung, Warmwasser & Speicher.",
     ctaButton: "Kostenloses Angebot anfordern",
     recommended: "Empfohlen",
     popular: "Beliebt",
@@ -288,7 +288,7 @@ const translations: Record<string, {
     twentyFiveYearSavings: "25 yılda tasarruf",
     co2Saved: "CO₂ tasarrufu",
     tonsPerYear: "Ton/Yıl",
-    disclaimer: "* Tüm fiyatlar ve hesaplamalar tahminidir. Fiyatlar değişebilir. Garanti verilmez. PV, ısı pompası, soğutma, sıcak su ve batarya dahil komple fiyat.",
+    disclaimer: "* GARANTİ VERİLMEZ - Tüm fiyatlar yaklaşık değerlerdir. Fiyatlar TL (Türk Lirası) cinsindendir, EUR dönüşümü 12/2025 güncel kuruna göredir. PV, ısı pompası, soğutma, sıcak su ve batarya dahil komple fiyat.",
     ctaButton: "Ücretsiz teklif isteyin",
     recommended: "Önerilen",
     popular: "Popüler",
@@ -383,7 +383,7 @@ const translations: Record<string, {
     twentyFiveYearSavings: "Savings in 25 years",
     co2Saved: "CO₂ savings",
     tonsPerYear: "tons/year",
-    disclaimer: "* All prices and calculations are approximate estimates. Prices may vary. No warranty provided. Complete price incl. PV, heat pump, cooling, hot water & battery.",
+    disclaimer: "* NO WARRANTY - All prices are approximate values. Prices in TL (Turkish Lira), EUR conversion at current rate 12/2025. Complete price incl. PV, heat pump, cooling, hot water & battery.",
     ctaButton: "Request free quote",
     recommended: "Recommended",
     popular: "Popular",
@@ -478,7 +478,7 @@ const translations: Record<string, {
     twentyFiveYearSavings: "Экономия за 25 лет",
     co2Saved: "Экономия CO₂",
     tonsPerYear: "тонн/год",
-    disclaimer: "* Все цены и расчеты являются приблизительными. Цены могут меняться. Гарантия не предоставляется. Полная цена вкл. PV, тепловой насос, охлаждение, горячую воду и аккумулятор.",
+    disclaimer: "* БЕЗ ГАРАНТИИ - Все цены являются приблизительными. Цены в TL (турецкая лира), конвертация EUR по курсу 12/2025. Полная цена вкл. PV, тепловой насос, охлаждение, горячую воду и аккумулятор.",
     ctaButton: "Запросить бесплатное предложение",
     recommended: "Рекомендуется",
     popular: "Популярный",
@@ -573,7 +573,7 @@ const translations: Record<string, {
     twentyFiveYearSavings: "Заощадження за 25 років",
     co2Saved: "Заощадження CO₂",
     tonsPerYear: "тонн/рік",
-    disclaimer: "* Усі ціни та розрахунки є приблизними. Ціни можуть змінюватися. Гарантія не надається. Повна ціна вкл. PV, тепловий насос, охолодження, гарячу воду та акумулятор.",
+    disclaimer: "* БЕЗ ГАРАНТІЇ - Усі ціни є приблизними. Ціни в TL (турецька ліра), конвертація EUR за курсом 12/2025. Повна ціна вкл. PV, тепловий насос, охолодження, гарячу воду та акумулятор.",
     ctaButton: "Запитати безкоштовну пропозицію",
     recommended: "Рекомендується",
     popular: "Популярний",
@@ -668,7 +668,7 @@ const translations: Record<string, {
     twentyFiveYearSavings: "التوفير في 25 سنة",
     co2Saved: "توفير CO₂",
     tonsPerYear: "طن/سنة",
-    disclaimer: "* جميع الأسعار والحسابات تقريبية. الأسعار قابلة للتغيير. لا يوجد ضمان. السعر الكامل يشمل PV ومضخة حرارية وتبريد وماء ساخن وبطارية.",
+    disclaimer: "* لا ضمان - جميع الأسعار تقريبية. الأسعار بالليرة التركية (TL)، تحويل اليورو بسعر 12/2025. السعر الكامل يشمل PV ومضخة حرارية وتبريد وماء ساخن وبطارية.",
     ctaButton: "اطلب عرض أسعار مجاني",
     recommended: "موصى به",
     popular: "شائع",
@@ -763,7 +763,7 @@ const translations: Record<string, {
     twentyFiveYearSavings: "Ušteda u 25 godina",
     co2Saved: "Ušteda CO₂",
     tonsPerYear: "tona/godina",
-    disclaimer: "* Sve cijene i izračuni su okvirni. Cijene se mogu razlikovati. Bez jamstva. Kompletna cijena uklj. PV, dizalicu topline, hlađenje, toplu vodu i bateriju.",
+    disclaimer: "* BEZ JAMSTVA - Sve cijene su okvirne. Cijene u TL (turska lira), EUR konverzija po tečaju 12/2025. Kompletna cijena uklj. PV, dizalicu topline, hlađenje, toplu vodu i bateriju.",
     ctaButton: "Zatražite besplatnu ponudu",
     recommended: "Preporučeno",
     popular: "Popularno",
@@ -788,8 +788,8 @@ const translations: Record<string, {
   },
 };
 
-// EUR to TL exchange rate (approximate 2025)
-const EUR_TO_TL_RATE = 38.5;
+// EUR to TL exchange rate (Dezember 2025 - aktueller Kurs)
+const EUR_TO_TL_RATE = 49.50;
 
 // 089 Bayern System Pricing (EUR) - Komplettpreise mit 30% Aufschlag
 const SYSTEM_PRICING = {
@@ -926,8 +926,8 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       label: t.systemStandard, 
       desc: t.standardDesc,
       power: "6 kW",
-      priceEUR: "€24.000",
-      priceTL: `₺${Math.round(24000 * EUR_TO_TL_RATE).toLocaleString()}`,
+      priceEUR: "€31.200",
+      priceTL: `₺${Math.round(31200 * EUR_TO_TL_RATE).toLocaleString()}`,
       icon: Star,
       gradient: "from-slate-500 to-slate-600",
       badge: null,
@@ -937,8 +937,8 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       label: t.systemMedium, 
       desc: t.mediumDesc,
       power: "12 kW",
-      priceEUR: "€32.000",
-      priceTL: `₺${Math.round(32000 * EUR_TO_TL_RATE).toLocaleString()}`,
+      priceEUR: "€41.600",
+      priceTL: `₺${Math.round(41600 * EUR_TO_TL_RATE).toLocaleString()}`,
       icon: Sparkles,
       gradient: "from-blue-500 to-blue-600",
       badge: t.popular,
@@ -948,8 +948,8 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       label: t.systemPremium, 
       desc: t.premiumDesc,
       power: "16 kW",
-      priceEUR: "€45.000",
-      priceTL: `₺${Math.round(45000 * EUR_TO_TL_RATE).toLocaleString()}`,
+      priceEUR: "€58.500",
+      priceTL: `₺${Math.round(58500 * EUR_TO_TL_RATE).toLocaleString()}`,
       icon: Crown,
       gradient: "from-amber-500 to-orange-600",
       badge: t.bestValue,
@@ -983,9 +983,9 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
                     <p className="text-xs text-muted-foreground mt-1">{t.includes}</p>
                   </div>
                   <div className="text-right">
-                    <div className="text-2xl font-bold text-primary">€{investmentEUR.toLocaleString()}</div>
-                    <div className="text-lg text-foreground">₺{investmentTL.toLocaleString()}</div>
-                    <div className="text-xs text-muted-foreground">{t.currentRate}: 1€ = ₺{EUR_TO_TL_RATE}</div>
+                    <div className="text-2xl font-bold text-primary">₺{investmentTL.toLocaleString()}</div>
+                    <div className="text-lg text-foreground">ca. €{investmentEUR.toLocaleString()}</div>
+                    <div className="text-xs text-muted-foreground">{t.currentRate}: 1€ = ₺{EUR_TO_TL_RATE} (12/2025)</div>
                   </div>
                 </div>
               </div>
