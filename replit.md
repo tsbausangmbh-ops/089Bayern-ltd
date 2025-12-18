@@ -78,9 +78,37 @@ These are bundled but not actively implemented in the current codebase.
 
 ### Installation/Regional Pages
 - Installation Antalya (/installation-antalya) - Covers entire coast from Antalya to Alanya + 20 km inland radius (34+ locations)
-- Installation Ankara (/installation-ankara) - Covers Ankara and 30 km radius (20+ locations: Çankaya, Keçiören, Yenimahalle, etc.)
+- Installation Ankara (/installation-ankara) - Covers Ankara center + 30 km radius (20+ locations: Çankaya, Keçiören, Yenimahalle, etc.)
 
 All pages support 7 languages (de, tr, en, ru, uk, ar, hr) with RTL support for Arabic.
+
+### SEO Content Structure (Installation Pages)
+Each installation page includes extensive SEO-optimized content with NLP persuasion patterns:
+
+**1. NLP Benefits Section** (4 points with stats):
+- Finanzielle Freiheit (ca. 60% Ersparnis)
+- Absolute Unabhängigkeit (24/7 Energieversorgung)
+- Wertsteigerung Immobilie (+15% Wert)
+- Sorgenfreie Zukunft (10 Jahre Garantie)
+
+**2. Why 4-in-1 Section** (4 comparison points):
+- Perfekte Synergie (Komponenten als Orchester)
+- Ein Ansprechpartner (kein Koordinationsaufwand)
+- Optimierte Kosten (bis 20% günstiger als Einzelkauf)
+- Zukunftssicher (System wächst mit Bedürfnissen)
+
+**3. Climate Advantages Section** (3 points, regional specific):
+- Antalya: Mediterranes Klima, 300+ Sonnentage, 70% Ersparnis
+- Ankara: Kontinentalklima, 260+ Sonnentage, 60% Ersparnis, Fokus Wärmepumpe Winter
+
+**4. SEO FAQ Section** (5 Fragen):
+- Installationsdauer
+- Notstromfähigkeit
+- Extremtemperatur-Performance
+- Preisrahmen (ca. 35.000-50.000 EUR für 200m² Villa)
+- Fördermöglichkeiten Türkei
+
+NLP-Techniken verwendet: Emotionale Ansprache, Zukunftsvisualisierung, Vergleiche, Metaphern (Orchester/Symphonie), Pacing/Leading.
 
 ### Zentrale Preissteuerung
 - **Preisdatei**: `client/src/lib/pricing.ts` - ALLE Preise zentral verwaltet
