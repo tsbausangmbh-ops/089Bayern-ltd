@@ -66,6 +66,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
 
   const locationItems = [
     { label: "Antalya", href: "/installation-antalya" },
+    { label: "Ankara", href: "/installation-ankara" },
   ];
 
   const navItems = [

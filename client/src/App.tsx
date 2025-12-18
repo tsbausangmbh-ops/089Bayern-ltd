@@ -23,6 +23,7 @@ import Klima from "@/pages/klima";
 import EnerjiDepolama from "@/pages/enerji-depolama";
 import Standorte from "@/pages/standorte";
 import InstallationAntalya from "@/pages/installation-antalya";
+import InstallationAnkara from "@/pages/installation-ankara";
 import CookieBanner from "@/components/CookieBanner";
 
 function Router() {
@@ -46,6 +47,7 @@ function Router() {
       <Route path="/enerji-depolama" component={EnerjiDepolama} />
       <Route path="/standorte" component={Standorte} />
       <Route path="/installation-antalya" component={InstallationAntalya} />
+      <Route path="/installation-ankara" component={InstallationAnkara} />
       <Route component={NotFound} />
     </Switch>
   );

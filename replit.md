@@ -76,7 +76,11 @@ These are bundled but not actively implemented in the current codebase.
 - Über uns (/ueber-uns) - About page
 - Legal pages: KVKK, Gizlilik, Cerez-Politikasi, Sartlar, Mesafeli-Satis, On-Bilgilendirme
 
-All pages support 6 languages (de, tr, en, ru, uk, ar) with RTL support for Arabic.
+### Installation/Regional Pages
+- Installation Antalya (/installation-antalya) - Covers entire coast from Antalya to Alanya + 20 km inland radius (34+ locations)
+- Installation Ankara (/installation-ankara) - Covers Ankara and 30 km radius (20+ locations: Çankaya, Keçiören, Yenimahalle, etc.)
+
+All pages support 7 languages (de, tr, en, ru, uk, ar, hr) with RTL support for Arabic.
 
 ### Zentrale Preissteuerung
 - **Preisdatei**: `client/src/lib/pricing.ts` - ALLE Preise zentral verwaltet
