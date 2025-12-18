@@ -19,10 +19,12 @@ export default function ChatBot() {
   const [messages, setMessages] = useState<Message[]>([]);
   const { language } = useLanguage();
   const t = translations[language];
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+    }
   };
 
   useEffect(() => {
@@ -125,7 +127,7 @@ export default function ChatBot() {
               </Button>
             </div>
 
-            <div className="flex-1 p-4 bg-muted/30 overflow-y-auto">
+            <div ref={messagesContainerRef} className="flex-1 p-4 bg-muted/30 overflow-y-auto">
               <div className="space-y-3">
                 <div className="flex gap-2">
                   <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
@@ -179,8 +181,6 @@ export default function ChatBot() {
                     </div>
                   </div>
                 )}
-
-                <div ref={messagesEndRef} />
               </div>
             </div>
 
