@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Send, Loader2, Bot, User, Sparkles } from "lucide-react";
+import { Send, Loader2, Bot, User, Sparkles, Calculator, Package, Clock, HelpCircle, MessageCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { translations } from "@/lib/translations";
 import { useLanguage } from "@/lib/LanguageContext";
@@ -14,17 +14,20 @@ interface Message {
 }
 
 const chatTranslations: Record<string, {
+  badge: string;
   headline: string;
   title: string;
   subtitle: string;
   placeholder: string;
   welcome: string;
   suggestions: string[];
+  features: string[];
 }> = {
   de: {
-    headline: "Haben Sie Energieprobleme im Mittelmeerraum?",
+    badge: "KI-Berater",
+    headline: "Ihr persönlicher 089Bayern-Berater",
     title: "Ihr Energieberater Dalibor",
-    subtitle: "Stellen Sie Ihre Fragen zu Solar, Wärmepumpe & Klimaanlage",
+    subtitle: "Stellen Sie Ihre Fragen zu Kosten, Ablauf, Materialien und mehr. Unser KI-Berater gibt Ihnen sofort Auskunft.",
     placeholder: "Ihre Frage eingeben...",
     welcome: "Grüß Gott!\nIch bin Dalko, Ihr Digitaler Energieberater bei 089 Bayern.\nIch helfe Deutschen und Kroaten seit 15 Jahren mit Energielösungen im Mittelmeerraum. Wie kann ich Ihnen heute helfen?",
     suggestions: [
@@ -32,11 +35,13 @@ const chatTranslations: Record<string, {
       "Wie funktioniert das 4-in-1 System?",
       "Gibt es Förderungen in Kroatien?",
     ],
+    features: ["Kostenvoranschläge", "Materialberatung", "Ablaufplanung", "Allgemeine Fragen"],
   },
   tr: {
-    headline: "Akdeniz bölgesinde enerji sorununuz mu var?",
+    badge: "Yapay Zeka Danışmanı",
+    headline: "Kişisel 089Bayern Danışmanınız",
     title: "Enerji Danışmanınız Mustafa",
-    subtitle: "Güneş enerjisi, ısı pompası ve klima hakkında sorularınızı sorun",
+    subtitle: "Maliyet, süreç, malzeme ve daha fazlası hakkında sorularınızı sorun. Yapay zeka danışmanımız size anında bilgi verir.",
     placeholder: "Sorunuzu yazın...",
     welcome: "Merhaba!\nBen Musti, 089 Bayern'de dijital enerji danışmanınızım.\n15 yıldır Akdeniz bölgesinde Almanlara ve Türklere enerji çözümleri sunuyorum. Size nasıl yardımcı olabilirim?",
     suggestions: [
@@ -44,11 +49,13 @@ const chatTranslations: Record<string, {
       "4'ü 1 arada sistem nasıl çalışır?",
       "Türkiye'de teşvik var mı?",
     ],
+    features: ["Maliyet Tahminleri", "Malzeme Danışmanlığı", "Süreç Planlama", "Genel Sorular"],
   },
   en: {
-    headline: "Do you have energy problems in the Mediterranean?",
+    badge: "AI Advisor",
+    headline: "Your Personal 089Bayern Advisor",
     title: "Your Energy Advisor Mustafa",
-    subtitle: "Ask your questions about solar, heat pump & air conditioning",
+    subtitle: "Ask your questions about costs, processes, materials and more. Our AI advisor provides instant answers.",
     placeholder: "Enter your question...",
     welcome: "Merhaba!\nI'm Musti, your digital energy advisor at 089 Bayern.\nI've been helping Germans and Turks with energy solutions in the Mediterranean for 15 years. How can I help you today?",
     suggestions: [
@@ -56,11 +63,13 @@ const chatTranslations: Record<string, {
       "How does the 4-in-1 system work?",
       "Are there incentives in Turkey?",
     ],
+    features: ["Cost Estimates", "Material Advice", "Process Planning", "General Questions"],
   },
   ru: {
-    headline: "У вас проблемы с энергией в Средиземноморье?",
+    badge: "ИИ-консультант",
+    headline: "Ваш личный консультант 089Bayern",
     title: "Ваш энергетический консультант Мустафа",
-    subtitle: "Задайте вопросы о солнечных панелях, тепловом насосе и кондиционере",
+    subtitle: "Задайте вопросы о стоимости, процессе, материалах и многом другом. Наш ИИ-консультант даст вам мгновенный ответ.",
     placeholder: "Введите ваш вопрос...",
     welcome: "Мерхаба!\nЯ Мусти, ваш цифровой энергетический консультант в 089 Bayern.\nУже 15 лет помогаю немцам и туркам с энергетическими решениями в Средиземноморье. Чем могу помочь?",
     suggestions: [
@@ -68,11 +77,13 @@ const chatTranslations: Record<string, {
       "Как работает система 4-в-1?",
       "Есть ли субсидии в Турции?",
     ],
+    features: ["Расчёт стоимости", "Консультация по материалам", "Планирование процесса", "Общие вопросы"],
   },
   uk: {
-    headline: "У вас проблеми з енергією в Середземномор'ї?",
+    badge: "ШІ-консультант",
+    headline: "Ваш особистий консультант 089Bayern",
     title: "Ваш енергетичний консультант Мустафа",
-    subtitle: "Задайте питання про сонячні панелі, тепловий насос та кондиціонер",
+    subtitle: "Задайте питання про вартість, процес, матеріали та інше. Наш ШІ-консультант надасть вам миттєву відповідь.",
     placeholder: "Введіть ваше питання...",
     welcome: "Мерхаба!\nЯ Мусті, ваш цифровий енергетичний консультант у 089 Bayern.\nВже 15 років допомагаю німцям та туркам з енергетичними рішеннями в Середземномор'ї. Чим можу допомогти?",
     suggestions: [
@@ -80,11 +91,13 @@ const chatTranslations: Record<string, {
       "Як працює система 4-в-1?",
       "Чи є субсидії в Туреччині?",
     ],
+    features: ["Розрахунок вартості", "Консультація з матеріалів", "Планування процесу", "Загальні питання"],
   },
   ar: {
-    headline: "هل لديك مشاكل في الطاقة في منطقة البحر الأبيض المتوسط؟",
+    badge: "مستشار الذكاء الاصطناعي",
+    headline: "مستشارك الشخصي من 089Bayern",
     title: "مستشار الطاقة مصطفى",
-    subtitle: "اطرح أسئلتك حول الطاقة الشمسية ومضخة الحرارة والتكييف",
+    subtitle: "اطرح أسئلتك حول التكاليف والعمليات والمواد والمزيد. يقدم لك مستشار الذكاء الاصطناعي إجابات فورية.",
     placeholder: "أدخل سؤالك...",
     welcome: "مرحبا!\nأنا مصطفى، مستشار الطاقة الرقمي في 089 Bayern.\nأساعد الألمان والأتراك في حلول الطاقة بمنطقة البحر المتوسط منذ 15 عاماً. كيف يمكنني مساعدتك؟",
     suggestions: [
@@ -92,11 +105,13 @@ const chatTranslations: Record<string, {
       "كيف يعمل نظام 4 في 1؟",
       "هل توجد حوافز في تركيا؟",
     ],
+    features: ["تقدير التكاليف", "استشارات المواد", "تخطيط العملية", "أسئلة عامة"],
   },
   hr: {
-    headline: "Imate li energetske probleme na Mediteranu?",
+    badge: "AI Savjetnik",
+    headline: "Vaš osobni 089Bayern savjetnik",
     title: "Vaš energetski savjetnik Dalibor",
-    subtitle: "Postavite pitanja o solarnim panelima, toplinskoj pumpi i klimi",
+    subtitle: "Postavite pitanja o troškovima, procesu, materijalima i više. Naš AI savjetnik daje vam trenutne odgovore.",
     placeholder: "Unesite vaše pitanje...",
     welcome: "Pozdrav!\nJa sam Dalko, vaš digitalni energetski savjetnik u 089 Bayern.\nVeć 15 godina pomažem Nijemcima i Hrvatima s energetskim rješenjima na Mediteranu. Kako vam mogu pomoći?",
     suggestions: [
@@ -104,6 +119,7 @@ const chatTranslations: Record<string, {
       "Kako radi sustav 4-u-1?",
       "Postoje li poticaji u Hrvatskoj?",
     ],
+    features: ["Procjene troškova", "Savjeti o materijalima", "Planiranje procesa", "Opća pitanja"],
   },
 };
 
@@ -167,6 +183,8 @@ export default function EmbeddedChatSection() {
     chatMutation.mutate(suggestion);
   };
 
+  const featureIcons = [Calculator, Package, Clock, HelpCircle];
+
   return (
     <section 
       className="py-8 bg-gradient-to-br from-orange-50 via-background to-amber-50 dark:from-orange-950/20 dark:via-background dark:to-amber-950/20" 
@@ -176,19 +194,30 @@ export default function EmbeddedChatSection() {
     >
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="text-center mb-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 px-3 py-1 rounded-full text-sm font-medium mb-3">
+            <MessageCircle className="w-4 h-4" />
+            <span>{chatT.badge}</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
             {chatT.headline}
           </h2>
-          <div className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 px-3 py-1 rounded-full text-sm font-medium mb-3">
-            <Sparkles className="w-4 h-4" />
-            <span>KI-Powered</span>
-          </div>
-          <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-2">
-            {chatT.title}
-          </h3>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">
             {chatT.subtitle}
           </p>
+          <div className="flex flex-wrap justify-center gap-3 mb-6">
+            {chatT.features.map((feature, index) => {
+              const Icon = featureIcons[index];
+              return (
+                <div 
+                  key={index}
+                  className="flex items-center gap-2 bg-orange-100 dark:bg-orange-900/30 px-3 py-1.5 rounded-full"
+                >
+                  <Icon className="w-4 h-4 text-orange-600 dark:text-orange-400" />
+                  <span className="text-orange-700 dark:text-orange-300 text-xs font-medium">{feature}</span>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         <Card className="overflow-hidden border-orange-200 dark:border-orange-800/50 shadow-xl">
