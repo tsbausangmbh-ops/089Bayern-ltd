@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 
 interface SEOHeadProps {
-  page: "home" | "systeme" | "vorteile" | "rechner" | "faq" | "ueber-uns" | "team" | "legal";
+  page: "home" | "systeme" | "vorteile" | "rechner" | "faq" | "ueber-uns" | "team" | "legal" | "installation-antalya";
   pageTitle?: string;
 }
 
@@ -48,6 +48,11 @@ const seoData = {
       title: "Yasal Bilgiler | 089 Bayern Enerji Sistemleri",
       description: "089 Bayern yasal politikalar: KVKK, gizlilik politikası, çerez politikası, kullanım şartları ve mesafeli satış sözleşmesi.",
       keywords: "089 bayern kvkk, gizlilik politikası, kullanım şartları"
+    },
+    "installation-antalya": {
+      title: "4'ü 1 Arada Enerji Sistemi Kurulumu Antalya | Güneş Paneli & Isı Pompası | 089 Bayern",
+      description: "Antalya, Kemer, Belek, Side, Alanya'da profesyonel 4'ü 1 arada enerji sistemi kurulumu. Güneş paneli, Vaillant ısı pompası, Samsung klima ve batarya depolama. Alman kalitesi, 10 yıl garanti.",
+      keywords: "enerji sistemi kurulum antalya, güneş paneli montaj kemer, ısı pompası kurulum belek, solar panel side, 4 in 1 sistem alanya"
     }
   },
   de: {
@@ -91,6 +96,11 @@ const seoData = {
       title: "Rechtliche Informationen | 089 Bayern Energiesysteme",
       description: "089 Bayern rechtliche Richtlinien: Datenschutz, Cookie-Richtlinie, AGB und Fernabsatzvertrag.",
       keywords: "089 bayern datenschutz, agb, impressum"
+    },
+    "installation-antalya": {
+      title: "4-in-1 Energiesystem-Installation Antalya | Solaranlage & Wärmepumpe | 089 Bayern",
+      description: "Professionelle 4-in-1 Energiesystem-Installation in Antalya, Kemer, Belek, Side, Alanya. Solaranlage, Vaillant Wärmepumpe, Samsung Klimaanlage und Batteriespeicher. Deutsche Qualität, 10 Jahre Garantie.",
+      keywords: "energiesystem installation antalya, solaranlage montage kemer, wärmepumpe installation belek, solar panel side, 4 in 1 system alanya"
     }
   },
   en: {
@@ -134,6 +144,11 @@ const seoData = {
       title: "Legal Information | 089 Bayern Energy Systems",
       description: "089 Bayern legal policies: Privacy policy, cookie policy, terms of use and distance sales agreement.",
       keywords: "089 bayern privacy, terms, legal"
+    },
+    "installation-antalya": {
+      title: "4-in-1 Energy System Installation Antalya | Solar Panels & Heat Pump | 089 Bayern",
+      description: "Professional 4-in-1 energy system installation in Antalya, Kemer, Belek, Side, Alanya. Solar panels, Vaillant heat pump, Samsung AC and battery storage. German quality, 10-year warranty.",
+      keywords: "energy system installation antalya, solar panel installation kemer, heat pump installation belek, solar panel side, 4 in 1 system alanya"
     }
   },
   ru: {
@@ -177,6 +192,11 @@ const seoData = {
       title: "Правовая Информация | 089 Bayern Энергосистемы",
       description: "Правовые политики 089 Bayern: Политика конфиденциальности, политика cookies, условия использования.",
       keywords: "089 bayern конфиденциальность, условия, правовая информация"
+    },
+    "installation-antalya": {
+      title: "Установка Энергосистемы 4-в-1 Анталия | Солнечные Панели и Тепловой Насос | 089 Bayern",
+      description: "Профессиональная установка энергосистемы 4-в-1 в Анталии, Кемере, Белеке, Сиде, Алании. Солнечные панели, тепловой насос Vaillant, кондиционер Samsung и аккумуляторное хранение. Немецкое качество, 10 лет гарантии.",
+      keywords: "установка энергосистемы анталия, монтаж солнечных панелей кемер, установка теплового насоса белек, солнечные панели сиде, система 4 в 1 алания"
     }
   },
   uk: {
@@ -220,6 +240,11 @@ const seoData = {
       title: "Правова Інформація | 089 Bayern Енергосистеми",
       description: "Правові політики 089 Bayern: Політика конфіденційності, політика cookies, умови використання.",
       keywords: "089 bayern конфіденційність, умови, правова інформація"
+    },
+    "installation-antalya": {
+      title: "Встановлення Енергосистеми 4-в-1 Анталія | Сонячні Панелі та Тепловий Насос | 089 Bayern",
+      description: "Професійне встановлення енергосистеми 4-в-1 в Анталії, Кемері, Белеку, Сіде, Аланії. Сонячні панелі, тепловий насос Vaillant, кондиціонер Samsung та акумуляторне зберігання. Німецька якість, 10 років гарантії.",
+      keywords: "встановлення енергосистеми анталія, монтаж сонячних панелей кемер, встановлення теплового насоса белек, сонячні панелі сіде, система 4 в 1 аланія"
     }
   },
   hr: {
@@ -263,6 +288,11 @@ const seoData = {
       title: "Pravne Informacije | 089 Bayern Energetski Sustavi",
       description: "Pravne politike 089 Bayern: Politika privatnosti, politika kolačića, uvjeti korištenja.",
       keywords: "089 bayern privatnost, uvjeti, pravne informacije"
+    },
+    "installation-antalya": {
+      title: "Instalacija Energetskog Sustava 4-u-1 Antalya | Solarni Paneli i Toplinska Pumpa | 089 Bayern",
+      description: "Profesionalna instalacija energetskog sustava 4-u-1 u Antalyi, Kemeru, Beleku, Sideu, Alanyi. Solarni paneli, Vaillant toplinska pumpa, Samsung klima i pohrana baterije. Njemačka kvaliteta, 10 godina jamstva.",
+      keywords: "instalacija energetskog sustava antalya, montaža solarnih panela kemer, instalacija toplinske pumpe belek, solarni paneli side, sustav 4 u 1 alanya"
     }
   },
   ar: {
@@ -306,6 +336,11 @@ const seoData = {
       title: "المعلومات القانونية | 089 Bayern أنظمة الطاقة",
       description: "السياسات القانونية لـ 089 Bayern: سياسة الخصوصية، سياسة ملفات تعريف الارتباط، شروط الاستخدام.",
       keywords: "089 bayern الخصوصية، الشروط، المعلومات القانونية"
+    },
+    "installation-antalya": {
+      title: "تركيب نظام الطاقة 4 في 1 أنطاليا | الألواح الشمسية ومضخة الحرارة | 089 Bayern",
+      description: "تركيب احترافي لنظام الطاقة 4 في 1 في أنطاليا، كيمير، بيليك، سيدا، ألانيا. الألواح الشمسية، مضخة حرارة Vaillant، تكييف Samsung وتخزين البطارية. جودة ألمانية، ضمان 10 سنوات.",
+      keywords: "تركيب نظام الطاقة أنطاليا، تركيب الألواح الشمسية كيمير، تركيب مضخة الحرارة بيليك، الألواح الشمسية سيدا، نظام 4 في 1 ألانيا"
     }
   }
 };

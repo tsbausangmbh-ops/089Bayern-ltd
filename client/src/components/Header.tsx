@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, ChevronDown, MapPin } from "lucide-react";
 import logoImage from "@assets/Logo_1765790073992.png";
 import {
   DropdownMenu,
@@ -8,6 +8,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
 import { Language, languageNames } from "@/lib/translations";
@@ -54,7 +59,14 @@ export default function Header({ onCtaClick }: HeaderProps) {
     setIsMobileMenuOpen(false);
   };
 
+  const [isLocationsOpen, setIsLocationsOpen] = useState(false);
+  
   const aboutLabel = language === "de" ? "Über uns" : language === "en" ? "About" : language === "ru" ? "О нас" : language === "uk" ? "Про нас" : language === "ar" ? "من نحن" : "Hakkımızda";
+  const locationsLabel = language === "de" ? "Installation" : language === "en" ? "Installation" : language === "ru" ? "Установка" : language === "uk" ? "Встановлення" : language === "ar" ? "التركيب" : language === "hr" ? "Instalacija" : "Kurulum";
+
+  const locationItems = [
+    { label: "Antalya", href: "/installation-antalya" },
+  ];
 
   const navItems = [
     { label: aboutLabel, id: "about", href: "/ueber-uns", isHashLink: false },
@@ -115,6 +127,31 @@ export default function Header({ onCtaClick }: HeaderProps) {
                 </a>
               )
             ))}
+            
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button
+                  className={`text-sm font-medium px-4 py-2 rounded-lg hover-elevate active-elevate-2 transition-all flex items-center gap-1 ${
+                    isScrolled ? "text-foreground/80 hover:text-foreground" : "text-white/80 hover:text-white"
+                  }`}
+                  data-testid="dropdown-nav-locations"
+                >
+                  <MapPin className="w-4 h-4" />
+                  {locationsLabel}
+                  <ChevronDown className="w-3 h-3" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                {locationItems.map((item) => (
+                  <DropdownMenuItem key={item.href} asChild>
+                    <a href={item.href} data-testid={`link-nav-location-${item.label.toLowerCase()}`}>
+                      <MapPin className="w-4 h-4 mr-2" />
+                      {item.label}
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
 
           <div className="flex items-center gap-2">
@@ -188,6 +225,41 @@ export default function Header({ onCtaClick }: HeaderProps) {
                 </a>
               )
             ))}
+            
+            <Collapsible open={isLocationsOpen} onOpenChange={setIsLocationsOpen}>
+              <CollapsibleTrigger asChild>
+                <button
+                  className="w-full flex items-center justify-between px-4 py-3 rounded-lg hover-elevate active-elevate-2 text-foreground font-medium"
+                  data-testid="button-mobile-locations-toggle"
+                >
+                  <span className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4" />
+                    {locationsLabel}
+                  </span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${isLocationsOpen ? "rotate-180" : ""}`} />
+                </button>
+              </CollapsibleTrigger>
+              <CollapsibleContent>
+                <div className="pl-6 flex flex-col gap-1">
+                  {locationItems.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      className="px-4 py-2 rounded-lg hover-elevate active-elevate-2 text-foreground/80 font-medium flex items-center gap-2"
+                      data-testid={`link-mobile-location-${item.label.toLowerCase()}`}
+                      onClick={() => {
+                        setIsLocationsOpen(false);
+                        setIsMobileMenuOpen(false);
+                      }}
+                    >
+                      <MapPin className="w-3 h-3" />
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
+            
             <Button 
               onClick={onCtaClick} 
               className="mt-3 bg-gradient-to-r from-accent to-orange-600 border-0" 

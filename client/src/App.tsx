@@ -22,6 +22,7 @@ import IsiPompasi from "@/pages/isi-pompasi";
 import Klima from "@/pages/klima";
 import EnerjiDepolama from "@/pages/enerji-depolama";
 import Standorte from "@/pages/standorte";
+import InstallationAntalya from "@/pages/installation-antalya";
 import CookieBanner from "@/components/CookieBanner";
 
 function Router() {
@@ -44,6 +45,7 @@ function Router() {
       <Route path="/klima" component={Klima} />
       <Route path="/enerji-depolama" component={EnerjiDepolama} />
       <Route path="/standorte" component={Standorte} />
+      <Route path="/installation-antalya" component={InstallationAntalya} />
       <Route component={NotFound} />
     </Switch>
   );
