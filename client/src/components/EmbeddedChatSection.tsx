@@ -26,7 +26,7 @@ const chatTranslations: Record<string, {
     title: "Ihr Energieberater Dalibor",
     subtitle: "Stellen Sie Ihre Fragen zu Solar, Wärmepumpe & Klimaanlage",
     placeholder: "Ihre Frage eingeben...",
-    welcome: "Grüß Gott!\n\nIch bin Dalibor Bakmaz, Ihr Energieberater bei 089 Bayern.\n\nIch helfe Deutschen und Kroaten seit 15 Jahren mit Energielösungen im Mittelmeerraum. Wie kann ich Ihnen heute helfen?",
+    welcome: "Grüß Gott!\n\nIch bin Dalko, Ihr Digitaler Energieberater bei 089 Bayern.\n\nIch helfe Deutschen und Kroaten seit 15 Jahren mit Energielösungen im Mittelmeerraum. Wie kann ich Ihnen heute helfen?",
     suggestions: [
       "Ich habe ein Ferienhaus in Kroatien",
       "Wie funktioniert das 4-in-1 System?",
