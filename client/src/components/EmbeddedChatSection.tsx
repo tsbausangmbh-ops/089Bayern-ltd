@@ -23,86 +23,86 @@ const chatTranslations: Record<string, {
 }> = {
   de: {
     headline: "Haben Sie Energieprobleme im Mittelmeerraum?",
-    title: "KI-Energieberater",
+    title: "Ihr Energieberater Mustafa",
     subtitle: "Stellen Sie Ihre Fragen zu Solar, Wärmepumpe & Klimaanlage",
     placeholder: "Ihre Frage eingeben...",
-    welcome: "Hallo! Ich bin Ihr 089Bayern KI-Berater. Wie kann ich Ihnen bei Ihrer Energielösung helfen?",
+    welcome: "Merhaba! Ich bin Mustafa Sakar, Ihr Energieberater bei 089 Bayern. Ich helfe Deutschen und Türken seit 15 Jahren mit Energielösungen im Mittelmeerraum. Wie kann ich Ihnen heute helfen?",
     suggestions: [
-      "Was kostet eine Solaranlage?",
-      "Wie funktioniert die Wärmepumpe?",
-      "Spart die Klimaanlage wirklich Strom?",
+      "Ich habe ein Ferienhaus in Antalya",
+      "Wie funktioniert das 4-in-1 System?",
+      "Gibt es Förderungen in der Türkei?",
     ],
   },
   tr: {
     headline: "Akdeniz bölgesinde enerji sorununuz mu var?",
-    title: "Yapay Zeka Enerji Danışmanı",
+    title: "Enerji Danışmanınız Mustafa",
     subtitle: "Güneş enerjisi, ısı pompası ve klima hakkında sorularınızı sorun",
     placeholder: "Sorunuzu yazın...",
-    welcome: "Merhaba! Ben 089Bayern yapay zeka danışmanınızım. Enerji çözümünüz konusunda size nasıl yardımcı olabilirim?",
+    welcome: "Merhaba! Ben Mustafa Sakar, 089 Bayern enerji danışmanınızım. 15 yıldır Akdeniz bölgesinde Almanlara ve Türklere enerji çözümleri sunuyorum. Size nasıl yardımcı olabilirim?",
     suggestions: [
-      "Güneş paneli ne kadar?",
-      "Isı pompası nasıl çalışır?",
-      "Klima gerçekten tasarruf sağlar mı?",
+      "Antalya'da yazlık evim var",
+      "4'ü 1 arada sistem nasıl çalışır?",
+      "Türkiye'de teşvik var mı?",
     ],
   },
   en: {
     headline: "Do you have energy problems in the Mediterranean?",
-    title: "AI Energy Advisor",
+    title: "Your Energy Advisor Mustafa",
     subtitle: "Ask your questions about solar, heat pump & air conditioning",
     placeholder: "Enter your question...",
-    welcome: "Hello! I'm your 089Bayern AI advisor. How can I help you with your energy solution?",
+    welcome: "Merhaba! I'm Mustafa Sakar, your energy advisor at 089 Bayern. I've been helping Germans and Turks with energy solutions in the Mediterranean for 15 years. How can I help you today?",
     suggestions: [
-      "How much does solar cost?",
-      "How does the heat pump work?",
-      "Does AC really save electricity?",
+      "I have a holiday home in Antalya",
+      "How does the 4-in-1 system work?",
+      "Are there incentives in Turkey?",
     ],
   },
   ru: {
     headline: "У вас проблемы с энергией в Средиземноморье?",
-    title: "ИИ Энергетический Консультант",
+    title: "Ваш энергетический консультант Мустафа",
     subtitle: "Задайте вопросы о солнечных панелях, тепловом насосе и кондиционере",
     placeholder: "Введите ваш вопрос...",
-    welcome: "Здравствуйте! Я ваш ИИ-консультант 089Bayern. Чем могу помочь с вашим энергетическим решением?",
+    welcome: "Мерхаба! Я Мустафа Сакар, ваш энергетический консультант в 089 Bayern. Уже 15 лет помогаю немцам и туркам с энергетическими решениями в Средиземноморье. Чем могу помочь?",
     suggestions: [
-      "Сколько стоят солнечные панели?",
-      "Как работает тепловой насос?",
-      "Кондиционер правда экономит электричество?",
+      "У меня дом в Анталии",
+      "Как работает система 4-в-1?",
+      "Есть ли субсидии в Турции?",
     ],
   },
   uk: {
     headline: "У вас проблеми з енергією в Середземномор'ї?",
-    title: "ШІ Енергетичний Консультант",
+    title: "Ваш енергетичний консультант Мустафа",
     subtitle: "Задайте питання про сонячні панелі, тепловий насос та кондиціонер",
     placeholder: "Введіть ваше питання...",
-    welcome: "Вітаю! Я ваш ШІ-консультант 089Bayern. Чим можу допомогти з вашим енергетичним рішенням?",
+    welcome: "Мерхаба! Я Мустафа Сакар, ваш енергетичний консультант у 089 Bayern. Вже 15 років допомагаю німцям та туркам з енергетичними рішеннями в Середземномор'ї. Чим можу допомогти?",
     suggestions: [
-      "Скільки коштують сонячні панелі?",
-      "Як працює тепловий насос?",
-      "Кондиціонер справді економить електрику?",
+      "У мене будинок в Анталії",
+      "Як працює система 4-в-1?",
+      "Чи є субсидії в Туреччині?",
     ],
   },
   ar: {
     headline: "هل لديك مشاكل في الطاقة في منطقة البحر الأبيض المتوسط؟",
-    title: "مستشار الطاقة بالذكاء الاصطناعي",
+    title: "مستشار الطاقة مصطفى",
     subtitle: "اطرح أسئلتك حول الطاقة الشمسية ومضخة الحرارة والتكييف",
     placeholder: "أدخل سؤالك...",
-    welcome: "مرحباً! أنا مستشار الذكاء الاصطناعي من 089Bayern. كيف يمكنني مساعدتك في حل الطاقة الخاص بك؟",
+    welcome: "مرحبا! أنا مصطفى صقر، مستشار الطاقة في 089 Bayern. أساعد الألمان والأتراك في حلول الطاقة بمنطقة البحر المتوسط منذ 15 عاماً. كيف يمكنني مساعدتك؟",
     suggestions: [
-      "كم تكلفة الألواح الشمسية؟",
-      "كيف تعمل مضخة الحرارة؟",
-      "هل التكييف يوفر الكهرباء فعلاً؟",
+      "لدي منزل في أنطاليا",
+      "كيف يعمل نظام 4 في 1؟",
+      "هل توجد حوافز في تركيا؟",
     ],
   },
   hr: {
     headline: "Imate li energetske probleme na Mediteranu?",
-    title: "AI Energetski Savjetnik",
+    title: "Vaš energetski savjetnik Mustafa",
     subtitle: "Postavite pitanja o solarnim panelima, toplinskoj pumpi i klimi",
     placeholder: "Unesite vaše pitanje...",
-    welcome: "Pozdrav! Ja sam vaš 089Bayern AI savjetnik. Kako vam mogu pomoći s vašim energetskim rješenjem?",
+    welcome: "Merhaba! Ja sam Mustafa Sakar, vaš energetski savjetnik u 089 Bayern. Već 15 godina pomažem Nijemcima i Turcima s energetskim rješenjima na Mediteranu. Kako vam mogu pomoći?",
     suggestions: [
-      "Koliko košta solarna instalacija?",
-      "Kako radi toplinska pumpa?",
-      "Štedi li klima stvarno struju?",
+      "Imam kuću u Antaliji",
+      "Kako radi sustav 4-u-1?",
+      "Postoje li poticaji u Turskoj?",
     ],
   },
 };
@@ -198,8 +198,8 @@ export default function EmbeddedChatSection() {
                 <Bot className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-white font-semibold">089Bayern KI Agent</h3>
-                <p className="text-white/80 text-sm">Online - Bereit zu helfen</p>
+                <h3 className="text-white font-semibold">Mustafa Sakar - 089 Bayern</h3>
+                <p className="text-white/80 text-sm">Online - {language === "tr" ? "Yardıma hazır" : language === "de" ? "Bereit zu helfen" : language === "ar" ? "جاهز للمساعدة" : language === "ru" ? "Готов помочь" : language === "uk" ? "Готовий допомогти" : language === "hr" ? "Spreman pomoći" : "Ready to help"}</p>
               </div>
             </div>
           </div>
