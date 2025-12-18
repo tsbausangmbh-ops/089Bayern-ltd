@@ -14,7 +14,7 @@ const content = {
     badge: "4-in-1 Installation Antalya",
     title: "Energiesystem-Installation",
     titleHighlight: "in Antalya",
-    subtitle: "Deutsche Qualität trifft mediterranes Klima. Wir installieren Ihr komplettes 4-in-1 Energiesystem in Antalya, Kemer, Belek, Side und der gesamten Mittelmeerküste.",
+    subtitle: "Deutsche Qualität trifft mediterranes Klima. Wir installieren Ihr komplettes 4-in-1 Energiesystem entlang der gesamten Küste von Antalya bis Alanya - inklusive 20 km Umkreis ins Landesinnere.",
     ctaButton: "Kostenlose Beratung",
     callButton: "Jetzt anrufen",
     
@@ -58,7 +58,8 @@ const content = {
     step4Desc: "Wir nehmen die Anlage in Betrieb und schulen Sie in der Bedienung.",
     
     areasTitle: "Unsere Einsatzgebiete in der Region Antalya",
-    areas: ["Antalya Zentrum", "Kemer", "Belek", "Side", "Manavgat", "Alanya", "Gazipaşa", "Konyaaltı", "Lara", "Kundu"],
+    areasSubtitle: "Die gesamte Küste von Antalya bis Alanya + 20 km Umkreis ins Landesinnere",
+    areas: ["Antalya Zentrum", "Konyaaltı", "Lara", "Kundu", "Belek", "Kadriye", "Serik", "Boğazkent", "Side", "Kumköy", "Çolaklı", "Evrenseki", "Manavgat", "Kızılağaç", "Kızılot", "Okurcalar", "Avsallar", "İncekum", "Alanya Zentrum", "Mahmutlar", "Kestel", "Oba", "Tosmur", "Kargıcak", "Kemer", "Beldibi", "Göynük", "Çamyuva", "Tekirova", "Çıralı", "Olympos", "Döşemealtı", "Aksu", "Kepez"],
     
     testimonialsTitle: "Was unsere Kunden sagen",
     testimonial1: "Die beste Entscheidung, die wir für unser Ferienhaus getroffen haben. Keine Stromrechnung mehr!",
@@ -80,7 +81,7 @@ const content = {
     badge: "4'ü 1 Arada Kurulum Antalya",
     title: "Enerji Sistemi Kurulumu",
     titleHighlight: "Antalya'da",
-    subtitle: "Alman kalitesi Akdeniz ikliminde. Antalya, Kemer, Belek, Side ve tüm Akdeniz kıyısında komple 4'ü 1 arada enerji sisteminizi kuruyoruz.",
+    subtitle: "Alman kalitesi Akdeniz ikliminde. Antalya'dan Alanya'ya tüm kıyı boyunca ve 20 km iç bölge dahil komple 4'ü 1 arada enerji sisteminizi kuruyoruz.",
     ctaButton: "Ücretsiz Danışmanlık",
     callButton: "Hemen Arayın",
     
@@ -124,7 +125,8 @@ const content = {
     step4Desc: "Sistemi devreye alır ve kullanımı size öğretiriz.",
     
     areasTitle: "Antalya Bölgesinde Hizmet Alanlarımız",
-    areas: ["Antalya Merkez", "Kemer", "Belek", "Side", "Manavgat", "Alanya", "Gazipaşa", "Konyaaltı", "Lara", "Kundu"],
+    areasSubtitle: "Antalya'dan Alanya'ya tüm kıyı + 20 km iç bölge",
+    areas: ["Antalya Merkez", "Konyaaltı", "Lara", "Kundu", "Belek", "Kadriye", "Serik", "Boğazkent", "Side", "Kumköy", "Çolaklı", "Evrenseki", "Manavgat", "Kızılağaç", "Kızılot", "Okurcalar", "Avsallar", "İncekum", "Alanya Merkez", "Mahmutlar", "Kestel", "Oba", "Tosmur", "Kargıcak", "Kemer", "Beldibi", "Göynük", "Çamyuva", "Tekirova", "Çıralı", "Olympos", "Döşemealtı", "Aksu", "Kepez"],
     
     testimonialsTitle: "Müşterilerimiz Ne Diyor",
     testimonial1: "Yazlık evimiz için aldığımız en iyi karar. Artık elektrik faturası yok!",
@@ -146,7 +148,7 @@ const content = {
     badge: "4-in-1 Installation Antalya",
     title: "Energy System Installation",
     titleHighlight: "in Antalya",
-    subtitle: "German quality meets Mediterranean climate. We install your complete 4-in-1 energy system in Antalya, Kemer, Belek, Side and the entire Mediterranean coast.",
+    subtitle: "German quality meets Mediterranean climate. We install your complete 4-in-1 energy system along the entire coast from Antalya to Alanya - including a 20 km inland radius.",
     ctaButton: "Free Consultation",
     callButton: "Call Now",
     
@@ -190,7 +192,8 @@ const content = {
     step4Desc: "We commission the system and train you in its operation.",
     
     areasTitle: "Our Service Areas in the Antalya Region",
-    areas: ["Antalya Center", "Kemer", "Belek", "Side", "Manavgat", "Alanya", "Gazipaşa", "Konyaaltı", "Lara", "Kundu"],
+    areasSubtitle: "The entire coast from Antalya to Alanya + 20 km inland radius",
+    areas: ["Antalya Center", "Konyaaltı", "Lara", "Kundu", "Belek", "Kadriye", "Serik", "Boğazkent", "Side", "Kumköy", "Çolaklı", "Evrenseki", "Manavgat", "Kızılağaç", "Kızılot", "Okurcalar", "Avsallar", "İncekum", "Alanya Center", "Mahmutlar", "Kestel", "Oba", "Tosmur", "Kargıcak", "Kemer", "Beldibi", "Göynük", "Çamyuva", "Tekirova", "Çıralı", "Olympos", "Döşemealtı", "Aksu", "Kepez"],
     
     testimonialsTitle: "What Our Customers Say",
     testimonial1: "The best decision we made for our holiday home. No more electricity bills!",
@@ -212,7 +215,7 @@ const content = {
     badge: "Установка 4-в-1 Анталия",
     title: "Установка энергосистемы",
     titleHighlight: "в Анталии",
-    subtitle: "Немецкое качество встречает средиземноморский климат. Устанавливаем вашу полную энергосистему 4-в-1 в Анталии, Кемере, Белеке, Сиде и на всем средиземноморском побережье.",
+    subtitle: "Немецкое качество встречает средиземноморский климат. Устанавливаем вашу полную энергосистему 4-в-1 вдоль всего побережья от Анталии до Алании - включая 20 км вглубь.",
     ctaButton: "Бесплатная консультация",
     callButton: "Позвонить",
     
@@ -256,7 +259,8 @@ const content = {
     step4Desc: "Мы вводим систему в эксплуатацию и обучаем вас её использованию.",
     
     areasTitle: "Наши зоны обслуживания в регионе Анталия",
-    areas: ["Центр Анталии", "Кемер", "Белек", "Сиде", "Манавгат", "Алания", "Газипаша", "Коньяалты", "Лара", "Кунду"],
+    areasSubtitle: "Всё побережье от Анталии до Алании + 20 км вглубь",
+    areas: ["Центр Анталии", "Коньяалты", "Лара", "Кунду", "Белек", "Кадрие", "Серик", "Богазкент", "Сиде", "Кумкёй", "Чолаклы", "Эвренсеки", "Манавгат", "Кызылагач", "Кызылот", "Окуджалар", "Авсаллар", "Инджекум", "Центр Алании", "Махмутлар", "Кестель", "Оба", "Тосмур", "Каргыджак", "Кемер", "Бельдиби", "Гёйнюк", "Чамьюва", "Текирова", "Чиралы", "Олимпос", "Дёшемеалты", "Аксу", "Кепез"],
     
     testimonialsTitle: "Что говорят наши клиенты",
     testimonial1: "Лучшее решение для нашего загородного дома. Больше никаких счетов за электричество!",
@@ -278,7 +282,7 @@ const content = {
     badge: "Встановлення 4-в-1 Анталія",
     title: "Встановлення енергосистеми",
     titleHighlight: "в Анталії",
-    subtitle: "Німецька якість зустрічає середземноморський клімат. Встановлюємо вашу повну енергосистему 4-в-1 в Анталії, Кемері, Белеку, Сіде та на всьому середземноморському узбережжі.",
+    subtitle: "Німецька якість зустрічає середземноморський клімат. Встановлюємо вашу повну енергосистему 4-в-1 вздовж усього узбережжя від Анталії до Аланії - включаючи 20 км углиб.",
     ctaButton: "Безкоштовна консультація",
     callButton: "Зателефонувати",
     
@@ -322,7 +326,8 @@ const content = {
     step4Desc: "Ми вводимо систему в експлуатацію та навчаємо вас її використанню.",
     
     areasTitle: "Наші зони обслуговування в регіоні Анталія",
-    areas: ["Центр Анталії", "Кемер", "Белек", "Сіде", "Манавгат", "Аланія", "Газіпаша", "Коньяалти", "Лара", "Кунду"],
+    areasSubtitle: "Все узбережжя від Анталії до Аланії + 20 км углиб",
+    areas: ["Центр Анталії", "Коньяалти", "Лара", "Кунду", "Белек", "Кадріє", "Серік", "Богазкент", "Сіде", "Кумкьой", "Чолакли", "Евренсекі", "Манавгат", "Кизилагач", "Кизилот", "Окуджалар", "Авсаллар", "Інджекум", "Центр Аланії", "Махмутлар", "Кестель", "Оба", "Тосмур", "Каргиджак", "Кемер", "Бельдібі", "Гьойнюк", "Чамьюва", "Текірова", "Чірали", "Олімпос", "Дьошемеалти", "Аксу", "Кепез"],
     
     testimonialsTitle: "Що кажуть наші клієнти",
     testimonial1: "Найкраще рішення для нашого заміського будинку. Більше ніяких рахунків за електрику!",
@@ -344,7 +349,7 @@ const content = {
     badge: "تركيب 4 في 1 أنطاليا",
     title: "تركيب نظام الطاقة",
     titleHighlight: "في أنطاليا",
-    subtitle: "الجودة الألمانية تلتقي بمناخ البحر المتوسط. نقوم بتركيب نظام الطاقة الكامل 4 في 1 في أنطاليا وكيمر وبيليك وسيدي وعلى طول ساحل البحر المتوسط.",
+    subtitle: "الجودة الألمانية تلتقي بمناخ البحر المتوسط. نقوم بتركيب نظام الطاقة الكامل 4 في 1 على طول الساحل بأكمله من أنطاليا إلى ألانيا - بما في ذلك 20 كم داخلياً.",
     ctaButton: "استشارة مجانية",
     callButton: "اتصل الآن",
     
@@ -388,7 +393,8 @@ const content = {
     step4Desc: "نقوم بتشغيل النظام وندربك على استخدامه.",
     
     areasTitle: "مناطق خدمتنا في منطقة أنطاليا",
-    areas: ["مركز أنطاليا", "كيمر", "بيليك", "سيدي", "مانافغات", "ألانيا", "غازي باشا", "كونيالتي", "لارا", "كوندو"],
+    areasSubtitle: "الساحل بأكمله من أنطاليا إلى ألانيا + 20 كم داخلياً",
+    areas: ["مركز أنطاليا", "كونيالتي", "لارا", "كوندو", "بيليك", "قادرية", "سيريك", "بوغازكنت", "سيدا", "كومكوي", "تشولاكلي", "إيفرنسيكي", "مانافغات", "كيزيلاغاتش", "كيزيلوت", "أوكورجالار", "أفساللار", "إنجيكوم", "مركز ألانيا", "محمودلار", "كستيل", "أوبا", "توسمور", "كارجيجاك", "كيمر", "بيلديبي", "غوينوك", "تشامويوفا", "تيكيروفا", "تشيرالي", "أوليمبوس", "دوشمالتي", "أكسو", "كيبيز"],
     
     testimonialsTitle: "ماذا يقول عملاؤنا",
     testimonial1: "أفضل قرار اتخذناه لمنزل العطلات. لا مزيد من فواتير الكهرباء!",
@@ -410,7 +416,7 @@ const content = {
     badge: "4-u-1 Instalacija Antalya",
     title: "Instalacija Energetskog Sustava",
     titleHighlight: "u Antalyi",
-    subtitle: "Njemačka kvaliteta susreće mediteransku klimu. Instaliramo vaš kompletan 4-u-1 energetski sustav u Antalyi, Kemeru, Beleku, Sideu i cijeloj mediteranskoj obali.",
+    subtitle: "Njemačka kvaliteta susreće mediteransku klimu. Instaliramo vaš kompletan 4-u-1 energetski sustav duž cijele obale od Antalye do Alanye - uključujući 20 km u unutrašnjost.",
     ctaButton: "Besplatna Konzultacija",
     callButton: "Nazovite Odmah",
     
@@ -454,7 +460,8 @@ const content = {
     step4Desc: "Puštamo sustav u rad i obučavamo vas za korištenje.",
     
     areasTitle: "Naša Područja Usluga u Regiji Antalya",
-    areas: ["Centar Antalye", "Kemer", "Belek", "Side", "Manavgat", "Alanya", "Gazipaşa", "Konyaaltı", "Lara", "Kundu"],
+    areasSubtitle: "Cijela obala od Antalye do Alanye + 20 km u unutrašnjost",
+    areas: ["Centar Antalye", "Konyaaltı", "Lara", "Kundu", "Belek", "Kadriye", "Serik", "Boğazkent", "Side", "Kumköy", "Çolaklı", "Evrenseki", "Manavgat", "Kızılağaç", "Kızılot", "Okurcalar", "Avsallar", "İncekum", "Centar Alanye", "Mahmutlar", "Kestel", "Oba", "Tosmur", "Kargıcak", "Kemer", "Beldibi", "Göynük", "Çamyuva", "Tekirova", "Çıralı", "Olympos", "Döşemealtı", "Aksu", "Kepez"],
     
     testimonialsTitle: "Što Kažu Naši Klijenti",
     testimonial1: "Najbolja odluka koju smo donijeli za našu kuću za odmor. Više nema računa za struju!",
@@ -632,6 +639,7 @@ export default function InstallationAntalya() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.areasTitle}</h2>
+            <p className="text-lg text-muted-foreground">{c.areasSubtitle}</p>
           </div>
           
           <div className="flex flex-wrap justify-center gap-3">
