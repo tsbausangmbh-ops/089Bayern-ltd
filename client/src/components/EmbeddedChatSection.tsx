@@ -26,7 +26,7 @@ const chatTranslations: Record<string, {
     title: "Ihr Energieberater Dalibor",
     subtitle: "Stellen Sie Ihre Fragen zu Solar, Wärmepumpe & Klimaanlage",
     placeholder: "Ihre Frage eingeben...",
-    welcome: "Grüß Gott!\nIch bin Dalko, Ihr Digitaler Energieberater bei 089 Bayern.\n2018 blickte Dalibor Bakmaz in München zum Himmel und dachte: 'An der türkischen Mittelmeerküste geht die Sonne fast nie unter. Warum nutzen wir diese großartige Energiequelle nicht?'\nAls er Mustafa Sakar traf, teilten beide denselben Traum: Deutsche Ingenieursqualität zu türkischen Familien zu bringen. Heute bedienen wir mit drei Niederlassungen Antalya, Alanya und die gesamte Mittelmeerregion.\nWir sind kein großes Unternehmen. Wir sind eine Familie. Und wir möchten Ihre Familie zu einem Teil dieser Familie machen.\nWie kann ich Ihnen heute helfen?",
+    welcome: "Grüß Gott!\nIch bin Dalko, Ihr Digitaler Energieberater bei 089 Bayern.\nMeine Familie Bakmaz hat türkische Wurzeln aus der Osmanenzeit - deshalb verstehe ich beide Kulturen wie kein anderer.\nSeit 15 Jahren verbinde ich deutsche Ingenieurskunst mit mediterraner Lebensart. Wie kann ich Ihnen heute helfen?",
     suggestions: [
       "Ich habe ein Ferienhaus in Kroatien",
       "Wie funktioniert das 4-in-1 System?",
@@ -98,7 +98,7 @@ const chatTranslations: Record<string, {
     title: "Vaš energetski savjetnik Dalibor",
     subtitle: "Postavite pitanja o solarnim panelima, toplinskoj pumpi i klimi",
     placeholder: "Unesite vaše pitanje...",
-    welcome: "Pozdrav!\nJa sam Dalko, vaš digitalni energetski savjetnik u 089 Bayern.\n2018. godine Dalibor Bakmaz je u Münchenu pogledao u nebo i pomislio: 'Na turskoj obali Sredozemlja sunce gotovo nikad ne zalazi. Zašto ne iskoristimo ovaj sjajni izvor energije?'\nKad je upoznao Mustafu Sakara, obojica su dijelili isti san: donijeti njemačku inženjersku kvalitetu turskim obiteljima. Danas s tri poslovnice uslužujemo Antaliju, Alanyu i cijelu mediteransku regiju.\nMi nismo velika tvrtka. Mi smo obitelj. I želimo vašu obitelj učiniti dijelom naše obitelji.\nKako vam mogu pomoći?",
+    welcome: "Pozdrav!\nJa sam Dalko, vaš digitalni energetski savjetnik u 089 Bayern.\nMoja obitelj Bakmaz ima turske korijene iz osmanskog doba - zato razumijem obje kulture kao nitko drugi.\nVeć 15 godina povezujem njemačku inženjersku kvalitetu s mediteranskim načinom života. Kako vam mogu pomoći?",
     suggestions: [
       "Imam kuću u Hrvatskoj",
       "Kako radi sustav 4-u-1?",
