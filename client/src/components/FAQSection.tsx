@@ -88,7 +88,7 @@ export default function FAQSection() {
       dir={isRtl ? "rtl" : "ltr"} 
       data-testid="section-faq-home"
     >
-      <div className="max-w-4xl mx-auto px-6 md:px-8">
+      <div className="max-w-6xl mx-auto px-6 md:px-8">
         <div className="text-center mb-12">
           <Badge variant="secondary" className="mb-6">
             <HelpCircle className="w-4 h-4 mr-2" />
