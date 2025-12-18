@@ -539,7 +539,7 @@ export default function ProblemSolverSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {t.problems.map((item, index) => (
             <Card key={index} className="overflow-visible hover-elevate h-full" data-testid={`card-problem-${index}`}>
               <CardContent className="p-6 flex flex-col h-full">
