@@ -70,8 +70,8 @@ export default function Home() {
       <HeroSection onCtaClick={handleCtaClick} onLearnMoreClick={handleLearnMoreClick} />
       <FeaturesGrid />
       <ProblemSolverSection />
-      <EmbeddedChatSection />
       <LogoCarousel />
+      <EmbeddedChatSection />
       <BenefitsSection />
       <AiAdvisorSection />
       <SavingsCalculator onComplete={handleCalculatorComplete} />
