@@ -45,8 +45,8 @@ export default function UeberUns() {
 
       storyTitle: "Hikayemiz: München'den Antalya'ya",
       storyText1: "'Bakmaz' soyadı Osmanlı İmparatorluğu'ndan geliyor - belki de Dalibor'u Türkiye'ye çeken şey tam da bu bağ. Hırvat olmasına rağmen, çocukluğundan beri Türkiye'ye karşı derin bir bağlılık hissetti. Vizyonu? Alman kalitesi ve Akdeniz tutkusuyla Türkiye'deki insanlara gerçek değer katmak.",
-      storyText2: "2018'de München'de gökyüzüne baktı ve sordu: 'Akdeniz'de yılda 300 gün güneş var - neden bu enerjiyi kullanmıyoruz?' Mustafa ile tanıştığında, birlikte özel bir şey yaratabileceğimiz belli oldu. Alman mühendisliği Türk misafirperverliğiyle buluşuyor.",
-      storyText3: "Bugün bir şirketten daha fazlasıyız. Biz, ailelere yardım eden bir aileyiz. Her kurulum bizim için kişisel - çünkü yüksek elektrik faturalarının ve güvenilmez firmaların ne kadar sinir bozucu olduğunu biliyoruz. Bunu değiştiriyoruz. Sizin için.",
+      storyText2: "2018'de Dalibor, Ankaralı Mustafa Sakar ile tanıştı. Mustafa'nın Türkiye'deki güçlü iş ilişkileri ve yerel bilgisi, projeyi gerçeğe dönüştürmek için eksik parçaydı. Birlikte karar verdiler: 089 Bayern'i kurmak ve Alman mühendisliğini Türk misafirperverliğiyle birleştirmek.",
+      storyText3: "Bugün bir şirketten daha fazlasıyız. Dalibor'un Almanya'dan getirdiği kalite standartları ve Mustafa'nın Türkiye'deki özel bağlantıları sayesinde ailelere yardım eden bir aile olduk. Her kurulum bizim için kişisel - çünkü sizin için en iyisini istiyoruz.",
 
       benefitsTitle: "Sizin İçin Ne Yapıyoruz?",
       benefit1Title: "Faturalarınızı Düşürüyoruz",
@@ -100,8 +100,8 @@ export default function UeberUns() {
 
       storyTitle: "Unsere Geschichte: Von München nach Antalya",
       storyText1: "Der Name 'Bakmaz' stammt aus dem Osmanischen Reich - und vielleicht war es genau diese Verbindung, die Dalibor schon immer zur Türkei gezogen hat. Obwohl er Kroate ist, spürte er seit seiner Kindheit eine tiefe Verbundenheit mit dem Land am Bosporus. Seine Vision? Den Menschen in der Türkei echten Mehrwert bringen - mit deutscher Qualität und mediterranem Herzblut.",
-      storyText2: "2018 schaute er in München zum Himmel und fragte sich: 'Am Mittelmeer scheint 300 Tage die Sonne - warum lassen wir diese Energie ungenutzt?' Als er Mustafa traf, war klar: Zusammen können wir etwas Besonderes schaffen. Deutsche Ingenieurskunst trifft türkische Gastfreundschaft.",
-      storyText3: "Heute sind wir mehr als ein Unternehmen. Wir sind eine Familie, die Familien hilft. Jede Installation ist für uns persönlich - weil wir wissen, wie frustrierend hohe Stromrechnungen und unzuverlässige Anbieter sind. Das ändern wir. Für Sie.",
+      storyText2: "2018 traf Dalibor Mustafa Sakar aus Ankara. Mustafas starke Geschäftsbeziehungen und lokales Wissen in der Türkei waren das fehlende Puzzlestück, um das Projekt Realität werden zu lassen. Gemeinsam beschlossen sie: 089 Bayern gründen und deutsche Ingenieurskunst mit türkischer Gastfreundschaft vereinen.",
+      storyText3: "Heute sind wir mehr als ein Unternehmen. Dank Dalibors Qualitätsstandards aus Deutschland und Mustafas besonderen Verbindungen in der Türkei sind wir eine Familie geworden, die Familien hilft. Jede Installation ist für uns persönlich - weil wir das Beste für Sie wollen.",
 
       benefitsTitle: "Was tun wir für Sie?",
       benefit1Title: "Wir senken Ihre Rechnungen",
@@ -155,8 +155,8 @@ export default function UeberUns() {
 
       storyTitle: "Our Story: From Munich to Antalya",
       storyText1: "The name 'Bakmaz' originates from the Ottoman Empire - perhaps that's exactly what has always drawn Dalibor to Turkey. Although he's Croatian, he felt a deep connection to this land since childhood. His vision? To bring real value to people in Turkey - with German quality and Mediterranean passion.",
-      storyText2: "In 2018, he looked up at the Munich sky and asked: 'The Mediterranean has 300 days of sunshine - why are we letting this energy go to waste?' When he met Mustafa, it was clear: together we could create something special. German engineering meets Turkish hospitality.",
-      storyText3: "Today we're more than a company. We're a family that helps families. Every installation is personal to us - because we know how frustrating high electricity bills and unreliable providers are. We're changing that. For you.",
+      storyText2: "In 2018, Dalibor met Mustafa Sakar from Ankara. Mustafa's strong business relationships and local knowledge in Turkey were the missing piece to make the project a reality. Together they decided: to found 089 Bayern and unite German engineering with Turkish hospitality.",
+      storyText3: "Today we're more than a company. Thanks to Dalibor's quality standards from Germany and Mustafa's special connections in Turkey, we've become a family that helps families. Every installation is personal to us - because we want the best for you.",
 
       benefitsTitle: "What Do We Do For You?",
       benefit1Title: "We Lower Your Bills",
@@ -210,8 +210,8 @@ export default function UeberUns() {
 
       storyTitle: "Наша история: Из Мюнхена в Анталию",
       storyText1: "Фамилия 'Бакмаз' происходит из Османской империи - возможно, именно эта связь всегда притягивала Далибора к Турции. Хотя он хорват, с детства он чувствовал глубокую связь с этой землёй. Его видение? Принести людям в Турции реальную ценность - с немецким качеством и средиземноморской страстью.",
-      storyText2: "В 2018 году он посмотрел на мюнхенское небо и спросил: 'На Средиземноморье 300 солнечных дней - почему мы теряем эту энергию?' Когда он встретил Мустафу, стало ясно: вместе мы можем создать что-то особенное. Немецкая инженерия встречает турецкое гостеприимство.",
-      storyText3: "Сегодня мы больше, чем компания. Мы семья, которая помогает семьям. Каждая установка для нас личная - потому что мы знаем, как раздражают высокие счета и ненадёжные поставщики. Мы это меняем. Для вас.",
+      storyText2: "В 2018 году Далибор встретил Мустафу Сакара из Анкары. Сильные деловые связи и местные знания Мустафы в Турции стали недостающим элементом для воплощения проекта в реальность. Вместе они решили: основать 089 Bayern и объединить немецкую инженерию с турецким гостеприимством.",
+      storyText3: "Сегодня мы больше, чем компания. Благодаря стандартам качества Далибора из Германии и особым связям Мустафы в Турции, мы стали семьёй, которая помогает семьям. Каждая установка для нас личная - потому что мы хотим для вас лучшего.",
 
       benefitsTitle: "Что мы делаем для вас?",
       benefit1Title: "Снижаем ваши счета",
@@ -265,8 +265,8 @@ export default function UeberUns() {
 
       storyTitle: "Наша історія: З Мюнхена в Анталію",
       storyText1: "Прізвище 'Бакмаз' походить з Османської імперії - можливо, саме цей зв'язок завжди притягував Далібора до Туреччини. Хоча він хорват, з дитинства він відчував глибокий зв'язок з цією землею. Його бачення? Принести людям у Туреччині реальну цінність - з німецькою якістю та середземноморською пристрастю.",
-      storyText2: "У 2018 році він подивився на мюнхенське небо і запитав: 'На Середземномор'ї 300 сонячних днів - чому ми втрачаємо цю енергію?' Коли він зустрів Мустафу, стало ясно: разом ми можемо створити щось особливе. Німецька інженерія зустрічає турецьку гостинність.",
-      storyText3: "Сьогодні ми більше, ніж компанія. Ми родина, яка допомагає родинам. Кожне встановлення для нас особисте - бо ми знаємо, як дратують високі рахунки та ненадійні постачальники. Ми це змінюємо. Для вас.",
+      storyText2: "У 2018 році Далібор зустрів Мустафу Сакара з Анкари. Сильні ділові зв'язки та місцеві знання Мустафи в Туреччині стали недостаючим елементом для втілення проекту в реальність. Разом вони вирішили: заснувати 089 Bayern та об'єднати німецьку інженерію з турецькою гостинністю.",
+      storyText3: "Сьогодні ми більше, ніж компанія. Завдяки стандартам якості Далібора з Німеччини та особливим зв'язкам Мустафи в Туреччині, ми стали родиною, яка допомагає родинам. Кожне встановлення для нас особисте - бо ми хочемо для вас найкращого.",
 
       benefitsTitle: "Що ми робимо для вас?",
       benefit1Title: "Знижуємо ваші рахунки",
@@ -320,8 +320,8 @@ export default function UeberUns() {
 
       storyTitle: "قصتنا: من ميونيخ إلى أنطاليا",
       storyText1: "اسم 'باكماز' يعود أصله إلى الإمبراطورية العثمانية - ربما هذا هو ما جذب داليبور دائماً إلى تركيا. رغم أنه كرواتي، شعر بارتباط عميق بهذه الأرض منذ طفولته. رؤيته؟ تقديم قيمة حقيقية للناس في تركيا - بجودة ألمانية وشغف متوسطي.",
-      storyText2: "في عام 2018، نظر إلى سماء ميونيخ وسأل: 'البحر المتوسط لديه 300 يوم مشمس - لماذا نهدر هذه الطاقة؟' عندما التقى بمصطفى، كان واضحاً: معاً يمكننا خلق شيء مميز. الهندسة الألمانية تلتقي بالضيافة التركية.",
-      storyText3: "اليوم نحن أكثر من شركة. نحن عائلة تساعد العائلات. كل تركيب شخصي بالنسبة لنا - لأننا نعرف كم هي محبطة الفواتير العالية والمزودين غير الموثوقين. نحن نغير ذلك. من أجلك.",
+      storyText2: "في عام 2018، التقى داليبور بمصطفى صقر من أنقرة. علاقات مصطفى التجارية القوية ومعرفته المحلية في تركيا كانت القطعة المفقودة لتحويل المشروع إلى واقع. معاً قرروا: تأسيس 089 Bayern ودمج الهندسة الألمانية مع الضيافة التركية.",
+      storyText3: "اليوم نحن أكثر من شركة. بفضل معايير الجودة من داليبور من ألمانيا وعلاقات مصطفى الخاصة في تركيا، أصبحنا عائلة تساعد العائلات. كل تركيب شخصي بالنسبة لنا - لأننا نريد الأفضل لك.",
 
       benefitsTitle: "ماذا نفعل لك؟",
       benefit1Title: "نخفض فواتيرك",
