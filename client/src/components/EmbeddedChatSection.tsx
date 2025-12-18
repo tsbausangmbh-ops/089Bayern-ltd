@@ -38,7 +38,7 @@ const chatTranslations: Record<string, {
     title: "Enerji Danışmanınız Mustafa",
     subtitle: "Güneş enerjisi, ısı pompası ve klima hakkında sorularınızı sorun",
     placeholder: "Sorunuzu yazın...",
-    welcome: "Merhaba!\n\nBen Mustafa Sakar, 089 Bayern enerji danışmanınızım.\n\n15 yıldır Akdeniz bölgesinde Almanlara ve Türklere enerji çözümleri sunuyorum. Size nasıl yardımcı olabilirim?",
+    welcome: "Merhaba!\n\nBen Musti, 089 Bayern'de dijital enerji danışmanınızım.\n\n15 yıldır Akdeniz bölgesinde Almanlara ve Türklere enerji çözümleri sunuyorum. Size nasıl yardımcı olabilirim?",
     suggestions: [
       "Antalya'da yazlık evim var",
       "4'ü 1 arada sistem nasıl çalışır?",
