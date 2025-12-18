@@ -349,6 +349,61 @@ export default function UeberUns() {
       statsSavings: "توفير",
       statsWarranty: "سنوات ضمان",
     },
+    hr: {
+      badge: "O tvrtki 089 Bayern",
+      title: "Tim koji rješava",
+      titleHighlight: "vaše energetske probleme",
+      subtitle: "Visoki računi za struju, nepouzdani izvori energije, komplicirani procesi instalacije... Razumijemo sve te probleme jer su ih naši klijenti doživjeli. Sada je vrijeme za vaš mir.",
+      ctaButton: "Besplatna konzultacija",
+
+      problemTitle: "Razumijemo vaš problem",
+      problemSubtitle: "Svaki dan razgovaramo s obiteljima koje to proživljavaju",
+      problem1Title: "Visoki računi za struju",
+      problem1Text: "Stresira vas mjesečni račun? Klima, grijanje, električni uređaji... Sve košta. Ali sunce je besplatno! Na Mediteranu ima 300 sunčanih dana godišnje. Ne koristiti tu energiju je rasipanje.",
+      problem2Title: "Nepouzdane tvrtke",
+      problem2Text: "Imali ste loša iskustva? Tvrtke koje ne drže obećanja, nestaju nakon instalacije... Mi smo drugačiji. Ovdje smo s radnom etikom koju smo donijeli iz Njemačke.",
+      problem3Title: "Komplicirani procesi",
+      problem3Text: "Solarni panel, toplinska pumpa, klima... Što odabrati? Kako funkcionira? Koliko ću uštedjeti? Zbunjeni? Mi pojednostavljujemo cijeli proces za vas.",
+
+      solutionTitle: "Kako to rješavamo?",
+      solutionSubtitle: "Pouzdani most od Njemačke do Mediterana",
+      solution1Title: "Njemački standardi kvalitete",
+      solution1Text: "Radimo prema DIN standardima iz Münchena. Svaka instalacija se provodi s istom pažnjom kao u Njemačkoj. 10 godina jamstva - naša riječ je naša čast.",
+      solution2Title: "Jedan kontakt, puna podrška",
+      solution2Text: "Prije, tijekom i nakon instalacije - uz vas smo na svakom koraku. Problem? Jedan broj, jedna osoba. Poznajemo vas, poznajemo vaš problem, brzo ga rješavamo.",
+      solution3Title: "Transparentne cijene",
+      solution3Text: "Nema skrivenih troškova. Kada dobijete ponudu, vidite točno što ćete platiti. Nema iznenađujućih računa, nema dodatnih naknada. Povjerenje se gradi na transparentnosti.",
+
+      storyTitle: "Naša priča: Od Münchena do Antalije",
+      storyText1: "Vidjeli smo to sami: Obitelji šokirane svakog mjeseca kada stigne račun za struju. Pitaju se kako će to platiti. Osjećaju se bespomoćno dok cijene rastu. To nam nije dalo mira. Dalibor Bakmaz - čije ime potječe iz Osmanskog Carstva - oduvijek je osjećao duboku povezanost s Turskom. Njegova vizija bila je jasna: Pomoći tim ljudima da se konačno oslobode tog tereta.",
+      storyText2: "2018. godine Dalibor je upoznao Mustafu Sakara iz Ankare. Mustafa je problem poznavao iz prve ruke - vidio je kako obitelji pate od eksplodirajućih troškova energije. Sa svojim jakim poslovnim vezama i lokalnim znanjem, bio je dio koji je nedostajao. Zajedno su odlučili: osnovati 089 Bayern i ujediniti njemačko inženjerstvo s turskim gostoprimstvom - da oslobode obitelji od straha od računa za struju.",
+      storyText3: "Danas gorimo za našu misiju. Svaki put kada nam klijent kaže da mu je račun za struju pao za 70%, znamo: Zato to radimo. Mi smo više od tvrtke - mi smo obitelj koja pomaže obiteljima da opet slobodno dišu. Zahvaljujući Daliborovim standardima kvalitete iz Njemačke i Mustafinim posebnim vezama u Turskoj, obećavamo vam: Nećemo stati dok se i vi ne oslobodite tog tereta.",
+
+      benefitsTitle: "Što radimo za vas?",
+      benefit1Title: "Smanjujemo vaše račune",
+      benefit1Text: "Prosječna ušteda energije do 70%. Novac ostaje u vašem džepu od prve godine.",
+      benefit2Title: "Povećavamo vrijednost nekretnine",
+      benefit2Text: "Kuća sa solarnim panelima vrjednija je na tržištu nekretnina. Vaša investicija se isplati.",
+      benefit3Title: "Štitimo okoliš",
+      benefit3Text: "Korištenjem čiste energije smanjujete ugljični otisak. Zeleniji svijet za buduće generacije.",
+      benefit4Title: "Osiguravamo neovisnost",
+      benefit4Text: "Nestanci struje i povećanja cijena vas više ne pogađaju. Proizvodite vlastitu energiju.",
+
+      promiseTitle: "Obećanje 089 Bayern",
+      promiseText: "Obećavamo vam: njemačku kvalitetu u svakoj instalaciji, tursku toplinu u svakoj komunikaciji. Slušamo vaše probleme i stvaramo rješenja. Jer naš uspjeh se mjeri vašim zadovoljstvom.",
+
+      quoteText: "Više nema računa za struju. Ljeti i zimi, naš dom je udoban. Bog vas blagoslovio.",
+      quoteAuthor: "Gospodin Mehmet, Alanya - Naš prvi klijent",
+
+      ctaTitle: "Riješimo vaše energetske probleme",
+      ctaText: "Zakažite besplatnu konzultaciju. Pregledamo vaš dom i ponudimo vam prilagođeno rješenje. Bez obveza - samo informacije i transparentnost.",
+      ctaButton2: "Nazovite sada",
+
+      statsYears: "Godina iskustva",
+      statsCustomers: "Sretnih obitelji",
+      statsSavings: "Uštede",
+      statsWarranty: "Godina jamstva",
+    },
   };
 
   const c = content[language as keyof typeof content] || content.de;

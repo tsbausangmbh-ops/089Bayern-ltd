@@ -462,6 +462,79 @@ const content = {
     faq3Q: "هل هناك خيارات تمويل؟",
     faq3A: "نعم، نقدم قروضاً بنكية وتقسيطاً. للتفاصيل، حدد موعداً لاستشارة مجانية.",
   },
+  hr: {
+    badge: "089 Bayern German System",
+    badgeSub: "Kalkulator uštede",
+    title: "Izračunajte svoju",
+    titleHighlight: "Uštedu energije",
+    subtitle: "Otkrijte koliko možete uštedjeti na troškovima energije sa sustavom 089 Bayern 4-in-1 German System. Do 70% uštede zahvaljujući njemačkom inženjerstvu.",
+    
+    statsInstallations: "089 Bayern German System",
+    statsSavings: "Prosječna ušteda",
+    statsYears: "Razdoblje povrata",
+    statsCustomers: "Stopa zadovoljstva",
+    
+    howItWorksTitle: "Kako funkcionira kalkulator uštede?",
+    howItWorksSubtitle: "Dobijte svoju personaliziranu analizu uštede u samo 3 koraka",
+    
+    step1Title: "Opišite svoj dom",
+    step1Desc: "Unesite vrstu nekretnine, veličinu i površinu krova. Naš kalkulator će odrediti optimalnu veličinu sustava za vaš dom.",
+    
+    step2Title: "Unesite trenutne troškove",
+    step2Desc: "Navedite mjesečne troškove struje, grijanja, tople vode i hlađenja. Točan izračun s pravim podacima.",
+    
+    step3Title: "Dobijte izvješće o uštedi",
+    step3Desc: "Odmah vidite godišnju uštedu, cijenu sustava i razdoblje povrata. Zakažite besplatnu konzultaciju.",
+    
+    whyCalculateTitle: "Zašto izračunati uštedu?",
+    whyCalculateSubtitle: "Prvi korak do energetske neovisnosti: planiranje s pravim brojevima",
+    
+    reason1Title: "Realistično planiranje proračuna",
+    reason1Desc: "Planirajte investiciju s pravim brojevima uštede izračunatim posebno za vaš dom, a ne praznim obećanjima.",
+    
+    reason2Title: "Brzi povrat",
+    reason2Desc: "S mediteranskim suncem, prosječno 4-6 godina do povrata. Čista dobit nakon toga.",
+    
+    reason3Title: "Državni poticaji",
+    reason3Desc: "Iskoristite dostupne poticaje i porezne olakšice za dodatno smanjenje troškova.",
+    
+    reason4Title: "Ekološka investicija",
+    reason4Desc: "Investirajte u budućnost s prosječnom uštedom 15-20 tona CO2 godišnje.",
+    
+    systemsTitle: "Komponente 4-in-1 German System",
+    systemsSubtitle: "Četiri različita energetska rješenja u jednoj investiciji",
+    
+    system1Name: "Solarni paneli",
+    system1Desc: "Premium njemački solarni paneli za vlastitu proizvodnju struje",
+    
+    system2Name: "Toplinska pumpa",
+    system2Desc: "Vaillant toplinske pumpe za učinkovito grijanje i hlađenje",
+    
+    system3Name: "Pohrana energije",
+    system3Desc: "BYD baterije za korištenje solarne energije noću",
+    
+    system4Name: "Pametna klima",
+    system4Desc: "Samsung klima uređaji za udobne životne prostore",
+    
+    guaranteeTitle: "Njemačko jamstvo kvalitete",
+    guaranteeSubtitle: "Kao 089 Bayern, nudimo sveobuhvatna jamstva za sve naše sustave",
+    
+    guarantee1: "10+ godina jamstva na proizvod",
+    guarantee2: "25 godina jamstva performansi",
+    guarantee3: "Besplatna tehnička podrška",
+    guarantee4: "Profesionalna instalacija",
+    
+    ctaTitle: "Započnite izračun uštede",
+    ctaSubtitle: "Koristite kalkulator ispod za personaliziranu analizu uštede",
+    
+    faqTitle: "Često postavljana pitanja",
+    faq1Q: "Koliko je izračun točan?",
+    faq1A: "Naš kalkulator je optimiziran za mediteransku klimu i turske cijene energije. Točna ušteda se određuje nakon pregleda na licu mjesta.",
+    faq2Q: "Koliko traje instalacija sustava?",
+    faq2A: "Standardna instalacija 4-in-1 sustava traje prosječno 3-5 dana. Složeniji projekti mogu trajati duže.",
+    faq3Q: "Postoje li opcije financiranja?",
+    faq3A: "Da, nudimo bankovne kredite i rate. Za detalje zakažite besplatnu konzultaciju.",
+  },
 };
 
 export default function Rechner() {
