@@ -12,6 +12,7 @@ import TeamSection from "@/components/TeamSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import AiAdvisorSection from "@/components/AiAdvisorSection";
 
 interface CalculatorData {
   propertyType: string;
@@ -70,6 +71,7 @@ export default function Home() {
       <ProblemSolverSection />
       <LogoCarousel />
       <BenefitsSection />
+      <AiAdvisorSection />
       <SavingsCalculator onComplete={handleCalculatorComplete} />
       <TeamSection />
       <FAQSection />
