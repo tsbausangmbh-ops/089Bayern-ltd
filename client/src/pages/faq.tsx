@@ -11,6 +11,7 @@ import { useLocation } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import CrossLinks from "@/components/CrossLinks";
 import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
 
 export default function FAQ() {
@@ -588,6 +589,7 @@ export default function FAQ() {
         </div>
       </section>
 
+      <CrossLinks currentPage="faq" />
       <Footer />
     </div>
   );

@@ -8,6 +8,7 @@ import { useLocation } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import CrossLinks from "@/components/CrossLinks";
 
 export default function EnerjiDepolama() {
   const { language } = useLanguage();
@@ -511,6 +512,7 @@ export default function EnerjiDepolama() {
         </div>
       </section>
 
+      <CrossLinks currentPage="enerji-depolama" />
       <Footer />
     </div>
   );

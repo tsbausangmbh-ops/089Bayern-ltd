@@ -7,6 +7,7 @@ import { useLocation } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import CrossLinks from "@/components/CrossLinks";
 import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
 
 const content = {
@@ -1422,6 +1423,7 @@ export default function InstallationAnkara() {
         </div>
       </section>
 
+      <CrossLinks currentPage="installation-ankara" />
       <Footer />
     </div>
   );

@@ -34,6 +34,21 @@ export default function Footer() {
     { label: t.header.faq, href: "/faq" },
   ];
 
+  const installationLabel = language === "de" ? "Installation" : language === "en" ? "Installation" : language === "ru" ? "Установка" : language === "uk" ? "Встановлення" : language === "ar" ? "التركيب" : language === "hr" ? "Instalacija" : "Kurulum";
+  
+  const installationLinks = [
+    { label: "Antalya (Zentrale)", href: "/installation-antalya" },
+    { label: "Alanya", href: "/installation-alanya" },
+    { label: "Ankara", href: "/installation-ankara" },
+  ];
+
+  const solutionLinks = [
+    { label: language === "de" ? "Solaranlage" : language === "en" ? "Solar Panel" : language === "tr" ? "Güneş Paneli" : "Solar", href: "/gunes-paneli" },
+    { label: language === "de" ? "Wärmepumpe" : language === "en" ? "Heat Pump" : language === "tr" ? "Isı Pompası" : "Wärmepumpe", href: "/isi-pompasi" },
+    { label: language === "de" ? "Klimaanlage" : language === "en" ? "Air Conditioning" : language === "tr" ? "Klima" : "Klima", href: "/klima" },
+    { label: language === "de" ? "Batteriespeicher" : language === "en" ? "Battery Storage" : language === "tr" ? "Enerji Depolama" : "Speicher", href: "/enerji-depolama" },
+  ];
+
   return (
     <footer className="relative text-white overflow-hidden" data-testid="footer-main">
       <div 
@@ -43,7 +58,7 @@ export default function Footer() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/85 to-black/90" />
       
       <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-6">
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="bg-white/90 rounded-lg p-2">
@@ -107,6 +122,37 @@ export default function Footer() {
                     href={link.href}
                     className="text-white/70 hover:text-white transition-colors"
                     data-testid={`link-nav-${link.href.replace("/", "") || "home"}`}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-white mb-6">{language === "de" ? "Lösungen" : language === "en" ? "Solutions" : language === "tr" ? "Çözümler" : "Çözümler"}</h4>
+            <ul className="space-y-3 text-sm">
+              {solutionLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="text-white/70 hover:text-white transition-colors"
+                    data-testid={`link-solution-${link.href.replace("/", "")}`}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <h4 className="font-semibold text-white mb-4 mt-6">{installationLabel}</h4>
+            <ul className="space-y-3 text-sm">
+              {installationLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="text-white/70 hover:text-white transition-colors"
+                    data-testid={`link-installation-${link.href.replace("/installation-", "")}`}
                   >
                     {link.label}
                   </a>
