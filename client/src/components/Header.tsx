@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Globe, ChevronDown, MapPin } from "lucide-react";
+import { Menu, X, Globe, ChevronDown, MapPin, Sun, Thermometer, Wind, Battery, Building2 } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import logoImage from "@assets/Logo_1765790073992.png";
 import {
   DropdownMenu,
@@ -65,8 +66,18 @@ export default function Header({ onCtaClick }: HeaderProps) {
   const locationsLabel = language === "de" ? "Installation" : language === "en" ? "Installation" : language === "ru" ? "Установка" : language === "uk" ? "Встановлення" : language === "ar" ? "التركيب" : language === "hr" ? "Instalacija" : "Kurulum";
 
   const locationItems = [
-    { label: "Antalya", href: "/installation-antalya" },
-    { label: "Ankara", href: "/installation-ankara" },
+    { label: "Antalya", href: "/installation-antalya", badge: "Zentrale" },
+    { label: "Alanya", href: "/installation-alanya", badge: "Niederlassung" },
+    { label: "Ankara", href: "/installation-ankara", badge: "Niederlassung" },
+  ];
+
+  const solutionsLabel = language === "de" ? "Lösungen" : language === "en" ? "Solutions" : language === "ru" ? "Решения" : language === "uk" ? "Рішення" : language === "ar" ? "حلول" : language === "hr" ? "Rješenja" : "Çözümler";
+  
+  const solutionItems = [
+    { label: language === "de" ? "Solaranlage" : language === "en" ? "Solar Panel" : language === "tr" ? "Güneş Paneli" : "Solar", href: "/gunes-paneli" },
+    { label: language === "de" ? "Wärmepumpe" : language === "en" ? "Heat Pump" : language === "tr" ? "Isı Pompası" : "Wärmepumpe", href: "/isi-pompasi" },
+    { label: language === "de" ? "Klimaanlage" : language === "en" ? "Air Conditioning" : language === "tr" ? "Klima" : "Klima", href: "/klima" },
+    { label: language === "de" ? "Batteriespeicher" : language === "en" ? "Battery Storage" : language === "tr" ? "Enerji Depolama" : "Speicher", href: "/enerji-depolama" },
   ];
 
   const navItems = [
@@ -135,6 +146,35 @@ export default function Header({ onCtaClick }: HeaderProps) {
                   className={`text-sm font-medium px-4 py-2 rounded-lg hover-elevate active-elevate-2 transition-all flex items-center gap-1 ${
                     isScrolled ? "text-foreground/80 hover:text-foreground" : "text-white/80 hover:text-white"
                   }`}
+                  data-testid="dropdown-nav-solutions"
+                >
+                  <Sun className="w-4 h-4" />
+                  {solutionsLabel}
+                  <ChevronDown className="w-3 h-3" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                {solutionItems.map((item, index) => {
+                  const icons = [Sun, Thermometer, Wind, Battery];
+                  const Icon = icons[index];
+                  return (
+                    <DropdownMenuItem key={item.href} asChild>
+                      <a href={item.href} data-testid={`link-nav-solution-${index}`}>
+                        <Icon className="w-4 h-4 mr-2" />
+                        {item.label}
+                      </a>
+                    </DropdownMenuItem>
+                  );
+                })}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button
+                  className={`text-sm font-medium px-4 py-2 rounded-lg hover-elevate active-elevate-2 transition-all flex items-center gap-1 ${
+                    isScrolled ? "text-foreground/80 hover:text-foreground" : "text-white/80 hover:text-white"
+                  }`}
                   data-testid="dropdown-nav-locations"
                 >
                   <MapPin className="w-4 h-4" />
@@ -145,9 +185,14 @@ export default function Header({ onCtaClick }: HeaderProps) {
               <DropdownMenuContent align="end">
                 {locationItems.map((item) => (
                   <DropdownMenuItem key={item.href} asChild>
-                    <a href={item.href} data-testid={`link-nav-location-${item.label.toLowerCase()}`}>
-                      <MapPin className="w-4 h-4 mr-2" />
-                      {item.label}
+                    <a href={item.href} className="flex items-center justify-between w-full gap-4" data-testid={`link-nav-location-${item.label.toLowerCase()}`}>
+                      <span className="flex items-center gap-2">
+                        <Building2 className="w-4 h-4" />
+                        {item.label}
+                      </span>
+                      <Badge variant="secondary" className="text-xs">
+                        {item.badge}
+                      </Badge>
                     </a>
                   </DropdownMenuItem>
                 ))}
@@ -227,6 +272,41 @@ export default function Header({ onCtaClick }: HeaderProps) {
               )
             ))}
             
+            <Collapsible>
+              <CollapsibleTrigger asChild>
+                <button
+                  className="w-full flex items-center justify-between px-4 py-3 rounded-lg hover-elevate active-elevate-2 text-foreground font-medium"
+                  data-testid="button-mobile-solutions-toggle"
+                >
+                  <span className="flex items-center gap-2">
+                    <Sun className="w-4 h-4" />
+                    {solutionsLabel}
+                  </span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+              </CollapsibleTrigger>
+              <CollapsibleContent>
+                <div className="pl-6 flex flex-col gap-1">
+                  {solutionItems.map((item, index) => {
+                    const icons = [Sun, Thermometer, Wind, Battery];
+                    const Icon = icons[index];
+                    return (
+                      <a
+                        key={item.href}
+                        href={item.href}
+                        className="px-4 py-2 rounded-lg hover-elevate active-elevate-2 text-foreground/80 font-medium flex items-center gap-2"
+                        data-testid={`link-mobile-solution-${index}`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <Icon className="w-3 h-3" />
+                        {item.label}
+                      </a>
+                    );
+                  })}
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
+            
             <Collapsible open={isLocationsOpen} onOpenChange={setIsLocationsOpen}>
               <CollapsibleTrigger asChild>
                 <button
@@ -246,15 +326,20 @@ export default function Header({ onCtaClick }: HeaderProps) {
                     <a
                       key={item.href}
                       href={item.href}
-                      className="px-4 py-2 rounded-lg hover-elevate active-elevate-2 text-foreground/80 font-medium flex items-center gap-2"
+                      className="px-4 py-2 rounded-lg hover-elevate active-elevate-2 text-foreground/80 font-medium flex items-center justify-between"
                       data-testid={`link-mobile-location-${item.label.toLowerCase()}`}
                       onClick={() => {
                         setIsLocationsOpen(false);
                         setIsMobileMenuOpen(false);
                       }}
                     >
-                      <MapPin className="w-3 h-3" />
-                      {item.label}
+                      <span className="flex items-center gap-2">
+                        <Building2 className="w-3 h-3" />
+                        {item.label}
+                      </span>
+                      <Badge variant="secondary" className="text-xs">
+                        {item.badge}
+                      </Badge>
                     </a>
                   ))}
                 </div>
