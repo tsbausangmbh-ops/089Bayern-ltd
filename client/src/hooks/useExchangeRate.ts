@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { EXCHANGE_RATE } from "@/lib/pricing";
 
 interface ExchangeRateData {
   rate: number;
@@ -7,7 +8,7 @@ interface ExchangeRateData {
   lastUpdated: Date | null;
 }
 
-const FALLBACK_RATE = 49.50; // Dezember 2025 Kurs
+const FALLBACK_RATE = EXCHANGE_RATE; // Zentrale Kursverwaltung
 const CACHE_KEY = "eurTryRate";
 const CACHE_DURATION = 60 * 60 * 1000;
 

@@ -788,25 +788,28 @@ const translations: Record<string, {
   },
 };
 
+// Zentrale Preise importieren
+import { SYSTEM_PRICES, EXCHANGE_RATE, formatTL, formatEUR } from "@/lib/pricing";
+
 // EUR to TL exchange rate (Dezember 2025 - aktueller Kurs)
-const EUR_TO_TL_RATE = 49.50;
+const EUR_TO_TL_RATE = EXCHANGE_RATE;
 
 // 089 Bayern System Pricing (EUR) - Komplettpreise mit 30% Aufschlag
 const SYSTEM_PRICING = {
   standard: {
-    baseEUR: 31200, // 24000 + 30%
-    turkeyEUR: 31200,
-    powerKW: 6,
+    baseEUR: SYSTEM_PRICES.standard.eurNet,
+    turkeyEUR: SYSTEM_PRICES.standard.eurNet,
+    powerKW: SYSTEM_PRICES.standard.kWp,
   },
   medium: {
-    baseEUR: 41600, // 32000 + 30%
-    turkeyEUR: 41600,
-    powerKW: 12,
+    baseEUR: SYSTEM_PRICES.medium.eurNet,
+    turkeyEUR: SYSTEM_PRICES.medium.eurNet,
+    powerKW: SYSTEM_PRICES.medium.kWp,
   },
   premium: {
-    baseEUR: 58500, // 45000 + 30%
-    turkeyEUR: 58500,
-    powerKW: 16,
+    baseEUR: SYSTEM_PRICES.premium.eurNet,
+    turkeyEUR: SYSTEM_PRICES.premium.eurNet,
+    powerKW: SYSTEM_PRICES.premium.kWp,
   },
 };
 
@@ -855,7 +858,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       case 5: return data.monthlyHeating >= 0;
       case 6: return data.monthlyHotWater >= 0;
       case 7: return data.monthlyCooling >= 0;
-      case 8: return data.systemTier !== "";
+      case 8: return true; // systemTier always has a default value
       default: return false;
     }
   };
@@ -925,9 +928,9 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       id: "standard" as const, 
       label: t.systemStandard, 
       desc: t.standardDesc,
-      power: "6 kW",
-      priceEUR: "€31.200",
-      priceTL: `₺${Math.round(31200 * EUR_TO_TL_RATE).toLocaleString()}`,
+      power: `${SYSTEM_PRICES.standard.kWp} kW`,
+      priceEUR: `ca. €${SYSTEM_PRICES.standard.eurNet.toLocaleString("de-DE")}`,
+      priceTL: `ca. ₺${SYSTEM_PRICES.standard.tlNet.toLocaleString("tr-TR")}`,
       icon: Star,
       gradient: "from-slate-500 to-slate-600",
       badge: null,
@@ -936,9 +939,9 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       id: "medium" as const, 
       label: t.systemMedium, 
       desc: t.mediumDesc,
-      power: "12 kW",
-      priceEUR: "€41.600",
-      priceTL: `₺${Math.round(41600 * EUR_TO_TL_RATE).toLocaleString()}`,
+      power: `${SYSTEM_PRICES.medium.kWp} kW`,
+      priceEUR: `ca. €${SYSTEM_PRICES.medium.eurNet.toLocaleString("de-DE")}`,
+      priceTL: `ca. ₺${SYSTEM_PRICES.medium.tlNet.toLocaleString("tr-TR")}`,
       icon: Sparkles,
       gradient: "from-blue-500 to-blue-600",
       badge: t.popular,
@@ -947,9 +950,9 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
       id: "premium" as const, 
       label: t.systemPremium, 
       desc: t.premiumDesc,
-      power: "16 kW",
-      priceEUR: "€58.500",
-      priceTL: `₺${Math.round(58500 * EUR_TO_TL_RATE).toLocaleString()}`,
+      power: `${SYSTEM_PRICES.premium.kWp} kW`,
+      priceEUR: `ca. €${SYSTEM_PRICES.premium.eurNet.toLocaleString("de-DE")}`,
+      priceTL: `ca. ₺${SYSTEM_PRICES.premium.tlNet.toLocaleString("tr-TR")}`,
       icon: Crown,
       gradient: "from-amber-500 to-orange-600",
       badge: t.bestValue,
@@ -983,7 +986,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
                     <p className="text-xs text-muted-foreground mt-1">{t.includes}</p>
                   </div>
                   <div className="text-right">
-                    <div className="text-2xl font-bold text-primary">₺{investmentTL.toLocaleString()}</div>
+                    <div className="text-2xl font-bold text-primary">ca. ₺{investmentTL.toLocaleString()}</div>
                     <div className="text-lg text-foreground">ca. €{investmentEUR.toLocaleString()}</div>
                     <div className="text-xs text-muted-foreground">{t.currentRate}: 1€ = ₺{EUR_TO_TL_RATE} (12/2025)</div>
                   </div>

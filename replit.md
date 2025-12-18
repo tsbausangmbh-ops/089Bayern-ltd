@@ -77,3 +77,21 @@ These are bundled but not actively implemented in the current codebase.
 - Legal pages: KVKK, Gizlilik, Cerez-Politikasi, Sartlar, Mesafeli-Satis, On-Bilgilendirme
 
 All pages support 6 languages (de, tr, en, ru, uk, ar) with RTL support for Arabic.
+
+### Zentrale Preissteuerung
+- **Preisdatei**: `client/src/lib/pricing.ts` - ALLE Preise zentral verwaltet
+- **Wechselkurs**: EUR/TL Kurs in pricing.ts (Dezember 2025: 49.50)
+- **Preisformat**: Immer "ca." vor allen Preisen, "ohne Gewähr" Hinweis
+- **4-in-1 Systeme**: Standard (6kWp €31.200), Medium (10kWp €41.600), Premium (12kWp €58.500)
+- **Einzelkomponenten**: Solar, Vaillant Wärmepumpe, Samsung Klima, Batteriespeicher
+
+Alle Komponenten nutzen die zentrale Preisdatei:
+- System4in1Calculator.tsx
+- SavingsCalculator.tsx (via useExchangeRate)
+- ChatBot (server/routes.ts)
+
+### AI Chatbot (Mustafa Sakar)
+- Antwortet als echter türkischer Berater, NICHT als KI
+- Beratungsablauf: Erst Fragen stellen, dann ca.-Preise nennen
+- NLP-Techniken: Pacing, Leading, Rapport, Reframing
+- Preise immer mit "ca." und "ohne Gewähr"
