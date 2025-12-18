@@ -13,8 +13,8 @@ export default function Vorteile() {
   const { language } = useLanguage();
   const [, setLocation] = useLocation();
 
-  const scrollToCalculator = () => {
-    setLocation("/#calculator");
+  const goToContact = () => {
+    setLocation("/team");
   };
 
   const content = {
@@ -451,7 +451,7 @@ export default function Vorteile() {
   return (
     <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-vorteile">
       <SEOHead page="vorteile" />
-      <Header onCtaClick={scrollToCalculator} />
+      <Header onCtaClick={goToContact} />
       
       <section className="relative pt-20 pb-2 overflow-hidden" data-testid="section-vorteile-hero">
         <div 
@@ -480,7 +480,7 @@ export default function Vorteile() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                onClick={scrollToCalculator}
+                onClick={goToContact}
                 size="lg"
                 className="bg-gradient-to-r from-amber-500 to-orange-600 border-0 shadow-lg px-8"
                 data-testid="button-vorteile-cta"
@@ -704,7 +704,7 @@ export default function Vorteile() {
               {c.ctaSubtitle}
             </p>
             <Button 
-              onClick={scrollToCalculator}
+              onClick={goToContact}
               size="lg"
               className="bg-gradient-to-r from-amber-500 to-orange-600 border-0 shadow-lg"
               data-testid="button-vorteile-cta-bottom"

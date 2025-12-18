@@ -14,8 +14,8 @@ export default function EnerjiDepolama() {
   const [, setLocation] = useLocation();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const scrollToCalculator = () => {
-    setLocation("/rechner");
+  const goToContact = () => {
+    setLocation("/team");
   };
 
   const content = {
@@ -243,7 +243,7 @@ export default function EnerjiDepolama() {
   return (
     <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-enerji-depolama">
       <SEOHead page="systeme" />
-      <Header onCtaClick={scrollToCalculator} />
+      <Header onCtaClick={goToContact} />
       
       <section className="relative pt-20 pb-16 overflow-hidden" data-testid="section-battery-hero">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900" />
@@ -270,7 +270,7 @@ export default function EnerjiDepolama() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
-                onClick={scrollToCalculator}
+                onClick={goToContact}
                 size="lg"
                 className="bg-gradient-to-r from-emerald-500 to-green-600 border-0 shadow-lg shadow-emerald-500/30 px-8"
                 data-testid="button-battery-cta"
@@ -499,7 +499,7 @@ export default function EnerjiDepolama() {
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">{c.urgencyText}</p>
           
           <Button 
-            onClick={scrollToCalculator}
+            onClick={goToContact}
             size="lg"
             className="bg-gradient-to-r from-emerald-500 to-green-600 border-0 shadow-lg shadow-emerald-500/30 px-8"
             data-testid="button-urgency-cta"

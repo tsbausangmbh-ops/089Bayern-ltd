@@ -17,8 +17,8 @@ export default function FAQ() {
   const { language } = useLanguage();
   const [, setLocation] = useLocation();
 
-  const scrollToCalculator = () => {
-    setLocation("/#calculator");
+  const goToContact = () => {
+    setLocation("/team");
   };
 
   const content = {
@@ -473,7 +473,7 @@ export default function FAQ() {
   return (
     <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-faq">
       <SEOHead page="faq" />
-      <Header onCtaClick={scrollToCalculator} />
+      <Header onCtaClick={goToContact} />
       
       <section className="relative pt-20 pb-8 overflow-hidden" data-testid="section-faq-hero">
         <div 
@@ -510,7 +510,7 @@ export default function FAQ() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                onClick={scrollToCalculator}
+                onClick={goToContact}
                 size="lg"
                 className="bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg px-8"
                 data-testid="button-faq-hero-cta"
@@ -566,7 +566,7 @@ export default function FAQ() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              onClick={scrollToCalculator}
+              onClick={goToContact}
               size="lg"
               className="bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg px-8"
               data-testid="button-faq-cta"

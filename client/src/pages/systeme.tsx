@@ -15,8 +15,8 @@ export default function Systeme() {
   const t = uiTranslations[language];
   const [, setLocation] = useLocation();
 
-  const scrollToCalculator = () => {
-    setLocation("/#calculator");
+  const goToContact = () => {
+    setLocation("/team");
   };
 
   const content = {
@@ -180,7 +180,7 @@ export default function Systeme() {
   return (
     <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-systeme">
       <SEOHead page="systeme" />
-      <Header onCtaClick={scrollToCalculator} />
+      <Header onCtaClick={goToContact} />
       
       <section className="relative pt-20 pb-2 overflow-hidden" data-testid="section-systeme-hero">
         <div 
@@ -209,7 +209,7 @@ export default function Systeme() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                onClick={scrollToCalculator}
+                onClick={goToContact}
                 size="lg"
                 className="bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg px-8"
                 data-testid="button-systeme-cta"
@@ -320,7 +320,7 @@ export default function Systeme() {
                 {t.features.successNote}
               </p>
               <Button 
-                onClick={scrollToCalculator}
+                onClick={goToContact}
                 size="lg"
                 className="bg-gradient-to-r from-accent to-orange-600 border-0"
                 data-testid="button-systeme-cta-bottom"

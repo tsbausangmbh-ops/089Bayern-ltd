@@ -48,7 +48,7 @@ export default function Home() {
   }, []);
 
   const handleCtaClick = () => {
-    setLocation("/rechner");
+    setLocation("/team");
   };
 
   const handleLearnMoreClick = () => {

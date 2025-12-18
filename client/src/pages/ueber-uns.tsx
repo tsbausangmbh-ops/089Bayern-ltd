@@ -13,8 +13,8 @@ export default function UeberUns() {
   const { language } = useLanguage();
   const [, setLocation] = useLocation();
 
-  const scrollToCalculator = () => {
-    setLocation("/#calculator");
+  const goToContact = () => {
+    setLocation("/team");
   };
 
   const content = {
@@ -375,7 +375,7 @@ export default function UeberUns() {
   return (
     <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-ueber-uns">
       <SEOHead page="ueber-uns" />
-      <Header onCtaClick={scrollToCalculator} />
+      <Header onCtaClick={goToContact} />
       
       {/* Hero Section */}
       <section className="relative pt-20 pb-8 overflow-hidden" data-testid="section-about-hero">
@@ -405,7 +405,7 @@ export default function UeberUns() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                onClick={scrollToCalculator}
+                onClick={goToContact}
                 size="lg"
                 className="bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg px-8"
                 data-testid="button-about-cta"
@@ -573,7 +573,7 @@ export default function UeberUns() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              onClick={scrollToCalculator}
+              onClick={goToContact}
               size="lg"
               className="bg-gradient-to-r from-accent to-orange-600 border-0 shadow-lg px-8"
               data-testid="button-about-cta-bottom"

@@ -1019,8 +1019,8 @@ export default function InstallationAnkara() {
   const c = content[language as keyof typeof content] || content.de;
   const isRtl = language === "ar";
 
-  const scrollToCalculator = () => {
-    setLocation("/rechner");
+  const goToContact = () => {
+    setLocation("/team");
   };
 
   const systems = [
@@ -1072,7 +1072,7 @@ export default function InstallationAnkara() {
           </p>
           
           <div className="flex flex-wrap gap-4">
-            <Button size="lg" onClick={scrollToCalculator} data-testid="button-hero-cta">
+            <Button size="lg" onClick={goToContact} data-testid="button-hero-cta">
               {c.ctaButton}
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
@@ -1408,7 +1408,7 @@ export default function InstallationAnkara() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.ctaTitle}</h2>
           <p className="text-xl opacity-90 mb-8">{c.ctaSubtitle}</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" variant="secondary" onClick={scrollToCalculator} data-testid="button-cta-calculator">
+            <Button size="lg" variant="secondary" onClick={goToContact} data-testid="button-cta-calculator">
               {c.ctaButton}
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

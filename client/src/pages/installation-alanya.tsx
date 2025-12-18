@@ -879,8 +879,8 @@ export default function InstallationAlanya() {
   const c = content[language as keyof typeof content] || content.de;
   const isRTL = language === 'ar';
 
-  const scrollToCalculator = () => {
-    setLocation("/rechner");
+  const goToContact = () => {
+    setLocation("/team");
   };
 
   const systems = [
@@ -900,7 +900,7 @@ export default function InstallationAlanya() {
   return (
     <div className={`min-h-screen bg-background ${isRTL ? 'rtl' : ''}`} dir={isRTL ? 'rtl' : 'ltr'}>
       <SEOHead page="installation-alanya" />
-      <Header onCtaClick={scrollToCalculator} />
+      <Header onCtaClick={goToContact} />
 
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center" data-testid="section-hero">
@@ -931,7 +931,7 @@ export default function InstallationAlanya() {
           </p>
           
           <div className="flex flex-wrap gap-4">
-            <Button size="lg" onClick={scrollToCalculator} data-testid="button-hero-cta">
+            <Button size="lg" onClick={goToContact} data-testid="button-hero-cta">
               {c.ctaButton}
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
@@ -1267,7 +1267,7 @@ export default function InstallationAlanya() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.ctaTitle}</h2>
           <p className="text-xl opacity-90 mb-8">{c.ctaSubtitle}</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" variant="secondary" onClick={scrollToCalculator} data-testid="button-cta-calculator">
+            <Button size="lg" variant="secondary" onClick={goToContact} data-testid="button-cta-calculator">
               {c.ctaButton}
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

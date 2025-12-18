@@ -15,8 +15,8 @@ export default function IsiPompasi() {
   const [, setLocation] = useLocation();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const scrollToCalculator = () => {
-    setLocation("/rechner");
+  const goToContact = () => {
+    setLocation("/team");
   };
 
   const content = {
@@ -280,7 +280,7 @@ export default function IsiPompasi() {
   return (
     <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-isi-pompasi">
       <SEOHead page="systeme" />
-      <Header onCtaClick={scrollToCalculator} />
+      <Header onCtaClick={goToContact} />
       
       <section className="relative pt-20 pb-16 overflow-hidden" data-testid="section-heatpump-hero">
         <div 
@@ -309,7 +309,7 @@ export default function IsiPompasi() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
-                onClick={scrollToCalculator}
+                onClick={goToContact}
                 size="lg"
                 className="bg-gradient-to-r from-orange-500 to-red-600 border-0 shadow-lg shadow-orange-500/30 px-8"
                 data-testid="button-heatpump-cta"
@@ -572,7 +572,7 @@ export default function IsiPompasi() {
             <p className="text-muted-foreground mb-6">{c.finalCtaDesc}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                onClick={scrollToCalculator}
+                onClick={goToContact}
                 size="lg"
                 className="bg-gradient-to-r from-orange-500 to-red-600 border-0 shadow-lg shadow-orange-500/30 px-8"
                 data-testid="button-final-cta"

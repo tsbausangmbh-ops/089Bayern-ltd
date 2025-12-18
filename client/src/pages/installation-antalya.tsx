@@ -522,8 +522,8 @@ export default function InstallationAntalya() {
   const c = content[language as keyof typeof content] || content.de;
   const isRtl = language === "ar";
 
-  const scrollToCalculator = () => {
-    setLocation("/rechner");
+  const goToContact = () => {
+    setLocation("/team");
   };
 
   const systems = [
@@ -543,7 +543,7 @@ export default function InstallationAntalya() {
   return (
     <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-installation-antalya">
       <SEOHead page="installation-antalya" />
-      <Header onCtaClick={scrollToCalculator} />
+      <Header onCtaClick={goToContact} />
       
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 overflow-hidden" data-testid="section-antalya-hero">
@@ -572,7 +572,7 @@ export default function InstallationAntalya() {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" onClick={scrollToCalculator} className="bg-gradient-to-r from-primary to-orange-600" data-testid="button-antalya-cta">
+              <Button size="lg" onClick={goToContact} className="bg-gradient-to-r from-primary to-orange-600" data-testid="button-antalya-cta">
                 {c.ctaButton}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -771,7 +771,7 @@ export default function InstallationAntalya() {
           <p className="text-lg text-muted-foreground mb-8">{c.ctaSubtitle}</p>
           
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" onClick={scrollToCalculator} className="bg-gradient-to-r from-primary to-orange-600" data-testid="button-cta-consultation">
+            <Button size="lg" onClick={goToContact} className="bg-gradient-to-r from-primary to-orange-600" data-testid="button-cta-consultation">
               {c.ctaButton}
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
