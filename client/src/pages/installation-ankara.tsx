@@ -106,7 +106,7 @@ const content = {
     why4in1Subtitle: "Die intelligente Lösung für Ankaras extremes Klima",
     
     why4in1Point1Title: "Perfekte Synergie",
-    why4in1Point1Desc: "Alle vier Komponenten arbeiten zusammen wie ein Orchester. Die Solaranlage produziert Strom, die Wärmepumpe nutzt ihn effizient, die Klimaanlage sorgt für Komfort, und der Speicher sichert alles ab. Ein einzelnes System? Nur eine Note. Ein 4-in-1 System? Eine Symphonie.",
+    why4in1Point1Desc: "Samsung und Vaillant - zwei Premium-Marken, ein perfektes System. Die Solaranlage produziert Strom, die Vaillant Wärmepumpe nutzt ihn effizient, die Samsung Klimaanlage sorgt für Komfort, und der Samsung Speicher sichert alles ab. Deutsche und koreanische Ingenieurskunst vereint.",
     
     why4in1Point2Title: "Ein Ansprechpartner",
     why4in1Point2Desc: "Keine Koordination zwischen verschiedenen Installateuren. Keine Schuldzuweisungen bei Problemen. Ein Team, eine Verantwortung, eine Lösung. So einfach sollte es sein.",
@@ -244,7 +244,7 @@ const content = {
     why4in1Subtitle: "Ankara'nın ekstrem iklimi için akıllı çözüm",
     
     why4in1Point1Title: "Mükemmel Sinerji",
-    why4in1Point1Desc: "Dört bileşen bir orkestra gibi birlikte çalışır. Güneş paneli elektrik üretir, ısı pompası verimli kullanır, klima konfor sağlar, depolama her şeyi güvence altına alır. Tek sistem? Sadece bir nota. 4'ü 1 arada sistem? Bir senfoni.",
+    why4in1Point1Desc: "Samsung ve Vaillant - iki premium marka, mükemmel bir sistem. Güneş paneli elektrik üretir, Vaillant ısı pompası verimli kullanır, Samsung klima konfor sağlar, Samsung depolama her şeyi güvence altına alır. Alman ve Kore mühendisliği bir arada.",
     
     why4in1Point2Title: "Tek Muhatap",
     why4in1Point2Desc: "Farklı kurucular arasında koordinasyon yok. Sorunlarda suç atma yok. Bir ekip, bir sorumluluk, bir çözüm. Bu kadar basit olmalı.",
@@ -382,7 +382,7 @@ const content = {
     why4in1Subtitle: "The intelligent solution for Ankara's extreme climate",
     
     why4in1Point1Title: "Perfect Synergy",
-    why4in1Point1Desc: "All four components work together like an orchestra. The solar system produces electricity, the heat pump uses it efficiently, the AC provides comfort, and the storage secures everything. A single system? Just one note. A 4-in-1 system? A symphony.",
+    why4in1Point1Desc: "Samsung and Vaillant - two premium brands, one perfect system. The solar panels produce electricity, the Vaillant heat pump uses it efficiently, the Samsung AC provides comfort, and the Samsung storage secures everything. German and Korean engineering united.",
     
     why4in1Point2Title: "One Point of Contact",
     why4in1Point2Desc: "No coordination between different installers. No blame games when problems arise. One team, one responsibility, one solution. It should be that simple.",
@@ -520,7 +520,7 @@ const content = {
     why4in1Subtitle: "Умное решение для экстремального климата Анкары",
     
     why4in1Point1Title: "Идеальная синергия",
-    why4in1Point1Desc: "Все четыре компонента работают вместе как оркестр. Солнечная система производит электричество, тепловой насос эффективно его использует, кондиционер обеспечивает комфорт, а накопитель всё страхует. Одна система? Всего одна нота. Система 4-в-1? Симфония.",
+    why4in1Point1Desc: "Samsung и Vaillant - два премиум-бренда, одна идеальная система. Солнечные панели производят электричество, тепловой насос Vaillant эффективно его использует, кондиционер Samsung обеспечивает комфорт, а накопитель Samsung всё страхует. Немецкая и корейская инженерия вместе.",
     
     why4in1Point2Title: "Один контакт",
     why4in1Point2Desc: "Никакой координации между разными установщиками. Никаких перекладываний вины при проблемах. Одна команда, одна ответственность, одно решение. Так и должно быть.",
@@ -658,7 +658,7 @@ const content = {
     why4in1Subtitle: "Розумне рішення для екстремального клімату Анкари",
     
     why4in1Point1Title: "Ідеальна синергія",
-    why4in1Point1Desc: "Усі чотири компоненти працюють разом як оркестр. Сонячна система виробляє електрику, тепловий насос ефективно її використовує, кондиціонер забезпечує комфорт, а накопичувач все страхує. Одна система? Лише одна нота. Система 4-в-1? Симфонія.",
+    why4in1Point1Desc: "Samsung та Vaillant - два преміум-бренди, одна ідеальна система. Сонячні панелі виробляють електрику, тепловий насос Vaillant ефективно її використовує, кондиціонер Samsung забезпечує комфорт, а накопичувач Samsung все страхує. Німецька та корейська інженерія разом.",
     
     why4in1Point2Title: "Один контакт",
     why4in1Point2Desc: "Ніякої координації між різними установниками. Ніяких перекладань провини при проблемах. Одна команда, одна відповідальність, одне рішення. Так і має бути.",
@@ -796,7 +796,7 @@ const content = {
     why4in1Subtitle: "الحل الذكي لمناخ أنقرة القاسي",
     
     why4in1Point1Title: "تآزر مثالي",
-    why4in1Point1Desc: "جميع المكونات الأربعة تعمل معاً مثل الأوركسترا. النظام الشمسي ينتج الكهرباء، المضخة الحرارية تستخدمها بكفاءة، المكيف يوفر الراحة، والتخزين يؤمن كل شيء. نظام واحد؟ نغمة واحدة فقط. نظام 4 في 1؟ سيمفونية.",
+    why4in1Point1Desc: "Samsung و Vaillant - علامتان تجاريتان متميزتان، نظام واحد مثالي. الألواح الشمسية تنتج الكهرباء، مضخة Vaillant الحرارية تستخدمها بكفاءة، مكيف Samsung يوفر الراحة، وتخزين Samsung يؤمن كل شيء. الهندسة الألمانية والكورية معاً.",
     
     why4in1Point2Title: "نقطة اتصال واحدة",
     why4in1Point2Desc: "لا تنسيق بين مركبين مختلفين. لا إلقاء اللوم عند المشاكل. فريق واحد، مسؤولية واحدة، حل واحد. هكذا يجب أن يكون الأمر.",
@@ -934,7 +934,7 @@ const content = {
     why4in1Subtitle: "Inteligentno rješenje za ekstremnu klimu Ankare",
     
     why4in1Point1Title: "Savršena sinergija",
-    why4in1Point1Desc: "Sve četiri komponente rade zajedno poput orkestra. Solarni sustav proizvodi struju, toplinska pumpa je učinkovito koristi, klima pruža udobnost, a pohrana sve osigurava. Jedan sustav? Samo jedna nota. Sustav 4-u-1? Simfonija.",
+    why4in1Point1Desc: "Samsung i Vaillant - dva premium brenda, jedan savršen sustav. Solarni paneli proizvode struju, Vaillant toplinska pumpa je učinkovito koristi, Samsung klima pruža udobnost, a Samsung pohrana sve osigurava. Njemačko i korejsko inženjerstvo zajedno.",
     
     why4in1Point2Title: "Jedna kontakt osoba",
     why4in1Point2Desc: "Nema koordinacije između različitih instalatera. Nema prebacivanja krivnje kod problema. Jedan tim, jedna odgovornost, jedno rješenje. Tako jednostavno bi trebalo biti.",
