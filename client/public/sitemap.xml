@@ -168,6 +168,51 @@
     <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/faq?lang=hr"/>
   </url>
 
+  <!-- Installation Antalya (Headquarters) -->
+  <url>
+    <loc>https://089bayern.com/installation-antalya</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/installation-antalya?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/installation-antalya?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/installation-antalya?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/installation-antalya?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/installation-antalya?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/installation-antalya?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/installation-antalya?lang=hr"/>
+  </url>
+
+  <!-- Installation Alanya (Branch Office) -->
+  <url>
+    <loc>https://089bayern.com/installation-alanya</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/installation-alanya?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/installation-alanya?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/installation-alanya?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/installation-alanya?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/installation-alanya?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/installation-alanya?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/installation-alanya?lang=hr"/>
+  </url>
+
+  <!-- Installation Ankara (Branch Office) -->
+  <url>
+    <loc>https://089bayern.com/installation-ankara</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/installation-ankara?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/installation-ankara?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/installation-ankara?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/installation-ankara?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/installation-ankara?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/installation-ankara?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/installation-ankara?lang=hr"/>
+  </url>
+
   <!-- Legal Pages (Lower Priority, No Language Variants) -->
   <url>
     <loc>https://089bayern.com/kvkk</loc>
