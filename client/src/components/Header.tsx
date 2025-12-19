@@ -23,7 +23,7 @@ interface HeaderProps {
   onCtaClick?: () => void;
 }
 
-const languages: Language[] = ["de", "tr", "en", "ru", "uk", "ar"];
+const languages: Language[] = ["de", "tr", "en", "ru", "uk", "ar", "hr"];
 
 export default function Header({ onCtaClick }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,7 +62,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
 
   const [isLocationsOpen, setIsLocationsOpen] = useState(false);
   
-  const aboutLabel = language === "de" ? "Über uns" : language === "en" ? "About" : language === "ru" ? "О нас" : language === "uk" ? "Про нас" : language === "ar" ? "من نحن" : "Hakkımızda";
+  const aboutLabel = language === "de" ? "Über uns" : language === "en" ? "About" : language === "ru" ? "О нас" : language === "uk" ? "Про нас" : language === "ar" ? "من نحن" : language === "hr" ? "O nama" : "Hakkımızda";
   const locationsLabel = language === "de" ? "Installation" : language === "en" ? "Installation" : language === "ru" ? "Установка" : language === "uk" ? "Встановлення" : language === "ar" ? "التركيب" : language === "hr" ? "Instalacija" : "Kurulum";
 
   const locationItems = [
