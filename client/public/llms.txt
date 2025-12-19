@@ -40,20 +40,21 @@
 - Backup power solutions
 - Smart energy management
 
+## FOUNDERS
+
+**Dalibor Bakmaz** - Co-Founder, German Engineering Background
+**Mustafa Sakar** - Co-Founder, Turkish Market Expert & Local Business Connections
+
 ## SERVICE AREAS
 
 ### Turkey (Primary Market)
-- Antalya (Headquarters/Zentrale)
-- Alanya (Standort)
-- Muğla (Bodrum, Fethiye, Marmaris)
-- İzmir
-- Aydın
-- Mersin
 
-### Croatia (Expanding Market)
-- Split
-- Dalmatia Region
-- Adriatic Coast
+**Zentrale (Headquarters):**
+- Antalya - Main headquarters for Mediterranean region, covers entire coast from Antalya to Alanya + 20 km inland (34+ locations)
+
+**Niederlassungen (Branch Offices):**
+- Alanya - Branch office, covers Alanya coastal area + 30 km radius
+- Ankara - Branch office, covers Ankara center + 30 km radius (20+ locations: Çankaya, Keçiören, Yenimahalle, etc.)
 
 ## UNIQUE SELLING POINTS
 
@@ -155,7 +156,20 @@
 | /ueber-uns | About us page | 0.7 |
 | /team | Team information | 0.6 |
 | /faq | Frequently asked questions | 0.7 |
+| /installation-antalya | Installation service Antalya (HQ) | 0.85 |
+| /installation-alanya | Installation service Alanya (Branch) | 0.8 |
+| /installation-ankara | Installation service Ankara (Branch) | 0.8 |
+
+## PRICING (Approximate, subject to change)
+
+| System | Size | Price (EUR) | Best For |
+|--------|------|-------------|----------|
+| Standard | 6 kWp | ca. 31,200 | 100-150 m² villas |
+| Medium | 10 kWp | ca. 41,600 | 150-250 m² villas |
+| Premium | 12 kWp | ca. 58,500 | 250+ m² villas |
+
+*All prices are approximate and without guarantee. Current exchange rate: 1 EUR = 49.50 TL*
 
 ---
-Last Updated: 15 December 2024
-Version: 1.1
+Last Updated: 19 December 2024
+Version: 1.2
