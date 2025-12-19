@@ -1,23 +1,23 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Snowflake, Check, ArrowRight, Shield, Clock, Zap, TrendingUp, Leaf, Award, Phone, ChevronDown, ChevronUp, Star, Users, ThumbsUp, Calculator, Wind, Thermometer } from "lucide-react";
-import { useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
-import { useLocation } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
 
 export default function Klima() {
   const { language } = useLanguage();
-  const [, setLocation] = useLocation();
+  const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const goToContact = () => {
-    setLocation("/team");
+    setIsLeadFormOpen(true);
   };
 
   const content = {
@@ -625,6 +625,11 @@ export default function Klima() {
 
       <CrossLinks currentPage="klima" />
       <Footer />
+      <LeadCaptureForm
+        isOpen={isLeadFormOpen}
+        onClose={() => setIsLeadFormOpen(false)}
+        initialLanguage={language}
+      />
     </div>
   );
 }

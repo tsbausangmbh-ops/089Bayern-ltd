@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -5,20 +6,20 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Snowflake, Flame, Sun, Battery, Check, Sparkles, ArrowRight, Zap, Shield, Clock, ThumbsUp, Phone, Wallet, Home, HelpCircle, Users, Settings } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
-import { useLocation } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
 
 export default function Systeme() {
   const { language } = useLanguage();
   const t = uiTranslations[language];
-  const [, setLocation] = useLocation();
+  const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
 
   const goToContact = () => {
-    setLocation("/team");
+    setIsLeadFormOpen(true);
   };
 
   const content = {
@@ -722,6 +723,11 @@ export default function Systeme() {
 
       <CrossLinks currentPage="systeme" />
       <Footer />
+      <LeadCaptureForm
+        isOpen={isLeadFormOpen}
+        onClose={() => setIsLeadFormOpen(false)}
+        initialLanguage={language}
+      />
     </div>
   );
 }

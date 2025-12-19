@@ -1,13 +1,14 @@
+import { useState } from "react";
 import { MapPin, Sun, Flame, Wind, Battery, CheckCircle, ArrowRight, Phone, Star, Shield, Award, Clock, Users, TrendingUp, Home, Zap, Percent, Rocket, Thermometer, Snowflake, HelpCircle, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/lib/LanguageContext";
-import { useLocation } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
 
 const content = {
@@ -1016,12 +1017,12 @@ const content = {
 
 export default function InstallationAnkara() {
   const { language } = useLanguage();
-  const [, setLocation] = useLocation();
+  const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
   const c = content[language as keyof typeof content] || content.de;
   const isRtl = language === "ar";
 
   const goToContact = () => {
-    setLocation("/team");
+    setIsLeadFormOpen(true);
   };
 
   const systems = [
@@ -1425,6 +1426,11 @@ export default function InstallationAnkara() {
 
       <CrossLinks currentPage="installation-ankara" />
       <Footer />
+      <LeadCaptureForm
+        isOpen={isLeadFormOpen}
+        onClose={() => setIsLeadFormOpen(false)}
+        initialLanguage={language}
+      />
     </div>
   );
 }

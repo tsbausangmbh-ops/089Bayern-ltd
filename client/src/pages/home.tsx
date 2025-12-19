@@ -47,7 +47,7 @@ export default function Home() {
   }, []);
 
   const handleCtaClick = () => {
-    setLocation("/team");
+    setIsLeadFormOpen(true);
   };
 
   const handleLearnMoreClick = () => {

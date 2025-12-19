@@ -1,21 +1,22 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Sun, Users, MapPin, ArrowRight, Sparkles, Building2, Target, Handshake, Shield, Phone, Quote, Award, CheckCircle, Wrench, Clock, ThumbsUp, Zap, Lightbulb, TrendingDown, Home, Leaf, HeartHandshake, BadgeCheck } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
-import { useLocation } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
 
 export default function UeberUns() {
   const { language } = useLanguage();
-  const [, setLocation] = useLocation();
+  const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
 
   const goToContact = () => {
-    setLocation("/team");
+    setIsLeadFormOpen(true);
   };
 
   const content = {
@@ -653,6 +654,11 @@ export default function UeberUns() {
 
       <CrossLinks currentPage="ueber-uns" />
       <Footer />
+      <LeadCaptureForm
+        isOpen={isLeadFormOpen}
+        onClose={() => setIsLeadFormOpen(false)}
+        initialLanguage={language}
+      />
     </div>
   );
 }

@@ -1,22 +1,22 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Battery, Check, ArrowRight, Shield, Clock, Zap, TrendingUp, Leaf, Award, Phone, ChevronDown, ChevronUp, Star, Users, ThumbsUp, Calculator, Moon, Sun, BatteryCharging } from "lucide-react";
-import { useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
-import { useLocation } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 
 export default function EnerjiDepolama() {
   const { language } = useLanguage();
-  const [, setLocation] = useLocation();
+  const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const goToContact = () => {
-    setLocation("/team");
+    setIsLeadFormOpen(true);
   };
 
   const content = {
@@ -514,6 +514,11 @@ export default function EnerjiDepolama() {
 
       <CrossLinks currentPage="enerji-depolama" />
       <Footer />
+      <LeadCaptureForm
+        isOpen={isLeadFormOpen}
+        onClose={() => setIsLeadFormOpen(false)}
+        initialLanguage={language}
+      />
     </div>
   );
 }
