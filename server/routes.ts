@@ -131,13 +131,26 @@ Optimiere den folgenden Text mit mehr Empathie und Problemlösung. Mache ihn emo
     }
   });
 
-  // ChatBot AI endpoint
+  // ChatBot AI endpoint mit Conversation History
+  const conversationHistory = new Map<string, Array<{role: string, content: string}>>();
+  
   app.post("/api/chat", async (req, res) => {
     try {
-      const { message, language = "tr" } = req.body;
+      const { message, language = "tr", sessionId = "default" } = req.body;
       
       if (!message || typeof message !== "string") {
         return res.status(400).json({ error: "Message is required" });
+      }
+
+      // Conversation History für diese Session abrufen oder erstellen
+      if (!conversationHistory.has(sessionId)) {
+        conversationHistory.set(sessionId, []);
+      }
+      const history = conversationHistory.get(sessionId)!;
+      
+      // Alte Konversationen nach 20 Nachrichten trimmen
+      if (history.length > 20) {
+        history.splice(0, history.length - 20);
       }
 
       const langName = language === "tr" ? "Türkisch" : language === "de" ? "Deutsch" : language === "en" ? "Englisch" : language === "ru" ? "Russisch" : language === "uk" ? "Ukrainisch" : language === "hr" ? "Kroatisch" : language === "ar" ? "Arabisch" : "Türkisch";
@@ -153,7 +166,7 @@ Optimiere den folgenden Text mit mehr Empathie und Problemlösung. Mache ihn emo
         : "Bei meiner Familie in Antalya...";
       const zielRegion = isDaliborLanguage 
         ? "Kroatien (Dalmatien, Istrien) und der Mittelmeerraum" 
-        : "Türkei (Antalya, Alanya, Bodrum) und der Mittelmeerraum";
+        : "Türkei (Antalya, Alanya, Ankara, Bodrum) und der Mittelmeerraum";
       const whatsapp = isDaliborLanguage 
         ? "+385 99 XXX XXXX (Dalibor)" 
         : "+90 507 183 2036 (Mustafa)";
@@ -268,19 +281,36 @@ KONTAKT:
 
 SPRACHE: Antworte in ${langName}.
 
+STANDORTE:
+- Zentrale Antalya: Hauptsitz, 34+ Standorte an der Mittelmeerküste
+- Niederlassung Alanya: Zweigstelle für Alanya und 30 km Umkreis
+- Niederlassung Ankara: Zweigstelle für Zentralanatolien (20+ Stadtteile)
+
 ABSCHLUSS: Biete IMMER eine kostenlose Vor-Ort-Beratung an.`;
 
+      // Aktuelle Nachricht zur History hinzufügen
+      history.push({ role: "user", content: message });
+
+      // Messages für API erstellen (System + History)
+      const messages: Array<{role: "system" | "user" | "assistant", content: string}> = [
+        { role: "system", content: systemPrompt },
+        ...history.map(h => ({ 
+          role: h.role as "user" | "assistant", 
+          content: h.content 
+        }))
+      ];
+
       const response = await openai.chat.completions.create({
-        model: "gpt-4o-mini",
-        messages: [
-          { role: "system", content: systemPrompt },
-          { role: "user", content: message }
-        ],
-        max_tokens: 500,
+        model: "gpt-4o",
+        messages: messages,
+        max_tokens: 800,
         temperature: 0.7,
       });
 
       const aiResponse = response.choices[0]?.message?.content || "Entschuldigung, ich konnte keine Antwort generieren.";
+      
+      // AI-Antwort zur History hinzufügen
+      history.push({ role: "assistant", content: aiResponse });
 
       return res.status(200).json({ 
         success: true,
@@ -290,6 +320,13 @@ ABSCHLUSS: Biete IMMER eine kostenlose Vor-Ort-Beratung an.`;
       console.error("Error in chat endpoint:", error);
       return res.status(500).json({ error: "Internal server error" });
     }
+  });
+  
+  // Conversation History Reset endpoint
+  app.post("/api/chat/reset", (req, res) => {
+    const { sessionId = "default" } = req.body;
+    conversationHistory.delete(sessionId);
+    return res.status(200).json({ success: true, message: "Conversation reset" });
   });
 
   return httpServer;

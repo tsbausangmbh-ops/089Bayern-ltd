@@ -1,7 +1,7 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { MessageCircle, X, Send, Loader2 } from "lucide-react";
+import { MessageCircle, X, Send, Loader2, RotateCcw } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { translations } from "@/lib/translations";
 import { useLanguage } from "@/lib/LanguageContext";
@@ -20,6 +20,9 @@ export default function ChatBot() {
   const { language } = useLanguage();
   const t = translations[language];
   const messagesContainerRef = useRef<HTMLDivElement>(null);
+  
+  // Unique session ID für Conversation History
+  const sessionId = useMemo(() => `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`, []);
 
   const scrollToBottom = () => {
     if (messagesContainerRef.current) {
@@ -36,6 +39,7 @@ export default function ChatBot() {
       const res = await apiRequest("POST", "/api/chat", {
         message: userMessage,
         language,
+        sessionId,
       });
       return res.json();
     },
@@ -55,12 +59,24 @@ export default function ChatBot() {
     },
   });
 
+  const resetMutation = useMutation({
+    mutationFn: async () => {
+      const res = await apiRequest("POST", "/api/chat/reset", { sessionId });
+      return res.json();
+    },
+  });
+
   const toggleChat = () => {
     setIsOpen((prev) => !prev);
   };
 
   const closeChat = () => {
     setIsOpen(false);
+  };
+
+  const resetChat = () => {
+    setMessages([]);
+    resetMutation.mutate();
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -116,15 +132,27 @@ export default function ChatBot() {
                   <p className="text-white/70 text-xs">{t.chatbotOnline}</p>
                 </div>
               </div>
-              <Button
-                size="icon"
-                variant="ghost"
-                onClick={closeChat}
-                className="text-white hover:bg-white/20"
-                data-testid="button-close-chat"
-              >
-                <X className="w-5 h-5" />
-              </Button>
+              <div className="flex items-center gap-1">
+                <Button
+                  size="icon"
+                  variant="ghost"
+                  onClick={resetChat}
+                  className="text-white hover:bg-white/20"
+                  data-testid="button-reset-chat"
+                  title="Neue Konversation"
+                >
+                  <RotateCcw className="w-4 h-4" />
+                </Button>
+                <Button
+                  size="icon"
+                  variant="ghost"
+                  onClick={closeChat}
+                  className="text-white hover:bg-white/20"
+                  data-testid="button-close-chat"
+                >
+                  <X className="w-5 h-5" />
+                </Button>
+              </div>
             </div>
 
             <div ref={messagesContainerRef} className="flex-1 p-4 bg-muted/30 overflow-y-auto">
