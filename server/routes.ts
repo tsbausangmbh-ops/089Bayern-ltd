@@ -14,6 +14,56 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
+  // 301 Redirects for SEO - permanent redirects for old/alternative URLs
+  const redirects: Record<string, string> = {
+    '/home': '/',
+    '/index': '/',
+    '/index.html': '/',
+    '/antalya': '/installation-antalya',
+    '/alanya': '/installation-alanya',
+    '/ankara': '/installation-ankara',
+    '/solar': '/systeme',
+    '/solar-energy': '/systeme',
+    '/solarenergie': '/systeme',
+    '/waermepumpe': '/systeme',
+    '/heat-pump': '/systeme',
+    '/klimaanlage': '/systeme',
+    '/batterie': '/systeme',
+    '/battery': '/systeme',
+    '/benefits': '/vorteile',
+    '/advantages': '/vorteile',
+    '/calculator': '/rechner',
+    '/savings': '/rechner',
+    '/about': '/ueber-uns',
+    '/about-us': '/ueber-uns',
+    '/hakkimizda': '/ueber-uns',
+    '/contact': '/team',
+    '/kontakt': '/team',
+    '/iletisim': '/team',
+    '/privacy': '/gizlilik',
+    '/datenschutz': '/gizlilik',
+    '/cookies': '/cerez-politikasi',
+    '/terms': '/sartlar',
+    '/agb': '/sartlar',
+  };
+
+  // Handle 301 redirects
+  app.use((req, res, next) => {
+    const path = req.path.toLowerCase();
+    
+    // Remove trailing slash (except for root)
+    if (path.length > 1 && path.endsWith('/')) {
+      return res.redirect(301, path.slice(0, -1));
+    }
+    
+    // Check for redirect mapping
+    if (redirects[path]) {
+      return res.redirect(301, redirects[path]);
+    }
+    
+    next();
+  });
+
   // Lead submission endpoint
   app.post("/api/leads", async (req, res) => {
     try {
