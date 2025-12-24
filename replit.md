@@ -139,3 +139,10 @@ Alle Komponenten nutzen die zentrale Preisdatei:
 - Beratungsablauf: Erst Fragen stellen, dann ca.-Preise nennen
 - NLP-Techniken: Pacing, Leading, Rapport, Reframing
 - Preise immer mit "ca." und "ohne Gewähr"
+
+### SEO & Prerendering
+- **Prerender.io**: Installiert in `server/index.ts` mit `prerender-node` Middleware
+- **PRERENDER_TOKEN**: Als Secret konfiguriert
+- **Funktion**: Rendert JavaScript-Seiten als HTML für Suchmaschinen-Crawler (Google, Bing, Facebook, etc.)
+- **llms.txt**: AI-Suchmaschinen-Optimierung unter `/llms.txt`
+- **Linkbuilding-Strategie**: Dokumentiert in `/linkbuilding-strategie.md`
