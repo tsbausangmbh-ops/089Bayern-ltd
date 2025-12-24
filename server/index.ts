@@ -3,6 +3,9 @@ import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 
+// @ts-ignore - prerender-node has no type declarations
+import prerender from "prerender-node";
+
 const app = express();
 const httpServer = createServer(app);
 
@@ -21,6 +24,12 @@ app.use(
 );
 
 app.use(express.urlencoded({ extended: false }));
+
+// Prerender.io middleware for SEO - renders JS pages for search engine crawlers
+if (process.env.PRERENDER_TOKEN) {
+  app.use(prerender.set('prerenderToken', process.env.PRERENDER_TOKEN));
+  console.log('[Prerender] Middleware activated for SEO crawlers');
+}
 
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
