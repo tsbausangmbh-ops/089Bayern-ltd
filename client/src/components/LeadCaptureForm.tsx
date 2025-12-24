@@ -21,7 +21,7 @@ interface LeadCaptureFormProps {
   initialLanguage?: Language;
 }
 
-export default function LeadCaptureForm({ isOpen, onClose, calculatorData, initialLanguage = "de" }: LeadCaptureFormProps) {
+export default function LeadCaptureForm({ isOpen, onClose, calculatorData, initialLanguage = "tr" }: LeadCaptureFormProps) {
   const [language, setLanguage] = useState<Language>(initialLanguage);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);

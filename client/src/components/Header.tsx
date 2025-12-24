@@ -23,7 +23,7 @@ interface HeaderProps {
   onCtaClick?: () => void;
 }
 
-const languages: Language[] = ["de", "tr", "en", "ru", "uk", "ar", "hr"];
+const languages: Language[] = ["tr", "de", "en", "ru", "uk", "ar", "hr"];
 
 export default function Header({ onCtaClick }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);

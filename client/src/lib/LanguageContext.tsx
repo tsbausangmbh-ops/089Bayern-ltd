@@ -52,7 +52,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         return saved;
       }
     }
-    return "de";
+    return "tr";
   });
 
   const [detectedCountry, setDetectedCountry] = useState<string | null>(null);
