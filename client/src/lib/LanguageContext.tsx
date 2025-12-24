@@ -13,17 +13,9 @@ const VALID_LANGUAGES: Language[] = ["tr", "de", "en", "ru", "uk", "ar", "hr"];
 
 const countryToLanguage: Record<string, Language> = {
   TR: "tr",
-  HR: "hr",
   DE: "de",
   AT: "de",
   CH: "de",
-  RU: "ru",
-  UA: "uk",
-  SA: "ar",
-  AE: "ar",
-  EG: "ar",
-  GB: "en",
-  US: "en",
 };
 
 async function detectCountryFromIP(): Promise<string | null> {
