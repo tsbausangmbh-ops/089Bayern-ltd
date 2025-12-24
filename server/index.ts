@@ -25,6 +25,11 @@ app.use(
 
 app.use(express.urlencoded({ extended: false }));
 
+// Health check endpoint for deployment monitoring
+app.get("/health", (req, res) => {
+  res.status(200).send("ok");
+});
+
 // Prerender.io middleware for SEO - renders JS pages for search engine crawlers
 if (process.env.PRERENDER_TOKEN) {
   app.use(prerender.set('prerenderToken', process.env.PRERENDER_TOKEN));
