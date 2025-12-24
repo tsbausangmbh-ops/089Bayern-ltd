@@ -30,7 +30,7 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData, initi
     name: "",
     phone: "",
     email: "",
-    location: "",
+    location: "Türkei, Antalya",
     message: "",
     consent: false,
   });
@@ -70,7 +70,7 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData, initi
   const handleClose = () => {
     setIsSubmitted(false);
     setError(null);
-    setFormData({ name: "", phone: "", email: "", location: "", message: "", consent: false });
+    setFormData({ name: "", phone: "", email: "", location: "Türkei, Antalya", message: "", consent: false });
     onClose();
   };
 
