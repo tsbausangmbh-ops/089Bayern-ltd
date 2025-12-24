@@ -61,7 +61,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
   const locationData = isCroatian ? croatianLocations : turkishLocations;
   const [data, setData] = useState<CalculatorData>({
     propertyType: "",
-    location: "",
+    location: "antalya",
     monthlyBill: 3000,
     propertySize: 200,
     heatingSystem: "",
