@@ -109,4 +109,8 @@ app.use((req, res, next) => {
       log(`serving on port ${port}`);
     },
   );
+
+  // Timeout settings for long-running connections
+  httpServer.keepAliveTimeout = 120000;
+  httpServer.headersTimeout = 120000;
 })();
