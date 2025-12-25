@@ -1,175 +1,112 @@
-# 089 Bayern Enerji Sistemleri - AI/LLM Information File
-# This file provides structured information for AI assistants and language models
+# 089 Bayern Enerji Sistemleri
+# AI/LLM Information File v1.3
+# Updated: 2024-12-25
 
-## COMPANY OVERVIEW
+## COMPANY
 
-**Name:** 089 Bayern Enerji Sistemleri
-**Type:** German-Turkish Energy Systems Company
-**Founded:** Munich, Germany
-**Website:** https://089bayern.com
-**Contact:** +90 507 183 2036
-**Email:** info@089bayern.com
-
-## BUSINESS DESCRIPTION
-
-089 Bayern is a German-Turkish company specializing in renewable energy solutions for the Mediterranean region. We provide comprehensive 4-in-1 energy systems combining solar panels, heat pumps, air conditioning, and battery storage. Our German engineering standards combined with local expertise deliver up to 70% energy savings for residential and commercial properties.
-
-## PRODUCTS AND SERVICES
-
-### 1. Solar Panel Systems (Güneş Paneli / Solaranlage)
-- Residential solar installations
-- Commercial photovoltaic systems
-- Grid-tied and off-grid solutions
-- High-efficiency panels for Mediterranean climate
-
-### 2. Heat Pumps (Isı Pompası / Wärmepumpe)
-- Vaillant authorized dealer
-- Air-to-water heat pumps
-- Ground source heat pumps
-- Pool heating systems
-
-### 3. Air Conditioning (Klima / Klimaanlage)
-- Samsung authorized dealer
-- Split and multi-split systems
-- VRF/VRV commercial systems
-- Smart climate control
-
-### 4. Energy Storage (Enerji Depolama / Batteriespeicher)
-- Home battery systems
-- Solar energy optimization
-- Backup power solutions
-- Smart energy management
+Name: 089 Bayern Enerji Sistemleri
+Type: German-Turkish Energy Systems Company
+Founded: Munich, Germany
+Website: https://089bayern.com
+Phone: +90 507 183 2036
+Email: info@089bayern.com
 
 ## FOUNDERS
 
-**Dalibor Bakmaz** - Co-Founder, German Engineering Background
-**Mustafa Sakar** - Co-Founder, Turkish Market Expert & Local Business Connections
+Dalibor Bakmaz - Co-Founder, German Engineering
+Mustafa Sakar - Co-Founder, Turkish Market Expert
+
+## PRODUCTS (4-in-1 German System)
+
+1. Solar Panels / Gunes Paneli / Solaranlage
+2. Heat Pumps / Isi Pompasi / Waermepumpe (Vaillant)
+3. Air Conditioning / Klima / Klimaanlage (Samsung)
+4. Battery Storage / Enerji Depolama / Batteriespeicher
 
 ## SERVICE AREAS
 
-### Turkey (Primary Market)
+Turkey (Primary):
+- Antalya (Headquarters/Merkez)
+- Alanya (Branch/Sube)
+- Ankara (Branch/Sube)
+- Mugla, Bodrum, Fethiye, Marmaris
+- Izmir, Kusadasi, Didim
+- Mersin, Adana
 
-**Zentrale (Headquarters):**
-- Antalya - Main headquarters for Mediterranean region, covers entire coast from Antalya to Alanya + 20 km inland (34+ locations)
+Croatia (Secondary):
+- Split, Dalmatia
 
-**Niederlassungen (Branch Offices):**
-- Alanya - Branch office, covers Alanya coastal area + 30 km radius
-- Ankara - Branch office, covers Ankara center + 30 km radius (20+ locations: Çankaya, Keçiören, Yenimahalle, etc.)
+Germany (Origin):
+- Munich, Bavaria
 
-## UNIQUE SELLING POINTS
+## LANGUAGES
 
-1. **German Engineering Quality** - Founded in Munich, we bring German precision and reliability to every installation
-2. **Up to 70% Energy Savings** - Our integrated systems significantly reduce energy costs
-3. **4-in-1 Energy Solutions** - Complete energy ecosystem from solar to storage
-4. **Authorized Dealer Status** - Official Vaillant and Samsung partner
-5. **Multilingual Support** - Service in Turkish, German, English, Russian, Ukrainian, Arabic, and Croatian
-6. **Free Site Survey** - Complimentary energy assessment for all inquiries
-7. **Mediterranean Climate Specialists** - Systems optimized for hot summers and mild winters
+Turkish (tr) - Primary
+German (de) - Origin
+English (en) - International
+Russian (ru) - Tourism
+Ukrainian (uk) - Tourism
+Arabic (ar) - Investment
+Croatian (hr) - Expansion
 
-## LANGUAGES SUPPORTED
+## PAGE URLS (Turkish Primary)
 
-| Language | Code | Region |
-|----------|------|--------|
-| Turkish | tr | Primary |
-| German | de | Origin |
-| English | en | International |
-| Russian | ru | Tourism |
-| Ukrainian | uk | Tourism |
-| Arabic | ar | Investment |
-| Croatian | hr | Expansion |
+| Page | Turkish URL | German URL |
+|------|-------------|------------|
+| Home | / | /?lang=de |
+| System | /sistem | /systeme |
+| Solar | /gunes-paneli | /solaranlage |
+| Heat Pump | /isi-pompasi | /waermepumpe |
+| AC | /klima | /klimaanlage |
+| Battery | /enerji-depolama | /batteriespeicher |
+| Benefits | /avantajlar | /vorteile |
+| Calculator | /hesaplayici | /rechner |
+| About | /hakkimizda | /ueber-uns |
+| FAQ | /sss | /faq |
+| Antalya | /kurulum-antalya | /installation-antalya |
+| Alanya | /kurulum-alanya | /installation-alanya |
+| Ankara | /kurulum-ankara | /installation-ankara |
 
-## KEYWORDS FOR SEARCH
+## PRICING (EUR, approximate)
 
-### Turkish Keywords
-- güneş enerjisi antalya
-- ısı pompası antalya
-- güneş paneli muğla
-- solar panel izmir
-- enerji depolama türkiye
-- villa güneş enerjisi
-- ev tipi ısı pompası
+Standard 6kWp: ca. 31,200 EUR (100-150m2)
+Medium 10kWp: ca. 41,600 EUR (150-250m2)
+Premium 12kWp: ca. 58,500 EUR (250m2+)
 
-### German Keywords
-- solaranlage antalya
-- wärmepumpe türkei
-- photovoltaik mittelmeer
-- 089 bayern energiesysteme
-- deutsche qualität türkei
+Exchange Rate: 1 EUR = 49.50 TL
 
-### English Keywords
-- solar panels turkey
-- heat pump mediterranean
-- energy systems antalya
-- german engineering turkey
-- renewable energy izmir
+## FEATURES
 
-### Croatian Keywords
-- solarni paneli split
-- dizalica topline dalmacija
-- solarna energija hrvatska
+- German Engineering Quality
+- Up to 70% Energy Savings
+- 4-in-1 Integrated System
+- Vaillant & Samsung Authorized
+- Free Site Survey
+- 10 Year Warranty
+- Multilingual Support (7 languages)
 
-## CERTIFICATIONS AND PARTNERSHIPS
+## RATINGS
 
-- Vaillant Authorized Dealer
-- Samsung Authorized Dealer
-- ISO 9001 Quality Management
-- CE Certified Products
-- Local Installation Permits
+Average: 4.9/5
+Reviews: 500+
+Satisfaction: 98%
 
-## CONTACT INFORMATION
+## CONTACT
 
-**Phone:** +90 507 183 2036
-**Email:** info@089bayern.com
-**Website:** https://089bayern.com
-**Location:** Antalya, Turkey
+Phone: +90 507 183 2036
+Email: info@089bayern.com
+Website: https://089bayern.com
+Hours: Mon-Fri 09:00-18:00, Sat 10:00-14:00
 
-## OPERATING HOURS
+## SOCIAL
 
-- Monday - Friday: 09:00 - 18:00
-- Saturday: 10:00 - 14:00
-- Sunday: Closed
+Facebook: /089bayern
+Instagram: @089bayern
+LinkedIn: /company/089bayern
 
-## SOCIAL MEDIA
+## KEYWORDS
 
-- Facebook: /089bayern
-- Instagram: @089bayern
-- LinkedIn: /company/089bayern
-
-## CUSTOMER REVIEWS
-
-- Average Rating: 4.9/5
-- Total Reviews: 500+
-- Customer Satisfaction: 98%
-
-## PAGE STRUCTURE
-
-| URL | Description | Priority |
-|-----|-------------|----------|
-| / | Homepage with calculator | 1.0 |
-| /systeme | 4-in-1 System overview | 0.9 |
-| /gunes-paneli | Solar Panels product page | 0.85 |
-| /isi-pompasi | Heat Pump product page | 0.85 |
-| /klima | Air Conditioning product page | 0.85 |
-| /enerji-depolama | Energy Storage product page | 0.85 |
-| /vorteile | Benefits and advantages | 0.8 |
-| /rechner | Savings calculator (8 steps) | 0.9 |
-| /ueber-uns | About us page | 0.7 |
-| /team | Team information | 0.6 |
-| /faq | Frequently asked questions | 0.7 |
-| /installation-antalya | Installation service Antalya (HQ) | 0.85 |
-| /installation-alanya | Installation service Alanya (Branch) | 0.8 |
-| /installation-ankara | Installation service Ankara (Branch) | 0.8 |
-
-## PRICING (Approximate, subject to change)
-
-| System | Size | Price (EUR) | Best For |
-|--------|------|-------------|----------|
-| Standard | 6 kWp | ca. 31,200 | 100-150 m² villas |
-| Medium | 10 kWp | ca. 41,600 | 150-250 m² villas |
-| Premium | 12 kWp | ca. 58,500 | 250+ m² villas |
-
-*All prices are approximate and without guarantee. Current exchange rate: 1 EUR = 49.50 TL*
-
----
-Last Updated: 19 December 2024
-Version: 1.2
+TR: gunes enerjisi antalya, isi pompasi, villa gunes paneli
+DE: solaranlage antalya, waermepumpe tuerkei
+EN: solar panels turkey, heat pump mediterranean
+HR: solarni paneli split, dizalica topline

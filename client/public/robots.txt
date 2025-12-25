@@ -1,33 +1,39 @@
 # 089 Bayern Enerji Sistemleri - robots.txt
 # German-Turkish Energy Systems Company
-# Solar Panels | Heat Pumps | Air Conditioning | Battery Storage
-# Updated: 2024-12-15
+# Updated: 2024-12-25
 
-# Default rules for all crawlers
 User-agent: *
 Allow: /
 Crawl-delay: 1
 
-# Sitemap location
+# Sitemaps
 Sitemap: https://089bayern.com/sitemap.xml
+Sitemap: https://089bayern.com/ai.sitemap.xml
 
 # Google
 User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
 Allow: /
 
 # Bing
 User-agent: Bingbot
 Allow: /
 
-# Yandex (Important for Russian/Ukrainian users)
+# Yandex (Russian/Ukrainian users)
 User-agent: Yandex
+Allow: /
+
+# Baidu (Chinese market)
+User-agent: Baiduspider
 Allow: /
 
 # DuckDuckGo
 User-agent: DuckDuckBot
 Allow: /
 
-# AI Crawlers - Allowed for training and indexing
+# AI Crawlers
 User-agent: GPTBot
 Allow: /
 
@@ -49,88 +55,25 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# ============================================
-# STRUCTURED DATA - For AI/Bot Extraction
-# ============================================
+User-agent: Bytespider
+Allow: /
 
-# COMPANY INFO
-# Name: 089 Bayern Enerji Sistemleri
-# Type: LocalBusiness, EnergyCompany, SolarInstaller, HVACBusiness
-# Founded: Munich, Germany
-# Contact: +90 507 183 2036
-# Email: info@089bayern.com
-# Website: https://089bayern.com
-# Service Areas: Germany (DE), Turkey (TR), Croatia (HR)
+User-agent: OAI-SearchBot
+Allow: /
 
-# HEADQUARTERS
-# Munich (München), Bavaria, Germany
-# German Engineering & Quality Standards
+User-agent: Meta-ExternalAgent
+Allow: /
 
-# PRIMARY SERVICE AREA - TURKEY
-# Antalya (HQ Turkey), Alanya, Manavgat, Side, Belek, Kemer
-# Muğla, Bodrum, Fethiye, Marmaris, Dalaman
-# İzmir, Kuşadası, Çeşme
-# Aydın, Didim
-# Mersin, Adana
-# Mediterranean & Aegean Coast
+# LLM Information
+# llms.txt: https://089bayern.com/llms.txt
 
-# SECONDARY SERVICE AREA - CROATIA
-# Split, Dalmatia, Adriatic Coast
+# COMPANY: 089 Bayern Enerji Sistemleri
+# TYPE: LocalBusiness, EnergyCompany, SolarInstaller
+# PHONE: +90 507 183 2036
+# EMAIL: info@089bayern.com
+# WEB: https://089bayern.com
+# AREAS: Turkey (TR), Germany (DE), Croatia (HR)
 
-# PRODUCTS & SERVICES (4-in-1 System)
-# 1. Solar Panels / Güneş Paneli / Solaranlage / Solarni paneli
-# 2. Heat Pumps / Isı Pompası / Wärmepumpe / Dizalica topline
-# 3. Air Conditioning / Klima / Klimaanlage / Klimatizacija
-# 4. Battery Storage / Enerji Depolama / Batteriespeicher / Pohrana energije
-
-# AUTHORIZED DEALER
-# Vaillant (Official Partner)
-# Samsung (Official Partner)
-
-# KEY FEATURES
-# German Engineering / Alman Mühendisliği / Deutsche Qualität
-# Up to 70% Energy Savings / %70'e Varan Enerji Tasarrufu
-# 4-in-1 Integrated Energy System
-# Free Site Survey / Ücretsiz Keşif
-# Mediterranean Climate Specialists
-# Professional Installation
-
-# KEYWORDS - TURKISH
-# güneş enerjisi antalya, güneş paneli antalya
-# ısı pompası antalya, ısı pompası türkiye
-# klima sistemi antalya, inverter klima
-# enerji depolama türkiye, batarya sistemi
-# vaillant türkiye, samsung klima türkiye
-# villa güneş enerjisi, ev tipi ısı pompası
-# alman kalitesi türkiye
-
-# KEYWORDS - GERMAN
-# solaranlage antalya, solaranlage türkei
-# wärmepumpe türkei, wärmepumpe mittelmeer
-# photovoltaik antalya, pv anlage türkei
-# 089 bayern energiesysteme
-# deutsche qualität türkei
-# energiesysteme akdeniz
-
-# KEYWORDS - ENGLISH
-# solar panels antalya, solar panels turkey
-# heat pump turkey, heat pump mediterranean
-# energy systems antalya, renewable energy turkey
-# german engineering turkey
-# solar installation mugla, izmir, mersin
-
-# KEYWORDS - CROATIAN
-# solarni paneli split, solarni paneli hrvatska
-# dizalica topline dalmacija, toplinska pumpa
-# solarna energija jadran
-# fotovoltaik hrvatska
-
-# KEYWORDS - RUSSIAN
-# солнечные панели анталья
-# тепловой насос турция
-# энергетические системы средиземноморье
-# немецкое качество турция
-
-# LANGUAGES SUPPORTED
-# Turkish (tr), German (de), English (en)
-# Russian (ru), Ukrainian (uk), Arabic (ar), Croatian (hr)
+# PRODUCTS: Solar Panels, Heat Pumps, Air Conditioning, Battery Storage
+# BRANDS: Vaillant, Samsung
+# LANGUAGES: tr, de, en, ru, uk, ar, hr
