@@ -5,10 +5,10 @@
   <!-- Homepage - All Languages -->
   <url>
     <loc>https://089bayern.com/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/?lang=de"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/?lang=ru"/>
@@ -18,235 +18,250 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://089bayern.com/"/>
   </url>
 
-  <!-- Systeme / 4-in-1 System Page -->
+  <!-- Sistem / System Page (TR main) -->
   <url>
-    <loc>https://089bayern.com/systeme</loc>
-    <lastmod>2024-12-19</lastmod>
+    <loc>https://089bayern.com/sistem</loc>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/systeme?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/systeme?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/systeme?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/systeme?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/systeme?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/systeme?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/systeme?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/sistem"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/systeme"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/system"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/sistema"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/systema"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/nizam"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/sustav"/>
   </url>
 
-  <!-- Product Page: Solar Panels / Güneş Paneli -->
+  <!-- Güneş Paneli / Solar Panel (TR main) -->
   <url>
     <loc>https://089bayern.com/gunes-paneli</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/gunes-paneli?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/gunes-paneli?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/gunes-paneli?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/gunes-paneli?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/gunes-paneli?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/gunes-paneli?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/gunes-paneli?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/gunes-paneli"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/solaranlage"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/solar-panel"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/solnechnaya-panel"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/sonyachna-panel"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/lawha-shamsiya"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/solarni-panel"/>
   </url>
 
-  <!-- Product Page: Heat Pump / Isı Pompası -->
+  <!-- Isı Pompası / Heat Pump (TR main) -->
   <url>
     <loc>https://089bayern.com/isi-pompasi</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/isi-pompasi?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/isi-pompasi?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/isi-pompasi?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/isi-pompasi?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/isi-pompasi?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/isi-pompasi?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/isi-pompasi?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/isi-pompasi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/waermepumpe"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/heat-pump"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/teplovoy-nasos"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/teplovyy-nasos"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/midkhah-harara"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/toplinska-pumpa"/>
   </url>
 
-  <!-- Product Page: Air Conditioning / Klima -->
+  <!-- Klima / Air Conditioning (TR main) -->
   <url>
     <loc>https://089bayern.com/klima</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/klima?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/klima?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/klima?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/klima?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/klima?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/klima?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/klima?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/klima"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/klimaanlage"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/air-conditioning"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/konditsioner"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/kondytsioner"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/takyif"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/klima-uredaj"/>
   </url>
 
-  <!-- Product Page: Energy Storage / Enerji Depolama -->
+  <!-- Enerji Depolama / Battery Storage (TR main) -->
   <url>
     <loc>https://089bayern.com/enerji-depolama</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/enerji-depolama?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/enerji-depolama?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/enerji-depolama?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/enerji-depolama?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/enerji-depolama?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/enerji-depolama?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/enerji-depolama?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/enerji-depolama"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/batteriespeicher"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/battery-storage"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/akkumulyator"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/akumulyator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/takhzin-taqa"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/pohrana-energije"/>
   </url>
 
-  <!-- Vorteile / Benefits Page -->
+  <!-- Avantajlar / Benefits (TR main) -->
   <url>
-    <loc>https://089bayern.com/vorteile</loc>
-    <lastmod>2024-12-19</lastmod>
+    <loc>https://089bayern.com/avantajlar</loc>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/vorteile?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/vorteile?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/vorteile?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/vorteile?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/vorteile?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/vorteile?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/vorteile?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/avantajlar"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/vorteile"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/benefits"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/preimushchestva"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/perevagy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/mazaya"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/prednosti"/>
   </url>
 
-  <!-- Rechner / Calculator Page -->
+  <!-- Hesaplayıcı / Calculator (TR main) -->
   <url>
-    <loc>https://089bayern.com/rechner</loc>
-    <lastmod>2024-12-19</lastmod>
+    <loc>https://089bayern.com/hesaplayici</loc>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/rechner?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/rechner?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/rechner?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/rechner?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/rechner?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/rechner?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/rechner?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/hesaplayici"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/rechner"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/calculator"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/kalkulyator"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/kalkulyator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/hasba"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/kalkulator"/>
   </url>
 
-  <!-- Über Uns / About Page -->
+  <!-- Hakkımızda / About (TR main) -->
   <url>
-    <loc>https://089bayern.com/ueber-uns</loc>
-    <lastmod>2024-12-19</lastmod>
+    <loc>https://089bayern.com/hakkimizda</loc>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/ueber-uns?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/ueber-uns?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/ueber-uns?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/ueber-uns?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/ueber-uns?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/ueber-uns?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/ueber-uns?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/hakkimizda"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/ueber-uns"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/o-nas"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/pro-nas"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/hawlana"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/o-nama"/>
   </url>
 
   <!-- Team Page -->
   <url>
     <loc>https://089bayern.com/team</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/team?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/team?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/team?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/team?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/team?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/team?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/team?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/team"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/team"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/team"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/team"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/team"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/team"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/team"/>
   </url>
 
-  <!-- FAQ Page -->
+  <!-- SSS / FAQ (TR main) -->
   <url>
-    <loc>https://089bayern.com/faq</loc>
-    <lastmod>2024-12-19</lastmod>
+    <loc>https://089bayern.com/sss</loc>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/faq?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/faq?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/faq?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/faq?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/faq?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/faq?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/faq?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/sss"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/voprosy"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/pytannya"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/asila"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/pitanja"/>
   </url>
 
-  <!-- Installation Antalya (Headquarters) -->
+  <!-- Kurulum Antalya / Installation Antalya - Merkez (TR main) -->
   <url>
-    <loc>https://089bayern.com/installation-antalya</loc>
-    <lastmod>2024-12-19</lastmod>
+    <loc>https://089bayern.com/kurulum-antalya</loc>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/installation-antalya?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/installation-antalya?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/installation-antalya?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/installation-antalya?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/installation-antalya?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/installation-antalya?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/installation-antalya?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/kurulum-antalya"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/installation-antalya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/installation-antalya"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/ustanovka-antalya"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/vstanovlennya-antalya"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/tarkib-antalya"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/instalacija-antalya"/>
   </url>
 
-  <!-- Installation Alanya (Branch Office) -->
+  <!-- Kurulum Alanya / Installation Alanya - Şube (TR main) -->
   <url>
-    <loc>https://089bayern.com/installation-alanya</loc>
-    <lastmod>2024-12-19</lastmod>
+    <loc>https://089bayern.com/kurulum-alanya</loc>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/installation-alanya?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/installation-alanya?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/installation-alanya?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/installation-alanya?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/installation-alanya?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/installation-alanya?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/installation-alanya?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/kurulum-alanya"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/installation-alanya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/installation-alanya"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/ustanovka-alanya"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/vstanovlennya-alanya"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/tarkib-alanya"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/instalacija-alanya"/>
   </url>
 
-  <!-- Installation Ankara (Branch Office) -->
+  <!-- Kurulum Ankara / Installation Ankara - Şube (TR main) -->
   <url>
-    <loc>https://089bayern.com/installation-ankara</loc>
-    <lastmod>2024-12-19</lastmod>
+    <loc>https://089bayern.com/kurulum-ankara</loc>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/installation-ankara?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/installation-ankara?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/installation-ankara?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/installation-ankara?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/installation-ankara?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/installation-ankara?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/installation-ankara?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/kurulum-ankara"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/installation-ankara"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/installation-ankara"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/ustanovka-ankara"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/vstanovlennya-ankara"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/tarkib-ankara"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/instalacija-ankara"/>
   </url>
 
-  <!-- Legal Pages (Lower Priority, No Language Variants) -->
+  <!-- Bölgeler / Locations (TR main) -->
+  <url>
+    <loc>https://089bayern.com/bolgeler</loc>
+    <lastmod>2024-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/bolgeler"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/standorte"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/locations"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://089bayern.com/lokacii"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/lokatsii"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/mawaqie"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/lokacije"/>
+  </url>
+
+  <!-- Legal Pages (No Language Variants - Turkish only) -->
   <url>
     <loc>https://089bayern.com/kvkk</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://089bayern.com/gizlilik</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://089bayern.com/cerez-politikasi</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://089bayern.com/sartlar</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://089bayern.com/mesafeli-satis</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://089bayern.com/on-bilgilendirme</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
