@@ -35,27 +35,31 @@ if (process.env.PRERENDER_TOKEN) {
   prerender.set('prerenderToken', process.env.PRERENDER_TOKEN);
   prerender.set('protocol', 'https');
   
-  // Crawler whitelist
-  prerender.crawlerUserAgents.push('googlebot');
-  prerender.crawlerUserAgents.push('bingbot');
-  prerender.crawlerUserAgents.push('yandex');
-  prerender.crawlerUserAgents.push('baiduspider');
-  prerender.crawlerUserAgents.push('facebookexternalhit');
-  prerender.crawlerUserAgents.push('twitterbot');
-  prerender.crawlerUserAgents.push('linkedinbot');
-  prerender.crawlerUserAgents.push('whatsapp');
-  prerender.crawlerUserAgents.push('slackbot');
-  prerender.crawlerUserAgents.push('telegrambot');
-  prerender.crawlerUserAgents.push('applebot');
-  prerender.crawlerUserAgents.push('duckduckbot');
-  prerender.crawlerUserAgents.push('GPTBot');
-  prerender.crawlerUserAgents.push('ChatGPT-User');
-  prerender.crawlerUserAgents.push('Claude-Web');
-  prerender.crawlerUserAgents.push('PerplexityBot');
-  prerender.crawlerUserAgents.push('Bytespider');
+  // Reset default crawlers and set explicit list (avoid AppleWebKit false positives)
+  prerender.crawlerUserAgents = [
+    'googlebot',
+    'Google-InspectionTool',
+    'bingbot',
+    'yandex',
+    'baiduspider',
+    'facebookexternalhit',
+    'twitterbot',
+    'linkedinbot',
+    'whatsapp',
+    'slackbot',
+    'telegrambot',
+    'Applebot',
+    'duckduckbot',
+    'GPTBot',
+    'ChatGPT-User',
+    'Claude-Web',
+    'PerplexityBot',
+    'Bytespider',
+    'OAI-SearchBot'
+  ];
   
   app.use(prerender);
-  console.log('[Prerender] SSR activated - Google, Bing, Yandex, Social, AI crawlers');
+  console.log('[Prerender] SSR activated for search/social/AI crawlers');
 }
 
 export function log(message: string, source = "express") {
