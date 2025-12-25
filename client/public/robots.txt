@@ -7,6 +7,7 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemaps
+Sitemap: https://089bayern.com/sitemap-index.xml
 Sitemap: https://089bayern.com/sitemap.xml
 Sitemap: https://089bayern.com/ai.sitemap.xml
 
