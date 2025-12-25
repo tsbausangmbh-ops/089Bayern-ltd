@@ -1,5 +1,6 @@
 import { ArrowRight, Sun, Thermometer, Wind, Battery, MapPin, Calculator, HelpCircle, Award, Home } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
+import { getLocalizedUrl, getOfficeBadge } from "@/lib/urlTranslations";
 
 type PageType = "home" | "systeme" | "vorteile" | "rechner" | "faq" | "ueber-uns" | "gunes-paneli" | "isi-pompasi" | "klima" | "enerji-depolama" | "installation-antalya" | "installation-alanya" | "installation-ankara";
 
@@ -72,12 +73,34 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
 
   const t = translations[language] || translations.en;
 
+  // Hilfsfunktion für dynamische URLs basierend auf der ID
+  const getHref = (id: string): string => {
+    const urlMap: Record<string, keyof import("@/lib/urlTranslations").UrlPaths> = {
+      "gunes-paneli": "solarPanel",
+      "isi-pompasi": "heatPump",
+      "klima": "airConditioning",
+      "enerji-depolama": "batteryStorage",
+      "installation-antalya": "installationAntalya",
+      "installation-alanya": "installationAlanya",
+      "installation-ankara": "installationAnkara",
+      "systeme": "system",
+      "vorteile": "benefits",
+      "rechner": "calculator",
+      "faq": "faq",
+    };
+    const key = urlMap[id];
+    if (key) {
+      return getLocalizedUrl(key, language);
+    }
+    return id === "home" ? "/" : `/${id}`;
+  };
+
   // SEO-optimierte Keywords für bessere Auffindbarkeit
   const allLinks = {
     solutions: [
       { 
         id: "gunes-paneli", 
-        href: "/gunes-paneli", 
+        href: getHref("gunes-paneli"), 
         icon: Sun,
         label: { 
           de: "Solaranlage kaufen Türkei", 
@@ -100,7 +123,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
       },
       { 
         id: "isi-pompasi", 
-        href: "/isi-pompasi", 
+        href: getHref("isi-pompasi"), 
         icon: Thermometer,
         label: { 
           de: "Vaillant Wärmepumpe Türkei", 
@@ -123,7 +146,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
       },
       { 
         id: "klima", 
-        href: "/klima", 
+        href: getHref("klima"), 
         icon: Wind,
         label: { 
           de: "Samsung Klimaanlage Villa", 
@@ -146,7 +169,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
       },
       { 
         id: "enerji-depolama", 
-        href: "/enerji-depolama", 
+        href: getHref("enerji-depolama"), 
         icon: Battery,
         label: { 
           de: "Samsung Batteriespeicher kaufen", 
@@ -171,7 +194,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
     installations: [
       { 
         id: "installation-antalya", 
-        href: "/kurulum-antalya", 
+        href: getHref("installation-antalya"), 
         icon: MapPin,
         label: { 
           de: "Solaranlage Installation Antalya", 
@@ -194,7 +217,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
       },
       { 
         id: "installation-alanya", 
-        href: "/kurulum-alanya", 
+        href: getHref("installation-alanya"), 
         icon: MapPin,
         label: { 
           de: "Photovoltaik Installation Alanya", 
@@ -217,7 +240,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
       },
       { 
         id: "installation-ankara", 
-        href: "/kurulum-ankara", 
+        href: getHref("installation-ankara"), 
         icon: MapPin,
         label: { 
           de: "Wärmepumpe Installation Ankara", 
@@ -265,7 +288,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
       },
       { 
         id: "systeme", 
-        href: "/sistem", 
+        href: getHref("systeme"), 
         icon: Award,
         label: { 
           de: "4-in-1 Energiesystem komplett", 
@@ -288,7 +311,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
       },
       { 
         id: "vorteile", 
-        href: "/avantajlar", 
+        href: getHref("vorteile"), 
         icon: Award,
         label: { 
           de: "Stromkosten sparen Türkei", 
@@ -311,7 +334,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
       },
       { 
         id: "rechner", 
-        href: "/hesaplayici", 
+        href: getHref("rechner"), 
         icon: Calculator,
         label: { 
           de: "Solar Ersparnis Rechner", 
@@ -334,7 +357,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
       },
       { 
         id: "faq", 
-        href: "/sss", 
+        href: getHref("faq"), 
         icon: HelpCircle,
         label: { 
           de: "Solaranlage Türkei FAQ", 

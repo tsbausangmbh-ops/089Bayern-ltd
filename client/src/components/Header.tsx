@@ -18,6 +18,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
 import { Language, languageNames } from "@/lib/translations";
 import { useLocation } from "wouter";
+import { getLocalizedUrl, getOfficeBadge } from "@/lib/urlTranslations";
 
 interface HeaderProps {
   onCtaClick?: () => void;
@@ -66,26 +67,26 @@ export default function Header({ onCtaClick }: HeaderProps) {
   const locationsLabel = language === "de" ? "Installation" : language === "en" ? "Installation" : language === "ru" ? "Установка" : language === "uk" ? "Встановлення" : language === "ar" ? "التركيب" : language === "hr" ? "Instalacija" : "Kurulum";
 
   const locationItems = [
-    { label: "Antalya", href: "/kurulum-antalya", badge: "Merkez" },
-    { label: "Alanya", href: "/kurulum-alanya", badge: "Şube" },
-    { label: "Ankara", href: "/kurulum-ankara", badge: "Şube" },
+    { label: "Antalya", href: getLocalizedUrl("installationAntalya", language), badge: getOfficeBadge("headquarters", language) },
+    { label: "Alanya", href: getLocalizedUrl("installationAlanya", language), badge: getOfficeBadge("branch", language) },
+    { label: "Ankara", href: getLocalizedUrl("installationAnkara", language), badge: getOfficeBadge("branch", language) },
   ];
 
   const solutionsLabel = language === "de" ? "Lösungen" : language === "en" ? "Solutions" : language === "ru" ? "Решения" : language === "uk" ? "Рішення" : language === "ar" ? "حلول" : language === "hr" ? "Rješenja" : "Çözümler";
   
   const solutionItems = [
-    { label: language === "de" ? "Solaranlage" : language === "en" ? "Solar Panel" : language === "tr" ? "Güneş Paneli" : "Solar", href: "/gunes-paneli" },
-    { label: language === "de" ? "Wärmepumpe" : language === "en" ? "Heat Pump" : language === "tr" ? "Isı Pompası" : "Wärmepumpe", href: "/isi-pompasi" },
-    { label: language === "de" ? "Klimaanlage" : language === "en" ? "Air Conditioning" : language === "tr" ? "Klima" : "Klima", href: "/klima" },
-    { label: language === "de" ? "Batteriespeicher" : language === "en" ? "Battery Storage" : language === "tr" ? "Enerji Depolama" : "Speicher", href: "/enerji-depolama" },
+    { label: language === "de" ? "Solaranlage" : language === "en" ? "Solar Panel" : language === "tr" ? "Güneş Paneli" : "Solar", href: getLocalizedUrl("solarPanel", language) },
+    { label: language === "de" ? "Wärmepumpe" : language === "en" ? "Heat Pump" : language === "tr" ? "Isı Pompası" : "Wärmepumpe", href: getLocalizedUrl("heatPump", language) },
+    { label: language === "de" ? "Klimaanlage" : language === "en" ? "Air Conditioning" : language === "tr" ? "Klima" : "Klima", href: getLocalizedUrl("airConditioning", language) },
+    { label: language === "de" ? "Batteriespeicher" : language === "en" ? "Battery Storage" : language === "tr" ? "Enerji Depolama" : "Speicher", href: getLocalizedUrl("batteryStorage", language) },
   ];
 
   const navItems = [
-    { label: aboutLabel, id: "about", href: "/hakkimizda", isHashLink: false },
-    { label: t.header.system, id: "system", href: "/sistem", isHashLink: false },
-    { label: t.header.benefits, id: "benefits", href: "/avantajlar", isHashLink: false },
-    { label: t.header.calculator, id: "calculator", href: "/hesaplayici", isHashLink: false },
-    { label: t.header.faq, id: "faq", href: "/sss", isHashLink: false },
+    { label: aboutLabel, id: "about", href: getLocalizedUrl("about", language), isHashLink: false },
+    { label: t.header.system, id: "system", href: getLocalizedUrl("system", language), isHashLink: false },
+    { label: t.header.benefits, id: "benefits", href: getLocalizedUrl("benefits", language), isHashLink: false },
+    { label: t.header.calculator, id: "calculator", href: getLocalizedUrl("calculator", language), isHashLink: false },
+    { label: t.header.faq, id: "faq", href: getLocalizedUrl("faq", language), isHashLink: false },
   ];
 
   return (

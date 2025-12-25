@@ -1,4 +1,4 @@
-import { Switch, Route, Redirect } from "wouter";
+import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -26,6 +26,7 @@ import InstallationAntalya from "@/pages/installation-antalya";
 import InstallationAnkara from "@/pages/installation-ankara";
 import InstallationAlanya from "@/pages/installation-alanya";
 import CookieBanner from "@/components/CookieBanner";
+import { urlPaths } from "@/lib/urlTranslations";
 
 function Router() {
   return (
@@ -37,31 +38,72 @@ function Router() {
       <Route path="/sartlar" component={Sartlar} />
       <Route path="/mesafeli-satis" component={MesafeliSatis} />
       <Route path="/on-bilgilendirme" component={OnBilgilendirme} />
-      {/* Türkische URLs (Haupt) */}
-      <Route path="/hakkimizda" component={UeberUns} />
-      <Route path="/sistem" component={Systeme} />
-      <Route path="/avantajlar" component={Vorteile} />
-      <Route path="/hesaplayici" component={Rechner} />
-      <Route path="/sss" component={FAQ} />
-      <Route path="/bolgeler" component={Standorte} />
-      <Route path="/kurulum-antalya" component={InstallationAntalya} />
-      <Route path="/kurulum-ankara" component={InstallationAnkara} />
-      <Route path="/kurulum-alanya" component={InstallationAlanya} />
-      {/* Deutsche URLs (Weiterleitungen) */}
-      <Route path="/ueber-uns">{() => <Redirect to="/hakkimizda" />}</Route>
-      <Route path="/systeme">{() => <Redirect to="/sistem" />}</Route>
-      <Route path="/vorteile">{() => <Redirect to="/avantajlar" />}</Route>
-      <Route path="/rechner">{() => <Redirect to="/hesaplayici" />}</Route>
-      <Route path="/faq">{() => <Redirect to="/sss" />}</Route>
-      <Route path="/standorte">{() => <Redirect to="/bolgeler" />}</Route>
-      <Route path="/installation-antalya">{() => <Redirect to="/kurulum-antalya" />}</Route>
-      <Route path="/installation-ankara">{() => <Redirect to="/kurulum-ankara" />}</Route>
-      <Route path="/installation-alanya">{() => <Redirect to="/kurulum-alanya" />}</Route>
-      {/* Komponenten-Seiten (bereits türkisch) */}
-      <Route path="/gunes-paneli" component={GunesPaneli} />
-      <Route path="/isi-pompasi" component={IsiPompasi} />
-      <Route path="/klima" component={Klima} />
-      <Route path="/enerji-depolama" component={EnerjiDepolama} />
+      
+      {/* About pages - all languages */}
+      {Object.values(urlPaths).map(paths => paths.about).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+        <Route key={path} path={path} component={UeberUns} />
+      ))}
+      
+      {/* System pages - all languages */}
+      {Object.values(urlPaths).map(paths => paths.system).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+        <Route key={path} path={path} component={Systeme} />
+      ))}
+      
+      {/* Benefits pages - all languages */}
+      {Object.values(urlPaths).map(paths => paths.benefits).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+        <Route key={path} path={path} component={Vorteile} />
+      ))}
+      
+      {/* Calculator pages - all languages */}
+      {Object.values(urlPaths).map(paths => paths.calculator).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+        <Route key={path} path={path} component={Rechner} />
+      ))}
+      
+      {/* FAQ pages - all languages */}
+      {Object.values(urlPaths).map(paths => paths.faq).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+        <Route key={path} path={path} component={FAQ} />
+      ))}
+      
+      {/* Locations pages - all languages */}
+      {Object.values(urlPaths).map(paths => paths.locations).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+        <Route key={path} path={path} component={Standorte} />
+      ))}
+      
+      {/* Installation Antalya - all languages */}
+      {Object.values(urlPaths).map(paths => paths.installationAntalya).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+        <Route key={path} path={path} component={InstallationAntalya} />
+      ))}
+      
+      {/* Installation Ankara - all languages */}
+      {Object.values(urlPaths).map(paths => paths.installationAnkara).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+        <Route key={path} path={path} component={InstallationAnkara} />
+      ))}
+      
+      {/* Installation Alanya - all languages */}
+      {Object.values(urlPaths).map(paths => paths.installationAlanya).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+        <Route key={path} path={path} component={InstallationAlanya} />
+      ))}
+      
+      {/* Solar Panel pages - all languages */}
+      {Object.values(urlPaths).map(paths => paths.solarPanel).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+        <Route key={path} path={path} component={GunesPaneli} />
+      ))}
+      
+      {/* Heat Pump pages - all languages */}
+      {Object.values(urlPaths).map(paths => paths.heatPump).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+        <Route key={path} path={path} component={IsiPompasi} />
+      ))}
+      
+      {/* Air Conditioning pages - all languages */}
+      {Object.values(urlPaths).map(paths => paths.airConditioning).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+        <Route key={path} path={path} component={Klima} />
+      ))}
+      
+      {/* Battery Storage pages - all languages */}
+      {Object.values(urlPaths).map(paths => paths.batteryStorage).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+        <Route key={path} path={path} component={EnerjiDepolama} />
+      ))}
+      
       <Route component={NotFound} />
     </Switch>
   );

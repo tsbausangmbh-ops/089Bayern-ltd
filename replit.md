@@ -67,29 +67,33 @@ These are bundled but not actively implemented in the current codebase.
 - Inter font family for Turkish character support
 - Mediterranean-inspired color palette with German trust aesthetics
 
-### Pages (Turkish URLs - Primary)
-- Home (/) - Landing page with hero, features, team preview, calculator
-- Sistem (/sistem) - 4-in-1 System details (redirect from /systeme)
-- Avantajlar (/avantajlar) - Benefits and advantages (redirect from /vorteile)
-- Hesaplayici (/hesaplayici) - Savings calculator with multi-step form (redirect from /rechner)
-- Hakkimizda (/hakkimizda) - About page (redirect from /ueber-uns)
-- SSS (/sss) - FAQ page (redirect from /faq)
-- Bolgeler (/bolgeler) - Locations overview (redirect from /standorte)
-- Legal pages: KVKK, Gizlilik, Cerez-Politikasi, Sartlar, Mesafeli-Satis, On-Bilgilendirme
-- Component pages: /gunes-paneli, /isi-pompasi, /klima, /enerji-depolama
+### Pages - Dynamic Language-Based URLs
+URLs change based on selected language. All 7 languages have their own URL paths defined in `client/src/lib/urlTranslations.ts`.
 
-### Installation/Regional Pages - Organizational Hierarchy (Turkish URLs)
+**Example URL patterns by language:**
+| Page | TR | DE | EN | HR |
+|------|----|----|----|----|
+| System | /sistem | /systeme | /system | /sustav |
+| Benefits | /avantajlar | /vorteile | /benefits | /prednosti |
+| Calculator | /hesaplayici | /rechner | /calculator | /kalkulator |
+| About | /hakkimizda | /ueber-uns | /about | /o-nama |
+| FAQ | /sss | /faq | /faq | /pitanja |
+| Installation Antalya | /kurulum-antalya | /installation-antalya | /installation-antalya | /instalacija-antalya |
+
+Legal pages remain language-neutral: KVKK, Gizlilik, Cerez-Politikasi, Sartlar, Mesafeli-Satis, On-Bilgilendirme
+
+### Installation/Regional Pages - Organizational Hierarchy
 
 **Merkez (Headquarters):**
-- Kurulum Antalya (/kurulum-antalya) - Main headquarters for Mediterranean region. Covers entire coast from Antalya to Alanya + 20 km inland radius (34+ locations). Badge: "Merkez" (redirect from /installation-antalya)
+- Kurulum Antalya - Main headquarters for Mediterranean region. Covers entire coast from Antalya to Alanya + 20 km inland radius (34+ locations). Badge: language-dependent (Merkez/Zentrale/Headquarters/Sjedište)
 
 **Şubeler (Branch Offices):**
-- Kurulum Alanya (/kurulum-alanya) - Branch office backed by Antalya headquarters. Covers Alanya coastal area + 30 km radius. Badge: "Şube" (redirect from /installation-alanya)
-- Kurulum Ankara (/kurulum-ankara) - Branch office backed by Antalya headquarters. Covers Ankara center + 30 km radius (20+ locations). Badge: "Şube" (redirect from /installation-ankara)
+- Kurulum Alanya - Branch office backed by Antalya headquarters. Covers Alanya coastal area + 30 km radius. Badge: language-dependent (Şube/Niederlassung/Branch/Podružnica)
+- Kurulum Ankara - Branch office backed by Antalya headquarters. Covers Ankara center + 30 km radius (20+ locations). Badge: language-dependent
 
 **Office Info Section Structure:**
 Each regional page includes an "Office Info Section" that:
-- Displays the location type badge (Merkez/Şube)
+- Displays the location type badge (language-dependent: Merkez/Zentrale/Headquarters/etc.)
 - Shows the office title and subtitle
 - Explains the organizational relationship to headquarters
 - Available in all 7 languages

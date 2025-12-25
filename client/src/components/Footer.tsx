@@ -2,6 +2,7 @@ import { Phone, Mail, MapPin, Shield, Award } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
+import { getLocalizedUrl, getOfficeBadge } from "@/lib/urlTranslations";
 import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
 import logoImage from "@assets/Logo_1765790073992.png";
 
@@ -19,34 +20,34 @@ export default function Footer() {
   ];
 
   const products = [
-    { name: t.footer.vaillantHeatPump, desc: t.footer.vaillantDesc, href: "/sistem" },
-    { name: t.footer.solarPanel, desc: t.footer.solarDesc, href: "/sistem" },
-    { name: t.footer.samsungClimate, desc: t.footer.samsungDesc, href: "/sistem" },
-    { name: t.footer.bydBattery, desc: t.footer.bydDesc, href: "/sistem" },
+    { name: t.footer.vaillantHeatPump, desc: t.footer.vaillantDesc, href: getLocalizedUrl("system", language) },
+    { name: t.footer.solarPanel, desc: t.footer.solarDesc, href: getLocalizedUrl("system", language) },
+    { name: t.footer.samsungClimate, desc: t.footer.samsungDesc, href: getLocalizedUrl("system", language) },
+    { name: t.footer.bydBattery, desc: t.footer.bydDesc, href: getLocalizedUrl("system", language) },
   ];
 
   const mainNavLinks = [
     { label: t.footer.home, href: "/" },
-    { label: t.header.system, href: "/sistem" },
-    { label: t.header.benefits, href: "/avantajlar" },
-    { label: t.header.calculator, href: "/hesaplayici" },
-    { label: t.header.team, href: "/hakkimizda" },
-    { label: t.header.faq, href: "/sss" },
+    { label: t.header.system, href: getLocalizedUrl("system", language) },
+    { label: t.header.benefits, href: getLocalizedUrl("benefits", language) },
+    { label: t.header.calculator, href: getLocalizedUrl("calculator", language) },
+    { label: t.header.team, href: getLocalizedUrl("about", language) },
+    { label: t.header.faq, href: getLocalizedUrl("faq", language) },
   ];
 
   const installationLabel = language === "de" ? "Installation" : language === "en" ? "Installation" : language === "ru" ? "Установка" : language === "uk" ? "Встановлення" : language === "ar" ? "التركيب" : language === "hr" ? "Instalacija" : "Kurulum";
   
   const installationLinks = [
-    { label: "Antalya (Merkez)", href: "/kurulum-antalya" },
-    { label: "Alanya", href: "/kurulum-alanya" },
-    { label: "Ankara", href: "/kurulum-ankara" },
+    { label: `Antalya (${getOfficeBadge("headquarters", language)})`, href: getLocalizedUrl("installationAntalya", language) },
+    { label: "Alanya", href: getLocalizedUrl("installationAlanya", language) },
+    { label: "Ankara", href: getLocalizedUrl("installationAnkara", language) },
   ];
 
   const solutionLinks = [
-    { label: language === "de" ? "Solaranlage" : language === "en" ? "Solar Panel" : language === "tr" ? "Güneş Paneli" : "Solar", href: "/gunes-paneli" },
-    { label: language === "de" ? "Wärmepumpe" : language === "en" ? "Heat Pump" : language === "tr" ? "Isı Pompası" : "Wärmepumpe", href: "/isi-pompasi" },
-    { label: language === "de" ? "Klimaanlage" : language === "en" ? "Air Conditioning" : language === "tr" ? "Klima" : "Klima", href: "/klima" },
-    { label: language === "de" ? "Batteriespeicher" : language === "en" ? "Battery Storage" : language === "tr" ? "Enerji Depolama" : "Speicher", href: "/enerji-depolama" },
+    { label: language === "de" ? "Solaranlage" : language === "en" ? "Solar Panel" : language === "tr" ? "Güneş Paneli" : "Solar", href: getLocalizedUrl("solarPanel", language) },
+    { label: language === "de" ? "Wärmepumpe" : language === "en" ? "Heat Pump" : language === "tr" ? "Isı Pompası" : "Wärmepumpe", href: getLocalizedUrl("heatPump", language) },
+    { label: language === "de" ? "Klimaanlage" : language === "en" ? "Air Conditioning" : language === "tr" ? "Klima" : "Klima", href: getLocalizedUrl("airConditioning", language) },
+    { label: language === "de" ? "Batteriespeicher" : language === "en" ? "Battery Storage" : language === "tr" ? "Enerji Depolama" : "Speicher", href: getLocalizedUrl("batteryStorage", language) },
   ];
 
   return (
