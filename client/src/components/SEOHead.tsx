@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 
 interface SEOHeadProps {
-  page: "home" | "systeme" | "vorteile" | "rechner" | "faq" | "ueber-uns" | "team" | "legal" | "installation-antalya" | "installation-ankara" | "installation-alanya";
+  page: "home" | "systeme" | "vorteile" | "rechner" | "faq" | "ueber-uns" | "team" | "legal" | "installation-antalya" | "installation-ankara" | "installation-alanya" | "standorte";
   pageTitle?: string;
 }
 
@@ -63,6 +63,11 @@ const seoData = {
       title: "4'ü 1 Arada Enerji Sistemi Kurulumu Alanya | Güneş Paneli & Isı Pompası | 089 Bayern Şubesi",
       description: "Alanya ve çevresinde profesyonel 4'ü 1 arada enerji sistemi kurulumu. 089 Bayern Alanya şubesi. Güneş paneli, Vaillant ısı pompası, Samsung klima ve batarya depolama. Mahmutlar, Kestel, Oba.",
       keywords: "enerji sistemi kurulum alanya, güneş paneli montaj mahmutlar, ısı pompası kurulum kestel, solar panel alanya, 4 in 1 sistem akdeniz"
+    },
+    standorte: {
+      title: "Hizmet Bölgelerimiz | Türkiye, Hırvatistan, Yunanistan | 089 Bayern",
+      description: "089 Bayern enerji sistemleri kurulum bölgeleri: Antalya, Alanya, Muğla, İzmir, Split, Dalmaçya. Akdeniz ve Ege'de güneş paneli, ısı pompası, klima kurulumu.",
+      keywords: "089 bayern hizmet bölgeleri, güneş paneli kurulum türkiye, solar panel akdeniz, enerji sistemleri hırvatistan"
     }
   },
   de: {
@@ -121,6 +126,11 @@ const seoData = {
       title: "4-in-1 Energiesystem-Installation Alanya | Solaranlage & Wärmepumpe | 089 Bayern Niederlassung",
       description: "Professionelle 4-in-1 Energiesystem-Installation in Alanya und Umgebung. 089 Bayern Niederlassung Alanya. Solaranlage, Vaillant Wärmepumpe, Samsung Klimaanlage und Batteriespeicher. Mahmutlar, Kestel, Oba.",
       keywords: "energiesystem installation alanya, solaranlage montage mahmutlar, wärmepumpe installation kestel, solar panel alanya, 4 in 1 system mittelmeer"
+    },
+    standorte: {
+      title: "Unsere Serviceregionen | Türkei, Kroatien, Griechenland | 089 Bayern",
+      description: "089 Bayern Energiesystem-Installationsregionen: Antalya, Alanya, Muğla, Izmir, Split, Dalmatien. Solaranlage, Wärmepumpe, Klimaanlage Installation am Mittelmeer und in der Ägäis.",
+      keywords: "089 bayern serviceregionen, solaranlage installation türkei, solar panel mittelmeer, energiesysteme kroatien"
     }
   },
   en: {
@@ -179,6 +189,11 @@ const seoData = {
       title: "4-in-1 Energy System Installation Alanya | Solar Panels & Heat Pump | 089 Bayern Branch",
       description: "Professional 4-in-1 energy system installation in Alanya and surroundings. 089 Bayern Alanya branch. Solar panels, Vaillant heat pump, Samsung AC and battery storage. Mahmutlar, Kestel, Oba.",
       keywords: "energy system installation alanya, solar panel installation mahmutlar, heat pump installation kestel, solar panel alanya, 4 in 1 system mediterranean"
+    },
+    standorte: {
+      title: "Our Service Regions | Turkey, Croatia, Greece | 089 Bayern",
+      description: "089 Bayern energy system installation regions: Antalya, Alanya, Mugla, Izmir, Split, Dalmatia. Solar panel, heat pump, AC installation in the Mediterranean and Aegean.",
+      keywords: "089 bayern service regions, solar panel installation turkey, solar panel mediterranean, energy systems croatia"
     }
   },
   ru: {
@@ -237,6 +252,11 @@ const seoData = {
       title: "Установка Энергосистемы 4-в-1 Аланья | Солнечные Панели и Тепловой Насос | 089 Bayern Филиал",
       description: "Профессиональная установка энергосистемы 4-в-1 в Аланье и окрестностях. Филиал 089 Bayern Аланья. Солнечные панели, тепловой насос Vaillant, кондиционер Samsung и аккумуляторное хранение. Махмутлар, Кестель, Оба.",
       keywords: "установка энергосистемы аланья, монтаж солнечных панелей махмутлар, установка теплового насоса кестель, солнечные панели аланья, система 4 в 1 средиземноморье"
+    },
+    standorte: {
+      title: "Наши Регионы Обслуживания | Турция, Хорватия, Греция | 089 Bayern",
+      description: "Регионы установки энергосистем 089 Bayern: Анталия, Алания, Мугла, Измир, Сплит, Далмация. Установка солнечных панелей, тепловых насосов, кондиционеров в Средиземноморье и Эгейском регионе.",
+      keywords: "089 bayern регионы обслуживания, установка солнечных панелей турция, солнечные панели средиземноморье, энергосистемы хорватия"
     }
   },
   uk: {
@@ -295,6 +315,11 @@ const seoData = {
       title: "Встановлення Енергосистеми 4-в-1 Аланья | Сонячні Панелі та Тепловий Насос | 089 Bayern Філія",
       description: "Професійне встановлення енергосистеми 4-в-1 в Аланії та околицях. Філія 089 Bayern Аланья. Сонячні панелі, тепловий насос Vaillant, кондиціонер Samsung та акумуляторне зберігання. Махмутлар, Кестель, Оба.",
       keywords: "встановлення енергосистеми аланья, монтаж сонячних панелей махмутлар, встановлення теплового насоса кестель, сонячні панелі аланья, система 4 в 1 середземномор'я"
+    },
+    standorte: {
+      title: "Наші Регіони Обслуговування | Туреччина, Хорватія, Греція | 089 Bayern",
+      description: "Регіони встановлення енергосистем 089 Bayern: Анталія, Аланія, Мугла, Ізмір, Спліт, Далмація. Встановлення сонячних панелей, теплових насосів, кондиціонерів у Середземномор'ї та Егейському регіоні.",
+      keywords: "089 bayern регіони обслуговування, встановлення сонячних панелей туреччина, сонячні панелі середземномор'я, енергосистеми хорватія"
     }
   },
   hr: {
@@ -353,6 +378,11 @@ const seoData = {
       title: "Instalacija Energetskog Sustava 4-u-1 Alanya | Solarni Paneli i Toplinska Pumpa | 089 Bayern Podružnica",
       description: "Profesionalna instalacija energetskog sustava 4-u-1 u Alanyi i okolici. 089 Bayern podružnica Alanya. Solarni paneli, Vaillant toplinska pumpa, Samsung klima i pohrana baterije. Mahmutlar, Kestel, Oba.",
       keywords: "instalacija energetskog sustava alanya, montaža solarnih panela mahmutlar, instalacija toplinske pumpe kestel, solarni paneli alanya, sustav 4 u 1 sredozemlje"
+    },
+    standorte: {
+      title: "Naše Servisne Regije | Turska, Hrvatska, Grčka | 089 Bayern",
+      description: "Regije instalacije energetskih sustava 089 Bayern: Antalya, Alanya, Muğla, Izmir, Split, Dalmacija. Instalacija solarnih panela, toplinskih pumpi, klima na Mediteranu i Egeju.",
+      keywords: "089 bayern servisne regije, instalacija solarnih panela turska, solarni paneli mediteran, energetski sustavi hrvatska"
     }
   },
   ar: {
@@ -411,6 +441,11 @@ const seoData = {
       title: "تركيب نظام الطاقة 4 في 1 ألانيا | الألواح الشمسية ومضخة الحرارة | 089 Bayern فرع",
       description: "تركيب احترافي لنظام الطاقة 4 في 1 في ألانيا والمناطق المحيطة. فرع 089 Bayern ألانيا. الألواح الشمسية، مضخة حرارة Vaillant، تكييف Samsung وتخزين البطارية. محمودلار، كستل، أوبا.",
       keywords: "تركيب نظام الطاقة ألانيا، تركيب الألواح الشمسية محمودلار، تركيب مضخة الحرارة كستل، الألواح الشمسية ألانيا، نظام 4 في 1 البحر المتوسط"
+    },
+    standorte: {
+      title: "مناطق خدمتنا | تركيا، كرواتيا، اليونان | 089 Bayern",
+      description: "مناطق تركيب أنظمة الطاقة 089 Bayern: أنطاليا، ألانيا، موغلا، إزمير، سبليت، دالماتيا. تركيب الألواح الشمسية، مضخات الحرارة، التكييف في البحر المتوسط وبحر إيجة.",
+      keywords: "089 bayern مناطق الخدمة، تركيب الألواح الشمسية تركيا، الألواح الشمسية البحر المتوسط، أنظمة الطاقة كرواتيا"
     }
   }
 };

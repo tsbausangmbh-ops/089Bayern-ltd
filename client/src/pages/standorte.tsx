@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/lib/LanguageContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
 
 export default function Standorte() {
@@ -142,6 +143,7 @@ export default function Standorte() {
 
   return (
     <div className="min-h-screen bg-background" dir={isRTL ? "rtl" : "ltr"}>
+      <SEOHead page="standorte" />
       <Header />
       
       <section className="relative py-10 overflow-hidden">
