@@ -92,6 +92,19 @@ const emailTemplates: Record<string, {
     regards: "مع أطيب التحيات",
     team: "فريق 089Bayern للطاقة",
   },
+  hr: {
+    subject: "089Bayern - Primili smo vaš zahtjev",
+    greeting: "Pozdrav",
+    thankYou: "Hvala vam na upitu za savjetovanje o energetskim sustavima!",
+    receivedInfo: "Primili smo vaše podatke i kontaktirat ćemo vas što je prije moguće.",
+    nextSteps: "Sljedeći koraci:",
+    step1: "Naš stručnjak će vas nazvati u roku od 2 sata",
+    step2: "Zakazat ćemo besplatan pregled objekta",
+    step3: "Primit ćete personaliziranu ponudu",
+    questions: "Za pitanja nas možete kontaktirati:",
+    regards: "S poštovanjem",
+    team: "Vaš 089Bayern Energy tim",
+  },
 };
 
 // Create transporter only if SMTP credentials are available
