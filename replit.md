@@ -67,27 +67,29 @@ These are bundled but not actively implemented in the current codebase.
 - Inter font family for Turkish character support
 - Mediterranean-inspired color palette with German trust aesthetics
 
-### Pages
+### Pages (Turkish URLs - Primary)
 - Home (/) - Landing page with hero, features, team preview, calculator
-- Systeme (/systeme) - 4-in-1 German System details
-- Vorteile (/vorteile) - Benefits and advantages
-- Rechner (/rechner) - Savings calculator with multi-step form
-- Team (/team) - Company story, values, and contact information
-- Über uns (/ueber-uns) - About page
+- Sistem (/sistem) - 4-in-1 System details (redirect from /systeme)
+- Avantajlar (/avantajlar) - Benefits and advantages (redirect from /vorteile)
+- Hesaplayici (/hesaplayici) - Savings calculator with multi-step form (redirect from /rechner)
+- Hakkimizda (/hakkimizda) - About page (redirect from /ueber-uns)
+- SSS (/sss) - FAQ page (redirect from /faq)
+- Bolgeler (/bolgeler) - Locations overview (redirect from /standorte)
 - Legal pages: KVKK, Gizlilik, Cerez-Politikasi, Sartlar, Mesafeli-Satis, On-Bilgilendirme
+- Component pages: /gunes-paneli, /isi-pompasi, /klima, /enerji-depolama
 
-### Installation/Regional Pages - Organizational Hierarchy
+### Installation/Regional Pages - Organizational Hierarchy (Turkish URLs)
 
-**Zentrale (Headquarters):**
-- Installation Antalya (/installation-antalya) - Main headquarters for Mediterranean region. Covers entire coast from Antalya to Alanya + 20 km inland radius (34+ locations). Badge: "Zentrale"
+**Merkez (Headquarters):**
+- Kurulum Antalya (/kurulum-antalya) - Main headquarters for Mediterranean region. Covers entire coast from Antalya to Alanya + 20 km inland radius (34+ locations). Badge: "Merkez" (redirect from /installation-antalya)
 
-**Niederlassungen (Branch Offices):**
-- Installation Alanya (/installation-alanya) - Branch office backed by Antalya headquarters. Covers Alanya coastal area + 30 km radius. Badge: "Niederlassung"
-- Installation Ankara (/installation-ankara) - Branch office backed by Antalya headquarters. Covers Ankara center + 30 km radius (20+ locations: Çankaya, Keçiören, Yenimahalle, etc.). Badge: "Niederlassung"
+**Şubeler (Branch Offices):**
+- Kurulum Alanya (/kurulum-alanya) - Branch office backed by Antalya headquarters. Covers Alanya coastal area + 30 km radius. Badge: "Şube" (redirect from /installation-alanya)
+- Kurulum Ankara (/kurulum-ankara) - Branch office backed by Antalya headquarters. Covers Ankara center + 30 km radius (20+ locations). Badge: "Şube" (redirect from /installation-ankara)
 
 **Office Info Section Structure:**
 Each regional page includes an "Office Info Section" that:
-- Displays the location type badge (Zentrale/Niederlassung)
+- Displays the location type badge (Merkez/Şube)
 - Shows the office title and subtitle
 - Explains the organizational relationship to headquarters
 - Available in all 7 languages

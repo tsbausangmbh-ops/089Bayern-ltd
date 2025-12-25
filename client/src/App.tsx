@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, Redirect } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -37,19 +37,31 @@ function Router() {
       <Route path="/sartlar" component={Sartlar} />
       <Route path="/mesafeli-satis" component={MesafeliSatis} />
       <Route path="/on-bilgilendirme" component={OnBilgilendirme} />
-      <Route path="/ueber-uns" component={UeberUns} />
-      <Route path="/systeme" component={Systeme} />
-      <Route path="/vorteile" component={Vorteile} />
-      <Route path="/rechner" component={Rechner} />
-      <Route path="/faq" component={FAQ} />
+      {/* Türkische URLs (Haupt) */}
+      <Route path="/hakkimizda" component={UeberUns} />
+      <Route path="/sistem" component={Systeme} />
+      <Route path="/avantajlar" component={Vorteile} />
+      <Route path="/hesaplayici" component={Rechner} />
+      <Route path="/sss" component={FAQ} />
+      <Route path="/bolgeler" component={Standorte} />
+      <Route path="/kurulum-antalya" component={InstallationAntalya} />
+      <Route path="/kurulum-ankara" component={InstallationAnkara} />
+      <Route path="/kurulum-alanya" component={InstallationAlanya} />
+      {/* Deutsche URLs (Weiterleitungen) */}
+      <Route path="/ueber-uns">{() => <Redirect to="/hakkimizda" />}</Route>
+      <Route path="/systeme">{() => <Redirect to="/sistem" />}</Route>
+      <Route path="/vorteile">{() => <Redirect to="/avantajlar" />}</Route>
+      <Route path="/rechner">{() => <Redirect to="/hesaplayici" />}</Route>
+      <Route path="/faq">{() => <Redirect to="/sss" />}</Route>
+      <Route path="/standorte">{() => <Redirect to="/bolgeler" />}</Route>
+      <Route path="/installation-antalya">{() => <Redirect to="/kurulum-antalya" />}</Route>
+      <Route path="/installation-ankara">{() => <Redirect to="/kurulum-ankara" />}</Route>
+      <Route path="/installation-alanya">{() => <Redirect to="/kurulum-alanya" />}</Route>
+      {/* Komponenten-Seiten (bereits türkisch) */}
       <Route path="/gunes-paneli" component={GunesPaneli} />
       <Route path="/isi-pompasi" component={IsiPompasi} />
       <Route path="/klima" component={Klima} />
       <Route path="/enerji-depolama" component={EnerjiDepolama} />
-      <Route path="/standorte" component={Standorte} />
-      <Route path="/installation-antalya" component={InstallationAntalya} />
-      <Route path="/installation-ankara" component={InstallationAnkara} />
-      <Route path="/installation-alanya" component={InstallationAlanya} />
       <Route component={NotFound} />
     </Switch>
   );

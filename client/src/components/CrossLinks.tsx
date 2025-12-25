@@ -171,7 +171,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
     installations: [
       { 
         id: "installation-antalya", 
-        href: "/installation-antalya", 
+        href: "/kurulum-antalya", 
         icon: MapPin,
         label: { 
           de: "Solaranlage Installation Antalya", 
@@ -194,7 +194,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
       },
       { 
         id: "installation-alanya", 
-        href: "/installation-alanya", 
+        href: "/kurulum-alanya", 
         icon: MapPin,
         label: { 
           de: "Photovoltaik Installation Alanya", 
@@ -217,7 +217,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
       },
       { 
         id: "installation-ankara", 
-        href: "/installation-ankara", 
+        href: "/kurulum-ankara", 
         icon: MapPin,
         label: { 
           de: "Wärmepumpe Installation Ankara", 
@@ -265,7 +265,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
       },
       { 
         id: "systeme", 
-        href: "/systeme", 
+        href: "/sistem", 
         icon: Award,
         label: { 
           de: "4-in-1 Energiesystem komplett", 
@@ -288,7 +288,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
       },
       { 
         id: "vorteile", 
-        href: "/vorteile", 
+        href: "/avantajlar", 
         icon: Award,
         label: { 
           de: "Stromkosten sparen Türkei", 
@@ -311,7 +311,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
       },
       { 
         id: "rechner", 
-        href: "/rechner", 
+        href: "/hesaplayici", 
         icon: Calculator,
         label: { 
           de: "Solar Ersparnis Rechner", 
@@ -334,7 +334,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
       },
       { 
         id: "faq", 
-        href: "/faq", 
+        href: "/sss", 
         icon: HelpCircle,
         label: { 
           de: "Solaranlage Türkei FAQ", 
@@ -357,7 +357,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
       },
       { 
         id: "ueber-uns", 
-        href: "/ueber-uns", 
+        href: "/hakkimizda", 
         icon: Award,
         label: { 
           de: "089 Bayern Team & Geschichte", 

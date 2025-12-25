@@ -19,27 +19,27 @@ export default function Footer() {
   ];
 
   const products = [
-    { name: t.footer.vaillantHeatPump, desc: t.footer.vaillantDesc, href: "/systeme" },
-    { name: t.footer.solarPanel, desc: t.footer.solarDesc, href: "/systeme" },
-    { name: t.footer.samsungClimate, desc: t.footer.samsungDesc, href: "/systeme" },
-    { name: t.footer.bydBattery, desc: t.footer.bydDesc, href: "/systeme" },
+    { name: t.footer.vaillantHeatPump, desc: t.footer.vaillantDesc, href: "/sistem" },
+    { name: t.footer.solarPanel, desc: t.footer.solarDesc, href: "/sistem" },
+    { name: t.footer.samsungClimate, desc: t.footer.samsungDesc, href: "/sistem" },
+    { name: t.footer.bydBattery, desc: t.footer.bydDesc, href: "/sistem" },
   ];
 
   const mainNavLinks = [
     { label: t.footer.home, href: "/" },
-    { label: t.header.system, href: "/systeme" },
-    { label: t.header.benefits, href: "/vorteile" },
-    { label: t.header.calculator, href: "/rechner" },
-    { label: t.header.team, href: "/ueber-uns" },
-    { label: t.header.faq, href: "/faq" },
+    { label: t.header.system, href: "/sistem" },
+    { label: t.header.benefits, href: "/avantajlar" },
+    { label: t.header.calculator, href: "/hesaplayici" },
+    { label: t.header.team, href: "/hakkimizda" },
+    { label: t.header.faq, href: "/sss" },
   ];
 
   const installationLabel = language === "de" ? "Installation" : language === "en" ? "Installation" : language === "ru" ? "Установка" : language === "uk" ? "Встановлення" : language === "ar" ? "التركيب" : language === "hr" ? "Instalacija" : "Kurulum";
   
   const installationLinks = [
-    { label: "Antalya (Zentrale)", href: "/installation-antalya" },
-    { label: "Alanya", href: "/installation-alanya" },
-    { label: "Ankara", href: "/installation-ankara" },
+    { label: "Antalya (Merkez)", href: "/kurulum-antalya" },
+    { label: "Alanya", href: "/kurulum-alanya" },
+    { label: "Ankara", href: "/kurulum-ankara" },
   ];
 
   const solutionLinks = [

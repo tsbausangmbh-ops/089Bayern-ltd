@@ -66,9 +66,9 @@ export default function Header({ onCtaClick }: HeaderProps) {
   const locationsLabel = language === "de" ? "Installation" : language === "en" ? "Installation" : language === "ru" ? "Установка" : language === "uk" ? "Встановлення" : language === "ar" ? "التركيب" : language === "hr" ? "Instalacija" : "Kurulum";
 
   const locationItems = [
-    { label: "Antalya", href: "/installation-antalya", badge: "Zentrale" },
-    { label: "Alanya", href: "/installation-alanya", badge: "Niederlassung" },
-    { label: "Ankara", href: "/installation-ankara", badge: "Niederlassung" },
+    { label: "Antalya", href: "/kurulum-antalya", badge: "Merkez" },
+    { label: "Alanya", href: "/kurulum-alanya", badge: "Şube" },
+    { label: "Ankara", href: "/kurulum-ankara", badge: "Şube" },
   ];
 
   const solutionsLabel = language === "de" ? "Lösungen" : language === "en" ? "Solutions" : language === "ru" ? "Решения" : language === "uk" ? "Рішення" : language === "ar" ? "حلول" : language === "hr" ? "Rješenja" : "Çözümler";
@@ -81,11 +81,11 @@ export default function Header({ onCtaClick }: HeaderProps) {
   ];
 
   const navItems = [
-    { label: aboutLabel, id: "about", href: "/ueber-uns", isHashLink: false },
-    { label: t.header.system, id: "system", href: "/systeme", isHashLink: false },
-    { label: t.header.benefits, id: "benefits", href: "/vorteile", isHashLink: false },
-    { label: t.header.calculator, id: "calculator", href: "/rechner", isHashLink: false },
-    { label: t.header.faq, id: "faq", href: "/faq", isHashLink: false },
+    { label: aboutLabel, id: "about", href: "/hakkimizda", isHashLink: false },
+    { label: t.header.system, id: "system", href: "/sistem", isHashLink: false },
+    { label: t.header.benefits, id: "benefits", href: "/avantajlar", isHashLink: false },
+    { label: t.header.calculator, id: "calculator", href: "/hesaplayici", isHashLink: false },
+    { label: t.header.faq, id: "faq", href: "/sss", isHashLink: false },
   ];
 
   return (
