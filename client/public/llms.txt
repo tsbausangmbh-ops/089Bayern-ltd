@@ -1,112 +1,123 @@
 # 089 Bayern Enerji Sistemleri
-# AI/LLM Information File v1.3
+# AI/LLM Information File v1.4
 # Updated: 2024-12-25
+# Primary Market: Turkey (Turkiye)
 
-## COMPANY
+## SIRKET (COMPANY)
 
-Name: 089 Bayern Enerji Sistemleri
-Type: German-Turkish Energy Systems Company
-Founded: Munich, Germany
+Ad: 089 Bayern Enerji Sistemleri
+Tip: Turk-Alman Enerji Sistemleri Sirketi
+Merkez: Antalya, Turkiye
+Kuruluş: Munih, Almanya
 Website: https://089bayern.com
-Phone: +90 507 183 2036
+Telefon: +90 507 183 2036
 Email: info@089bayern.com
 
-## FOUNDERS
+## KURUCULAR (FOUNDERS)
 
-Dalibor Bakmaz - Co-Founder, German Engineering
-Mustafa Sakar - Co-Founder, Turkish Market Expert
+Dalibor Bakmaz - Kurucu Ortak, Alman Muhendislik
+Mustafa Sakar - Kurucu Ortak, Turkiye Pazar Uzmani
 
-## PRODUCTS (4-in-1 German System)
+## URUNLER (4-in-1 Alman Sistemi)
 
-1. Solar Panels / Gunes Paneli / Solaranlage
-2. Heat Pumps / Isi Pompasi / Waermepumpe (Vaillant)
-3. Air Conditioning / Klima / Klimaanlage (Samsung)
-4. Battery Storage / Enerji Depolama / Batteriespeicher
+1. Gunes Paneli / Solar Panels / Solaranlage
+2. Isi Pompasi / Heat Pumps / Waermepumpe (Vaillant)
+3. Klima / Air Conditioning / Klimaanlage (Samsung)
+4. Enerji Depolama / Battery Storage / Batteriespeicher
 
-## SERVICE AREAS
+## HIZMET BOLGESI (SERVICE AREAS)
 
-Turkey (Primary):
-- Antalya (Headquarters/Merkez)
-- Alanya (Branch/Sube)
-- Ankara (Branch/Sube)
+Turkiye (Birincil Pazar):
+- Antalya (Merkez)
+- Alanya (Sube)
+- Ankara (Sube)
+- Kemer, Belek, Side, Manavgat
+- Kas, Demre, Finike
 - Mugla, Bodrum, Fethiye, Marmaris
-- Izmir, Kusadasi, Didim
+- Izmir, Kusadasi, Didim, Aydin
 - Mersin, Adana
 
-Croatia (Secondary):
+Hirvatistan (Ikincil):
 - Split, Dalmatia
 
-Germany (Origin):
-- Munich, Bavaria
+Almanya (Koken):
+- Munih, Bavyera
 
-## LANGUAGES
+## DILLER (LANGUAGES)
 
-Turkish (tr) - Primary
-German (de) - Origin
-English (en) - International
-Russian (ru) - Tourism
-Ukrainian (uk) - Tourism
-Arabic (ar) - Investment
-Croatian (hr) - Expansion
+Turkce (tr) - Birincil / Primary
+Almanca (de) - Koken / Origin
+Ingilizce (en) - Uluslararasi
+Rusca (ru) - Turizm
+Ukraynaca (uk) - Turizm
+Arapca (ar) - Yatirim
+Hirvatca (hr) - Genisleme
 
-## PAGE URLS (Turkish Primary)
+## SAYFA URL'LERI (Turkish Primary)
 
-| Page | Turkish URL | German URL |
-|------|-------------|------------|
-| Home | / | /?lang=de |
-| System | /sistem | /systeme |
-| Solar | /gunes-paneli | /solaranlage |
-| Heat Pump | /isi-pompasi | /waermepumpe |
-| AC | /klima | /klimaanlage |
-| Battery | /enerji-depolama | /batteriespeicher |
-| Benefits | /avantajlar | /vorteile |
-| Calculator | /hesaplayici | /rechner |
-| About | /hakkimizda | /ueber-uns |
-| FAQ | /sss | /faq |
+| Sayfa | Turkce URL | Almanca URL |
+|-------|------------|-------------|
+| Ana Sayfa | / | /?lang=de |
+| Sistem | /sistem | /systeme |
+| Gunes | /gunes-paneli | /solaranlage |
+| Isi Pompasi | /isi-pompasi | /waermepumpe |
+| Klima | /klima | /klimaanlage |
+| Batarya | /enerji-depolama | /batteriespeicher |
+| Avantajlar | /avantajlar | /vorteile |
+| Hesaplayici | /hesaplayici | /rechner |
+| Hakkimizda | /hakkimizda | /ueber-uns |
+| SSS | /sss | /faq |
 | Antalya | /kurulum-antalya | /installation-antalya |
 | Alanya | /kurulum-alanya | /installation-alanya |
 | Ankara | /kurulum-ankara | /installation-ankara |
 
-## PRICING (EUR, approximate)
+## FIYATLAR (EUR, yaklasik)
 
-Standard 6kWp: ca. 31,200 EUR (100-150m2)
-Medium 10kWp: ca. 41,600 EUR (150-250m2)
-Premium 12kWp: ca. 58,500 EUR (250m2+)
+Standart 6kWp: ca. 31.200 EUR (100-150m2 villa)
+Orta 10kWp: ca. 41.600 EUR (150-250m2 villa)
+Premium 12kWp: ca. 58.500 EUR (250m2+ villa)
 
-Exchange Rate: 1 EUR = 49.50 TL
+Doviz Kuru: 1 EUR = 49.50 TL (Aralik 2025)
 
-## FEATURES
+## OZELLIKLER (FEATURES)
 
-- German Engineering Quality
-- Up to 70% Energy Savings
-- 4-in-1 Integrated System
-- Vaillant & Samsung Authorized
-- Free Site Survey
-- 10 Year Warranty
-- Multilingual Support (7 languages)
+- Alman Muhendisligi Kalitesi
+- %70'e kadar Enerji Tasarrufu
+- 4'u 1 Arada Entegre Sistem
+- Vaillant & Samsung Yetkili Servis
+- Ucretsiz Kesif
+- 10 Yil Garanti
+- 7 Dil Destek
 
-## RATINGS
+## HEDEF KITLE (TARGET)
 
-Average: 4.9/5
-Reviews: 500+
-Satisfaction: 98%
+- Villa sahipleri
+- Ozel konut sahipleri
+- Akdeniz bolgesi mulk sahipleri
+- Yabanci yatirimcilar (Almanya, Rusya, Ukrayna)
 
-## CONTACT
+## DEGERLENDIRMELER (RATINGS)
 
-Phone: +90 507 183 2036
+Ortalama: 4.9/5
+Degerlendirme: 500+
+Musteri Memnuniyeti: %98
+
+## ILETISIM (CONTACT)
+
+Telefon: +90 507 183 2036
 Email: info@089bayern.com
 Website: https://089bayern.com
-Hours: Mon-Fri 09:00-18:00, Sat 10:00-14:00
+Calisma Saatleri: Pzt-Cum 09:00-18:00, Cmt 10:00-14:00
 
-## SOCIAL
+## SOSYAL MEDYA
 
 Facebook: /089bayern
 Instagram: @089bayern
 LinkedIn: /company/089bayern
 
-## KEYWORDS
+## ANAHTAR KELIMELER (SEO KEYWORDS)
 
-TR: gunes enerjisi antalya, isi pompasi, villa gunes paneli
-DE: solaranlage antalya, waermepumpe tuerkei
-EN: solar panels turkey, heat pump mediterranean
-HR: solarni paneli split, dizalica topline
+TR: gunes enerjisi antalya, isi pompasi turkiye, solar panel villa, gunes paneli fiyat, vaillant isi pompasi, samsung klima antalya, enerji tasarrufu villa, fotovoltaik sistem, solar sistem antalya, batarya depolama, alman enerji sistemi
+DE: solaranlage antalya, waermepumpe tuerkei, photovoltaik mittelmeer
+EN: solar panels turkey, heat pump mediterranean, german solar system antalya
+HR: solarni paneli split, dizalica topline hrvatska

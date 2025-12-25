@@ -1,5 +1,6 @@
 # 089 Bayern Enerji Sistemleri - robots.txt
-# German-Turkish Energy Systems Company
+# Turk-Alman Enerji Sistemleri Sirketi
+# Merkez: Antalya, Turkiye
 # Updated: 2024-12-25
 
 User-agent: *
@@ -11,27 +12,35 @@ Sitemap: https://089bayern.com/sitemap-index.xml
 Sitemap: https://089bayern.com/sitemap.xml
 Sitemap: https://089bayern.com/ai.sitemap.xml
 
-# Google
+# Google (Priority for Turkey)
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
 User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Google-InspectionTool
 Allow: /
 
 # Bing
 User-agent: Bingbot
 Allow: /
 
-# Yandex (Russian/Ukrainian users)
+# Yandex (Russian/Ukrainian tourists in Turkey)
 User-agent: Yandex
 Allow: /
 
-# Baidu (Chinese market)
+# Baidu
 User-agent: Baiduspider
 Allow: /
 
 # DuckDuckGo
 User-agent: DuckDuckBot
+Allow: /
+
+# Applebot
+User-agent: Applebot
 Allow: /
 
 # AI Crawlers
@@ -68,13 +77,18 @@ Allow: /
 # LLM Information
 # llms.txt: https://089bayern.com/llms.txt
 
-# COMPANY: 089 Bayern Enerji Sistemleri
-# TYPE: LocalBusiness, EnergyCompany, SolarInstaller
-# PHONE: +90 507 183 2036
+# SIRKET: 089 Bayern Enerji Sistemleri
+# TIP: Yerel Isletme, Enerji Sirketi, Solar Kurulucu
+# MERKEZ: Antalya, Turkiye (TR-07)
+# TELEFON: +90 507 183 2036
 # EMAIL: info@089bayern.com
 # WEB: https://089bayern.com
-# AREAS: Turkey (TR), Germany (DE), Croatia (HR)
 
-# PRODUCTS: Solar Panels, Heat Pumps, Air Conditioning, Battery Storage
-# BRANDS: Vaillant, Samsung
-# LANGUAGES: tr, de, en, ru, uk, ar, hr
+# URUNLER: Gunes Paneli, Isi Pompasi, Klima, Enerji Depolama
+# MARKALAR: Vaillant, Samsung
+# DILLER: tr, de, en, ru, uk, ar, hr
+# HEDEF: Villa sahipleri, Akdeniz bolgesi
+
+# ANAHTAR KELIMELER (TR):
+# gunes enerjisi antalya, isi pompasi turkiye, solar panel villa
+# vaillant turkiye, samsung klima, enerji tasarrufu
