@@ -1081,10 +1081,16 @@ export default function InstallationAnkara() {
               {c.ctaButton}
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
+            <Button size="lg" variant="outline" className="border-red-400/50 text-white bg-red-500/20 backdrop-blur-sm" asChild data-testid="button-hero-call-tr">
+              <a href="tel:+905071832036">
+                <Phone className="mr-2 w-4 h-4" />
+                TR +90 507 183 2036
+              </a>
+            </Button>
             <Button size="lg" variant="outline" className="border-amber-400/50 text-white bg-black/30 backdrop-blur-sm" asChild data-testid="button-hero-call-de">
               <a href="tel:+491735994699">
                 <Phone className="mr-2 w-4 h-4" />
-                +49 173 5994699
+                DE +49 173 5994699
               </a>
             </Button>
             <Button size="lg" variant="outline" className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm" onClick={() => window.open("https://wa.me/491735994699", "_blank")} data-testid="button-hero-whatsapp">
