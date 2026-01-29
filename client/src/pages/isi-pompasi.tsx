@@ -970,58 +970,6 @@ export default function IsiPompasi() {
         </div>
       </section>
 
-      <section className="py-8 md:py-10 bg-gradient-to-r from-orange-500/20 via-red-500/20 to-orange-500/20" data-testid="section-urgency">
-        <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.urgencyTitle}</h2>
-          <p className="text-lg text-muted-foreground mb-6">{c.urgencySubtitle}</p>
-          <p className="text-foreground mb-8 max-w-2xl mx-auto">{c.urgencyText}</p>
-          
-          <div className="bg-card rounded-2xl p-8 shadow-xl border border-orange-500/20">
-            <h3 className="text-2xl font-bold text-foreground mb-2">{c.finalCta}</h3>
-            <p className="text-muted-foreground mb-6">{c.finalCtaDesc}</p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
-              <Button 
-                onClick={goToContact}
-                size="lg"
-                className="bg-gradient-to-r from-orange-500 to-red-600 border-0 shadow-lg shadow-orange-500/30 px-8"
-                data-testid="button-final-cta"
-              >
-                <Calculator className="w-5 h-5 mr-2" />
-                {c.ctaButton}
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                onClick={() => window.location.href = "tel:+491735994699"}
-                data-testid="button-final-phone-de"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                +49 173 5994699
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-green-500/50 bg-green-500/10" 
-                onClick={() => window.open("https://wa.me/491735994699", "_blank")}
-                data-testid="button-final-whatsapp"
-              >
-                WhatsApp
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-blue-500/50 bg-blue-500/10" 
-                onClick={() => window.location.href = "mailto:info@089bayern.com"}
-                data-testid="button-final-email"
-              >
-                Email
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <TrustCallToAction />
       <CrossLinks currentPage="isi-pompasi" />
       <Footer />
