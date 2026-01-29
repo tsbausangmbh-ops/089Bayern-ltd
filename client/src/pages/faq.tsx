@@ -12,6 +12,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
+import TrustCallToAction from "@/components/TrustCallToAction";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/images/hero-faq.png";
 import consultationImage from "@assets/images/heatpump-consultation.png";
@@ -606,6 +607,7 @@ export default function FAQ() {
         </div>
       </section>
 
+      <TrustCallToAction />
       <CrossLinks currentPage="faq" />
       <Footer />
       <LeadCaptureForm

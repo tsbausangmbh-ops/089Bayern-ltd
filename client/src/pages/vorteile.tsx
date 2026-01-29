@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
+import TrustCallToAction from "@/components/TrustCallToAction";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/images/hero-benefits.png";
 import consultationActionImage from "@assets/images/benefits-consultation-action.png";
@@ -746,6 +747,7 @@ export default function Vorteile() {
         </div>
       </section>
 
+      <TrustCallToAction />
       <CrossLinks currentPage="vorteile" />
       <Footer />
       <LeadCaptureForm

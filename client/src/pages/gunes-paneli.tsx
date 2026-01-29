@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
+import TrustCallToAction from "@/components/TrustCallToAction";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/images/hero-solar-panel.png";
 import solarDetailImage from "@assets/images/solar-detail-wiring.png";
@@ -551,6 +552,7 @@ export default function GunesPaneli() {
         </div>
       </section>
 
+      <TrustCallToAction />
       <CrossLinks currentPage="gunes-paneli" />
       <Footer />
       <LeadCaptureForm

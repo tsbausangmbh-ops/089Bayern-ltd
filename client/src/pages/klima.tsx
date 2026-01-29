@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
+import TrustCallToAction from "@/components/TrustCallToAction";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/images/hero-climate.png";
 import climateIndoorImage from "@assets/images/climate-indoor-unit.png";
@@ -648,6 +649,7 @@ export default function Klima() {
         </div>
       </section>
 
+      <TrustCallToAction />
       <CrossLinks currentPage="klima" />
       <Footer />
       <LeadCaptureForm

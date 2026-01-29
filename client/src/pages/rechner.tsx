@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import System4in1Calculator from "@/components/System4in1Calculator";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
+import TrustCallToAction from "@/components/TrustCallToAction";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -841,6 +842,7 @@ export default function Rechner() {
         </div>
       </section>
       
+      <TrustCallToAction />
       <CrossLinks currentPage="rechner" />
       <Footer />
       
