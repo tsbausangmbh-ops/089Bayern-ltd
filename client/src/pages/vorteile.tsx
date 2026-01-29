@@ -10,7 +10,7 @@ import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/images/hero-benefits.png";
-import teamMeetingImage from "@assets/images/team-meeting.png";
+import consultationActionImage from "@assets/images/benefits-consultation-action.png";
 
 export default function Vorteile() {
   const { language } = useLanguage();
@@ -570,10 +570,10 @@ export default function Vorteile() {
           <div className="grid grid-cols-1 gap-6">
             <div className="rounded-xl overflow-hidden shadow-xl mx-auto max-w-4xl w-full">
               <img 
-                src={teamMeetingImage} 
-                alt="089 Bayern profesyonel ekip" 
+                src={consultationActionImage} 
+                alt="Energieberater zeigt Einsparungen - Handlungsbedarf" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
-                data-testid="img-team-meeting"
+                data-testid="img-consultation-action"
               />
             </div>
           </div>
