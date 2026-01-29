@@ -14,6 +14,7 @@ import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import { LinkedText } from "@/components/LinkedText";
 import heroImage from "@assets/images/hero-faq.png";
 import consultationImage from "@assets/images/heatpump-consultation.png";
 
@@ -596,7 +597,7 @@ export default function FAQ() {
                   </div>
                   <div className={`${isRtl ? "pr-14 md:pr-16" : "pl-14 md:pl-16"}`}>
                     <p className="text-muted-foreground leading-relaxed text-base">
-                      {faq.answer}
+                      <LinkedText text={faq.answer} language={language} />
                     </p>
                   </div>
                 </CardContent>

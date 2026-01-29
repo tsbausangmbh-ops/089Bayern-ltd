@@ -10,6 +10,7 @@ import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import { LinkedText } from "@/components/LinkedText";
 import heroImage from "@assets/images/hero-ankara.png";
 import teamWorkImage from "@assets/images/installation-team-work.png";
 import inspectionImage from "@assets/images/ankara-inspection.png";
@@ -1351,7 +1352,7 @@ export default function InstallationAnkara() {
                     <HelpCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                     {faq.q}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed pl-8">{faq.a}</p>
+                  <p className="text-muted-foreground leading-relaxed pl-8"><LinkedText text={faq.a} language={language} /></p>
                 </CardContent>
               </Card>
             ))}
