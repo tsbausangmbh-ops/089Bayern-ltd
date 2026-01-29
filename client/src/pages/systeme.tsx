@@ -12,7 +12,7 @@ import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/images/hero-system.png";
-import teamMeetingImage from "@assets/images/team-meeting.png";
+import systemPresentationImage from "@assets/images/system-presentation.png";
 
 export default function Systeme() {
   const { language } = useLanguage();
@@ -493,7 +493,7 @@ export default function Systeme() {
           <div className="grid grid-cols-1 gap-6">
             <div className="rounded-xl overflow-hidden shadow-xl mx-auto max-w-4xl w-full">
               <img 
-                src={teamMeetingImage} 
+                src={systemPresentationImage} 
                 alt="089 Bayern profesyonel ekip toplantısı" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 data-testid="img-team-meeting"
