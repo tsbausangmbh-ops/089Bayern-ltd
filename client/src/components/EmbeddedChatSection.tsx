@@ -31,9 +31,9 @@ const chatTranslations: Record<string, {
     placeholder: "Ihre Frage eingeben...",
     welcome: "Grüß Gott!\nIch bin Hasan, Ihr persönlicher Energieberater bei 089 Bayern.\n\nIch weiß genau, wie frustrierend es ist, wenn jeden Monat eine Stromrechnung kommt, die einen schockiert. Viele unserer Kunden haben uns erzählt, wie sie sich hilflos gefühlt haben - die Preise steigen und steigen, und man weiß nicht, wie man das stoppen kann.\n\nGenau dafür bin ich hier. Mit Herzblut und 15 Jahren Erfahrung helfe ich Familien, endlich frei von diesen Sorgen zu werden. Gemeinsam finden wir eine Lösung, die zu Ihnen passt.\n\nWas beschäftigt Sie gerade am meisten?",
     suggestions: [
-      "Ich habe ein Ferienhaus in Kroatien",
+      "Ich habe eine Villa in Antalya",
       "Wie funktioniert das 4-in-1 System?",
-      "Gibt es Förderungen in Kroatien?",
+      "300 Sonnentage - wie viel spare ich?",
     ],
     features: ["Kostenvoranschläge", "Materialberatung", "Ablaufplanung", "Allgemeine Fragen"],
   },
@@ -115,9 +115,9 @@ const chatTranslations: Record<string, {
     placeholder: "Unesite vaše pitanje...",
     welcome: "Pozdrav!\nJa sam Hasan, vaš osobni energetski savjetnik u 089 Bayern.\n\nTočno znam koliko je frustrirajuće kada svaki mjesec stigne račun za struju koji vas šokira. Mnogi naši klijenti su nam ispričali kako su se osjećali bespomoćno - cijene rastu i rastu, a ne znate kako to zaustaviti.\n\nUpravo zato sam ovdje. Sa srcem i 15 godina iskustva pomažem obiteljima da se konačno oslobode tih briga. Zajedno ćemo pronaći rješenje koje vam odgovara.\n\nŠto vas trenutno najviše brine?",
     suggestions: [
-      "Imam kuću u Hrvatskoj",
+      "Imam vilu u Antaliji",
       "Kako radi sustav 4-u-1?",
-      "Postoje li poticaji u Hrvatskoj?",
+      "300 sunčanih dana - koliko štedim?",
     ],
     features: ["Procjene troškova", "Savjeti o materijalima", "Planiranje procesa", "Opća pitanja"],
   },
