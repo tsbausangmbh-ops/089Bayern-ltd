@@ -202,15 +202,26 @@ export default function TrustCallToAction() {
               <Badge variant="outline" className="mb-3 bg-red-900/80 text-red-200 border-red-500/50">
                 {c.callTitleTR}
               </Badge>
-              <Button 
-                size="lg" 
-                className="w-full bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700"
-                onClick={() => window.location.href = "tel:+905071922036"}
-                data-testid="button-cta-call-tr"
-              >
-                <Phone className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
-                +90 507 192 2036
-              </Button>
+              <div className="space-y-2">
+                <Button 
+                  size="default" 
+                  className="w-full bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700"
+                  onClick={() => window.location.href = "tel:+905071922036"}
+                  data-testid="button-cta-call-tr-bakmaz"
+                >
+                  <Phone className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
+                  Bakmaz: +90 507 192 2036
+                </Button>
+                <Button 
+                  size="default" 
+                  className="w-full bg-gradient-to-r from-red-600 to-rose-700 hover:from-red-700 hover:to-rose-800"
+                  onClick={() => window.location.href = "tel:+905071832036"}
+                  data-testid="button-cta-call-tr-sakar"
+                >
+                  <Phone className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
+                  Sakar: +90 507 183 2036
+                </Button>
+              </div>
             </CardContent>
           </Card>
 
