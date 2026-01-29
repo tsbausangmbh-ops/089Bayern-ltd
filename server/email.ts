@@ -160,8 +160,8 @@ function generateCustomerEmail(name: string, language: string): string {
     
     <p style="color: #666;">${t.questions}</p>
     <p>
-      <a href="tel:+905071922036" style="color: #1e40af; text-decoration: none;">+90 507 192 2036</a><br>
-      <a href="https://wa.me/905071922036" style="color: #25d366; text-decoration: none;">WhatsApp</a>
+      <a href="tel:+905071832036" style="color: #1e40af; text-decoration: none;">+90 507 183 2036</a><br>
+      <a href="https://wa.me/905071832036" style="color: #25d366; text-decoration: none;">WhatsApp</a>
     </p>
     
     <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">

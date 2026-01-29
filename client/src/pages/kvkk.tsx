@@ -420,7 +420,7 @@ export default function KVKK() {
             <div className="bg-muted/50 p-4 rounded-lg mt-4">
               <p className="text-sm"><strong>{t.company}:</strong> {t.companyName}</p>
               <p className="text-sm"><strong>{t.address}:</strong> {t.addressText}</p>
-              <p className="text-sm"><strong>{t.phone}:</strong> +90 507 192 2036 | +49 155 68855141</p>
+              <p className="text-sm"><strong>{t.phone}:</strong> +90 507 183 2036 | +49 155 68855141</p>
               <p className="text-sm"><strong>{t.email}:</strong> info@089bayern.com</p>
               <p className="text-sm"><strong>{t.dataProtectionOfficer}:</strong> kvkk@089bayern.com</p>
             </div>

@@ -92,12 +92,12 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
           <Button
             size="lg"
             variant="outline"
-            onClick={() => window.location.href = "tel:+905071922036"}
+            onClick={() => window.location.href = "tel:+905071832036"}
             className="bg-red-500/20 backdrop-blur-sm border-red-400/50 text-white"
             data-testid="button-hero-phone-tr"
           >
             <Phone className="w-4 h-4 mr-2" />
-            TR +90 507 192 2036
+            TR +90 507 183 2036
           </Button>
           <Button
             size="lg"

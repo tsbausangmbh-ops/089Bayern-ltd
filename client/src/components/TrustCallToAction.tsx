@@ -210,11 +210,11 @@ export default function TrustCallToAction() {
               <Button 
                 size="lg" 
                 className="w-full bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700"
-                onClick={() => window.location.href = "tel:+905071922036"}
+                onClick={() => window.location.href = "tel:+905071832036"}
                 data-testid="button-cta-call-tr"
               >
                 <Phone className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
-                +90 507 192 2036
+                +90 507 183 2036
               </Button>
             </CardContent>
           </Card>

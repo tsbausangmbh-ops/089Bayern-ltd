@@ -526,11 +526,11 @@ export default function FAQ() {
                 size="lg" 
                 variant="outline" 
                 className="border-red-400/50 text-white bg-red-500/20 backdrop-blur-sm" 
-                onClick={() => window.location.href = "tel:+905071922036"}
+                onClick={() => window.location.href = "tel:+905071832036"}
                 data-testid="button-faq-hero-phone-tr"
               >
                 <Phone className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
-                TR +90 507 192 2036
+                TR +90 507 183 2036
               </Button>
               <Button 
                 size="lg" 
@@ -625,7 +625,7 @@ export default function FAQ() {
               size="lg" 
               variant="outline" 
               className="border-primary/30 bg-white/50 backdrop-blur-sm px-8" 
-              onClick={() => window.location.href = "tel:+905071922036"}
+              onClick={() => window.location.href = "tel:+905071832036"}
               data-testid="button-faq-phone"
             >
               <Phone className={`w-5 h-5 ${isRtl ? "ml-2" : "mr-2"}`} />

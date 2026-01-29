@@ -941,9 +941,9 @@ export default function InstallationAlanya() {
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button size="lg" variant="outline" className="border-red-400/50 text-white bg-red-500/20 backdrop-blur-sm" asChild data-testid="button-hero-call-tr">
-              <a href="tel:+905071922036">
+              <a href="tel:+905071832036">
                 <Phone className="mr-2 w-4 h-4" />
-                TR +90 507 192 2036
+                TR +90 507 183 2036
               </a>
             </Button>
             <Button size="lg" variant="outline" className="border-amber-400/50 text-white bg-black/30 backdrop-blur-sm" asChild data-testid="button-hero-call-de">
