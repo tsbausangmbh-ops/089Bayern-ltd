@@ -11,6 +11,7 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import { LinkedText } from "@/components/LinkedText";
 import heroImage from "@assets/images/hero-battery-storage.png";
 import batterySystemImage from "@assets/images/battery-system-installed.png";
 import batteryMonitoringImage from "@assets/images/battery-monitoring.png";
@@ -544,7 +545,7 @@ export default function EnerjiDepolama() {
                     )}
                   </div>
                   {openFaq === index && (
-                    <p className="mt-4 text-muted-foreground leading-relaxed">{faq.a}</p>
+                    <p className="mt-4 text-muted-foreground leading-relaxed"><LinkedText text={faq.a} language={language} /></p>
                   )}
                 </CardContent>
               </Card>

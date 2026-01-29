@@ -10,6 +10,7 @@ import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import { LinkedText } from "@/components/LinkedText";
 import heroImage from "@assets/images/hero-antalya.png";
 import roofInstallationImage from "@assets/images/antalya-roof-installation.png";
 import heatpumpInspectionImage from "@assets/images/antalya-heatpump-inspection.png";
@@ -1290,7 +1291,7 @@ export default function InstallationAntalya() {
                 <Sun className="w-6 h-6 text-amber-600" />
               </div>
               <h3 className="text-xl font-bold mb-3">{c.climatePoint1Title}</h3>
-              <p className="text-muted-foreground">{c.climatePoint1Desc}</p>
+              <LinkedText text={c.climatePoint1Desc} language={language} as="p" className="text-muted-foreground" />
             </div>
             
             <div className="bg-background/80 backdrop-blur rounded-xl p-6">
@@ -1298,7 +1299,7 @@ export default function InstallationAntalya() {
                 <Wind className="w-6 h-6 text-sky-600" />
               </div>
               <h3 className="text-xl font-bold mb-3">{c.climatePoint2Title}</h3>
-              <p className="text-muted-foreground">{c.climatePoint2Desc}</p>
+              <LinkedText text={c.climatePoint2Desc} language={language} as="p" className="text-muted-foreground" />
             </div>
             
             <div className="bg-background/80 backdrop-blur rounded-xl p-6">
@@ -1306,7 +1307,7 @@ export default function InstallationAntalya() {
                 <Zap className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="text-xl font-bold mb-3">{c.climatePoint3Title}</h3>
-              <p className="text-muted-foreground">{c.climatePoint3Desc}</p>
+              <LinkedText text={c.climatePoint3Desc} language={language} as="p" className="text-muted-foreground" />
             </div>
           </div>
         </div>
@@ -1420,27 +1421,27 @@ export default function InstallationAntalya() {
           <div className="space-y-4">
             <Card className="p-6">
               <h3 className="text-lg font-bold mb-2">{c.faq1Q}</h3>
-              <p className="text-muted-foreground">{c.faq1A}</p>
+              <LinkedText text={c.faq1A} language={language} as="p" className="text-muted-foreground" />
             </Card>
             
             <Card className="p-6">
               <h3 className="text-lg font-bold mb-2">{c.faq2Q}</h3>
-              <p className="text-muted-foreground">{c.faq2A}</p>
+              <LinkedText text={c.faq2A} language={language} as="p" className="text-muted-foreground" />
             </Card>
             
             <Card className="p-6">
               <h3 className="text-lg font-bold mb-2">{c.faq3Q}</h3>
-              <p className="text-muted-foreground">{c.faq3A}</p>
+              <LinkedText text={c.faq3A} language={language} as="p" className="text-muted-foreground" />
             </Card>
             
             <Card className="p-6">
               <h3 className="text-lg font-bold mb-2">{c.faq4Q}</h3>
-              <p className="text-muted-foreground">{c.faq4A}</p>
+              <LinkedText text={c.faq4A} language={language} as="p" className="text-muted-foreground" />
             </Card>
             
             <Card className="p-6">
               <h3 className="text-lg font-bold mb-2">{c.faq5Q}</h3>
-              <p className="text-muted-foreground">{c.faq5A}</p>
+              <LinkedText text={c.faq5A} language={language} as="p" className="text-muted-foreground" />
             </Card>
           </div>
         </div>
@@ -1463,7 +1464,7 @@ export default function InstallationAntalya() {
                     <system.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">{system.title}</h3>
-                  <p className="text-muted-foreground text-sm mb-4">{system.desc}</p>
+                  <LinkedText text={system.desc} language={language} as="p" className="text-muted-foreground text-sm mb-4" />
                   <ul className="space-y-2">
                     {system.features.map((feature, i) => (
                       <li key={i} className="flex items-center gap-2 text-sm">

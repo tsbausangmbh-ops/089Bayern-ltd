@@ -11,6 +11,7 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import { LinkedText } from "@/components/LinkedText";
 import heroImage from "@assets/images/hero-climate.png";
 import climateIndoorImage from "@assets/images/climate-indoor-unit.png";
 import climateOutdoorImage from "@assets/images/climate-outdoor-install.png";
@@ -634,7 +635,7 @@ export default function Klima() {
                   </button>
                   {openFaq === index && (
                     <div className="px-6 pb-6 text-muted-foreground leading-relaxed">
-                      {faq.a}
+                      <LinkedText text={faq.a} language={language} />
                     </div>
                   )}
                 </CardContent>

@@ -11,6 +11,7 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import { LinkedText } from "@/components/LinkedText";
 import heroImage from "@assets/images/hero-solar-panel.png";
 import solarDetailImage from "@assets/images/solar-detail-wiring.png";
 import solarTestingImage from "@assets/images/solar-testing.png";
@@ -537,7 +538,7 @@ export default function GunesPaneli() {
                   </button>
                   {openFaq === index && (
                     <div className="px-6 pb-6 text-muted-foreground leading-relaxed">
-                      {faq.a}
+                      <LinkedText text={faq.a} language={language} />
                     </div>
                   )}
                 </CardContent>

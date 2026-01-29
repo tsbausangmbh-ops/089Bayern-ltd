@@ -11,6 +11,7 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import { LinkedText } from "@/components/LinkedText";
 import heroImage from "@assets/images/hero-heat-pump.png";
 import heatpumpDetailImage from "@assets/images/heatpump-detail.png";
 import heatpumpConsultationImage from "@assets/images/heatpump-consultation.png";
@@ -960,7 +961,7 @@ export default function IsiPompasi() {
                   </button>
                   {openFaq === index && (
                     <div className="px-6 pb-6 text-muted-foreground leading-relaxed">
-                      {faq.a}
+                      <LinkedText text={faq.a} language={language} />
                     </div>
                   )}
                 </CardContent>
