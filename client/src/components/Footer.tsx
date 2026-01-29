@@ -238,6 +238,10 @@ export default function Footer() {
               <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline" data-testid="link-extrucon">
                 ExtruCon GmbH
               </a>
+              {" & "}
+              <a href="https://kshwmont.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline" data-testid="link-kshwmont">
+                KSHWmont d.o.o.
+              </a>
               {". "}
               {t.footer.copyright}
             </p>
