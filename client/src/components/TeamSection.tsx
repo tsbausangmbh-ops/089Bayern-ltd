@@ -15,7 +15,7 @@ export default function TeamSection() {
       name: "Dalibor Bakmaz",
       role: t.team.member1Role,
       description: t.team.member1Description,
-      languages: ["Deutsch"],
+      languages: ["Deutsch", "Kroatisch", "Englisch"],
       emails: ["info@089bayern.com", "dbakmaz@089bayern.com"],
       phones: ["+90 507 192 2036", "+49 155 68855141"],
       whatsapp: "+4915568855141",
