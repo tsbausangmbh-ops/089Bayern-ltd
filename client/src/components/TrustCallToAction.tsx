@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Phone, Mail, MessageCircle, Shield, Clock, Users, CheckCircle } from "lucide-react";
+import { Phone, Mail, MessageCircle, Shield, Clock, Users, CheckCircle, MapPin } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
 const content = {
@@ -9,11 +9,12 @@ const content = {
     badge: "Wir sind für Sie da",
     title: "Vertrauen Sie uns Ihre Energiezukunft an",
     subtitle: "Haben Sie Fragen? Hohe Stromrechnungen? Unsichere Energieversorgung? Wir verstehen Ihre Sorgen und finden gemeinsam die beste Lösung für Ihre Villa.",
-    callTitle: "Jetzt anrufen",
-    callSubtitle: "Sofortige Beratung auf Deutsch & Türkisch",
+    locationNote: "Wir arbeiten sowohl in Deutschland als auch in der Türkei - rufen Sie uns an!",
+    callTitleDE: "Deutschland",
+    callTitleTR: "Türkei",
     emailTitle: "Email senden",
     emailSubtitle: "Antwort innerhalb von 24 Stunden",
-    whatsappTitle: "WhatsApp schreiben",
+    whatsappTitle: "WhatsApp",
     whatsappSubtitle: "Schnelle Antwort garantiert",
     trust1: "500+ zufriedene Kunden",
     trust2: "10 Jahre Garantie",
@@ -24,11 +25,12 @@ const content = {
     badge: "Yanınızdayız",
     title: "Enerji Geleceğinizi Bize Emanet Edin",
     subtitle: "Sorularınız mı var? Yüksek elektrik faturaları? Güvensiz enerji arzı? Endişelerinizi anlıyoruz ve villanız için en iyi çözümü birlikte buluyoruz.",
-    callTitle: "Hemen Arayın",
-    callSubtitle: "Türkçe & Almanca anında danışmanlık",
+    locationNote: "Hem Almanya'da hem de Türkiye'de çalışıyoruz - bizi arayın!",
+    callTitleDE: "Almanya",
+    callTitleTR: "Türkiye",
     emailTitle: "Email Gönderin",
     emailSubtitle: "24 saat içinde yanıt",
-    whatsappTitle: "WhatsApp Yazın",
+    whatsappTitle: "WhatsApp",
     whatsappSubtitle: "Hızlı yanıt garantisi",
     trust1: "500+ mutlu müşteri",
     trust2: "10 yıl garanti",
@@ -39,11 +41,12 @@ const content = {
     badge: "We're here for you",
     title: "Trust Us With Your Energy Future",
     subtitle: "Have questions? High electricity bills? Unreliable energy supply? We understand your concerns and will find the best solution for your villa together.",
-    callTitle: "Call Now",
-    callSubtitle: "Instant consultation in German & Turkish",
+    locationNote: "We work in both Germany and Turkey - call us!",
+    callTitleDE: "Germany",
+    callTitleTR: "Turkey",
     emailTitle: "Send Email",
     emailSubtitle: "Response within 24 hours",
-    whatsappTitle: "WhatsApp Message",
+    whatsappTitle: "WhatsApp",
     whatsappSubtitle: "Quick response guaranteed",
     trust1: "500+ happy customers",
     trust2: "10 year warranty",
@@ -54,11 +57,12 @@ const content = {
     badge: "Мы рядом с вами",
     title: "Доверьте нам ваше энергетическое будущее",
     subtitle: "Есть вопросы? Высокие счета за электричество? Ненадежное энергоснабжение? Мы понимаем ваши проблемы и вместе найдем лучшее решение для вашей виллы.",
-    callTitle: "Позвоните сейчас",
-    callSubtitle: "Консультация на немецком и турецком",
+    locationNote: "Мы работаем в Германии и Турции - звоните нам!",
+    callTitleDE: "Германия",
+    callTitleTR: "Турция",
     emailTitle: "Отправить Email",
     emailSubtitle: "Ответ в течение 24 часов",
-    whatsappTitle: "Написать в WhatsApp",
+    whatsappTitle: "WhatsApp",
     whatsappSubtitle: "Быстрый ответ гарантирован",
     trust1: "500+ довольных клиентов",
     trust2: "10 лет гарантии",
@@ -69,11 +73,12 @@ const content = {
     badge: "Ми поруч з вами",
     title: "Довірте нам ваше енергетичне майбутнє",
     subtitle: "Маєте питання? Високі рахунки за електрику? Ненадійне енергопостачання? Ми розуміємо ваші проблеми і разом знайдемо найкраще рішення для вашої вілли.",
-    callTitle: "Зателефонуйте зараз",
-    callSubtitle: "Консультація німецькою та турецькою",
+    locationNote: "Ми працюємо в Німеччині та Туреччині - телефонуйте нам!",
+    callTitleDE: "Німеччина",
+    callTitleTR: "Туреччина",
     emailTitle: "Надіслати Email",
     emailSubtitle: "Відповідь протягом 24 годин",
-    whatsappTitle: "Написати в WhatsApp",
+    whatsappTitle: "WhatsApp",
     whatsappSubtitle: "Швидка відповідь гарантована",
     trust1: "500+ задоволених клієнтів",
     trust2: "10 років гарантії",
@@ -84,11 +89,12 @@ const content = {
     badge: "نحن هنا من أجلك",
     title: "اعهد لنا بمستقبل الطاقة الخاص بك",
     subtitle: "هل لديك أسئلة؟ فواتير كهرباء عالية؟ إمداد طاقة غير موثوق؟ نحن نفهم مخاوفك وسنجد أفضل حل لفيلتك معاً.",
-    callTitle: "اتصل الآن",
-    callSubtitle: "استشارة فورية بالألمانية والتركية",
+    locationNote: "نعمل في ألمانيا وتركيا - اتصل بنا!",
+    callTitleDE: "ألمانيا",
+    callTitleTR: "تركيا",
     emailTitle: "أرسل بريد إلكتروني",
     emailSubtitle: "رد خلال 24 ساعة",
-    whatsappTitle: "رسالة واتساب",
+    whatsappTitle: "واتساب",
     whatsappSubtitle: "رد سريع مضمون",
     trust1: "500+ عميل سعيد",
     trust2: "ضمان 10 سنوات",
@@ -99,11 +105,12 @@ const content = {
     badge: "Tu smo za vas",
     title: "Povjerite nam svoju energetsku budućnost",
     subtitle: "Imate pitanja? Visoki računi za struju? Nepouzdana opskrba energijom? Razumijemo vaše brige i zajedno ćemo pronaći najbolje rješenje za vašu vilu.",
-    callTitle: "Nazovite sada",
-    callSubtitle: "Trenutačno savjetovanje na njemačkom i turskom",
+    locationNote: "Radimo u Njemačkoj i Turskoj - nazovite nas!",
+    callTitleDE: "Njemačka",
+    callTitleTR: "Turska",
     emailTitle: "Pošaljite email",
     emailSubtitle: "Odgovor u roku od 24 sata",
-    whatsappTitle: "WhatsApp poruka",
+    whatsappTitle: "WhatsApp",
     whatsappSubtitle: "Brzi odgovor zajamčen",
     trust1: "500+ zadovoljnih kupaca",
     trust2: "10 godina jamstva",
@@ -135,9 +142,13 @@ export default function TrustCallToAction() {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             {c.title}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
             {c.subtitle}
           </p>
+          <div className="flex items-center justify-center gap-2 text-primary font-medium">
+            <MapPin className="w-5 h-5" />
+            <span>{c.locationNote}</span>
+          </div>
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -149,60 +160,81 @@ export default function TrustCallToAction() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="border-border/50 bg-gradient-to-br from-green-500/10 to-emerald-500/5 hover-elevate cursor-pointer" data-testid="card-cta-call">
-            <CardContent className="p-8 text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg">
-                <Phone className="w-8 h-8 text-white" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <Card className="border-border/50 bg-gradient-to-br from-amber-500/10 to-yellow-500/5 hover-elevate cursor-pointer" data-testid="card-cta-call-de">
+            <CardContent className="p-6 text-center">
+              <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center shadow-lg">
+                <Phone className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">{c.callTitle}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{c.callSubtitle}</p>
+              <Badge variant="outline" className="mb-3 bg-black/80 text-amber-400 border-amber-500/50">
+                {c.callTitleDE}
+              </Badge>
               <Button 
                 size="lg" 
-                className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700"
-                onClick={() => window.location.href = "tel:+905071832036"}
-                data-testid="button-cta-call"
+                className="w-full bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700"
+                onClick={() => window.location.href = "tel:+4917647877177"}
+                data-testid="button-cta-call-de"
               >
-                <Phone className={`w-5 h-5 ${isRtl ? "ml-2" : "mr-2"}`} />
+                <Phone className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
+                +49 176 4787 7177
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card className="border-border/50 bg-gradient-to-br from-red-500/10 to-rose-500/5 hover-elevate cursor-pointer" data-testid="card-cta-call-tr">
+            <CardContent className="p-6 text-center">
+              <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center shadow-lg">
+                <Phone className="w-7 h-7 text-white" />
+              </div>
+              <Badge variant="outline" className="mb-3 bg-red-900/80 text-red-200 border-red-500/50">
+                {c.callTitleTR}
+              </Badge>
+              <Button 
+                size="lg" 
+                className="w-full bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700"
+                onClick={() => window.location.href = "tel:+905071832036"}
+                data-testid="button-cta-call-tr"
+              >
+                <Phone className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
                 +90 507 183 2036
               </Button>
             </CardContent>
           </Card>
 
-          <Card className="border-border/50 bg-gradient-to-br from-blue-500/10 to-indigo-500/5 hover-elevate cursor-pointer" data-testid="card-cta-email">
-            <CardContent className="p-8 text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg">
-                <Mail className="w-8 h-8 text-white" />
+          <Card className="border-border/50 bg-gradient-to-br from-green-400/10 to-emerald-500/5 hover-elevate cursor-pointer" data-testid="card-cta-whatsapp">
+            <CardContent className="p-6 text-center">
+              <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center shadow-lg">
+                <MessageCircle className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">{c.emailTitle}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{c.emailSubtitle}</p>
+              <h3 className="text-lg font-bold text-foreground mb-1">{c.whatsappTitle}</h3>
+              <p className="text-muted-foreground text-xs mb-3">{c.whatsappSubtitle}</p>
+              <Button 
+                size="lg" 
+                className="w-full bg-gradient-to-r from-green-400 to-emerald-500 hover:from-green-500 hover:to-emerald-600"
+                onClick={() => window.open("https://wa.me/905071832036", "_blank")}
+                data-testid="button-cta-whatsapp"
+              >
+                <MessageCircle className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
+                WhatsApp
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card className="border-border/50 bg-gradient-to-br from-blue-500/10 to-indigo-500/5 hover-elevate cursor-pointer" data-testid="card-cta-email">
+            <CardContent className="p-6 text-center">
+              <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg">
+                <Mail className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-foreground mb-1">{c.emailTitle}</h3>
+              <p className="text-muted-foreground text-xs mb-3">{c.emailSubtitle}</p>
               <Button 
                 size="lg" 
                 className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700"
                 onClick={() => window.location.href = "mailto:info@089bayern.de"}
                 data-testid="button-cta-email"
               >
-                <Mail className={`w-5 h-5 ${isRtl ? "ml-2" : "mr-2"}`} />
-                info@089bayern.de
-              </Button>
-            </CardContent>
-          </Card>
-
-          <Card className="border-border/50 bg-gradient-to-br from-green-400/10 to-teal-500/5 hover-elevate cursor-pointer" data-testid="card-cta-whatsapp">
-            <CardContent className="p-8 text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center shadow-lg">
-                <MessageCircle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">{c.whatsappTitle}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{c.whatsappSubtitle}</p>
-              <Button 
-                size="lg" 
-                className="w-full bg-gradient-to-r from-green-400 to-teal-500 hover:from-green-500 hover:to-teal-600"
-                onClick={() => window.open("https://wa.me/905071832036", "_blank")}
-                data-testid="button-cta-whatsapp"
-              >
-                <MessageCircle className={`w-5 h-5 ${isRtl ? "ml-2" : "mr-2"}`} />
-                WhatsApp
+                <Mail className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
+                Email
               </Button>
             </CardContent>
           </Card>
