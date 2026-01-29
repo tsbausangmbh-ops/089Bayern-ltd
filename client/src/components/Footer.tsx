@@ -61,12 +61,16 @@ export default function Footer() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-6">
           <div>
-            <div className="mb-6">
+            <div className="flex items-center gap-3 mb-6">
               <img 
                 src={logoImage} 
                 alt="089 Bayern Logo" 
-                className="h-20 w-auto object-contain rounded-lg"
+                className="h-16 w-auto object-contain rounded-lg"
               />
+              <div>
+                <span className="block text-xl font-bold text-white">089Bayern</span>
+                <span className="block text-sm text-white/70">Turkey</span>
+              </div>
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
               {t.footer.description}
