@@ -13,6 +13,7 @@ import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import EmbeddedChatSection from "@/components/EmbeddedChatSection";
+import TeamWorkSection from "@/components/TeamWorkSection";
 
 interface CalculatorData {
   propertyType: string;
@@ -68,6 +69,7 @@ export default function Home() {
       <Header onCtaClick={handleCtaClick} />
       <HeroSection onCtaClick={handleCtaClick} onLearnMoreClick={handleLearnMoreClick} />
       <FeaturesGrid />
+      <TeamWorkSection />
       <EmbeddedChatSection />
       <ProblemSolverSection />
       <LogoCarousel />
