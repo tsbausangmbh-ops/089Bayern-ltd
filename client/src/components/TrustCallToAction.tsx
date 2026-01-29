@@ -185,11 +185,11 @@ export default function TrustCallToAction() {
               <Button 
                 size="lg" 
                 className="w-full bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700"
-                onClick={() => window.location.href = "tel:+4917647877177"}
+                onClick={() => window.location.href = "tel:+491735994699"}
                 data-testid="button-cta-call-de"
               >
                 <Phone className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
-                +49 176 4787 7177
+                +49 173 5994699
               </Button>
             </CardContent>
           </Card>
@@ -224,7 +224,7 @@ export default function TrustCallToAction() {
               <Button 
                 size="lg" 
                 className="w-full bg-gradient-to-r from-green-400 to-emerald-500 hover:from-green-500 hover:to-emerald-600"
-                onClick={() => window.open("https://wa.me/905071832036", "_blank")}
+                onClick={() => window.open("https://wa.me/491735994699", "_blank")}
                 data-testid="button-cta-whatsapp"
               >
                 <MessageCircle className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />

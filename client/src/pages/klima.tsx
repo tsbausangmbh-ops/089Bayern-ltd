@@ -639,17 +639,17 @@ export default function Klima() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                onClick={() => window.location.href = "tel:+4917647877177"}
+                onClick={() => window.location.href = "tel:+491735994699"}
                 data-testid="button-final-phone-de"
               >
                 <Phone className="w-4 h-4 mr-2" />
-                +49 176 4787 7177
+                +49 173 5994699
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="border-green-500/50 bg-green-500/10" 
-                onClick={() => window.open("https://wa.me/905071832036", "_blank")}
+                onClick={() => window.open("https://wa.me/491735994699", "_blank")}
                 data-testid="button-final-whatsapp"
               >
                 WhatsApp

@@ -505,17 +505,17 @@ export default function Vorteile() {
                 size="lg" 
                 variant="outline" 
                 className="border-amber-400/50 text-white bg-black/30 backdrop-blur-sm" 
-                onClick={() => window.location.href = "tel:+4917647877177"}
+                onClick={() => window.location.href = "tel:+491735994699"}
                 data-testid="button-vorteile-phone-de"
               >
                 <Phone className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
-                +49 176 4787 7177
+                +49 173 5994699
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm" 
-                onClick={() => window.open("https://wa.me/905071832036", "_blank")}
+                onClick={() => window.open("https://wa.me/491735994699", "_blank")}
                 data-testid="button-vorteile-whatsapp"
               >
                 <Sparkles className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
