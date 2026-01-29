@@ -428,7 +428,15 @@ export default function EnerjiDepolama() {
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
                 src={batterySystemImage} 
-                alt="Samsung batarya depolama sistemi kurulumu" 
+                alt={{
+                  tr: "089 Bayern Samsung All-in-One batarya depolama sistemi kurulumu Antalya villasında 7/24 enerji",
+                  de: "089 Bayern Samsung All-in-One Batteriespeichersystem Installation in Antalya Villa 24/7 Energie",
+                  en: "089 Bayern Samsung All-in-One battery storage system installation Antalya villa 24/7 energy",
+                  ru: "089 Bayern установка системы хранения батарей Samsung All-in-One на вилле в Анталии энергия 24/7",
+                  uk: "089 Bayern встановлення системи зберігання батарей Samsung All-in-One на віллі в Анталії енергія 24/7",
+                  ar: "089 Bayern تركيب نظام تخزين بطارية Samsung All-in-One في فيلا أنطاليا طاقة 24/7",
+                  hr: "089 Bayern Samsung All-in-One sustav za pohranu baterija instalacija u vili Antalya energija 24/7"
+                }[language] || "089 Bayern Samsung battery storage installation Antalya"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 data-testid="img-battery-system"
               />
@@ -436,7 +444,15 @@ export default function EnerjiDepolama() {
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
                 src={batteryMonitoringImage} 
-                alt="Enerji izleme ve kontrol" 
+                alt={{
+                  tr: "089 Bayern enerji izleme ve kontrol sistemi akıllı ev entegrasyonu ile Türkiye",
+                  de: "089 Bayern Energieüberwachung und Kontrollsystem mit Smart Home Integration Türkei",
+                  en: "089 Bayern energy monitoring and control system with smart home integration Turkey",
+                  ru: "089 Bayern система мониторинга и контроля энергии с интеграцией умного дома Турция",
+                  uk: "089 Bayern система моніторингу та контролю енергії з інтеграцією розумного будинку Туреччина",
+                  ar: "089 Bayern نظام مراقبة وتحكم الطاقة مع تكامل المنزل الذكي تركيا",
+                  hr: "089 Bayern sustav za praćenje i kontrolu energije s integracijom pametnog doma Turska"
+                }[language] || "089 Bayern energy monitoring smart home Turkey"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 data-testid="img-battery-monitoring"
               />

@@ -1320,7 +1320,15 @@ export default function InstallationAntalya() {
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
                 src={roofInstallationImage} 
-                alt="089 Bayern Solarpanel-Installation auf Villadach in Antalya" 
+                alt={{
+                  tr: "089 Bayern güneş paneli kurulumu Antalya villa çatısında profesyonel montaj ekibi",
+                  de: "089 Bayern Solarpanel-Installation auf Villadach in Antalya professionelles Montageteam Türkei",
+                  en: "089 Bayern solar panel installation on villa roof in Antalya professional installation team Turkey",
+                  ru: "089 Bayern установка солнечных панелей на крыше виллы в Анталии профессиональная монтажная бригада Турция",
+                  uk: "089 Bayern встановлення сонячних панелей на даху вілли в Анталії професійна монтажна бригада Туреччина",
+                  ar: "089 Bayern تركيب ألواح شمسية على سطح فيلا في أنطاليا فريق تركيب محترف تركيا",
+                  hr: "089 Bayern instalacija solarnih panela na krovu vile u Antaliji profesionalni montažni tim Turska"
+                }[language] || "089 Bayern solar panel installation Antalya villa roof professional team"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 data-testid="img-roof-installation"
               />
@@ -1328,7 +1336,15 @@ export default function InstallationAntalya() {
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
                 src={heatpumpInspectionImage} 
-                alt="Vaillant Wärmepumpen-Inspektion in Antalya" 
+                alt={{
+                  tr: "089 Bayern Vaillant ısı pompası kurulum kontrolü Antalya Alman kalitesi",
+                  de: "089 Bayern Vaillant Wärmepumpen-Inspektion und Qualitätskontrolle in Antalya deutsche Standards",
+                  en: "089 Bayern Vaillant heat pump installation inspection in Antalya German quality standards",
+                  ru: "089 Bayern осмотр установки теплового насоса Vaillant в Анталии немецкие стандарты качества",
+                  uk: "089 Bayern інспекція встановлення теплового насоса Vaillant в Анталії німецькі стандарти якості",
+                  ar: "089 Bayern فحص تركيب مضخة الحرارة Vaillant في أنطاليا معايير الجودة الألمانية",
+                  hr: "089 Bayern Vaillant inspekcija instalacije toplinske pumpe u Antaliji njemački standardi kvalitete"
+                }[language] || "089 Bayern Vaillant heat pump inspection Antalya German quality"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 data-testid="img-heatpump-inspection"
               />
@@ -1343,7 +1359,15 @@ export default function InstallationAntalya() {
           <div className="rounded-xl overflow-hidden shadow-2xl">
             <img 
               src={teamCompletedImage} 
-              alt="089 Bayern Installationsteam vor fertigem 4-in-1 Energiesystem in Antalya" 
+              alt={{
+                tr: "089 Bayern kurulum ekibi tamamlanmış 4-in-1 enerji sistemi önünde Antalya villasında başarılı proje",
+                de: "089 Bayern Installationsteam vor fertigem 4-in-1 Energiesystem in Antalya Villa erfolgreiches Projekt Türkei",
+                en: "089 Bayern installation team in front of completed 4-in-1 energy system Antalya villa successful project Turkey",
+                ru: "089 Bayern монтажная бригада перед завершенной системой 4-в-1 на вилле в Анталии успешный проект Турция",
+                uk: "089 Bayern монтажна бригада перед завершеною системою 4-в-1 на віллі в Анталії успішний проект Туреччина",
+                ar: "089 Bayern فريق التركيب أمام نظام 4 في 1 المكتمل في فيلا أنطاليا مشروع ناجح تركيا",
+                hr: "089 Bayern instalacijski tim ispred završenog 4-u-1 energetskog sustava u vili Antalya uspješan projekt Turska"
+              }[language] || "089 Bayern team completed 4-in-1 energy system Antalya villa"} 
               className="w-full h-80 md:h-[500px] object-cover"
               data-testid="img-team-completed"
             />

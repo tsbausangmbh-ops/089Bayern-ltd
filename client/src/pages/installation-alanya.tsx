@@ -1112,7 +1112,15 @@ export default function InstallationAlanya() {
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
                 src={teamWorkImage} 
-                alt="089 Bayern kurulum ekibi Alanya'da çalışıyor" 
+                alt={{
+                  tr: "089 Bayern kurulum ekibi Alanya'da güneş paneli ve ısı pompası kurulumu yapıyor Akdeniz",
+                  de: "089 Bayern Installationsteam bei Solarpanel- und Wärmepumpen-Installation in Alanya Mittelmeerküste Türkei",
+                  en: "089 Bayern installation team working on solar panel and heat pump installation in Alanya Mediterranean coast Turkey",
+                  ru: "089 Bayern монтажная бригада работает над установкой солнечных панелей и теплового насоса в Аланье Средиземноморье Турция",
+                  uk: "089 Bayern монтажна бригада працює над встановленням сонячних панелей та теплового насоса в Аланії Середземномор'я Туреччина",
+                  ar: "089 Bayern فريق التركيب يعمل على تركيب الألواح الشمسية ومضخة الحرارة في ألانيا ساحل البحر المتوسط تركيا",
+                  hr: "089 Bayern instalacijski tim radi na instalaciji solarnih panela i toplinske pumpe u Alanyi Mediteran Turska"
+                }[language] || "089 Bayern installation team Alanya solar panel heat pump"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 data-testid="img-team-work"
               />
@@ -1120,7 +1128,15 @@ export default function InstallationAlanya() {
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
                 src={deliveryImage} 
-                alt="Profesyonel ekipman teslimi" 
+                alt={{
+                  tr: "089 Bayern Samsung ve Vaillant premium ekipman teslimi Alanya villasına profesyonel lojistik",
+                  de: "089 Bayern Samsung und Vaillant Premium-Gerätelieferung zur Alanya Villa professionelle Logistik",
+                  en: "089 Bayern Samsung and Vaillant premium equipment delivery to Alanya villa professional logistics",
+                  ru: "089 Bayern доставка премиум-оборудования Samsung и Vaillant на виллу в Аланье профессиональная логистика",
+                  uk: "089 Bayern доставка преміум-обладнання Samsung та Vaillant на віллу в Аланії професійна логістика",
+                  ar: "089 Bayern توصيل معدات Samsung وVaillant الفاخرة إلى فيلا ألانيا لوجستيات احترافية",
+                  hr: "089 Bayern isporuka Samsung i Vaillant premium opreme u vilu Alanya profesionalna logistika"
+                }[language] || "089 Bayern Samsung Vaillant equipment delivery Alanya"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 data-testid="img-delivery"
               />

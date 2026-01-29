@@ -424,7 +424,15 @@ export default function GunesPaneli() {
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
                 src={solarDetailImage} 
-                alt="Profesyonel güneş paneli kablo bağlantısı" 
+                alt={{
+                  tr: "089 Bayern profesyonel güneş paneli kablo bağlantısı ve montaj detayı Antalya villası çatısında",
+                  de: "089 Bayern professionelle Solarpanel-Verkabelung und Montagedetail auf Villadach in Antalya Türkei",
+                  en: "089 Bayern professional solar panel wiring and installation detail on villa roof in Antalya Turkey",
+                  ru: "089 Bayern профессиональная проводка и монтаж солнечных панелей на крыше виллы в Анталии Турция",
+                  uk: "089 Bayern професійна проводка та монтаж сонячних панелей на даху вілли в Анталії Туреччина",
+                  ar: "089 Bayern توصيل أسلاك ألواح شمسية احترافية وتفاصيل التركيب على سطح فيلا في أنطاليا تركيا",
+                  hr: "089 Bayern profesionalno kabliranje solarnih panela i detalji montaže na krovu vile u Antaliji Turska"
+                }[language] || "089 Bayern professional solar panel installation detail Antalya villa"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 data-testid="img-solar-detail"
               />
@@ -432,7 +440,15 @@ export default function GunesPaneli() {
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
                 src={solarTestingImage} 
-                alt="Güneş paneli test ve ölçüm" 
+                alt={{
+                  tr: "089 Bayern teknisyeni güneş paneli test ve ölçüm yapıyor Akdeniz villasında",
+                  de: "089 Bayern Techniker führt Solarpanel-Test und Messungen in Mittelmeer-Villa durch",
+                  en: "089 Bayern technician performing solar panel testing and measurements in Mediterranean villa",
+                  ru: "089 Bayern техник проводит тестирование и измерения солнечных панелей на средиземноморской вилле",
+                  uk: "089 Bayern технік проводить тестування та вимірювання сонячних панелей на середземноморській віллі",
+                  ar: "089 Bayern فني يقوم باختبار وقياس الألواح الشمسية في فيلا البحر المتوسط",
+                  hr: "089 Bayern tehničar provodi testiranje i mjerenje solarnih panela na mediteranskoj vili"
+                }[language] || "089 Bayern solar panel testing Mediterranean villa"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 data-testid="img-solar-testing"
               />
