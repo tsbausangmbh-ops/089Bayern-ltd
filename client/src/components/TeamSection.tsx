@@ -28,7 +28,7 @@ export default function TeamSection() {
       role: t.team.member2Role,
       description: t.team.member2Description,
       languages: ["Deutsch", "Türkisch"],
-      emails: ["msakar@089bayern.com"],
+      emails: ["info@089bayern.com", "msakar@089bayern.com"],
       phones: ["+90 507 183 2036", "+49 155 68855141"],
       whatsapp: "+4915568855141",
       initials: "MS",
