@@ -10,6 +10,26 @@ The site features a multi-step savings calculator that captures lead data, premi
 
 Preferred communication style: Simple, everyday language.
 
+## GESPERRTE KONTAKTDATEN - NICHT OHNE NACHFRAGE ÄNDERN!
+
+### Dalibor Bakmaz - CEO / Geschäftsführer
+- 15+ Jahre Erfahrung mit deutschen Energiesystemen. Gründer des Türkei-Marktes.
+- Sprachen: Deutsch / Kroatisch / Englisch
+- E-Mail: info@089bayern.com, dbakmaz@089bayern.com
+- TR: +90 507 192 2036
+- DE: +49 155 60990093
+- WhatsApp: +49 155 60990093
+
+### Mustafa Sakar - CEO / Mitgründer (PRIO 1 für Hero/CTA)
+- Brückenbauer zwischen Türkei und Deutschland. Experte für erneuerbare Energien und Immobilieninvestitionen.
+- Sprachen: Deutsch / Türkisch
+- E-Mail: info@089bayern.com, msakar@089bayern.com
+- TR: +90 507 183 2036
+- DE: +49 173 5994699
+- WhatsApp: +49 173 5994699
+
+**WICHTIG:** Sakar erscheint auf allen Hero-Bereichen und CTA-Komponenten. Bakmaz erscheint NUR im Team-Bereich.
+
 ## System Architecture
 
 ### Frontend Architecture
