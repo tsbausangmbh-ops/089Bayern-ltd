@@ -173,85 +173,78 @@ export default function TrustCallToAction() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <Card className="border-border/50 bg-gradient-to-br from-amber-500/10 to-yellow-500/5 hover-elevate cursor-pointer" data-testid="card-cta-call-de">
-            <CardContent className="p-6 text-center">
-              <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center shadow-lg">
-                <Phone className="w-7 h-7 text-white" />
+            <CardContent className="p-4 text-center">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center shadow-lg">
+                <Phone className="w-6 h-6 text-white" />
               </div>
-              <Badge variant="outline" className="mb-2 bg-black/80 text-amber-400 border-amber-500/50">
+              <Badge variant="outline" className="mb-2 bg-black/80 text-amber-400 border-amber-500/50 text-xs">
                 {c.callTitleDE}
               </Badge>
-              <p className="text-base font-bold text-foreground">Mustafa Sakar</p>
-              <p className="text-xs text-primary font-medium mb-1">CEO / Mitgründer</p>
-              <p className="text-xs text-muted-foreground mb-1">Brückenbauer zwischen Türkei und Deutschland</p>
-              <p className="text-xs text-muted-foreground mb-2">Deutsch / Türkisch</p>
-              <p className="text-xs text-primary/80 mb-3">info@089bayern.com</p>
               <Button 
-                size="lg" 
-                className="w-full bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700"
+                size="default" 
+                className="w-full bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-sm"
                 onClick={() => window.location.href = "tel:+491735994699"}
                 data-testid="button-cta-call-de"
               >
-                <Phone className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
+                <Phone className={`w-4 h-4 ${isRtl ? "ml-1.5" : "mr-1.5"}`} />
                 +49 173 5994699
               </Button>
             </CardContent>
           </Card>
 
           <Card className="border-border/50 bg-gradient-to-br from-red-500/10 to-rose-500/5 hover-elevate cursor-pointer" data-testid="card-cta-call-tr">
-            <CardContent className="p-6 text-center">
-              <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center shadow-lg">
-                <Phone className="w-7 h-7 text-white" />
+            <CardContent className="p-4 text-center">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center shadow-lg">
+                <Phone className="w-6 h-6 text-white" />
               </div>
-              <Badge variant="outline" className="mb-3 bg-red-900/80 text-red-200 border-red-500/50">
+              <Badge variant="outline" className="mb-2 bg-red-900/80 text-red-200 border-red-500/50 text-xs">
                 {c.callTitleTR}
               </Badge>
               <Button 
-                size="lg" 
-                className="w-full bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700"
+                size="default" 
+                className="w-full bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700 text-sm"
                 onClick={() => window.location.href = "tel:+905071832036"}
                 data-testid="button-cta-call-tr"
               >
-                <Phone className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
+                <Phone className={`w-4 h-4 ${isRtl ? "ml-1.5" : "mr-1.5"}`} />
                 +90 507 183 2036
               </Button>
             </CardContent>
           </Card>
 
           <Card className="border-border/50 bg-gradient-to-br from-green-400/10 to-emerald-500/5 hover-elevate cursor-pointer" data-testid="card-cta-whatsapp">
-            <CardContent className="p-6 text-center">
-              <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center shadow-lg">
-                <MessageCircle className="w-7 h-7 text-white" />
+            <CardContent className="p-4 text-center">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center shadow-lg">
+                <MessageCircle className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-1">{c.whatsappTitle}</h3>
-              <p className="text-muted-foreground text-xs mb-3">{c.whatsappSubtitle}</p>
+              <h3 className="text-sm font-bold text-foreground mb-2">{c.whatsappTitle}</h3>
               <Button 
-                size="lg" 
-                className="w-full bg-gradient-to-r from-green-400 to-emerald-500 hover:from-green-500 hover:to-emerald-600"
+                size="default" 
+                className="w-full bg-gradient-to-r from-green-400 to-emerald-500 hover:from-green-500 hover:to-emerald-600 text-sm"
                 onClick={() => window.open("https://wa.me/491735994699", "_blank")}
                 data-testid="button-cta-whatsapp"
               >
-                <MessageCircle className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
+                <MessageCircle className={`w-4 h-4 ${isRtl ? "ml-1.5" : "mr-1.5"}`} />
                 WhatsApp
               </Button>
             </CardContent>
           </Card>
 
           <Card className="border-border/50 bg-gradient-to-br from-blue-500/10 to-indigo-500/5 hover-elevate cursor-pointer" data-testid="card-cta-email">
-            <CardContent className="p-6 text-center">
-              <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg">
-                <Mail className="w-7 h-7 text-white" />
+            <CardContent className="p-4 text-center">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg">
+                <Mail className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-1">{c.emailTitle}</h3>
-              <p className="text-muted-foreground text-xs mb-3">{c.emailSubtitle}</p>
+              <h3 className="text-sm font-bold text-foreground mb-2">{c.emailTitle}</h3>
               <Button 
-                size="lg" 
-                className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700"
+                size="default" 
+                className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-sm"
                 onClick={() => window.location.href = "mailto:info@089bayern.com"}
                 data-testid="button-cta-email"
               >
-                <Mail className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
+                <Mail className={`w-4 h-4 ${isRtl ? "ml-1.5" : "mr-1.5"}`} />
                 Email
               </Button>
             </CardContent>
