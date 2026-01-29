@@ -659,17 +659,17 @@ export default function Rechner() {
                 size="lg" 
                 variant="outline" 
                 className="border-amber-400/50 text-white bg-black/30 backdrop-blur-sm" 
-                onClick={() => window.location.href = "tel:+4915568855141"}
+                onClick={() => window.location.href = "tel:+491735994699"}
                 data-testid="button-rechner-phone-de"
               >
                 <Phone className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
-                DE +49 155 68855141
+                DE +49 173 5994699
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm" 
-                onClick={() => window.open("https://wa.me/4915568855141", "_blank")}
+                onClick={() => window.open("https://wa.me/491735994699", "_blank")}
                 data-testid="button-rechner-whatsapp"
               >
                 WhatsApp

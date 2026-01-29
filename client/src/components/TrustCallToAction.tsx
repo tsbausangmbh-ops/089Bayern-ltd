@@ -182,19 +182,19 @@ export default function TrustCallToAction() {
               <Badge variant="outline" className="mb-2 bg-black/80 text-amber-400 border-amber-500/50">
                 {c.callTitleDE}
               </Badge>
-              <p className="text-base font-bold text-foreground">Dalibor Bakmaz</p>
-              <p className="text-xs text-primary font-medium mb-1">CEO / Geschäftsführer</p>
-              <p className="text-xs text-muted-foreground mb-1">15+ Jahre Erfahrung mit deutschen Energiesystemen</p>
-              <p className="text-xs text-muted-foreground mb-2">Deutsch</p>
+              <p className="text-base font-bold text-foreground">Mustafa Sakar</p>
+              <p className="text-xs text-primary font-medium mb-1">CEO / Mitgründer</p>
+              <p className="text-xs text-muted-foreground mb-1">Brückenbauer zwischen Türkei und Deutschland</p>
+              <p className="text-xs text-muted-foreground mb-2">Deutsch / Türkisch</p>
               <p className="text-xs text-primary/80 mb-3">info@089bayern.com</p>
               <Button 
                 size="lg" 
                 className="w-full bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700"
-                onClick={() => window.location.href = "tel:+4915568855141"}
+                onClick={() => window.location.href = "tel:+491735994699"}
                 data-testid="button-cta-call-de"
               >
                 <Phone className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
-                +49 155 68855141
+                +49 173 5994699
               </Button>
             </CardContent>
           </Card>
@@ -229,7 +229,7 @@ export default function TrustCallToAction() {
               <Button 
                 size="lg" 
                 className="w-full bg-gradient-to-r from-green-400 to-emerald-500 hover:from-green-500 hover:to-emerald-600"
-                onClick={() => window.open("https://wa.me/4915568855141", "_blank")}
+                onClick={() => window.open("https://wa.me/491735994699", "_blank")}
                 data-testid="button-cta-whatsapp"
               >
                 <MessageCircle className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />

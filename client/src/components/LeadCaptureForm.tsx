@@ -147,7 +147,7 @@ export default function LeadCaptureForm({ isOpen, onClose, calculatorData, initi
                   <span>+90 507 183 2036</span>
                 </a>
                 <a
-                  href="https://wa.me/4915568855141"
+                  href="https://wa.me/491735994699"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-green-600 hover:underline font-medium"

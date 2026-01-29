@@ -49,7 +49,7 @@ export default function SectionCTA() {
           size="sm"
           variant="outline"
           className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 border-green-500/30 hover:border-green-500/50"
-          onClick={() => window.open("https://wa.me/4915568855141", "_blank")}
+          onClick={() => window.open("https://wa.me/491735994699", "_blank")}
           data-testid="button-section-cta-whatsapp"
         >
           <MessageCircle className={`w-4 h-4 ${isRtl ? "ml-1" : "mr-1"}`} />
