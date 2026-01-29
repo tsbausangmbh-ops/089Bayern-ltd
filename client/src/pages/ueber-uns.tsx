@@ -700,7 +700,6 @@ export default function UeberUns() {
       </section>
 
       <TeamSection />
-      <TrustCallToAction />
       <CrossLinks currentPage="ueber-uns" />
       <Footer />
       <LeadCaptureForm
