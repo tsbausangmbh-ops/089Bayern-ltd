@@ -12,6 +12,7 @@ import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/images/hero-antalya.png";
 import roofInstallationImage from "@assets/images/antalya-roof-installation.png";
 import heatpumpInspectionImage from "@assets/images/antalya-heatpump-inspection.png";
+import teamCompletedImage from "@assets/images/antalya-team-completed-system.png";
 
 const content = {
   de: {
@@ -1232,6 +1233,20 @@ export default function InstallationAntalya() {
                 data-testid="img-heatpump-inspection"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Success Image - Full Width */}
+      <section className="py-8 md:py-12 bg-muted/30" data-testid="section-team-success-image">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="rounded-xl overflow-hidden shadow-2xl">
+            <img 
+              src={teamCompletedImage} 
+              alt="089 Bayern Installationsteam vor fertigem 4-in-1 Energiesystem in Antalya" 
+              className="w-full h-80 md:h-[500px] object-cover"
+              data-testid="img-team-completed"
+            />
           </div>
         </div>
       </section>
