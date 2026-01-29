@@ -179,11 +179,13 @@ export default function TrustCallToAction() {
               <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center shadow-lg">
                 <Phone className="w-7 h-7 text-white" />
               </div>
-              <Badge variant="outline" className="mb-3 bg-black/80 text-amber-400 border-amber-500/50">
+              <Badge variant="outline" className="mb-2 bg-black/80 text-amber-400 border-amber-500/50">
                 {c.callTitleDE}
               </Badge>
-              <p className="text-sm font-semibold text-foreground mb-1">Dalibor Bakmaz</p>
-              <p className="text-xs text-muted-foreground mb-3">DE / HR / EN</p>
+              <p className="text-base font-bold text-foreground">Dalibor Bakmaz</p>
+              <p className="text-xs text-primary font-medium mb-1">CEO / Geschäftsführer</p>
+              <p className="text-xs text-muted-foreground mb-1">15+ Jahre Erfahrung mit deutschen Energiesystemen</p>
+              <p className="text-xs text-muted-foreground mb-3">Deutsch / Kroatisch / Englisch</p>
               <Button 
                 size="lg" 
                 className="w-full bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700"
