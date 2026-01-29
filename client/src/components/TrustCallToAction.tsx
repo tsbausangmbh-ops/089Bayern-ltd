@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Phone, Mail, MessageCircle, Shield, Clock, Users, CheckCircle, MapPin } from "lucide-react";
+import { Phone, Mail, MessageCircle, Shield, Clock, Users, CheckCircle, MapPin, Handshake } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
 const content = {
@@ -10,6 +10,7 @@ const content = {
     title: "Vertrauen Sie uns Ihre Energiezukunft an",
     subtitle: "Haben Sie Fragen? Hohe Stromrechnungen? Unsichere Energieversorgung? Wir verstehen Ihre Sorgen und finden gemeinsam die beste Lösung für Ihre Villa.",
     locationNote: "Wir arbeiten sowohl in Deutschland als auch in der Türkei - rufen Sie uns an!",
+    partnerNote: "Mit unserem großen Partnernetzwerk können wir Ihnen alle Lösungen aus einer Hand anbieten.",
     callTitleDE: "Deutschland",
     callTitleTR: "Türkei",
     emailTitle: "Email senden",
@@ -26,6 +27,7 @@ const content = {
     title: "Enerji Geleceğinizi Bize Emanet Edin",
     subtitle: "Sorularınız mı var? Yüksek elektrik faturaları? Güvensiz enerji arzı? Endişelerinizi anlıyoruz ve villanız için en iyi çözümü birlikte buluyoruz.",
     locationNote: "Hem Almanya'da hem de Türkiye'de çalışıyoruz - bizi arayın!",
+    partnerNote: "Geniş iş ortağı ağımızla tüm çözümleri tek elden sunuyoruz.",
     callTitleDE: "Almanya",
     callTitleTR: "Türkiye",
     emailTitle: "Email Gönderin",
@@ -42,6 +44,7 @@ const content = {
     title: "Trust Us With Your Energy Future",
     subtitle: "Have questions? High electricity bills? Unreliable energy supply? We understand your concerns and will find the best solution for your villa together.",
     locationNote: "We work in both Germany and Turkey - call us!",
+    partnerNote: "With our large partner network, we can offer you all solutions from one source.",
     callTitleDE: "Germany",
     callTitleTR: "Turkey",
     emailTitle: "Send Email",
@@ -58,6 +61,7 @@ const content = {
     title: "Доверьте нам ваше энергетическое будущее",
     subtitle: "Есть вопросы? Высокие счета за электричество? Ненадежное энергоснабжение? Мы понимаем ваши проблемы и вместе найдем лучшее решение для вашей виллы.",
     locationNote: "Мы работаем в Германии и Турции - звоните нам!",
+    partnerNote: "Благодаря нашей широкой партнерской сети мы предлагаем все решения из одних рук.",
     callTitleDE: "Германия",
     callTitleTR: "Турция",
     emailTitle: "Отправить Email",
@@ -74,6 +78,7 @@ const content = {
     title: "Довірте нам ваше енергетичне майбутнє",
     subtitle: "Маєте питання? Високі рахунки за електрику? Ненадійне енергопостачання? Ми розуміємо ваші проблеми і разом знайдемо найкраще рішення для вашої вілли.",
     locationNote: "Ми працюємо в Німеччині та Туреччині - телефонуйте нам!",
+    partnerNote: "Завдяки нашій широкій партнерській мережі ми пропонуємо всі рішення з одних рук.",
     callTitleDE: "Німеччина",
     callTitleTR: "Туреччина",
     emailTitle: "Надіслати Email",
@@ -90,6 +95,7 @@ const content = {
     title: "اعهد لنا بمستقبل الطاقة الخاص بك",
     subtitle: "هل لديك أسئلة؟ فواتير كهرباء عالية؟ إمداد طاقة غير موثوق؟ نحن نفهم مخاوفك وسنجد أفضل حل لفيلتك معاً.",
     locationNote: "نعمل في ألمانيا وتركيا - اتصل بنا!",
+    partnerNote: "بفضل شبكة شركائنا الواسعة، نقدم جميع الحلول من مصدر واحد.",
     callTitleDE: "ألمانيا",
     callTitleTR: "تركيا",
     emailTitle: "أرسل بريد إلكتروني",
@@ -106,6 +112,7 @@ const content = {
     title: "Povjerite nam svoju energetsku budućnost",
     subtitle: "Imate pitanja? Visoki računi za struju? Nepouzdana opskrba energijom? Razumijemo vaše brige i zajedno ćemo pronaći najbolje rješenje za vašu vilu.",
     locationNote: "Radimo u Njemačkoj i Turskoj - nazovite nas!",
+    partnerNote: "Zahvaljujući našoj velikoj partnerskoj mreži, nudimo sva rješenja iz jednog izvora.",
     callTitleDE: "Njemačka",
     callTitleTR: "Turska",
     emailTitle: "Pošaljite email",
@@ -145,9 +152,15 @@ export default function TrustCallToAction() {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
             {c.subtitle}
           </p>
-          <div className="flex items-center justify-center gap-2 text-primary font-medium">
-            <MapPin className="w-5 h-5" />
-            <span>{c.locationNote}</span>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+            <div className="flex items-center gap-2 text-primary font-medium">
+              <MapPin className="w-5 h-5" />
+              <span>{c.locationNote}</span>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Handshake className="w-5 h-5 text-emerald-500" />
+              <span>{c.partnerNote}</span>
+            </div>
           </div>
         </div>
 
