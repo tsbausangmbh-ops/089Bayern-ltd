@@ -21,7 +21,9 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
         style={{ backgroundImage: `url(${heroImage})` }}
+        aria-hidden="true"
       />
+      <link rel="preload" as="image" href={heroImage} />
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-background" />
       <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-accent/10" />
 
