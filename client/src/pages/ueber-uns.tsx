@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
+import TeamSection from "@/components/TeamSection";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/images/hero-about.png";
 import teamMeetingImage from "@assets/images/team-meeting.png";
@@ -698,6 +699,7 @@ export default function UeberUns() {
         </div>
       </section>
 
+      <TeamSection />
       <TrustCallToAction />
       <CrossLinks currentPage="ueber-uns" />
       <Footer />
