@@ -107,7 +107,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
               className="h-12 md:h-14 w-auto object-contain rounded-lg"
             />
             <div className="hidden sm:block">
-              <span className={`block text-lg font-bold ${isScrolled ? "text-foreground" : "text-white"}`}>089Bayern</span>
+              <span className={`block text-lg font-bold ${isScrolled ? "text-foreground" : "text-white"}`}>089 Bayern</span>
               <span className={`block text-xs ${isScrolled ? "text-muted-foreground" : "text-white/70"}`}>Turkey</span>
             </div>
           </a>

@@ -68,7 +68,7 @@ export default function Footer() {
                 className="h-16 w-auto object-contain rounded-lg"
               />
               <div>
-                <span className="block text-xl font-bold text-white">089Bayern</span>
+                <span className="block text-xl font-bold text-white">089 Bayern</span>
                 <span className="block text-sm text-white/70">Turkey</span>
               </div>
             </div>
