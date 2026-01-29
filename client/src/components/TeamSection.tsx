@@ -14,8 +14,7 @@ export default function TeamSection() {
     {
       name: "Dalibor Bakmaz",
       role: t.team.member1Role,
-      description: t.team.member1Description,
-      languages: ["Deutsch", "Kroatisch", "Englisch"],
+      languages: "Deutsch / Kroatisch / Englisch",
       email: "info@089bayern.com",
       phoneTR: "+90 507 192 2036",
       phoneDE: "+49 155 60990093",
@@ -27,8 +26,7 @@ export default function TeamSection() {
     {
       name: "Mustafa Sakar",
       role: t.team.member2Role,
-      description: t.team.member2Description,
-      languages: ["Deutsch", "Türkisch"],
+      languages: "Deutsch / Türkisch",
       email: "info@089bayern.com",
       phoneTR: "+90 507 183 2036",
       phoneDE: "+49 173 5994699",
@@ -58,30 +56,27 @@ export default function TeamSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto items-stretch">
           {teamMembers.map((member, index) => (
-            <Card key={member.name} className="overflow-visible h-full" data-testid={`card-team-${index}`}>
-              <CardContent className="p-5 h-full flex flex-col">
-                <div className="text-center mb-4">
-                  <Avatar className={`w-20 h-20 mx-auto mb-3 ${member.bgColor}`}>
-                    <AvatarFallback className={`text-xl font-bold ${member.textColor} ${member.bgColor}`}>
+            <Card key={member.name} className="overflow-visible" data-testid={`card-team-${index}`}>
+              <CardContent className="p-5">
+                <div className="flex items-center gap-4 mb-4">
+                  <Avatar className={`w-16 h-16 flex-shrink-0 ${member.bgColor}`}>
+                    <AvatarFallback className={`text-lg font-bold ${member.textColor} ${member.bgColor}`}>
                       {member.initials}
                     </AvatarFallback>
                   </Avatar>
-
-                  <h3 className="text-lg font-bold text-foreground mb-1">{member.name}</h3>
-                  <p className="text-primary font-medium text-sm mb-2">{member.role}</p>
-                  <p className="text-xs text-muted-foreground mb-3 min-h-[2.5rem]">{member.description}</p>
-
-                  <div className="flex items-center justify-center gap-2">
-                    <Globe className="w-3.5 h-3.5 text-muted-foreground" />
-                    <span className="text-xs text-muted-foreground">
-                      {member.languages.join(" / ")}
-                    </span>
+                  <div>
+                    <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
+                    <p className="text-primary font-medium text-sm">{member.role}</p>
+                    <div className="flex items-center gap-1.5 mt-1">
+                      <Globe className="w-3 h-3 text-muted-foreground" />
+                      <span className="text-xs text-muted-foreground">{member.languages}</span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex-1 space-y-2 text-sm mb-4">
+                <div className="space-y-2 text-sm mb-4">
                   <a
                     href={`mailto:${member.email}`}
                     className="flex items-center gap-2 text-foreground hover:text-primary transition-colors p-2 rounded-lg hover-elevate"
@@ -90,33 +85,27 @@ export default function TeamSection() {
                     <Mail className="w-4 h-4 text-muted-foreground flex-shrink-0" />
                     <span className="text-sm">{member.email}</span>
                   </a>
-                  <div className="grid grid-cols-2 gap-2">
-                    <a
-                      href={`tel:${member.phoneDE.replace(/\s/g, "")}`}
-                      className="flex items-center gap-2 text-foreground hover:text-primary transition-colors p-2 rounded-lg hover-elevate"
-                      data-testid={`link-phone-de-${index}`}
-                    >
-                      <Phone className="w-4 h-4 text-muted-foreground flex-shrink-0" />
-                      <div className="flex flex-col">
-                        <span className="text-[10px] text-muted-foreground">DE</span>
-                        <span className="text-xs">{member.phoneDE}</span>
-                      </div>
-                    </a>
-                    <a
-                      href={`tel:${member.phoneTR.replace(/\s/g, "")}`}
-                      className="flex items-center gap-2 text-foreground hover:text-primary transition-colors p-2 rounded-lg hover-elevate"
-                      data-testid={`link-phone-tr-${index}`}
-                    >
-                      <Phone className="w-4 h-4 text-muted-foreground flex-shrink-0" />
-                      <div className="flex flex-col">
-                        <span className="text-[10px] text-muted-foreground">TR</span>
-                        <span className="text-xs">{member.phoneTR}</span>
-                      </div>
-                    </a>
-                  </div>
+                  <a
+                    href={`tel:${member.phoneDE.replace(/\s/g, "")}`}
+                    className="flex items-center gap-2 text-foreground hover:text-primary transition-colors p-2 rounded-lg hover-elevate"
+                    data-testid={`link-phone-de-${index}`}
+                  >
+                    <Phone className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                    <span className="text-xs text-muted-foreground mr-1">DE</span>
+                    <span className="text-sm">{member.phoneDE}</span>
+                  </a>
+                  <a
+                    href={`tel:${member.phoneTR.replace(/\s/g, "")}`}
+                    className="flex items-center gap-2 text-foreground hover:text-primary transition-colors p-2 rounded-lg hover-elevate"
+                    data-testid={`link-phone-tr-${index}`}
+                  >
+                    <Phone className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                    <span className="text-xs text-muted-foreground mr-1">TR</span>
+                    <span className="text-sm">{member.phoneTR}</span>
+                  </a>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 mt-auto">
+                <div className="grid grid-cols-2 gap-2">
                   <Button
                     variant="outline"
                     size="sm"
