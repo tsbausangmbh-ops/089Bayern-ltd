@@ -2,6 +2,7 @@ import { Check, TrendingDown, Shield, Home, Leaf, Wallet, Users, Zap, Award } fr
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
+import happyCustomerImage from "@assets/images/happy-customer.png";
 
 export default function BenefitsSection() {
   const { language } = useLanguage();
@@ -139,6 +140,14 @@ export default function BenefitsSection() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="mb-8 rounded-2xl overflow-hidden">
+          <img 
+            src={happyCustomerImage} 
+            alt="Zufriedene Kunden" 
+            className="w-full h-64 md:h-80 object-cover"
+          />
         </div>
 
         <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-white/10">

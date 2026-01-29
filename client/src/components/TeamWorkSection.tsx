@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Sun, Thermometer, Zap, Users } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
-import teamSolarImage from "@assets/images/team-solar-installation.png";
-import teamHeatPumpImage from "@assets/images/team-heat-pump-installation.png";
-import teamPvImage from "@assets/images/team-pv-wiring.png";
+import teamSolarImage from "@assets/images/team-solar-no-helmet.png";
+import teamHeatPumpImage from "@assets/images/team-heatpump-no-helmet.png";
+import teamPvImage from "@assets/images/team-pv-no-helmet.png";
 
 export default function TeamWorkSection() {
   const { language } = useLanguage();

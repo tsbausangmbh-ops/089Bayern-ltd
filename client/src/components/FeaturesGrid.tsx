@@ -2,6 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Snowflake, Flame, Sun, Battery, Check, Sparkles } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
+import workerClimateImage from "@assets/images/worker-climate-unit.png";
+import workerHeatPumpImage from "@assets/images/team-heat-pump-installation.png";
+import workerSolarImage from "@assets/images/worker-solar-inverter.png";
+import workerBatteryImage from "@assets/images/worker-battery-storage.png";
 
 export default function FeaturesGrid() {
   const { language } = useLanguage();
@@ -17,6 +21,7 @@ export default function FeaturesGrid() {
       gradient: "from-sky-500 to-blue-600",
       bgGradient: "from-sky-500/20 to-blue-600/10",
       iconBg: "bg-gradient-to-br from-sky-500 to-blue-600",
+      image: workerClimateImage,
     },
     {
       icon: Flame,
@@ -27,6 +32,7 @@ export default function FeaturesGrid() {
       gradient: "from-orange-500 to-red-600",
       bgGradient: "from-orange-500/20 to-red-600/10",
       iconBg: "bg-gradient-to-br from-orange-500 to-red-600",
+      image: workerHeatPumpImage,
     },
     {
       icon: Sun,
@@ -37,6 +43,7 @@ export default function FeaturesGrid() {
       gradient: "from-amber-500 to-yellow-500",
       bgGradient: "from-amber-500/20 to-yellow-500/10",
       iconBg: "bg-gradient-to-br from-amber-500 to-yellow-500",
+      image: workerSolarImage,
     },
     {
       icon: Battery,
@@ -47,6 +54,7 @@ export default function FeaturesGrid() {
       gradient: "from-emerald-500 to-green-600",
       bgGradient: "from-emerald-500/20 to-green-600/10",
       iconBg: "bg-gradient-to-br from-emerald-500 to-green-600",
+      image: workerBatteryImage,
     },
   ];
 
@@ -76,30 +84,35 @@ export default function FeaturesGrid() {
           {features.map((feature, index) => (
             <Card
               key={feature.title}
-              className="group overflow-visible hover-elevate active-elevate-2 transition-all duration-300 border-border/50 bg-gradient-to-br from-card to-card/80"
+              className="group overflow-hidden hover-elevate active-elevate-2 transition-all duration-300 border-border/50 bg-gradient-to-br from-card to-card/80"
               data-testid={`card-feature-${index}`}
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${feature.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity rounded-lg`} />
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={feature.image} 
+                  alt={feature.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+                <div className={`absolute bottom-4 left-4 w-12 h-12 rounded-xl ${feature.iconBg} flex items-center justify-center shadow-lg`}>
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+              </div>
               <CardContent className="p-6 relative">
-                <div className="flex items-start gap-6">
-                  <div className={`flex-shrink-0 w-16 h-16 rounded-xl ${feature.iconBg} flex items-center justify-center shadow-lg`}>
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-foreground mb-1">{feature.title}</h3>
-                    <p className={`text-sm font-semibold bg-gradient-to-r ${feature.gradient} bg-clip-text text-transparent mb-3`}>
-                      {feature.subtitle}
-                    </p>
-                    <p className="text-muted-foreground mb-5 leading-relaxed">{feature.description}</p>
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit) => (
-                        <li key={benefit} className="flex items-start gap-3 text-sm text-foreground/90">
-                          <Check className="w-4 h-4 mt-0.5 flex-shrink-0 text-emerald-500" />
-                          <span>{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-foreground mb-1">{feature.title}</h3>
+                  <p className={`text-sm font-semibold bg-gradient-to-r ${feature.gradient} bg-clip-text text-transparent mb-3`}>
+                    {feature.subtitle}
+                  </p>
+                  <p className="text-muted-foreground mb-5 leading-relaxed">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit) => (
+                      <li key={benefit} className="flex items-start gap-3 text-sm text-foreground/90">
+                        <Check className="w-4 h-4 mt-0.5 flex-shrink-0 text-emerald-500" />
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </CardContent>
             </Card>

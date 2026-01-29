@@ -21,6 +21,7 @@ import {
   Sun
 } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
+import businessHandshakeImage from "@assets/images/business-handshake-office.png";
 
 export default function ProblemSolverSection() {
   const { language } = useLanguage();
@@ -574,26 +575,36 @@ export default function ProblemSolverSection() {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
-          <Card className="bg-primary/5 border-primary/20 max-w-2xl mx-auto">
-            <CardContent className="p-6 md:p-8">
-              <Lightbulb className="w-10 h-10 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl md:text-3xl font-bold mb-3" data-testid="text-problemsolver-cta-title">
-                {t.ctaTitle}
-              </h3>
-              <p className="text-muted-foreground mb-5 text-lg">
-                {t.ctaSubtitle}
-              </p>
-              <Button 
-                size="lg" 
-                onClick={scrollToCalculator}
-                className="text-lg px-8"
-                data-testid="button-problemsolver-cta"
-              >
-                {t.ctaButton}
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </CardContent>
+        <div className="mt-10">
+          <Card className="bg-primary/5 border-primary/20 max-w-4xl mx-auto overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <div className="relative h-64 md:h-auto">
+                <img 
+                  src={businessHandshakeImage} 
+                  alt="Geschäftsabschluss im Büro" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary/20 md:bg-gradient-to-t md:from-transparent md:to-transparent" />
+              </div>
+              <CardContent className="p-6 md:p-8 flex flex-col justify-center">
+                <Lightbulb className="w-10 h-10 text-primary mb-4" />
+                <h3 className="text-2xl md:text-3xl font-bold mb-3" data-testid="text-problemsolver-cta-title">
+                  {t.ctaTitle}
+                </h3>
+                <p className="text-muted-foreground mb-5 text-lg">
+                  {t.ctaSubtitle}
+                </p>
+                <Button 
+                  size="lg" 
+                  onClick={scrollToCalculator}
+                  className="text-lg px-8 w-fit"
+                  data-testid="button-problemsolver-cta"
+                >
+                  {t.ctaButton}
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </CardContent>
+            </div>
           </Card>
         </div>
       </div>
