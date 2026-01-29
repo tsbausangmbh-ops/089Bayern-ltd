@@ -13,6 +13,10 @@ import CrossLinks from "@/components/CrossLinks";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/images/hero-system.png";
 import systemPresentationImage from "@assets/images/system-presentation.png";
+import climateInstallImage from "@assets/images/system-climate-install.png";
+import heatpumpInstallImage from "@assets/images/system-heatpump-install.png";
+import solarInstallImage from "@assets/images/system-solar-install.png";
+import batteryInstallImage from "@assets/images/system-battery-install.png";
 
 export default function Systeme() {
   const { language } = useLanguage();
@@ -393,6 +397,8 @@ export default function Systeme() {
       gradient: "from-sky-500 to-blue-600",
       bgGradient: "from-sky-500/20 to-blue-600/10",
       iconBg: "bg-gradient-to-br from-sky-500 to-blue-600",
+      image: climateInstallImage,
+      imageAlt: "Samsung Klimaanlage Installation",
     },
     {
       icon: Flame,
@@ -403,6 +409,8 @@ export default function Systeme() {
       gradient: "from-orange-500 to-red-600",
       bgGradient: "from-orange-500/20 to-red-600/10",
       iconBg: "bg-gradient-to-br from-orange-500 to-red-600",
+      image: heatpumpInstallImage,
+      imageAlt: "Vaillant Wärmepumpe Installation",
     },
     {
       icon: Sun,
@@ -413,6 +421,8 @@ export default function Systeme() {
       gradient: "from-amber-500 to-yellow-500",
       bgGradient: "from-amber-500/20 to-yellow-500/10",
       iconBg: "bg-gradient-to-br from-amber-500 to-yellow-500",
+      image: solarInstallImage,
+      imageAlt: "Solarpanel Installation auf Villadach",
     },
     {
       icon: Battery,
@@ -423,6 +433,8 @@ export default function Systeme() {
       gradient: "from-emerald-500 to-green-600",
       bgGradient: "from-emerald-500/20 to-green-600/10",
       iconBg: "bg-gradient-to-br from-emerald-500 to-green-600",
+      image: batteryInstallImage,
+      imageAlt: "Samsung Batteriespeicher Installation",
     },
   ];
 
@@ -548,9 +560,17 @@ export default function Systeme() {
             {features.map((feature, index) => (
               <Card
                 key={feature.title}
-                className="overflow-visible border-border/50 bg-gradient-to-br from-card to-card/80"
+                className="overflow-hidden border-border/50 bg-gradient-to-br from-card to-card/80"
                 data-testid={`card-system-${index}`}
               >
+                <div className="rounded-t-lg overflow-hidden">
+                  <img 
+                    src={feature.image} 
+                    alt={feature.imageAlt}
+                    className="w-full h-56 md:h-72 object-cover hover:scale-105 transition-transform duration-500"
+                    data-testid={`img-system-${index}`}
+                  />
+                </div>
                 <CardContent className="p-8">
                   <div className="flex flex-col lg:flex-row items-start gap-8">
                     <div className={`flex-shrink-0 w-20 h-20 rounded-2xl ${feature.iconBg} flex items-center justify-center shadow-lg`}>
