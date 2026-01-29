@@ -11,6 +11,10 @@ import CrossLinks from "@/components/CrossLinks";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/images/hero-benefits.png";
 import consultationActionImage from "@assets/images/benefits-consultation-action.png";
+import freeElectricityImage from "@assets/images/benefit-free-electricity.png";
+import freeHeatingImage from "@assets/images/benefit-free-heating.png";
+import freeCoolingImage from "@assets/images/benefit-free-cooling.png";
+import freeHotWaterImage from "@assets/images/benefit-free-hotwater.png";
 
 export default function Vorteile() {
   const { language } = useLanguage();
@@ -424,10 +428,10 @@ export default function Vorteile() {
   ];
 
   const freeEnergy = [
-    { icon: Zap, title: c.freeElectricity, desc: c.freeElectricityDesc, gradient: "from-amber-500 to-yellow-500" },
-    { icon: Flame, title: c.freeHeating, desc: c.freeHeatingDesc, gradient: "from-orange-500 to-red-500" },
-    { icon: Snowflake, title: c.freeCooling, desc: c.freeCoolingDesc, gradient: "from-sky-400 to-blue-500" },
-    { icon: Droplets, title: c.freeHotWater, desc: c.freeHotWaterDesc, gradient: "from-cyan-500 to-teal-500" },
+    { icon: Zap, title: c.freeElectricity, desc: c.freeElectricityDesc, gradient: "from-amber-500 to-yellow-500", image: freeElectricityImage, imageAlt: "Kostenloser Strom durch Solarenergie" },
+    { icon: Flame, title: c.freeHeating, desc: c.freeHeatingDesc, gradient: "from-orange-500 to-red-500", image: freeHeatingImage, imageAlt: "Kostenlose Heizung mit Wärmepumpe" },
+    { icon: Snowflake, title: c.freeCooling, desc: c.freeCoolingDesc, gradient: "from-sky-400 to-blue-500", image: freeCoolingImage, imageAlt: "Kostenlose Kühlung mit Samsung Klima" },
+    { icon: Droplets, title: c.freeHotWater, desc: c.freeHotWaterDesc, gradient: "from-cyan-500 to-teal-500", image: freeHotWaterImage, imageAlt: "Kostenloses Warmwasser" },
   ];
 
   const systems = [
@@ -549,9 +553,17 @@ export default function Vorteile() {
             {freeEnergy.map((item, index) => (
               <Card
                 key={index}
-                className="border-border/50 bg-gradient-to-br from-card to-card/80"
+                className="border-border/50 bg-gradient-to-br from-card to-card/80 overflow-hidden"
                 data-testid={`card-free-energy-${index}`}
               >
+                <div className="overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.imageAlt}
+                    className="w-full h-40 object-cover hover:scale-105 transition-transform duration-500"
+                    data-testid={`img-free-energy-${index}`}
+                  />
+                </div>
                 <CardContent className="p-6">
                   <div className={`w-14 h-14 mb-4 rounded-xl bg-gradient-to-br ${item.gradient} flex items-center justify-center`}>
                     <item.icon className="w-7 h-7 text-white" />
