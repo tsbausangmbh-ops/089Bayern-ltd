@@ -10,8 +10,8 @@ import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/images/hero-antalya.png";
-import teamWorkImage from "@assets/images/installation-team-work.png";
-import planningImage from "@assets/images/antalya-planning.png";
+import roofInstallationImage from "@assets/images/antalya-roof-installation.png";
+import heatpumpInspectionImage from "@assets/images/antalya-heatpump-inspection.png";
 
 const content = {
   de: {
@@ -1218,18 +1218,18 @@ export default function InstallationAntalya() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
-                src={teamWorkImage} 
-                alt="089 Bayern kurulum ekibi Antalya'da çalışıyor" 
+                src={roofInstallationImage} 
+                alt="089 Bayern Solarpanel-Installation auf Villadach in Antalya" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
-                data-testid="img-team-work"
+                data-testid="img-roof-installation"
               />
             </div>
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
-                src={planningImage} 
-                alt="Profesyonel planlama ve ölçüm" 
+                src={heatpumpInspectionImage} 
+                alt="Vaillant Wärmepumpen-Inspektion in Antalya" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
-                data-testid="img-planning"
+                data-testid="img-heatpump-inspection"
               />
             </div>
           </div>
