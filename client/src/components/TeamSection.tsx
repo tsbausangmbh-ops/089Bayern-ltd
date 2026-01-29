@@ -35,18 +35,6 @@ export default function TeamSection() {
       bgColor: "bg-emerald-500/10",
       textColor: "text-emerald-600",
     },
-    {
-      name: "Ahmet Imrol",
-      role: t.team.member3Role,
-      description: t.team.member3Description,
-      languages: ["Deutsch", "Türkisch"],
-      email: "info@089bayern.com",
-      phones: ["+90 (242) 5131352"],
-      whatsapp: "+902425131352",
-      initials: "AI",
-      bgColor: "bg-amber-500/10",
-      textColor: "text-amber-600",
-    },
   ];
 
   return (
@@ -68,7 +56,7 @@ export default function TeamSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
           {teamMembers.map((member, index) => (
             <Card key={member.name} className="overflow-visible" data-testid={`card-team-${index}`}>
               <CardContent className="p-5">
