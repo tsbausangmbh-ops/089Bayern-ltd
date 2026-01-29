@@ -9,7 +9,9 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
-import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
+import heroImage from "@assets/images/hero-antalya.png";
+import teamWorkImage from "@assets/images/installation-team-work.png";
+import planningImage from "@assets/images/antalya-planning.png";
 
 const content = {
   de: {
@@ -1205,6 +1207,30 @@ export default function InstallationAntalya() {
               </div>
               <h3 className="text-xl font-bold mb-3">{c.climatePoint3Title}</h3>
               <p className="text-muted-foreground">{c.climatePoint3Desc}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Work Gallery */}
+      <section className="py-8 md:py-10 bg-background" data-testid="section-work-gallery">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="rounded-xl overflow-hidden shadow-xl">
+              <img 
+                src={teamWorkImage} 
+                alt="089 Bayern kurulum ekibi Antalya'da çalışıyor" 
+                className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                data-testid="img-team-work"
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-xl">
+              <img 
+                src={planningImage} 
+                alt="Profesyonel planlama ve ölçüm" 
+                className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                data-testid="img-planning"
+              />
             </div>
           </div>
         </div>

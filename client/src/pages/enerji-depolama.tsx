@@ -9,6 +9,9 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import heroImage from "@assets/images/hero-battery-storage.png";
+import batterySystemImage from "@assets/images/battery-system-installed.png";
+import batteryMonitoringImage from "@assets/images/battery-monitoring.png";
 
 export default function EnerjiDepolama() {
   const { language } = useLanguage();
@@ -247,8 +250,11 @@ export default function EnerjiDepolama() {
       <Header onCtaClick={goToContact} />
       
       <section className="relative pt-20 pb-16 overflow-hidden" data-testid="section-battery-hero">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(16,185,129,0.3),transparent_50%)]" />
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/80 via-green-800/70 to-teal-900/80" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         
         <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
@@ -381,6 +387,29 @@ export default function EnerjiDepolama() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 md:py-10 bg-background" data-testid="section-work-gallery">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="rounded-xl overflow-hidden shadow-xl">
+              <img 
+                src={batterySystemImage} 
+                alt="Samsung batarya depolama sistemi kurulumu" 
+                className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                data-testid="img-battery-system"
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-xl">
+              <img 
+                src={batteryMonitoringImage} 
+                alt="Enerji izleme ve kontrol" 
+                className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                data-testid="img-battery-monitoring"
+              />
+            </div>
           </div>
         </div>
       </section>

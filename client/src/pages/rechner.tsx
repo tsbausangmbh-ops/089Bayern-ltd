@@ -10,7 +10,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calculator, Sun, Zap, TrendingUp, Shield, CheckCircle, Euro, Leaf, Home, Battery, ThermometerSun, Snowflake, ArrowRight, Clock, Award, Users, Phone } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
-import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
+import heroImage from "@assets/images/hero-calculator.png";
+import calculatorTabletImage from "@assets/images/calculator-tablet.png";
 
 interface CalculatorData {
   propertyType: string;
@@ -685,6 +686,22 @@ export default function Rechner() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Calculator Tablet Gallery */}
+      <section className="py-8 md:py-10 bg-background" data-testid="section-work-gallery">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="grid grid-cols-1 gap-6">
+            <div className="rounded-xl overflow-hidden shadow-xl mx-auto max-w-4xl w-full">
+              <img 
+                src={calculatorTabletImage} 
+                alt="Enerji tasarruf hesaplama" 
+                className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                data-testid="img-calculator-tablet"
+              />
+            </div>
           </div>
         </div>
       </section>

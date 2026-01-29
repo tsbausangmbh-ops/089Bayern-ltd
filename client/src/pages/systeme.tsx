@@ -11,7 +11,8 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
-import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
+import heroImage from "@assets/images/hero-system.png";
+import teamMeetingImage from "@assets/images/team-meeting.png";
 
 export default function Systeme() {
   const { language } = useLanguage();
@@ -482,6 +483,21 @@ export default function Systeme() {
                 <Phone className={`w-5 h-5 ${isRtl ? "ml-2" : "mr-2"}`} />
                 +90 507 183 2036
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 md:py-10 bg-background" data-testid="section-work-gallery">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="grid grid-cols-1 gap-6">
+            <div className="rounded-xl overflow-hidden shadow-xl mx-auto max-w-4xl w-full">
+              <img 
+                src={teamMeetingImage} 
+                alt="089 Bayern profesyonel ekip toplantısı" 
+                className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                data-testid="img-team-meeting"
+              />
             </div>
           </div>
         </div>

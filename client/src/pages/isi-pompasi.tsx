@@ -9,7 +9,9 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
-import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
+import heroImage from "@assets/images/hero-heat-pump.png";
+import heatpumpDetailImage from "@assets/images/heatpump-detail.png";
+import heatpumpConsultationImage from "@assets/images/heatpump-consultation.png";
 
 export default function IsiPompasi() {
   const { language } = useLanguage();
@@ -772,6 +774,29 @@ export default function IsiPompasi() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 md:py-10 bg-background" data-testid="section-work-gallery">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="rounded-xl overflow-hidden shadow-xl">
+              <img 
+                src={heatpumpDetailImage} 
+                alt="Vaillant ısı pompası teknik detay" 
+                className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                data-testid="img-heatpump-detail"
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-xl">
+              <img 
+                src={heatpumpConsultationImage} 
+                alt="Isı pompası danışmanlık" 
+                className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                data-testid="img-heatpump-consultation"
+              />
+            </div>
           </div>
         </div>
       </section>

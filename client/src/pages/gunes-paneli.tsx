@@ -9,7 +9,9 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
-import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
+import heroImage from "@assets/images/hero-solar-panel.png";
+import solarDetailImage from "@assets/images/solar-detail-wiring.png";
+import solarTestingImage from "@assets/images/solar-testing.png";
 
 export default function GunesPaneli() {
   const { language } = useLanguage();
@@ -381,6 +383,29 @@ export default function GunesPaneli() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 md:py-10 bg-background" data-testid="section-work-gallery">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="rounded-xl overflow-hidden shadow-xl">
+              <img 
+                src={solarDetailImage} 
+                alt="Profesyonel güneş paneli kablo bağlantısı" 
+                className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                data-testid="img-solar-detail"
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-xl">
+              <img 
+                src={solarTestingImage} 
+                alt="Güneş paneli test ve ölçüm" 
+                className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                data-testid="img-solar-testing"
+              />
+            </div>
           </div>
         </div>
       </section>
