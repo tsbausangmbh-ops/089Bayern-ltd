@@ -23,6 +23,18 @@ export default function TeamSection() {
       bgColor: "bg-blue-500/10",
       textColor: "text-blue-600",
     },
+    {
+      name: "Mustafa Sakar",
+      role: t.team.member2Role,
+      description: t.team.member2Description,
+      languages: ["Deutsch", "Türkisch"],
+      emails: ["info@089bayern.com", "msakar@089bayern.com"],
+      phones: ["+90 507 183 2036", "+49 173 5994699"],
+      whatsapp: "+491735994699",
+      initials: "MS",
+      bgColor: "bg-emerald-500/10",
+      textColor: "text-emerald-600",
+    },
   ];
 
   return (
