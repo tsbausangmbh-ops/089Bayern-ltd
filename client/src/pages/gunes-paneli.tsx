@@ -528,7 +528,7 @@ export default function GunesPaneli() {
           <div className="bg-card rounded-2xl p-8 shadow-xl border border-amber-500/20">
             <h3 className="text-2xl font-bold text-foreground mb-2">{c.finalCta}</h3>
             <p className="text-muted-foreground mb-6">{c.finalCtaDesc}</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
               <Button 
                 onClick={goToContact}
                 size="lg"
@@ -542,12 +542,29 @@ export default function GunesPaneli() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="px-8" 
-                onClick={() => window.location.href = "tel:+905071832036"}
-                data-testid="button-final-phone"
+                onClick={() => window.location.href = "tel:+4917647877177"}
+                data-testid="button-final-phone-de"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                +90 507 183 2036
+                <Phone className="w-4 h-4 mr-2" />
+                +49 176 4787 7177
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-green-500/50 bg-green-500/10" 
+                onClick={() => window.open("https://wa.me/905071832036", "_blank")}
+                data-testid="button-final-whatsapp"
+              >
+                WhatsApp
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-blue-500/50 bg-blue-500/10" 
+                onClick={() => window.location.href = "mailto:info@089bayern.de"}
+                data-testid="button-final-email"
+              >
+                Email
               </Button>
             </div>
           </div>
