@@ -4,7 +4,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
 import { getLocalizedUrl, getOfficeBadge } from "@/lib/urlTranslations";
 import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
-import logoImage from "@assets/Logo_1765790073992.png";
+import logoImage from "@assets/logo-white.png";
 
 export default function Footer() {
   const { language } = useLanguage();
@@ -61,18 +61,12 @@ export default function Footer() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-6">
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="bg-white/90 rounded-lg p-2">
-                <img 
-                  src={logoImage} 
-                  alt="089 Bayern Logo" 
-                  className="h-14 w-auto object-contain"
-                />
-              </div>
-              <div>
-                <span className="block text-xl font-bold text-white">089 Bayern</span>
-                <span className="block text-sm text-white/70">Germany</span>
-              </div>
+            <div className="mb-6">
+              <img 
+                src={logoImage} 
+                alt="089 Bayern Logo" 
+                className="h-20 w-auto object-contain rounded-lg"
+              />
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
               {t.footer.description}

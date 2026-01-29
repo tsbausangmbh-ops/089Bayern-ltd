@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Globe, ChevronDown, MapPin, Sun, Thermometer, Wind, Battery, Building2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import logoImage from "@assets/Logo_1765790073992.png";
+import logoImage from "@assets/logo-white.png";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -100,18 +100,12 @@ export default function Header({ onCtaClick }: HeaderProps) {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="flex items-center justify-between gap-4 h-16 md:h-20">
-          <a href="/" className="flex items-center gap-3 rounded-lg transition-opacity hover:opacity-80" data-testid="link-logo-home">
-            <div className="bg-white rounded-lg p-1.5 shadow-sm flex-shrink-0">
-              <img 
-                src={logoImage} 
-                alt="089 Bayern Logo" 
-                className="h-8 md:h-10 w-auto object-contain"
-              />
-            </div>
-            <div className="hidden sm:block flex-shrink-0">
-              <span className={`block text-lg font-bold ${isScrolled ? "text-foreground" : "text-white"}`}>089 Bayern</span>
-              <span className={`block text-xs ${isScrolled ? "text-muted-foreground" : "text-white/70"}`}>Germany</span>
-            </div>
+          <a href="/" className="flex items-center gap-2 transition-opacity hover:opacity-80" data-testid="link-logo-home">
+            <img 
+              src={logoImage} 
+              alt="089 Bayern Logo" 
+              className="h-12 md:h-14 w-auto object-contain rounded-lg"
+            />
           </a>
 
           <nav className="hidden md:flex items-center gap-1">
