@@ -1089,7 +1089,7 @@ export default function InstallationAntalya() {
                 WhatsApp
               </Button>
               <Button size="lg" variant="outline" className="border-blue-400/50 text-white bg-blue-500/20 backdrop-blur-sm" asChild data-testid="button-antalya-email">
-                <a href="mailto:info@089bayern.de">Email</a>
+                <a href="mailto:info@089bayern.com">Email</a>
               </Button>
             </div>
           </div>

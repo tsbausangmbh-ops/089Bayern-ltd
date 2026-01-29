@@ -511,7 +511,7 @@ export default function Systeme() {
                 size="lg" 
                 variant="outline" 
                 className="border-blue-400/50 text-white bg-blue-500/20 backdrop-blur-sm" 
-                onClick={() => window.location.href = "mailto:info@089bayern.de"}
+                onClick={() => window.location.href = "mailto:info@089bayern.com"}
                 data-testid="button-systeme-email"
               >
                 <Sparkles className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />

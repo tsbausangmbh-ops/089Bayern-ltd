@@ -182,6 +182,8 @@ export default function TrustCallToAction() {
               <Badge variant="outline" className="mb-3 bg-black/80 text-amber-400 border-amber-500/50">
                 {c.callTitleDE}
               </Badge>
+              <p className="text-sm font-semibold text-foreground mb-1">Dalibor Bakmaz</p>
+              <p className="text-xs text-muted-foreground mb-3">DE / HR / EN</p>
               <Button 
                 size="lg" 
                 className="w-full bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700"
@@ -243,7 +245,7 @@ export default function TrustCallToAction() {
               <Button 
                 size="lg" 
                 className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700"
-                onClick={() => window.location.href = "mailto:info@089bayern.de"}
+                onClick={() => window.location.href = "mailto:info@089bayern.com"}
                 data-testid="button-cta-email"
               >
                 <Mail className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />

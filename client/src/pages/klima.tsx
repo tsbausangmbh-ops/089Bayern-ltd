@@ -658,7 +658,7 @@ export default function Klima() {
                 size="lg" 
                 variant="outline" 
                 className="border-blue-500/50 bg-blue-500/10" 
-                onClick={() => window.location.href = "mailto:info@089bayern.de"}
+                onClick={() => window.location.href = "mailto:info@089bayern.com"}
                 data-testid="button-final-email"
               >
                 Email

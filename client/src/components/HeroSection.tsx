@@ -112,7 +112,7 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
           <Button
             size="lg"
             variant="outline"
-            onClick={() => window.location.href = "mailto:info@089bayern.de"}
+            onClick={() => window.location.href = "mailto:info@089bayern.com"}
             className="bg-blue-500/20 backdrop-blur-sm border-blue-400/50 text-white"
             data-testid="button-hero-email"
           >

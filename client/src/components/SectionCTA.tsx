@@ -39,7 +39,7 @@ export default function SectionCTA() {
           size="sm"
           variant="outline"
           className="bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border-blue-500/30 hover:border-blue-500/50"
-          onClick={() => window.location.href = "mailto:info@089bayern.de"}
+          onClick={() => window.location.href = "mailto:info@089bayern.com"}
           data-testid="button-section-cta-email"
         >
           <Mail className={`w-4 h-4 ${isRtl ? "ml-1" : "mr-1"}`} />

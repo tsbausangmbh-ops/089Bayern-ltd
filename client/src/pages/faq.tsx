@@ -545,7 +545,7 @@ export default function FAQ() {
                 size="lg" 
                 variant="outline" 
                 className="border-blue-400/50 text-white bg-blue-500/20 backdrop-blur-sm" 
-                onClick={() => window.location.href = "mailto:info@089bayern.de"}
+                onClick={() => window.location.href = "mailto:info@089bayern.com"}
                 data-testid="button-faq-hero-email"
               >
                 Email
