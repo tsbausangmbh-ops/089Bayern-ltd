@@ -16,6 +16,10 @@ import freeElectricityImage from "@assets/images/benefit-free-electricity.png";
 import freeHeatingImage from "@assets/images/benefit-free-heating.png";
 import freeCoolingImage from "@assets/images/benefit-free-cooling.png";
 import freeHotWaterImage from "@assets/images/benefit-free-hotwater.png";
+import systemSolarImage from "@assets/images/system-solar-panels.png";
+import systemHeatPumpImage from "@assets/images/system-heat-pump.png";
+import systemBatteryImage from "@assets/images/system-battery-storage.png";
+import systemHotWaterImage from "@assets/images/system-hot-water-tank.png";
 
 export default function Vorteile() {
   const { language } = useLanguage();
@@ -436,10 +440,10 @@ export default function Vorteile() {
   ];
 
   const systems = [
-    { icon: Sun, title: c.system1Title, subtitle: c.system1Subtitle, desc: c.system1Desc, benefits: c.system1Benefits, gradient: "from-amber-500 to-yellow-500", iconBg: "bg-gradient-to-br from-amber-500 to-yellow-500" },
-    { icon: ThermometerSun, title: c.system2Title, subtitle: c.system2Subtitle, desc: c.system2Desc, benefits: c.system2Benefits, gradient: "from-orange-500 to-red-500", iconBg: "bg-gradient-to-br from-orange-500 to-red-500" },
-    { icon: Battery, title: c.system3Title, subtitle: c.system3Subtitle, desc: c.system3Desc, benefits: c.system3Benefits, gradient: "from-emerald-500 to-green-600", iconBg: "bg-gradient-to-br from-emerald-500 to-green-600" },
-    { icon: Droplets, title: c.system4Title, subtitle: c.system4Subtitle, desc: c.system4Desc, benefits: c.system4Benefits, gradient: "from-cyan-500 to-blue-600", iconBg: "bg-gradient-to-br from-cyan-500 to-blue-600" },
+    { icon: Sun, title: c.system1Title, subtitle: c.system1Subtitle, desc: c.system1Desc, benefits: c.system1Benefits, gradient: "from-amber-500 to-yellow-500", iconBg: "bg-gradient-to-br from-amber-500 to-yellow-500", image: systemSolarImage, imageAlt: "Photovoltaik Solaranlage Installation" },
+    { icon: ThermometerSun, title: c.system2Title, subtitle: c.system2Subtitle, desc: c.system2Desc, benefits: c.system2Benefits, gradient: "from-orange-500 to-red-500", iconBg: "bg-gradient-to-br from-orange-500 to-red-500", image: systemHeatPumpImage, imageAlt: "Vaillant Wärmepumpe Installation" },
+    { icon: Battery, title: c.system3Title, subtitle: c.system3Subtitle, desc: c.system3Desc, benefits: c.system3Benefits, gradient: "from-emerald-500 to-green-600", iconBg: "bg-gradient-to-br from-emerald-500 to-green-600", image: systemBatteryImage, imageAlt: "Samsung Batteriespeicher System" },
+    { icon: Droplets, title: c.system4Title, subtitle: c.system4Subtitle, desc: c.system4Desc, benefits: c.system4Benefits, gradient: "from-cyan-500 to-blue-600", iconBg: "bg-gradient-to-br from-cyan-500 to-blue-600", image: systemHotWaterImage, imageAlt: "Warmwasserspeicher Installation" },
   ];
 
   const expansions = [
@@ -612,9 +616,17 @@ export default function Vorteile() {
             {systems.map((system, index) => (
               <Card
                 key={index}
-                className="overflow-visible border-border/50 bg-gradient-to-br from-card to-card/80"
+                className="overflow-hidden border-border/50 bg-gradient-to-br from-card to-card/80"
                 data-testid={`card-system-${index}`}
               >
+                <div className="overflow-hidden">
+                  <img 
+                    src={system.image} 
+                    alt={system.imageAlt}
+                    className="w-full h-56 md:h-72 object-cover hover:scale-105 transition-transform duration-500"
+                    data-testid={`img-system-${index}`}
+                  />
+                </div>
                 <CardContent className="p-8">
                   <div className="flex flex-col lg:flex-row items-start gap-8">
                     <div className={`flex-shrink-0 w-20 h-20 rounded-2xl ${system.iconBg} flex items-center justify-center shadow-lg`}>
