@@ -26,10 +26,10 @@ const chatTranslations: Record<string, {
   de: {
     badge: "KI-Berater",
     headline: "Ihr persönlicher 089Bayern-Berater",
-    title: "Ihr Energieberater Dalibor",
+    title: "Ihr Energieberater Hasan",
     subtitle: "Stellen Sie Ihre Fragen zu Kosten, Ablauf, Materialien und mehr. Unser KI-Berater gibt Ihnen sofort Auskunft.",
     placeholder: "Ihre Frage eingeben...",
-    welcome: "Grüß Gott!\nIch bin Dalibor, Ihr persönlicher Energieberater bei 089 Bayern.\n\nIch weiß genau, wie frustrierend es ist, wenn jeden Monat eine Stromrechnung kommt, die einen schockiert. Viele unserer Kunden haben uns erzählt, wie sie sich hilflos gefühlt haben - die Preise steigen und steigen, und man weiß nicht, wie man das stoppen kann.\n\nGenau dafür bin ich hier. Mit Herzblut und 15 Jahren Erfahrung helfe ich Familien, endlich frei von diesen Sorgen zu werden. Gemeinsam finden wir eine Lösung, die zu Ihnen passt.\n\nWas beschäftigt Sie gerade am meisten?",
+    welcome: "Grüß Gott!\nIch bin Hasan, Ihr persönlicher Energieberater bei 089 Bayern.\n\nIch weiß genau, wie frustrierend es ist, wenn jeden Monat eine Stromrechnung kommt, die einen schockiert. Viele unserer Kunden haben uns erzählt, wie sie sich hilflos gefühlt haben - die Preise steigen und steigen, und man weiß nicht, wie man das stoppen kann.\n\nGenau dafür bin ich hier. Mit Herzblut und 15 Jahren Erfahrung helfe ich Familien, endlich frei von diesen Sorgen zu werden. Gemeinsam finden wir eine Lösung, die zu Ihnen passt.\n\nWas beschäftigt Sie gerade am meisten?",
     suggestions: [
       "Ich habe ein Ferienhaus in Kroatien",
       "Wie funktioniert das 4-in-1 System?",
@@ -110,10 +110,10 @@ const chatTranslations: Record<string, {
   hr: {
     badge: "AI Savjetnik",
     headline: "Vaš osobni 089Bayern savjetnik",
-    title: "Vaš energetski savjetnik Dalibor",
+    title: "Vaš energetski savjetnik Hasan",
     subtitle: "Postavite pitanja o troškovima, procesu, materijalima i više. Naš AI savjetnik daje vam trenutne odgovore.",
     placeholder: "Unesite vaše pitanje...",
-    welcome: "Pozdrav!\nJa sam Dalibor, vaš osobni energetski savjetnik u 089 Bayern.\n\nTočno znam koliko je frustrirajuće kada svaki mjesec stigne račun za struju koji vas šokira. Mnogi naši klijenti su nam ispričali kako su se osjećali bespomoćno - cijene rastu i rastu, a ne znate kako to zaustaviti.\n\nUpravo zato sam ovdje. Sa srcem i 15 godina iskustva pomažem obiteljima da se konačno oslobode tih briga. Zajedno ćemo pronaći rješenje koje vam odgovara.\n\nŠto vas trenutno najviše brine?",
+    welcome: "Pozdrav!\nJa sam Hasan, vaš osobni energetski savjetnik u 089 Bayern.\n\nTočno znam koliko je frustrirajuće kada svaki mjesec stigne račun za struju koji vas šokira. Mnogi naši klijenti su nam ispričali kako su se osjećali bespomoćno - cijene rastu i rastu, a ne znate kako to zaustaviti.\n\nUpravo zato sam ovdje. Sa srcem i 15 godina iskustva pomažem obiteljima da se konačno oslobode tih briga. Zajedno ćemo pronaći rješenje koje vam odgovara.\n\nŠto vas trenutno najviše brine?",
     suggestions: [
       "Imam kuću u Hrvatskoj",
       "Kako radi sustav 4-u-1?",
@@ -229,7 +229,7 @@ export default function EmbeddedChatSection() {
                 <Bot className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-white font-semibold">{language === "de" || language === "hr" ? "Dalibor Bakmaz" : "Mustafa Sakar"} - 089 Bayern</h3>
+                <h3 className="text-white font-semibold">{language === "de" || language === "hr" ? "Hasan" : "Mustafa Sakar"} - 089 Bayern</h3>
                 <p className="text-white/80 text-sm">Online - {language === "tr" ? "Yardıma hazır" : language === "de" ? "Bereit zu helfen" : language === "ar" ? "جاهز للمساعدة" : language === "ru" ? "Готов помочь" : language === "uk" ? "Готовий допомогти" : language === "hr" ? "Spreman pomoći" : "Ready to help"}</p>
               </div>
             </div>
