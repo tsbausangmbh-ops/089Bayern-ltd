@@ -1082,18 +1082,18 @@ export default function InstallationAnkara() {
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button size="lg" variant="outline" className="border-red-400/50 text-white bg-red-500/20 backdrop-blur-sm" asChild data-testid="button-hero-call-tr">
-              <a href="tel:+905071832036">
+              <a href="tel:+905071922036">
                 <Phone className="mr-2 w-4 h-4" />
-                TR +90 507 183 2036
+                TR +90 507 192 2036
               </a>
             </Button>
             <Button size="lg" variant="outline" className="border-amber-400/50 text-white bg-black/30 backdrop-blur-sm" asChild data-testid="button-hero-call-de">
-              <a href="tel:+491735994699">
+              <a href="tel:+4915568855141">
                 <Phone className="mr-2 w-4 h-4" />
-                DE +49 173 5994699
+                DE +49 155 68855141
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm" onClick={() => window.open("https://wa.me/491735994699", "_blank")} data-testid="button-hero-whatsapp">
+            <Button size="lg" variant="outline" className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm" onClick={() => window.open("https://wa.me/4915568855141", "_blank")} data-testid="button-hero-whatsapp">
               WhatsApp
             </Button>
             <Button size="lg" variant="outline" className="border-blue-400/50 text-white bg-blue-500/20 backdrop-blur-sm" asChild data-testid="button-hero-email">

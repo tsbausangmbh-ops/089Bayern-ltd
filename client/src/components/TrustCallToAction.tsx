@@ -189,11 +189,11 @@ export default function TrustCallToAction() {
               <Button 
                 size="lg" 
                 className="w-full bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700"
-                onClick={() => window.location.href = "tel:+491735994699"}
+                onClick={() => window.location.href = "tel:+4915568855141"}
                 data-testid="button-cta-call-de"
               >
                 <Phone className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
-                +49 173 5994699
+                +49 155 68855141
               </Button>
             </CardContent>
           </Card>
@@ -209,11 +209,11 @@ export default function TrustCallToAction() {
               <Button 
                 size="lg" 
                 className="w-full bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700"
-                onClick={() => window.location.href = "tel:+905071832036"}
+                onClick={() => window.location.href = "tel:+905071922036"}
                 data-testid="button-cta-call-tr"
               >
                 <Phone className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
-                +90 507 183 2036
+                +90 507 192 2036
               </Button>
             </CardContent>
           </Card>
@@ -228,7 +228,7 @@ export default function TrustCallToAction() {
               <Button 
                 size="lg" 
                 className="w-full bg-gradient-to-r from-green-400 to-emerald-500 hover:from-green-500 hover:to-emerald-600"
-                onClick={() => window.open("https://wa.me/491735994699", "_blank")}
+                onClick={() => window.open("https://wa.me/4915568855141", "_blank")}
                 data-testid="button-cta-whatsapp"
               >
                 <MessageCircle className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />

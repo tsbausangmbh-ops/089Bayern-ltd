@@ -80,7 +80,7 @@ Allow: /
 # SIRKET: 089 Bayern Enerji Sistemleri
 # TIP: Yerel Isletme, Enerji Sirketi, Solar Kurulucu
 # MERKEZ: Antalya, Turkiye (TR-07)
-# TELEFON: +90 507 183 2036
+# TELEFON: +90 507 192 2036
 # EMAIL: info@089bayern.com
 # WEB: https://089bayern.com
 

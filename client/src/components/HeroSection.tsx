@@ -92,27 +92,27 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
           <Button
             size="lg"
             variant="outline"
-            onClick={() => window.location.href = "tel:+905071832036"}
+            onClick={() => window.location.href = "tel:+905071922036"}
             className="bg-red-500/20 backdrop-blur-sm border-red-400/50 text-white"
             data-testid="button-hero-phone-tr"
           >
             <Phone className="w-4 h-4 mr-2" />
-            TR +90 507 183 2036
+            TR +90 507 192 2036
           </Button>
           <Button
             size="lg"
             variant="outline"
-            onClick={() => window.location.href = "tel:+491735994699"}
+            onClick={() => window.location.href = "tel:+4915568855141"}
             className="bg-black/30 backdrop-blur-sm border-amber-400/50 text-white"
             data-testid="button-hero-phone-de"
           >
             <Phone className="w-4 h-4 mr-2" />
-            DE +49 173 5994699
+            DE +49 155 68855141
           </Button>
           <Button
             size="lg"
             variant="outline"
-            onClick={() => window.open("https://wa.me/491735994699", "_blank")}
+            onClick={() => window.open("https://wa.me/4915568855141", "_blank")}
             className="bg-green-500/20 backdrop-blur-sm border-green-400/50 text-white"
             data-testid="button-hero-whatsapp"
           >

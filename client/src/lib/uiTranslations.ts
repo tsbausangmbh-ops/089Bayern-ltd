@@ -315,7 +315,7 @@ export const uiTranslations: Record<Language, {
       consultationTitle: "Ücretsiz Keşif ve Danışmanlık",
       consultationTitleHighlight: "Antalya'da",
       consultationDescription: "Villanızın veya evinizin güneş potansiyelini yerinde değerlendirelim. Antalya, Muğla, İzmir, Aydın ve Mersin'de ücretsiz keşif hizmeti. Satış baskısı yok.",
-      callNow: "Hemen Ara: +90 507 183 2036",
+      callNow: "Hemen Ara: +90 507 192 2036",
     },
     footer: {
       tagline: "Enerji Sistemleri",
@@ -509,7 +509,7 @@ export const uiTranslations: Record<Language, {
       consultationTitle: "Kostenlose Besichtigung und Beratung",
       consultationTitleHighlight: "in Antalya",
       consultationDescription: "Lassen Sie uns das Solarpotenzial Ihrer Villa oder Ihres Hauses vor Ort bewerten. Kostenloser Besichtigungsservice in Antalya, Mugla, Izmir, Aydin und Mersin. Kein Verkaufsdruck.",
-      callNow: "Jetzt anrufen: +90 507 183 2036",
+      callNow: "Jetzt anrufen: +90 507 192 2036",
     },
     footer: {
       tagline: "Energiesysteme",
@@ -703,7 +703,7 @@ export const uiTranslations: Record<Language, {
       consultationTitle: "Free Site Visit and Consultation",
       consultationTitleHighlight: "in Antalya",
       consultationDescription: "Let us evaluate the solar potential of your villa or home on-site. Free site visit service in Antalya, Mugla, Izmir, Aydin and Mersin. No sales pressure.",
-      callNow: "Call Now: +90 507 183 2036",
+      callNow: "Call Now: +90 507 192 2036",
     },
     footer: {
       tagline: "Energy Systems",
@@ -897,7 +897,7 @@ export const uiTranslations: Record<Language, {
       consultationTitle: "Бесплатный осмотр и консультация",
       consultationTitleHighlight: "в Анталье",
       consultationDescription: "Позвольте нам оценить солнечный потенциал вашей виллы или дома на месте. Бесплатный осмотр в Анталье, Мугле, Измире, Айдыне и Мерсине. Без давления продаж.",
-      callNow: "Позвонить сейчас: +90 507 183 2036",
+      callNow: "Позвонить сейчас: +90 507 192 2036",
     },
     footer: {
       tagline: "Энергосистемы",
@@ -1091,7 +1091,7 @@ export const uiTranslations: Record<Language, {
       consultationTitle: "Безкоштовний огляд та консультація",
       consultationTitleHighlight: "в Анталії",
       consultationDescription: "Дозвольте нам оцінити сонячний потенціал вашої вілли або будинку на місці. Безкоштовний огляд в Анталії, Мугла, Ізмірі, Айдині та Мерсіні. Без тиску продажів.",
-      callNow: "Зателефонувати зараз: +90 507 183 2036",
+      callNow: "Зателефонувати зараз: +90 507 192 2036",
     },
     footer: {
       tagline: "Енергосистеми",
@@ -1285,7 +1285,7 @@ export const uiTranslations: Record<Language, {
       consultationTitle: "زيارة واستشارة مجانية",
       consultationTitleHighlight: "في أنطاليا",
       consultationDescription: "دعنا نقيّم إمكانات الطاقة الشمسية لفيلتك أو منزلك في الموقع. خدمة زيارة مجانية في أنطاليا، موغلا، إزمير، أيدين ومرسين. بدون ضغط مبيعات.",
-      callNow: "اتصل الآن: +90 507 183 2036",
+      callNow: "اتصل الآن: +90 507 192 2036",
     },
     footer: {
       tagline: "أنظمة الطاقة",
@@ -1479,7 +1479,7 @@ export const uiTranslations: Record<Language, {
       consultationTitle: "Besplatni pregled i savjetovanje",
       consultationTitleHighlight: "u Antaliji",
       consultationDescription: "Neka procijenimo solarni potencijal vaše vile ili kuće na licu mjesta. Besplatna usluga pregleda u Antaliji, Mugla, Izmir, Aydin i Mersin. Bez prodajnog pritiska.",
-      callNow: "Nazovite odmah: +90 507 183 2036",
+      callNow: "Nazovite odmah: +90 507 192 2036",
     },
     footer: {
       tagline: "Energetski sustavi",

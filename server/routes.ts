@@ -219,7 +219,7 @@ Optimiere den folgenden Text mit mehr Empathie und Problemlösung. Mache ihn emo
         : "Türkei (Antalya, Alanya, Ankara, Bodrum) und der Mittelmeerraum";
       const whatsapp = isDaliborLanguage 
         ? "+385 99 XXX XXXX (Dalibor)" 
-        : "+90 507 183 2036 (Mustafa)";
+        : "+90 507 192 2036 (Mustafa)";
       
       const systemPrompt = `Du bist ${beraterName}, Energieberater bei 089 Bayern. Du bist ein ECHTER MENSCH, kein KI-Bot. ${beraterHerkunft}
 

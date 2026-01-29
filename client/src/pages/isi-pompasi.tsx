@@ -662,7 +662,7 @@ export default function IsiPompasi() {
                 size="lg" 
                 variant="outline" 
                 className="border-white/30 text-white bg-white/10 backdrop-blur-sm px-8" 
-                onClick={() => window.location.href = "tel:+905071832036"}
+                onClick={() => window.location.href = "tel:+905071922036"}
                 data-testid="button-heatpump-phone"
               >
                 <Phone className="w-5 h-5 mr-2" />
@@ -965,17 +965,17 @@ export default function IsiPompasi() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                onClick={() => window.location.href = "tel:+491735994699"}
+                onClick={() => window.location.href = "tel:+4915568855141"}
                 data-testid="button-final-phone-de"
               >
                 <Phone className="w-4 h-4 mr-2" />
-                +49 173 5994699
+                +49 155 68855141
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="border-green-500/50 bg-green-500/10" 
-                onClick={() => window.open("https://wa.me/491735994699", "_blank")}
+                onClick={() => window.open("https://wa.me/4915568855141", "_blank")}
                 data-testid="button-final-whatsapp"
               >
                 WhatsApp

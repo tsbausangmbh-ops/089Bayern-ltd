@@ -1080,18 +1080,18 @@ export default function InstallationAntalya() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
               <Button size="lg" variant="outline" className="border-red-400/50 text-white bg-red-500/20 backdrop-blur-sm" asChild data-testid="button-antalya-call-tr">
-                <a href="tel:+905071832036">
+                <a href="tel:+905071922036">
                   <Phone className="w-4 h-4 mr-2" />
-                  TR +90 507 183 2036
+                  TR +90 507 192 2036
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="border-amber-400/50 text-white bg-black/30 backdrop-blur-sm" asChild data-testid="button-antalya-call-de">
-                <a href="tel:+491735994699">
+                <a href="tel:+4915568855141">
                   <Phone className="w-4 h-4 mr-2" />
-                  DE +49 173 5994699
+                  DE +49 155 68855141
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm" onClick={() => window.open("https://wa.me/491735994699", "_blank")} data-testid="button-antalya-whatsapp">
+              <Button size="lg" variant="outline" className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm" onClick={() => window.open("https://wa.me/4915568855141", "_blank")} data-testid="button-antalya-whatsapp">
                 WhatsApp
               </Button>
               <Button size="lg" variant="outline" className="border-blue-400/50 text-white bg-blue-500/20 backdrop-blur-sm" asChild data-testid="button-antalya-email">
@@ -1502,7 +1502,7 @@ export default function InstallationAntalya() {
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
             <Button size="lg" variant="outline" asChild data-testid="button-cta-call">
-              <a href="tel:+905071832036">
+              <a href="tel:+905071922036">
                 <Phone className="w-4 h-4 mr-2" />
                 {c.callButton}
               </a>
