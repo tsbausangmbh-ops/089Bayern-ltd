@@ -16,8 +16,9 @@ export default function TeamSection() {
       role: t.team.member1Role,
       description: t.team.member1Description,
       languages: ["Deutsch", "Kroatisch", "Englisch"],
-      emails: ["info@089bayern.com", "dbakmaz@089bayern.com"],
-      phones: ["+90 507 192 2036", "+49 155 60990093"],
+      email: "info@089bayern.com",
+      phoneTR: "+90 507 192 2036",
+      phoneDE: "+49 155 60990093",
       whatsapp: "+4915560990093",
       initials: "DB",
       bgColor: "bg-blue-500/10",
@@ -28,8 +29,9 @@ export default function TeamSection() {
       role: t.team.member2Role,
       description: t.team.member2Description,
       languages: ["Deutsch", "Türkisch"],
-      emails: ["info@089bayern.com", "msakar@089bayern.com"],
-      phones: ["+90 507 183 2036", "+49 173 5994699"],
+      email: "info@089bayern.com",
+      phoneTR: "+90 507 183 2036",
+      phoneDE: "+49 173 5994699",
       whatsapp: "+491735994699",
       initials: "MS",
       bgColor: "bg-emerald-500/10",
@@ -58,68 +60,80 @@ export default function TeamSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
           {teamMembers.map((member, index) => (
-            <Card key={member.name} className="overflow-visible" data-testid={`card-team-${index}`}>
-              <CardContent className="p-5">
-                <div className="text-center mb-6">
-                  <Avatar className={`w-24 h-24 mx-auto mb-4 ${member.bgColor}`}>
-                    <AvatarFallback className={`text-2xl font-bold ${member.textColor} ${member.bgColor}`}>
+            <Card key={member.name} className="overflow-visible h-full" data-testid={`card-team-${index}`}>
+              <CardContent className="p-5 h-full flex flex-col">
+                <div className="text-center mb-4">
+                  <Avatar className={`w-20 h-20 mx-auto mb-3 ${member.bgColor}`}>
+                    <AvatarFallback className={`text-xl font-bold ${member.textColor} ${member.bgColor}`}>
                       {member.initials}
                     </AvatarFallback>
                   </Avatar>
 
-                  <h3 className="text-xl font-bold text-foreground mb-1">{member.name}</h3>
-                  <p className="text-primary font-medium mb-3">{member.role}</p>
-                  <p className="text-sm text-muted-foreground mb-4">{member.description}</p>
+                  <h3 className="text-lg font-bold text-foreground mb-1">{member.name}</h3>
+                  <p className="text-primary font-medium text-sm mb-2">{member.role}</p>
+                  <p className="text-xs text-muted-foreground mb-3 min-h-[2.5rem]">{member.description}</p>
 
-                  <div className="flex items-center justify-center gap-2 mb-6">
-                    <Globe className="w-4 h-4 text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">
+                  <div className="flex items-center justify-center gap-2">
+                    <Globe className="w-3.5 h-3.5 text-muted-foreground" />
+                    <span className="text-xs text-muted-foreground">
                       {member.languages.join(" / ")}
                     </span>
                   </div>
                 </div>
 
-                <div className="space-y-3 text-sm mb-6">
-                  {member.emails.map((email, emailIndex) => (
+                <div className="flex-1 space-y-2 text-sm mb-4">
+                  <a
+                    href={`mailto:${member.email}`}
+                    className="flex items-center gap-2 text-foreground hover:text-primary transition-colors p-2 rounded-lg hover-elevate"
+                    data-testid={`link-email-${index}`}
+                  >
+                    <Mail className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                    <span className="text-sm">{member.email}</span>
+                  </a>
+                  <div className="grid grid-cols-2 gap-2">
                     <a
-                      key={emailIndex}
-                      href={`mailto:${email}`}
-                      className="flex items-center gap-3 text-foreground hover:text-primary transition-colors p-2 rounded-lg hover-elevate"
-                      data-testid={`link-email-${index}-${emailIndex}`}
+                      href={`tel:${member.phoneDE.replace(/\s/g, "")}`}
+                      className="flex items-center gap-2 text-foreground hover:text-primary transition-colors p-2 rounded-lg hover-elevate"
+                      data-testid={`link-phone-de-${index}`}
                     >
-                      <Mail className="w-5 h-5 text-muted-foreground" />
-                      <span>{email}</span>
+                      <Phone className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                      <div className="flex flex-col">
+                        <span className="text-[10px] text-muted-foreground">DE</span>
+                        <span className="text-xs">{member.phoneDE}</span>
+                      </div>
                     </a>
-                  ))}
-                  {member.phones.map((phone, phoneIndex) => (
                     <a
-                      key={phoneIndex}
-                      href={`tel:${phone.replace(/\s/g, "")}`}
-                      className="flex items-center gap-3 text-foreground hover:text-primary transition-colors p-2 rounded-lg hover-elevate"
-                      data-testid={`link-phone-${index}-${phoneIndex}`}
+                      href={`tel:${member.phoneTR.replace(/\s/g, "")}`}
+                      className="flex items-center gap-2 text-foreground hover:text-primary transition-colors p-2 rounded-lg hover-elevate"
+                      data-testid={`link-phone-tr-${index}`}
                     >
-                      <Phone className="w-5 h-5 text-muted-foreground" />
-                      <span>{phone}</span>
+                      <Phone className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                      <div className="flex flex-col">
+                        <span className="text-[10px] text-muted-foreground">TR</span>
+                        <span className="text-xs">{member.phoneTR}</span>
+                      </div>
                     </a>
-                  ))}
+                  </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-2 mt-auto">
                   <Button
                     variant="outline"
+                    size="sm"
                     className="w-full"
-                    onClick={() => window.location.href = `tel:${member.phones[0].replace(/\s/g, "")}`}
-                    data-testid={`button-call-${index}`}
+                    onClick={() => window.open(`mailto:${member.email}`, "_blank")}
+                    data-testid={`button-email-${index}`}
                   >
-                    <Phone className="w-4 h-4 mr-2" />
-                    {t.team.callButton}
+                    <Mail className="w-4 h-4 mr-1.5" />
+                    Email
                   </Button>
                   <Button
+                    size="sm"
                     className="w-full bg-green-600 hover:bg-green-700"
                     onClick={() => window.open(`https://wa.me/${member.whatsapp.replace(/\+/g, "")}`, "_blank")}
                     data-testid={`button-whatsapp-${index}`}
                   >
-                    <SiWhatsapp className="w-4 h-4 mr-2" />
+                    <SiWhatsapp className="w-4 h-4 mr-1.5" />
                     WhatsApp
                   </Button>
                 </div>
