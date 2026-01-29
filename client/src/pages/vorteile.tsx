@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
+import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/images/hero-benefits.png";
 import consultationActionImage from "@assets/images/benefits-consultation-action.png";
@@ -579,6 +580,7 @@ export default function Vorteile() {
               </Card>
             ))}
           </div>
+          <SectionCTA />
         </div>
       </section>
 
@@ -652,6 +654,7 @@ export default function Vorteile() {
               </Card>
             ))}
           </div>
+          <SectionCTA />
         </div>
       </section>
 

@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
+import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/images/hero-climate.png";
 import climateIndoorImage from "@assets/images/climate-indoor-unit.png";
@@ -527,6 +528,7 @@ export default function Klima() {
               </div>
             ))}
           </div>
+          <SectionCTA />
         </div>
       </section>
 

@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
+import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import heroImage from "@assets/images/hero-battery-storage.png";
 import batterySystemImage from "@assets/images/battery-system-installed.png";
@@ -434,6 +435,7 @@ export default function EnerjiDepolama() {
               </div>
             ))}
           </div>
+          <SectionCTA />
         </div>
       </section>
 
