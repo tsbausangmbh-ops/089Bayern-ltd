@@ -29,6 +29,11 @@ const content = {
     officeSubtitle: "Unser Hauptstandort für die Mittelmeerregion",
     officeDesc: "Von unserem Hauptsitz in Antalya aus koordinieren wir alle Installationen an der Mittelmeerküste. Mit Niederlassungen in Alanya und Ankara sind wir immer in Ihrer Nähe.",
     
+    officeNlp1: "Stellen Sie sich vor: Sie rufen an und sprechen direkt mit einem deutschen Experten - nicht mit einem Callcenter. Mustafa Sakar, unser Mitgründer, nimmt sich persönlich Zeit für Ihre Fragen.",
+    officeNlp2: "Während andere Anbieter aus Istanbul anreisen müssen, sind wir bereits hier. Das bedeutet: schnellere Reaktionszeit, persönlicher Service und jahrelange Erfahrung mit dem Mittelmeerklima.",
+    officeNlp3: "Ihre Villa verdient das Beste. Deshalb arbeiten wir ausschließlich mit Premium-Komponenten von Vaillant und Samsung - Qualität, die Sie sehen und spüren werden.",
+    officeCtaText: "Rufen Sie jetzt an und erleben Sie den Unterschied",
+    
     whyAntalyaTitle: "Warum Antalya perfekt für Solarenergie ist",
     whyAntalyaSubtitle: "300+ Sonnentage im Jahr machen Antalya zum idealen Standort",
     sunDays: "300+",
@@ -171,6 +176,11 @@ const content = {
     officeTitle: "089 Bayern Antalya Merkezi",
     officeSubtitle: "Akdeniz bölgesi için ana merkezimiz",
     officeDesc: "Antalya merkezimizden tüm Akdeniz kıyısı kurulumlarını koordine ediyoruz. Alanya ve Ankara şubelerimizle her zaman yanınızdayız.",
+    
+    officeNlp1: "Hayal edin: Aradığınızda direkt bir uzmanla konuşuyorsunuz - çağrı merkezi değil. Mustafa Sakar, kurucu ortağımız, sorularınız için kişisel olarak zaman ayırıyor.",
+    officeNlp2: "Diğer firmalar İstanbul'dan gelmek zorundayken, biz zaten buradayız. Bu demektir ki: daha hızlı tepki süresi, kişisel hizmet ve Akdeniz iklimiyle yıllarca deneyim.",
+    officeNlp3: "Villanız en iyisini hak ediyor. Bu yüzden sadece Vaillant ve Samsung premium bileşenleriyle çalışıyoruz - göreceğiniz ve hissedeceğiniz kalite.",
+    officeCtaText: "Şimdi arayın ve farkı yaşayın",
     
     whyAntalyaTitle: "Antalya Neden Güneş Enerjisi İçin Mükemmel",
     whyAntalyaSubtitle: "Yılda 300+ güneşli gün Antalya'yı ideal lokasyon yapıyor",
@@ -315,6 +325,11 @@ const content = {
     officeSubtitle: "Our main location for the Mediterranean region",
     officeDesc: "From our headquarters in Antalya, we coordinate all installations along the Mediterranean coast. With branches in Alanya and Ankara, we are always near you.",
     
+    officeNlp1: "Imagine this: You call and speak directly with a German expert - not a call center. Mustafa Sakar, our co-founder, personally takes time for your questions.",
+    officeNlp2: "While other providers have to travel from Istanbul, we're already here. This means: faster response times, personal service, and years of experience with the Mediterranean climate.",
+    officeNlp3: "Your villa deserves the best. That's why we work exclusively with premium components from Vaillant and Samsung - quality you'll see and feel.",
+    officeCtaText: "Call now and experience the difference",
+    
     whyAntalyaTitle: "Why Antalya is Perfect for Solar Energy",
     whyAntalyaSubtitle: "300+ sunny days per year make Antalya the ideal location",
     sunDays: "300+",
@@ -457,6 +472,11 @@ const content = {
     officeTitle: "Главный офис 089 Bayern Анталия",
     officeSubtitle: "Наша основная локация для Средиземноморского региона",
     officeDesc: "Из нашего главного офиса в Анталии мы координируем все установки на Средиземноморском побережье. С филиалами в Аланье и Анкаре мы всегда рядом с вами.",
+    
+    officeNlp1: "Представьте: Вы звоните и говорите напрямую с немецким экспертом - не с колл-центром. Mustafa Sakar, наш сооснователь, лично уделяет время вашим вопросам.",
+    officeNlp2: "Пока другие поставщики должны ехать из Стамбула, мы уже здесь. Это значит: быстрое реагирование, персональный сервис и многолетний опыт работы со средиземноморским климатом.",
+    officeNlp3: "Ваша вилла заслуживает лучшего. Поэтому мы работаем исключительно с премиум-компонентами Vaillant и Samsung - качество, которое вы увидите и почувствуете.",
+    officeCtaText: "Позвоните сейчас и почувствуйте разницу",
     
     whyAntalyaTitle: "Почему Анталия идеальна для солнечной энергии",
     whyAntalyaSubtitle: "300+ солнечных дней в году делают Анталию идеальным местом",
@@ -601,6 +621,11 @@ const content = {
     officeSubtitle: "Наша основна локація для Середземноморського регіону",
     officeDesc: "З нашого головного офісу в Анталії ми координуємо всі встановлення на Середземноморському узбережжі. З філіями в Аланії та Анкарі ми завжди поруч з вами.",
     
+    officeNlp1: "Уявіть: Ви телефонуєте і спілкуєтесь напряму з німецьким експертом - не з кол-центром. Mustafa Sakar, наш співзасновник, особисто приділяє час вашим питанням.",
+    officeNlp2: "Поки інші постачальники мусять їхати зі Стамбула, ми вже тут. Це означає: швидше реагування, персональний сервіс та багаторічний досвід роботи із середземноморським кліматом.",
+    officeNlp3: "Ваша вілла заслуговує найкращого. Тому ми працюємо виключно з преміум-компонентами Vaillant та Samsung - якість, яку ви побачите та відчуєте.",
+    officeCtaText: "Зателефонуйте зараз і відчуйте різницю",
+    
     whyAntalyaTitle: "Чому Анталія ідеальна для сонячної енергії",
     whyAntalyaSubtitle: "300+ сонячних днів на рік роблять Анталію ідеальним місцем",
     sunDays: "300+",
@@ -744,6 +769,11 @@ const content = {
     officeSubtitle: "موقعنا الرئيسي لمنطقة البحر المتوسط",
     officeDesc: "من مقرنا الرئيسي في أنطاليا، ننسق جميع التركيبات على ساحل البحر المتوسط. مع فروع في ألانيا وأنقرة، نحن دائماً بالقرب منك.",
     
+    officeNlp1: "تخيل: أنت تتصل وتتحدث مباشرة مع خبير ألماني - ليس مركز اتصال. Mustafa Sakar، شريكنا المؤسس، يخصص وقتاً شخصياً لأسئلتك.",
+    officeNlp2: "بينما يجب على مزودين آخرين السفر من إسطنبول، نحن هنا بالفعل. هذا يعني: وقت استجابة أسرع، خدمة شخصية، وسنوات من الخبرة مع مناخ البحر المتوسط.",
+    officeNlp3: "فيلتك تستحق الأفضل. لذلك نعمل حصرياً مع مكونات متميزة من Vaillant و Samsung - جودة ستراها وتشعر بها.",
+    officeCtaText: "اتصل الآن واشعر بالفرق",
+    
     whyAntalyaTitle: "لماذا أنطاليا مثالية للطاقة الشمسية",
     whyAntalyaSubtitle: "300+ يوم مشمس في السنة تجعل أنطاليا الموقع المثالي",
     sunDays: "+300",
@@ -886,6 +916,11 @@ const content = {
     officeTitle: "Sjedište 089 Bayern Antalya",
     officeSubtitle: "Naša glavna lokacija za mediteransku regiju",
     officeDesc: "Iz našeg sjedišta u Antalyi koordiniramo sve instalacije na mediteranskoj obali. S podružnicama u Alanyi i Ankari, uvijek smo blizu vas.",
+    
+    officeNlp1: "Zamislite: Zovete i razgovarate izravno s njemačkim stručnjakom - ne s pozivnim centrom. Mustafa Sakar, naš suosnivač, osobno odvaja vrijeme za vaša pitanja.",
+    officeNlp2: "Dok drugi dobavljači moraju putovati iz Istanbula, mi smo već ovdje. To znači: brže vrijeme reakcije, osobna usluga i dugogodišnje iskustvo s mediteranskom klimom.",
+    officeNlp3: "Vaša vila zaslužuje najbolje. Zato radimo isključivo s premium komponentama Vaillant i Samsung - kvaliteta koju ćete vidjeti i osjetiti.",
+    officeCtaText: "Nazovite sada i osjetite razliku",
     
     whyAntalyaTitle: "Zašto je Antalya Savršena za Solarnu Energiju",
     whyAntalyaSubtitle: "300+ sunčanih dana godišnje čini Antalyu idealnom lokacijom",
@@ -1124,8 +1159,8 @@ export default function InstallationAntalya() {
 
       {/* Office Info Section */}
       <section className="py-16" data-testid="section-office-info">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
-          <div className="mb-8">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="text-center mb-10">
             <Badge variant="secondary" className="mb-4">
               <Building2 className="w-4 h-4 mr-2" />
               {c.badgeType}
@@ -1133,11 +1168,62 @@ export default function InstallationAntalya() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.officeTitle}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{c.officeSubtitle}</p>
           </div>
-          <Card className="max-w-3xl mx-auto">
-            <CardContent className="p-8 text-center">
-              <p className="text-lg leading-relaxed">{c.officeDesc}</p>
-            </CardContent>
-          </Card>
+          
+          <div className="max-w-4xl mx-auto">
+            <Card className="mb-6">
+              <CardContent className="p-8 text-center">
+                <p className="text-lg leading-relaxed mb-0">{c.officeDesc}</p>
+              </CardContent>
+            </Card>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+              <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
+                <CardContent className="p-5">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                    <Phone className="w-5 h-5 text-primary" />
+                  </div>
+                  <p className="text-sm leading-relaxed text-foreground">{c.officeNlp1}</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gradient-to-br from-amber-500/5 to-orange-500/5 border-amber-500/20">
+                <CardContent className="p-5">
+                  <div className="w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center mb-3">
+                    <MapPin className="w-5 h-5 text-amber-600" />
+                  </div>
+                  <p className="text-sm leading-relaxed text-foreground">{c.officeNlp2}</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gradient-to-br from-emerald-500/5 to-green-500/5 border-emerald-500/20">
+                <CardContent className="p-5">
+                  <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center mb-3">
+                    <Award className="w-5 h-5 text-emerald-600" />
+                  </div>
+                  <p className="text-sm leading-relaxed text-foreground">{c.officeNlp3}</p>
+                </CardContent>
+              </Card>
+            </div>
+            
+            <div className="text-center">
+              <p className="text-lg font-semibold text-primary mb-4">{c.officeCtaText}</p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <Button size="lg" onClick={goToContact} className="bg-gradient-to-r from-primary to-orange-600" data-testid="button-office-cta">
+                  {c.ctaButton}
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+                <Button size="lg" variant="outline" className="border-red-400/50 bg-red-500/10" asChild data-testid="button-office-call-tr">
+                  <a href="tel:+905071832036">
+                    <Phone className="w-4 h-4 mr-2" />
+                    TR +90 507 183 2036
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="border-green-500/50 bg-green-500/10" onClick={() => window.open("https://wa.me/491735994699", "_blank")} data-testid="button-office-whatsapp">
+                  WhatsApp
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
