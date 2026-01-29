@@ -273,7 +273,7 @@ export default function GunesPaneli() {
               {c.heroSubtitle}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
               <Button 
                 onClick={goToContact}
                 size="lg"
@@ -286,12 +286,40 @@ export default function GunesPaneli() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white/30 text-white bg-white/10 backdrop-blur-sm px-8" 
+                className="border-red-400/50 text-white bg-red-500/20 backdrop-blur-sm" 
                 onClick={() => window.location.href = "tel:+905071832036"}
-                data-testid="button-solar-phone"
+                data-testid="button-solar-phone-tr"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                {c.ctaSecondary}
+                <Phone className="w-4 h-4 mr-2" />
+                TR +90 507 183 2036
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-amber-400/50 text-white bg-black/30 backdrop-blur-sm" 
+                onClick={() => window.location.href = "tel:+491735994699"}
+                data-testid="button-solar-phone-de"
+              >
+                <Phone className="w-4 h-4 mr-2" />
+                DE +49 173 5994699
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm" 
+                onClick={() => window.open("https://wa.me/491735994699", "_blank")}
+                data-testid="button-solar-whatsapp"
+              >
+                WhatsApp
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-blue-400/50 text-white bg-blue-500/20 backdrop-blur-sm" 
+                onClick={() => window.location.href = "mailto:info@089bayern.com"}
+                data-testid="button-solar-email"
+              >
+                Email
               </Button>
             </div>
           </div>
