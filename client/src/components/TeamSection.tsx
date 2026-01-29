@@ -16,9 +16,9 @@ export default function TeamSection() {
       role: t.team.member1Role,
       description: t.team.member1Description,
       languages: ["Deutsch"],
-      email: "dbakmaz@089bayern.com",
-      phones: ["+90 507 192 2036", "+49 155 68855141"],
-      whatsapp: "+905071922036",
+      emails: ["info@089bayern.com", "dbakmaz@089bayern.com"],
+      phones: ["+90 507 183 2036", "+49 155 68855141"],
+      whatsapp: "+4915568855141",
       initials: "DB",
       bgColor: "bg-blue-500/10",
       textColor: "text-blue-600",
@@ -28,9 +28,9 @@ export default function TeamSection() {
       role: t.team.member2Role,
       description: t.team.member2Description,
       languages: ["Deutsch", "Türkisch"],
-      email: "msakar@089bayern.com",
-      phones: ["+90 507 192 2036", "+49 155 68855141"],
-      whatsapp: "+905071922036",
+      emails: ["msakar@089bayern.com"],
+      phones: ["+90 507 183 2036", "+49 173 5994699"],
+      whatsapp: "+491735994699",
       initials: "MS",
       bgColor: "bg-emerald-500/10",
       textColor: "text-emerald-600",
@@ -80,14 +80,17 @@ export default function TeamSection() {
                 </div>
 
                 <div className="space-y-3 text-sm mb-6">
-                  <a
-                    href={`mailto:${member.email}`}
-                    className="flex items-center gap-3 text-foreground hover:text-primary transition-colors p-2 rounded-lg hover-elevate"
-                    data-testid={`link-email-${index}`}
-                  >
-                    <Mail className="w-5 h-5 text-muted-foreground" />
-                    <span>{member.email}</span>
-                  </a>
+                  {member.emails.map((email, emailIndex) => (
+                    <a
+                      key={emailIndex}
+                      href={`mailto:${email}`}
+                      className="flex items-center gap-3 text-foreground hover:text-primary transition-colors p-2 rounded-lg hover-elevate"
+                      data-testid={`link-email-${index}-${emailIndex}`}
+                    >
+                      <Mail className="w-5 h-5 text-muted-foreground" />
+                      <span>{email}</span>
+                    </a>
+                  ))}
                   {member.phones.map((phone, phoneIndex) => (
                     <a
                       key={phoneIndex}

@@ -185,7 +185,8 @@ export default function TrustCallToAction() {
               <p className="text-base font-bold text-foreground">Dalibor Bakmaz</p>
               <p className="text-xs text-primary font-medium mb-1">CEO / Geschäftsführer</p>
               <p className="text-xs text-muted-foreground mb-1">15+ Jahre Erfahrung mit deutschen Energiesystemen</p>
-              <p className="text-xs text-muted-foreground mb-3">Deutsch / Kroatisch / Englisch</p>
+              <p className="text-xs text-muted-foreground mb-2">Deutsch</p>
+              <p className="text-xs text-primary/80 mb-3">info@089bayern.com</p>
               <Button 
                 size="lg" 
                 className="w-full bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700"
