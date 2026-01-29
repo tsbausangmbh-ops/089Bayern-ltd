@@ -511,7 +511,7 @@ export default function Gizlilik() {
             <div className="bg-muted/50 p-4 rounded-lg mt-4">
               <p className="text-sm"><strong>{t.email}:</strong> info@089bayern.com</p>
               <p className="text-sm"><strong>{t.kvkkContact}:</strong> kvkk@089bayern.com</p>
-              <p className="text-sm"><strong>{t.phone}:</strong> +90 507 192 2036 | +49 173 5994699</p>
+              <p className="text-sm"><strong>{t.phone}:</strong> +90 507 183 2036 | +49 173 5994699</p>
             </div>
           </section>
 

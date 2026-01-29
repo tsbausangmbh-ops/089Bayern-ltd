@@ -678,7 +678,7 @@ export default function UeberUns() {
               size="lg" 
               variant="outline" 
               className="border-primary/30 bg-white/50 backdrop-blur-sm px-8" 
-              onClick={() => window.location.href = "tel:+905071922036"}
+              onClick={() => window.location.href = "tel:+905071832036"}
               data-testid="button-about-phone-bottom"
             >
               <Phone className={`w-5 h-5 ${isRtl ? "ml-2" : "mr-2"}`} />

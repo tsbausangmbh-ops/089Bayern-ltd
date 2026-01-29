@@ -1496,7 +1496,7 @@ export default function InstallationAntalya() {
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
             <Button size="lg" variant="outline" asChild data-testid="button-cta-call">
-              <a href="tel:+905071922036">
+              <a href="tel:+905071832036">
                 <Phone className="w-4 h-4 mr-2" />
                 {c.callButton}
               </a>
