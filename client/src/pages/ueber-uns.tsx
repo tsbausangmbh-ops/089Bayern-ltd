@@ -462,7 +462,7 @@ export default function UeberUns() {
               {c.subtitle}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
               <Button 
                 onClick={goToContact}
                 size="lg"
@@ -475,12 +475,30 @@ export default function UeberUns() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white/30 text-white bg-white/10 backdrop-blur-sm px-8" 
-                onClick={() => window.location.href = "tel:+905071832036"}
-                data-testid="button-about-phone"
+                className="border-amber-400/50 text-white bg-black/30 backdrop-blur-sm" 
+                onClick={() => window.location.href = "tel:+4917647877177"}
+                data-testid="button-about-phone-de"
               >
-                <Phone className={`w-5 h-5 ${isRtl ? "ml-2" : "mr-2"}`} />
-                +90 507 183 2036
+                <Phone className={`w-4 h-4 ${isRtl ? "ml-2" : "mr-2"}`} />
+                +49 176 4787 7177
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm" 
+                onClick={() => window.open("https://wa.me/905071832036", "_blank")}
+                data-testid="button-about-whatsapp"
+              >
+                WhatsApp
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-blue-400/50 text-white bg-blue-500/20 backdrop-blur-sm" 
+                onClick={() => window.location.href = "mailto:info@089bayern.de"}
+                data-testid="button-about-email"
+              >
+                Email
               </Button>
             </div>
           </div>

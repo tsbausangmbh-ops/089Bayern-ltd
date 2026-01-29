@@ -1074,16 +1074,22 @@ export default function InstallationAntalya() {
               {c.subtitle}
             </p>
             
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3">
               <Button size="lg" onClick={goToContact} className="bg-gradient-to-r from-primary to-orange-600" data-testid="button-antalya-cta">
                 {c.ctaButton}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white bg-white/10 backdrop-blur-sm" asChild data-testid="button-antalya-call">
-                <a href="tel:+905071832036">
+              <Button size="lg" variant="outline" className="border-amber-400/50 text-white bg-black/30 backdrop-blur-sm" asChild data-testid="button-antalya-call-de">
+                <a href="tel:+4917647877177">
                   <Phone className="w-4 h-4 mr-2" />
-                  {c.callButton}
+                  +49 176 4787 7177
                 </a>
+              </Button>
+              <Button size="lg" variant="outline" className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm" onClick={() => window.open("https://wa.me/905071832036", "_blank")} data-testid="button-antalya-whatsapp">
+                WhatsApp
+              </Button>
+              <Button size="lg" variant="outline" className="border-blue-400/50 text-white bg-blue-500/20 backdrop-blur-sm" asChild data-testid="button-antalya-email">
+                <a href="mailto:info@089bayern.de">Email</a>
               </Button>
             </div>
           </div>

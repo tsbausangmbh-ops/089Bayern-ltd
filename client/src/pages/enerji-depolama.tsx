@@ -277,7 +277,7 @@ export default function EnerjiDepolama() {
               {c.heroSubtitle}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
               <Button 
                 onClick={goToContact}
                 size="lg"
@@ -290,12 +290,30 @@ export default function EnerjiDepolama() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white/30 text-white bg-white/10 backdrop-blur-sm px-8" 
-                onClick={() => window.location.href = "tel:+905071832036"}
-                data-testid="button-battery-phone"
+                className="border-amber-400/50 text-white bg-black/30 backdrop-blur-sm" 
+                onClick={() => window.location.href = "tel:+4917647877177"}
+                data-testid="button-battery-phone-de"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                {c.ctaSecondary}
+                <Phone className="w-4 h-4 mr-2" />
+                +49 176 4787 7177
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm" 
+                onClick={() => window.open("https://wa.me/905071832036", "_blank")}
+                data-testid="button-battery-whatsapp"
+              >
+                WhatsApp
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-blue-400/50 text-white bg-blue-500/20 backdrop-blur-sm" 
+                onClick={() => window.location.href = "mailto:info@089bayern.de"}
+                data-testid="button-battery-email"
+              >
+                Email
               </Button>
             </div>
           </div>

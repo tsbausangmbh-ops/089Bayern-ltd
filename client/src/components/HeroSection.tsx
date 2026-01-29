@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Shield, Award, MapPin, ArrowRight } from "lucide-react";
+import { Check, Shield, Award, MapPin, ArrowRight, Phone, Mail, MessageCircle } from "lucide-react";
 import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
@@ -79,7 +79,7 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-5">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-5 flex-wrap">
           <Button
             size="lg"
             onClick={onCtaClick}
@@ -92,11 +92,32 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
           <Button
             size="lg"
             variant="outline"
-            onClick={onLearnMoreClick}
-            className="text-lg px-10 py-7 bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10"
-            data-testid="button-hero-learn-more"
+            onClick={() => window.location.href = "tel:+4917647877177"}
+            className="bg-black/30 backdrop-blur-sm border-amber-400/50 text-white"
+            data-testid="button-hero-phone-de"
           >
-            {t.hero.learnMoreButton}
+            <Phone className="w-4 h-4 mr-2" />
+            +49 176 4787 7177
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            onClick={() => window.open("https://wa.me/905071832036", "_blank")}
+            className="bg-green-500/20 backdrop-blur-sm border-green-400/50 text-white"
+            data-testid="button-hero-whatsapp"
+          >
+            <MessageCircle className="w-4 h-4 mr-2" />
+            WhatsApp
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            onClick={() => window.location.href = "mailto:info@089bayern.de"}
+            className="bg-blue-500/20 backdrop-blur-sm border-blue-400/50 text-white"
+            data-testid="button-hero-email"
+          >
+            <Mail className="w-4 h-4 mr-2" />
+            Email
           </Button>
         </div>
 
