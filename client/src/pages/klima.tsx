@@ -356,7 +356,7 @@ export default function Klima() {
                 size="lg" 
                 variant="outline" 
                 className="border-white/30 text-white bg-white/10 backdrop-blur-sm px-8" 
-                onClick={() => window.location.href = "tel:+905071832036"}
+                onClick={() => window.location.href = "tel:+905071922036"}
                 data-testid="button-climate-phone"
               >
                 <Phone className="w-5 h-5 mr-2" />

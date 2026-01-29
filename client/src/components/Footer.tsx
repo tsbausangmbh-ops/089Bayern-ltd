@@ -165,13 +165,13 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex flex-wrap gap-4">
                 <a
-                  href="tel:+905071832036"
+                  href="tel:+905071922036"
                   className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
                   data-testid="link-footer-phone"
                 >
                   <Phone className="w-4 h-4" />
                   <div>
-                    <span className="block text-white font-medium text-sm">+90 507 183 2036</span>
+                    <span className="block text-white font-medium text-sm">+90 507 192 2036</span>
                     <span className="text-xs text-white/60">TR</span>
                   </div>
                 </a>
@@ -262,7 +262,7 @@ export default function Footer() {
           <div className="text-xs text-white/50 text-center space-y-1" data-testid="footer-impressum">
             <p className="font-medium text-white/70">089 Bayern Enerji Sistemleri Ltd. Sti.</p>
             <p>Sekerhane Mah. Halimaga Sk. Lale Tokus Plaza 6/14, Alanya/Antalya, Turkiye</p>
-            <p>Tel: +90 507 183 2036 | +49 173 5994699 | E-posta: info@089bayern.com</p>
+            <p>Tel: +90 507 192 2036 | +49 173 5994699 | E-posta: info@089bayern.com</p>
             <p>Yoneticiler: Dalibor Bakmaz (dbakmaz@089bayern.com) | Mustafa Sakar (msakar@089bayern.com)</p>
             <p>Ticaret Sicil No: [Kayit sonrasi] | MERSIS No: [Kayit sonrasi]</p>
             <p>Vergi Dairesi: [Kayit sonrasi] | Vergi No: [Kayit sonrasi]</p>

@@ -82,7 +82,7 @@ export default function OnBilgilendirme() {
       exception3: "Ambalajı açılmış, kullanılmış ürünler",
       exception4: "Özel sipariş üzerine temin edilen ürünler",
       withdrawalNotice: "Cayma Bildirimi:",
-      withdrawalNoticeText: "Cayma hakkınızı kullanmak için 14 gün içinde info@089bayern.com adresine e-posta göndererek veya +90 507 183 2036 / +49 173 5994699 numarasını arayarak bildirimde bulunabilirsiniz.",
+      withdrawalNoticeText: "Cayma hakkınızı kullanmak için 14 gün içinde info@089bayern.com adresine e-posta göndererek veya +90 507 192 2036 / +49 173 5994699 numarasını arayarak bildirimde bulunabilirsiniz.",
 
       section6Title: "6. Garanti Koşulları",
       productCol: "Ürün",
@@ -195,7 +195,7 @@ export default function OnBilgilendirme() {
       exception3: "Geöffnete oder benutzte Produkte",
       exception4: "Produkte, die auf Sonderbestellung beschafft wurden",
       withdrawalNotice: "Widerrufsmitteilung:",
-      withdrawalNoticeText: "Um Ihr Widerrufsrecht auszuüben, können Sie innerhalb von 14 Tagen eine E-Mail an info@089bayern.com senden oder unter +90 507 183 2036 / +49 173 5994699 anrufen.",
+      withdrawalNoticeText: "Um Ihr Widerrufsrecht auszuüben, können Sie innerhalb von 14 Tagen eine E-Mail an info@089bayern.com senden oder unter +90 507 192 2036 / +49 173 5994699 anrufen.",
 
       section6Title: "6. Garantiebedingungen",
       productCol: "Produkt",
@@ -308,7 +308,7 @@ export default function OnBilgilendirme() {
       exception3: "Opened or used products",
       exception4: "Products procured on special order",
       withdrawalNotice: "Withdrawal Notice:",
-      withdrawalNoticeText: "To exercise your right of withdrawal, you can send an email to info@089bayern.com or call +90 507 183 2036 / +49 173 5994699 within 14 days.",
+      withdrawalNoticeText: "To exercise your right of withdrawal, you can send an email to info@089bayern.com or call +90 507 192 2036 / +49 173 5994699 within 14 days.",
 
       section6Title: "6. Warranty Terms",
       productCol: "Product",
@@ -421,7 +421,7 @@ export default function OnBilgilendirme() {
       exception3: "Вскрытые или использованные товары",
       exception4: "Товары, приобретённые по специальному заказу",
       withdrawalNotice: "Уведомление об отказе:",
-      withdrawalNoticeText: "Для осуществления права на отказ вы можете отправить электронное письмо на info@089bayern.com или позвонить по телефону +90 507 183 2036 / +49 173 5994699 в течение 14 дней.",
+      withdrawalNoticeText: "Для осуществления права на отказ вы можете отправить электронное письмо на info@089bayern.com или позвонить по телефону +90 507 192 2036 / +49 173 5994699 в течение 14 дней.",
 
       section6Title: "6. Гарантийные условия",
       productCol: "Продукт",
@@ -534,7 +534,7 @@ export default function OnBilgilendirme() {
       exception3: "Розкриті або використані товари",
       exception4: "Товари, придбані за спеціальним замовленням",
       withdrawalNotice: "Повідомлення про відмову:",
-      withdrawalNoticeText: "Для здійснення права на відмову ви можете надіслати електронного листа на info@089bayern.com або зателефонувати за номером +90 507 183 2036 / +49 173 5994699 протягом 14 днів.",
+      withdrawalNoticeText: "Для здійснення права на відмову ви можете надіслати електронного листа на info@089bayern.com або зателефонувати за номером +90 507 192 2036 / +49 173 5994699 протягом 14 днів.",
 
       section6Title: "6. Гарантійні умови",
       productCol: "Продукт",
@@ -646,7 +646,7 @@ export default function OnBilgilendirme() {
       exception3: "المنتجات المفتوحة أو المستخدمة",
       exception4: "المنتجات المشتراة بطلب خاص",
       withdrawalNotice: "إشعار الانسحاب:",
-      withdrawalNoticeText: "لممارسة حق الانسحاب، يمكنك إرسال بريد إلكتروني إلى info@089bayern.com أو الاتصال على +90 507 183 2036 / +49 173 5994699 خلال 14 يوماً.",
+      withdrawalNoticeText: "لممارسة حق الانسحاب، يمكنك إرسال بريد إلكتروني إلى info@089bayern.com أو الاتصال على +90 507 192 2036 / +49 173 5994699 خلال 14 يوماً.",
 
       section6Title: "6. شروط الضمان",
       productCol: "المنتج",
@@ -758,7 +758,7 @@ export default function OnBilgilendirme() {
       exception3: "Otvoreni ili korišteni proizvodi",
       exception4: "Proizvodi nabavljeni po posebnoj narudžbi",
       withdrawalNotice: "Obavijest o odustanku:",
-      withdrawalNoticeText: "Za ostvarivanje prava na odustanak možete poslati e-mail na info@089bayern.com ili nazvati +90 507 183 2036 / +49 173 5994699 unutar 14 dana.",
+      withdrawalNoticeText: "Za ostvarivanje prava na odustanak možete poslati e-mail na info@089bayern.com ili nazvati +90 507 192 2036 / +49 173 5994699 unutar 14 dana.",
 
       section6Title: "6. Uvjeti jamstva",
       productCol: "Proizvod",
@@ -845,7 +845,7 @@ export default function OnBilgilendirme() {
             <div className="bg-muted/50 p-4 rounded-lg space-y-2">
               <p className="text-sm"><strong>{t.tradeName}:</strong> {t.tradeNameValue}</p>
               <p className="text-sm"><strong>{t.address}:</strong> {t.addressValue}</p>
-              <p className="text-sm"><strong>{t.phone}:</strong> +90 507 183 2036 | +49 173 5994699</p>
+              <p className="text-sm"><strong>{t.phone}:</strong> +90 507 192 2036 | +49 173 5994699</p>
               <p className="text-sm"><strong>{t.email}:</strong> info@089bayern.com</p>
               <p className="text-sm"><strong>{t.website}:</strong> www.089bayern.com</p>
               <p className="text-sm"><strong>{t.tradeRegNo}:</strong> {t.toBeUpdated}</p>
@@ -1011,9 +1011,9 @@ export default function OnBilgilendirme() {
             <div className="grid gap-4 md:grid-cols-2">
               <div>
                 <h3 className="font-medium mb-2">{t.generalContact}</h3>
-                <p className="text-sm text-muted-foreground">{t.phone}: +90 507 183 2036 | +49 173 5994699</p>
+                <p className="text-sm text-muted-foreground">{t.phone}: +90 507 192 2036 | +49 173 5994699</p>
                 <p className="text-sm text-muted-foreground">{t.email}: info@089bayern.com</p>
-                <p className="text-sm text-muted-foreground">{t.whatsapp}: +90 507 183 2036</p>
+                <p className="text-sm text-muted-foreground">{t.whatsapp}: +90 507 192 2036</p>
               </div>
               <div>
                 <h3 className="font-medium mb-2">{t.workingHours}</h3>

@@ -548,7 +548,7 @@ export default function Sartlar() {
             <div className="bg-muted/50 p-4 rounded-lg">
               <p className="text-sm"><strong>{t.tradeName}:</strong> {t.tradeNameValue}</p>
               <p className="text-sm"><strong>{t.address}:</strong> {t.addressValue}</p>
-              <p className="text-sm"><strong>{t.phone}:</strong> +90 507 183 2036 | +49 173 5994699</p>
+              <p className="text-sm"><strong>{t.phone}:</strong> +90 507 192 2036 | +49 173 5994699</p>
               <p className="text-sm"><strong>{t.email}:</strong> info@089bayern.com</p>
               <p className="text-sm"><strong>{t.web}:</strong> www.089bayern.com</p>
             </div>
@@ -656,9 +656,9 @@ export default function Sartlar() {
               {t.section10Text}
             </p>
             <div className="bg-muted/50 p-4 rounded-lg mt-4">
-              <p className="text-sm"><strong>{t.phone}:</strong> +90 507 183 2036 | +49 173 5994699</p>
+              <p className="text-sm"><strong>{t.phone}:</strong> +90 507 192 2036 | +49 173 5994699</p>
               <p className="text-sm"><strong>{t.email}:</strong> info@089bayern.com</p>
-              <p className="text-sm"><strong>{t.whatsapp}:</strong> +90 507 183 2036</p>
+              <p className="text-sm"><strong>{t.whatsapp}:</strong> +90 507 192 2036</p>
             </div>
           </section>
         </div>

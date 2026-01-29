@@ -11,7 +11,7 @@ const seoData = {
     siteName: "089 Bayern Enerji Sistemleri",
     home: {
       title: "089 Bayern | Antalya Güneş Enerjisi & Isı Pompası | Alman 4'ü 1 Arada Sistem",
-      description: "Antalya, Alanya, Kemer, Belek, Side, Manavgat'ta güneş paneli, ısı pompası, klima ve enerji depolama. Alman mühendisliği ile %70 enerji tasarrufu. Vaillant & Samsung yetkili bayii. Ücretsiz keşif: +90 507 183 2036",
+      description: "Antalya, Alanya, Kemer, Belek, Side, Manavgat'ta güneş paneli, ısı pompası, klima ve enerji depolama. Alman mühendisliği ile %70 enerji tasarrufu. Vaillant & Samsung yetkili bayii. Ücretsiz keşif: +90 507 192 2036",
       keywords: "güneş paneli antalya, ısı pompası alanya, solar panel kemer, güneş enerjisi belek, wärmepumpe side, photovoltaik manavgat, 089 bayern, alman enerji sistemi türkiye, villa güneş enerjisi akdeniz"
     },
     systeme: {
@@ -74,7 +74,7 @@ const seoData = {
     siteName: "089 Bayern Energiesysteme",
     home: {
       title: "089 Bayern | Solaranlage & Wärmepumpe Antalya | Deutsches 4-in-1 System Türkei",
-      description: "Solaranlage, Wärmepumpe, Klimaanlage und Stromspeicher in Antalya, Alanya, Kemer, Belek, Side, Manavgat. Deutsche Ingenieursqualität mit bis zu 70% Energieeinsparung. Kostenlose Beratung: +90 507 183 2036",
+      description: "Solaranlage, Wärmepumpe, Klimaanlage und Stromspeicher in Antalya, Alanya, Kemer, Belek, Side, Manavgat. Deutsche Ingenieursqualität mit bis zu 70% Energieeinsparung. Kostenlose Beratung: +90 507 192 2036",
       keywords: "solaranlage antalya, wärmepumpe türkei, photovoltaik mittelmeer, solar panel alanya, deutsche energiesysteme türkei, villa solaranlage, 089 bayern"
     },
     systeme: {
@@ -137,7 +137,7 @@ const seoData = {
     siteName: "089 Bayern Energy Systems",
     home: {
       title: "089 Bayern | Solar Panels & Heat Pump Antalya Turkey | German 4-in-1 System",
-      description: "Solar panels, heat pumps, air conditioning and battery storage in Antalya, Alanya, Kemer, Belek, Side, Manavgat Turkey. German engineering with up to 70% energy savings. Free consultation: +90 507 183 2036",
+      description: "Solar panels, heat pumps, air conditioning and battery storage in Antalya, Alanya, Kemer, Belek, Side, Manavgat Turkey. German engineering with up to 70% energy savings. Free consultation: +90 507 192 2036",
       keywords: "solar panels antalya, heat pump turkey, photovoltaic mediterranean, solar panel alanya, german energy systems turkey, villa solar power, 089 bayern"
     },
     systeme: {
@@ -200,7 +200,7 @@ const seoData = {
     siteName: "089 Bayern Энергосистемы",
     home: {
       title: "089 Bayern | Солнечные Панели и Тепловой Насос Анталия | Немецкая Система 4-в-1",
-      description: "Солнечные панели, тепловые насосы, кондиционеры и накопители энергии в Анталии, Алании, Кемере, Белеке, Сиде, Манавгате. Немецкое качество с экономией до 70%. Бесплатная консультация: +90 507 183 2036",
+      description: "Солнечные панели, тепловые насосы, кондиционеры и накопители энергии в Анталии, Алании, Кемере, Белеке, Сиде, Манавгате. Немецкое качество с экономией до 70%. Бесплатная консультация: +90 507 192 2036",
       keywords: "солнечные панели анталия, тепловой насос турция, фотовольтаика средиземноморье, солнечная энергия алания, немецкие энергосистемы турция, 089 bayern"
     },
     systeme: {
@@ -263,7 +263,7 @@ const seoData = {
     siteName: "089 Bayern Енергосистеми",
     home: {
       title: "089 Bayern | Сонячні Панелі та Тепловий Насос Анталія | Німецька Система 4-в-1",
-      description: "Сонячні панелі, теплові насоси, кондиціонери та накопичувачі енергії в Анталії, Аланії, Кемері, Белеку, Сіде, Манавгаті. Німецька якість з економією до 70%. Безкоштовна консультація: +90 507 183 2036",
+      description: "Сонячні панелі, теплові насоси, кондиціонери та накопичувачі енергії в Анталії, Аланії, Кемері, Белеку, Сіде, Манавгаті. Німецька якість з економією до 70%. Безкоштовна консультація: +90 507 192 2036",
       keywords: "сонячні панелі анталія, тепловий насос туреччина, фотовольтаїка середземномор'я, сонячна енергія аланія, німецькі енергосистеми туреччина, 089 bayern"
     },
     systeme: {
@@ -326,7 +326,7 @@ const seoData = {
     siteName: "089 Bayern Energetski Sustavi",
     home: {
       title: "089 Bayern | Solarni Paneli i Toplinska Pumpa Antalya | Njemački Sustav 4-u-1",
-      description: "Solarni paneli, toplinske pumpe, klima i pohrana energije u Antalyi, Alanyi, Kemeru, Beleku, Sideu, Manavgatu. Njemačka kvaliteta s uštedom do 70%. Besplatna konzultacija: +90 507 183 2036",
+      description: "Solarni paneli, toplinske pumpe, klima i pohrana energije u Antalyi, Alanyi, Kemeru, Beleku, Sideu, Manavgatu. Njemačka kvaliteta s uštedom do 70%. Besplatna konzultacija: +90 507 192 2036",
       keywords: "solarni paneli antalya, toplinska pumpa turska, fotonapon mediteran, solarna energija alanya, njemački energetski sustavi turska, 089 bayern"
     },
     systeme: {
@@ -389,7 +389,7 @@ const seoData = {
     siteName: "089 Bayern أنظمة الطاقة",
     home: {
       title: "089 Bayern | الألواح الشمسية ومضخة الحرارة أنطاليا | نظام ألماني 4 في 1",
-      description: "الألواح الشمسية، مضخات الحرارة، التكييف وتخزين الطاقة في أنطاليا، ألانيا، كيمير، بيليك، سيدا، مانافغات. جودة ألمانية مع توفير حتى 70%. استشارة مجانية: +90 507 183 2036",
+      description: "الألواح الشمسية، مضخات الحرارة، التكييف وتخزين الطاقة في أنطاليا، ألانيا، كيمير، بيليك، سيدا، مانافغات. جودة ألمانية مع توفير حتى 70%. استشارة مجانية: +90 507 192 2036",
       keywords: "الألواح الشمسية أنطاليا، مضخة حرارة تركيا، الطاقة الشمسية ألانيا، أنظمة الطاقة الألمانية تركيا، 089 bayern"
     },
     systeme: {
@@ -499,7 +499,7 @@ export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
         "name": "089 Bayern Energiesysteme",
         "description": data.description,
         "url": "https://089bayern.com",
-        "telephone": "+90 507 183 2036",
+        "telephone": "+90 507 192 2036",
         "email": "info@089bayern.com",
         "address": {
           "@type": "PostalAddress",

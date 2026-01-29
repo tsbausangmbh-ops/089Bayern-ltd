@@ -59,11 +59,11 @@ export default function SectionCTA() {
           size="sm"
           variant="outline"
           className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border-amber-500/30 hover:border-amber-500/50"
-          onClick={() => window.location.href = "tel:+905071832036"}
+          onClick={() => window.location.href = "tel:+905071922036"}
           data-testid="button-section-cta-phone"
         >
           <Phone className={`w-4 h-4 ${isRtl ? "ml-1" : "mr-1"}`} />
-          +90 507 183 2036
+          +90 507 192 2036
         </Button>
       </div>
     </div>
