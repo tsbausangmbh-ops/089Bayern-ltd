@@ -248,95 +248,78 @@ export default function Header({ onCtaClick }: HeaderProps) {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-card border-b border-border shadow-lg">
-          <nav className="flex flex-col p-4 gap-2">
-            <div className="grid grid-cols-2 gap-2 mb-2">
-              {navItems.map((item) => {
-                const navIcons: Record<string, typeof Sun> = {
-                  about: Building2,
-                  system: Sun,
-                  benefits: Award,
-                  calculator: Calculator,
-                  faq: HelpCircle,
-                };
-                const Icon = navIcons[item.id] || Sun;
-                return item.isHashLink ? (
-                  <button
-                    key={item.id}
-                    onClick={() => handleNavClick(item)}
-                    className="flex items-center gap-2 px-3 py-3 rounded-xl bg-muted/50 hover:bg-muted text-foreground font-medium text-sm transition-colors"
-                    data-testid={`link-mobile-nav-${item.id}`}
-                  >
-                    <Icon className="w-4 h-4 text-primary" />
-                    {item.label}
-                  </button>
-                ) : (
+        <div className="md:hidden bg-background border-b border-border shadow-md max-h-[80vh] overflow-y-auto">
+          <nav className="flex flex-col p-3 gap-0.5">
+            {navItems.map((item) => (
+              item.isHashLink ? (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavClick(item)}
+                  className="text-left px-4 py-3 rounded-lg hover:bg-muted active:bg-muted/80 text-foreground font-medium border-b border-border/50 last:border-0"
+                  data-testid={`link-mobile-nav-${item.id}`}
+                >
+                  {item.label}
+                </button>
+              ) : (
+                <a
+                  key={item.id}
+                  href={item.href}
+                  className="px-4 py-3 rounded-lg hover:bg-muted active:bg-muted/80 text-foreground font-medium border-b border-border/50 last:border-0"
+                  data-testid={`link-mobile-nav-${item.id}`}
+                >
+                  {item.label}
+                </a>
+              )
+            ))}
+            
+            <div className="mt-2 pt-2 border-t border-border">
+              <p className="px-4 py-2 text-xs text-muted-foreground font-semibold uppercase tracking-wide">{solutionsLabel}</p>
+              {solutionItems.map((item, index) => {
+                const icons = [Sun, Thermometer, Wind, Battery];
+                const Icon = icons[index];
+                return (
                   <a
-                    key={item.id}
+                    key={item.href}
                     href={item.href}
-                    className="flex items-center gap-2 px-3 py-3 rounded-xl bg-muted/50 hover:bg-muted text-foreground font-medium text-sm transition-colors"
-                    data-testid={`link-mobile-nav-${item.id}`}
+                    className="flex items-center gap-3 px-4 py-2.5 hover:bg-muted active:bg-muted/80 text-foreground/90"
+                    data-testid={`link-mobile-solution-${index}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <Icon className="w-4 h-4 text-primary" />
+                    <Icon className="w-4 h-4 text-accent" />
                     {item.label}
                   </a>
                 );
               })}
             </div>
             
-            <div className="border-t border-border pt-3">
-              <p className="text-xs text-muted-foreground mb-2 px-1 font-medium">{solutionsLabel}</p>
-              <div className="grid grid-cols-2 gap-2">
-                {solutionItems.map((item, index) => {
-                  const icons = [Sun, Thermometer, Wind, Battery];
-                  const iconColors = ["text-amber-500", "text-orange-500", "text-sky-500", "text-emerald-500"];
-                  const Icon = icons[index];
-                  return (
-                    <a
-                      key={item.href}
-                      href={item.href}
-                      className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-muted/30 hover:bg-muted text-foreground font-medium text-sm transition-colors"
-                      data-testid={`link-mobile-solution-${index}`}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      <Icon className={`w-4 h-4 ${iconColors[index]}`} />
-                      {item.label}
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
-            
-            <div className="border-t border-border pt-3">
-              <p className="text-xs text-muted-foreground mb-2 px-1 font-medium">{locationsLabel}</p>
-              <div className="flex flex-col gap-1">
-                {locationItems.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    className="flex items-center justify-between px-3 py-2.5 rounded-xl bg-muted/30 hover:bg-muted text-foreground font-medium text-sm transition-colors"
-                    data-testid={`link-mobile-location-${item.label.toLowerCase()}`}
-                    onClick={() => {
-                      setIsLocationsOpen(false);
-                      setIsMobileMenuOpen(false);
-                    }}
-                  >
-                    <span className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-red-500" />
-                      {item.label}
-                    </span>
-                    <Badge variant="outline" className="text-[10px] bg-accent/10 text-accent border-accent/30">
-                      {item.badge}
-                    </Badge>
-                  </a>
-                ))}
-              </div>
+            <div className="mt-2 pt-2 border-t border-border">
+              <p className="px-4 py-2 text-xs text-muted-foreground font-semibold uppercase tracking-wide">{locationsLabel}</p>
+              {locationItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="flex items-center justify-between px-4 py-2.5 hover:bg-muted active:bg-muted/80 text-foreground/90"
+                  data-testid={`link-mobile-location-${item.label.toLowerCase()}`}
+                  onClick={() => {
+                    setIsLocationsOpen(false);
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  <span className="flex items-center gap-3">
+                    <MapPin className="w-4 h-4 text-accent" />
+                    {item.label}
+                  </span>
+                  <Badge variant="secondary" className="text-[10px]">
+                    {item.badge}
+                  </Badge>
+                </a>
+              ))}
             </div>
             
             <Button 
               onClick={onCtaClick} 
               size="lg"
-              className="mt-2 w-full bg-gradient-to-r from-accent to-orange-600 border-0 min-h-[48px] text-base font-semibold shadow-lg" 
+              className="mt-4 w-full bg-gradient-to-r from-accent to-orange-600 border-0 min-h-[48px]" 
               data-testid="button-mobile-cta"
             >
               {t.header.ctaButton}
