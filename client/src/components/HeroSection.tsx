@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, Shield, Award, MapPin, ArrowRight, Phone, Mail, MessageCircle } from "lucide-react";
-import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
+import heroImage from "@assets/images/optimized/hero-villa-solar.jpg";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
 

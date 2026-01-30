@@ -3,7 +3,7 @@ import { SiWhatsapp } from "react-icons/si";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
 import { getLocalizedUrl, getOfficeBadge } from "@/lib/urlTranslations";
-import heroImage from "@assets/generated_images/modern_villa_with_solar_panels.png";
+import heroImage from "@assets/images/optimized/hero-villa-solar.jpg";
 import logoImage from "@assets/logo-white.png";
 
 export default function Footer() {
