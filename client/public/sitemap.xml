@@ -3,6 +3,8 @@
 
   <url>
     <loc>https://089bayern.com/</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>weekly</changefreq>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/?lang=de"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/?lang=en"/>
@@ -16,6 +18,8 @@
 
   <url>
     <loc>https://089bayern.com/sistem</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/sistem"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/systeme"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/system"/>
@@ -28,6 +32,8 @@
 
   <url>
     <loc>https://089bayern.com/gunes-paneli</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/gunes-paneli"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/solaranlage"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/solar-panel"/>
@@ -35,11 +41,13 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/sonyachna-panel"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/lawha-shamsiya"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/solarni-panel"/>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://089bayern.com/isi-pompasi</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/isi-pompasi"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/waermepumpe"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/heat-pump"/>
@@ -47,11 +55,13 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/teplovyy-nasos"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/midkhah-harara"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/toplinska-pumpa"/>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://089bayern.com/klima</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/klima"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/klimaanlage"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/air-conditioning"/>
@@ -59,11 +69,13 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/kondytsioner"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/takyif"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/klima-uredaj"/>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://089bayern.com/enerji-depolama</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/enerji-depolama"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/batteriespeicher"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/battery-storage"/>
@@ -71,11 +83,13 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/akumulyator"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/takhzin-taqa"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/pohrana-energije"/>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://089bayern.com/avantajlar</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/avantajlar"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/vorteile"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/benefits"/>
@@ -83,11 +97,13 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/perevagy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/mazaya"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/prednosti"/>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://089bayern.com/hesaplayici</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/hesaplayici"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/rechner"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/calculator"/>
@@ -95,11 +111,13 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/kalkulyator"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/hasba"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/kalkulator"/>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://089bayern.com/hakkimizda</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/hakkimizda"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/ueber-uns"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/about"/>
@@ -111,12 +129,9 @@
   </url>
 
   <url>
-    <loc>https://089bayern.com/team</loc>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
     <loc>https://089bayern.com/sss</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/sss"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/faq"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/faq"/>
@@ -124,11 +139,13 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/pytannya"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/asila"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/pitanja"/>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://089bayern.com/kurulum-antalya</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/kurulum-antalya"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/installation-antalya"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/installation-antalya"/>
@@ -136,11 +153,13 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/vstanovlennya-antalya"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/tarkib-antalya"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/instalacija-antalya"/>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://089bayern.com/kurulum-alanya</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/kurulum-alanya"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/installation-alanya"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/installation-alanya"/>
@@ -148,11 +167,13 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/vstanovlennya-alanya"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/tarkib-alanya"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/instalacija-alanya"/>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://089bayern.com/kurulum-ankara</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/kurulum-ankara"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/installation-ankara"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/installation-ankara"/>
@@ -160,11 +181,13 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://089bayern.com/vstanovlennya-ankara"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://089bayern.com/tarkib-ankara"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://089bayern.com/instalacija-ankara"/>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://089bayern.com/bolgeler</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="tr" href="https://089bayern.com/bolgeler"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://089bayern.com/standorte"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://089bayern.com/locations"/>
@@ -177,31 +200,43 @@
 
   <url>
     <loc>https://089bayern.com/kvkk</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://089bayern.com/gizlilik</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://089bayern.com/cerez-politikasi</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://089bayern.com/sartlar</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://089bayern.com/mesafeli-satis</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://089bayern.com/on-bilgilendirme</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
