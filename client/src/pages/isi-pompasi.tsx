@@ -12,9 +12,9 @@ import TrustCallToAction from "@/components/TrustCallToAction";
 import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { LinkedText } from "@/components/LinkedText";
-import heroImage from "@assets/images/hero-heat-pump.png";
-import heatpumpDetailImage from "@assets/images/heatpump-detail.png";
-import heatpumpConsultationImage from "@assets/images/heatpump-consultation.png";
+import heroImage from "@assets/images/optimized/hero-heat-pump.jpg";
+import heatpumpDetailImage from "@assets/images/optimized/heatpump-detail.jpg";
+import heatpumpConsultationImage from "@assets/images/optimized/heatpump-consultation.jpg";
 
 export default function IsiPompasi() {
   const { language } = useLanguage();

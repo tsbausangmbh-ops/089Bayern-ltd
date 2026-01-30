@@ -15,8 +15,8 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { LinkedText } from "@/components/LinkedText";
-import heroImage from "@assets/images/hero-faq.png";
-import consultationImage from "@assets/images/heatpump-consultation.png";
+import heroImage from "@assets/images/optimized/hero-faq.jpg";
+import consultationImage from "@assets/images/optimized/heatpump-consultation.jpg";
 
 export default function FAQ() {
   const { language } = useLanguage();

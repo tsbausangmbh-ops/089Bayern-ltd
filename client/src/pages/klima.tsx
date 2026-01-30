@@ -12,9 +12,9 @@ import TrustCallToAction from "@/components/TrustCallToAction";
 import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { LinkedText } from "@/components/LinkedText";
-import heroImage from "@assets/images/hero-climate.png";
-import climateIndoorImage from "@assets/images/climate-indoor-unit.png";
-import climateOutdoorImage from "@assets/images/climate-outdoor-install.png";
+import heroImage from "@assets/images/optimized/hero-climate.jpg";
+import climateIndoorImage from "@assets/images/optimized/climate-indoor-unit.jpg";
+import climateOutdoorImage from "@assets/images/optimized/climate-outdoor-install.jpg";
 
 export default function Klima() {
   const { language } = useLanguage();

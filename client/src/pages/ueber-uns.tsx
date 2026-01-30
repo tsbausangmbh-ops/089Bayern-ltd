@@ -11,8 +11,8 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import TeamSection from "@/components/TeamSection";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
-import heroImage from "@assets/images/hero-about.png";
-import teamMeetingImage from "@assets/images/team-meeting.png";
+import heroImage from "@assets/images/optimized/hero-about.jpg";
+import teamMeetingImage from "@assets/images/optimized/team-meeting.jpg";
 
 export default function UeberUns() {
   const { language } = useLanguage();

@@ -11,10 +11,10 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { LinkedText } from "@/components/LinkedText";
-import heroImage from "@assets/images/hero-antalya.png";
-import roofInstallationImage from "@assets/images/antalya-roof-installation.png";
-import heatpumpInspectionImage from "@assets/images/antalya-heatpump-inspection.png";
-import teamCompletedImage from "@assets/images/antalya-team-completed-system.png";
+import heroImage from "@assets/images/optimized/hero-antalya.jpg";
+import roofInstallationImage from "@assets/images/optimized/antalya-roof-installation.jpg";
+import heatpumpInspectionImage from "@assets/images/optimized/antalya-heatpump-inspection.jpg";
+import teamCompletedImage from "@assets/images/optimized/antalya-team-completed-system.jpg";
 
 const content = {
   de: {

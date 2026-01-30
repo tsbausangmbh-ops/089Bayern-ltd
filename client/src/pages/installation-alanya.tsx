@@ -11,9 +11,9 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { LinkedText } from "@/components/LinkedText";
-import heroImage from "@assets/images/hero-alanya.png";
-import teamWorkImage from "@assets/images/installation-team-work.png";
-import deliveryImage from "@assets/images/alanya-delivery.png";
+import heroImage from "@assets/images/optimized/hero-alanya.jpg";
+import teamWorkImage from "@assets/images/optimized/installation-team-work.jpg";
+import deliveryImage from "@assets/images/optimized/alanya-delivery.jpg";
 
 const content = {
   de: {

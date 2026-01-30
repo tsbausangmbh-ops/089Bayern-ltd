@@ -12,9 +12,9 @@ import TrustCallToAction from "@/components/TrustCallToAction";
 import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { LinkedText } from "@/components/LinkedText";
-import heroImage from "@assets/images/hero-solar-panel.png";
-import solarDetailImage from "@assets/images/solar-detail-wiring.png";
-import solarTestingImage from "@assets/images/solar-testing.png";
+import heroImage from "@assets/images/optimized/hero-solar-panel.jpg";
+import solarDetailImage from "@assets/images/optimized/solar-detail-wiring.jpg";
+import solarTestingImage from "@assets/images/optimized/solar-testing.jpg";
 
 export default function GunesPaneli() {
   const { language } = useLanguage();

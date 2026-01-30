@@ -11,8 +11,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calculator, Sun, Zap, TrendingUp, Shield, CheckCircle, Euro, Leaf, Home, Battery, ThermometerSun, Snowflake, ArrowRight, Clock, Award, Users, Phone } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
-import heroImage from "@assets/images/hero-calculator.png";
-import calculatorTabletImage from "@assets/images/calculator-tablet.png";
+import heroImage from "@assets/images/optimized/hero-calculator.jpg";
+import calculatorTabletImage from "@assets/images/optimized/calculator-tablet.jpg";
 
 interface CalculatorData {
   propertyType: string;

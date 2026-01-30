@@ -13,12 +13,12 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
-import heroImage from "@assets/images/hero-system.png";
-import systemPresentationImage from "@assets/images/system-presentation.png";
-import climateInstallImage from "@assets/images/system-climate-install.png";
-import heatpumpInstallImage from "@assets/images/system-heatpump-install.png";
-import solarInstallImage from "@assets/images/system-solar-install.png";
-import batteryInstallImage from "@assets/images/system-battery-install.png";
+import heroImage from "@assets/images/optimized/hero-system.jpg";
+import systemPresentationImage from "@assets/images/optimized/system-presentation.jpg";
+import climateInstallImage from "@assets/images/optimized/system-climate-install.jpg";
+import heatpumpInstallImage from "@assets/images/optimized/system-heatpump-install.jpg";
+import solarInstallImage from "@assets/images/optimized/system-solar-install.jpg";
+import batteryInstallImage from "@assets/images/optimized/system-battery-install.jpg";
 
 export default function Systeme() {
   const { language } = useLanguage();

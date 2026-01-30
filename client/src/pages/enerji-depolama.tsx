@@ -12,9 +12,9 @@ import TrustCallToAction from "@/components/TrustCallToAction";
 import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { LinkedText } from "@/components/LinkedText";
-import heroImage from "@assets/images/hero-battery-storage.png";
-import batterySystemImage from "@assets/images/battery-system-installed.png";
-import batteryMonitoringImage from "@assets/images/battery-monitoring.png";
+import heroImage from "@assets/images/optimized/hero-battery-storage.jpg";
+import batterySystemImage from "@assets/images/optimized/battery-system-installed.jpg";
+import batteryMonitoringImage from "@assets/images/optimized/battery-monitoring.jpg";
 
 export default function EnerjiDepolama() {
   const { language } = useLanguage();

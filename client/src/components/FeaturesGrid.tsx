@@ -2,10 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Snowflake, Flame, Sun, Battery, Check, Sparkles } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
-import workerClimateImage from "@assets/images/worker-climate-unit.png";
-import workerHeatPumpImage from "@assets/images/team-heat-pump-installation.png";
-import workerSolarImage from "@assets/images/worker-solar-inverter.png";
-import workerBatteryImage from "@assets/images/worker-battery-storage.png";
+import workerClimateImage from "@assets/images/optimized/worker-climate-unit.jpg";
+import workerHeatPumpImage from "@assets/images/optimized/team-heat-pump-installation.jpg";
+import workerSolarImage from "@assets/images/optimized/worker-solar-inverter.jpg";
+import workerBatteryImage from "@assets/images/optimized/worker-battery-storage.jpg";
 
 export default function FeaturesGrid() {
   const { language } = useLanguage();

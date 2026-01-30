@@ -21,7 +21,7 @@ import {
   Sun
 } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
-import businessHandshakeImage from "@assets/images/business-handshake-office.png";
+import businessHandshakeImage from "@assets/images/optimized/business-handshake-office.jpg";
 
 export default function ProblemSolverSection() {
   const { language } = useLanguage();

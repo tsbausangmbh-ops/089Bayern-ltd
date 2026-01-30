@@ -11,16 +11,16 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
-import heroImage from "@assets/images/hero-benefits.png";
-import consultationActionImage from "@assets/images/benefits-consultation-action.png";
-import freeElectricityImage from "@assets/images/benefit-free-electricity.png";
-import freeHeatingImage from "@assets/images/benefit-free-heating.png";
-import freeCoolingImage from "@assets/images/benefit-free-cooling.png";
-import freeHotWaterImage from "@assets/images/benefit-free-hotwater.png";
-import systemSolarImage from "@assets/images/system-solar-panels.png";
-import systemHeatPumpImage from "@assets/images/system-heat-pump.png";
-import systemBatteryImage from "@assets/images/system-battery-storage.png";
-import systemHotWaterImage from "@assets/images/system-hot-water-tank.png";
+import heroImage from "@assets/images/optimized/hero-benefits.jpg";
+import consultationActionImage from "@assets/images/optimized/benefits-consultation-action.jpg";
+import freeElectricityImage from "@assets/images/optimized/benefit-free-electricity.jpg";
+import freeHeatingImage from "@assets/images/optimized/benefit-free-heating.jpg";
+import freeCoolingImage from "@assets/images/optimized/benefit-free-cooling.jpg";
+import freeHotWaterImage from "@assets/images/optimized/benefit-free-hotwater.jpg";
+import systemSolarImage from "@assets/images/optimized/system-solar-panels.jpg";
+import systemHeatPumpImage from "@assets/images/optimized/system-heat-pump.jpg";
+import systemBatteryImage from "@assets/images/optimized/system-battery-storage.jpg";
+import systemHotWaterImage from "@assets/images/optimized/system-hot-water-tank.jpg";
 
 export default function Vorteile() {
   const { language } = useLanguage();

@@ -2,7 +2,7 @@ import { Check, TrendingDown, Shield, Home, Leaf, Wallet, Users, Zap, Award } fr
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
-import happyCustomerImage from "@assets/images/happy-customer.png";
+import happyCustomerImage from "@assets/images/optimized/happy-customer.jpg";
 
 export default function BenefitsSection() {
   const { language } = useLanguage();
