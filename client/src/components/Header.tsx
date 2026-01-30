@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Globe, ChevronDown, MapPin, Sun, Thermometer, Wind, Battery, Building2 } from "lucide-react";
+import { Menu, X, Globe, ChevronDown, MapPin, Sun, Thermometer, Wind, Battery, Building2, Award, Calculator, HelpCircle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import logoImage from "@assets/logo-white.png";
 import {
@@ -248,108 +248,95 @@ export default function Header({ onCtaClick }: HeaderProps) {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-background/98 backdrop-blur-md border-b border-border">
-          <nav className="flex flex-col p-4 gap-1">
-            {navItems.map((item) => (
-              item.isHashLink ? (
-                <button
-                  key={item.id}
-                  onClick={() => handleNavClick(item)}
-                  className="text-left px-4 py-3 rounded-lg hover-elevate active-elevate-2 text-foreground font-medium"
-                  data-testid={`link-mobile-nav-${item.id}`}
-                >
-                  {item.label}
-                </button>
-              ) : (
-                <a
-                  key={item.id}
-                  href={item.href}
-                  className="text-left px-4 py-3 rounded-lg hover-elevate active-elevate-2 text-foreground font-medium"
-                  data-testid={`link-mobile-nav-${item.id}`}
-                >
-                  {item.label}
-                </a>
-              )
-            ))}
+        <div className="md:hidden bg-white dark:bg-card border-b border-border shadow-lg">
+          <nav className="flex flex-col p-4 gap-2">
+            <div className="grid grid-cols-2 gap-2 mb-2">
+              {navItems.map((item) => {
+                const navIcons: Record<string, typeof Sun> = {
+                  about: Building2,
+                  system: Sun,
+                  benefits: Award,
+                  calculator: Calculator,
+                  faq: HelpCircle,
+                };
+                const Icon = navIcons[item.id] || Sun;
+                return item.isHashLink ? (
+                  <button
+                    key={item.id}
+                    onClick={() => handleNavClick(item)}
+                    className="flex items-center gap-2 px-3 py-3 rounded-xl bg-muted/50 hover:bg-muted text-foreground font-medium text-sm transition-colors"
+                    data-testid={`link-mobile-nav-${item.id}`}
+                  >
+                    <Icon className="w-4 h-4 text-primary" />
+                    {item.label}
+                  </button>
+                ) : (
+                  <a
+                    key={item.id}
+                    href={item.href}
+                    className="flex items-center gap-2 px-3 py-3 rounded-xl bg-muted/50 hover:bg-muted text-foreground font-medium text-sm transition-colors"
+                    data-testid={`link-mobile-nav-${item.id}`}
+                  >
+                    <Icon className="w-4 h-4 text-primary" />
+                    {item.label}
+                  </a>
+                );
+              })}
+            </div>
             
-            <Collapsible>
-              <CollapsibleTrigger asChild>
-                <button
-                  className="w-full flex items-center justify-between px-4 py-3 rounded-lg hover-elevate active-elevate-2 text-foreground font-medium"
-                  data-testid="button-mobile-solutions-toggle"
-                >
-                  <span className="flex items-center gap-2">
-                    <Sun className="w-4 h-4" />
-                    {solutionsLabel}
-                  </span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              </CollapsibleTrigger>
-              <CollapsibleContent>
-                <div className="pl-6 flex flex-col gap-1">
-                  {solutionItems.map((item, index) => {
-                    const icons = [Sun, Thermometer, Wind, Battery];
-                    const Icon = icons[index];
-                    return (
-                      <a
-                        key={item.href}
-                        href={item.href}
-                        className="px-4 py-2 rounded-lg hover-elevate active-elevate-2 text-foreground/80 font-medium flex items-center gap-2"
-                        data-testid={`link-mobile-solution-${index}`}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        <Icon className="w-3 h-3" />
-                        {item.label}
-                      </a>
-                    );
-                  })}
-                </div>
-              </CollapsibleContent>
-            </Collapsible>
-            
-            <Collapsible open={isLocationsOpen} onOpenChange={setIsLocationsOpen}>
-              <CollapsibleTrigger asChild>
-                <button
-                  className="w-full flex items-center justify-between px-4 py-3 rounded-lg hover-elevate active-elevate-2 text-foreground font-medium"
-                  data-testid="button-mobile-locations-toggle"
-                >
-                  <span className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
-                    {locationsLabel}
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${isLocationsOpen ? "rotate-180" : ""}`} />
-                </button>
-              </CollapsibleTrigger>
-              <CollapsibleContent>
-                <div className="pl-6 flex flex-col gap-1">
-                  {locationItems.map((item) => (
+            <div className="border-t border-border pt-3">
+              <p className="text-xs text-muted-foreground mb-2 px-1 font-medium">{solutionsLabel}</p>
+              <div className="grid grid-cols-2 gap-2">
+                {solutionItems.map((item, index) => {
+                  const icons = [Sun, Thermometer, Wind, Battery];
+                  const iconColors = ["text-amber-500", "text-orange-500", "text-sky-500", "text-emerald-500"];
+                  const Icon = icons[index];
+                  return (
                     <a
                       key={item.href}
                       href={item.href}
-                      className="px-4 py-2 rounded-lg hover-elevate active-elevate-2 text-foreground/80 font-medium flex items-center justify-between"
-                      data-testid={`link-mobile-location-${item.label.toLowerCase()}`}
-                      onClick={() => {
-                        setIsLocationsOpen(false);
-                        setIsMobileMenuOpen(false);
-                      }}
+                      className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-muted/30 hover:bg-muted text-foreground font-medium text-sm transition-colors"
+                      data-testid={`link-mobile-solution-${index}`}
+                      onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      <span className="flex items-center gap-2">
-                        <Building2 className="w-3 h-3" />
-                        {item.label}
-                      </span>
-                      <Badge variant="secondary" className="text-xs">
-                        {item.badge}
-                      </Badge>
+                      <Icon className={`w-4 h-4 ${iconColors[index]}`} />
+                      {item.label}
                     </a>
-                  ))}
-                </div>
-              </CollapsibleContent>
-            </Collapsible>
+                  );
+                })}
+              </div>
+            </div>
+            
+            <div className="border-t border-border pt-3">
+              <p className="text-xs text-muted-foreground mb-2 px-1 font-medium">{locationsLabel}</p>
+              <div className="flex flex-col gap-1">
+                {locationItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="flex items-center justify-between px-3 py-2.5 rounded-xl bg-muted/30 hover:bg-muted text-foreground font-medium text-sm transition-colors"
+                    data-testid={`link-mobile-location-${item.label.toLowerCase()}`}
+                    onClick={() => {
+                      setIsLocationsOpen(false);
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    <span className="flex items-center gap-2">
+                      <MapPin className="w-4 h-4 text-red-500" />
+                      {item.label}
+                    </span>
+                    <Badge variant="outline" className="text-[10px] bg-accent/10 text-accent border-accent/30">
+                      {item.badge}
+                    </Badge>
+                  </a>
+                ))}
+              </div>
+            </div>
             
             <Button 
               onClick={onCtaClick} 
               size="lg"
-              className="mt-3 w-full bg-gradient-to-r from-accent to-orange-600 border-0 min-h-[44px]" 
+              className="mt-2 w-full bg-gradient-to-r from-accent to-orange-600 border-0 min-h-[48px] text-base font-semibold shadow-lg" 
               data-testid="button-mobile-cta"
             >
               {t.header.ctaButton}
