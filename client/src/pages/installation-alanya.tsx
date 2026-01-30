@@ -953,12 +953,14 @@ export default function InstallationAlanya() {
                 DE +49 173 5994699
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm" onClick={() => window.open("https://wa.me/491735994699", "_blank")} data-testid="button-hero-whatsapp">
-              WhatsApp
-            </Button>
-            <Button size="lg" variant="outline" className="border-blue-400/50 text-white bg-blue-500/20 backdrop-blur-sm" asChild data-testid="button-hero-email">
-              <a href="mailto:info@089bayern.com">Email</a>
-            </Button>
+            <div className="flex gap-2 sm:gap-3">
+              <Button size="lg" variant="outline" className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm" onClick={() => window.open("https://wa.me/491735994699", "_blank")} data-testid="button-hero-whatsapp">
+                WhatsApp
+              </Button>
+              <Button size="lg" variant="outline" className="border-blue-400/50 text-white bg-blue-500/20 backdrop-blur-sm" asChild data-testid="button-hero-email">
+                <a href="mailto:info@089bayern.com">Email</a>
+              </Button>
+            </div>
           </div>
           
           {/* Stats */}
