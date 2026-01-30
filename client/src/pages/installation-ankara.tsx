@@ -1049,31 +1049,31 @@ export default function InstallationAnkara() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center" data-testid="section-hero">
+      <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center pt-16 sm:pt-20" data-testid="section-hero">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 py-20">
-          <div className="flex flex-wrap gap-2 mb-6">
-            <Badge variant="secondary" className="bg-primary/20 text-white border-primary/30">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
+          <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
+            <Badge variant="secondary" className="bg-primary/20 text-white border-primary/30 text-xs sm:text-sm">
               <Building2 className="w-3 h-3 mr-1" />
               {c.badgeType}
             </Badge>
-            <Badge variant="outline" className="bg-white/10 text-white border-white/30">
+            <Badge variant="outline" className="bg-white/10 text-white border-white/30 text-xs sm:text-sm">
               <MapPin className="w-3 h-3 mr-1" />
               {c.badge}
             </Badge>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
             {c.title}{" "}
             <span className="text-primary">{c.titleHighlight}</span>
           </h1>
           
-          <p className="text-xl text-gray-200 max-w-2xl mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl mb-6 sm:mb-8">
             {c.subtitle}
           </p>
           

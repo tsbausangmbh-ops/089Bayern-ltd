@@ -1085,32 +1085,32 @@ export default function InstallationAntalya() {
       <Header onCtaClick={goToContact} />
       
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 overflow-hidden" data-testid="section-antalya-hero">
+      <section className="relative pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 overflow-hidden" data-testid="section-antalya-hero">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }} />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
         
-        <div className="relative max-w-7xl mx-auto px-6 md:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="max-w-3xl">
-            <div className="flex flex-wrap gap-2 mb-4">
-              <Badge variant="secondary" className="bg-primary/20 text-white border-primary/30">
+            <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
+              <Badge variant="secondary" className="bg-primary/20 text-white border-primary/30 text-xs sm:text-sm">
                 <Building2 className="w-3 h-3 mr-1" />
                 {c.badgeType}
               </Badge>
-              <Badge variant="outline" className="bg-white/10 text-white border-white/30">
+              <Badge variant="outline" className="bg-white/10 text-white border-white/30 text-xs sm:text-sm">
                 <MapPin className="w-3 h-3 mr-1" />
                 {c.badge}
               </Badge>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
               {c.title} <span className="text-primary">{c.titleHighlight}</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-white/80 mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-white/80 mb-6 sm:mb-8">
               {c.subtitle}
             </p>
             
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2 sm:gap-3">
               <Button size="lg" onClick={goToContact} className="bg-gradient-to-r from-primary to-orange-600" data-testid="button-antalya-cta">
                 {c.ctaButton}
                 <ArrowRight className="w-4 h-4 ml-2" />

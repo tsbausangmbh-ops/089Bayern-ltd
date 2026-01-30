@@ -452,28 +452,28 @@ export default function Systeme() {
       <SEOHead page="systeme" />
       <Header onCtaClick={goToContact} />
       
-      <section className="relative pt-20 pb-2 overflow-hidden" data-testid="section-systeme-hero">
+      <section className="relative pt-16 sm:pt-20 pb-2 overflow-hidden" data-testid="section-systeme-hero">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
         
-        <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-12">
           <div className="text-center">
-            <Badge variant="secondary" className="mb-6 bg-white/10 backdrop-blur-md border-white/20 text-white">
-              <Sparkles className="w-4 h-4 mr-2" />
+            <Badge variant="secondary" className="mb-4 sm:mb-6 bg-white/10 backdrop-blur-md border-white/20 text-white text-xs sm:text-sm">
+              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
               {c.badge}
             </Badge>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
               {c.title}{" "}
               <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
                 {c.titleHighlight}
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-6 sm:mb-8">
               {c.subtitle}
             </p>
             

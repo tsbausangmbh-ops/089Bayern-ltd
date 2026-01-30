@@ -578,6 +578,7 @@ export default function OnBilgilendirme() {
     },
     ar: {
       backButton: "الصفحة الرئيسية",
+      badge: "معلومات مسبقة",
       title: "نموذج المعلومات المسبقة",
       subtitle: "نموذج المعلومات المسبقة لإعلام المستهلك وفقاً للمادة 5 من قانون حماية المستهلك التركي رقم 6502 ولائحة العقود عن بعد",
       lastUpdate: "آخر تحديث",
@@ -690,6 +691,7 @@ export default function OnBilgilendirme() {
     },
     hr: {
       backButton: "Početna",
+      badge: "Prethodna obavijest",
       title: "Obrazac za prethodnu obavijest",
       subtitle: "Obrazac za prethodnu obavijest za potrošače u skladu s člankom 5. turskog Zakona o zaštiti potrošača br. 6502 i Uredbe o ugovorima na daljinu",
       lastUpdate: "Zadnje ažuriranje",
@@ -810,18 +812,18 @@ export default function OnBilgilendirme() {
       <SEOHead page="legal" />
       <Header />
       
-      <section className="relative pt-24 pb-16 overflow-hidden" data-testid="section-hero">
+      <section className="relative pt-16 sm:pt-20 md:pt-24 pb-10 sm:pb-12 md:pb-16 overflow-hidden" data-testid="section-hero">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-accent/5 to-transparent" />
-        <div className="relative max-w-7xl mx-auto px-6 md:px-8">
-          <div className="text-center mb-8">
-            <Badge variant="secondary" className="mb-6">
-              <Info className="w-4 h-4 mr-2" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+          <div className="text-center mb-6 sm:mb-8">
+            <Badge variant="secondary" className="mb-4 sm:mb-6 text-xs sm:text-sm">
+              <Info className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
               {t.badge}
             </Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
               {t.title}
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               {t.subtitle}
             </p>
           </div>

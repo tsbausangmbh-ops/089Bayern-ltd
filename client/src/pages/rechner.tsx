@@ -602,16 +602,16 @@ export default function Rechner() {
       <Header onCtaClick={handleCtaClick} />
       
       {/* Hero Section */}
-      <section className="relative pt-20 pb-2 overflow-hidden" data-testid="section-rechner-hero">
+      <section className="relative pt-16 sm:pt-20 pb-2 overflow-hidden" data-testid="section-rechner-hero">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
         
-        <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-12">
           <div className="text-center">
-            <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6">
               <div className="flex items-center gap-2 bg-gradient-to-r from-accent/80 to-orange-600/80 backdrop-blur-md rounded-full px-4 py-2 border border-white/20 shadow-lg">
                 <div className="w-7 h-7 bg-white/20 rounded-md flex items-center justify-center">
                   <span className="text-white font-bold text-xs">089</span>

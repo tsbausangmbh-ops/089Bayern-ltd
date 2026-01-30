@@ -249,28 +249,28 @@ export default function GunesPaneli() {
       <SEOHead page="systeme" />
       <Header onCtaClick={goToContact} />
       
-      <section className="relative pt-20 pb-16 overflow-hidden" data-testid="section-solar-hero">
+      <section className="relative pt-16 sm:pt-20 pb-12 sm:pb-16 overflow-hidden" data-testid="section-solar-hero">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-background" />
         
-        <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-12">
           <div className="max-w-3xl">
-            <Badge variant="secondary" className="mb-6 bg-amber-500/20 backdrop-blur-md border-amber-500/30 text-amber-300">
-              <Sun className="w-4 h-4 mr-2" />
+            <Badge variant="secondary" className="mb-4 sm:mb-6 bg-amber-500/20 backdrop-blur-md border-amber-500/30 text-amber-300 text-xs sm:text-sm">
+              <Sun className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
               {c.badge}
             </Badge>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
               {c.heroTitle}{" "}
               <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
                 {c.heroHighlight}
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-white/80 mb-6 sm:mb-8 leading-relaxed">
               {c.heroSubtitle}
             </p>
             

@@ -624,7 +624,7 @@ export default function IsiPompasi() {
       <SEOHead page="systeme" />
       <Header onCtaClick={goToContact} />
       
-      <section className="relative pt-20 pb-16 overflow-hidden" data-testid="section-heatpump-hero">
+      <section className="relative pt-16 sm:pt-20 pb-12 sm:pb-16 overflow-hidden" data-testid="section-heatpump-hero">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
