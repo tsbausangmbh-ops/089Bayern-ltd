@@ -8,7 +8,7 @@ import { Home, Building2, Store, ArrowRight, ArrowLeft, Check, Calculator, Trend
 import { translations, isRTL } from "@/lib/translations";
 import { useLanguage } from "@/lib/LanguageContext";
 import { useExchangeRate, formatTL, formatEUR } from "@/hooks/useExchangeRate";
-import logoImage from "@assets/Logo_1765790073992.png";
+import logoImage from "@assets/logo-white.png";
 
 const turkishLocations = [
   { id: "antalya", key: "locationAntalya" as const, sun: "2.900+" },
