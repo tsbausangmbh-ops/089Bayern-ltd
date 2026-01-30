@@ -58,29 +58,29 @@ export default function Footer() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/85 to-black/90" />
       
-      <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-6">
-          <div>
-            <div className="flex items-center gap-3 mb-6">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-6">
+          <div className="col-span-2 sm:col-span-3 md:col-span-2 lg:col-span-1">
+            <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
               <img 
                 src={logoImage} 
                 alt="089 Bayern Premium 4'ü 1 arada enerji sistemleri Türkiye - Almanya kalitesi güneş paneli Vaillant ısı pompası Samsung klima batarya depolama kurulumu Antalya Alanya Akdeniz villaları" 
-                className="h-16 w-auto object-contain rounded-lg"
+                className="h-12 sm:h-16 w-auto object-contain rounded-lg"
                 loading="lazy"
               />
               <div>
-                <span className="block text-xl font-bold text-white">089 Bayern</span>
-                <span className="block text-sm text-white/70">Turkey</span>
+                <span className="block text-lg sm:text-xl font-bold text-white">089 Bayern</span>
+                <span className="block text-xs sm:text-sm text-white/70">Turkey</span>
               </div>
             </div>
-            <p className="text-white/70 text-sm leading-relaxed">
+            <p className="text-white/70 text-xs sm:text-sm leading-relaxed">
               {t.footer.description}
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-6">{t.footer.legal}</h4>
-            <ul className="space-y-3 text-sm">
+            <h4 className="text-sm sm:text-base font-semibold text-white mb-3 sm:mb-6">{t.footer.legal}</h4>
+            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
               {legalLinks.map((link) => (
                 <li key={link.href}>
                   <a
@@ -96,8 +96,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-6">{t.footer.energySystems}</h4>
-            <ul className="space-y-3 text-sm">
+            <h4 className="text-sm sm:text-base font-semibold text-white mb-3 sm:mb-6">{t.footer.energySystems}</h4>
+            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
               {products.map((product) => (
                 <li key={product.name} className="text-white/60">
                   <a 
@@ -107,15 +107,15 @@ export default function Footer() {
                   >
                     {product.name}
                   </a>
-                  <span className="text-xs block">{product.desc}</span>
+                  <span className="text-[10px] sm:text-xs block">{product.desc}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-6">Sayfalar</h4>
-            <ul className="space-y-3 text-sm">
+            <h4 className="text-sm sm:text-base font-semibold text-white mb-3 sm:mb-6">Sayfalar</h4>
+            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
               {mainNavLinks.map((link) => (
                 <li key={link.href}>
                   <a
@@ -131,8 +131,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-6">{language === "de" ? "Lösungen" : language === "en" ? "Solutions" : language === "tr" ? "Çözümler" : "Çözümler"}</h4>
-            <ul className="space-y-3 text-sm">
+            <h4 className="text-sm sm:text-base font-semibold text-white mb-3 sm:mb-6">{language === "de" ? "Lösungen" : language === "en" ? "Solutions" : language === "tr" ? "Çözümler" : "Çözümler"}</h4>
+            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
               {solutionLinks.map((link) => (
                 <li key={link.href}>
                   <a
@@ -145,8 +145,8 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <h4 className="font-semibold text-white mb-4 mt-6">{installationLabel}</h4>
-            <ul className="space-y-3 text-sm">
+            <h4 className="text-sm sm:text-base font-semibold text-white mb-3 sm:mb-4 mt-4 sm:mt-6">{installationLabel}</h4>
+            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
               {installationLinks.map((link) => (
                 <li key={link.href}>
                   <a
@@ -161,19 +161,19 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-semibold text-white mb-6">{t.footer.contact}</h4>
-            <ul className="space-y-4 text-sm">
-              <li className="flex flex-wrap gap-4">
+          <div className="col-span-2 sm:col-span-3 md:col-span-2 lg:col-span-1">
+            <h4 className="text-sm sm:text-base font-semibold text-white mb-3 sm:mb-6">{t.footer.contact}</h4>
+            <ul className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
+              <li className="flex flex-wrap gap-3 sm:gap-4">
                 <a
                   href="tel:+905071832036"
                   className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
                   data-testid="link-footer-phone"
                 >
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
                   <div>
-                    <span className="block text-white font-medium text-sm">+90 507 183 2036</span>
-                    <span className="text-xs text-white/60">TR</span>
+                    <span className="block text-white font-medium text-xs sm:text-sm">+90 507 183 2036</span>
+                    <span className="text-[10px] sm:text-xs text-white/60">TR</span>
                   </div>
                 </a>
                 <a
@@ -181,10 +181,10 @@ export default function Footer() {
                   className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
                   data-testid="link-footer-phone-de"
                 >
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
                   <div>
-                    <span className="block text-white font-medium text-sm">+49 173 5994699</span>
-                    <span className="text-xs text-white/60">DE</span>
+                    <span className="block text-white font-medium text-xs sm:text-sm">+49 173 5994699</span>
+                    <span className="text-[10px] sm:text-xs text-white/60">DE</span>
                   </div>
                 </a>
               </li>
@@ -193,44 +193,44 @@ export default function Footer() {
                   href="https://wa.me/491735994699"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
+                  className="flex items-center gap-2 sm:gap-3 text-white/70 hover:text-white transition-colors"
                   data-testid="link-footer-whatsapp"
                 >
-                  <SiWhatsapp className="w-5 h-5 text-green-400" />
+                  <SiWhatsapp className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" />
                   <div>
-                    <span className="block text-white font-medium">{t.footer.whatsapp}</span>
-                    <span className="text-xs text-white/60">{t.footer.quickComm}</span>
-                    <span className="text-xs text-white/40 block mt-0.5">WhatsApp Inc. gizlilik politikasi gecerlidir</span>
+                    <span className="block text-white font-medium text-xs sm:text-sm">{t.footer.whatsapp}</span>
+                    <span className="text-[10px] sm:text-xs text-white/60">{t.footer.quickComm}</span>
+                    <span className="text-[10px] sm:text-xs text-white/40 block mt-0.5">WhatsApp Inc. gizlilik politikasi gecerlidir</span>
                   </div>
                 </a>
               </li>
               <li>
                 <a
                   href="mailto:info@089bayern.com"
-                  className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
+                  className="flex items-center gap-2 sm:gap-3 text-white/70 hover:text-white transition-colors"
                   data-testid="link-footer-email"
                 >
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                   <div>
-                    <span className="block text-white font-medium">info@089bayern.com</span>
-                    <span className="text-xs text-white/60">{t.footer.email}</span>
+                    <span className="block text-white font-medium text-xs sm:text-sm">info@089bayern.com</span>
+                    <span className="text-[10px] sm:text-xs text-white/60">{t.footer.email}</span>
                   </div>
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-white/70">
-                <MapPin className="w-5 h-5 mt-0.5" />
+              <li className="flex items-start gap-2 sm:gap-3 text-white/70">
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5" />
                 <div>
-                  <span className="block text-white font-medium">{t.footer.antalyaOffice}</span>
-                  <span className="text-xs text-white/60">{t.footer.regionalHQ}</span>
+                  <span className="block text-white font-medium text-xs sm:text-sm">{t.footer.antalyaOffice}</span>
+                  <span className="text-[10px] sm:text-xs text-white/60">{t.footer.regionalHQ}</span>
                 </div>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-6 pt-4 border-t border-white/10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
-            <p>
+        <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-white/10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4 text-[10px] sm:text-sm text-white/60">
+            <p className="text-center md:text-left">
               &copy; 2024{" "}
               <a href="/" className="hover:text-white transition-colors underline" data-testid="link-089bayern">
                 089Bayern ltd.
@@ -246,21 +246,21 @@ export default function Footer() {
               {". "}
               {t.footer.copyright}
             </p>
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
-                <Award className="w-4 h-4" />
+            <div className="flex items-center gap-3 sm:gap-4">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <Award className="w-3 h-3 sm:w-4 sm:h-4" />
                 <span>{t.footer.germanQuality}</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4" />
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <Shield className="w-3 h-3 sm:w-4 sm:h-4" />
                 <span>{t.footer.guarantee}</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-4 pt-3 border-t border-white/10">
-          <div className="text-xs text-white/50 text-center space-y-1" data-testid="footer-impressum">
+        <div className="mt-3 sm:mt-4 pt-2 sm:pt-3 border-t border-white/10">
+          <div className="text-[10px] sm:text-xs text-white/50 text-center space-y-0.5 sm:space-y-1" data-testid="footer-impressum">
             <p className="font-medium text-white/70">089 Bayern Enerji Sistemleri Ltd. Sti.</p>
             <p>Sekerhane Mah. Halimaga Sk. Lale Tokus Plaza 6/14, Alanya/Antalya, Turkiye</p>
             <p>Tel: +90 507 183 2036 | +49 173 5994699 | E-posta: info@089bayern.com</p>

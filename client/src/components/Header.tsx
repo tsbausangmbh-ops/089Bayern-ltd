@@ -348,7 +348,8 @@ export default function Header({ onCtaClick }: HeaderProps) {
             
             <Button 
               onClick={onCtaClick} 
-              className="mt-3 bg-gradient-to-r from-accent to-orange-600 border-0" 
+              size="lg"
+              className="mt-3 w-full bg-gradient-to-r from-accent to-orange-600 border-0 min-h-[44px]" 
               data-testid="button-mobile-cta"
             >
               {t.header.ctaButton}
