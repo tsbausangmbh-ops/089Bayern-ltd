@@ -583,6 +583,7 @@ export default function ProblemSolverSection() {
                   src={businessHandshakeImage} 
                   alt="Geschäftsabschluss im Büro" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary/20 md:bg-gradient-to-t md:from-transparent md:to-transparent" />
               </div>

@@ -503,6 +503,7 @@ export default function Klima() {
                   hr: "089 Bayern Samsung WindFree klima uređaj unutarnja jedinica instalacija u mediteranskoj vili ušteda energije"
                 }[language] || "089 Bayern Samsung climate indoor unit installation"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-climate-indoor"
               />
             </div>
@@ -519,6 +520,7 @@ export default function Klima() {
                   hr: "089 Bayern Samsung klima uređaj vanjska jedinica montaža od strane profesionalnog tima Antalya"
                 }[language] || "089 Bayern Samsung climate outdoor unit installation Antalya"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-climate-outdoor"
               />
             </div>

@@ -434,6 +434,7 @@ export default function GunesPaneli() {
                   hr: "089 Bayern profesionalno kabliranje solarnih panela i detalji montaže na krovu vile u Antaliji Turska"
                 }[language] || "089 Bayern professional solar panel installation detail Antalya villa"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-solar-detail"
               />
             </div>
@@ -450,6 +451,7 @@ export default function GunesPaneli() {
                   hr: "089 Bayern tehničar provodi testiranje i mjerenje solarnih panela na mediteranskoj vili"
                 }[language] || "089 Bayern solar panel testing Mediterranean villa"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-solar-testing"
               />
             </div>

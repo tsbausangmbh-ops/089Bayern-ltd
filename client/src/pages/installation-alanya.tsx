@@ -1122,6 +1122,7 @@ export default function InstallationAlanya() {
                   hr: "089 Bayern instalacijski tim radi na instalaciji solarnih panela i toplinske pumpe u Alanyi Mediteran Turska"
                 }[language] || "089 Bayern installation team Alanya solar panel heat pump"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-team-work"
               />
             </div>
@@ -1138,6 +1139,7 @@ export default function InstallationAlanya() {
                   hr: "089 Bayern isporuka Samsung i Vaillant premium opreme u vilu Alanya profesionalna logistika"
                 }[language] || "089 Bayern Samsung Vaillant equipment delivery Alanya"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-delivery"
               />
             </div>

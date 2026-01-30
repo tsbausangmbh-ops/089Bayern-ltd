@@ -147,6 +147,7 @@ export default function BenefitsSection() {
             src={happyCustomerImage} 
             alt="Zufriedene Kunden" 
             className="w-full h-64 md:h-80 object-cover"
+            loading="lazy"
           />
         </div>
 

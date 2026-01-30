@@ -597,6 +597,7 @@ export default function Vorteile() {
                     src={item.image} 
                     alt={item.imageAlt}
                     className="w-full h-40 object-cover hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
                     data-testid={`img-free-energy-${index}`}
                   />
                 </div>
@@ -622,6 +623,7 @@ export default function Vorteile() {
                 src={consultationActionImage} 
                 alt="Energieberater zeigt Einsparungen - Handlungsbedarf" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-consultation-action"
               />
             </div>
@@ -656,6 +658,7 @@ export default function Vorteile() {
                     src={system.image} 
                     alt={system.imageAlt}
                     className="w-full h-56 md:h-72 object-cover hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
                     data-testid={`img-system-${index}`}
                   />
                 </div>

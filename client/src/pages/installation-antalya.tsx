@@ -1330,6 +1330,7 @@ export default function InstallationAntalya() {
                   hr: "089 Bayern instalacija solarnih panela na krovu vile u Antaliji profesionalni montažni tim Turska"
                 }[language] || "089 Bayern solar panel installation Antalya villa roof professional team"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-roof-installation"
               />
             </div>
@@ -1346,6 +1347,7 @@ export default function InstallationAntalya() {
                   hr: "089 Bayern Vaillant inspekcija instalacije toplinske pumpe u Antaliji njemački standardi kvalitete"
                 }[language] || "089 Bayern Vaillant heat pump inspection Antalya German quality"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-heatpump-inspection"
               />
             </div>
@@ -1369,6 +1371,7 @@ export default function InstallationAntalya() {
                 hr: "089 Bayern instalacijski tim ispred završenog 4-u-1 energetskog sustava u vili Antalya uspješan projekt Turska"
               }[language] || "089 Bayern team completed 4-in-1 energy system Antalya villa"} 
               className="w-full h-80 md:h-[500px] object-cover"
+              loading="lazy"
               data-testid="img-team-completed"
             />
           </div>

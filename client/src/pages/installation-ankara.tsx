@@ -1263,6 +1263,7 @@ export default function InstallationAnkara() {
                   hr: "089 Bayern instalacijski tim radi na instalaciji solarnih panela i toplinske pumpe u Ankari glavni grad Turska"
                 }[language] || "089 Bayern installation team Ankara solar panel heat pump capital"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-team-work"
               />
             </div>
@@ -1279,6 +1280,7 @@ export default function InstallationAnkara() {
                   hr: "089 Bayern profesionalna inspekcija instalacije i kontrola kvalitete Ankara njemački standardi"
                 }[language] || "089 Bayern installation inspection quality control Ankara German standards"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-inspection"
               />
             </div>

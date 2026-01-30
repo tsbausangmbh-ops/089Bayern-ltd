@@ -826,6 +826,7 @@ export default function IsiPompasi() {
                   hr: "089 Bayern Vaillant toplinska pumpa tehnički detalji i instalacija u vili Antalya njemačka kvaliteta"
                 }[language] || "089 Bayern Vaillant heat pump installation Antalya villa"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-heatpump-detail"
               />
             </div>
@@ -842,6 +843,7 @@ export default function IsiPompasi() {
                   hr: "089 Bayern energetski konzultant objašnjava Vaillant sustav toplinske pumpe klijentu u Turskoj"
                 }[language] || "089 Bayern heat pump consultation Turkey"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-heatpump-consultation"
               />
             </div>

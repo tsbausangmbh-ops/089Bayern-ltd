@@ -438,6 +438,7 @@ export default function EnerjiDepolama() {
                   hr: "089 Bayern Samsung All-in-One sustav za pohranu baterija instalacija u vili Antalya energija 24/7"
                 }[language] || "089 Bayern Samsung battery storage installation Antalya"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-battery-system"
               />
             </div>
@@ -454,6 +455,7 @@ export default function EnerjiDepolama() {
                   hr: "089 Bayern sustav za praćenje i kontrolu energije s integracijom pametnog doma Turska"
                 }[language] || "089 Bayern energy monitoring smart home Turkey"} 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-battery-monitoring"
               />
             </div>

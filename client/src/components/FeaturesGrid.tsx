@@ -92,6 +92,7 @@ export default function FeaturesGrid() {
                   src={feature.image} 
                   alt={feature.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
                 <div className={`absolute bottom-4 left-4 w-12 h-12 rounded-xl ${feature.iconBg} flex items-center justify-center shadow-lg`}>
