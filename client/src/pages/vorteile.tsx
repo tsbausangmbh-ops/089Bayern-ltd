@@ -473,7 +473,7 @@ export default function Vorteile() {
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
-          <div className="max-w-3xl">
+          <div className="text-center max-w-3xl mx-auto">
             <Badge variant="secondary" className="mb-4 sm:mb-6 bg-amber-500/20 backdrop-blur-md border-amber-400/30 text-white text-xs sm:text-sm">
               <Sparkles className="w-3 h-3 mr-1" />
               {c.badge}
@@ -490,7 +490,7 @@ export default function Vorteile() {
               {c.subtitle}
             </p>
             
-            <div className="flex flex-wrap gap-2 sm:gap-3">
+            <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
               <Button 
                 onClick={goToContact}
                 size="lg"
