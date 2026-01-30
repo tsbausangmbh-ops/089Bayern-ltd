@@ -466,17 +466,16 @@ export default function Vorteile() {
       <SEOHead page="vorteile" />
       <Header onCtaClick={goToContact} />
       
-      <section className="relative pt-16 sm:pt-20 pb-2 overflow-hidden" data-testid="section-vorteile-hero">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
+      <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center pt-16 sm:pt-20" data-testid="section-vorteile-hero">
+        <div className="absolute inset-0">
+          <img src={heroImage} alt="089 Bayern 4-in-1 German System Vorteile" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+        </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-12">
-          <div className="text-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
+          <div className="max-w-3xl">
             <Badge variant="secondary" className="mb-4 sm:mb-6 bg-amber-500/20 backdrop-blur-md border-amber-400/30 text-white text-xs sm:text-sm">
-              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 text-amber-400" />
+              <Sparkles className="w-3 h-3 mr-1" />
               {c.badge}
             </Badge>
             
@@ -487,60 +486,62 @@ export default function Vorteile() {
               </span>
             </h1>
             
-            <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-6 sm:mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-white/80 mb-6 sm:mb-8">
               {c.subtitle}
             </p>
             
-            <div className="flex flex-col gap-3 items-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3">
               <Button 
                 onClick={goToContact}
                 size="lg"
-                className="bg-gradient-to-r from-amber-500 to-orange-600 border-0 shadow-lg px-8"
+                className="bg-gradient-to-r from-amber-500 to-orange-600 border-0 shadow-lg"
                 data-testid="button-vorteile-cta"
               >
                 {c.ctaButton}
                 <ArrowRight className={`w-5 h-5 ${isRtl ? "mr-2 rotate-180" : "ml-2"}`} />
               </Button>
-              <div className="flex flex-row gap-2 flex-wrap justify-center">
-                <Button 
-                  size="sm" 
-                  variant="outline" 
-                  className="border-red-400/50 text-white bg-red-500/20 backdrop-blur-sm text-xs px-3" 
-                  onClick={() => window.location.href = "tel:+905071832036"}
-                  data-testid="button-vorteile-phone-tr"
-                >
-                  <Phone className={`w-3 h-3 ${isRtl ? "ml-1" : "mr-1"}`} />
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-red-400/50 text-white bg-red-500/20 backdrop-blur-sm" 
+                asChild
+                data-testid="button-vorteile-phone-tr"
+              >
+                <a href="tel:+905071832036">
+                  <Phone className="w-4 h-4 mr-2" />
                   TR +90 507 183 2036
-                </Button>
-                <Button 
-                  size="sm" 
-                  variant="outline" 
-                  className="border-amber-400/50 text-white bg-black/30 backdrop-blur-sm text-xs px-3" 
-                  onClick={() => window.location.href = "tel:+491735994699"}
-                  data-testid="button-vorteile-phone-de"
-                >
-                  <Phone className={`w-3 h-3 ${isRtl ? "ml-1" : "mr-1"}`} />
+                </a>
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-amber-400/50 text-white bg-black/30 backdrop-blur-sm" 
+                asChild
+                data-testid="button-vorteile-phone-de"
+              >
+                <a href="tel:+491735994699">
+                  <Phone className="w-4 h-4 mr-2" />
                   DE +49 173 5994699
-                </Button>
-                <Button 
-                  size="sm" 
-                  variant="outline" 
-                  className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm text-xs px-3" 
-                  onClick={() => window.open("https://wa.me/491735994699", "_blank")}
-                  data-testid="button-vorteile-whatsapp"
-                >
-                  WhatsApp
-                </Button>
-                <Button 
-                  size="sm" 
-                  variant="outline" 
-                  className="border-blue-400/50 text-white bg-blue-500/20 backdrop-blur-sm text-xs px-3" 
-                  onClick={() => window.location.href = "mailto:info@089bayern.com"}
-                  data-testid="button-vorteile-email"
-                >
-                  Email
-                </Button>
-              </div>
+                </a>
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm" 
+                onClick={() => window.open("https://wa.me/491735994699", "_blank")}
+                data-testid="button-vorteile-whatsapp"
+              >
+                WhatsApp
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-blue-400/50 text-white bg-blue-500/20 backdrop-blur-sm" 
+                asChild
+                data-testid="button-vorteile-email"
+              >
+                <a href="mailto:info@089bayern.com">Email</a>
+              </Button>
             </div>
           </div>
         </div>
