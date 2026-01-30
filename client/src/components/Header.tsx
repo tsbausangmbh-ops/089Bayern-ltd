@@ -104,7 +104,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
           <a href="/" className="flex items-center gap-3 transition-opacity hover:opacity-80" data-testid="link-logo-home">
             <img 
               src={logoImage} 
-              alt="089 Bayern - Alman Enerji Sistemleri Türkiye | Güneş Paneli, Isı Pompası, Klima ve Batarya Kurulumu Antalya" 
+              alt="089 Bayern Almanya kalitesi enerji sistemleri Türkiye - güneş paneli Vaillant ısı pompası Samsung klima batarya depolama kurulumu Antalya Alanya villa sahipleri için" 
               className="h-12 md:h-14 w-auto object-contain rounded-lg"
             />
             <div className="hidden sm:block">

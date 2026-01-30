@@ -268,7 +268,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
           <div className="flex items-center justify-center gap-3 mb-6">
             <img 
               src={logoImage} 
-              alt="089 Bayern Logo - Alman Enerji Sistemleri Türkiye" 
+              alt="089 Bayern Logo Alman kalitesi enerji sistemleri Türkiye - güneş paneli Vaillant ısı pompası Samsung klima batarya Antalya Alanya kurulumu" 
               className="h-12 w-auto object-contain"
             />
             <div className="text-left">

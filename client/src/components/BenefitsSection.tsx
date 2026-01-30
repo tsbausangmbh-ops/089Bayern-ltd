@@ -145,7 +145,7 @@ export default function BenefitsSection() {
         <div className="mb-8 rounded-2xl overflow-hidden">
           <img 
             src={happyCustomerImage} 
-            alt="089 Bayern mutlu müşteriler - Antalya'da başarılı enerji sistemi kurulumu" 
+            alt="089 Bayern mutlu villa sahipleri Antalya Alanya - güneş paneli ısı pompası klima batarya kurulumu başarılı referanslar Akdeniz Türkiye" 
             className="w-full h-64 md:h-80 object-cover"
             loading="lazy"
           />

@@ -64,7 +64,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-6">
               <img 
                 src={logoImage} 
-                alt="089 Bayern - Premium 4-in-1 Enerji Sistemleri Türkiye | Güneş Enerjisi, Vaillant Isı Pompası, Samsung Klima Antalya Alanya" 
+                alt="089 Bayern Premium 4'ü 1 arada enerji sistemleri Türkiye - Almanya kalitesi güneş paneli Vaillant ısı pompası Samsung klima batarya depolama kurulumu Antalya Alanya Akdeniz villaları" 
                 className="h-16 w-auto object-contain rounded-lg"
                 loading="lazy"
               />

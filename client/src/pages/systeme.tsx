@@ -538,7 +538,7 @@ export default function Systeme() {
             <div className="rounded-xl overflow-hidden shadow-xl mx-auto max-w-4xl w-full">
               <img 
                 src={systemPresentationImage} 
-                alt="089 Bayern profesyonel ekip toplantısı" 
+                alt="089 Bayern 4'ü 1 arada enerji sistemi sunumu Antalya - Alman kalitesi güneş paneli Vaillant ısı pompası Samsung klima batarya depolama Türkiye" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 data-testid="img-team-meeting"

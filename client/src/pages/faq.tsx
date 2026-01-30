@@ -574,7 +574,7 @@ export default function FAQ() {
             <div className="rounded-xl overflow-hidden shadow-xl mx-auto max-w-4xl w-full">
               <img 
                 src={consultationImage} 
-                alt="Profesyonel danışmanlık hizmeti" 
+                alt="089 Bayern ücretsiz enerji danışmanlığı Antalya - güneş paneli ısı pompası klima batarya sistemi uzman desteği Türkiye" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 data-testid="img-consultation"

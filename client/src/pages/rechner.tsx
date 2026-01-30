@@ -728,7 +728,7 @@ export default function Rechner() {
             <div className="rounded-xl overflow-hidden shadow-xl mx-auto max-w-4xl w-full">
               <img 
                 src={calculatorTabletImage} 
-                alt="Enerji tasarruf hesaplama" 
+                alt="089 Bayern enerji tasarruf hesaplayıcı Antalya - güneş paneli ısı pompası klima batarya maliyeti hesaplama villaları için Türkiye" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 data-testid="img-calculator-tablet"

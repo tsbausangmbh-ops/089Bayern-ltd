@@ -549,7 +549,7 @@ export default function UeberUns() {
             <div className="rounded-xl overflow-hidden shadow-xl mx-auto max-w-4xl w-full">
               <img 
                 src={teamMeetingImage} 
-                alt="089 Bayern profesyonel ekip" 
+                alt="089 Bayern Almanya Türkiye profesyonel enerji sistemi ekibi - Mustafa Sakar Dalibor Bakmaz güneş paneli ısı pompası uzmanları Antalya" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 data-testid="img-team-meeting"
               />
