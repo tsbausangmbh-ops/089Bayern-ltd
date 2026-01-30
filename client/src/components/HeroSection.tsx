@@ -79,7 +79,7 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-5 flex-wrap">
+        <div className="flex flex-col items-center gap-4 mb-5">
           <Button
             size="lg"
             onClick={onCtaClick}
@@ -89,46 +89,48 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
             {t.hero.ctaButton}
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            onClick={() => window.location.href = "tel:+905071832036"}
-            className="bg-red-500/20 backdrop-blur-sm border-red-400/50 text-white"
-            data-testid="button-hero-phone-tr"
-          >
-            <Phone className="w-4 h-4 mr-2" />
-            TR +90 507 183 2036
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            onClick={() => window.location.href = "tel:+491735994699"}
-            className="bg-black/30 backdrop-blur-sm border-amber-400/50 text-white"
-            data-testid="button-hero-phone-de"
-          >
-            <Phone className="w-4 h-4 mr-2" />
-            DE +49 173 5994699
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            onClick={() => window.open("https://wa.me/491735994699", "_blank")}
-            className="bg-green-500/20 backdrop-blur-sm border-green-400/50 text-white"
-            data-testid="button-hero-whatsapp"
-          >
-            <MessageCircle className="w-4 h-4 mr-2" />
-            WhatsApp
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            onClick={() => window.location.href = "mailto:info@089bayern.com"}
-            className="bg-blue-500/20 backdrop-blur-sm border-blue-400/50 text-white"
-            data-testid="button-hero-email"
-          >
-            <Mail className="w-4 h-4 mr-2" />
-            Email
-          </Button>
+          <div className="flex flex-row items-center justify-center gap-2 flex-wrap">
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => window.location.href = "tel:+905071832036"}
+              className="bg-red-500/20 backdrop-blur-sm border-red-400/50 text-white text-xs px-3"
+              data-testid="button-hero-phone-tr"
+            >
+              <Phone className="w-3 h-3 mr-1" />
+              TR +90 507 183 2036
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => window.location.href = "tel:+491735994699"}
+              className="bg-black/30 backdrop-blur-sm border-amber-400/50 text-white text-xs px-3"
+              data-testid="button-hero-phone-de"
+            >
+              <Phone className="w-3 h-3 mr-1" />
+              DE +49 173 5994699
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => window.open("https://wa.me/491735994699", "_blank")}
+              className="bg-green-500/20 backdrop-blur-sm border-green-400/50 text-white text-xs px-3"
+              data-testid="button-hero-whatsapp"
+            >
+              <MessageCircle className="w-3 h-3 mr-1" />
+              WhatsApp
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => window.location.href = "mailto:info@089bayern.com"}
+              className="bg-blue-500/20 backdrop-blur-sm border-blue-400/50 text-white text-xs px-3"
+              data-testid="button-hero-email"
+            >
+              <Mail className="w-3 h-3 mr-1" />
+              Email
+            </Button>
+          </div>
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-4">

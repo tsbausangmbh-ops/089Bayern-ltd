@@ -343,7 +343,7 @@ export default function Klima() {
               {c.heroSubtitle}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
+            <div className="flex flex-col gap-3">
               <Button 
                 onClick={goToContact}
                 size="lg"
@@ -353,44 +353,46 @@ export default function Klima() {
                 <Calculator className="w-5 h-5 mr-2" />
                 {c.ctaButton}
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-red-400/50 text-white bg-red-500/20 backdrop-blur-sm" 
-                onClick={() => window.location.href = "tel:+905071832036"}
-                data-testid="button-climate-phone-tr"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                TR +90 507 183 2036
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-amber-400/50 text-white bg-black/30 backdrop-blur-sm" 
-                onClick={() => window.location.href = "tel:+491735994699"}
-                data-testid="button-climate-phone-de"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                DE +49 173 5994699
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm" 
-                onClick={() => window.open("https://wa.me/491735994699", "_blank")}
-                data-testid="button-climate-whatsapp"
-              >
-                WhatsApp
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-blue-400/50 text-white bg-blue-500/20 backdrop-blur-sm" 
-                onClick={() => window.location.href = "mailto:info@089bayern.com"}
-                data-testid="button-climate-email"
-              >
-                Email
-              </Button>
+              <div className="flex flex-row gap-2 flex-wrap">
+                <Button 
+                  size="sm" 
+                  variant="outline" 
+                  className="border-red-400/50 text-white bg-red-500/20 backdrop-blur-sm text-xs px-3" 
+                  onClick={() => window.location.href = "tel:+905071832036"}
+                  data-testid="button-climate-phone-tr"
+                >
+                  <Phone className="w-3 h-3 mr-1" />
+                  TR +90 507 183 2036
+                </Button>
+                <Button 
+                  size="sm" 
+                  variant="outline" 
+                  className="border-amber-400/50 text-white bg-black/30 backdrop-blur-sm text-xs px-3" 
+                  onClick={() => window.location.href = "tel:+491735994699"}
+                  data-testid="button-climate-phone-de"
+                >
+                  <Phone className="w-3 h-3 mr-1" />
+                  DE +49 173 5994699
+                </Button>
+                <Button 
+                  size="sm" 
+                  variant="outline" 
+                  className="border-green-400/50 text-white bg-green-500/20 backdrop-blur-sm text-xs px-3" 
+                  onClick={() => window.open("https://wa.me/491735994699", "_blank")}
+                  data-testid="button-climate-whatsapp"
+                >
+                  WhatsApp
+                </Button>
+                <Button 
+                  size="sm" 
+                  variant="outline" 
+                  className="border-blue-400/50 text-white bg-blue-500/20 backdrop-blur-sm text-xs px-3" 
+                  onClick={() => window.location.href = "mailto:info@089bayern.com"}
+                  data-testid="button-climate-email"
+                >
+                  Email
+                </Button>
+              </div>
             </div>
           </div>
         </div>
