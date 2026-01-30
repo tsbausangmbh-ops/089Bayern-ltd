@@ -96,6 +96,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
           ? "bg-background/95 backdrop-blur-md border-b border-border shadow-lg"
           : "bg-gradient-to-b from-black/50 to-transparent"
       }`}
+      dir="ltr"
       data-testid="header-main"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8">
