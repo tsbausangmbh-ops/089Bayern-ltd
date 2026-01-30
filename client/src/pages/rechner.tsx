@@ -730,6 +730,7 @@ export default function Rechner() {
                 src={calculatorTabletImage} 
                 alt="Enerji tasarruf hesaplama" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-calculator-tablet"
               />
             </div>

@@ -540,6 +540,7 @@ export default function Systeme() {
                 src={systemPresentationImage} 
                 alt="089 Bayern profesyonel ekip toplantısı" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-team-meeting"
               />
             </div>
@@ -600,6 +601,7 @@ export default function Systeme() {
                     src={feature.image} 
                     alt={feature.imageAlt}
                     className="w-full h-56 md:h-72 object-cover hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
                     data-testid={`img-system-${index}`}
                   />
                 </div>

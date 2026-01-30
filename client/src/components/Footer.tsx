@@ -66,6 +66,7 @@ export default function Footer() {
                 src={logoImage} 
                 alt="089 Bayern - Premium 4-in-1 Enerji Sistemleri Türkiye | Güneş Enerjisi, Vaillant Isı Pompası, Samsung Klima Antalya Alanya" 
                 className="h-16 w-auto object-contain rounded-lg"
+                loading="lazy"
               />
               <div>
                 <span className="block text-xl font-bold text-white">089 Bayern</span>

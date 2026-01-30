@@ -576,6 +576,7 @@ export default function FAQ() {
                 src={consultationImage} 
                 alt="Profesyonel danışmanlık hizmeti" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid="img-consultation"
               />
             </div>
