@@ -4,121 +4,137 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/lib/LanguageContext";
-import NotFound from "@/pages/not-found";
-import Home from "@/pages/home";
-import KVKK from "@/pages/kvkk";
-import Gizlilik from "@/pages/gizlilik";
-import CerezPolitikasi from "@/pages/cerez-politikasi";
-import Sartlar from "@/pages/sartlar";
-import MesafeliSatis from "@/pages/mesafeli-satis";
-import OnBilgilendirme from "@/pages/on-bilgilendirme";
-import UeberUns from "@/pages/ueber-uns";
-import Systeme from "@/pages/systeme";
-import Vorteile from "@/pages/vorteile";
-import Rechner from "@/pages/rechner";
-import FAQ from "@/pages/faq";
-import GunesPaneli from "@/pages/gunes-paneli";
-import IsiPompasi from "@/pages/isi-pompasi";
-import Klima from "@/pages/klima";
-import EnerjiDepolama from "@/pages/enerji-depolama";
-import Standorte from "@/pages/standorte";
-import InstallationAntalya from "@/pages/installation-antalya";
-import InstallationAnkara from "@/pages/installation-ankara";
-import InstallationAlanya from "@/pages/installation-alanya";
+import { lazy, Suspense } from "react";
 import CookieBanner from "@/components/CookieBanner";
 import { urlPaths } from "@/lib/urlTranslations";
 
+// Critical: Home page loaded eagerly
+import Home from "@/pages/home";
+
+// Lazy load all other pages for better performance
+const NotFound = lazy(() => import("@/pages/not-found"));
+const KVKK = lazy(() => import("@/pages/kvkk"));
+const Gizlilik = lazy(() => import("@/pages/gizlilik"));
+const CerezPolitikasi = lazy(() => import("@/pages/cerez-politikasi"));
+const Sartlar = lazy(() => import("@/pages/sartlar"));
+const MesafeliSatis = lazy(() => import("@/pages/mesafeli-satis"));
+const OnBilgilendirme = lazy(() => import("@/pages/on-bilgilendirme"));
+const UeberUns = lazy(() => import("@/pages/ueber-uns"));
+const Systeme = lazy(() => import("@/pages/systeme"));
+const Vorteile = lazy(() => import("@/pages/vorteile"));
+const Rechner = lazy(() => import("@/pages/rechner"));
+const FAQ = lazy(() => import("@/pages/faq"));
+const GunesPaneli = lazy(() => import("@/pages/gunes-paneli"));
+const IsiPompasi = lazy(() => import("@/pages/isi-pompasi"));
+const Klima = lazy(() => import("@/pages/klima"));
+const EnerjiDepolama = lazy(() => import("@/pages/enerji-depolama"));
+const Standorte = lazy(() => import("@/pages/standorte"));
+const InstallationAntalya = lazy(() => import("@/pages/installation-antalya"));
+const InstallationAnkara = lazy(() => import("@/pages/installation-ankara"));
+const InstallationAlanya = lazy(() => import("@/pages/installation-alanya"));
+
+// Minimal loading spinner for lazy loaded pages
+function PageLoader() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-background">
+      <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+    </div>
+  );
+}
+
 function Router() {
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/kvkk" component={KVKK} />
-      <Route path="/gizlilik" component={Gizlilik} />
-      <Route path="/cerez-politikasi" component={CerezPolitikasi} />
-      <Route path="/sartlar" component={Sartlar} />
-      <Route path="/mesafeli-satis" component={MesafeliSatis} />
-      <Route path="/on-bilgilendirme" component={OnBilgilendirme} />
-      
-      {/* About pages - all languages */}
-      {Object.values(urlPaths).map(paths => paths.about).filter((v, i, a) => a.indexOf(v) === i).map(path => (
-        <Route key={path} path={path} component={UeberUns} />
-      ))}
-      
-      {/* System pages - all languages */}
-      {Object.values(urlPaths).map(paths => paths.system).filter((v, i, a) => a.indexOf(v) === i).map(path => (
-        <Route key={path} path={path} component={Systeme} />
-      ))}
-      
-      {/* Benefits pages - all languages */}
-      {Object.values(urlPaths).map(paths => paths.benefits).filter((v, i, a) => a.indexOf(v) === i).map(path => (
-        <Route key={path} path={path} component={Vorteile} />
-      ))}
-      
-      {/* Calculator pages - all languages */}
-      {Object.values(urlPaths).map(paths => paths.calculator).filter((v, i, a) => a.indexOf(v) === i).map(path => (
-        <Route key={path} path={path} component={Rechner} />
-      ))}
-      
-      {/* FAQ pages - all languages */}
-      {Object.values(urlPaths).map(paths => paths.faq).filter((v, i, a) => a.indexOf(v) === i).map(path => (
-        <Route key={path} path={path} component={FAQ} />
-      ))}
-      
-      {/* Locations pages - all languages */}
-      {Object.values(urlPaths).map(paths => paths.locations).filter((v, i, a) => a.indexOf(v) === i).map(path => (
-        <Route key={path} path={path} component={Standorte} />
-      ))}
-      
-      {/* Installation Antalya - all languages */}
-      {Object.values(urlPaths).map(paths => paths.installationAntalya).filter((v, i, a) => a.indexOf(v) === i).map(path => (
-        <Route key={path} path={path} component={InstallationAntalya} />
-      ))}
-      
-      {/* Installation Ankara - all languages */}
-      {Object.values(urlPaths).map(paths => paths.installationAnkara).filter((v, i, a) => a.indexOf(v) === i).map(path => (
-        <Route key={path} path={path} component={InstallationAnkara} />
-      ))}
-      
-      {/* Installation Alanya - all languages */}
-      {Object.values(urlPaths).map(paths => paths.installationAlanya).filter((v, i, a) => a.indexOf(v) === i).map(path => (
-        <Route key={path} path={path} component={InstallationAlanya} />
-      ))}
-      
-      {/* Solar Panel pages - all languages */}
-      {Object.values(urlPaths).map(paths => paths.solarPanel).filter((v, i, a) => a.indexOf(v) === i).map(path => (
-        <Route key={path} path={path} component={GunesPaneli} />
-      ))}
-      
-      {/* Heat Pump pages - all languages */}
-      {Object.values(urlPaths).map(paths => paths.heatPump).filter((v, i, a) => a.indexOf(v) === i).map(path => (
-        <Route key={path} path={path} component={IsiPompasi} />
-      ))}
-      
-      {/* Air Conditioning pages - all languages */}
-      {Object.values(urlPaths).map(paths => paths.airConditioning).filter((v, i, a) => a.indexOf(v) === i).map(path => (
-        <Route key={path} path={path} component={Klima} />
-      ))}
-      
-      {/* Battery Storage pages - all languages */}
-      {Object.values(urlPaths).map(paths => paths.batteryStorage).filter((v, i, a) => a.indexOf(v) === i).map(path => (
-        <Route key={path} path={path} component={EnerjiDepolama} />
-      ))}
-      
-      <Route component={NotFound} />
-    </Switch>
+    <Suspense fallback={<PageLoader />}>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/kvkk" component={KVKK} />
+        <Route path="/gizlilik" component={Gizlilik} />
+        <Route path="/cerez-politikasi" component={CerezPolitikasi} />
+        <Route path="/sartlar" component={Sartlar} />
+        <Route path="/mesafeli-satis" component={MesafeliSatis} />
+        <Route path="/on-bilgilendirme" component={OnBilgilendirme} />
+        
+        {/* About pages - all languages */}
+        {Object.values(urlPaths).map(paths => paths.about).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+          <Route key={path} path={path} component={UeberUns} />
+        ))}
+        
+        {/* System pages - all languages */}
+        {Object.values(urlPaths).map(paths => paths.system).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+          <Route key={path} path={path} component={Systeme} />
+        ))}
+        
+        {/* Benefits pages - all languages */}
+        {Object.values(urlPaths).map(paths => paths.benefits).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+          <Route key={path} path={path} component={Vorteile} />
+        ))}
+        
+        {/* Calculator pages - all languages */}
+        {Object.values(urlPaths).map(paths => paths.calculator).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+          <Route key={path} path={path} component={Rechner} />
+        ))}
+        
+        {/* FAQ pages - all languages */}
+        {Object.values(urlPaths).map(paths => paths.faq).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+          <Route key={path} path={path} component={FAQ} />
+        ))}
+        
+        {/* Locations pages - all languages */}
+        {Object.values(urlPaths).map(paths => paths.locations).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+          <Route key={path} path={path} component={Standorte} />
+        ))}
+        
+        {/* Installation Antalya - all languages */}
+        {Object.values(urlPaths).map(paths => paths.installationAntalya).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+          <Route key={path} path={path} component={InstallationAntalya} />
+        ))}
+        
+        {/* Installation Ankara - all languages */}
+        {Object.values(urlPaths).map(paths => paths.installationAnkara).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+          <Route key={path} path={path} component={InstallationAnkara} />
+        ))}
+        
+        {/* Installation Alanya - all languages */}
+        {Object.values(urlPaths).map(paths => paths.installationAlanya).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+          <Route key={path} path={path} component={InstallationAlanya} />
+        ))}
+        
+        {/* Solar Panel pages - all languages */}
+        {Object.values(urlPaths).map(paths => paths.solarPanel).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+          <Route key={path} path={path} component={GunesPaneli} />
+        ))}
+        
+        {/* Heat Pump pages - all languages */}
+        {Object.values(urlPaths).map(paths => paths.heatPump).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+          <Route key={path} path={path} component={IsiPompasi} />
+        ))}
+        
+        {/* Air Conditioning pages - all languages */}
+        {Object.values(urlPaths).map(paths => paths.airConditioning).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+          <Route key={path} path={path} component={Klima} />
+        ))}
+        
+        {/* Energy Storage pages - all languages */}
+        {Object.values(urlPaths).map(paths => paths.batteryStorage).filter((v, i, a) => a.indexOf(v) === i).map(path => (
+          <Route key={path} path={path} component={EnerjiDepolama} />
+        ))}
+        
+        <Route component={NotFound} />
+      </Switch>
+    </Suspense>
   );
 }
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <LanguageProvider>
-        <TooltipProvider>
-          <Toaster />
+      <TooltipProvider>
+        <LanguageProvider>
           <Router />
           <CookieBanner />
-        </TooltipProvider>
-      </LanguageProvider>
+          <Toaster />
+        </LanguageProvider>
+      </TooltipProvider>
     </QueryClientProvider>
   );
 }
