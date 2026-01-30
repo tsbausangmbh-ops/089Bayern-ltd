@@ -581,7 +581,7 @@ export default function ProblemSolverSection() {
               <div className="relative h-64 md:h-auto">
                 <img 
                   src={businessHandshakeImage} 
-                  alt="Geschäftsabschluss im Büro" 
+                  alt="089 Bayern profesyonel danışmanlık - enerji sistemi anlaşması Antalya ofisi" 
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />

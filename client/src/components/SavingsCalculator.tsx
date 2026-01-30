@@ -268,7 +268,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
           <div className="flex items-center justify-center gap-3 mb-6">
             <img 
               src={logoImage} 
-              alt="089 Bayern Logo" 
+              alt="089 Bayern Logo - Alman Enerji Sistemleri Türkiye" 
               className="h-12 w-auto object-contain"
             />
             <div className="text-left">

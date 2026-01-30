@@ -911,7 +911,7 @@ export default function InstallationAlanya() {
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center" data-testid="section-hero">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Villa with solar panels" className="w-full h-full object-cover" />
+          <img src={heroImage} alt="089 Bayern güneş paneli kurulumu Alanya villası - 4'ü 1 arada enerji sistemi Akdeniz" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         </div>
         

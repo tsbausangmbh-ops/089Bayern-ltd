@@ -145,7 +145,7 @@ export default function BenefitsSection() {
         <div className="mb-8 rounded-2xl overflow-hidden">
           <img 
             src={happyCustomerImage} 
-            alt="Zufriedene Kunden" 
+            alt="089 Bayern mutlu müşteriler - Antalya'da başarılı enerji sistemi kurulumu" 
             className="w-full h-64 md:h-80 object-cover"
             loading="lazy"
           />

@@ -621,7 +621,7 @@ export default function Vorteile() {
             <div className="rounded-xl overflow-hidden shadow-xl mx-auto max-w-4xl w-full">
               <img 
                 src={consultationActionImage} 
-                alt="Energieberater zeigt Einsparungen - Handlungsbedarf" 
+                alt="089 Bayern enerji danışmanı tasarruf hesabı gösteriyor - profesyonel danışmanlık Antalya" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 data-testid="img-consultation-action"
