@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { useLanguage } from "@/lib/LanguageContext";
 
 interface SEOHeadProps {
@@ -452,172 +452,164 @@ const seoData = {
 
 export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
   const { language } = useLanguage();
+  
+  const data = seoData[language]?.[page] || seoData.tr[page];
+  const siteName = seoData[language]?.siteName || seoData.tr.siteName;
+  
+  if (!data) return null;
 
-  useEffect(() => {
-    const data = seoData[language]?.[page] || seoData.tr[page];
-    const siteName = seoData[language]?.siteName || seoData.tr.siteName;
-    
-    if (data) {
-      document.title = pageTitle || data.title;
-      
-      const updateMetaTag = (name: string, content: string, property = false) => {
-        const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
-        let meta = document.querySelector(selector) as HTMLMetaElement;
-        if (!meta) {
-          meta = document.createElement('meta');
-          if (property) {
-            meta.setAttribute('property', name);
-          } else {
-            meta.setAttribute('name', name);
-          }
-          document.head.appendChild(meta);
+  const title = pageTitle || data.title;
+  const locale = language === 'tr' ? 'tr_TR' : language === 'de' ? 'de_DE' : language === 'ru' ? 'ru_RU' : language === 'uk' ? 'uk_UA' : language === 'ar' ? 'ar_SA' : language === 'hr' ? 'hr_HR' : 'en_US';
+  const inLanguage = language === "tr" ? "tr-TR" : language === "de" ? "de-DE" : language === "ru" ? "ru-RU" : language === "uk" ? "uk-UA" : language === "ar" ? "ar-SA" : language === "hr" ? "hr-HR" : "en-US";
+  
+  const pageNames: Record<string, Record<string, string>> = {
+    home: { tr: "Ana Sayfa", de: "Startseite", en: "Home", ru: "Главная", uk: "Головна", ar: "الرئيسية", hr: "Početna" },
+    systeme: { tr: "4'ü 1 Arada Sistem", de: "4-in-1 System", en: "4-in-1 System", ru: "Система 4-в-1", uk: "Система 4-в-1", ar: "نظام 4 في 1", hr: "4-u-1 Sustav" },
+    vorteile: { tr: "Avantajlar", de: "Vorteile", en: "Benefits", ru: "Преимущества", uk: "Переваги", ar: "المزايا", hr: "Prednosti" },
+    rechner: { tr: "Tasarruf Hesaplayıcı", de: "Einsparungsrechner", en: "Savings Calculator", ru: "Калькулятор", uk: "Калькулятор", ar: "الحاسبة", hr: "Kalkulator" },
+    faq: { tr: "Sıkça Sorulan Sorular", de: "Häufige Fragen", en: "FAQ", ru: "Вопросы", uk: "Питання", ar: "الأسئلة", hr: "Pitanja" },
+    "ueber-uns": { tr: "Hakkımızda", de: "Über Uns", en: "About Us", ru: "О нас", uk: "Про нас", ar: "عنا", hr: "O nama" },
+    "installation-antalya": { tr: "Kurulum Antalya", de: "Installation Antalya", en: "Installation Antalya", ru: "Установка Анталья", uk: "Встановлення Анталія", ar: "تركيب أنطاليا", hr: "Instalacija Antalya" },
+    "installation-ankara": { tr: "Kurulum Ankara", de: "Installation Ankara", en: "Installation Ankara", ru: "Установка Анкара", uk: "Встановлення Анкара", ar: "تركيب أنقرة", hr: "Instalacija Ankara" },
+    "installation-alanya": { tr: "Kurulum Alanya", de: "Installation Alanya", en: "Installation Alanya", ru: "Установка Алания", uk: "Встановлення Аланія", ar: "تركيب ألانيا", hr: "Instalacija Alanya" }
+  };
+
+  const breadcrumbItems = [
+    { "@type": "ListItem", "position": 1, "name": pageNames.home[language] || "Ana Sayfa", "item": "https://089bayern.com" }
+  ];
+  
+  if (page !== "home") {
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": pageNames[page]?.[language] || pageNames[page]?.tr || data.title,
+      "item": `https://089bayern.com/${page === "ueber-uns" ? (language === "tr" ? "hakkimizda" : page) : page}`
+    });
+  }
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://089bayern.com/#organization",
+        "name": language === "tr" ? "089 Bayern Enerji Sistemleri" : "089 Bayern Energiesysteme",
+        "description": data.description,
+        "url": "https://089bayern.com",
+        "telephone": "+90-507-183-2036",
+        "email": "info@089bayern.com",
+        "image": "https://089bayern.com/og-image.jpg",
+        "logo": "https://089bayern.com/logo.png",
+        "foundingDate": "2020",
+        "slogan": language === "tr" ? "Alman Mühendisliği ile %70 Enerji Tasarrufu" : "70% Energieeinsparung mit deutscher Ingenieursqualität",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Antalya Merkez",
+          "addressLocality": "Antalya",
+          "addressRegion": "Akdeniz",
+          "postalCode": "07000",
+          "addressCountry": "TR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 36.8969,
+          "longitude": 30.7133
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Antalya" },
+          { "@type": "City", "name": "Alanya" },
+          { "@type": "City", "name": "Kemer" },
+          { "@type": "City", "name": "Belek" },
+          { "@type": "City", "name": "Side" },
+          { "@type": "City", "name": "Manavgat" },
+          { "@type": "City", "name": "Mahmutlar" },
+          { "@type": "City", "name": "Fethiye" },
+          { "@type": "City", "name": "Bodrum" },
+          { "@type": "City", "name": "Muğla" },
+          { "@type": "City", "name": "İzmir" },
+          { "@type": "City", "name": "Ankara" }
+        ],
+        "priceRange": "€€€",
+        "currenciesAccepted": "EUR, TRY, USD",
+        "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00" }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "500",
+          "reviewCount": "487"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": language === "tr" ? "Enerji Sistemleri" : "Energy Systems",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Güneş Paneli Kurulumu" : "Solar Panel Installation", "description": language === "tr" ? "Profesyonel güneş enerjisi sistemi kurulumu" : "Professional solar energy system installation" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Vaillant Isı Pompası" : "Vaillant Heat Pump", "description": language === "tr" ? "Alman kalitesi ısı pompası kurulumu" : "German quality heat pump installation" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Samsung Klima Sistemi" : "Samsung Air Conditioning", "description": language === "tr" ? "Samsung yetkili klima kurulumu" : "Samsung authorized AC installation" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Enerji Depolama Bataryası" : "Battery Storage System", "description": language === "tr" ? "Lityum iyon enerji depolama" : "Lithium-ion energy storage" } }
+          ]
         }
-        meta.content = content;
-      };
-
-      updateMetaTag('description', data.description);
-      updateMetaTag('keywords', data.keywords);
-      updateMetaTag('og:title', pageTitle || data.title, true);
-      updateMetaTag('og:description', data.description, true);
-      updateMetaTag('og:site_name', siteName, true);
-      updateMetaTag('og:type', 'website', true);
-      updateMetaTag('og:locale', language === 'tr' ? 'tr_TR' : language === 'de' ? 'de_DE' : language === 'ru' ? 'ru_RU' : language === 'uk' ? 'uk_UA' : language === 'ar' ? 'ar_SA' : language === 'hr' ? 'hr_HR' : 'en_US', true);
-      updateMetaTag('twitter:card', 'summary_large_image');
-      updateMetaTag('twitter:title', pageTitle || data.title);
-      updateMetaTag('twitter:description', data.description);
-      updateMetaTag('geo.region', 'TR-07');
-      updateMetaTag('geo.placename', 'Antalya');
-      updateMetaTag('geo.position', '36.8969;30.7133');
-      updateMetaTag('ICBM', '36.8969, 30.7133');
-
-      const existingSchemas = document.querySelectorAll('script[data-seo-head="true"]');
-      existingSchemas.forEach(s => s.remove());
-      
-      const pageNames: Record<string, Record<string, string>> = {
-        home: { tr: "Ana Sayfa", de: "Startseite", en: "Home", ru: "Главная", uk: "Головна", ar: "الرئيسية", hr: "Početna" },
-        systeme: { tr: "4'ü 1 Arada Sistem", de: "4-in-1 System", en: "4-in-1 System", ru: "Система 4-в-1", uk: "Система 4-в-1", ar: "نظام 4 في 1", hr: "4-u-1 Sustav" },
-        vorteile: { tr: "Avantajlar", de: "Vorteile", en: "Benefits", ru: "Преимущества", uk: "Переваги", ar: "المزايا", hr: "Prednosti" },
-        rechner: { tr: "Tasarruf Hesaplayıcı", de: "Einsparungsrechner", en: "Savings Calculator", ru: "Калькулятор", uk: "Калькулятор", ar: "الحاسبة", hr: "Kalkulator" },
-        faq: { tr: "Sıkça Sorulan Sorular", de: "Häufige Fragen", en: "FAQ", ru: "Вопросы", uk: "Питання", ar: "الأسئلة", hr: "Pitanja" },
-        "ueber-uns": { tr: "Hakkımızda", de: "Über Uns", en: "About Us", ru: "О нас", uk: "Про нас", ar: "عنا", hr: "O nama" },
-        "installation-antalya": { tr: "Kurulum Antalya", de: "Installation Antalya", en: "Installation Antalya", ru: "Установка Анталья", uk: "Встановлення Анталія", ar: "تركيب أنطاليا", hr: "Instalacija Antalya" },
-        "installation-ankara": { tr: "Kurulum Ankara", de: "Installation Ankara", en: "Installation Ankara", ru: "Установка Анкара", uk: "Встановлення Анкара", ar: "تركيب أنقرة", hr: "Instalacija Ankara" },
-        "installation-alanya": { tr: "Kurulum Alanya", de: "Installation Alanya", en: "Installation Alanya", ru: "Установка Алания", uk: "Встановлення Аланія", ar: "تركيب ألانيا", hr: "Instalacija Alanya" }
-      };
-
-      const breadcrumbItems = [
-        { "@type": "ListItem", "position": 1, "name": pageNames.home[language] || "Ana Sayfa", "item": "https://089bayern.com" }
-      ];
-      
-      if (page !== "home") {
-        breadcrumbItems.push({
-          "@type": "ListItem",
-          "position": 2,
-          "name": pageNames[page]?.[language] || pageNames[page]?.tr || data.title,
-          "item": `https://089bayern.com/${page === "ueber-uns" ? (language === "tr" ? "hakkimizda" : page) : page}`
-        });
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://089bayern.com/#breadcrumb",
+        "itemListElement": breadcrumbItems
+      },
+      {
+        "@type": "WebPage",
+        "@id": `https://089bayern.com/${page}#webpage`,
+        "url": `https://089bayern.com/${page === "home" ? "" : page}`,
+        "name": title,
+        "description": data.description,
+        "isPartOf": { "@id": "https://089bayern.com/#website" },
+        "about": { "@id": "https://089bayern.com/#organization" },
+        "breadcrumb": { "@id": "https://089bayern.com/#breadcrumb" },
+        "inLanguage": inLanguage,
+        "potentialAction": {
+          "@type": "ReadAction",
+          "target": [`https://089bayern.com/${page === "home" ? "" : page}`]
+        }
       }
+    ]
+  };
 
-      const schema = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "LocalBusiness",
-            "@id": "https://089bayern.com/#organization",
-            "name": language === "tr" ? "089 Bayern Enerji Sistemleri" : "089 Bayern Energiesysteme",
-            "description": data.description,
-            "url": "https://089bayern.com",
-            "telephone": "+90-507-183-2036",
-            "email": "info@089bayern.com",
-            "image": "https://089bayern.com/og-image.jpg",
-            "logo": "https://089bayern.com/logo.png",
-            "foundingDate": "2020",
-            "slogan": language === "tr" ? "Alman Mühendisliği ile %70 Enerji Tasarrufu" : "70% Energieeinsparung mit deutscher Ingenieursqualität",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Antalya Merkez",
-              "addressLocality": "Antalya",
-              "addressRegion": "Akdeniz",
-              "postalCode": "07000",
-              "addressCountry": "TR"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 36.8969,
-              "longitude": 30.7133
-            },
-            "areaServed": [
-              { "@type": "City", "name": "Antalya" },
-              { "@type": "City", "name": "Alanya" },
-              { "@type": "City", "name": "Kemer" },
-              { "@type": "City", "name": "Belek" },
-              { "@type": "City", "name": "Side" },
-              { "@type": "City", "name": "Manavgat" },
-              { "@type": "City", "name": "Mahmutlar" },
-              { "@type": "City", "name": "Fethiye" },
-              { "@type": "City", "name": "Bodrum" },
-              { "@type": "City", "name": "Muğla" },
-              { "@type": "City", "name": "İzmir" },
-              { "@type": "City", "name": "Ankara" }
-            ],
-            "priceRange": "€€€",
-            "currenciesAccepted": "EUR, TRY, USD",
-            "paymentAccepted": "Cash, Credit Card, Bank Transfer",
-            "openingHoursSpecification": [
-              { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00" },
-              { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00" }
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "bestRating": "5",
-              "worstRating": "1",
-              "ratingCount": "500",
-              "reviewCount": "487"
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": language === "tr" ? "Enerji Sistemleri" : "Energy Systems",
-              "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Güneş Paneli Kurulumu" : "Solar Panel Installation", "description": language === "tr" ? "Profesyonel güneş enerjisi sistemi kurulumu" : "Professional solar energy system installation" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Vaillant Isı Pompası" : "Vaillant Heat Pump", "description": language === "tr" ? "Alman kalitesi ısı pompası kurulumu" : "German quality heat pump installation" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Samsung Klima Sistemi" : "Samsung Air Conditioning", "description": language === "tr" ? "Samsung yetkili klima kurulumu" : "Samsung authorized AC installation" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Enerji Depolama Bataryası" : "Battery Storage System", "description": language === "tr" ? "Lityum iyon enerji depolama" : "Lithium-ion energy storage" } }
-              ]
-            }
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://089bayern.com/#breadcrumb",
-            "itemListElement": breadcrumbItems
-          },
-          {
-            "@type": "WebPage",
-            "@id": `https://089bayern.com/${page}#webpage`,
-            "url": `https://089bayern.com/${page === "home" ? "" : page}`,
-            "name": pageTitle || data.title,
-            "description": data.description,
-            "isPartOf": { "@id": "https://089bayern.com/#website" },
-            "about": { "@id": "https://089bayern.com/#organization" },
-            "breadcrumb": { "@id": "https://089bayern.com/#breadcrumb" },
-            "inLanguage": language === "tr" ? "tr-TR" : language === "de" ? "de-DE" : language === "ru" ? "ru-RU" : language === "uk" ? "uk-UA" : language === "ar" ? "ar-SA" : language === "hr" ? "hr-HR" : "en-US",
-            "potentialAction": {
-              "@type": "ReadAction",
-              "target": [`https://089bayern.com/${page === "home" ? "" : page}`]
-            }
-          }
-        ]
-      };
+  return (
+    <Helmet>
+      <html lang={language} dir={language === 'ar' ? 'rtl' : 'ltr'} />
+      <title>{title}</title>
+      <meta name="description" content={data.description} />
+      <meta name="keywords" content={data.keywords} />
       
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.setAttribute('data-seo-head', 'true');
-      script.text = JSON.stringify(schema);
-      document.head.appendChild(script);
-    }
-  }, [language, page, pageTitle]);
-
-  return null;
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={data.description} />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:type" content="website" />
+      <meta property="og:locale" content={locale} />
+      <meta property="og:image" content="https://089bayern.com/og-image.jpg" />
+      <meta property="og:url" content={`https://089bayern.com/${page === "home" ? "" : page}`} />
+      
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={data.description} />
+      <meta name="twitter:image" content="https://089bayern.com/og-image.jpg" />
+      
+      <meta name="geo.region" content="TR-07" />
+      <meta name="geo.placename" content="Antalya" />
+      <meta name="geo.position" content="36.8969;30.7133" />
+      <meta name="ICBM" content="36.8969, 30.7133" />
+      
+      <link rel="canonical" href={`https://089bayern.com/${page === "home" ? "" : page}`} />
+      
+      <script type="application/ld+json">
+        {JSON.stringify(schema)}
+      </script>
+    </Helmet>
+  );
 }
 
 export const geoLocations = {

@@ -7,6 +7,7 @@ import { LanguageProvider } from "@/lib/LanguageContext";
 import { lazy, Suspense } from "react";
 import CookieBanner from "@/components/CookieBanner";
 import { urlPaths } from "@/lib/urlTranslations";
+import { HelmetProvider } from "react-helmet-async";
 
 // Critical: Home page loaded eagerly
 import Home from "@/pages/home";
@@ -127,15 +128,17 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <LanguageProvider>
-          <Router />
-          <CookieBanner />
-          <Toaster />
-        </LanguageProvider>
-      </TooltipProvider>
-    </QueryClientProvider>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <LanguageProvider>
+            <Router />
+            <CookieBanner />
+            <Toaster />
+          </LanguageProvider>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
   );
 }
 
