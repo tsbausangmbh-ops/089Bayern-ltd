@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, Router as WouterRouter } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -7,6 +7,12 @@ import { LanguageProvider } from "@/lib/LanguageContext";
 import { lazy, Suspense } from "react";
 import CookieBanner from "@/components/CookieBanner";
 import { urlPaths } from "@/lib/urlTranslations";
+import { navigate } from "wouter/use-browser-location";
+import { useMemo } from "react";
+
+interface AppProps {
+  ssrUrl?: string;
+}
 
 // Critical: Home page loaded eagerly
 import Home from "@/pages/home";
@@ -42,7 +48,7 @@ function PageLoader() {
   );
 }
 
-function Router() {
+function Routes() {
   return (
     <Suspense fallback={<PageLoader />}>
       <Switch>
@@ -125,14 +131,27 @@ function Router() {
   );
 }
 
-function App() {
+function App({ ssrUrl }: AppProps) {
+  const ssrHook = useMemo(() => {
+    if (ssrUrl) {
+      return (): [string, (path: string) => void] => [ssrUrl, navigate];
+    }
+    return undefined;
+  }, [ssrUrl]);
+
+  const RouterWrapper = ssrHook ? 
+    ({ children }: { children: React.ReactNode }) => <WouterRouter hook={ssrHook}>{children}</WouterRouter> : 
+    ({ children }: { children: React.ReactNode }) => <>{children}</>;
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <LanguageProvider>
-          <Router />
-          <CookieBanner />
-          <Toaster />
+          <RouterWrapper>
+            <Routes />
+            <CookieBanner />
+            <Toaster />
+          </RouterWrapper>
         </LanguageProvider>
       </TooltipProvider>
     </QueryClientProvider>
