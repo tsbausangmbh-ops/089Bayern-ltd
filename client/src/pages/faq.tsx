@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -11,6 +11,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import FAQSchema from "@/components/FAQSchema";
 import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
@@ -475,9 +476,25 @@ export default function FAQ() {
     { icon: HelpCircle, question: c.faq20Question, answer: c.faq20Answer, color: "from-primary to-accent" },
   ];
 
+  const faqSchemaItems = useMemo(() => faqs.map(faq => ({
+    question: faq.question,
+    answer: faq.answer
+  })), [faqs]);
+
+  const faqUrls: Record<string, string> = {
+    tr: "https://089bayern.com/sss",
+    de: "https://089bayern.com/faq",
+    en: "https://089bayern.com/faq",
+    ru: "https://089bayern.com/voprosy",
+    uk: "https://089bayern.com/pytannya",
+    ar: "https://089bayern.com/asila",
+    hr: "https://089bayern.com/pitanja"
+  };
+
   return (
     <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-faq">
       <SEOHead page="faq" />
+      <FAQSchema faqs={faqSchemaItems} pageUrl={faqUrls[language] || faqUrls.tr} />
       <Header onCtaClick={goToContact} />
       
       <section className="relative pt-16 sm:pt-20 pb-6 sm:pb-8 overflow-hidden" data-testid="section-faq-hero">

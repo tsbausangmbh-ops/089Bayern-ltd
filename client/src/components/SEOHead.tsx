@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useLanguage } from "@/lib/LanguageContext";
+import { urlPaths, type UrlPaths } from "@/lib/urlTranslations";
+import type { Language } from "@/lib/translations";
 
 interface SEOHeadProps {
   page: "home" | "systeme" | "vorteile" | "rechner" | "faq" | "ueber-uns" | "team" | "legal" | "installation-antalya" | "installation-ankara" | "installation-alanya" | "standorte";
@@ -566,6 +568,8 @@ export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
         "url": `https://089bayern.com/${page === "home" ? "" : page}`,
         "name": title,
         "description": data.description,
+        "datePublished": "2024-01-01",
+        "dateModified": "2026-02-01",
         "isPartOf": { "@id": "https://089bayern.com/#website" },
         "about": { "@id": "https://089bayern.com/#organization" },
         "breadcrumb": { "@id": "https://089bayern.com/#breadcrumb" },
@@ -603,7 +607,44 @@ export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
       <meta name="geo.position" content="36.8969;30.7133" />
       <meta name="ICBM" content="36.8969, 30.7133" />
       
-      <link rel="canonical" href={`https://089bayern.com/${page === "home" ? "" : page}`} />
+      {(() => {
+        const pageToUrlKey: Record<string, keyof UrlPaths | null> = {
+          home: null,
+          systeme: "system",
+          vorteile: "benefits",
+          rechner: "calculator",
+          faq: "faq",
+          "ueber-uns": "about",
+          "installation-antalya": "installationAntalya",
+          "installation-alanya": "installationAlanya",
+          "installation-ankara": "installationAnkara",
+          standorte: "locations"
+        };
+        
+        const urlKey = pageToUrlKey[page];
+        const getPath = (lang: Language) => {
+          if (page === "home") return "";
+          if (!urlKey) return page;
+          return urlPaths[lang]?.[urlKey]?.slice(1) || page;
+        };
+        
+        const currentPath = getPath(language as Language);
+        const canonicalUrl = `https://089bayern.com/${currentPath}`;
+        
+        return (
+          <>
+            <link rel="canonical" href={canonicalUrl} />
+            <link rel="alternate" hrefLang="tr" href={`https://089bayern.com/${getPath("tr")}`} />
+            <link rel="alternate" hrefLang="de" href={`https://089bayern.com/${getPath("de")}`} />
+            <link rel="alternate" hrefLang="en" href={`https://089bayern.com/${getPath("en")}`} />
+            <link rel="alternate" hrefLang="ru" href={`https://089bayern.com/${getPath("ru")}`} />
+            <link rel="alternate" hrefLang="uk" href={`https://089bayern.com/${getPath("uk")}`} />
+            <link rel="alternate" hrefLang="ar" href={`https://089bayern.com/${getPath("ar")}`} />
+            <link rel="alternate" hrefLang="hr" href={`https://089bayern.com/${getPath("hr")}`} />
+            <link rel="alternate" hrefLang="x-default" href={`https://089bayern.com/${getPath("tr")}`} />
+          </>
+        );
+      })()}
       
       <script type="application/ld+json">
         {JSON.stringify(schema)}
