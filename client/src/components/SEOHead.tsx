@@ -784,6 +784,91 @@ export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
     };
   })() : null;
 
+  const installationPages = ["installation-antalya", "installation-alanya", "installation-ankara"];
+  const installationServiceData: Record<string, {
+    geo: { lat: number; lng: number };
+    areas: Record<string, string[]>;
+    officeType: Record<string, string>;
+  }> = {
+    "installation-antalya": {
+      geo: { lat: 36.8969, lng: 30.7133 },
+      areas: {
+        tr: ["Antalya Merkez", "Konyaaltı", "Muratpaşa", "Kepez", "Lara", "Kundu", "Döşemealtı", "Aksu", "Kemer", "Belek", "Serik", "Side", "Manavgat", "Alanya", "Kaş", "Finike", "Kumluca", "Demre", "Gazipaşa", "Konaklı", "Mahmutlar", "Avsallar", "Oba", "Kestel", "Kargıcak", "Çıralı", "Olimpos", "Çamyuva", "Göynük", "Beldibi", "Bogazkent", "Kadriye", "Kumköy", "Çolaklı"],
+        de: ["Antalya Zentrum", "Konyaalti", "Muratpasa", "Kepez", "Lara", "Kundu", "Dosemealti", "Aksu", "Kemer", "Belek", "Serik", "Side", "Manavgat", "Alanya", "Kas", "Finike", "Kumluca", "Demre", "Gazipasa", "Konakli", "Mahmutlar", "Avsallar", "Oba", "Kestel", "Kargicak"],
+        en: ["Antalya Center", "Konyaalti", "Muratpasa", "Kepez", "Lara", "Kundu", "Dosemealti", "Aksu", "Kemer", "Belek", "Serik", "Side", "Manavgat", "Alanya", "Kas", "Finike", "Kumluca", "Demre", "Gazipasa", "Konakli", "Mahmutlar", "Avsallar", "Oba", "Kestel", "Kargicak"]
+      },
+      officeType: { tr: "Merkez", de: "Zentrale", en: "Headquarters", ru: "Главный офис", uk: "Головний офіс", ar: "المقر الرئيسي", hr: "Sjedište" }
+    },
+    "installation-alanya": {
+      geo: { lat: 36.5437, lng: 31.9994 },
+      areas: {
+        tr: ["Alanya Merkez", "Mahmutlar", "Kestel", "Oba", "Konaklı", "Kargıcak", "Avsallar", "Türkler", "Payallar", "Gazipaşa", "Demirtaş", "Cikcilli"],
+        de: ["Alanya Zentrum", "Mahmutlar", "Kestel", "Oba", "Konakli", "Kargicak", "Avsallar", "Turkler", "Payallar", "Gazipasa", "Demirtas", "Cikcilli"],
+        en: ["Alanya Center", "Mahmutlar", "Kestel", "Oba", "Konakli", "Kargicak", "Avsallar", "Turkler", "Payallar", "Gazipasa", "Demirtas", "Cikcilli"]
+      },
+      officeType: { tr: "Şube", de: "Niederlassung", en: "Branch", ru: "Филиал", uk: "Філія", ar: "فرع", hr: "Podružnica" }
+    },
+    "installation-ankara": {
+      geo: { lat: 39.9334, lng: 32.8597 },
+      areas: {
+        tr: ["Ankara Merkez", "Çankaya", "Keçiören", "Yenimahalle", "Mamak", "Etimesgut", "Sincan", "Gölbaşı", "Pursaklar", "Altındağ", "Batıkent", "Eryaman", "İncek", "Oran", "Beştepe", "Bilkent", "Çayyolu", "Kızılay", "Tunalı Hilmi"],
+        de: ["Ankara Zentrum", "Cankaya", "Kecioren", "Yenimahalle", "Mamak", "Etimesgut", "Sincan", "Golbasi", "Pursaklar", "Altindag", "Batikent", "Eryaman", "Incek", "Oran"],
+        en: ["Ankara Center", "Cankaya", "Kecioren", "Yenimahalle", "Mamak", "Etimesgut", "Sincan", "Golbasi", "Pursaklar", "Altindag", "Batikent", "Eryaman", "Incek", "Oran"]
+      },
+      officeType: { tr: "Şube", de: "Niederlassung", en: "Branch", ru: "Филиал", uk: "Філія", ar: "فرع", hr: "Podružnica" }
+    }
+  };
+
+  const installationServiceSchema = installationPages.includes(page) ? (() => {
+    const instData = installationServiceData[page];
+    if (!instData) return null;
+    const lang = language as Language;
+    const areas = instData.areas[lang] || instData.areas.tr || instData.areas.en;
+    const cityName = page === "installation-antalya" ? "Antalya" : page === "installation-alanya" ? "Alanya" : "Ankara";
+
+    const serviceNames: Record<string, Record<string, string>> = {
+      solar: { tr: "Güneş Paneli Kurulumu", de: "Solaranlagen-Installation", en: "Solar Panel Installation", ru: "Установка солнечных панелей", uk: "Встановлення сонячних панелей", ar: "تركيب الألواح الشمسية", hr: "Instalacija solarnih panela" },
+      heatPump: { tr: "Vaillant Isı Pompası Kurulumu", de: "Vaillant Wärmepumpe Installation", en: "Vaillant Heat Pump Installation", ru: "Установка теплового насоса Vaillant", uk: "Встановлення теплового насоса Vaillant", ar: "تركيب مضخة حرارة Vaillant", hr: "Instalacija toplinske pumpe Vaillant" },
+      ac: { tr: "Samsung Klima Sistemi Kurulumu", de: "Samsung Klimaanlage Installation", en: "Samsung AC Installation", ru: "Установка кондиционера Samsung", uk: "Встановлення кондиціонера Samsung", ar: "تركيب مكيف Samsung", hr: "Instalacija Samsung klima uređaja" },
+      battery: { tr: "Batarya Depolama Sistemi Kurulumu", de: "Batteriespeicher Installation", en: "Battery Storage Installation", ru: "Установка аккумуляторной системы", uk: "Встановлення акумуляторної системи", ar: "تركيب نظام تخزين البطارية", hr: "Instalacija sustava pohrane baterije" }
+    };
+
+    const areaServedPlaces = areas.map(area => ({
+      "@type": "Place",
+      "name": area,
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": instData.geo.lat,
+        "longitude": instData.geo.lng
+      }
+    }));
+
+    const services = Object.keys(serviceNames).map((key) => ({
+      "@type": "Service",
+      "@id": `${pageUrl}#service-${key}`,
+      "name": serviceNames[key][lang] || serviceNames[key].tr,
+      "provider": { "@id": "https://089bayern.com/#organization" },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": cityName,
+          "containedInPlace": { "@type": "Country", "name": "Türkiye" }
+        },
+        ...areaServedPlaces
+      ],
+      "serviceType": key === "solar" ? "Solar Energy Installation" : key === "heatPump" ? "Heat Pump Installation" : key === "ac" ? "Air Conditioning Installation" : "Battery Storage Installation",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": key === "solar" ? "8000" : key === "heatPump" ? "12000" : key === "ac" ? "3000" : "6000",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock"
+      }
+    }));
+
+    return services;
+  })() : null;
+
   const graphItems: Record<string, unknown>[] = [
     {
       "@type": "WebSite",
@@ -907,6 +992,47 @@ export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
     graphItems.push(currentProductSchema);
   }
 
+  if (installationServiceSchema) {
+    installationServiceSchema.forEach(s => graphItems.push(s));
+  }
+
+  const ogImageMap: Record<string, string> = {
+    home: "https://089bayern.com/images/hero-villa-solar.webp",
+    systeme: "https://089bayern.com/images/hero-system.webp",
+    vorteile: "https://089bayern.com/images/hero-benefits.webp",
+    rechner: "https://089bayern.com/images/hero-calculator.webp",
+    faq: "https://089bayern.com/images/hero-faq.webp",
+    "ueber-uns": "https://089bayern.com/images/hero-about.webp",
+    team: "https://089bayern.com/images/hero-about.webp",
+    "installation-antalya": "https://089bayern.com/images/hero-antalya.webp",
+    "installation-alanya": "https://089bayern.com/images/hero-alanya.webp",
+    "installation-ankara": "https://089bayern.com/images/hero-ankara.webp",
+    "gunes-paneli": "https://089bayern.com/images/hero-solar-panel.webp",
+    "isi-pompasi": "https://089bayern.com/images/hero-heat-pump.webp",
+    klima: "https://089bayern.com/images/hero-climate.webp",
+    "enerji-depolama": "https://089bayern.com/images/hero-battery-storage.webp",
+    standorte: "https://089bayern.com/images/hero-villa-solar.webp",
+    legal: "https://089bayern.com/images/hero-villa-solar.webp"
+  };
+  const ogImage = ogImageMap[page] || "https://089bayern.com/images/hero-villa-solar.webp";
+
+  const geoData = page === "installation-ankara"
+    ? { region: "TR-06", placename: "Ankara, Türkiye", lat: "39.9334", lng: "32.8597" }
+    : page === "installation-alanya"
+    ? { region: "TR-07", placename: "Alanya, Türkiye", lat: "36.5437", lng: "31.9994" }
+    : { region: "TR-07", placename: "Antalya, Türkiye", lat: "36.8969", lng: "30.7133" };
+
+  const pagesWithSpeakable = ["home", "systeme", "vorteile", "gunes-paneli", "isi-pompasi", "klima", "enerji-depolama", "installation-antalya", "installation-alanya", "installation-ankara"];
+  if (pagesWithSpeakable.includes(page)) {
+    const webPageSchema = graphItems.find((item) => (item as Record<string, string>)["@type"] === "WebPage");
+    if (webPageSchema) {
+      (webPageSchema as Record<string, unknown>)["speakable"] = {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2"]
+      };
+    }
+  }
+
   const schema = {
     "@context": "https://schema.org",
     "@graph": graphItems
@@ -935,19 +1061,24 @@ export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
       <meta property="og:locale:alternate" content="ar_SA" />
       <meta property="og:locale:alternate" content="hr_HR" />
       <meta property="og:country-name" content="TR" />
-      <meta property="og:image" content="https://089bayern.com/og-image.jpg" />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:alt" content={data.description.substring(0, 120)} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/webp" />
       <meta property="og:url" content={pageUrl} />
       
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={data.description} />
-      <meta name="twitter:image" content="https://089bayern.com/og-image.jpg" />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image:alt" content={data.description.substring(0, 120)} />
       
-      <meta name="geo.region" content="TR-07" />
-      <meta name="geo.placename" content="Antalya, Türkiye" />
-      <meta name="geo.position" content="36.8969;30.7133" />
+      <meta name="geo.region" content={geoData.region} />
+      <meta name="geo.placename" content={geoData.placename} />
+      <meta name="geo.position" content={`${geoData.lat};${geoData.lng}`} />
       <meta name="geo.country" content="TR" />
-      <meta name="ICBM" content="36.8969, 30.7133" />
+      <meta name="ICBM" content={`${geoData.lat}, ${geoData.lng}`} />
       <meta name="distribution" content="global" />
       <meta name="target" content="TR" />
       <meta name="audience" content="all" />

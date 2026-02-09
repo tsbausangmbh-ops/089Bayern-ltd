@@ -11,6 +11,7 @@ Crawl-delay: 1
 Host: https://089bayern.com
 Sitemap: https://089bayern.com/sitemap-index.xml
 Sitemap: https://089bayern.com/sitemap.xml
+Sitemap: https://089bayern.com/image-sitemap.xml
 Sitemap: https://089bayern.com/ai.sitemap.xml
 
 # Google (Priority for Turkey / google.com.tr)
@@ -105,4 +106,4 @@ Allow: /
 # vaillant turkiye, samsung klima, enerji tasarrufu
 # 4-in-1 enerji sistemi, solar panel fiyat 2026
 
-# SCHEMA.ORG: LocalBusiness, Organization, FAQPage, Product, Person, BreadcrumbList, WebPage, WebSite, Service, Country
+# SCHEMA.ORG: LocalBusiness, Organization, FAQPage, Product, Person, BreadcrumbList, WebPage, WebSite, Service, ServiceArea, SpeakableSpecification, Country
