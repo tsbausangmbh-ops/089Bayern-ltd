@@ -7,12 +7,13 @@ User-agent: *
 Allow: /
 Crawl-delay: 1
 
-# Sitemaps
+# Host & Sitemaps
+Host: https://089bayern.com
 Sitemap: https://089bayern.com/sitemap-index.xml
 Sitemap: https://089bayern.com/sitemap.xml
 Sitemap: https://089bayern.com/ai.sitemap.xml
 
-# Google (Priority for Turkey)
+# Google (Priority for Turkey / google.com.tr)
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
@@ -86,14 +87,17 @@ Allow: /
 # SIRKET: 089 Bayern Enerji Sistemleri
 # TIP: Yerel Isletme, Enerji Sirketi, Solar Kurulucu
 # MERKEZ: Antalya, Turkiye (TR-07)
+# ULKE: Turkiye (TR) - Hedef: google.com.tr
+# GEO: 36.8969, 30.7133 (Antalya)
 # TELEFON: +90 507 183 2036
 # EMAIL: info@089bayern.com
 # WEB: https://089bayern.com
+# DILLER: tr (birincil), de, en, ru, uk, ar, hr
+# VARSAYILAN-DIL: Turkce (tr-TR)
 
 # URUNLER: Gunes Paneli, Isi Pompasi, Klima, Enerji Depolama
 # MARKALAR: Vaillant, Samsung
-# DILLER: tr, de, en, ru, uk, ar, hr
-# HEDEF: Villa sahipleri, Akdeniz bolgesi
+# HEDEF KITLE: Villa sahipleri, Akdeniz bolgesi, Antalya, Alanya, Ankara
 # SAYFA SAYISI: 95+ (7 dil, 13 sayfa + yasal)
 
 # ANAHTAR KELIMELER (TR):
@@ -101,4 +105,4 @@ Allow: /
 # vaillant turkiye, samsung klima, enerji tasarrufu
 # 4-in-1 enerji sistemi, solar panel fiyat 2026
 
-# SCHEMA.ORG: LocalBusiness, Organization, FAQPage, Product, Person, BreadcrumbList, WebPage, Service
+# SCHEMA.ORG: LocalBusiness, Organization, FAQPage, Product, Person, BreadcrumbList, WebPage, WebSite, Service, Country

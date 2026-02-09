@@ -813,9 +813,13 @@ export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
         "@type": "PostalAddress",
         "streetAddress": "Antalya Merkez",
         "addressLocality": "Antalya",
-        "addressRegion": "Akdeniz",
+        "addressRegion": "Antalya",
         "postalCode": "07000",
-        "addressCountry": "TR"
+        "addressCountry": {
+          "@type": "Country",
+          "name": "Türkiye",
+          "identifier": "TR"
+        }
       },
       "geo": {
         "@type": "GeoCoordinates",
@@ -915,11 +919,22 @@ export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
       <meta name="description" content={data.description} />
       <meta name="keywords" content={data.keywords} />
       
+      <meta httpEquiv="content-language" content={inLanguage} />
+      <meta name="content-language" content={inLanguage} />
+      
       <meta property="og:title" content={title} />
       <meta property="og:description" content={data.description} />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content={locale} />
+      <meta property="og:locale:alternate" content="tr_TR" />
+      <meta property="og:locale:alternate" content="de_DE" />
+      <meta property="og:locale:alternate" content="en_US" />
+      <meta property="og:locale:alternate" content="ru_RU" />
+      <meta property="og:locale:alternate" content="uk_UA" />
+      <meta property="og:locale:alternate" content="ar_SA" />
+      <meta property="og:locale:alternate" content="hr_HR" />
+      <meta property="og:country-name" content="TR" />
       <meta property="og:image" content="https://089bayern.com/og-image.jpg" />
       <meta property="og:url" content={pageUrl} />
       
@@ -929,9 +944,13 @@ export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
       <meta name="twitter:image" content="https://089bayern.com/og-image.jpg" />
       
       <meta name="geo.region" content="TR-07" />
-      <meta name="geo.placename" content="Antalya" />
+      <meta name="geo.placename" content="Antalya, Türkiye" />
       <meta name="geo.position" content="36.8969;30.7133" />
+      <meta name="geo.country" content="TR" />
       <meta name="ICBM" content="36.8969, 30.7133" />
+      <meta name="distribution" content="global" />
+      <meta name="target" content="TR" />
+      <meta name="audience" content="all" />
       
       <link rel="canonical" href={pageUrl} />
       <link rel="alternate" hrefLang="tr" href={`https://089bayern.com/${getPath("tr")}`} />
