@@ -22,8 +22,8 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
         className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-background" />
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-accent/10" />
+      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 md:px-8 text-center pt-2 sm:pt-4 pb-8 sm:pb-12">
         <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 md:gap-3 mb-3 sm:mb-4">
