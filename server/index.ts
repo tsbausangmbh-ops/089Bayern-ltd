@@ -2,9 +2,7 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
-
-// @ts-ignore - prerender-node has no type declarations
-import prerender from "prerender-node";
+import https from "https";
 
 const app = express();
 const httpServer = createServer(app);
@@ -31,47 +29,106 @@ app.get("/health", (req, res) => {
 });
 
 // Prerender.io middleware for SEO - renders JS pages for search engine crawlers
+const CRAWLER_USER_AGENTS = [
+  'googlebot',
+  'Google-InspectionTool',
+  'AdsBot-Google',
+  'APIs-Google',
+  'Mediapartners-Google',
+  'bingbot',
+  'BingPreview',
+  'msnbot',
+  'yandex',
+  'baiduspider',
+  'facebookexternalhit',
+  'twitterbot',
+  'linkedinbot',
+  'whatsapp',
+  'slackbot',
+  'telegrambot',
+  'Applebot',
+  'duckduckbot',
+  'GPTBot',
+  'ChatGPT-User',
+  'Claude-Web',
+  'PerplexityBot',
+  'Bytespider',
+  'OAI-SearchBot',
+  'AhrefsBot',
+  'SemrushBot',
+  'DotBot',
+  'rogerbot',
+  'Screaming Frog SEO Spider',
+  'MJ12bot',
+  'PetalBot'
+];
+
+function isCrawler(userAgent: string): boolean {
+  const ua = userAgent.toLowerCase();
+  return CRAWLER_USER_AGENTS.some(bot => ua.includes(bot.toLowerCase()));
+}
+
 if (process.env.PRERENDER_TOKEN) {
-  prerender.set('prerenderToken', process.env.PRERENDER_TOKEN);
-  prerender.set('protocol', 'https');
-  
-  // Reset default crawlers and set explicit list (avoid AppleWebKit false positives)
-  prerender.crawlerUserAgents = [
-    'googlebot',
-    'Google-InspectionTool',
-    'AdsBot-Google',
-    'APIs-Google',
-    'Mediapartners-Google',
-    'bingbot',
-    'BingPreview',
-    'msnbot',
-    'yandex',
-    'baiduspider',
-    'facebookexternalhit',
-    'twitterbot',
-    'linkedinbot',
-    'whatsapp',
-    'slackbot',
-    'telegrambot',
-    'Applebot',
-    'duckduckbot',
-    'GPTBot',
-    'ChatGPT-User',
-    'Claude-Web',
-    'PerplexityBot',
-    'Bytespider',
-    'OAI-SearchBot',
-    'AhrefsBot',
-    'SemrushBot',
-    'DotBot',
-    'rogerbot',
-    'Screaming Frog SEO Spider',
-    'MJ12bot',
-    'PetalBot'
-  ];
-  
-  app.use(prerender);
-  console.log('[Prerender] SSR activated for search/social/AI crawlers');
+  const prerenderToken = process.env.PRERENDER_TOKEN;
+
+  app.use((req: Request, res: Response, next: NextFunction) => {
+    const ua = req.headers['user-agent'] || '';
+    if (!isCrawler(ua)) return next();
+    if (req.method !== 'GET' && req.method !== 'HEAD') return next();
+    if (req.path.startsWith('/api/')) return next();
+    const ext = req.path.split('.').pop()?.toLowerCase();
+    if (ext && ['js', 'css', 'png', 'jpg', 'jpeg', 'gif', 'svg', 'ico', 'woff', 'woff2', 'ttf', 'webp', 'mp4', 'webm'].includes(ext)) return next();
+
+    const protocol = req.headers['x-forwarded-proto'] || 'https';
+    const host = req.headers['x-forwarded-host'] || req.headers['host'] || 'localhost:5000';
+    const prerenderUrl = `https://service.prerender.io/${protocol}://${host}${req.url}`;
+
+    let handled = false;
+    function fallback(reason: string) {
+      if (handled) return;
+      handled = true;
+      console.warn(`[Prerender] ${reason} for ${req.url} - serving SPA shell`);
+      prerenderReq.destroy();
+      next();
+    }
+
+    const prerenderReq = https.get(prerenderUrl, {
+      headers: {
+        'X-Prerender-Token': prerenderToken,
+        'User-Agent': ua,
+        'Accept': 'text/html',
+      },
+      timeout: 15000,
+    }, (prerenderRes: any) => {
+      if (prerenderRes.statusCode === 200) {
+        const chunks: Buffer[] = [];
+        prerenderRes.on('data', (chunk: Buffer) => { if (!handled) chunks.push(chunk); });
+        prerenderRes.on('end', () => {
+          if (handled) return;
+          const body = Buffer.concat(chunks).toString('utf-8');
+          if (body.length > 100) {
+            handled = true;
+            res.setHeader('Content-Type', 'text/html; charset=utf-8');
+            res.setHeader('X-Prerender', 'true');
+            res.status(200).send(body);
+          } else {
+            fallback('Empty response');
+          }
+        });
+        prerenderRes.on('error', () => fallback('Response stream error'));
+      } else {
+        prerenderRes.destroy();
+        fallback(`Status ${prerenderRes.statusCode}`);
+      }
+    });
+
+    prerenderReq.on('error', (err: Error) => fallback(`Network error: ${err.message}`));
+    prerenderReq.on('timeout', () => fallback('Timeout'));
+  });
+
+  console.log(`[Prerender] SSR activated for ${CRAWLER_USER_AGENTS.length} crawler types (with fallback)`);
+} else {
+  console.log('[Prerender] Disabled - no PRERENDER_TOKEN set');
 }
 
 export function log(message: string, source = "express") {
