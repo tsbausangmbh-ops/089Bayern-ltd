@@ -1168,7 +1168,7 @@ export default function InstallationAntalya() {
               <Building2 className="w-4 h-4 mr-2" />
               {c.badgeType}
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.officeTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.officeTitle}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{c.officeSubtitle}</p>
           </div>
           
@@ -1233,7 +1233,7 @@ export default function InstallationAntalya() {
       {/* Why Antalya Section */}
       <section className="py-16 bg-muted/30" data-testid="section-why-antalya">
         <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.whyAntalyaTitle}</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.whyAntalyaTitle}</h2>
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">{c.whyAntalyaSubtitle}</p>
         </div>
       </section>
@@ -1242,7 +1242,7 @@ export default function InstallationAntalya() {
       <section className="py-20" data-testid="section-nlp-benefits">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.benefitsTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.benefitsTitle}</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{c.benefitsSubtitle}</p>
           </div>
           
@@ -1250,28 +1250,28 @@ export default function InstallationAntalya() {
             <Card className="text-center p-6">
               <div className="text-4xl font-bold text-primary mb-2">{c.benefit1Stat}</div>
               <div className="text-sm text-muted-foreground mb-4">{c.benefit1StatLabel}</div>
-              <h3 className="text-xl font-bold mb-3">{c.benefit1Title}</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3">{c.benefit1Title}</h3>
               <p className="text-sm text-muted-foreground">{c.benefit1Desc}</p>
             </Card>
             
             <Card className="text-center p-6">
               <div className="text-4xl font-bold text-primary mb-2">{c.benefit2Stat}</div>
               <div className="text-sm text-muted-foreground mb-4">{c.benefit2StatLabel}</div>
-              <h3 className="text-xl font-bold mb-3">{c.benefit2Title}</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3">{c.benefit2Title}</h3>
               <p className="text-sm text-muted-foreground">{c.benefit2Desc}</p>
             </Card>
             
             <Card className="text-center p-6">
               <div className="text-4xl font-bold text-primary mb-2">{c.benefit3Stat}</div>
               <div className="text-sm text-muted-foreground mb-4">{c.benefit3StatLabel}</div>
-              <h3 className="text-xl font-bold mb-3">{c.benefit3Title}</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3">{c.benefit3Title}</h3>
               <p className="text-sm text-muted-foreground">{c.benefit3Desc}</p>
             </Card>
             
             <Card className="text-center p-6">
               <div className="text-4xl font-bold text-primary mb-2">{c.benefit4Stat}</div>
               <div className="text-sm text-muted-foreground mb-4">{c.benefit4StatLabel}</div>
-              <h3 className="text-xl font-bold mb-3">{c.benefit4Title}</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3">{c.benefit4Title}</h3>
               <p className="text-sm text-muted-foreground">{c.benefit4Desc}</p>
             </Card>
           </div>
@@ -1283,7 +1283,7 @@ export default function InstallationAntalya() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
             <Sun className="w-16 h-16 text-amber-500 mx-auto mb-4" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.climateTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.climateTitle}</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{c.climateSubtitle}</p>
           </div>
           
@@ -1292,7 +1292,7 @@ export default function InstallationAntalya() {
               <div className="w-12 h-12 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center mb-4">
                 <Sun className="w-6 h-6 text-amber-600" />
               </div>
-              <h3 className="text-xl font-bold mb-3">{c.climatePoint1Title}</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3">{c.climatePoint1Title}</h3>
               <LinkedText text={c.climatePoint1Desc} language={language} as="p" className="text-muted-foreground" />
             </div>
             
@@ -1300,7 +1300,7 @@ export default function InstallationAntalya() {
               <div className="w-12 h-12 rounded-full bg-sky-100 dark:bg-sky-900/30 flex items-center justify-center mb-4">
                 <Wind className="w-6 h-6 text-sky-600" />
               </div>
-              <h3 className="text-xl font-bold mb-3">{c.climatePoint2Title}</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3">{c.climatePoint2Title}</h3>
               <LinkedText text={c.climatePoint2Desc} language={language} as="p" className="text-muted-foreground" />
             </div>
             
@@ -1308,7 +1308,7 @@ export default function InstallationAntalya() {
               <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-orange-600" />
               </div>
-              <h3 className="text-xl font-bold mb-3">{c.climatePoint3Title}</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3">{c.climatePoint3Title}</h3>
               <LinkedText text={c.climatePoint3Desc} language={language} as="p" className="text-muted-foreground" />
             </div>
           </div>
@@ -1360,7 +1360,7 @@ export default function InstallationAntalya() {
       <section className="py-20" data-testid="section-why-4in1">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.why4in1Title}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.why4in1Title}</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto italic">{c.why4in1Subtitle}</p>
           </div>
           
@@ -1371,7 +1371,7 @@ export default function InstallationAntalya() {
                   <Zap className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">{c.why4in1Point1Title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2">{c.why4in1Point1Title}</h3>
                   <p className="text-muted-foreground">{c.why4in1Point1Desc}</p>
                 </div>
               </div>
@@ -1383,7 +1383,7 @@ export default function InstallationAntalya() {
                   <Users className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">{c.why4in1Point2Title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2">{c.why4in1Point2Title}</h3>
                   <p className="text-muted-foreground">{c.why4in1Point2Desc}</p>
                 </div>
               </div>
@@ -1395,7 +1395,7 @@ export default function InstallationAntalya() {
                   <Wallet className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">{c.why4in1Point3Title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2">{c.why4in1Point3Title}</h3>
                   <p className="text-muted-foreground">{c.why4in1Point3Desc}</p>
                 </div>
               </div>
@@ -1407,7 +1407,7 @@ export default function InstallationAntalya() {
                   <TrendingUp className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">{c.why4in1Point4Title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2">{c.why4in1Point4Title}</h3>
                   <p className="text-muted-foreground">{c.why4in1Point4Desc}</p>
                 </div>
               </div>
@@ -1420,32 +1420,32 @@ export default function InstallationAntalya() {
       <section className="py-20 bg-muted/30" data-testid="section-faq">
         <div className="max-w-4xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.faqTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.faqTitle}</h2>
           </div>
           
           <div className="space-y-4">
             <Card className="p-6">
-              <h3 className="text-lg font-bold mb-2">{c.faq1Q}</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2">{c.faq1Q}</h3>
               <LinkedText text={c.faq1A} language={language} as="p" className="text-muted-foreground" />
             </Card>
             
             <Card className="p-6">
-              <h3 className="text-lg font-bold mb-2">{c.faq2Q}</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2">{c.faq2Q}</h3>
               <LinkedText text={c.faq2A} language={language} as="p" className="text-muted-foreground" />
             </Card>
             
             <Card className="p-6">
-              <h3 className="text-lg font-bold mb-2">{c.faq3Q}</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2">{c.faq3Q}</h3>
               <LinkedText text={c.faq3A} language={language} as="p" className="text-muted-foreground" />
             </Card>
             
             <Card className="p-6">
-              <h3 className="text-lg font-bold mb-2">{c.faq4Q}</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2">{c.faq4Q}</h3>
               <LinkedText text={c.faq4A} language={language} as="p" className="text-muted-foreground" />
             </Card>
             
             <Card className="p-6">
-              <h3 className="text-lg font-bold mb-2">{c.faq5Q}</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2">{c.faq5Q}</h3>
               <LinkedText text={c.faq5A} language={language} as="p" className="text-muted-foreground" />
             </Card>
           </div>
@@ -1456,7 +1456,7 @@ export default function InstallationAntalya() {
       <section className="py-16 bg-muted/30" data-testid="section-systems">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.systemsTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.systemsTitle}</h2>
             <p className="text-lg text-muted-foreground">{c.systemsSubtitle}</p>
           </div>
           
@@ -1468,7 +1468,7 @@ export default function InstallationAntalya() {
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${system.color} flex items-center justify-center mb-4`}>
                     <system.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{system.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2">{system.title}</h3>
                   <LinkedText text={system.desc} language={language} as="p" className="text-muted-foreground text-sm mb-4" />
                   <ul className="space-y-2">
                     {system.features.map((feature, i) => (
@@ -1489,7 +1489,7 @@ export default function InstallationAntalya() {
       <section className="py-16" data-testid="section-process">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.processTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.processTitle}</h2>
             <p className="text-lg text-muted-foreground">{c.processSubtitle}</p>
           </div>
           
@@ -1500,7 +1500,7 @@ export default function InstallationAntalya() {
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <span className="text-2xl font-bold text-primary">{step.num}</span>
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">{step.title}</h3>
                   <p className="text-sm text-muted-foreground">{step.desc}</p>
                 </div>
                 {index < steps.length - 1 && (
@@ -1516,7 +1516,7 @@ export default function InstallationAntalya() {
       <section className="py-16 bg-muted/30" data-testid="section-areas">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.areasTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.areasTitle}</h2>
             <p className="text-lg text-muted-foreground">{c.areasSubtitle}</p>
           </div>
           
@@ -1535,7 +1535,7 @@ export default function InstallationAntalya() {
       <section className="py-16" data-testid="section-testimonials">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.testimonialsTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.testimonialsTitle}</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1585,7 +1585,7 @@ export default function InstallationAntalya() {
       {/* CTA Section */}
       <section className="py-16" data-testid="section-cta">
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.ctaTitle}</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.ctaTitle}</h2>
           <p className="text-lg text-muted-foreground mb-8">{c.ctaSubtitle}</p>
           
           <div className="flex flex-wrap justify-center gap-4">

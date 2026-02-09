@@ -120,7 +120,7 @@ export default function TeamWorkSection() {
             <Users className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-foreground">{t.badge}</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
             {t.title}{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
               {t.titleHighlight}

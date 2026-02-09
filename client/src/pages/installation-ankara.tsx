@@ -1130,7 +1130,7 @@ export default function InstallationAnkara() {
               <Building2 className="w-4 h-4 mr-2" />
               {c.badgeType}
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.officeTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.officeTitle}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{c.officeSubtitle}</p>
           </div>
           <Card className="max-w-3xl mx-auto">
@@ -1145,7 +1145,7 @@ export default function InstallationAnkara() {
       <section className="py-16 bg-muted/30" data-testid="section-why-ankara">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.whyAnkaraTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.whyAnkaraTitle}</h2>
             <p className="text-lg text-muted-foreground">{c.whyAnkaraSubtitle}</p>
           </div>
           
@@ -1179,7 +1179,7 @@ export default function InstallationAnkara() {
       <section className="py-16" data-testid="section-systems">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.systemsTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.systemsTitle}</h2>
             <p className="text-lg text-muted-foreground">{c.systemsSubtitle}</p>
           </div>
           
@@ -1190,7 +1190,7 @@ export default function InstallationAnkara() {
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${system.color} flex items-center justify-center mb-4`}>
                     <system.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{system.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">{system.title}</h3>
                   <p className="text-muted-foreground mb-4">{system.desc}</p>
                   <ul className="space-y-2">
                     {system.features.map((feature, i) => (
@@ -1211,7 +1211,7 @@ export default function InstallationAnkara() {
       <section className="py-20 bg-muted/30" data-testid="section-benefits">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">{c.benefitsTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">{c.benefitsTitle}</h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               {c.benefitsSubtitle}
             </p>
@@ -1233,7 +1233,7 @@ export default function InstallationAnkara() {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
+                      <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3">{benefit.title}</h3>
                       <p className="text-muted-foreground leading-relaxed mb-4">{benefit.desc}</p>
                       <div className="flex items-baseline gap-2">
                         <span className="text-2xl font-bold text-primary">{benefit.stat}</span>
@@ -1278,7 +1278,7 @@ export default function InstallationAnkara() {
       <section className="py-20" data-testid="section-why-4in1">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.why4in1Title}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.why4in1Title}</h2>
             <p className="text-lg text-muted-foreground">{c.why4in1Subtitle}</p>
           </div>
           
@@ -1296,7 +1296,7 @@ export default function InstallationAnkara() {
                       <point.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold mb-2">{point.title}</h3>
+                      <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2">{point.title}</h3>
                       <p className="text-muted-foreground leading-relaxed">{point.desc}</p>
                     </div>
                   </div>
@@ -1311,7 +1311,7 @@ export default function InstallationAnkara() {
       <section className="py-20 bg-muted/30" data-testid="section-climate">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.climateTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.climateTitle}</h2>
             <p className="text-lg text-muted-foreground">{c.climateSubtitle}</p>
           </div>
           
@@ -1326,7 +1326,7 @@ export default function InstallationAnkara() {
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
                     <point.icon className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold mb-4">{point.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold mb-4">{point.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{point.desc}</p>
                 </CardContent>
               </Card>
@@ -1339,7 +1339,7 @@ export default function InstallationAnkara() {
       <section className="py-20" data-testid="section-faq">
         <div className="max-w-4xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.faqTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.faqTitle}</h2>
           </div>
           
           <div className="space-y-4">
@@ -1352,7 +1352,7 @@ export default function InstallationAnkara() {
             ].map((faq, index) => (
               <Card key={index}>
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold mb-3 flex items-start gap-3">
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-3 flex items-start gap-3">
                     <HelpCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                     {faq.q}
                   </h3>
@@ -1368,7 +1368,7 @@ export default function InstallationAnkara() {
       <section className="py-16 bg-muted/30" data-testid="section-process">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.processTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.processTitle}</h2>
             <p className="text-lg text-muted-foreground">{c.processSubtitle}</p>
           </div>
           
@@ -1380,7 +1380,7 @@ export default function InstallationAnkara() {
                     <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                       {step.num}
                     </div>
-                    <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
+                    <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">{step.title}</h3>
                     <p className="text-muted-foreground text-sm">{step.desc}</p>
                   </CardContent>
                 </Card>
@@ -1399,7 +1399,7 @@ export default function InstallationAnkara() {
       <section className="py-16" data-testid="section-areas">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.areasTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.areasTitle}</h2>
             <p className="text-lg text-muted-foreground">{c.areasSubtitle}</p>
           </div>
           
@@ -1418,7 +1418,7 @@ export default function InstallationAnkara() {
       <section className="py-16 bg-muted/30" data-testid="section-testimonials">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">{c.testimonialsTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">{c.testimonialsTitle}</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -1451,7 +1451,7 @@ export default function InstallationAnkara() {
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground" data-testid="section-cta">
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.ctaTitle}</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.ctaTitle}</h2>
           <p className="text-xl opacity-90 mb-8">{c.ctaSubtitle}</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" variant="secondary" onClick={goToContact} data-testid="button-cta-calculator">

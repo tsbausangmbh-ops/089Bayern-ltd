@@ -128,7 +128,7 @@ export default function AiAdvisorSection() {
               <span className="text-white text-sm font-medium">{content.badge}</span>
             </div>
             
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
               {content.title}
             </h2>
             

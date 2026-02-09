@@ -23,7 +23,7 @@ export default function LogoCarousel() {
             <Award className="w-4 h-4 text-amber-400" />
             <span className="text-sm font-medium text-foreground">{t.logos.badge}</span>
           </div>
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2">
             {t.logos.title}{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
               {t.logos.titleHighlight}

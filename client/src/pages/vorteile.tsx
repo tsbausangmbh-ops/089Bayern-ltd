@@ -552,7 +552,7 @@ export default function Vorteile() {
       <section className="py-4 md:py-5 bg-muted/30" data-testid="section-stats">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.statsTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.statsTitle}</h2>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -580,7 +580,7 @@ export default function Vorteile() {
               <Sun className="w-4 h-4 mr-2" />
               {c.badge}
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               {c.freeEnergyTitle}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -641,7 +641,7 @@ export default function Vorteile() {
               <Plug className="w-4 h-4 mr-2" />
               4 in 1 System
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               {c.systemTitle}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -701,7 +701,7 @@ export default function Vorteile() {
               <Home className="w-4 h-4 mr-2" />
               Modular
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               {c.expandTitle}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -735,7 +735,7 @@ export default function Vorteile() {
       <section className="py-4 md:py-5 bg-muted/30" data-testid="section-comparison">
         <div className="max-w-5xl mx-auto px-6 md:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.comparisonTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.comparisonTitle}</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

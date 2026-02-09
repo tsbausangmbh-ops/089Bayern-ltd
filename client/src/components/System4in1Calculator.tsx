@@ -972,7 +972,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-emerald-500/30">
                   <Check className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">{t.resultsTitle}</h3>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2">{t.resultsTitle}</h3>
                 <p className="text-muted-foreground">{t.resultsSubtitle}</p>
                 <p className="text-sm text-primary mt-2">{t.locationAntalya}</p>
               </div>
@@ -1129,7 +1129,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
             <Calculator className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">{t.badge}</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
             {t.title}{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
               {t.titleHighlight}
@@ -1152,7 +1152,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
             {step === 1 && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground">{t.step1Title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground">{t.step1Title}</h3>
                   <p className="text-muted-foreground">{t.step1Subtitle}</p>
                 </div>
                 <div className="grid grid-cols-3 gap-3">
@@ -1183,7 +1183,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
             {step === 2 && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground">{t.locationStepTitle}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground">{t.locationStepTitle}</h3>
                   <p className="text-muted-foreground">{t.locationStepSubtitle}</p>
                 </div>
                 <div className="grid grid-cols-3 md:grid-cols-4 gap-3">
@@ -1223,7 +1223,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
             {step === 3 && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground">{t.step2Title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground">{t.step2Title}</h3>
                   <p className="text-muted-foreground">{t.step2Subtitle}</p>
                 </div>
                 <div>
@@ -1246,7 +1246,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
             {step === 4 && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground">{t.step3Title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground">{t.step3Title}</h3>
                   <p className="text-muted-foreground">{t.step3Subtitle}</p>
                 </div>
                 <div>
@@ -1274,7 +1274,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
             {step === 5 && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground">{t.step4Title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground">{t.step4Title}</h3>
                   <p className="text-muted-foreground">{t.step4Subtitle}</p>
                 </div>
                 <div>
@@ -1302,7 +1302,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
             {step === 6 && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground">{t.step5Title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground">{t.step5Title}</h3>
                   <p className="text-muted-foreground">{t.step5Subtitle}</p>
                 </div>
                 <div>
@@ -1330,7 +1330,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
             {step === 7 && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground">{t.step6Title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground">{t.step6Title}</h3>
                   <p className="text-muted-foreground">{t.step6Subtitle}</p>
                 </div>
                 <div>
@@ -1358,7 +1358,7 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
             {step === 8 && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground">{t.step7Title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground">{t.step7Title}</h3>
                   <p className="text-muted-foreground">{t.step7Subtitle}</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

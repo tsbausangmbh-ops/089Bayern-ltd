@@ -146,7 +146,7 @@ export default function TrustCallToAction() {
             <MessageCircle className="w-4 h-4 mr-2" />
             {c.badge}
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
             {c.title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">

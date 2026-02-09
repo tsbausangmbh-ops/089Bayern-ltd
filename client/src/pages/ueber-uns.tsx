@@ -562,7 +562,7 @@ export default function UeberUns() {
       <section className="py-8 bg-background" data-testid="section-problems">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.problemTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.problemTitle}</h2>
             <p className="text-lg text-muted-foreground">{c.problemSubtitle}</p>
           </div>
           
@@ -573,7 +573,7 @@ export default function UeberUns() {
                   <div className={`w-14 h-14 mb-4 rounded-xl bg-gradient-to-br ${problem.color} flex items-center justify-center`}>
                     <problem.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">{problem.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-3">{problem.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{problem.text}</p>
                 </CardContent>
               </Card>
@@ -590,7 +590,7 @@ export default function UeberUns() {
               <Lightbulb className="w-4 h-4 mr-2" />
               {c.solutionSubtitle}
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">{c.solutionTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">{c.solutionTitle}</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -600,7 +600,7 @@ export default function UeberUns() {
                   <div className="w-14 h-14 mb-4 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center">
                     <solution.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">{solution.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-3">{solution.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{solution.text}</p>
                 </CardContent>
               </Card>
@@ -617,7 +617,7 @@ export default function UeberUns() {
               <Building2 className="w-4 h-4 mr-2" />
               089 Bayern
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">{c.storyTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">{c.storyTitle}</h2>
           </div>
           
           <Card className="border-border/50">
@@ -641,7 +641,7 @@ export default function UeberUns() {
       <section className="py-8 bg-muted/30" data-testid="section-benefits">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">{c.benefitsTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">{c.benefitsTitle}</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -651,7 +651,7 @@ export default function UeberUns() {
                   <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-accent to-orange-600 flex items-center justify-center">
                     <benefit.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-foreground mb-2">{benefit.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-2">{benefit.title}</h3>
                   <p className="text-sm text-muted-foreground">{benefit.text}</p>
                 </CardContent>
               </Card>
@@ -666,7 +666,7 @@ export default function UeberUns() {
           <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center">
             <Heart className="w-10 h-10 text-white" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">{c.promiseTitle}</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6">{c.promiseTitle}</h2>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">{c.promiseText}</p>
         </div>
       </section>
@@ -674,7 +674,7 @@ export default function UeberUns() {
       {/* Final CTA Section */}
       <section className="py-8 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10" data-testid="section-final-cta">
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.ctaTitle}</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.ctaTitle}</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">{c.ctaText}</p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

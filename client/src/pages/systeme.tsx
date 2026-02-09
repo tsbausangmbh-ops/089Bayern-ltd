@@ -551,7 +551,7 @@ export default function Systeme() {
       <section className="py-4 md:py-5 bg-muted/30" data-testid="section-why-integrated">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.whyTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.whyTitle}</h2>
             <p className="text-lg text-muted-foreground">{c.whySubtitle}</p>
           </div>
           
@@ -578,7 +578,7 @@ export default function Systeme() {
               <Sparkles className="w-4 h-4 mr-2" />
               {t.features.badge}
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               {t.features.title}{" "}
               <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
                 {t.features.titleHighlight}
@@ -667,7 +667,7 @@ export default function Systeme() {
               <Sparkles className="w-4 h-4 mr-2" />
               {c.nlpTitle}
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               {c.nlpTitle}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -709,7 +709,7 @@ export default function Systeme() {
       <section className="py-16 md:py-20 bg-background" data-testid="section-synergy">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               {c.synergyTitle}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -746,7 +746,7 @@ export default function Systeme() {
               <HelpCircle className="w-4 h-4 mr-2" />
               FAQ
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               {c.faqTitle}
             </h2>
           </div>

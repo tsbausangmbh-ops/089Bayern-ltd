@@ -638,7 +638,7 @@ export default function IsiPompasi() {
               {c.badge}
             </Badge>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               {c.heroTitle}{" "}
               <span className="bg-gradient-to-r from-orange-400 via-red-400 to-orange-500 bg-clip-text text-transparent">
                 {c.heroHighlight}
@@ -713,7 +713,7 @@ export default function IsiPompasi() {
                 <span className="text-2xl font-bold text-white">4in1</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground">
+                <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground">
                   {language === "de" ? "Teil des 089 Bayern 4in1 Systems" : 
                    language === "en" ? "Part of 089 Bayern 4in1 System" : 
                    language === "ru" ? "Часть системы 089 Bayern 4in1" :
@@ -764,7 +764,7 @@ export default function IsiPompasi() {
       <section className="py-8 md:py-10 bg-muted/30" data-testid="section-problems">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.problemTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.problemTitle}</h2>
             <p className="text-lg text-muted-foreground">{c.problemSubtitle}</p>
           </div>
           
@@ -772,7 +772,7 @@ export default function IsiPompasi() {
             {c.problems.map((problem, index) => (
               <Card key={index} className="border-red-500/20 bg-gradient-to-br from-red-500/5 to-transparent" data-testid={`card-problem-${index}`}>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-3">{problem.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-3">{problem.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{problem.desc}</p>
                 </CardContent>
               </Card>
@@ -788,7 +788,7 @@ export default function IsiPompasi() {
               <Flame className="w-4 h-4 mr-2" />
               Vaillant
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.solutionTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.solutionTitle}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{c.solutionSubtitle}</p>
           </div>
           
@@ -803,7 +803,7 @@ export default function IsiPompasi() {
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center mb-4 shadow-lg shadow-orange-500/30">
                     <benefit.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">{benefit.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.desc}</p>
                 </CardContent>
               </Card>
@@ -840,7 +840,7 @@ export default function IsiPompasi() {
       <section className="py-8 md:py-10 bg-muted/30" data-testid="section-how-it-works">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.howItWorksTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.howItWorksTitle}</h2>
             <p className="text-lg text-muted-foreground mb-6">{c.howItWorksSubtitle}</p>
             <p className="text-foreground max-w-3xl mx-auto">{c.howItWorksText}</p>
           </div>
@@ -849,7 +849,7 @@ export default function IsiPompasi() {
             {c.steps.map((step, index) => (
               <div key={index} className="relative" data-testid={`step-${index}`}>
                 <div className="text-6xl font-bold text-orange-500/20 mb-4">{step.step}</div>
-                <h3 className="text-xl font-bold text-foreground mb-3">{step.title}</h3>
+                <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-3">{step.title}</h3>
                 <p className="text-muted-foreground">{step.desc}</p>
                 {index < c.steps.length - 1 && (
                   <ArrowRight className="hidden lg:block absolute top-8 -right-3 w-6 h-6 text-orange-500/50" />
@@ -863,7 +863,7 @@ export default function IsiPompasi() {
       <section className="py-8 md:py-10 bg-background" data-testid="section-comparison">
         <div className="max-w-4xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.comparisonTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.comparisonTitle}</h2>
           </div>
           
           <div className="overflow-x-auto">
@@ -894,7 +894,7 @@ export default function IsiPompasi() {
       <section className="py-8 md:py-10 bg-muted/30" data-testid="section-trust">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.trustTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.trustTitle}</h2>
             <p className="text-lg text-muted-foreground">{c.trustSubtitle}</p>
           </div>
           
@@ -917,7 +917,7 @@ export default function IsiPompasi() {
       <section className="py-8 md:py-10 bg-background" data-testid="section-testimonials">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.testimonialTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.testimonialTitle}</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -944,7 +944,7 @@ export default function IsiPompasi() {
       <section className="py-8 md:py-10 bg-muted/30" data-testid="section-faq">
         <div className="max-w-3xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{c.faqTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.faqTitle}</h2>
           </div>
           
           <div className="space-y-4">

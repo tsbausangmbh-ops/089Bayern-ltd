@@ -165,7 +165,7 @@ export default function Standorte() {
             <MapPin className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-white">Akdeniz Bölgesi</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
             Türkiye'de Enerji Çözümleri
           </h1>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -214,7 +214,7 @@ export default function Standorte() {
               <Building className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">Hizmet Bölgeleri</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               Bölgelerimiz
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -231,7 +231,7 @@ export default function Standorte() {
                     <div className={`w-12 h-12 rounded-xl ${region.bgColor} flex items-center justify-center mb-4`}>
                       <MapPin className={`w-6 h-6 ${region.color}`} />
                     </div>
-                    <h3 className={`text-xl font-bold mb-4 ${region.color}`}>{region.title}</h3>
+                    <h3 className={`text-base sm:text-lg md:text-xl font-bold mb-4 ${region.color}`}>{region.title}</h3>
                     <div className="flex flex-wrap gap-2">
                       {links.map((link) => (
                         <a 
@@ -256,7 +256,7 @@ export default function Standorte() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <Card className="overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5">
             <CardContent className="p-8">
-              <h3 className="text-xl font-bold text-yellow-600 mb-4 text-center">Popüler Aramalar</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-yellow-600 mb-4 text-center">Popüler Aramalar</h3>
               <div className="flex flex-wrap justify-center gap-2">
                 {seoLinks.longtail.map((link) => (
                   <a 
@@ -276,7 +276,7 @@ export default function Standorte() {
 
       <section className="py-8 bg-primary/5">
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
             Ücretsiz Enerji Analizi
           </h2>
           <p className="text-lg text-muted-foreground mb-8">

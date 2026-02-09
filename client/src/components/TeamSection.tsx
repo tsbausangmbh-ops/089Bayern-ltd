@@ -45,7 +45,7 @@ export default function TeamSection() {
             <MessageCircle className="w-4 h-4 text-amber-400" />
             <span className="text-sm font-medium text-foreground">{t.team.badge}</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
             {t.team.title}{" "}
             <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
               {t.team.titleHighlight}
@@ -67,7 +67,7 @@ export default function TeamSection() {
                     </AvatarFallback>
                   </Avatar>
                   <div>
-                    <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground">{member.name}</h3>
                     <p className="text-primary font-medium text-sm">{member.role}</p>
                     <div className="flex items-center gap-1.5 mt-1">
                       <Globe className="w-3 h-3 text-muted-foreground" />
@@ -133,7 +133,7 @@ export default function TeamSection() {
 
         <div className="mt-5 text-center">
           <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-white/10 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-4">
               <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
                 {t.team.consultationTitle}
               </span>

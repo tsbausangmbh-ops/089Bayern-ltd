@@ -624,7 +624,7 @@ export default function Rechner() {
               </Badge>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" data-testid="heading-title">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-testid="heading-title">
               {t.title}{" "}
               <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">
                 {t.titleHighlight}
@@ -694,7 +694,7 @@ export default function Rechner() {
       <section className="py-4 md:py-5 px-6 bg-muted/30" data-testid="section-how-it-works">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-how-it-works">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4" data-testid="heading-how-it-works">
               {t.howItWorksTitle}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -712,7 +712,7 @@ export default function Rechner() {
                   <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
                     <step.icon className="w-6 h-6 text-accent" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-3">{step.title}</h3>
                   <p className="text-muted-foreground">{step.desc}</p>
                 </CardContent>
               </Card>
@@ -742,7 +742,7 @@ export default function Rechner() {
       <section className="py-4 md:py-5 px-6" data-testid="section-why-calculate">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-why-calculate">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4" data-testid="heading-why-calculate">
               {t.whyCalculateTitle}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -757,7 +757,7 @@ export default function Rechner() {
                   <div className="w-14 h-14 bg-gradient-to-br from-accent to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <reason.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{reason.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">{reason.title}</h3>
                   <p className="text-sm text-muted-foreground">{reason.desc}</p>
                 </CardContent>
               </Card>
@@ -774,7 +774,7 @@ export default function Rechner() {
               <Zap className="w-4 h-4 mr-2" />
               {t.badge}
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-systems">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4" data-testid="heading-systems">
               {t.systemsTitle}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -790,7 +790,7 @@ export default function Rechner() {
                   <div className={`w-14 h-14 bg-gradient-to-br ${system.gradient} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                     <system.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{system.name}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">{system.name}</h3>
                   <p className="text-sm text-muted-foreground">{system.desc}</p>
                 </CardContent>
               </Card>
@@ -802,7 +802,7 @@ export default function Rechner() {
       {/* CTA to Calculator */}
       <section className="py-4 md:py-5 px-6 bg-gradient-to-r from-accent to-orange-500" data-testid="section-cta">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4" data-testid="heading-cta">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4" data-testid="heading-cta">
             {t.ctaTitle}
           </h2>
           <p className="text-lg text-white/80 mb-6">
@@ -830,7 +830,7 @@ export default function Rechner() {
       <section className="py-4 md:py-5 px-6 bg-muted/30" data-testid="section-guarantee">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-guarantee">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4" data-testid="heading-guarantee">
               {t.guaranteeTitle}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -855,7 +855,7 @@ export default function Rechner() {
       <section className="py-4 md:py-5 px-6" data-testid="section-faq">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-faq">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4" data-testid="heading-faq">
               {t.faqTitle}
             </h2>
           </div>
@@ -864,7 +864,7 @@ export default function Rechner() {
             {faqs.map((faq, index) => (
               <Card key={index} data-testid={`faq-item-${index + 1}`}>
                 <CardContent className="py-5 px-6">
-                  <h3 className="text-lg font-semibold mb-2">{faq.q}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">{faq.q}</h3>
                   <p className="text-muted-foreground">{faq.a}</p>
                 </CardContent>
               </Card>

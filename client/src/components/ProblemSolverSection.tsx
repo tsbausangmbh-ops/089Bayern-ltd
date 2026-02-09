@@ -532,7 +532,7 @@ export default function ProblemSolverSection() {
             <AlertTriangle className="w-4 h-4 mr-2" />
             {t.badge}
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-3" data-testid="text-problemsolver-title">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3" data-testid="text-problemsolver-title">
             {t.title}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -545,7 +545,7 @@ export default function ProblemSolverSection() {
             <Card key={index} className="overflow-visible hover-elevate h-full" data-testid={`card-problem-${index}`}>
               <CardContent className="p-6 flex flex-col h-full">
                 <div className="mb-4 flex-1">
-                  <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3 flex items-center gap-2">
                     <div className="w-8 h-8 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
                       <item.icon className="w-4 h-4 text-destructive" />
                     </div>
@@ -589,7 +589,7 @@ export default function ProblemSolverSection() {
               </div>
               <CardContent className="p-6 md:p-8 flex flex-col justify-center">
                 <Lightbulb className="w-10 h-10 text-primary mb-4" />
-                <h3 className="text-2xl md:text-3xl font-bold mb-3" data-testid="text-problemsolver-cta-title">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3" data-testid="text-problemsolver-cta-title">
                   {t.ctaTitle}
                 </h3>
                 <p className="text-muted-foreground mb-5 text-lg">

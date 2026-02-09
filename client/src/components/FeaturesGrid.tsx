@@ -105,7 +105,7 @@ export default function FeaturesGrid() {
               </div>
               <CardContent className="p-4 sm:p-6 relative">
                 <div>
-                  <h3 className="text-lg sm:text-2xl font-bold text-foreground mb-0.5 sm:mb-1">{feature.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-0.5 sm:mb-1">{feature.title}</h3>
                   <p className={`text-xs sm:text-sm font-semibold bg-gradient-to-r ${feature.gradient} bg-clip-text text-transparent mb-2 sm:mb-3`}>
                     {feature.subtitle}
                   </p>
@@ -126,7 +126,7 @@ export default function FeaturesGrid() {
 
         <div className="mt-4 sm:mt-5 text-center">
           <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-white/10">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3 sm:mb-4">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4">
               {t.features.whyIntegrated}
             </h3>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-3 sm:mb-4">

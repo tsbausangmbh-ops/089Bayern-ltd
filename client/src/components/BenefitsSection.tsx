@@ -119,7 +119,7 @@ export default function BenefitsSection() {
                     </div>
                   </div>
                   <div className="min-w-0">
-                    <h3 className="text-base sm:text-xl font-bold text-foreground mb-1 sm:mb-2">{benefit.title}</h3>
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-1 sm:mb-2">{benefit.title}</h3>
                     <p className="text-xs sm:text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
                   </div>
                 </div>
@@ -154,7 +154,7 @@ export default function BenefitsSection() {
         <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-white/10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
             <div>
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4 sm:mb-6">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-4 sm:mb-6">
                 {t.benefits.referencesTitle}
                 <br />
                 <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-accent bg-clip-text text-transparent">

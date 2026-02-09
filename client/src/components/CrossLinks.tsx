@@ -441,7 +441,7 @@ export default function CrossLinks({ currentPage, variant = "full" }: CrossLinks
     <section className="py-12 bg-muted/30" dir={isRTL ? "rtl" : "ltr"} data-testid="section-crosslinks">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="text-center mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">{t.title}</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2">{t.title}</h2>
           <p className="text-muted-foreground">{t.subtitle}</p>
         </div>
 

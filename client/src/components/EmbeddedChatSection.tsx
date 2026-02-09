@@ -221,7 +221,7 @@ export default function EmbeddedChatSection() {
             <MessageCircle className="w-4 h-4" />
             <span>{chatT.badge}</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
             {chatT.headline}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-4">

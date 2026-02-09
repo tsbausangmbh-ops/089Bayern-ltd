@@ -149,7 +149,7 @@ export default function FAQSection() {
             {c.badge}
           </Badge>
           
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
             {c.title}{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               {c.titleHighlight}
@@ -165,7 +165,7 @@ export default function FAQSection() {
                   <div className={`w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br ${faq.color} flex items-center justify-center flex-shrink-0`}>
                     <faq.icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
-                  <h3 className="text-lg md:text-xl font-bold text-foreground leading-tight">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground leading-tight">
                     {faq.question}
                   </h3>
                 </div>
