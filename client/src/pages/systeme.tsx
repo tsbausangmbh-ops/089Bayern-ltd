@@ -552,7 +552,7 @@ export default function Systeme() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.whyTitle}</h2>
-            <p className="text-lg text-muted-foreground">{c.whySubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">{c.whySubtitle}</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -584,7 +584,7 @@ export default function Systeme() {
                 {t.features.titleHighlight}
               </span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
               {t.features.subtitle}
             </p>
           </div>
@@ -615,7 +615,7 @@ export default function Systeme() {
                       <p className={`text-base font-semibold bg-gradient-to-r ${feature.gradient} bg-clip-text text-transparent mb-4`}>
                         {feature.subtitle}
                       </p>
-                      <p className="text-muted-foreground mb-6 leading-relaxed text-lg">{feature.description}</p>
+                      <p className="text-muted-foreground mb-6 leading-relaxed text-sm sm:text-base md:text-lg">{feature.description}</p>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                         {feature.benefits.map((benefit) => (
                           <div key={benefit} className="flex items-start gap-3">
@@ -636,7 +636,7 @@ export default function Systeme() {
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                 {t.features.whyIntegrated}
               </h3>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
                 {t.features.whyIntegratedDescription}{" "}
                 <span className="bg-gradient-to-r from-amber-400 to-accent bg-clip-text text-transparent font-semibold">{t.features.costSavings}</span>,{" "}
                 <span className="text-primary font-semibold">{t.features.easierManagement}</span>.
@@ -670,7 +670,7 @@ export default function Systeme() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               {c.nlpTitle}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               {c.nlpSubtitle}
             </p>
           </div>
@@ -712,7 +712,7 @@ export default function Systeme() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               {c.synergyTitle}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               {c.synergySubtitle}
             </p>
           </div>

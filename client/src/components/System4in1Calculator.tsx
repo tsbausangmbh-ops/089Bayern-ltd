@@ -981,13 +981,13 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
               <div className="bg-primary/10 rounded-xl p-5 mb-6 border border-primary/30">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
-                    <h4 className="font-bold text-lg text-foreground">{t.yourSystem}: {systemTiers.find(s => s.id === data.systemTier)?.label}</h4>
+                    <h4 className="font-bold text-sm sm:text-base md:text-lg text-foreground">{t.yourSystem}: {systemTiers.find(s => s.id === data.systemTier)?.label}</h4>
                     <p className="text-sm text-muted-foreground">{t.systemPower}: {systemPowerKW} {t.kW}</p>
                     <p className="text-xs text-muted-foreground mt-1">{t.includes}</p>
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold text-primary">ca. ₺{investmentTL.toLocaleString()}</div>
-                    <div className="text-lg text-foreground">ca. €{investmentEUR.toLocaleString()}</div>
+                    <div className="text-sm sm:text-base md:text-lg text-foreground">ca. €{investmentEUR.toLocaleString()}</div>
                     <div className="text-xs text-muted-foreground">{t.currentRate}: 1€ = ₺{EUR_TO_TL_RATE} (02/2026)</div>
                   </div>
                 </div>
@@ -1383,11 +1383,11 @@ export default function System4in1Calculator({ onComplete }: System4in1Calculato
                       }`}>
                         <tier.icon className={`w-6 h-6 ${data.systemTier === tier.id ? "text-white" : "text-muted-foreground"}`} />
                       </div>
-                      <div className="font-bold text-lg text-foreground">{tier.label}</div>
+                      <div className="font-bold text-sm sm:text-base md:text-lg text-foreground">{tier.label}</div>
                       <div className="text-2xl font-bold text-primary mt-1">{tier.power}</div>
                       <p className="text-xs text-muted-foreground mt-2">{tier.desc}</p>
                       <div className="mt-3 pt-3 border-t border-border/50">
-                        <div className="text-lg font-bold text-foreground">{tier.priceEUR}</div>
+                        <div className="text-sm sm:text-base md:text-lg font-bold text-foreground">{tier.priceEUR}</div>
                         <div className="text-sm text-muted-foreground">{tier.priceTL}</div>
                       </div>
                     </button>

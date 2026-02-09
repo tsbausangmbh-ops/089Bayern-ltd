@@ -1131,11 +1131,11 @@ export default function InstallationAnkara() {
               {c.badgeType}
             </Badge>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.officeTitle}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{c.officeSubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">{c.officeSubtitle}</p>
           </div>
           <Card className="max-w-3xl mx-auto">
             <CardContent className="p-8 text-center">
-              <p className="text-lg leading-relaxed">{c.officeDesc}</p>
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed">{c.officeDesc}</p>
             </CardContent>
           </Card>
         </div>
@@ -1146,7 +1146,7 @@ export default function InstallationAnkara() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.whyAnkaraTitle}</h2>
-            <p className="text-lg text-muted-foreground">{c.whyAnkaraSubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">{c.whyAnkaraSubtitle}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1180,7 +1180,7 @@ export default function InstallationAnkara() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.systemsTitle}</h2>
-            <p className="text-lg text-muted-foreground">{c.systemsSubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">{c.systemsSubtitle}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1212,7 +1212,7 @@ export default function InstallationAnkara() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">{c.benefitsTitle}</h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               {c.benefitsSubtitle}
             </p>
           </div>
@@ -1279,7 +1279,7 @@ export default function InstallationAnkara() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.why4in1Title}</h2>
-            <p className="text-lg text-muted-foreground">{c.why4in1Subtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">{c.why4in1Subtitle}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1312,7 +1312,7 @@ export default function InstallationAnkara() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.climateTitle}</h2>
-            <p className="text-lg text-muted-foreground">{c.climateSubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">{c.climateSubtitle}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1369,7 +1369,7 @@ export default function InstallationAnkara() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.processTitle}</h2>
-            <p className="text-lg text-muted-foreground">{c.processSubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">{c.processSubtitle}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1400,7 +1400,7 @@ export default function InstallationAnkara() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.areasTitle}</h2>
-            <p className="text-lg text-muted-foreground">{c.areasSubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">{c.areasSubtitle}</p>
           </div>
           
           <div className="flex flex-wrap justify-center gap-3">
@@ -1452,7 +1452,7 @@ export default function InstallationAnkara() {
       <section className="py-16 bg-primary text-primary-foreground" data-testid="section-cta">
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.ctaTitle}</h2>
-          <p className="text-xl opacity-90 mb-8">{c.ctaSubtitle}</p>
+          <p className="text-sm sm:text-base md:text-lg opacity-90 mb-8">{c.ctaSubtitle}</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" variant="secondary" onClick={goToContact} data-testid="button-cta-calculator">
               {c.ctaButton}

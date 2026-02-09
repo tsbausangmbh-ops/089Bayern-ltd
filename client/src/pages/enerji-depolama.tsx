@@ -274,7 +274,7 @@ export default function EnerjiDepolama() {
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
               {c.heroSubtitle}
             </p>
             
@@ -363,7 +363,7 @@ export default function EnerjiDepolama() {
                    "10 Ay Güneş"}
                 </span>
               </div>
-              <div className="text-lg font-bold text-primary">
+              <div className="text-sm sm:text-base md:text-lg font-bold text-primary">
                 = {language === "de" ? "Kostenlose Energie!" : 
                    language === "en" ? "Free Energy!" : 
                    "Bedava Enerji!"}
@@ -377,7 +377,7 @@ export default function EnerjiDepolama() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.problemTitle}</h2>
-            <p className="text-lg text-muted-foreground">{c.problemSubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">{c.problemSubtitle}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -401,7 +401,7 @@ export default function EnerjiDepolama() {
               089 Bayern
             </Badge>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.solutionTitle}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{c.solutionSubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">{c.solutionSubtitle}</p>
           </div>
           
           <div className="text-center mb-16">
@@ -453,7 +453,7 @@ export default function EnerjiDepolama() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.howItWorksTitle}</h2>
-            <p className="text-lg text-muted-foreground">{c.howItWorksSubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">{c.howItWorksSubtitle}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -476,7 +476,7 @@ export default function EnerjiDepolama() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.trustTitle}</h2>
-            <p className="text-lg text-muted-foreground">{c.trustSubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">{c.trustSubtitle}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -561,7 +561,7 @@ export default function EnerjiDepolama() {
       <section className="py-8 md:py-10 bg-gradient-to-b from-emerald-500/10 to-emerald-500/5" data-testid="section-urgency">
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">{c.urgencyTitle}</h2>
-          <p className="text-lg text-emerald-600 font-medium mb-4">{c.urgencySubtitle}</p>
+          <p className="text-sm sm:text-base md:text-lg text-emerald-600 font-medium mb-4">{c.urgencySubtitle}</p>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">{c.urgencyText}</p>
           
           <Button 

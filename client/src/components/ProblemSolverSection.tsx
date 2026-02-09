@@ -535,7 +535,7 @@ export default function ProblemSolverSection() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3" data-testid="text-problemsolver-title">
             {t.title}
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
             {t.subtitle}
           </p>
         </div>
@@ -592,7 +592,7 @@ export default function ProblemSolverSection() {
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3" data-testid="text-problemsolver-cta-title">
                   {t.ctaTitle}
                 </h3>
-                <p className="text-muted-foreground mb-5 text-lg">
+                <p className="text-muted-foreground mb-5 text-sm sm:text-base md:text-lg">
                   {t.ctaSubtitle}
                 </p>
                 <Button 

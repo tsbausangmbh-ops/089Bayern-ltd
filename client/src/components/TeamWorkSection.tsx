@@ -126,7 +126,7 @@ export default function TeamWorkSection() {
               {t.titleHighlight}
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             {t.subtitle}
           </p>
         </div>
@@ -151,7 +151,7 @@ export default function TeamWorkSection() {
                 </div>
               </div>
               <CardContent className="p-5">
-                <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
+                <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-2">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.description}</p>
               </CardContent>
             </Card>

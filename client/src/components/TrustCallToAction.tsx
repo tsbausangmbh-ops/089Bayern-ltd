@@ -149,7 +149,7 @@ export default function TrustCallToAction() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
             {c.title}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
             {c.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">

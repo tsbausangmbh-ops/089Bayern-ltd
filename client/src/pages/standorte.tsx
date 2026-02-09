@@ -168,7 +168,7 @@ export default function Standorte() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
             Türkiye'de Enerji Çözümleri
           </h1>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-3xl mx-auto">
             Akdeniz, Ege, Dalmaçya ve Yunan Adaları'nda güneş enerjisi, ısı pompası, klima ve enerji depolama kurulumu
           </p>
         </div>
@@ -217,7 +217,7 @@ export default function Standorte() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               Bölgelerimiz
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               Akdeniz havzasında profesyonel enerji çözümleri sunuyoruz
             </p>
           </div>
@@ -279,7 +279,7 @@ export default function Standorte() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
             Ücretsiz Enerji Analizi
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-8">
             Bölgenize özel enerji tasarruf potansiyelinizi hesaplayın
           </p>
           <Button size="lg" asChild>

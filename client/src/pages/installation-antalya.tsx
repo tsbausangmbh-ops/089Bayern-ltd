@@ -1169,13 +1169,13 @@ export default function InstallationAntalya() {
               {c.badgeType}
             </Badge>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.officeTitle}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{c.officeSubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">{c.officeSubtitle}</p>
           </div>
           
           <div className="max-w-4xl mx-auto">
             <Card className="mb-6">
               <CardContent className="p-8 text-center">
-                <p className="text-lg leading-relaxed mb-0">{c.officeDesc}</p>
+                <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-0">{c.officeDesc}</p>
               </CardContent>
             </Card>
             
@@ -1209,7 +1209,7 @@ export default function InstallationAntalya() {
             </div>
             
             <div className="text-center">
-              <p className="text-lg font-semibold text-primary mb-4">{c.officeCtaText}</p>
+              <p className="text-sm sm:text-base md:text-lg font-semibold text-primary mb-4">{c.officeCtaText}</p>
               <div className="flex flex-wrap justify-center gap-3">
                 <Button size="lg" onClick={goToContact} className="bg-gradient-to-r from-primary to-orange-600" data-testid="button-office-cta">
                   {c.ctaButton}
@@ -1234,7 +1234,7 @@ export default function InstallationAntalya() {
       <section className="py-16 bg-muted/30" data-testid="section-why-antalya">
         <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.whyAntalyaTitle}</h2>
-          <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">{c.whyAntalyaSubtitle}</p>
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">{c.whyAntalyaSubtitle}</p>
         </div>
       </section>
 
@@ -1243,7 +1243,7 @@ export default function InstallationAntalya() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.benefitsTitle}</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{c.benefitsSubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">{c.benefitsSubtitle}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1284,7 +1284,7 @@ export default function InstallationAntalya() {
           <div className="text-center mb-16">
             <Sun className="w-16 h-16 text-amber-500 mx-auto mb-4" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.climateTitle}</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{c.climateSubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">{c.climateSubtitle}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1361,7 +1361,7 @@ export default function InstallationAntalya() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.why4in1Title}</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto italic">{c.why4in1Subtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto italic">{c.why4in1Subtitle}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1457,7 +1457,7 @@ export default function InstallationAntalya() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.systemsTitle}</h2>
-            <p className="text-lg text-muted-foreground">{c.systemsSubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">{c.systemsSubtitle}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1490,7 +1490,7 @@ export default function InstallationAntalya() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.processTitle}</h2>
-            <p className="text-lg text-muted-foreground">{c.processSubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">{c.processSubtitle}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1517,7 +1517,7 @@ export default function InstallationAntalya() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.areasTitle}</h2>
-            <p className="text-lg text-muted-foreground">{c.areasSubtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">{c.areasSubtitle}</p>
           </div>
           
           <div className="flex flex-wrap justify-center gap-3">
@@ -1545,7 +1545,7 @@ export default function InstallationAntalya() {
                   <Star key={i} className="w-5 h-5 fill-primary text-primary" />
                 ))}
               </div>
-              <p className="text-lg mb-4 italic">"{c.testimonial1}"</p>
+              <p className="text-sm sm:text-base md:text-lg mb-4 italic">"{c.testimonial1}"</p>
               <p className="text-sm text-muted-foreground">{c.testimonial1Author}</p>
             </Card>
             
@@ -1555,7 +1555,7 @@ export default function InstallationAntalya() {
                   <Star key={i} className="w-5 h-5 fill-primary text-primary" />
                 ))}
               </div>
-              <p className="text-lg mb-4 italic">"{c.testimonial2}"</p>
+              <p className="text-sm sm:text-base md:text-lg mb-4 italic">"{c.testimonial2}"</p>
               <p className="text-sm text-muted-foreground">{c.testimonial2Author}</p>
             </Card>
           </div>
@@ -1586,7 +1586,7 @@ export default function InstallationAntalya() {
       <section className="py-16" data-testid="section-cta">
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{c.ctaTitle}</h2>
-          <p className="text-lg text-muted-foreground mb-8">{c.ctaSubtitle}</p>
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-8">{c.ctaSubtitle}</p>
           
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" onClick={goToContact} className="bg-gradient-to-r from-primary to-orange-600" data-testid="button-cta-consultation">

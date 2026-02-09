@@ -583,7 +583,7 @@ export default function Vorteile() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               {c.freeEnergyTitle}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
               {c.freeEnergySubtitle}
             </p>
           </div>
@@ -644,7 +644,7 @@ export default function Vorteile() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               {c.systemTitle}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
               {c.systemSubtitle}
             </p>
           </div>
@@ -675,7 +675,7 @@ export default function Vorteile() {
                       <p className={`text-base font-semibold bg-gradient-to-r ${system.gradient} bg-clip-text text-transparent mb-4`}>
                         {system.subtitle}
                       </p>
-                      <p className="text-muted-foreground mb-6 leading-relaxed text-lg">{system.desc}</p>
+                      <p className="text-muted-foreground mb-6 leading-relaxed text-sm sm:text-base md:text-lg">{system.desc}</p>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                         {system.benefits.map((benefit, benefitIndex) => (
                           <div key={benefitIndex} className="flex items-start gap-3">
@@ -704,7 +704,7 @@ export default function Vorteile() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               {c.expandTitle}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
               {c.expandSubtitle}
             </p>
           </div>
@@ -782,7 +782,7 @@ export default function Vorteile() {
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               {c.ctaTitle}
             </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
               {c.ctaSubtitle}
             </p>
             <Button 

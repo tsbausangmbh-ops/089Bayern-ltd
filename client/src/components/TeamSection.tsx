@@ -51,7 +51,7 @@ export default function TeamSection() {
               {t.team.titleHighlight}
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             {t.team.subtitle}
           </p>
         </div>

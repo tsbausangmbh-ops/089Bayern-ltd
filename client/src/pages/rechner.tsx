@@ -631,7 +631,7 @@ export default function Rechner() {
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8" data-testid="text-subtitle">
+            <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8" data-testid="text-subtitle">
               {t.subtitle}
             </p>
             
@@ -697,7 +697,7 @@ export default function Rechner() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4" data-testid="heading-how-it-works">
               {t.howItWorksTitle}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               {t.howItWorksSubtitle}
             </p>
           </div>
@@ -745,7 +745,7 @@ export default function Rechner() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4" data-testid="heading-why-calculate">
               {t.whyCalculateTitle}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               {t.whyCalculateSubtitle}
             </p>
           </div>
@@ -777,7 +777,7 @@ export default function Rechner() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4" data-testid="heading-systems">
               {t.systemsTitle}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               {t.systemsSubtitle}
             </p>
           </div>
@@ -805,7 +805,7 @@ export default function Rechner() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4" data-testid="heading-cta">
             {t.ctaTitle}
           </h2>
-          <p className="text-lg text-white/80 mb-6">
+          <p className="text-sm sm:text-base md:text-lg text-white/80 mb-6">
             {t.ctaSubtitle}
           </p>
           <Button 
@@ -833,7 +833,7 @@ export default function Rechner() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4" data-testid="heading-guarantee">
               {t.guaranteeTitle}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               {t.guaranteeSubtitle}
             </p>
           </div>

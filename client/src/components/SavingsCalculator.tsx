@@ -169,7 +169,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                   <Check className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold text-foreground mb-3">{t.resultsTitle}</h3>
-                <p className="text-lg text-muted-foreground">{t.resultsSubtitle}</p>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground">{t.resultsSubtitle}</p>
               </div>
 
               <div className="bg-primary/5 rounded-xl p-4 mb-8 border border-primary/20">
@@ -200,13 +200,13 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                 <div className="text-center p-6 bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl border border-primary/20">
                   <Banknote className="w-8 h-8 text-primary mx-auto mb-3" />
                   <div className="text-3xl font-bold text-primary mb-1">{formatEUR(Math.round(estimatedMonthlySavings / exchangeRate))}</div>
-                  <div className="text-lg text-primary/70 mb-1">{formatTL(estimatedMonthlySavings)}</div>
+                  <div className="text-sm sm:text-base md:text-lg text-primary/70 mb-1">{formatTL(estimatedMonthlySavings)}</div>
                   <p className="text-sm text-muted-foreground">{t.monthlySavings}</p>
                 </div>
                 <div className="text-center p-6 bg-gradient-to-br from-accent/20 to-accent/5 rounded-xl border border-accent/20">
                   <TrendingUp className="w-8 h-8 text-accent mx-auto mb-3" />
                   <div className="text-3xl font-bold text-accent mb-1">{formatEUR(Math.round(yearlySavings / exchangeRate))}</div>
-                  <div className="text-lg text-accent/70 mb-1">{formatTL(yearlySavings)}</div>
+                  <div className="text-sm sm:text-base md:text-lg text-accent/70 mb-1">{formatTL(yearlySavings)}</div>
                   <p className="text-sm text-muted-foreground">{t.yearlySavings}</p>
                 </div>
                 <div className="text-center p-6 bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 rounded-xl border border-emerald-500/20">
@@ -286,7 +286,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
               {t.titleHighlight}
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground">{t.subtitle}</p>
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground">{t.subtitle}</p>
         </div>
 
         <Card className="overflow-hidden border-border/50 bg-card/90 backdrop-blur-sm shadow-xl">
@@ -301,7 +301,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
 
             {step === 1 && (
               <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-foreground">{t.step1Title}</h3>
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground">{t.step1Title}</h3>
                 <p className="text-muted-foreground">{t.step1Subtitle}</p>
                 <div className="grid grid-cols-1 gap-4">
                   {propertyTypes.map((type) => (
@@ -319,7 +319,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
                         <type.icon className={`w-7 h-7 ${data.propertyType === type.id ? "text-white" : "text-muted-foreground"}`} />
                       </div>
                       <div>
-                        <span className={`block font-semibold text-lg ${data.propertyType === type.id ? "text-primary" : "text-foreground"}`}>
+                        <span className={`block font-semibold text-sm sm:text-base md:text-lg ${data.propertyType === type.id ? "text-primary" : "text-foreground"}`}>
                           {type.label}
                         </span>
                         <span className="text-sm text-muted-foreground">{type.description}</span>
@@ -332,7 +332,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
 
             {step === 2 && (
               <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-foreground">{t.step2Title}</h3>
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground">{t.step2Title}</h3>
                 <p className="text-muted-foreground">{t.step2Subtitle}</p>
                 <div className="grid grid-cols-2 gap-4">
                   {locationData.map((loc) => {
@@ -360,7 +360,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
             {step === 3 && (
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{t.step3Title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2">{t.step3Title}</h3>
                   <p className="text-muted-foreground">{t.step3Subtitle}</p>
                 </div>
                 <div>
@@ -382,7 +382,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
             {step === 4 && (
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{t.step4Title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2">{t.step4Title}</h3>
                   <p className="text-muted-foreground">{t.step4Subtitle}</p>
                 </div>
                 <div>
@@ -404,7 +404,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
             {step === 5 && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{t.step5Title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2">{t.step5Title}</h3>
                   <p className="text-muted-foreground">{t.step5Subtitle}</p>
                 </div>
                 <div className="grid grid-cols-1 gap-4">
@@ -437,7 +437,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
             {step === 6 && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{t.step6Title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2">{t.step6Title}</h3>
                   <p className="text-muted-foreground">{t.step6Subtitle}</p>
                 </div>
                 <div className="grid grid-cols-1 gap-4">
@@ -470,7 +470,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
             {step === 7 && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{t.step7Title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2">{t.step7Title}</h3>
                   <p className="text-muted-foreground">{t.step7Subtitle}</p>
                 </div>
                 <div className="grid grid-cols-1 gap-4">
