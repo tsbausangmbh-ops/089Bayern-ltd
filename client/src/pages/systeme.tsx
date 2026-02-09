@@ -562,7 +562,7 @@ export default function Systeme() {
                   <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center">
                     <adv.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-foreground mb-2">{adv.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-2">{adv.title}</h3>
                   <p className="text-sm text-muted-foreground">{adv.desc}</p>
                 </CardContent>
               </Card>
@@ -611,7 +611,7 @@ export default function Systeme() {
                       <feature.icon className="w-10 h-10 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">{feature.title}</h3>
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2">{feature.title}</h3>
                       <p className={`text-base font-semibold bg-gradient-to-r ${feature.gradient} bg-clip-text text-transparent mb-4`}>
                         {feature.subtitle}
                       </p>
@@ -633,7 +633,7 @@ export default function Systeme() {
 
           <div className="mt-12 text-center">
             <div className="bg-gradient-to-r from-primary/20 via-white/5 to-accent/20 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-4">
                 {t.features.whyIntegrated}
               </h3>
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
@@ -729,7 +729,7 @@ export default function Systeme() {
                   <item.icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-2">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.text}</p>
                 </div>
               </div>

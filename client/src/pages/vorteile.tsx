@@ -671,7 +671,7 @@ export default function Vorteile() {
                       <system.icon className="w-10 h-10 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">{system.title}</h3>
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2">{system.title}</h3>
                       <p className={`text-base font-semibold bg-gradient-to-r ${system.gradient} bg-clip-text text-transparent mb-4`}>
                         {system.subtitle}
                       </p>
@@ -720,7 +720,7 @@ export default function Vorteile() {
                   <div className="w-12 h-12 mb-4 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center">
                     <expansion.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-2">{expansion.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-2">{expansion.title}</h3>
                   <p className="text-muted-foreground text-sm">{expansion.desc}</p>
                   <div className="mt-4 flex items-center text-primary text-sm font-medium">
                     <ChevronRight className="w-4 h-4" />
@@ -779,7 +779,7 @@ export default function Vorteile() {
       <section className="py-4 md:py-5 bg-background" data-testid="section-cta-bottom">
         <div className="max-w-4xl mx-auto px-6 md:px-8">
           <div className="bg-gradient-to-r from-amber-500/20 via-orange-500/10 to-yellow-500/20 backdrop-blur-lg rounded-2xl p-10 md:p-14 border border-amber-500/20 text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-4">
               {c.ctaTitle}
             </h3>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8">

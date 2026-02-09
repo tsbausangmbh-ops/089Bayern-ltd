@@ -405,7 +405,7 @@ export default function EnerjiDepolama() {
           </div>
           
           <div className="text-center mb-16">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8">{c.benefitsTitle}</h3>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-8">{c.benefitsTitle}</h3>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -485,7 +485,7 @@ export default function EnerjiDepolama() {
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-emerald-500/20 to-green-500/20 flex items-center justify-center mx-auto mb-4">
                   <point.icon className="w-8 h-8 text-emerald-600" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">{point.title}</h3>
+                <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-2">{point.title}</h3>
                 <p className="text-muted-foreground text-sm">{point.desc}</p>
               </div>
             ))}
@@ -541,7 +541,7 @@ export default function EnerjiDepolama() {
               >
                 <CardContent className="p-4">
                   <div className="flex items-center justify-between gap-4">
-                    <h3 className="font-semibold text-foreground">{faq.q}</h3>
+                    <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground">{faq.q}</h3>
                     {openFaq === index ? (
                       <ChevronUp className="w-5 h-5 text-muted-foreground flex-shrink-0" />
                     ) : (

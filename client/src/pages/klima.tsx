@@ -470,7 +470,7 @@ export default function Klima() {
           </div>
           
           <div className="text-center mb-16">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8">{c.benefitsTitle}</h3>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-8">{c.benefitsTitle}</h3>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -579,7 +579,7 @@ export default function Klima() {
                   <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center">
                     <point.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-foreground mb-2">{point.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-2">{point.title}</h3>
                   <p className="text-sm text-muted-foreground">{point.desc}</p>
                 </CardContent>
               </Card>
@@ -656,7 +656,7 @@ export default function Klima() {
           <p className="text-foreground mb-8 max-w-2xl mx-auto">{c.urgencyText}</p>
           
           <div className="bg-card rounded-2xl p-8 shadow-xl border border-sky-500/20">
-            <h3 className="text-2xl font-bold text-foreground mb-2">{c.finalCta}</h3>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2">{c.finalCta}</h3>
             <p className="text-muted-foreground mb-6">{c.finalCtaDesc}</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
               <Button 
