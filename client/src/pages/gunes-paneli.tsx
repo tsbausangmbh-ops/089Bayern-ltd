@@ -427,6 +427,7 @@ export default function GunesPaneli() {
               <img 
                 src={solarDetailImage} 
                 alt="089 Bayern profesyonel güneş paneli kablo bağlantısı ve montaj detayı Antalya villası çatısında solar panel kurulumu fiyatları 2026 Akdeniz bölgesi" 
+                title="Güneş paneli kablo bağlantısı ve montaj detayı Antalya villa çatısı - solar panel kurulumu fiyatları 2026"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"
@@ -437,6 +438,7 @@ export default function GunesPaneli() {
               <img 
                 src={solarTestingImage} 
                 alt="089 Bayern teknisyeni güneş paneli test ölçüm ve verimlilik kontrolü yapıyor Akdeniz villası photovoltaik sistem performans analizi Antalya Alanya" 
+                title="Güneş paneli test ölçüm ve verimlilik kontrolü Antalya villa - photovoltaik sistem performans analizi 2026"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"

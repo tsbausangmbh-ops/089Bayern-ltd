@@ -819,6 +819,7 @@ export default function IsiPompasi() {
               <img 
                 src={heatpumpDetailImage} 
                 alt="089 Bayern Vaillant aroTHERM ısı pompası teknik detay ve profesyonel kurulum Antalya villası hava kaynaklı ısıtma soğutma sistemi Alman kalitesi COP 5.0" 
+                title="Vaillant aroTHERM ısı pompası kurulumu fiyatları 2026 Antalya villa - hava kaynaklı ısıtma soğutma COP 5.0"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"
@@ -829,6 +830,7 @@ export default function IsiPompasi() {
               <img 
                 src={heatpumpConsultationImage} 
                 alt="089 Bayern enerji danışmanı Vaillant ısı pompası sistemi hakkında villa sahibine ücretsiz keşif ve fiyat teklifi sunuyor Antalya Alanya Akdeniz Türkiye" 
+                title="Vaillant ısı pompası ücretsiz keşif ve fiyat teklifi Antalya Alanya villa - enerji danışmanlığı 2026"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"

@@ -269,6 +269,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
             <img 
               src={logoImage} 
               alt="089 Bayern Logo Alman kalitesi enerji sistemleri Türkiye - güneş paneli Vaillant ısı pompası Samsung klima batarya Antalya Alanya kurulumu" 
+              title="089 Bayern enerji tasarruf hesaplayıcı - güneş paneli ısı pompası klima batarya fiyat hesaplama Antalya 2026"
               className="h-12 w-auto object-contain"
             />
             <div className="text-left">

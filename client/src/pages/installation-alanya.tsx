@@ -911,7 +911,7 @@ export default function InstallationAlanya() {
       {/* Hero Section */}
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center pt-16 sm:pt-20" data-testid="section-hero">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="089 Bayern güneş paneli Vaillant ısı pompası Samsung klima batarya kurulumu Alanya villası - 4'ü 1 arada premium enerji sistemi %70 tasarruf 300 güneşli gün Akdeniz Türkiye" className="w-full h-full object-cover" decoding="async" />
+          <img src={heroImage} alt="089 Bayern güneş paneli Vaillant ısı pompası Samsung klima batarya kurulumu Alanya villası - 4'ü 1 arada premium enerji sistemi %70 tasarruf 300 güneşli gün Akdeniz Türkiye" title="4'ü 1 arada enerji sistemi kurulumu Alanya villa fiyatları 2026 - güneş paneli ısı pompası klima batarya %70 tasarruf" className="w-full h-full object-cover" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         </div>
         
@@ -1115,6 +1115,7 @@ export default function InstallationAlanya() {
               <img 
                 src={teamWorkImage} 
                 alt="089 Bayern kurulum ekibi Alanya villasında güneş paneli ve Vaillant ısı pompası montajı yapıyor profesyonel 4-in-1 enerji sistemi kurulumu Akdeniz sahili" 
+                title="Güneş paneli ve ısı pompası montajı Alanya villa fiyatları 2026 - profesyonel 4-in-1 enerji sistemi kurulumu"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"
@@ -1125,6 +1126,7 @@ export default function InstallationAlanya() {
               <img 
                 src={deliveryImage} 
                 alt="089 Bayern Samsung ve Vaillant premium enerji ekipmanları teslimi Alanya villasına profesyonel lojistik Alman kalitesi ısı pompası klima batarya Türkiye" 
+                title="Samsung Vaillant premium enerji ekipmanları teslimi Alanya villa - profesyonel lojistik ısı pompası klima batarya"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"

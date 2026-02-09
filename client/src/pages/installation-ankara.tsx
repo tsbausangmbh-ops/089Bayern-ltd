@@ -1256,6 +1256,7 @@ export default function InstallationAnkara() {
               <img 
                 src={teamWorkImage} 
                 alt="089 Bayern kurulum ekibi Ankara villasında güneş paneli ve Vaillant ısı pompası montajı yapıyor başkent 4-in-1 enerji sistemi Çankaya Keçiören Yenimahalle" 
+                title="Güneş paneli ve ısı pompası montajı Ankara villa fiyatları 2026 - 4-in-1 enerji sistemi Çankaya Keçiören"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"
@@ -1266,6 +1267,7 @@ export default function InstallationAnkara() {
               <img 
                 src={inspectionImage} 
                 alt="089 Bayern profesyonel kurulum kontrolü ve kalite denetimi Ankara villa enerji sistemi Alman DIN standartları güneş paneli ısı pompası bakım servisi" 
+                title="Profesyonel kurulum kontrolü ve kalite denetimi Ankara villa - Alman DIN standartları güneş paneli ısı pompası bakım"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"

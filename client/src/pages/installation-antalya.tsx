@@ -1323,6 +1323,7 @@ export default function InstallationAntalya() {
               <img 
                 src={roofInstallationImage} 
                 alt="089 Bayern güneş paneli kurulumu Antalya villa çatısında profesyonel montaj ekibi solar panel sistemi fiyatları 2026 Kemer Belek Side Alanya" 
+                title="Güneş paneli kurulumu Antalya villa çatısı fiyatları 2026 - profesyonel montaj Kemer Belek Side Alanya"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"
@@ -1333,6 +1334,7 @@ export default function InstallationAntalya() {
               <img 
                 src={heatpumpInspectionImage} 
                 alt="089 Bayern Vaillant ısı pompası kurulum kontrolü ve kalite denetimi Antalya Alman DIN standartları yetkili servis 10 yıl garanti Akdeniz villası" 
+                title="Vaillant ısı pompası kurulum kontrolü Antalya villa - Alman DIN standartları kalite denetimi 10 yıl garanti"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"
@@ -1350,6 +1352,7 @@ export default function InstallationAntalya() {
             <img 
               src={teamCompletedImage} 
               alt="089 Bayern kurulum ekibi tamamlanmış 4-in-1 enerji sistemi önünde Antalya villası güneş paneli ısı pompası klima batarya başarılı proje referans Türkiye" 
+              title="089 Bayern tamamlanmış 4-in-1 enerji sistemi projesi Antalya villa - güneş paneli ısı pompası klima batarya referans"
               className="w-full h-80 md:h-[500px] object-cover"
               loading="lazy"
               decoding="async"

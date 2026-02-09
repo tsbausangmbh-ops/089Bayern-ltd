@@ -105,6 +105,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
             <img 
               src={logoImage} 
               alt="089 Bayern Almanya kalitesi enerji sistemleri Türkiye - güneş paneli Vaillant ısı pompası Samsung klima batarya depolama kurulumu Antalya Alanya villa sahipleri için" 
+              title="089 Bayern Logo - Alman kalitesi güneş paneli ısı pompası klima batarya enerji sistemleri Antalya Türkiye"
               className="h-10 sm:h-12 md:h-14 w-auto object-contain rounded-lg"
             />
             <div>

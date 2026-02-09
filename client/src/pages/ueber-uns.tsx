@@ -550,6 +550,7 @@ export default function UeberUns() {
               <img 
                 src={teamMeetingImage} 
                 alt="089 Bayern Almanya Türkiye profesyonel enerji sistemi ekibi - Mustafa Sakar Dalibor Bakmaz güneş paneli ısı pompası uzmanları Antalya" 
+                title="089 Bayern profesyonel enerji sistemi ekibi Antalya - Mustafa Sakar Dalibor Bakmaz güneş paneli ısı pompası uzmanları"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"

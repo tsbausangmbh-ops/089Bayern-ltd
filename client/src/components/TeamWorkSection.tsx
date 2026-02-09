@@ -93,6 +93,7 @@ export default function TeamWorkSection() {
       icon: Sun,
       gradient: "from-amber-500 to-yellow-500",
       seoAlt: "089 Bayern ekibi villa çatısına güneş paneli montajı yapıyor Antalya profesyonel solar panel kurulum ekibi Akdeniz bölgesi",
+      seoTitle: "Villa çatısına güneş paneli montajı Antalya - 089 Bayern profesyonel kurulum ekibi fiyatları 2026",
     },
     {
       image: teamHeatPumpImage,
@@ -101,6 +102,7 @@ export default function TeamWorkSection() {
       icon: Thermometer,
       gradient: "from-orange-500 to-red-500",
       seoAlt: "089 Bayern teknisyenleri Vaillant ısı pompası dış ünite montajı yapıyor villa ısıtma soğutma sistemi kurulumu Antalya",
+      seoTitle: "Vaillant ısı pompası dış ünite montajı Antalya villa - profesyonel kurulum fiyatları 2026",
     },
     {
       image: teamPvImage,
@@ -109,6 +111,7 @@ export default function TeamWorkSection() {
       icon: Zap,
       gradient: "from-blue-500 to-indigo-500",
       seoAlt: "089 Bayern elektrik ekibi photovoltaik inverter kablo bağlantısı güneş paneli elektrik tesisatı villa çatısı Antalya",
+      seoTitle: "Photovoltaik inverter kablo bağlantısı ve elektrik tesisatı Antalya villa çatısı - güneş paneli kurulumu 2026",
     },
   ];
 
@@ -142,6 +145,7 @@ export default function TeamWorkSection() {
                 <img
                   src={item.image}
                   alt={item.seoAlt}
+                  title={item.seoTitle}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   decoding="async"

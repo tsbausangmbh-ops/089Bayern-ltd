@@ -582,6 +582,7 @@ export default function ProblemSolverSection() {
                 <img 
                   src={businessHandshakeImage} 
                   alt="089 Bayern Mustafa Sakar profesyonel enerji danışmanlığı Antalya - villa sahipleri için güneş paneli ısı pompası klima batarya sistemi sözleşmesi Türkiye" 
+                  title="Mustafa Sakar 089 Bayern enerji danışmanlığı Antalya villa - ücretsiz keşif ve fiyat teklifi güneş paneli ısı pompası 2026"
                   className="w-full h-full object-cover"
                   loading="lazy"
                   decoding="async"

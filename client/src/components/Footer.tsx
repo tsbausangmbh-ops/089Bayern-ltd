@@ -65,6 +65,7 @@ export default function Footer() {
               <img 
                 src={logoImage} 
                 alt="089 Bayern Premium 4'ü 1 arada enerji sistemleri Türkiye - Almanya kalitesi güneş paneli Vaillant ısı pompası Samsung klima batarya depolama kurulumu Antalya Alanya Akdeniz villaları" 
+                title="089 Bayern Premium enerji sistemleri Türkiye - Vaillant Samsung yetkili bayi güneş paneli ısı pompası Antalya Alanya"
                 className="h-12 sm:h-16 w-auto object-contain rounded-lg"
                 loading="lazy"
                 decoding="async"

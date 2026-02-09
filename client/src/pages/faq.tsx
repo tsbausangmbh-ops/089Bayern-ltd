@@ -592,6 +592,7 @@ export default function FAQ() {
               <img 
                 src={consultationImage} 
                 alt="089 Bayern ücretsiz enerji danışmanlığı Antalya - güneş paneli ısı pompası klima batarya sistemi uzman desteği Türkiye" 
+                title="Ücretsiz enerji danışmanlığı Antalya - güneş paneli ısı pompası klima batarya sistemi uzman desteği fiyatları 2026"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"

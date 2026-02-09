@@ -401,6 +401,7 @@ export default function Systeme() {
       iconBg: "bg-gradient-to-br from-sky-500 to-blue-600",
       image: climateInstallImage,
       imageAlt: "Samsung WindFree klima iç ve dış ünite profesyonel montajı Antalya villasında enerji verimli soğutma ısıtma sistemi kurulumu",
+      imageTitle: "Samsung WindFree klima montajı fiyatları 2026 Antalya villa - enerji verimli soğutma ısıtma sistemi",
     },
     {
       icon: Flame,
@@ -413,6 +414,7 @@ export default function Systeme() {
       iconBg: "bg-gradient-to-br from-orange-500 to-red-600",
       image: heatpumpInstallImage,
       imageAlt: "Vaillant aroTHERM ısı pompası dış ünite kurulumu Akdeniz villasında profesyonel montaj kış ısıtma yaz soğutma sistemi",
+      imageTitle: "Vaillant aroTHERM ısı pompası kurulumu fiyatları 2026 Akdeniz villa - kış ısıtma yaz soğutma sistemi",
     },
     {
       icon: Sun,
@@ -425,6 +427,7 @@ export default function Systeme() {
       iconBg: "bg-gradient-to-br from-amber-500 to-yellow-500",
       image: solarInstallImage,
       imageAlt: "Villa çatısına profesyonel güneş paneli montajı Antalya 6 kWp 10 kWp photovoltaik sistem kurulumu Akdeniz bölgesi",
+      imageTitle: "Güneş paneli montajı fiyatları 2026 Antalya villa çatısı - 6 kWp 10 kWp photovoltaik sistem kurulumu",
     },
     {
       icon: Battery,
@@ -437,6 +440,7 @@ export default function Systeme() {
       iconBg: "bg-gradient-to-br from-emerald-500 to-green-600",
       image: batteryInstallImage,
       imageAlt: "Lityum iyon batarya depolama sistemi kurulumu villa enerji depolama 10 kWh 15 kWh güneş enerjisi gece kullanımı",
+      imageTitle: "Batarya depolama sistemi kurulumu fiyatları 2026 Antalya villa - 10 kWh 15 kWh lityum iyon güneş enerjisi",
     },
   ];
 
@@ -539,6 +543,7 @@ export default function Systeme() {
               <img 
                 src={systemPresentationImage} 
                 alt="089 Bayern 4'ü 1 arada enerji sistemi sunumu Antalya - Alman kalitesi güneş paneli Vaillant ısı pompası Samsung klima batarya depolama Türkiye" 
+                title="4'ü 1 arada enerji sistemi sunumu Antalya villa - Alman kalitesi güneş paneli ısı pompası klima batarya fiyatları 2026"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"
@@ -601,6 +606,7 @@ export default function Systeme() {
                   <img 
                     src={feature.image} 
                     alt={feature.imageAlt}
+                    title={feature.imageTitle}
                     className="w-full h-56 md:h-72 object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                     decoding="async"

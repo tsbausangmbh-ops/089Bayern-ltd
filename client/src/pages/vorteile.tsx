@@ -434,17 +434,17 @@ export default function Vorteile() {
   ];
 
   const freeEnergy = [
-    { icon: Zap, title: c.freeElectricity, desc: c.freeElectricityDesc, gradient: "from-amber-500 to-yellow-500", image: freeElectricityImage, imageAlt: "Güneş paneli ile ücretsiz elektrik üretimi Antalya villasında 300 güneşli gün yıllık enerji tasarrufu" },
-    { icon: Flame, title: c.freeHeating, desc: c.freeHeatingDesc, gradient: "from-orange-500 to-red-500", image: freeHeatingImage, imageAlt: "Vaillant ısı pompası ile ücretsiz ısıtma kış aylarında Akdeniz villası yerden ısıtma sistemi" },
-    { icon: Snowflake, title: c.freeCooling, desc: c.freeCoolingDesc, gradient: "from-sky-400 to-blue-500", image: freeCoolingImage, imageAlt: "Samsung WindFree klima ile ücretsiz soğutma yaz aylarında villa enerji verimli sessiz klima sistemi" },
-    { icon: Droplets, title: c.freeHotWater, desc: c.freeHotWaterDesc, gradient: "from-cyan-500 to-teal-500", image: freeHotWaterImage, imageAlt: "Güneş enerjisi ve ısı pompası ile ücretsiz sıcak su villa boyler sistemi Akdeniz bölgesi" },
+    { icon: Zap, title: c.freeElectricity, desc: c.freeElectricityDesc, gradient: "from-amber-500 to-yellow-500", image: freeElectricityImage, imageAlt: "Güneş paneli ile ücretsiz elektrik üretimi Antalya villasında 300 güneşli gün yıllık enerji tasarrufu", imageTitle: "Ücretsiz elektrik üretimi güneş paneli ile Antalya villa - 300 güneşli gün yıllık tasarruf 2026" },
+    { icon: Flame, title: c.freeHeating, desc: c.freeHeatingDesc, gradient: "from-orange-500 to-red-500", image: freeHeatingImage, imageAlt: "Vaillant ısı pompası ile ücretsiz ısıtma kış aylarında Akdeniz villası yerden ısıtma sistemi", imageTitle: "Ücretsiz ısıtma Vaillant ısı pompası ile kış aylarında Akdeniz villası - yerden ısıtma sistemi fiyatları" },
+    { icon: Snowflake, title: c.freeCooling, desc: c.freeCoolingDesc, gradient: "from-sky-400 to-blue-500", image: freeCoolingImage, imageAlt: "Samsung WindFree klima ile ücretsiz soğutma yaz aylarında villa enerji verimli sessiz klima sistemi", imageTitle: "Ücretsiz soğutma Samsung WindFree klima ile yaz aylarında villa - sessiz enerji verimli klima 2026" },
+    { icon: Droplets, title: c.freeHotWater, desc: c.freeHotWaterDesc, gradient: "from-cyan-500 to-teal-500", image: freeHotWaterImage, imageAlt: "Güneş enerjisi ve ısı pompası ile ücretsiz sıcak su villa boyler sistemi Akdeniz bölgesi", imageTitle: "Ücretsiz sıcak su güneş enerjisi ve ısı pompası ile villa boyler sistemi Akdeniz bölgesi" },
   ];
 
   const systems = [
-    { icon: Sun, title: c.system1Title, subtitle: c.system1Subtitle, desc: c.system1Desc, benefits: c.system1Benefits, gradient: "from-amber-500 to-yellow-500", iconBg: "bg-gradient-to-br from-amber-500 to-yellow-500", image: systemSolarImage, imageAlt: "Photovoltaik güneş paneli sistemi villa çatısı kurulumu Antalya Alanya monokristal panel montajı" },
-    { icon: ThermometerSun, title: c.system2Title, subtitle: c.system2Subtitle, desc: c.system2Desc, benefits: c.system2Benefits, gradient: "from-orange-500 to-red-500", iconBg: "bg-gradient-to-br from-orange-500 to-red-500", image: systemHeatPumpImage, imageAlt: "Vaillant ısı pompası profesyonel kurulumu villa ısıtma soğutma sistemi Antalya Akdeniz bölgesi" },
-    { icon: Battery, title: c.system3Title, subtitle: c.system3Subtitle, desc: c.system3Desc, benefits: c.system3Benefits, gradient: "from-emerald-500 to-green-600", iconBg: "bg-gradient-to-br from-emerald-500 to-green-600", image: systemBatteryImage, imageAlt: "Samsung SDI lityum iyon batarya depolama sistemi villa enerji depolama gece kullanımı Antalya" },
-    { icon: Droplets, title: c.system4Title, subtitle: c.system4Subtitle, desc: c.system4Desc, benefits: c.system4Benefits, gradient: "from-cyan-500 to-blue-600", iconBg: "bg-gradient-to-br from-cyan-500 to-blue-600", image: systemHotWaterImage, imageAlt: "Güneş enerjisi ısı pompası sıcak su depolama sistemi villa boyler kurulumu Akdeniz villası" },
+    { icon: Sun, title: c.system1Title, subtitle: c.system1Subtitle, desc: c.system1Desc, benefits: c.system1Benefits, gradient: "from-amber-500 to-yellow-500", iconBg: "bg-gradient-to-br from-amber-500 to-yellow-500", image: systemSolarImage, imageAlt: "Photovoltaik güneş paneli sistemi villa çatısı kurulumu Antalya Alanya monokristal panel montajı", imageTitle: "Güneş paneli sistemi kurulumu fiyatları 2026 Antalya villa çatısı - photovoltaik monokristal panel" },
+    { icon: ThermometerSun, title: c.system2Title, subtitle: c.system2Subtitle, desc: c.system2Desc, benefits: c.system2Benefits, gradient: "from-orange-500 to-red-500", iconBg: "bg-gradient-to-br from-orange-500 to-red-500", image: systemHeatPumpImage, imageAlt: "Vaillant ısı pompası profesyonel kurulumu villa ısıtma soğutma sistemi Antalya Akdeniz bölgesi", imageTitle: "Vaillant ısı pompası kurulumu fiyatları 2026 Antalya villa - ısıtma soğutma sistemi Akdeniz" },
+    { icon: Battery, title: c.system3Title, subtitle: c.system3Subtitle, desc: c.system3Desc, benefits: c.system3Benefits, gradient: "from-emerald-500 to-green-600", iconBg: "bg-gradient-to-br from-emerald-500 to-green-600", image: systemBatteryImage, imageAlt: "Samsung SDI lityum iyon batarya depolama sistemi villa enerji depolama gece kullanımı Antalya", imageTitle: "Samsung SDI batarya depolama sistemi fiyatları 2026 Antalya villa - lityum iyon enerji depolama" },
+    { icon: Droplets, title: c.system4Title, subtitle: c.system4Subtitle, desc: c.system4Desc, benefits: c.system4Benefits, gradient: "from-cyan-500 to-blue-600", iconBg: "bg-gradient-to-br from-cyan-500 to-blue-600", image: systemHotWaterImage, imageAlt: "Güneş enerjisi ısı pompası sıcak su depolama sistemi villa boyler kurulumu Akdeniz villası", imageTitle: "Sıcak su depolama sistemi güneş enerjisi ısı pompası ile Akdeniz villası - boyler kurulumu fiyatları" },
   ];
 
   const expansions = [
@@ -468,7 +468,7 @@ export default function Vorteile() {
       
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center pt-16 sm:pt-20" data-testid="section-vorteile-hero">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="089 Bayern 4 in 1 enerji sistemi avantajları Antalya villa güneş paneli ısı pompası klima batarya ile yüzde 70 tasarruf Akdeniz bölgesi" className="w-full h-full object-cover" decoding="async" />
+          <img src={heroImage} alt="089 Bayern 4 in 1 enerji sistemi avantajları Antalya villa güneş paneli ısı pompası klima batarya ile yüzde 70 tasarruf Akdeniz bölgesi" title="4-in-1 enerji sistemi avantajları Antalya villa - güneş paneli ısı pompası klima batarya ile %70 tasarruf 2026" className="w-full h-full object-cover" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         </div>
         
@@ -599,6 +599,7 @@ export default function Vorteile() {
                   <img 
                     src={item.image} 
                     alt={item.imageAlt}
+                    title={item.imageTitle}
                     className="w-full h-40 object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                     decoding="async"
@@ -626,6 +627,7 @@ export default function Vorteile() {
               <img 
                 src={consultationActionImage} 
                 alt="089 Bayern enerji danışmanı villa sahibine %70 elektrik tasarrufu gösteriyor - güneş paneli ısı pompası klima batarya sistemi fiyat hesaplama Antalya Alanya Türkiye" 
+                title="Enerji danışmanı %70 elektrik tasarrufu gösteriyor Antalya villa - güneş paneli ısı pompası fiyat hesaplama 2026"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"
@@ -662,6 +664,7 @@ export default function Vorteile() {
                   <img 
                     src={system.image} 
                     alt={system.imageAlt}
+                    title={system.imageTitle}
                     className="w-full h-56 md:h-72 object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                     decoding="async"

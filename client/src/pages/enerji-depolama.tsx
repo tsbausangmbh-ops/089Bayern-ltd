@@ -431,6 +431,7 @@ export default function EnerjiDepolama() {
               <img 
                 src={batterySystemImage} 
                 alt="089 Bayern Samsung All-in-One lityum iyon batarya depolama sistemi kurulumu Antalya villasında 10 kWh 15 kWh kapasite 7/24 kesintisiz enerji güneş paneli entegrasyonu" 
+                title="Samsung lityum iyon batarya depolama sistemi kurulumu fiyatları 2026 Antalya villa - 10 kWh 15 kWh kesintisiz enerji"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"
@@ -441,6 +442,7 @@ export default function EnerjiDepolama() {
               <img 
                 src={batteryMonitoringImage} 
                 alt="089 Bayern enerji izleme ve akıllı kontrol sistemi villa enerji yönetimi güneş paneli batarya depolama performans takibi Antalya Alanya Akdeniz Türkiye" 
+                title="Akıllı enerji izleme kontrol sistemi Antalya villa - güneş paneli batarya depolama performans takibi 2026"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"

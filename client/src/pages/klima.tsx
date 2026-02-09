@@ -496,6 +496,7 @@ export default function Klima() {
               <img 
                 src={climateIndoorImage} 
                 alt="089 Bayern Samsung WindFree klima iç ünite kurulumu Akdeniz villasında enerji verimli sessiz soğutma ısıtma multi split sistem montajı Antalya" 
+                title="Samsung WindFree klima iç ünite kurulumu fiyatları 2026 Antalya villa - sessiz enerji verimli soğutma sistemi"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"
@@ -506,6 +507,7 @@ export default function Klima() {
               <img 
                 src={climateOutdoorImage} 
                 alt="089 Bayern Samsung klima dış ünite montajı profesyonel ekip tarafından Antalya villa inverter klima sistemi kurulumu fiyatları Akdeniz bölgesi" 
+                title="Samsung klima dış ünite montajı fiyatları 2026 Antalya villa - inverter klima sistemi profesyonel kurulum"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"

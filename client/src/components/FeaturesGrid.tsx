@@ -23,6 +23,7 @@ export default function FeaturesGrid() {
       iconBg: "bg-gradient-to-br from-sky-500 to-blue-600",
       image: workerClimateImage,
       seoAlt: "089 Bayern teknisyeni Samsung WindFree klima iç dış ünite montajı yapıyor Antalya villası enerji verimli sessiz soğutma ısıtma sistemi kurulumu Akdeniz",
+      seoTitle: "Samsung WindFree klima kurulumu fiyatları 2026 Antalya villa - sessiz enerji verimli soğutma ısıtma montajı",
     },
     {
       icon: Flame,
@@ -35,6 +36,7 @@ export default function FeaturesGrid() {
       iconBg: "bg-gradient-to-br from-orange-500 to-red-600",
       image: workerHeatPumpImage,
       seoAlt: "089 Bayern ekibi Vaillant aroTHERM ısı pompası dış ünite profesyonel montajı villa ısıtma soğutma sistemi kurulumu Antalya Alanya Akdeniz bölgesi",
+      seoTitle: "Vaillant aroTHERM ısı pompası montajı fiyatları 2026 Antalya Alanya villa - profesyonel kurulum Alman kalitesi",
     },
     {
       icon: Sun,
@@ -47,6 +49,7 @@ export default function FeaturesGrid() {
       iconBg: "bg-gradient-to-br from-amber-500 to-yellow-500",
       image: workerSolarImage,
       seoAlt: "089 Bayern teknisyeni güneş paneli inverter kablo bağlantısı yapıyor villa çatısı photovoltaik sistem kurulumu Antalya Alanya Akdeniz",
+      seoTitle: "Güneş paneli inverter kablo montajı fiyatları 2026 Antalya - villa çatısı photovoltaik sistem kurulumu",
     },
     {
       icon: Battery,
@@ -59,6 +62,7 @@ export default function FeaturesGrid() {
       iconBg: "bg-gradient-to-br from-emerald-500 to-green-600",
       image: workerBatteryImage,
       seoAlt: "089 Bayern lityum iyon batarya depolama sistemi profesyonel kurulumu villa enerji depolama güneş enerjisi gece kullanımı Antalya Türkiye",
+      seoTitle: "Lityum iyon batarya depolama sistemi kurulumu fiyatları 2026 Antalya villa - güneş enerjisi gece kullanımı",
     },
   ];
 
@@ -95,6 +99,7 @@ export default function FeaturesGrid() {
                 <img 
                   src={feature.image} 
                   alt={feature.seoAlt}
+                  title={feature.seoTitle}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   decoding="async"

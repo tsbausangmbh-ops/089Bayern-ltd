@@ -146,6 +146,7 @@ export default function BenefitsSection() {
           <img 
             src={happyCustomerImage} 
             alt="089 Bayern mutlu villa sahipleri Antalya Alanya - güneş paneli ısı pompası klima batarya kurulumu başarılı referanslar Akdeniz Türkiye" 
+            title="Antalya villasında 089 Bayern enerji sistemi kurulumu sonrası mutlu müşteri referansı - güneş paneli ısı pompası klima batarya"
             className="w-full h-48 sm:h-64 md:h-80 object-cover"
             loading="lazy"
             decoding="async"

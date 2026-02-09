@@ -729,6 +729,7 @@ export default function Rechner() {
               <img 
                 src={calculatorTabletImage} 
                 alt="089 Bayern enerji tasarruf hesaplayıcı Antalya - güneş paneli ısı pompası klima batarya maliyeti hesaplama villaları için Türkiye" 
+                title="Enerji tasarruf hesaplayıcı Antalya villa - güneş paneli ısı pompası klima batarya maliyet hesaplama fiyatları 2026"
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"
