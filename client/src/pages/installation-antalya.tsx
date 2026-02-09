@@ -11,10 +11,10 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { LinkedText } from "@/components/LinkedText";
-import heroImage from "@assets/images/optimized/hero-antalya.jpg";
-import roofInstallationImage from "@assets/images/optimized/antalya-roof-installation.jpg";
-import heatpumpInspectionImage from "@assets/images/optimized/antalya-heatpump-inspection.jpg";
-import teamCompletedImage from "@assets/images/optimized/antalya-team-completed-system.jpg";
+import heroImage from "@assets/images/webp/hero-antalya.webp";
+import roofInstallationImage from "@assets/images/webp/antalya-roof-installation.webp";
+import heatpumpInspectionImage from "@assets/images/webp/antalya-heatpump-inspection.webp";
+import teamCompletedImage from "@assets/images/webp/antalya-team-completed-system.webp";
 
 const content = {
   de: {
@@ -1325,6 +1325,7 @@ export default function InstallationAntalya() {
                 alt="089 Bayern güneş paneli kurulumu Antalya villa çatısında profesyonel montaj ekibi solar panel sistemi fiyatları 2026 Kemer Belek Side Alanya" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-roof-installation"
               />
             </div>
@@ -1334,6 +1335,7 @@ export default function InstallationAntalya() {
                 alt="089 Bayern Vaillant ısı pompası kurulum kontrolü ve kalite denetimi Antalya Alman DIN standartları yetkili servis 10 yıl garanti Akdeniz villası" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-heatpump-inspection"
               />
             </div>
@@ -1350,6 +1352,7 @@ export default function InstallationAntalya() {
               alt="089 Bayern kurulum ekibi tamamlanmış 4-in-1 enerji sistemi önünde Antalya villası güneş paneli ısı pompası klima batarya başarılı proje referans Türkiye" 
               className="w-full h-80 md:h-[500px] object-cover"
               loading="lazy"
+              decoding="async"
               data-testid="img-team-completed"
             />
           </div>

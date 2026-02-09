@@ -16,8 +16,8 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { LinkedText } from "@/components/LinkedText";
-import heroImage from "@assets/images/optimized/hero-faq.jpg";
-import consultationImage from "@assets/images/optimized/heatpump-consultation.jpg";
+import heroImage from "@assets/images/webp/hero-faq.webp";
+import consultationImage from "@assets/images/webp/heatpump-consultation.webp";
 
 export default function FAQ() {
   const { language } = useLanguage();
@@ -594,6 +594,7 @@ export default function FAQ() {
                 alt="089 Bayern ücretsiz enerji danışmanlığı Antalya - güneş paneli ısı pompası klima batarya sistemi uzman desteği Türkiye" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-consultation"
               />
             </div>

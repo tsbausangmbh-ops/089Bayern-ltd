@@ -12,9 +12,9 @@ import TrustCallToAction from "@/components/TrustCallToAction";
 import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { LinkedText } from "@/components/LinkedText";
-import heroImage from "@assets/images/optimized/hero-heat-pump.jpg";
-import heatpumpDetailImage from "@assets/images/optimized/heatpump-detail.jpg";
-import heatpumpConsultationImage from "@assets/images/optimized/heatpump-consultation.jpg";
+import heroImage from "@assets/images/webp/hero-heat-pump.webp";
+import heatpumpDetailImage from "@assets/images/webp/heatpump-detail.webp";
+import heatpumpConsultationImage from "@assets/images/webp/heatpump-consultation.webp";
 
 export default function IsiPompasi() {
   const { language } = useLanguage();
@@ -821,6 +821,7 @@ export default function IsiPompasi() {
                 alt="089 Bayern Vaillant aroTHERM ısı pompası teknik detay ve profesyonel kurulum Antalya villası hava kaynaklı ısıtma soğutma sistemi Alman kalitesi COP 5.0" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-heatpump-detail"
               />
             </div>
@@ -830,6 +831,7 @@ export default function IsiPompasi() {
                 alt="089 Bayern enerji danışmanı Vaillant ısı pompası sistemi hakkında villa sahibine ücretsiz keşif ve fiyat teklifi sunuyor Antalya Alanya Akdeniz Türkiye" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-heatpump-consultation"
               />
             </div>

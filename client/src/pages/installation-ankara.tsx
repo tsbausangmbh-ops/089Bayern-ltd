@@ -11,9 +11,9 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { LinkedText } from "@/components/LinkedText";
-import heroImage from "@assets/images/optimized/hero-ankara.jpg";
-import teamWorkImage from "@assets/images/optimized/installation-team-work.jpg";
-import inspectionImage from "@assets/images/optimized/ankara-inspection.jpg";
+import heroImage from "@assets/images/webp/hero-ankara.webp";
+import teamWorkImage from "@assets/images/webp/installation-team-work.webp";
+import inspectionImage from "@assets/images/webp/ankara-inspection.webp";
 
 const content = {
   de: {
@@ -1258,6 +1258,7 @@ export default function InstallationAnkara() {
                 alt="089 Bayern kurulum ekibi Ankara villasında güneş paneli ve Vaillant ısı pompası montajı yapıyor başkent 4-in-1 enerji sistemi Çankaya Keçiören Yenimahalle" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-team-work"
               />
             </div>
@@ -1267,6 +1268,7 @@ export default function InstallationAnkara() {
                 alt="089 Bayern profesyonel kurulum kontrolü ve kalite denetimi Ankara villa enerji sistemi Alman DIN standartları güneş paneli ısı pompası bakım servisi" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-inspection"
               />
             </div>

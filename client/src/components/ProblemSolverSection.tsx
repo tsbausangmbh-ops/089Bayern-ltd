@@ -21,7 +21,7 @@ import {
   Sun
 } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
-import businessHandshakeImage from "@assets/images/optimized/business-handshake-office.jpg";
+import businessHandshakeImage from "@assets/images/webp/business-handshake-office.webp";
 
 export default function ProblemSolverSection() {
   const { language } = useLanguage();
@@ -584,6 +584,7 @@ export default function ProblemSolverSection() {
                   alt="089 Bayern Mustafa Sakar profesyonel enerji danışmanlığı Antalya - villa sahipleri için güneş paneli ısı pompası klima batarya sistemi sözleşmesi Türkiye" 
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary/20 md:bg-gradient-to-t md:from-transparent md:to-transparent" />
               </div>

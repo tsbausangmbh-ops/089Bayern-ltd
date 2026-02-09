@@ -11,16 +11,16 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
-import heroImage from "@assets/images/optimized/hero-benefits.jpg";
-import consultationActionImage from "@assets/images/optimized/benefits-consultation-action.jpg";
-import freeElectricityImage from "@assets/images/optimized/benefit-free-electricity.jpg";
-import freeHeatingImage from "@assets/images/optimized/benefit-free-heating.jpg";
-import freeCoolingImage from "@assets/images/optimized/benefit-free-cooling.jpg";
-import freeHotWaterImage from "@assets/images/optimized/benefit-free-hotwater.jpg";
-import systemSolarImage from "@assets/images/optimized/system-solar-panels.jpg";
-import systemHeatPumpImage from "@assets/images/optimized/system-heat-pump.jpg";
-import systemBatteryImage from "@assets/images/optimized/system-battery-storage.jpg";
-import systemHotWaterImage from "@assets/images/optimized/system-hot-water-tank.jpg";
+import heroImage from "@assets/images/webp/hero-benefits.webp";
+import consultationActionImage from "@assets/images/webp/benefits-consultation-action.webp";
+import freeElectricityImage from "@assets/images/webp/benefit-free-electricity.webp";
+import freeHeatingImage from "@assets/images/webp/benefit-free-heating.webp";
+import freeCoolingImage from "@assets/images/webp/benefit-free-cooling.webp";
+import freeHotWaterImage from "@assets/images/webp/benefit-free-hotwater.webp";
+import systemSolarImage from "@assets/images/webp/system-solar-panels.webp";
+import systemHeatPumpImage from "@assets/images/webp/system-heat-pump.webp";
+import systemBatteryImage from "@assets/images/webp/system-battery-storage.webp";
+import systemHotWaterImage from "@assets/images/webp/system-hot-water-tank.webp";
 
 export default function Vorteile() {
   const { language } = useLanguage();
@@ -468,7 +468,7 @@ export default function Vorteile() {
       
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center pt-16 sm:pt-20" data-testid="section-vorteile-hero">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="089 Bayern 4 in 1 enerji sistemi avantajları Antalya villa güneş paneli ısı pompası klima batarya ile yüzde 70 tasarruf Akdeniz bölgesi" className="w-full h-full object-cover" />
+          <img src={heroImage} alt="089 Bayern 4 in 1 enerji sistemi avantajları Antalya villa güneş paneli ısı pompası klima batarya ile yüzde 70 tasarruf Akdeniz bölgesi" className="w-full h-full object-cover" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         </div>
         
@@ -601,6 +601,7 @@ export default function Vorteile() {
                     alt={item.imageAlt}
                     className="w-full h-40 object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    decoding="async"
                     data-testid={`img-free-energy-${index}`}
                   />
                 </div>
@@ -627,6 +628,7 @@ export default function Vorteile() {
                 alt="089 Bayern enerji danışmanı villa sahibine %70 elektrik tasarrufu gösteriyor - güneş paneli ısı pompası klima batarya sistemi fiyat hesaplama Antalya Alanya Türkiye" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-consultation-action"
               />
             </div>
@@ -662,6 +664,7 @@ export default function Vorteile() {
                     alt={system.imageAlt}
                     className="w-full h-56 md:h-72 object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    decoding="async"
                     data-testid={`img-system-${index}`}
                   />
                 </div>

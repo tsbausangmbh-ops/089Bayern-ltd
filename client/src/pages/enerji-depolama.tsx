@@ -12,9 +12,9 @@ import TrustCallToAction from "@/components/TrustCallToAction";
 import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { LinkedText } from "@/components/LinkedText";
-import heroImage from "@assets/images/optimized/hero-battery-storage.jpg";
-import batterySystemImage from "@assets/images/optimized/battery-system-installed.jpg";
-import batteryMonitoringImage from "@assets/images/optimized/battery-monitoring.jpg";
+import heroImage from "@assets/images/webp/hero-battery-storage.webp";
+import batterySystemImage from "@assets/images/webp/battery-system-installed.webp";
+import batteryMonitoringImage from "@assets/images/webp/battery-monitoring.webp";
 
 export default function EnerjiDepolama() {
   const { language } = useLanguage();
@@ -433,6 +433,7 @@ export default function EnerjiDepolama() {
                 alt="089 Bayern Samsung All-in-One lityum iyon batarya depolama sistemi kurulumu Antalya villasında 10 kWh 15 kWh kapasite 7/24 kesintisiz enerji güneş paneli entegrasyonu" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-battery-system"
               />
             </div>
@@ -442,6 +443,7 @@ export default function EnerjiDepolama() {
                 alt="089 Bayern enerji izleme ve akıllı kontrol sistemi villa enerji yönetimi güneş paneli batarya depolama performans takibi Antalya Alanya Akdeniz Türkiye" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-battery-monitoring"
               />
             </div>

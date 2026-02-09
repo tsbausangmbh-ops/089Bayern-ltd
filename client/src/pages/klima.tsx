@@ -12,9 +12,9 @@ import TrustCallToAction from "@/components/TrustCallToAction";
 import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { LinkedText } from "@/components/LinkedText";
-import heroImage from "@assets/images/optimized/hero-climate.jpg";
-import climateIndoorImage from "@assets/images/optimized/climate-indoor-unit.jpg";
-import climateOutdoorImage from "@assets/images/optimized/climate-outdoor-install.jpg";
+import heroImage from "@assets/images/webp/hero-climate.webp";
+import climateIndoorImage from "@assets/images/webp/climate-indoor-unit.webp";
+import climateOutdoorImage from "@assets/images/webp/climate-outdoor-install.webp";
 
 export default function Klima() {
   const { language } = useLanguage();
@@ -498,6 +498,7 @@ export default function Klima() {
                 alt="089 Bayern Samsung WindFree klima iç ünite kurulumu Akdeniz villasında enerji verimli sessiz soğutma ısıtma multi split sistem montajı Antalya" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-climate-indoor"
               />
             </div>
@@ -507,6 +508,7 @@ export default function Klima() {
                 alt="089 Bayern Samsung klima dış ünite montajı profesyonel ekip tarafından Antalya villa inverter klima sistemi kurulumu fiyatları Akdeniz bölgesi" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-climate-outdoor"
               />
             </div>

@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Sun, Thermometer, Zap, Users } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
-import teamSolarImage from "@assets/images/optimized/team-solar-no-helmet.jpg";
-import teamHeatPumpImage from "@assets/images/optimized/team-heatpump-no-helmet.jpg";
-import teamPvImage from "@assets/images/optimized/team-pv-no-helmet.jpg";
+import teamSolarImage from "@assets/images/webp/team-solar-no-helmet.webp";
+import teamHeatPumpImage from "@assets/images/webp/team-heatpump-no-helmet.webp";
+import teamPvImage from "@assets/images/webp/team-pv-no-helmet.webp";
 
 export default function TeamWorkSection() {
   const { language } = useLanguage();
@@ -144,6 +144,7 @@ export default function TeamWorkSection() {
                   alt={item.seoAlt}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className={`absolute top-4 ${isRTL ? 'right-4' : 'left-4'} w-10 h-10 rounded-lg bg-gradient-to-br ${item.gradient} flex items-center justify-center shadow-lg`}>

@@ -2,10 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Snowflake, Flame, Sun, Battery, Check, Sparkles } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
-import workerClimateImage from "@assets/images/optimized/worker-climate-unit.jpg";
-import workerHeatPumpImage from "@assets/images/optimized/team-heat-pump-installation.jpg";
-import workerSolarImage from "@assets/images/optimized/worker-solar-inverter.jpg";
-import workerBatteryImage from "@assets/images/optimized/worker-battery-storage.jpg";
+import workerClimateImage from "@assets/images/webp/worker-climate-unit.webp";
+import workerHeatPumpImage from "@assets/images/webp/team-heat-pump-installation.webp";
+import workerSolarImage from "@assets/images/webp/worker-solar-inverter.webp";
+import workerBatteryImage from "@assets/images/webp/worker-battery-storage.webp";
 
 export default function FeaturesGrid() {
   const { language } = useLanguage();
@@ -97,6 +97,7 @@ export default function FeaturesGrid() {
                   alt={feature.seoAlt}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
                 <div className={`absolute bottom-3 left-3 sm:bottom-4 sm:left-4 w-10 h-10 sm:w-12 sm:h-12 rounded-xl ${feature.iconBg} flex items-center justify-center shadow-lg`}>

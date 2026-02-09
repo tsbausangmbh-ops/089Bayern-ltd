@@ -13,12 +13,12 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
-import heroImage from "@assets/images/optimized/hero-system.jpg";
-import systemPresentationImage from "@assets/images/optimized/system-presentation.jpg";
-import climateInstallImage from "@assets/images/optimized/system-climate-install.jpg";
-import heatpumpInstallImage from "@assets/images/optimized/system-heatpump-install.jpg";
-import solarInstallImage from "@assets/images/optimized/system-solar-install.jpg";
-import batteryInstallImage from "@assets/images/optimized/system-battery-install.jpg";
+import heroImage from "@assets/images/webp/hero-system.webp";
+import systemPresentationImage from "@assets/images/webp/system-presentation.webp";
+import climateInstallImage from "@assets/images/webp/system-climate-install.webp";
+import heatpumpInstallImage from "@assets/images/webp/system-heatpump-install.webp";
+import solarInstallImage from "@assets/images/webp/system-solar-install.webp";
+import batteryInstallImage from "@assets/images/webp/system-battery-install.webp";
 
 export default function Systeme() {
   const { language } = useLanguage();
@@ -541,6 +541,7 @@ export default function Systeme() {
                 alt="089 Bayern 4'ü 1 arada enerji sistemi sunumu Antalya - Alman kalitesi güneş paneli Vaillant ısı pompası Samsung klima batarya depolama Türkiye" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-team-meeting"
               />
             </div>
@@ -602,6 +603,7 @@ export default function Systeme() {
                     alt={feature.imageAlt}
                     className="w-full h-56 md:h-72 object-cover hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    decoding="async"
                     data-testid={`img-system-${index}`}
                   />
                 </div>

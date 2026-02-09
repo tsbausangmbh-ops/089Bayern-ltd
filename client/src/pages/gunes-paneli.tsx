@@ -12,9 +12,9 @@ import TrustCallToAction from "@/components/TrustCallToAction";
 import SectionCTA from "@/components/SectionCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { LinkedText } from "@/components/LinkedText";
-import heroImage from "@assets/images/optimized/hero-solar-panel.jpg";
-import solarDetailImage from "@assets/images/optimized/solar-detail-wiring.jpg";
-import solarTestingImage from "@assets/images/optimized/solar-testing.jpg";
+import heroImage from "@assets/images/webp/hero-solar-panel.webp";
+import solarDetailImage from "@assets/images/webp/solar-detail-wiring.webp";
+import solarTestingImage from "@assets/images/webp/solar-testing.webp";
 
 export default function GunesPaneli() {
   const { language } = useLanguage();
@@ -429,6 +429,7 @@ export default function GunesPaneli() {
                 alt="089 Bayern profesyonel güneş paneli kablo bağlantısı ve montaj detayı Antalya villası çatısında solar panel kurulumu fiyatları 2026 Akdeniz bölgesi" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-solar-detail"
               />
             </div>
@@ -438,6 +439,7 @@ export default function GunesPaneli() {
                 alt="089 Bayern teknisyeni güneş paneli test ölçüm ve verimlilik kontrolü yapıyor Akdeniz villası photovoltaik sistem performans analizi Antalya Alanya" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-solar-testing"
               />
             </div>

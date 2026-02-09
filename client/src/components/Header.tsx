@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Globe, ChevronDown, MapPin, Sun, Thermometer, Wind, Battery, Building2, Award, Calculator, HelpCircle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import logoImage from "@assets/logo-white.png";
+import logoImage from "@assets/logo-white.webp";
 import {
   DropdownMenu,
   DropdownMenuContent,

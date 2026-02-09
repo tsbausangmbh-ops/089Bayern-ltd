@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, Shield, Award, MapPin, ArrowRight, Phone, Mail, MessageCircle } from "lucide-react";
-import heroImage from "@assets/images/optimized/hero-villa-solar.jpg";
+import heroImage from "@assets/images/webp/hero-villa-solar.webp";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
 

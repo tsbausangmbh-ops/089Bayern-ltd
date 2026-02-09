@@ -11,8 +11,8 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import TeamSection from "@/components/TeamSection";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
-import heroImage from "@assets/images/optimized/hero-about.jpg";
-import teamMeetingImage from "@assets/images/optimized/team-meeting.jpg";
+import heroImage from "@assets/images/webp/hero-about.webp";
+import teamMeetingImage from "@assets/images/webp/team-meeting.webp";
 
 export default function UeberUns() {
   const { language } = useLanguage();
@@ -551,6 +551,8 @@ export default function UeberUns() {
                 src={teamMeetingImage} 
                 alt="089 Bayern Almanya Türkiye profesyonel enerji sistemi ekibi - Mustafa Sakar Dalibor Bakmaz güneş paneli ısı pompası uzmanları Antalya" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
                 data-testid="img-team-meeting"
               />
             </div>

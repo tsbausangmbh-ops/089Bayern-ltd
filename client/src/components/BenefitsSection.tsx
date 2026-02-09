@@ -2,7 +2,7 @@ import { Check, TrendingDown, Shield, Home, Leaf, Wallet, Users, Zap, Award } fr
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
-import happyCustomerImage from "@assets/images/optimized/happy-customer.jpg";
+import happyCustomerImage from "@assets/images/webp/happy-customer.webp";
 
 export default function BenefitsSection() {
   const { language } = useLanguage();
@@ -148,6 +148,7 @@ export default function BenefitsSection() {
             alt="089 Bayern mutlu villa sahipleri Antalya Alanya - güneş paneli ısı pompası klima batarya kurulumu başarılı referanslar Akdeniz Türkiye" 
             className="w-full h-48 sm:h-64 md:h-80 object-cover"
             loading="lazy"
+            decoding="async"
           />
         </div>
 

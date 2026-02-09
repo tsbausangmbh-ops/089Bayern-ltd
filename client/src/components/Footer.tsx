@@ -3,8 +3,8 @@ import { SiWhatsapp } from "react-icons/si";
 import { useLanguage } from "@/lib/LanguageContext";
 import { uiTranslations } from "@/lib/uiTranslations";
 import { getLocalizedUrl, getOfficeBadge } from "@/lib/urlTranslations";
-import heroImage from "@assets/images/optimized/hero-villa-solar.jpg";
-import logoImage from "@assets/logo-white.png";
+import heroImage from "@assets/images/webp/hero-villa-solar.webp";
+import logoImage from "@assets/logo-white.webp";
 
 export default function Footer() {
   const { language } = useLanguage();
@@ -67,6 +67,7 @@ export default function Footer() {
                 alt="089 Bayern Premium 4'ü 1 arada enerji sistemleri Türkiye - Almanya kalitesi güneş paneli Vaillant ısı pompası Samsung klima batarya depolama kurulumu Antalya Alanya Akdeniz villaları" 
                 className="h-12 sm:h-16 w-auto object-contain rounded-lg"
                 loading="lazy"
+                decoding="async"
               />
               <div>
                 <span className="block text-lg sm:text-xl font-bold text-white">089 Bayern</span>

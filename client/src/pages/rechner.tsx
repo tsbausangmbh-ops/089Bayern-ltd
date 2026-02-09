@@ -11,8 +11,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calculator, Sun, Zap, TrendingUp, Shield, CheckCircle, Euro, Leaf, Home, Battery, ThermometerSun, Snowflake, ArrowRight, Clock, Award, Users, Phone } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
-import heroImage from "@assets/images/optimized/hero-calculator.jpg";
-import calculatorTabletImage from "@assets/images/optimized/calculator-tablet.jpg";
+import heroImage from "@assets/images/webp/hero-calculator.webp";
+import calculatorTabletImage from "@assets/images/webp/calculator-tablet.webp";
 
 interface CalculatorData {
   propertyType: string;
@@ -731,6 +731,7 @@ export default function Rechner() {
                 alt="089 Bayern enerji tasarruf hesaplayıcı Antalya - güneş paneli ısı pompası klima batarya maliyeti hesaplama villaları için Türkiye" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-calculator-tablet"
               />
             </div>

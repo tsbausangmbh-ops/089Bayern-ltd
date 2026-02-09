@@ -11,9 +11,9 @@ import CrossLinks from "@/components/CrossLinks";
 import TrustCallToAction from "@/components/TrustCallToAction";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { LinkedText } from "@/components/LinkedText";
-import heroImage from "@assets/images/optimized/hero-alanya.jpg";
-import teamWorkImage from "@assets/images/optimized/installation-team-work.jpg";
-import deliveryImage from "@assets/images/optimized/alanya-delivery.jpg";
+import heroImage from "@assets/images/webp/hero-alanya.webp";
+import teamWorkImage from "@assets/images/webp/installation-team-work.webp";
+import deliveryImage from "@assets/images/webp/alanya-delivery.webp";
 
 const content = {
   de: {
@@ -911,7 +911,7 @@ export default function InstallationAlanya() {
       {/* Hero Section */}
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center pt-16 sm:pt-20" data-testid="section-hero">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="089 Bayern güneş paneli Vaillant ısı pompası Samsung klima batarya kurulumu Alanya villası - 4'ü 1 arada premium enerji sistemi %70 tasarruf 300 güneşli gün Akdeniz Türkiye" className="w-full h-full object-cover" />
+          <img src={heroImage} alt="089 Bayern güneş paneli Vaillant ısı pompası Samsung klima batarya kurulumu Alanya villası - 4'ü 1 arada premium enerji sistemi %70 tasarruf 300 güneşli gün Akdeniz Türkiye" className="w-full h-full object-cover" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         </div>
         
@@ -1117,6 +1117,7 @@ export default function InstallationAlanya() {
                 alt="089 Bayern kurulum ekibi Alanya villasında güneş paneli ve Vaillant ısı pompası montajı yapıyor profesyonel 4-in-1 enerji sistemi kurulumu Akdeniz sahili" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-team-work"
               />
             </div>
@@ -1126,6 +1127,7 @@ export default function InstallationAlanya() {
                 alt="089 Bayern Samsung ve Vaillant premium enerji ekipmanları teslimi Alanya villasına profesyonel lojistik Alman kalitesi ısı pompası klima batarya Türkiye" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 data-testid="img-delivery"
               />
             </div>

@@ -6,7 +6,7 @@ import { getLocalizedUrl } from "@/lib/urlTranslations";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import heroImage from "@assets/images/optimized/hero-villa-solar.jpg";
+import heroImage from "@assets/images/webp/hero-villa-solar.webp";
 
 export default function Standorte() {
   const { language } = useLanguage();
