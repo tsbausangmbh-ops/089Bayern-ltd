@@ -92,6 +92,7 @@ export default function TeamWorkSection() {
       description: t.solar.desc,
       icon: Sun,
       gradient: "from-amber-500 to-yellow-500",
+      seoAlt: "089 Bayern ekibi villa çatısına güneş paneli montajı yapıyor Antalya profesyonel solar panel kurulum ekibi Akdeniz bölgesi",
     },
     {
       image: teamHeatPumpImage,
@@ -99,6 +100,7 @@ export default function TeamWorkSection() {
       description: t.heatPump.desc,
       icon: Thermometer,
       gradient: "from-orange-500 to-red-500",
+      seoAlt: "089 Bayern teknisyenleri Vaillant ısı pompası dış ünite montajı yapıyor villa ısıtma soğutma sistemi kurulumu Antalya",
     },
     {
       image: teamPvImage,
@@ -106,6 +108,7 @@ export default function TeamWorkSection() {
       description: t.pv.desc,
       icon: Zap,
       gradient: "from-blue-500 to-indigo-500",
+      seoAlt: "089 Bayern elektrik ekibi photovoltaik inverter kablo bağlantısı güneş paneli elektrik tesisatı villa çatısı Antalya",
     },
   ];
 
@@ -138,7 +141,7 @@ export default function TeamWorkSection() {
               <div className="relative aspect-video overflow-hidden">
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={item.seoAlt}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />

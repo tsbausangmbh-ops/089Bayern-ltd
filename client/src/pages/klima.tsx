@@ -315,7 +315,7 @@ export default function Klima() {
 
   return (
     <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-klima">
-      <SEOHead page="systeme" />
+      <SEOHead page="klima" />
       <Header onCtaClick={goToContact} />
       
       <section className="relative pt-16 sm:pt-20 pb-12 sm:pb-16 overflow-hidden" data-testid="section-climate-hero">

@@ -434,17 +434,17 @@ export default function Vorteile() {
   ];
 
   const freeEnergy = [
-    { icon: Zap, title: c.freeElectricity, desc: c.freeElectricityDesc, gradient: "from-amber-500 to-yellow-500", image: freeElectricityImage, imageAlt: "Kostenloser Strom durch Solarenergie" },
-    { icon: Flame, title: c.freeHeating, desc: c.freeHeatingDesc, gradient: "from-orange-500 to-red-500", image: freeHeatingImage, imageAlt: "Kostenlose Heizung mit Wärmepumpe" },
-    { icon: Snowflake, title: c.freeCooling, desc: c.freeCoolingDesc, gradient: "from-sky-400 to-blue-500", image: freeCoolingImage, imageAlt: "Kostenlose Kühlung mit Samsung Klima" },
-    { icon: Droplets, title: c.freeHotWater, desc: c.freeHotWaterDesc, gradient: "from-cyan-500 to-teal-500", image: freeHotWaterImage, imageAlt: "Kostenloses Warmwasser" },
+    { icon: Zap, title: c.freeElectricity, desc: c.freeElectricityDesc, gradient: "from-amber-500 to-yellow-500", image: freeElectricityImage, imageAlt: "Güneş paneli ile ücretsiz elektrik üretimi Antalya villasında 300 güneşli gün yıllık enerji tasarrufu" },
+    { icon: Flame, title: c.freeHeating, desc: c.freeHeatingDesc, gradient: "from-orange-500 to-red-500", image: freeHeatingImage, imageAlt: "Vaillant ısı pompası ile ücretsiz ısıtma kış aylarında Akdeniz villası yerden ısıtma sistemi" },
+    { icon: Snowflake, title: c.freeCooling, desc: c.freeCoolingDesc, gradient: "from-sky-400 to-blue-500", image: freeCoolingImage, imageAlt: "Samsung WindFree klima ile ücretsiz soğutma yaz aylarında villa enerji verimli sessiz klima sistemi" },
+    { icon: Droplets, title: c.freeHotWater, desc: c.freeHotWaterDesc, gradient: "from-cyan-500 to-teal-500", image: freeHotWaterImage, imageAlt: "Güneş enerjisi ve ısı pompası ile ücretsiz sıcak su villa boyler sistemi Akdeniz bölgesi" },
   ];
 
   const systems = [
-    { icon: Sun, title: c.system1Title, subtitle: c.system1Subtitle, desc: c.system1Desc, benefits: c.system1Benefits, gradient: "from-amber-500 to-yellow-500", iconBg: "bg-gradient-to-br from-amber-500 to-yellow-500", image: systemSolarImage, imageAlt: "Photovoltaik Solaranlage Installation" },
-    { icon: ThermometerSun, title: c.system2Title, subtitle: c.system2Subtitle, desc: c.system2Desc, benefits: c.system2Benefits, gradient: "from-orange-500 to-red-500", iconBg: "bg-gradient-to-br from-orange-500 to-red-500", image: systemHeatPumpImage, imageAlt: "Vaillant Wärmepumpe Installation" },
-    { icon: Battery, title: c.system3Title, subtitle: c.system3Subtitle, desc: c.system3Desc, benefits: c.system3Benefits, gradient: "from-emerald-500 to-green-600", iconBg: "bg-gradient-to-br from-emerald-500 to-green-600", image: systemBatteryImage, imageAlt: "Samsung Batteriespeicher System" },
-    { icon: Droplets, title: c.system4Title, subtitle: c.system4Subtitle, desc: c.system4Desc, benefits: c.system4Benefits, gradient: "from-cyan-500 to-blue-600", iconBg: "bg-gradient-to-br from-cyan-500 to-blue-600", image: systemHotWaterImage, imageAlt: "Warmwasserspeicher Installation" },
+    { icon: Sun, title: c.system1Title, subtitle: c.system1Subtitle, desc: c.system1Desc, benefits: c.system1Benefits, gradient: "from-amber-500 to-yellow-500", iconBg: "bg-gradient-to-br from-amber-500 to-yellow-500", image: systemSolarImage, imageAlt: "Photovoltaik güneş paneli sistemi villa çatısı kurulumu Antalya Alanya monokristal panel montajı" },
+    { icon: ThermometerSun, title: c.system2Title, subtitle: c.system2Subtitle, desc: c.system2Desc, benefits: c.system2Benefits, gradient: "from-orange-500 to-red-500", iconBg: "bg-gradient-to-br from-orange-500 to-red-500", image: systemHeatPumpImage, imageAlt: "Vaillant ısı pompası profesyonel kurulumu villa ısıtma soğutma sistemi Antalya Akdeniz bölgesi" },
+    { icon: Battery, title: c.system3Title, subtitle: c.system3Subtitle, desc: c.system3Desc, benefits: c.system3Benefits, gradient: "from-emerald-500 to-green-600", iconBg: "bg-gradient-to-br from-emerald-500 to-green-600", image: systemBatteryImage, imageAlt: "Samsung SDI lityum iyon batarya depolama sistemi villa enerji depolama gece kullanımı Antalya" },
+    { icon: Droplets, title: c.system4Title, subtitle: c.system4Subtitle, desc: c.system4Desc, benefits: c.system4Benefits, gradient: "from-cyan-500 to-blue-600", iconBg: "bg-gradient-to-br from-cyan-500 to-blue-600", image: systemHotWaterImage, imageAlt: "Güneş enerjisi ısı pompası sıcak su depolama sistemi villa boyler kurulumu Akdeniz villası" },
   ];
 
   const expansions = [
@@ -468,7 +468,7 @@ export default function Vorteile() {
       
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center pt-16 sm:pt-20" data-testid="section-vorteile-hero">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="089 Bayern 4-in-1 German System Vorteile" className="w-full h-full object-cover" />
+          <img src={heroImage} alt="089 Bayern 4 in 1 enerji sistemi avantajları Antalya villa güneş paneli ısı pompası klima batarya ile yüzde 70 tasarruf Akdeniz bölgesi" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         </div>
         

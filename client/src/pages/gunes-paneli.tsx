@@ -246,7 +246,7 @@ export default function GunesPaneli() {
 
   return (
     <div className={`min-h-screen bg-background ${isRtl ? "rtl" : ""}`} dir={isRtl ? "rtl" : "ltr"} data-testid="page-gunes-paneli">
-      <SEOHead page="systeme" />
+      <SEOHead page="gunes-paneli" />
       <Header onCtaClick={goToContact} />
       
       <section className="relative pt-16 sm:pt-20 pb-12 sm:pb-16 overflow-hidden" data-testid="section-solar-hero">

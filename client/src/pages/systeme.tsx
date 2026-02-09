@@ -400,7 +400,7 @@ export default function Systeme() {
       bgGradient: "from-sky-500/20 to-blue-600/10",
       iconBg: "bg-gradient-to-br from-sky-500 to-blue-600",
       image: climateInstallImage,
-      imageAlt: "Samsung Klimaanlage Installation",
+      imageAlt: "Samsung WindFree klima iç ve dış ünite profesyonel montajı Antalya villasında enerji verimli soğutma ısıtma sistemi kurulumu",
     },
     {
       icon: Flame,
@@ -412,7 +412,7 @@ export default function Systeme() {
       bgGradient: "from-orange-500/20 to-red-600/10",
       iconBg: "bg-gradient-to-br from-orange-500 to-red-600",
       image: heatpumpInstallImage,
-      imageAlt: "Vaillant Wärmepumpe Installation",
+      imageAlt: "Vaillant aroTHERM ısı pompası dış ünite kurulumu Akdeniz villasında profesyonel montaj kış ısıtma yaz soğutma sistemi",
     },
     {
       icon: Sun,
@@ -424,7 +424,7 @@ export default function Systeme() {
       bgGradient: "from-amber-500/20 to-yellow-500/10",
       iconBg: "bg-gradient-to-br from-amber-500 to-yellow-500",
       image: solarInstallImage,
-      imageAlt: "Solarpanel Installation auf Villadach",
+      imageAlt: "Villa çatısına profesyonel güneş paneli montajı Antalya 6 kWp 10 kWp photovoltaik sistem kurulumu Akdeniz bölgesi",
     },
     {
       icon: Battery,
@@ -436,7 +436,7 @@ export default function Systeme() {
       bgGradient: "from-emerald-500/20 to-green-600/10",
       iconBg: "bg-gradient-to-br from-emerald-500 to-green-600",
       image: batteryInstallImage,
-      imageAlt: "Samsung Batteriespeicher Installation",
+      imageAlt: "Lityum iyon batarya depolama sistemi kurulumu villa enerji depolama 10 kWh 15 kWh güneş enerjisi gece kullanımı",
     },
   ];
 
