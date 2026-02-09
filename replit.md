@@ -150,7 +150,7 @@ NLP-Techniken verwendet: Emotionale Ansprache, Zukunftsvisualisierung, Vergleich
 
 ### Zentrale Preissteuerung
 - **Preisdatei**: `client/src/lib/pricing.ts` - ALLE Preise zentral verwaltet
-- **Wechselkurs**: EUR/TL Kurs in pricing.ts (Dezember 2025: 49.50)
+- **Wechselkurs**: EUR/TL Kurs in pricing.ts (Februar 2026: 51.31)
 - **Preisformat**: Immer "ca." vor allen Preisen, "ohne Gewähr" Hinweis
 - **4-in-1 Systeme**: Standard (6kWp €31.200), Medium (10kWp €41.600), Premium (12kWp €58.500)
 - **Einzelkomponenten**: Solar, Vaillant Wärmepumpe, Samsung Klima, Batteriespeicher

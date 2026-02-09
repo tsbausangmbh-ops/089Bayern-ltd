@@ -61,7 +61,7 @@ export default function LogoCarousel() {
         </div>
         
         <div className="mt-4 text-center">
-          <span className="text-xs text-muted-foreground">Stand 12/2025</span>
+          <span className="text-xs text-muted-foreground">Stand 02/2026</span>
         </div>
       </div>
     </section>
