@@ -37,9 +37,9 @@ const seoData = {
       keywords: "güneş paneli kurulumu kaç gün sürer antalya villa, ısı pompası nasıl çalışır kış aylarında verimlilik sorusu, güneş enerjisi sistemi bakım maliyeti yıllık ne kadar, 4 in 1 enerji sistemi fiyatı ne kadar 2026 türkiye, güneş paneli garanti süresi ve sigorta kapsamı nedir, batarya depolama sistemi kaç yıl dayanır lityum iyon, antalya güneş paneli izin ve ruhsat süreci nasıl işler, vaillant ısı pompası samsung klima yetkili servis türkiye"
     },
     "ueber-uns": {
-      title: "Hakkımızda | München'den Antalya'ya Alman Enerji Uzmanları | 089 Bayern",
-      description: "089 Bayern: 2018'den beri Almanya-Türkiye köprüsü. München'den Antalya, Alanya, Akdeniz bölgesine Alman kalitesi enerji sistemleri. 500+ mutlu aile, 10 yıl garanti.",
-      keywords: "089 bayern almanya türkiye enerji şirketi hakkında bilgi, münih antalya köprüsü alman kalitesi enerji sistemleri, dalibor bakmaz mustafa sakar enerji uzmanları biyografi, 500 aile güneş paneli ısı pompası referans projeleri, alman mühendisliği türkiye akdeniz bölgesi enerji kurulum, 2018 den beri villa enerji çözümleri antalya alanya, alman DIN standartları sertifikalı enerji sistemi montajı, 089 bayern müşteri memnuniyeti ve referanslar türkiye"
+      title: "Hakkımızda | Antalya Merkezli Alman Kalitesi Enerji Uzmanları | 089 Bayern Türkiye",
+      description: "089 Bayern Türkiye: 2018'den beri Antalya merkezli Alman kalitesi enerji sistemleri. Antalya, Alanya, Akdeniz bölgesinde 500+ mutlu aile, 10 yıl garanti.",
+      keywords: "089 bayern türkiye antalya merkezli enerji şirketi hakkında, antalya alman kalitesi enerji sistemleri uzman ekibi, dalibor bakmaz mustafa sakar enerji uzmanları biyografi, 500 aile güneş paneli ısı pompası referans projeleri, alman mühendisliği türkiye akdeniz bölgesi enerji kurulum, 2018 den beri villa enerji çözümleri antalya alanya, alman DIN standartları sertifikalı enerji sistemi montajı, 089 bayern müşteri memnuniyeti ve referanslar türkiye"
     },
     team: {
       title: "Ekibimiz | Alman-Türk Enerji Uzmanları | 089 Bayern Antalya",
@@ -120,9 +120,9 @@ const seoData = {
       keywords: "solaranlage installation dauer antalya villa fragen, wärmepumpe funktionsweise winter effizienz häufige frage, energiesystem wartungskosten jährlich wie viel türkei, 4 in 1 energiesystem preis 2026 türkei villa kosten, solaranlage garantie versicherung was ist abgedeckt, batteriespeicher lebensdauer lithium ionen wie lange, antalya solaranlage genehmigung baugenehmigung prozess, vaillant wärmepumpe samsung klima autorisierter service"
     },
     "ueber-uns": {
-      title: "Über Uns | Deutsche Energieexperten in Antalya | 089 Bayern",
-      description: "089 Bayern: Seit 2018 die Brücke zwischen Deutschland und der Türkei. Deutsche Qualität für Antalya, Alanya und die Mittelmeerregion. 500+ zufriedene Familien, 10 Jahre Garantie.",
-      keywords: "089 bayern deutschland türkei energieunternehmen profil, münchen antalya deutsche qualität energiesysteme brücke, dalibor bakmaz mustafa sakar energieexperten biografie, 500 familien solaranlage wärmepumpe referenzprojekte, deutsche ingenieursqualität mittelmeer region installation, seit 2018 villa energielösungen antalya alanya türkei, din standard zertifiziertes energiesystem montage, 089 bayern kundenzufriedenheit referenzen bewertungen"
+      title: "Über Uns | Deutsche Energieexperten Standort Türkei | 089 Bayern Antalya",
+      description: "089 Bayern Türkei: Seit 2018 Standort Antalya. Deutsche Qualität für Antalya, Alanya und die Mittelmeerregion. 500+ zufriedene Familien, 10 Jahre Garantie.",
+      keywords: "089 bayern türkei standort antalya energieunternehmen, antalya deutsche qualität energiesysteme experten team, dalibor bakmaz mustafa sakar energieexperten biografie, 500 familien solaranlage wärmepumpe referenzprojekte, deutsche ingenieursqualität mittelmeer region installation, seit 2018 villa energielösungen antalya alanya türkei, din standard zertifiziertes energiesystem montage, 089 bayern kundenzufriedenheit referenzen bewertungen"
     },
     team: {
       title: "Unser Team | Deutsch-Türkische Energieexperten | 089 Bayern",
@@ -203,9 +203,9 @@ const seoData = {
       keywords: "solar panel installation how many days antalya villa, heat pump how it works winter efficiency question, solar energy system maintenance cost annual how much, 4 in 1 energy system price how much 2026 turkey, solar panel warranty period insurance coverage details, battery storage system how many years lithium ion, antalya solar panel permit licensing process how works, vaillant heat pump samsung ac authorized service turkey"
     },
     "ueber-uns": {
-      title: "About Us | German Energy Experts in Antalya | 089 Bayern",
-      description: "089 Bayern: Since 2018, the bridge between Germany and Turkey. German quality for Antalya, Alanya and the Mediterranean region. 500+ happy families, 10-year warranty.",
-      keywords: "089 bayern germany turkey energy company about info, munich antalya bridge german quality energy systems, dalibor bakmaz mustafa sakar energy experts biography, 500 families solar panel heat pump reference projects, german engineering turkey mediterranean region installation, since 2018 villa energy solutions antalya alanya turkey, german DIN standard certified energy system installation, 089 bayern customer satisfaction references reviews turkey"
+      title: "About Us | German Quality Energy Experts Based in Turkey | 089 Bayern Antalya",
+      description: "089 Bayern Turkey: Based in Antalya since 2018. German quality energy systems for Antalya, Alanya and the Mediterranean region. 500+ happy families, 10-year warranty.",
+      keywords: "089 bayern turkey based antalya energy company about, antalya based german quality energy systems expert team, dalibor bakmaz mustafa sakar energy experts biography, 500 families solar panel heat pump reference projects, german engineering turkey mediterranean region installation, since 2018 villa energy solutions antalya alanya turkey, german DIN standard certified energy system installation, 089 bayern customer satisfaction references reviews turkey"
     },
     team: {
       title: "Our Team | German-Turkish Energy Experts | 089 Bayern",
@@ -286,9 +286,9 @@ const seoData = {
       keywords: "установка солнечных панелей сколько дней анталия вилла, тепловой насос как работает зимой эффективность вопрос, солнечная система обслуживание стоимость годовая сколько, система 4 в 1 цена сколько стоит 2026 турция, гарантия солнечных панелей страховка что покрывает, батарея хранения сколько лет служит литий ионная, анталия солнечные панели разрешение лицензия процесс, vaillant тепловой насос samsung авторизованный сервис"
     },
     "ueber-uns": {
-      title: "О Нас | Немецкие Энергетические Эксперты в Анталии | 089 Bayern",
-      description: "089 Bayern: С 2018 года мост между Германией и Турцией. Немецкое качество для Анталии, Алании и Средиземноморья. 500+ довольных семей, 10 лет гарантии.",
-      keywords: "089 bayern германия турция энергетическая компания информация, мюнхен анталия мост немецкое качество энергосистемы, далибор бакмаз мустафа сакар энергетические эксперты, 500 семей солнечные панели тепловой насос проекты, немецкая инженерия средиземноморье установка энергосистем, с 2018 года энергетические решения анталия алания, немецкие стандарты DIN сертифицированная установка, 089 bayern удовлетворённость клиентов отзывы турция"
+      title: "О Нас | Немецкое Качество Энергосистем в Турции | 089 Bayern Анталия",
+      description: "089 Bayern Турция: С 2018 года офис в Анталии. Немецкое качество для Анталии, Алании и Средиземноморья. 500+ довольных семей, 10 лет гарантии.",
+      keywords: "089 bayern турция анталия офис энергетическая компания, анталия немецкое качество энергосистемы команда экспертов, далибор бакмаз мустафа сакар энергетические эксперты, 500 семей солнечные панели тепловой насос проекты, немецкая инженерия средиземноморье установка энергосистем, с 2018 года энергетические решения анталия алания, немецкие стандарты DIN сертифицированная установка, 089 bayern удовлетворённость клиентов отзывы турция"
     },
     team: {
       title: "Наша Команда | Немецко-Турецкие Энергетические Эксперты | 089 Bayern",
@@ -369,9 +369,9 @@ const seoData = {
       keywords: "встановлення сонячних панелей скільки днів анталія вілла, тепловий насос як працює взимку ефективність питання, сонячна система обслуговування вартість річна скільки, система 4 в 1 ціна скільки коштує 2026 туреччина, гарантія сонячних панелей страхування що покриває, батарея зберігання скільки років служить літій іонна, анталія сонячні панелі дозвіл ліцензія процес, vaillant тепловий насос samsung авторизований сервіс"
     },
     "ueber-uns": {
-      title: "Про Нас | Німецькі Енергетичні Експерти в Анталії | 089 Bayern",
-      description: "089 Bayern: З 2018 року міст між Німеччиною та Туреччиною. Німецька якість для Анталії, Аланії та Середземномор'я. 500+ задоволених родин, 10 років гарантії.",
-      keywords: "089 bayern німеччина туреччина енергетична компанія інформація, мюнхен анталія міст німецька якість енергосистеми, далібор бакмаз мустафа сакар енергетичні експерти, 500 родин сонячні панелі тепловий насос проекти, німецька інженерія середземномор'я встановлення енергосистем, з 2018 року енергетичні рішення анталія аланія, німецькі стандарти DIN сертифіковане встановлення, 089 bayern задоволеність клієнтів відгуки туреччина"
+      title: "Про Нас | Німецька Якість Енергосистем у Туреччині | 089 Bayern Анталія",
+      description: "089 Bayern Туреччина: З 2018 року офіс в Анталії. Німецька якість для Анталії, Аланії та Середземномор'я. 500+ задоволених родин, 10 років гарантії.",
+      keywords: "089 bayern туреччина анталія офіс енергетична компанія, анталія німецька якість енергосистеми команда експертів, далібор бакмаз мустафа сакар енергетичні експерти, 500 родин сонячні панелі тепловий насос проекти, німецька інженерія середземномор'я встановлення енергосистем, з 2018 року енергетичні рішення анталія аланія, німецькі стандарти DIN сертифіковане встановлення, 089 bayern задоволеність клієнтів відгуки туреччина"
     },
     team: {
       title: "Наша Команда | Німецько-Турецькі Енергетичні Експерти | 089 Bayern",
@@ -452,9 +452,9 @@ const seoData = {
       keywords: "instalacija solarnih panela koliko dana antalya vila, toplinska pumpa kako radi zimi učinkovitost pitanje, solarni sustav troškovi održavanja godišnje koliko, sustav 4 u 1 cijena koliko košta 2026 turska, jamstvo solarnih panela osiguranje što pokriva detalji, baterija pohrana koliko godina traje litij ionska, antalya solarni paneli dozvola licenca proces kako, vaillant toplinska pumpa samsung klima ovlašteni servis"
     },
     "ueber-uns": {
-      title: "O Nama | Njemački Energetski Stručnjaci u Antalyi | 089 Bayern",
-      description: "089 Bayern: Od 2018. most između Njemačke i Turske. Njemačka kvaliteta za Antalyu, Alanyu i Mediteran. 500+ zadovoljnih obitelji, 10 godina jamstva.",
-      keywords: "089 bayern njemačka turska energetska tvrtka informacije, münchen antalya most njemačka kvaliteta energetski sustavi, dalibor bakmaz mustafa sakar energetski stručnjaci biografija, 500 obitelji solarni paneli toplinska pumpa referentni projekti, njemačko inženjerstvo mediteran regija instalacija energije, od 2018 vila energetska rješenja antalya alanya turska, njemački DIN standardi certificirana instalacija sustava, 089 bayern zadovoljstvo kupaca reference recenzije turska"
+      title: "O Nama | Njemačka Kvaliteta Energetskih Sustava u Turskoj | 089 Bayern Antalya",
+      description: "089 Bayern Turska: Od 2018. sjedište u Antalyi. Njemačka kvaliteta za Antalyu, Alanyu i Mediteran. 500+ zadovoljnih obitelji, 10 godina jamstva.",
+      keywords: "089 bayern turska antalya sjedište energetska tvrtka, antalya njemačka kvaliteta energetski sustavi tim stručnjaka, dalibor bakmaz mustafa sakar energetski stručnjaci biografija, 500 obitelji solarni paneli toplinska pumpa referentni projekti, njemačko inženjerstvo mediteran regija instalacija energije, od 2018 vila energetska rješenja antalya alanya turska, njemački DIN standardi certificirana instalacija sustava, 089 bayern zadovoljstvo kupaca reference recenzije turska"
     },
     team: {
       title: "Naš Tim | Njemačko-Turski Energetski Stručnjaci | 089 Bayern",
@@ -535,9 +535,9 @@ const seoData = {
       keywords: "تركيب ألواح شمسية كم يوم أنطاليا فيلا سؤال، مضخة حرارة كيف تعمل شتاء كفاءة سؤال شائع، نظام طاقة شمسية تكلفة صيانة سنوية كم، نظام 4 في 1 السعر كم 2026 تركيا فيلا، ضمان ألواح شمسية تأمين ما يغطيه تفاصيل، بطارية تخزين كم سنة تدوم ليثيوم أيون عمر، أنطاليا ألواح شمسية تصريح ترخيص إجراءات كيف، vaillant مضخة حرارة samsung خدمة معتمدة تركيا"
     },
     "ueber-uns": {
-      title: "عنا | خبراء الطاقة الألمان في أنطاليا | 089 Bayern",
-      description: "089 Bayern: منذ 2018 الجسر بين ألمانيا وتركيا. جودة ألمانية لأنطاليا، ألانيا ومنطقة البحر المتوسط. 500+ عائلة سعيدة، ضمان 10 سنوات.",
-      keywords: "089 bayern ألمانيا تركيا شركة طاقة معلومات عنا، ميونخ أنطاليا جسر جودة ألمانية أنظمة طاقة، داليبور باكماز مصطفى ساكار خبراء طاقة سيرة ذاتية، 500 عائلة ألواح شمسية مضخة حرارة مشاريع مرجعية، هندسة ألمانية البحر المتوسط منطقة تركيب أنظمة طاقة، منذ 2018 حلول طاقة فيلا أنطاليا ألانيا تركيا، معايير DIN ألمانية تركيب نظام طاقة معتمد، 089 bayern رضا العملاء مراجع تقييمات تركيا"
+      title: "عنا | جودة ألمانية لأنظمة الطاقة في تركيا | 089 Bayern أنطاليا",
+      description: "089 Bayern تركيا: مقر في أنطاليا منذ 2018. جودة ألمانية لأنطاليا، ألانيا ومنطقة البحر المتوسط. 500+ عائلة سعيدة، ضمان 10 سنوات.",
+      keywords: "089 bayern تركيا أنطاليا مقر شركة طاقة معلومات، أنطاليا جودة ألمانية أنظمة طاقة فريق خبراء، داليبور باكماز مصطفى ساكار خبراء طاقة سيرة ذاتية، 500 عائلة ألواح شمسية مضخة حرارة مشاريع مرجعية، هندسة ألمانية البحر المتوسط منطقة تركيب أنظمة طاقة، منذ 2018 حلول طاقة فيلا أنطاليا ألانيا تركيا، معايير DIN ألمانية تركيب نظام طاقة معتمد، 089 bayern رضا العملاء مراجع تقييمات تركيا"
     },
     team: {
       title: "فريقنا | خبراء الطاقة الألمان-الأتراك | 089 Bayern",

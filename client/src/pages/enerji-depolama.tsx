@@ -140,7 +140,7 @@ export default function EnerjiDepolama() {
       trustTitle: "Warum 089 Bayern?",
       trustSubtitle: "Ihr verlässlicher Partner für Energiespeicher",
       trustPoints: [
-        { icon: Star, title: "Deutsche Ingenieurskunst", desc: "Von München nach Antalya - deutsche Qualitätsstandards und Integrationsexpertise" },
+        { icon: Star, title: "Deutsche Ingenieurskunst", desc: "Deutsche Qualitätsstandards und Integrationsexpertise - Standort Türkei, Antalya" },
         { icon: Users, title: "Expertenteam", desc: "Speziell geschulte, zertifizierte Techniker für Batteriesysteme" },
         { icon: ThumbsUp, title: "Integrationsgarantie", desc: "Garantierte perfekte Kompatibilität mit Ihrer bestehenden Solaranlage" },
         { icon: Shield, title: "10 Jahre Garantie", desc: "Umfassende, langfristige Garantie auf Batterieleistung" },
@@ -212,7 +212,7 @@ export default function EnerjiDepolama() {
       trustTitle: "Why 089 Bayern?",
       trustSubtitle: "Your reliable partner for energy storage",
       trustPoints: [
-        { icon: Star, title: "German Engineering", desc: "From Munich to Antalya - German quality standards and integration expertise" },
+        { icon: Star, title: "German Engineering", desc: "German quality standards and integration expertise - based in Antalya, Turkey" },
         { icon: Users, title: "Expert Team", desc: "Specially trained, certified technicians for battery systems" },
         { icon: ThumbsUp, title: "Integration Guarantee", desc: "Guaranteed perfect compatibility with your existing solar system" },
         { icon: Shield, title: "10 Year Warranty", desc: "Comprehensive, long-term warranty on battery performance" },

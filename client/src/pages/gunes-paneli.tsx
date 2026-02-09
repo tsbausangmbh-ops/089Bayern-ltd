@@ -139,7 +139,7 @@ export default function GunesPaneli() {
       trustTitle: "Warum 089 Bayern?",
       trustSubtitle: "Bewährte Qualität mit 500+ zufriedenen Kunden",
       trustPoints: [
-        { icon: Star, title: "Deutsche Ingenieurskunst", desc: "Von München nach Antalya - deutsche Qualitätsstandards und Ingenieursansatz" },
+        { icon: Star, title: "Deutsche Ingenieurskunst", desc: "Deutsche Qualitätsstandards und Ingenieursansatz - Standort Türkei, Antalya" },
         { icon: Users, title: "Erfahrenes Team", desc: "15+ Jahre Branchenerfahrung, 500+ erfolgreiche Installationen" },
         { icon: ThumbsUp, title: "Kundenzufriedenheit", desc: "98% Kundenzufriedenheitsrate - unsere Referenzen sprechen für sich" },
         { icon: Shield, title: "Umfassende Garantie", desc: "10 Jahre Arbeit, 25 Jahre Panel-Leistungsgarantie" },
@@ -210,7 +210,7 @@ export default function GunesPaneli() {
       trustTitle: "Why 089 Bayern?",
       trustSubtitle: "Proven quality with 500+ happy customers",
       trustPoints: [
-        { icon: Star, title: "German Engineering", desc: "From Munich to Antalya - German quality standards and engineering approach" },
+        { icon: Star, title: "German Engineering", desc: "German quality standards and engineering approach - based in Antalya, Turkey" },
         { icon: Users, title: "Experienced Team", desc: "15+ years industry experience, 500+ successful installations" },
         { icon: ThumbsUp, title: "Customer Satisfaction", desc: "98% customer satisfaction rate - our references speak for themselves" },
         { icon: Shield, title: "Comprehensive Warranty", desc: "10 years workmanship, 25 years panel performance warranty" },

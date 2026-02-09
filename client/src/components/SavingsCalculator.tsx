@@ -273,7 +273,7 @@ export default function SavingsCalculator({ onComplete }: SavingsCalculatorProps
             />
             <div className="text-left">
               <span className="block text-xl font-bold text-foreground">089 Bayern</span>
-              <span className="block text-sm text-muted-foreground">Germany</span>
+              <span className="block text-sm text-muted-foreground">Türkiye</span>
             </div>
           </div>
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-5 py-2 mb-6">

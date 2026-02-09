@@ -12,7 +12,7 @@ const sectionContent: Record<string, {
     badge: "KI-Berater",
     title: "Ihr persönlicher 089Bayern-Berater",
     subtitle: "Stellen Sie Ihre Fragen zu Kosten, Ablauf, Materialien und mehr. Unser KI-Berater gibt Ihnen sofort Auskunft.",
-    placeholder: "Stellen Sie Ihre Fragen zu 089Bayern - Germany - ich helfe Ihnen mit Preisinformationen, Ratschlägen und Planungstipps.",
+    placeholder: "Stellen Sie Ihre Fragen zu 089Bayern - Türkiye - ich helfe Ihnen mit Preisinformationen, Ratschlägen und Planungstipps.",
     features: [
       { icon: Calculator, text: "Kostenvoranschläge" },
       { icon: Package, text: "Materialberatung" },
@@ -24,7 +24,7 @@ const sectionContent: Record<string, {
     badge: "Yapay Zeka Danışmanı",
     title: "Kişisel 089Bayern Danışmanınız",
     subtitle: "Maliyet, süreç, malzeme ve daha fazlası hakkında sorularınızı sorun. Yapay zeka danışmanımız size anında bilgi verir.",
-    placeholder: "089Bayern - Germany hakkında sorularınızı sorun - fiyat bilgileri, tavsiyeler ve planlama ipuçları konusunda size yardımcı oluyorum.",
+    placeholder: "089Bayern - Türkiye hakkında sorularınızı sorun - fiyat bilgileri, tavsiyeler ve planlama ipuçları konusunda size yardımcı oluyorum.",
     features: [
       { icon: Calculator, text: "Maliyet Tahminleri" },
       { icon: Package, text: "Malzeme Danışmanlığı" },
@@ -36,7 +36,7 @@ const sectionContent: Record<string, {
     badge: "AI Advisor",
     title: "Your Personal 089Bayern Advisor",
     subtitle: "Ask your questions about costs, processes, materials and more. Our AI advisor provides instant answers.",
-    placeholder: "Ask your questions about 089Bayern - Germany - I help you with pricing information, advice and planning tips.",
+    placeholder: "Ask your questions about 089Bayern - Türkiye - I help you with pricing information, advice and planning tips.",
     features: [
       { icon: Calculator, text: "Cost Estimates" },
       { icon: Package, text: "Material Advice" },
@@ -48,7 +48,7 @@ const sectionContent: Record<string, {
     badge: "ИИ-консультант",
     title: "Ваш личный консультант 089Bayern",
     subtitle: "Задайте вопросы о стоимости, процессе, материалах и многом другом. Наш ИИ-консультант даст вам мгновенный ответ.",
-    placeholder: "Задайте вопросы о 089Bayern - Germany - я помогу вам с информацией о ценах, советами и рекомендациями по планированию.",
+    placeholder: "Задайте вопросы о 089Bayern - Türkiye - я помогу вам с информацией о ценах, советами и рекомендациями по планированию.",
     features: [
       { icon: Calculator, text: "Расчёт стоимости" },
       { icon: Package, text: "Консультация по материалам" },
@@ -60,7 +60,7 @@ const sectionContent: Record<string, {
     badge: "ШІ-консультант",
     title: "Ваш особистий консультант 089Bayern",
     subtitle: "Задайте питання про вартість, процес, матеріали та інше. Наш ШІ-консультант надасть вам миттєву відповідь.",
-    placeholder: "Задайте питання про 089Bayern - Germany - я допоможу вам з інформацією про ціни, порадами та рекомендаціями щодо планування.",
+    placeholder: "Задайте питання про 089Bayern - Türkiye - я допоможу вам з інформацією про ціни, порадами та рекомендаціями щодо планування.",
     features: [
       { icon: Calculator, text: "Розрахунок вартості" },
       { icon: Package, text: "Консультація з матеріалів" },
@@ -72,7 +72,7 @@ const sectionContent: Record<string, {
     badge: "مستشار الذكاء الاصطناعي",
     title: "مستشارك الشخصي من 089Bayern",
     subtitle: "اطرح أسئلتك حول التكاليف والعمليات والمواد والمزيد. يقدم لك مستشار الذكاء الاصطناعي إجابات فورية.",
-    placeholder: "اطرح أسئلتك حول 089Bayern - Germany - سأساعدك بمعلومات الأسعار والنصائح وإرشادات التخطيط.",
+    placeholder: "اطرح أسئلتك حول 089Bayern - Türkiye - سأساعدك بمعلومات الأسعار والنصائح وإرشادات التخطيط.",
     features: [
       { icon: Calculator, text: "تقدير التكاليف" },
       { icon: Package, text: "استشارات المواد" },
@@ -84,7 +84,7 @@ const sectionContent: Record<string, {
     badge: "AI Savjetnik",
     title: "Vaš osobni 089Bayern savjetnik",
     subtitle: "Postavite pitanja o troškovima, procesu, materijalima i više. Naš AI savjetnik daje vam trenutne odgovore.",
-    placeholder: "Postavite pitanja o 089Bayern - Germany - pomažem vam s informacijama o cijenama, savjetima i planiranjem.",
+    placeholder: "Postavite pitanja o 089Bayern - Türkiye - pomažem vam s informacijama o cijenama, savjetima i planiranjem.",
     features: [
       { icon: Calculator, text: "Procjene troškova" },
       { icon: Package, text: "Savjeti o materijalima" },

@@ -66,7 +66,7 @@ export default function Standorte() {
       { label: "Alman Kalitesi Türkiye", href: aboutUrl, title: "Almanya kalitesi enerji sistemleri Türkiye" },
       { label: "Deutsche Qualität Antalya", href: aboutUrl, title: "Deutsche Qualität Alman kalitesi Antalya" },
       { label: "German Engineering Turkey", href: aboutUrl, title: "German engineering solar systems Turkey" },
-      { label: "München Antalya", href: aboutUrl, title: "München Antalya enerji köprüsü 089 Bayern" },
+      { label: "Antalya Türkiye", href: aboutUrl, title: "Antalya Türkiye enerji sistemleri merkezi 089 Bayern" },
       { label: "DIN Standartları", href: systemUrl, title: "DIN standartları Alman kalite sertifikası" },
       { label: "TÜV Sertifikalı", href: benefitsUrl, title: "TÜV sertifikalı enerji sistemleri Almanya" },
       { label: "Made in Germany", href: aboutUrl, title: "Made in Germany Alman üretimi solar sistem" },
