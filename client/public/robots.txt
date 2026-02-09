@@ -1,7 +1,7 @@
 # 089 Bayern Enerji Sistemleri - robots.txt
 # Turk-Alman Enerji Sistemleri Sirketi
 # Merkez: Antalya, Turkiye
-# Updated: 2024-12-25
+# Updated: 2026-02-09
 
 User-agent: *
 Allow: /
@@ -43,7 +43,7 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-# AI Crawlers
+# AI Crawlers (GEO - Generative Engine Optimization)
 User-agent: GPTBot
 Allow: /
 
@@ -74,6 +74,12 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
+User-agent: Gemini
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
 # LLM Information
 # llms.txt: https://089bayern.com/llms.txt
 
@@ -88,7 +94,11 @@ Allow: /
 # MARKALAR: Vaillant, Samsung
 # DILLER: tr, de, en, ru, uk, ar, hr
 # HEDEF: Villa sahipleri, Akdeniz bolgesi
+# SAYFA SAYISI: 95+ (7 dil, 13 sayfa + yasal)
 
 # ANAHTAR KELIMELER (TR):
 # gunes enerjisi antalya, isi pompasi turkiye, solar panel villa
 # vaillant turkiye, samsung klima, enerji tasarrufu
+# 4-in-1 enerji sistemi, solar panel fiyat 2026
+
+# SCHEMA.ORG: LocalBusiness, Organization, FAQPage, Product, Person, BreadcrumbList, WebPage, Service

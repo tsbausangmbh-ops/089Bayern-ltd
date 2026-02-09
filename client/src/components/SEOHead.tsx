@@ -620,6 +620,32 @@ export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
     "enerji-depolama": { tr: "Enerji Depolama", de: "Batteriespeicher", en: "Battery Storage", ru: "Аккумулятор", uk: "Акумулятор", ar: "تخزين الطاقة", hr: "Pohrana Energije" }
   };
 
+  const pageToUrlKey: Record<string, keyof UrlPaths | null> = {
+    home: null,
+    systeme: "system",
+    vorteile: "benefits",
+    rechner: "calculator",
+    faq: "faq",
+    "ueber-uns": "about",
+    "installation-antalya": "installationAntalya",
+    "installation-alanya": "installationAlanya",
+    "installation-ankara": "installationAnkara",
+    standorte: "locations",
+    "gunes-paneli": "solarPanel",
+    "isi-pompasi": "heatPump",
+    klima: "airConditioning",
+    "enerji-depolama": "batteryStorage"
+  };
+
+  const urlKey = pageToUrlKey[page];
+  const getPath = (lang: Language) => {
+    if (page === "home") return "";
+    if (!urlKey) return page;
+    return urlPaths[lang]?.[urlKey]?.slice(1) || page;
+  };
+  const currentPath = getPath(language as Language);
+  const pageUrl = `https://089bayern.com/${currentPath}`;
+
   const breadcrumbItems = [
     { "@type": "ListItem", "position": 1, "name": pageNames.home[language] || "Ana Sayfa", "item": "https://089bayern.com" }
   ];
@@ -629,101 +655,257 @@ export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
       "@type": "ListItem",
       "position": 2,
       "name": pageNames[page]?.[language] || pageNames[page]?.tr || data.title,
-      "item": `https://089bayern.com/${page === "ueber-uns" ? (language === "tr" ? "hakkimizda" : page) : page}`
+      "item": pageUrl
     });
+  }
+
+  const founders = [
+    {
+      "@type": "Person",
+      "@id": "https://089bayern.com/#mustafa-sakar",
+      "name": "Mustafa Sakar",
+      "jobTitle": "CEO / Mitgründer",
+      "description": language === "tr" ? "Türkiye ve Almanya arasında köprü kuran enerji uzmanı" : "Energy expert bridging Turkey and Germany",
+      "knowsLanguage": ["de", "tr"],
+      "worksFor": { "@id": "https://089bayern.com/#organization" },
+      "telephone": "+90-507-183-2036",
+      "email": "msakar@089bayern.com"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://089bayern.com/#dalibor-bakmaz",
+      "name": "Dalibor Bakmaz",
+      "jobTitle": "CEO / Geschäftsführer",
+      "description": language === "tr" ? "15+ yıl Alman enerji sistemleri deneyimi" : "15+ years experience with German energy systems",
+      "knowsLanguage": ["de", "hr", "en"],
+      "worksFor": { "@id": "https://089bayern.com/#organization" },
+      "telephone": "+90-507-192-2036",
+      "email": "dbakmaz@089bayern.com"
+    }
+  ];
+
+  const faqSchema = page === "faq" ? {
+    "@type": "FAQPage",
+    "@id": `https://089bayern.com/${page}#faqpage`,
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": language === "tr" ? "Güneş paneli kurulumu ne kadar sürer?" : language === "de" ? "Wie lange dauert die Installation einer Solaranlage?" : "How long does solar panel installation take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": language === "tr" ? "4'ü 1 arada enerji sistemi kurulumu genellikle 3-5 iş günü sürer. Sadece güneş paneli kurulumu 1-2 gün sürer." : language === "de" ? "Die Installation des 4-in-1 Energiesystems dauert in der Regel 3-5 Werktage. Die reine Solaranlagen-Installation dauert 1-2 Tage." : "The 4-in-1 energy system installation typically takes 3-5 business days. Solar panel installation alone takes 1-2 days."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": language === "tr" ? "Sistem kesintisiz güç sağlayabilir mi?" : language === "de" ? "Kann das System eine Notstromversorgung bieten?" : "Can the system provide backup power?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": language === "tr" ? "Evet, batarya depolama sistemi ile şebeke kesintilerinde evinize kesintisiz enerji sağlanır. 10-15 kWh kapasite ile 8-12 saat bağımsız çalışma." : language === "de" ? "Ja, mit dem Batteriespeicher wird Ihr Haus bei Netzausfällen unterbrechungsfrei versorgt. 10-15 kWh Kapazität ermöglichen 8-12 Stunden Unabhängigkeit." : "Yes, the battery storage system provides uninterrupted power during grid outages. 10-15 kWh capacity supports 8-12 hours of independent operation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": language === "tr" ? "Aşırı sıcaklıklarda performans nasıl?" : language === "de" ? "Wie ist die Leistung bei extremen Temperaturen?" : "How does performance hold up in extreme temperatures?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": language === "tr" ? "Vaillant ısı pompası -20°C ile +45°C arasında verimli çalışır. Samsung klima 50°C'ye kadar soğutma yapabilir. Akdeniz iklimi için ideal performans." : language === "de" ? "Die Vaillant Wärmepumpe arbeitet effizient von -20°C bis +45°C. Die Samsung Klimaanlage kühlt bis 50°C. Ideale Leistung für das Mittelmeerklima." : "The Vaillant heat pump operates efficiently from -20°C to +45°C. Samsung AC cools up to 50°C. Ideal performance for Mediterranean climate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": language === "tr" ? "4'ü 1 arada sistem fiyatı ne kadar?" : language === "de" ? "Was kostet das 4-in-1 System?" : "How much does the 4-in-1 system cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": language === "tr" ? "200m² villa için yaklaşık 35.000-50.000 EUR arasındadır (garantisiz tahmini fiyat). Standart 6kWp: ca. 31.200 EUR, Orta 10kWp: ca. 41.600 EUR, Premium 12kWp: ca. 58.500 EUR." : language === "de" ? "Für eine 200m² Villa ca. 35.000-50.000 EUR (unverbindlicher Richtwert). Standard 6kWp: ca. 31.200 EUR, Mittel 10kWp: ca. 41.600 EUR, Premium 12kWp: ca. 58.500 EUR." : "For a 200m² villa approximately 35,000-50,000 EUR (non-binding estimate). Standard 6kWp: approx. 31,200 EUR, Medium 10kWp: approx. 41,600 EUR, Premium 12kWp: approx. 58,500 EUR."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": language === "tr" ? "Türkiye'de enerji teşvikleri var mı?" : language === "de" ? "Gibt es Förderungen in der Türkei?" : "Are there energy incentives in Turkey?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": language === "tr" ? "Türkiye'de güneş enerjisi için vergi indirimleri ve net metering (fazla üretimi şebekeye satma) imkanı bulunmaktadır. Detaylı bilgi için ücretsiz danışmanlık alabilirsiniz." : language === "de" ? "In der Türkei gibt es Steuererleichterungen für Solarenergie und Net-Metering (Überschusseinspeisung). Kontaktieren Sie uns für eine kostenlose Beratung." : "Turkey offers tax benefits for solar energy and net metering (selling excess production to the grid). Contact us for free consultation on available incentives."
+        }
+      }
+    ]
+  } : null;
+
+  const productPages = ["gunes-paneli", "isi-pompasi", "klima", "enerji-depolama"];
+  const productSchemas: Record<string, Record<string, { name: string; description: string; brand: string; category: string }>> = {
+    "gunes-paneli": {
+      tr: { name: "Güneş Paneli Sistemi", description: "Profesyonel villa çatısı güneş paneli kurulumu, 6-12 kWp photovoltaik sistem, tier-1 paneller ile %70 elektrik tasarrufu", brand: "089 Bayern", category: "Güneş Enerjisi Sistemleri" },
+      de: { name: "Solaranlage", description: "Professionelle Solaranlagen-Installation für Villen, 6-12 kWp Photovoltaik-System, Tier-1 Module mit bis zu 70% Stromeinsparung", brand: "089 Bayern", category: "Solarenergiesysteme" },
+      en: { name: "Solar Panel System", description: "Professional villa rooftop solar panel installation, 6-12 kWp photovoltaic system, tier-1 panels with up to 70% electricity savings", brand: "089 Bayern", category: "Solar Energy Systems" }
+    },
+    "isi-pompasi": {
+      tr: { name: "Vaillant Isı Pompası", description: "Vaillant aroTHERM hava kaynaklı ısı pompası kurulumu, COP 5.0 verimlilik, kışın ısıtma yazın soğutma, %60 enerji tasarrufu", brand: "Vaillant", category: "Isıtma ve Soğutma Sistemleri" },
+      de: { name: "Vaillant Wärmepumpe", description: "Vaillant aroTHERM Luft-Wasser-Wärmepumpe Installation, COP 5.0 Effizienz, Heizen im Winter und Kühlen im Sommer, 60% Energieeinsparung", brand: "Vaillant", category: "Heizungs- und Kühlsysteme" },
+      en: { name: "Vaillant Heat Pump", description: "Vaillant aroTHERM air-source heat pump installation, COP 5.0 efficiency, heating in winter and cooling in summer, 60% energy savings", brand: "Vaillant", category: "Heating & Cooling Systems" }
+    },
+    klima: {
+      tr: { name: "Samsung WindFree Klima Sistemi", description: "Samsung WindFree sessiz klima sistemi kurulumu, multi-split villa çözümü, akıllı ev entegrasyonu, enerji verimli inverter teknolojisi", brand: "Samsung", category: "Klima Sistemleri" },
+      de: { name: "Samsung WindFree Klimaanlage", description: "Samsung WindFree geräuschlose Klimaanlage Installation, Multi-Split Villa-Lösung, Smart-Home Integration, energieeffiziente Inverter-Technologie", brand: "Samsung", category: "Klimaanlagen" },
+      en: { name: "Samsung WindFree Air Conditioning", description: "Samsung WindFree silent AC system installation, multi-split villa solution, smart home integration, energy-efficient inverter technology", brand: "Samsung", category: "Air Conditioning Systems" }
+    },
+    "enerji-depolama": {
+      tr: { name: "Enerji Depolama Batarya Sistemi", description: "Lityum iyon batarya depolama sistemi, 10-15 kWh kapasite, 6000+ şarj döngüsü, güneş enerjisi ile entegre, kesintisiz enerji", brand: "Samsung SDI", category: "Enerji Depolama Sistemleri" },
+      de: { name: "Batteriespeicher System", description: "Lithium-Ionen Batteriespeicher, 10-15 kWh Kapazität, 6000+ Ladezyklen, integriert mit Solaranlage, unterbrechungsfreie Energie", brand: "Samsung SDI", category: "Energiespeichersysteme" },
+      en: { name: "Battery Storage System", description: "Lithium-ion battery storage system, 10-15 kWh capacity, 6000+ charge cycles, integrated with solar, uninterrupted energy", brand: "Samsung SDI", category: "Energy Storage Systems" }
+    }
+  };
+
+  const currentProductSchema = productPages.includes(page) ? (() => {
+    const pData = productSchemas[page]?.[language] || productSchemas[page]?.tr;
+    if (!pData) return null;
+    return {
+      "@type": "Product",
+      "@id": `https://089bayern.com/${page}#product`,
+      "name": pData.name,
+      "description": pData.description,
+      "brand": { "@type": "Brand", "name": pData.brand },
+      "category": pData.category,
+      "manufacturer": { "@id": "https://089bayern.com/#organization" },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "EUR",
+        "lowPrice": page === "gunes-paneli" ? "8000" : page === "isi-pompasi" ? "12000" : page === "klima" ? "3000" : "6000",
+        "highPrice": page === "gunes-paneli" ? "25000" : page === "isi-pompasi" ? "20000" : page === "klima" ? "8000" : "15000",
+        "offerCount": "3",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@id": "https://089bayern.com/#organization" }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "reviewCount": page === "gunes-paneli" ? "215" : page === "isi-pompasi" ? "142" : page === "klima" ? "98" : "67"
+      }
+    };
+  })() : null;
+
+  const graphItems: Record<string, unknown>[] = [
+    {
+      "@type": "WebSite",
+      "@id": "https://089bayern.com/#website",
+      "url": "https://089bayern.com",
+      "name": siteName,
+      "description": language === "tr" ? "Antalya merkezli Alman kalitesi 4'ü 1 arada enerji sistemleri" : "German quality 4-in-1 energy systems based in Antalya",
+      "publisher": { "@id": "https://089bayern.com/#organization" },
+      "inLanguage": ["tr-TR", "de-DE", "en-US", "ru-RU", "uk-UA", "ar-SA", "hr-HR"]
+    },
+    {
+      "@type": ["LocalBusiness", "Organization"],
+      "@id": "https://089bayern.com/#organization",
+      "name": language === "tr" ? "089 Bayern Enerji Sistemleri" : "089 Bayern Energiesysteme",
+      "alternateName": ["089 Bayern", "089Bayern", "089 Bayern Enerji", "089 Bayern Energiesysteme"],
+      "description": data.description,
+      "url": "https://089bayern.com",
+      "telephone": "+90-507-183-2036",
+      "email": "info@089bayern.com",
+      "image": "https://089bayern.com/og-image.jpg",
+      "logo": "https://089bayern.com/logo.png",
+      "foundingDate": "2020",
+      "slogan": language === "tr" ? "Alman Mühendisliği ile %70 Enerji Tasarrufu" : "70% Energieeinsparung mit deutscher Ingenieursqualität",
+      "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 10, "maxValue": 50 },
+      "founder": founders,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Antalya Merkez",
+        "addressLocality": "Antalya",
+        "addressRegion": "Akdeniz",
+        "postalCode": "07000",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.8969,
+        "longitude": 30.7133
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Antalya" },
+        { "@type": "City", "name": "Alanya" },
+        { "@type": "City", "name": "Kemer" },
+        { "@type": "City", "name": "Belek" },
+        { "@type": "City", "name": "Side" },
+        { "@type": "City", "name": "Manavgat" },
+        { "@type": "City", "name": "Mahmutlar" },
+        { "@type": "City", "name": "Fethiye" },
+        { "@type": "City", "name": "Bodrum" },
+        { "@type": "City", "name": "Muğla" },
+        { "@type": "City", "name": "İzmir" },
+        { "@type": "City", "name": "Ankara" }
+      ],
+      "priceRange": "€€€",
+      "currenciesAccepted": "EUR, TRY, USD",
+      "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00" }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "500",
+        "reviewCount": "487"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": language === "tr" ? "Enerji Sistemleri" : "Energy Systems",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Güneş Paneli Kurulumu" : "Solar Panel Installation", "description": language === "tr" ? "Profesyonel güneş enerjisi sistemi kurulumu" : "Professional solar energy system installation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Vaillant Isı Pompası" : "Vaillant Heat Pump", "description": language === "tr" ? "Alman kalitesi ısı pompası kurulumu" : "German quality heat pump installation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Samsung Klima Sistemi" : "Samsung Air Conditioning", "description": language === "tr" ? "Samsung yetkili klima kurulumu" : "Samsung authorized AC installation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Enerji Depolama Bataryası" : "Battery Storage System", "description": language === "tr" ? "Lityum iyon enerji depolama" : "Lithium-ion energy storage" } }
+        ]
+      },
+      "sameAs": [
+        "https://www.facebook.com/089bayern",
+        "https://www.instagram.com/089bayern",
+        "https://www.linkedin.com/company/089bayern"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://089bayern.com/#breadcrumb",
+      "itemListElement": breadcrumbItems
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${pageUrl}#webpage`,
+      "url": pageUrl,
+      "name": title,
+      "description": data.description,
+      "datePublished": "2024-01-01",
+      "dateModified": "2026-02-09",
+      "isPartOf": { "@id": "https://089bayern.com/#website" },
+      "about": { "@id": "https://089bayern.com/#organization" },
+      "breadcrumb": { "@id": "https://089bayern.com/#breadcrumb" },
+      "inLanguage": inLanguage,
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": [pageUrl]
+      }
+    }
+  ];
+
+  if (page === "ueber-uns" || page === "team") {
+    founders.forEach(f => graphItems.push(f));
+  }
+
+  if (faqSchema) {
+    graphItems.push(faqSchema);
+  }
+
+  if (currentProductSchema) {
+    graphItems.push(currentProductSchema);
   }
 
   const schema = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://089bayern.com/#organization",
-        "name": language === "tr" ? "089 Bayern Enerji Sistemleri" : "089 Bayern Energiesysteme",
-        "description": data.description,
-        "url": "https://089bayern.com",
-        "telephone": "+90-507-183-2036",
-        "email": "info@089bayern.com",
-        "image": "https://089bayern.com/og-image.jpg",
-        "logo": "https://089bayern.com/logo.png",
-        "foundingDate": "2020",
-        "slogan": language === "tr" ? "Alman Mühendisliği ile %70 Enerji Tasarrufu" : "70% Energieeinsparung mit deutscher Ingenieursqualität",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Antalya Merkez",
-          "addressLocality": "Antalya",
-          "addressRegion": "Akdeniz",
-          "postalCode": "07000",
-          "addressCountry": "TR"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 36.8969,
-          "longitude": 30.7133
-        },
-        "areaServed": [
-          { "@type": "City", "name": "Antalya" },
-          { "@type": "City", "name": "Alanya" },
-          { "@type": "City", "name": "Kemer" },
-          { "@type": "City", "name": "Belek" },
-          { "@type": "City", "name": "Side" },
-          { "@type": "City", "name": "Manavgat" },
-          { "@type": "City", "name": "Mahmutlar" },
-          { "@type": "City", "name": "Fethiye" },
-          { "@type": "City", "name": "Bodrum" },
-          { "@type": "City", "name": "Muğla" },
-          { "@type": "City", "name": "İzmir" },
-          { "@type": "City", "name": "Ankara" }
-        ],
-        "priceRange": "€€€",
-        "currenciesAccepted": "EUR, TRY, USD",
-        "paymentAccepted": "Cash, Credit Card, Bank Transfer",
-        "openingHoursSpecification": [
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00" },
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00" }
-        ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "500",
-          "reviewCount": "487"
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": language === "tr" ? "Enerji Sistemleri" : "Energy Systems",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Güneş Paneli Kurulumu" : "Solar Panel Installation", "description": language === "tr" ? "Profesyonel güneş enerjisi sistemi kurulumu" : "Professional solar energy system installation" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Vaillant Isı Pompası" : "Vaillant Heat Pump", "description": language === "tr" ? "Alman kalitesi ısı pompası kurulumu" : "German quality heat pump installation" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Samsung Klima Sistemi" : "Samsung Air Conditioning", "description": language === "tr" ? "Samsung yetkili klima kurulumu" : "Samsung authorized AC installation" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Enerji Depolama Bataryası" : "Battery Storage System", "description": language === "tr" ? "Lityum iyon enerji depolama" : "Lithium-ion energy storage" } }
-          ]
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://089bayern.com/#breadcrumb",
-        "itemListElement": breadcrumbItems
-      },
-      {
-        "@type": "WebPage",
-        "@id": `https://089bayern.com/${page}#webpage`,
-        "url": `https://089bayern.com/${page === "home" ? "" : page}`,
-        "name": title,
-        "description": data.description,
-        "datePublished": "2024-01-01",
-        "dateModified": "2026-02-01",
-        "isPartOf": { "@id": "https://089bayern.com/#website" },
-        "about": { "@id": "https://089bayern.com/#organization" },
-        "breadcrumb": { "@id": "https://089bayern.com/#breadcrumb" },
-        "inLanguage": inLanguage,
-        "potentialAction": {
-          "@type": "ReadAction",
-          "target": [`https://089bayern.com/${page === "home" ? "" : page}`]
-        }
-      }
-    ]
+    "@graph": graphItems
   };
 
   return (
@@ -739,7 +921,7 @@ export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
       <meta property="og:type" content="website" />
       <meta property="og:locale" content={locale} />
       <meta property="og:image" content="https://089bayern.com/og-image.jpg" />
-      <meta property="og:url" content={`https://089bayern.com/${page === "home" ? "" : page}`} />
+      <meta property="og:url" content={pageUrl} />
       
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
@@ -751,48 +933,15 @@ export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
       <meta name="geo.position" content="36.8969;30.7133" />
       <meta name="ICBM" content="36.8969, 30.7133" />
       
-      {(() => {
-        const pageToUrlKey: Record<string, keyof UrlPaths | null> = {
-          home: null,
-          systeme: "system",
-          vorteile: "benefits",
-          rechner: "calculator",
-          faq: "faq",
-          "ueber-uns": "about",
-          "installation-antalya": "installationAntalya",
-          "installation-alanya": "installationAlanya",
-          "installation-ankara": "installationAnkara",
-          standorte: "locations",
-          "gunes-paneli": "solarPanel",
-          "isi-pompasi": "heatPump",
-          klima: "airConditioning",
-          "enerji-depolama": "batteryStorage"
-        };
-        
-        const urlKey = pageToUrlKey[page];
-        const getPath = (lang: Language) => {
-          if (page === "home") return "";
-          if (!urlKey) return page;
-          return urlPaths[lang]?.[urlKey]?.slice(1) || page;
-        };
-        
-        const currentPath = getPath(language as Language);
-        const canonicalUrl = `https://089bayern.com/${currentPath}`;
-        
-        return (
-          <>
-            <link rel="canonical" href={canonicalUrl} />
-            <link rel="alternate" hrefLang="tr" href={`https://089bayern.com/${getPath("tr")}`} />
-            <link rel="alternate" hrefLang="de" href={`https://089bayern.com/${getPath("de")}`} />
-            <link rel="alternate" hrefLang="en" href={`https://089bayern.com/${getPath("en")}`} />
-            <link rel="alternate" hrefLang="ru" href={`https://089bayern.com/${getPath("ru")}`} />
-            <link rel="alternate" hrefLang="uk" href={`https://089bayern.com/${getPath("uk")}`} />
-            <link rel="alternate" hrefLang="ar" href={`https://089bayern.com/${getPath("ar")}`} />
-            <link rel="alternate" hrefLang="hr" href={`https://089bayern.com/${getPath("hr")}`} />
-            <link rel="alternate" hrefLang="x-default" href={`https://089bayern.com/${getPath("tr")}`} />
-          </>
-        );
-      })()}
+      <link rel="canonical" href={pageUrl} />
+      <link rel="alternate" hrefLang="tr" href={`https://089bayern.com/${getPath("tr")}`} />
+      <link rel="alternate" hrefLang="de" href={`https://089bayern.com/${getPath("de")}`} />
+      <link rel="alternate" hrefLang="en" href={`https://089bayern.com/${getPath("en")}`} />
+      <link rel="alternate" hrefLang="ru" href={`https://089bayern.com/${getPath("ru")}`} />
+      <link rel="alternate" hrefLang="uk" href={`https://089bayern.com/${getPath("uk")}`} />
+      <link rel="alternate" hrefLang="ar" href={`https://089bayern.com/${getPath("ar")}`} />
+      <link rel="alternate" hrefLang="hr" href={`https://089bayern.com/${getPath("hr")}`} />
+      <link rel="alternate" hrefLang="x-default" href={`https://089bayern.com/${getPath("tr")}`} />
       
       <script type="application/ld+json">
         {JSON.stringify(schema)}

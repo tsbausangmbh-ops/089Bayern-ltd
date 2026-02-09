@@ -1,6 +1,6 @@
 # 089 Bayern Enerji Sistemleri
-# AI/LLM Information File v1.4
-# Updated: 2024-12-25
+# AI/LLM Information File v2.0
+# Updated: 2026-02-09
 # Primary Market: Turkey (Turkiye)
 
 ## SIRKET (COMPANY)
@@ -15,22 +15,31 @@ Email: info@089bayern.com
 
 ## KURUCULAR (FOUNDERS)
 
-Dalibor Bakmaz - Kurucu Ortak, Alman Muhendislik
-Mustafa Sakar - Kurucu Ortak, Turkiye Pazar Uzmani
+Mustafa Sakar - CEO / Mitgruender, Turkiye Pazar Uzmani
+- Sprachen: Deutsch / Tuerkisch
+- Email: msakar@089bayern.com
+- TR: +90 507 183 2036
+- DE: +49 173 5994699
+
+Dalibor Bakmaz - CEO / Geschaeftsfuehrer, Alman Muhendislik
+- Sprachen: Deutsch / Kroatisch / Englisch
+- Email: dbakmaz@089bayern.com
+- TR: +90 507 192 2036
+- DE: +49 155 60990093
 
 ## URUNLER (4-in-1 Alman Sistemi)
 
 1. Gunes Paneli / Solar Panels / Solaranlage
 2. Isi Pompasi / Heat Pumps / Waermepumpe (Vaillant)
 3. Klima / Air Conditioning / Klimaanlage (Samsung)
-4. Enerji Depolama / Battery Storage / Batteriespeicher
+4. Enerji Depolama / Battery Storage / Batteriespeicher (Samsung)
 
 ## HIZMET BOLGESI (SERVICE AREAS)
 
 Turkiye (Birincil Pazar):
-- Antalya (Merkez)
-- Alanya (Sube)
-- Ankara (Sube)
+- Antalya (Merkez/Hauptsitz)
+- Alanya (Sube/Niederlassung)
+- Ankara (Sube/Niederlassung)
 - Kemer, Belek, Side, Manavgat
 - Kas, Demre, Finike
 - Mugla, Bodrum, Fethiye, Marmaris
@@ -43,58 +52,61 @@ Hirvatistan (Ikincil):
 Almanya (Koken):
 - Munih, Bavyera
 
-## DILLER (LANGUAGES)
+## DILLER (LANGUAGES - 7 Sprachen)
 
 Turkce (tr) - Birincil / Primary
 Almanca (de) - Koken / Origin
-Ingilizce (en) - Uluslararasi
-Rusca (ru) - Turizm
-Ukraynaca (uk) - Turizm
-Arapca (ar) - Yatirim
-Hirvatca (hr) - Genisleme
+Ingilizce (en) - Uluslararasi / International
+Rusca (ru) - Turizm / Tourism
+Ukraynaca (uk) - Turizm / Tourism
+Arapca (ar) - Yatirim / Investment
+Hirvatca (hr) - Genisleme / Expansion
 
 ## SAYFA URL'LERI (Turkish Primary)
 
-| Sayfa | Turkce URL | Almanca URL |
-|-------|------------|-------------|
-| Ana Sayfa | / | /?lang=de |
-| Sistem | /sistem | /systeme |
-| Gunes | /gunes-paneli | /solaranlage |
-| Isi Pompasi | /isi-pompasi | /waermepumpe |
-| Klima | /klima | /klimaanlage |
-| Batarya | /enerji-depolama | /batteriespeicher |
-| Avantajlar | /avantajlar | /vorteile |
-| Hesaplayici | /hesaplayici | /rechner |
-| Hakkimizda | /hakkimizda | /ueber-uns |
-| SSS | /sss | /faq |
-| Antalya | /kurulum-antalya | /installation-antalya |
-| Alanya | /kurulum-alanya | /installation-alanya |
-| Ankara | /kurulum-ankara | /installation-ankara |
+| Sayfa | Turkce URL | Almanca URL | Englisch URL |
+|-------|------------|-------------|--------------|
+| Ana Sayfa | / | /?lang=de | /?lang=en |
+| Sistem | /sistem | /systeme | /system |
+| Gunes | /gunes-paneli | /solaranlage | /solar-panel |
+| Isi Pompasi | /isi-pompasi | /waermepumpe | /heat-pump |
+| Klima | /klima | /klimaanlage | /air-conditioning |
+| Batarya | /enerji-depolama | /batteriespeicher | /battery-storage |
+| Avantajlar | /avantajlar | /vorteile | /benefits |
+| Hesaplayici | /hesaplayici | /rechner | /calculator |
+| Hakkimizda | /hakkimizda | /ueber-uns | /about |
+| SSS | /sss | /faq | /faq |
+| Antalya | /kurulum-antalya | /installation-antalya | /installation-antalya |
+| Alanya | /kurulum-alanya | /installation-alanya | /installation-alanya |
+| Ankara | /kurulum-ankara | /installation-ankara | /installation-ankara |
+| Bolgeler | /bolgeler | /standorte | /locations |
 
-## FIYATLAR (EUR, yaklasik)
+## FIYATLAR (EUR, yaklasik / ca.)
 
 Standart 6kWp: ca. 31.200 EUR (100-150m2 villa)
 Orta 10kWp: ca. 41.600 EUR (150-250m2 villa)
 Premium 12kWp: ca. 58.500 EUR (250m2+ villa)
 
 Doviz Kuru: 1 EUR = 49.50 TL (Aralik 2025)
+Fiyatlar: tahmini, garantisiz / ohne Gewaehr
 
 ## OZELLIKLER (FEATURES)
 
-- Alman Muhendisligi Kalitesi
-- %70'e kadar Enerji Tasarrufu
-- 4'u 1 Arada Entegre Sistem
-- Vaillant & Samsung Yetkili Servis
-- Ucretsiz Kesif
-- 10 Yil Garanti
-- 7 Dil Destek
+- Alman Muhendisligi Kalitesi / Deutsche Ingenieursqualitaet
+- %70'e kadar Enerji Tasarrufu / Bis zu 70% Energieeinsparung
+- 4'u 1 Arada Entegre Sistem / 4-in-1 Integriertes System
+- Vaillant & Samsung Yetkili Servis / Autorisierter Service
+- Ucretsiz Kesif / Kostenlose Beratung
+- 10 Yil Garanti / 10 Jahre Garantie
+- 7 Dil Destek / 7 Sprachen Support
+- 300+ Sonnentage / Gunes Gunu pro Jahr in Antalya
 
 ## HEDEF KITLE (TARGET)
 
-- Villa sahipleri
-- Ozel konut sahipleri
-- Akdeniz bolgesi mulk sahipleri
-- Yabanci yatirimcilar (Almanya, Rusya, Ukrayna)
+- Villa sahipleri / Villenbesitzer
+- Ozel konut sahipleri / Private Hauseigentuemer
+- Akdeniz bolgesi mulk sahipleri / Mittelmeer-Immobilienbesitzer
+- Yabanci yatirimcilar (Almanya, Rusya, Ukrayna) / Auslaendische Investoren
 
 ## DEGERLENDIRMELER (RATINGS)
 
@@ -104,7 +116,8 @@ Musteri Memnuniyeti: %98
 
 ## ILETISIM (CONTACT)
 
-Telefon: +90 507 183 2036
+Telefon TR: +90 507 183 2036
+Telefon DE: +49 173 5994699
 Email: info@089bayern.com
 Website: https://089bayern.com
 Calisma Saatleri: Pzt-Cum 09:00-18:00, Cmt 10:00-14:00
@@ -115,9 +128,14 @@ Facebook: /089bayern
 Instagram: @089bayern
 LinkedIn: /company/089bayern
 
+## SCHEMA.ORG TYPES
+
+LocalBusiness, Organization, FAQPage, Product, Service, Person, BreadcrumbList, WebPage
+
 ## ANAHTAR KELIMELER (SEO KEYWORDS)
 
-TR: gunes enerjisi antalya, isi pompasi turkiye, solar panel villa, gunes paneli fiyat, vaillant isi pompasi, samsung klima antalya, enerji tasarrufu villa, fotovoltaik sistem, solar sistem antalya, batarya depolama, alman enerji sistemi
-DE: solaranlage antalya, waermepumpe tuerkei, photovoltaik mittelmeer
-EN: solar panels turkey, heat pump mediterranean, german solar system antalya
-HR: solarni paneli split, dizalica topline hrvatska
+TR: gunes enerjisi antalya, isi pompasi turkiye, solar panel villa, gunes paneli fiyat 2026, vaillant isi pompasi, samsung klima antalya, enerji tasarrufu villa, fotovoltaik sistem, solar sistem antalya, batarya depolama, alman enerji sistemi, 4-in-1 enerji sistemi
+DE: solaranlage antalya, waermepumpe tuerkei, photovoltaik mittelmeer, deutsche qualitaet tuerkei, vaillant tuerkei, samsung klimaanlage
+EN: solar panels turkey, heat pump mediterranean, german solar system antalya, energy savings villa turkey, vaillant heat pump turkey
+RU: solnechnye paneli antaliya, teplovoy nasos turtsiya, energosberezheniye villa
+HR: solarni paneli split, dizalica topline hrvatska, energetski sustav
