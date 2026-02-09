@@ -18,9 +18,12 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
       className="relative pt-20 pb-2 overflow-hidden"
       data-testid="section-hero"
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
-        style={{ backgroundImage: `url(${heroImage})` }}
+      <img
+        src={heroImage}
+        alt="089 Bayern Premium 4'ü 1 arada enerji sistemleri Antalya villası çatısında güneş paneli Vaillant ısı pompası Samsung klima batarya depolama kurulumu Akdeniz Türkiye"
+        title="089 Bayern 4-in-1 enerji sistemi villa çatısı güneş paneli kurulumu Antalya fiyatları 2026"
+        className="absolute inset-0 w-full h-full object-cover scale-105"
+        decoding="async"
       />
       <div className="absolute inset-0 bg-black/50" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40" />

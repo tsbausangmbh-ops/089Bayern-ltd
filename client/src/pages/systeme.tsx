@@ -457,9 +457,12 @@ export default function Systeme() {
       <Header onCtaClick={goToContact} />
       
       <section className="relative pt-16 sm:pt-20 pb-2 overflow-hidden" data-testid="section-systeme-hero">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+        <img
+          src={heroImage}
+          alt="089 Bayern 4'ü 1 arada enerji sistemi sunumu Antalya güneş paneli Vaillant ısı pompası Samsung klima batarya depolama Alman kalitesi Türkiye"
+          title="4-in-1 enerji sistemi sunumu Antalya villa fiyatları 2026 - güneş paneli ısı pompası klima batarya"
+          className="absolute inset-0 w-full h-full object-cover"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
         

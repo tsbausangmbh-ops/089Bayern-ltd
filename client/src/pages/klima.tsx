@@ -319,9 +319,12 @@ export default function Klima() {
       <Header onCtaClick={goToContact} />
       
       <section className="relative pt-16 sm:pt-20 pb-12 sm:pb-16 overflow-hidden" data-testid="section-climate-hero">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+        <img
+          src={heroImage}
+          alt="089 Bayern Samsung WindFree klima sistemi kurulumu Antalya villası enerji verimli sessiz soğutma ısıtma multi split inverter klima montajı Akdeniz Türkiye"
+          title="Samsung WindFree klima sistemi kurulumu Antalya villa fiyatları 2026 - sessiz enerji verimli soğutma"
+          className="absolute inset-0 w-full h-full object-cover"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-background" />
         

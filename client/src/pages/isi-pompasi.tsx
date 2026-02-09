@@ -625,9 +625,12 @@ export default function IsiPompasi() {
       <Header onCtaClick={goToContact} />
       
       <section className="relative pt-16 sm:pt-20 pb-12 sm:pb-16 overflow-hidden" data-testid="section-heatpump-hero">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+        <img
+          src={heroImage}
+          alt="089 Bayern Vaillant aroTHERM ısı pompası kurulumu Antalya villası hava kaynaklı ısıtma soğutma sistemi Alman kalitesi COP 5.0 enerji verimliliği Akdeniz Türkiye"
+          title="Vaillant ısı pompası kurulumu Antalya villa fiyatları 2026 - hava kaynaklı ısıtma soğutma"
+          className="absolute inset-0 w-full h-full object-cover"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-background" />
         

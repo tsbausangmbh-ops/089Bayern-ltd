@@ -52,9 +52,13 @@ export default function Footer() {
 
   return (
     <footer className="relative text-white overflow-hidden" data-testid="footer-main">
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
+      <img
+        src={heroImage}
+        alt="089 Bayern enerji sistemleri Türkiye footer arka plan güneş paneli Vaillant ısı pompası Samsung klima batarya villa kurulumu Antalya Alanya"
+        title="089 Bayern enerji sistemleri Türkiye Antalya Alanya"
+        className="absolute inset-0 w-full h-full object-cover"
+        decoding="async"
+        loading="lazy"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/85 to-black/90" />
       

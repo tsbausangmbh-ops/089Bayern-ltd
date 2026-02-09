@@ -439,9 +439,12 @@ export default function UeberUns() {
       
       {/* Hero Section */}
       <section className="relative pt-16 sm:pt-20 pb-6 sm:pb-8 overflow-hidden" data-testid="section-about-hero">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+        <img
+          src={heroImage}
+          alt="089 Bayern hakkımızda Mustafa Sakar Dalibor Bakmaz Almanya Türkiye köprüsü enerji sistemleri güneş paneli ısı pompası klima batarya uzman ekibi Antalya Akdeniz"
+          title="089 Bayern hakkımızda - Mustafa Sakar Dalibor Bakmaz enerji sistemleri uzman ekibi Antalya 2026"
+          className="absolute inset-0 w-full h-full object-cover"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
         

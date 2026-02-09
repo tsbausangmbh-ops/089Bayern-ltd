@@ -154,9 +154,13 @@ export default function Standorte() {
       <Header />
       
       <section className="relative py-10 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+        <img
+          src={heroImage}
+          alt="089 Bayern kurulum lokasyonları Türkiye Antalya Alanya Ankara Akdeniz bölgesi güneş paneli ısı pompası klima batarya enerji sistemi hizmet bölgeleri"
+          title="089 Bayern kurulum lokasyonları Türkiye - Antalya Alanya Ankara enerji sistemi hizmet bölgeleri 2026"
+          className="absolute inset-0 w-full h-full object-cover"
+          decoding="async"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
         

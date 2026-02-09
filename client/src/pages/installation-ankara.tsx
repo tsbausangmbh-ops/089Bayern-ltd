@@ -1050,9 +1050,12 @@ export default function InstallationAnkara() {
       
       {/* Hero Section */}
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center pt-16 sm:pt-20" data-testid="section-hero">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+        <img
+          src={heroImage}
+          alt="089 Bayern 4'ü 1 arada enerji sistemi kurulumu Ankara villası güneş paneli Vaillant ısı pompası Samsung klima batarya depolama profesyonel montaj Çankaya Keçiören Yenimahalle Türkiye"
+          title="4-in-1 enerji sistemi kurulumu Ankara villa fiyatları 2026 - güneş paneli ısı pompası klima batarya"
+          className="absolute inset-0 w-full h-full object-cover"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         

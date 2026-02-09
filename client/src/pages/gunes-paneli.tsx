@@ -250,9 +250,12 @@ export default function GunesPaneli() {
       <Header onCtaClick={goToContact} />
       
       <section className="relative pt-16 sm:pt-20 pb-12 sm:pb-16 overflow-hidden" data-testid="section-solar-hero">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+        <img
+          src={heroImage}
+          alt="089 Bayern profesyonel güneş paneli kurulumu Antalya villası çatısında solar panel sistemi montajı yüksek verimli photovoltaik paneller Akdeniz 300 güneşli gün Türkiye"
+          title="Güneş paneli kurulumu Antalya villa çatısı - solar panel sistemi fiyatları 2026"
+          className="absolute inset-0 w-full h-full object-cover"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-background" />
         

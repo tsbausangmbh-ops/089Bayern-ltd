@@ -603,9 +603,12 @@ export default function Rechner() {
       
       {/* Hero Section */}
       <section className="relative pt-16 sm:pt-20 pb-2 overflow-hidden" data-testid="section-rechner-hero">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+        <img
+          src={heroImage}
+          alt="089 Bayern enerji tasarruf hesaplayıcı Antalya güneş paneli ısı pompası klima batarya maliyet hesaplama villaları için yüzde 70 tasarruf Akdeniz Türkiye"
+          title="Enerji tasarruf hesaplayıcı Antalya villa - güneş paneli ısı pompası klima batarya fiyat hesaplama 2026"
+          className="absolute inset-0 w-full h-full object-cover"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
         

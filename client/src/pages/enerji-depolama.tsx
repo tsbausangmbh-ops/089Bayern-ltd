@@ -253,9 +253,12 @@ export default function EnerjiDepolama() {
       <Header onCtaClick={goToContact} />
       
       <section className="relative pt-16 sm:pt-20 pb-12 sm:pb-16 overflow-hidden" data-testid="section-battery-hero">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
+        <img
+          src={heroImage}
+          alt="089 Bayern Samsung All-in-One lityum iyon batarya depolama sistemi kurulumu Antalya villası 10 kWh 15 kWh kapasite kesintisiz enerji güneş paneli entegrasyonu Akdeniz Türkiye"
+          title="Samsung batarya depolama sistemi kurulumu Antalya villa fiyatları 2026 - 10 kWh 15 kWh kesintisiz enerji"
+          className="absolute inset-0 w-full h-full object-cover"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/80 via-green-800/70 to-teal-900/80" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
