@@ -818,15 +818,7 @@ export default function IsiPompasi() {
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
                 src={heatpumpDetailImage} 
-                alt={{
-                  tr: "089 Bayern Vaillant ısı pompası teknik detay ve kurulum Antalya villasında Alman kalitesi",
-                  de: "089 Bayern Vaillant Wärmepumpe technisches Detail und Installation in Antalya Villa deutsche Qualität",
-                  en: "089 Bayern Vaillant heat pump technical detail and installation in Antalya villa German quality",
-                  ru: "089 Bayern технические детали и установка теплового насоса Vaillant на вилле в Анталии немецкое качество",
-                  uk: "089 Bayern технічні деталі та встановлення теплового насоса Vaillant на віллі в Анталії німецька якість",
-                  ar: "089 Bayern تفاصيل تقنية ومضخة حرارية Vaillant وتركيب في فيلا أنطاليا جودة ألمانية",
-                  hr: "089 Bayern Vaillant toplinska pumpa tehnički detalji i instalacija u vili Antalya njemačka kvaliteta"
-                }[language] || "089 Bayern Vaillant heat pump installation Antalya villa"} 
+                alt="089 Bayern Vaillant aroTHERM ısı pompası teknik detay ve profesyonel kurulum Antalya villası hava kaynaklı ısıtma soğutma sistemi Alman kalitesi COP 5.0" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 data-testid="img-heatpump-detail"
@@ -835,15 +827,7 @@ export default function IsiPompasi() {
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
                 src={heatpumpConsultationImage} 
-                alt={{
-                  tr: "089 Bayern enerji danışmanı Vaillant ısı pompası sistemi hakkında müşteriye bilgi veriyor",
-                  de: "089 Bayern Energieberater erklärt Vaillant Wärmepumpensystem dem Kunden in der Türkei",
-                  en: "089 Bayern energy consultant explaining Vaillant heat pump system to customer in Turkey",
-                  ru: "089 Bayern энергетический консультант объясняет систему теплового насоса Vaillant клиенту в Турции",
-                  uk: "089 Bayern енергетичний консультант пояснює систему теплового насоса Vaillant клієнту в Туреччині",
-                  ar: "089 Bayern مستشار طاقة يشرح نظام مضخة الحرارة Vaillant للعميل في تركيا",
-                  hr: "089 Bayern energetski konzultant objašnjava Vaillant sustav toplinske pumpe klijentu u Turskoj"
-                }[language] || "089 Bayern heat pump consultation Turkey"} 
+                alt="089 Bayern enerji danışmanı Vaillant ısı pompası sistemi hakkında villa sahibine ücretsiz keşif ve fiyat teklifi sunuyor Antalya Alanya Akdeniz Türkiye" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 data-testid="img-heatpump-consultation"

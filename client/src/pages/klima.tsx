@@ -495,15 +495,7 @@ export default function Klima() {
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
                 src={climateIndoorImage} 
-                alt={{
-                  tr: "089 Bayern Samsung WindFree klima iç ünite kurulumu Akdeniz villasında enerji tasarrufu",
-                  de: "089 Bayern Samsung WindFree Klimaanlage Innengerät Installation in Mittelmeer-Villa Energieeinsparung",
-                  en: "089 Bayern Samsung WindFree air conditioning indoor unit installation Mediterranean villa energy saving",
-                  ru: "089 Bayern установка внутреннего блока кондиционера Samsung WindFree на средиземноморской вилле энергосбережение",
-                  uk: "089 Bayern встановлення внутрішнього блоку кондиціонера Samsung WindFree на середземноморській віллі енергозбереження",
-                  ar: "089 Bayern تركيب وحدة تكييف Samsung WindFree الداخلية في فيلا البحر المتوسط توفير الطاقة",
-                  hr: "089 Bayern Samsung WindFree klima uređaj unutarnja jedinica instalacija u mediteranskoj vili ušteda energije"
-                }[language] || "089 Bayern Samsung climate indoor unit installation"} 
+                alt="089 Bayern Samsung WindFree klima iç ünite kurulumu Akdeniz villasında enerji verimli sessiz soğutma ısıtma multi split sistem montajı Antalya" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 data-testid="img-climate-indoor"
@@ -512,15 +504,7 @@ export default function Klima() {
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
                 src={climateOutdoorImage} 
-                alt={{
-                  tr: "089 Bayern Samsung klima dış ünite montajı profesyonel ekip tarafından Antalya",
-                  de: "089 Bayern Samsung Klimaanlage Außengerät Montage durch professionelles Team Antalya",
-                  en: "089 Bayern Samsung air conditioning outdoor unit installation by professional team Antalya",
-                  ru: "089 Bayern установка наружного блока кондиционера Samsung профессиональной командой Анталия",
-                  uk: "089 Bayern встановлення зовнішнього блоку кондиціонера Samsung професійною командою Анталія",
-                  ar: "089 Bayern تركيب وحدة التكييف الخارجية Samsung بواسطة فريق محترف أنطاليا",
-                  hr: "089 Bayern Samsung klima uređaj vanjska jedinica montaža od strane profesionalnog tima Antalya"
-                }[language] || "089 Bayern Samsung climate outdoor unit installation Antalya"} 
+                alt="089 Bayern Samsung klima dış ünite montajı profesyonel ekip tarafından Antalya villa inverter klima sistemi kurulumu fiyatları Akdeniz bölgesi" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 data-testid="img-climate-outdoor"

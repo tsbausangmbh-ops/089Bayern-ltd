@@ -22,6 +22,7 @@ export default function FeaturesGrid() {
       bgGradient: "from-sky-500/20 to-blue-600/10",
       iconBg: "bg-gradient-to-br from-sky-500 to-blue-600",
       image: workerClimateImage,
+      seoAlt: "089 Bayern teknisyeni Samsung WindFree klima iç dış ünite montajı yapıyor Antalya villası enerji verimli sessiz soğutma ısıtma sistemi kurulumu Akdeniz",
     },
     {
       icon: Flame,
@@ -33,6 +34,7 @@ export default function FeaturesGrid() {
       bgGradient: "from-orange-500/20 to-red-600/10",
       iconBg: "bg-gradient-to-br from-orange-500 to-red-600",
       image: workerHeatPumpImage,
+      seoAlt: "089 Bayern ekibi Vaillant aroTHERM ısı pompası dış ünite profesyonel montajı villa ısıtma soğutma sistemi kurulumu Antalya Alanya Akdeniz bölgesi",
     },
     {
       icon: Sun,
@@ -44,6 +46,7 @@ export default function FeaturesGrid() {
       bgGradient: "from-amber-500/20 to-yellow-500/10",
       iconBg: "bg-gradient-to-br from-amber-500 to-yellow-500",
       image: workerSolarImage,
+      seoAlt: "089 Bayern teknisyeni güneş paneli inverter kablo bağlantısı yapıyor villa çatısı photovoltaik sistem kurulumu Antalya Alanya Akdeniz",
     },
     {
       icon: Battery,
@@ -55,6 +58,7 @@ export default function FeaturesGrid() {
       bgGradient: "from-emerald-500/20 to-green-600/10",
       iconBg: "bg-gradient-to-br from-emerald-500 to-green-600",
       image: workerBatteryImage,
+      seoAlt: "089 Bayern lityum iyon batarya depolama sistemi profesyonel kurulumu villa enerji depolama güneş enerjisi gece kullanımı Antalya Türkiye",
     },
   ];
 
@@ -90,7 +94,7 @@ export default function FeaturesGrid() {
               <div className="relative h-36 sm:h-48 overflow-hidden">
                 <img 
                   src={feature.image} 
-                  alt={feature.title}
+                  alt={feature.seoAlt}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />

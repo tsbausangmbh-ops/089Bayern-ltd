@@ -12,37 +12,37 @@ const seoData = {
   tr: {
     siteName: "089 Bayern Enerji Sistemleri",
     home: {
-      title: "089 Bayern | Antalya Güneş Enerjisi & Isı Pompası | Alman 4'ü 1 Arada Sistem",
+      title: "Antalya Güneş Paneli Kurulumu & Vaillant Isı Pompası Fiyatları 2026 | 089 Bayern 4'ü 1 Arada Villa Enerji Sistemi",
       description: "Antalya, Alanya, Kemer, Belek, Side, Manavgat'ta güneş paneli, ısı pompası, klima ve enerji depolama. Alman mühendisliği ile %70 enerji tasarrufu. Vaillant & Samsung yetkili bayii. Ücretsiz keşif: +90 507 183 2036",
       keywords: "antalya villa güneş paneli kurulumu fiyatları 2026, alanya ısı pompası klima sistemi montajı, kemer belek side güneş enerjisi sistemleri, akdeniz bölgesi 4 in 1 enerji çözümü alman kalitesi, vaillant ısı pompası samsung klima yetkili bayi antalya, villa çatısı solar panel montaj maliyeti hesaplama, 089 bayern enerji sistemleri türkiye müşteri yorumları, manavgat gazipaşa güneş paneli batarya depolama kurulumu"
     },
     systeme: {
-      title: "4'ü 1 Arada Alman Enerji Sistemi | Güneş + Isı Pompası + Klima + Batarya | 089 Bayern Antalya",
+      title: "4'ü 1 Arada Enerji Sistemi Antalya Villa | Güneş Paneli + Vaillant Isı Pompası + Samsung Klima + Batarya | 089 Bayern",
       description: "089 Bayern 4-in-1 German System: Photovoltaik, Wärmepompa, Samsung klima ve lityum batarya tek sistemde. Antalya, Alanya, Kemer'de kurulum. 10 yıl garanti, Alman DIN standartları.",
       keywords: "4 in 1 enerji sistemi güneş paneli ısı pompası klima batarya, antalya villa hibrit enerji sistemi alman mühendisliği, vaillant ısı pompası samsung klima entegrasyonu tek sistem, güneş enerjisi ısı pompası birlikte çalışan akıllı sistem, alman DIN standartları enerji sistemi 10 yıl garanti türkiye, photovoltaik solar panel inverter batarya akıllı ev sistemi, 4 lü 1 arada enerji paketi antalya alanya kemer kurulum, off-grid şebekeden bağımsız enerji sistemi villa akdeniz"
     },
     vorteile: {
-      title: "10 Ay Ücretsiz Enerji Avantajları | Antalya Güneş Enerjisi Tasarrufu | 089 Bayern",
+      title: "Antalya Villa Güneş Enerjisi ile %70 Tasarruf | 10 Ay Ücretsiz Elektrik ve Isınma Avantajları | 089 Bayern",
       description: "Akdeniz'in 300+ güneşli günü ile yılda 10 ay ücretsiz elektrik ve ısınma. Antalya, Alanya, Side'da %70 enerji tasarrufu. 4-6 yıl geri ödeme süresi. Ücretsiz hesaplama yapın.",
       keywords: "antalya güneş enerjisi yıllık tasarruf miktarı hesaplama, 300 güneşli gün akdeniz ücretsiz elektrik ısınma avantajı, güneş paneli yatırım geri ödeme süresi 4 yıl türkiye, villa enerji bağımsızlığı şebekeden bağımsız yaşam akdeniz, ısı pompası ile kış aylarında ücretsiz ısınma antalya, güneş enerjisi ile emlak değer artışı yüzde 15 villa, enerji tasarrufu ile aylık elektrik faturası sıfıra yakın, samsung klima ile yazın ücretsiz soğutma akdeniz iklimi"
     },
     rechner: {
-      title: "Enerji Tasarruf Hesaplayıcı | Antalya Güneş Paneli Fiyat Hesaplama | 089 Bayern",
+      title: "Güneş Paneli Fiyat Hesaplama Antalya Villa m² | Enerji Tasarruf Hesaplayıcı 2026 | 089 Bayern",
       description: "Antalya, Alanya, Kemer, Side için kişiselleştirilmiş enerji tasarrufu hesabı. Villa m² ve konuma göre güneş paneli, ısı pompası maliyeti ve tasarruf hesaplama. Ücretsiz teklif alın.",
       keywords: "güneş paneli fiyat hesaplama aracı antalya villa m2, enerji tasarrufu hesaplayıcı ısı pompası klima batarya maliyeti, solar panel kurulum maliyeti ve geri ödeme süresi hesabı, villa büyüklüğüne göre 4 in 1 sistem fiyat teklifi, antalya alanya kemer bölgesine özel enerji hesaplama, güneş paneli kaç kwp gerekir villa için hesaplama, aylık elektrik tasarrufu ne kadar güneş paneli ile, ücretsiz keşif ve fiyat teklifi 089 bayern enerji"
     },
     faq: {
-      title: "Sıkça Sorulan Sorular | Güneş Enerjisi & Isı Pompası | 089 Bayern Antalya",
+      title: "Güneş Paneli Kurulumu Sıkça Sorulan Sorular | Antalya Villa Isı Pompası Klima SSS | 089 Bayern",
       description: "Antalya'da güneş paneli kurulumu, ısı pompası bakımı, enerji depolama ve 089 Bayern 4-in-1 sistem hakkında en çok sorulan 20 soru ve uzman cevapları.",
       keywords: "güneş paneli kurulumu kaç gün sürer antalya villa, ısı pompası nasıl çalışır kış aylarında verimlilik sorusu, güneş enerjisi sistemi bakım maliyeti yıllık ne kadar, 4 in 1 enerji sistemi fiyatı ne kadar 2026 türkiye, güneş paneli garanti süresi ve sigorta kapsamı nedir, batarya depolama sistemi kaç yıl dayanır lityum iyon, antalya güneş paneli izin ve ruhsat süreci nasıl işler, vaillant ısı pompası samsung klima yetkili servis türkiye"
     },
     "ueber-uns": {
-      title: "Hakkımızda | Antalya Merkezli Alman Kalitesi Enerji Uzmanları | 089 Bayern Türkiye",
+      title: "089 Bayern Hakkımızda | Antalya Merkezli Alman-Türk Enerji Sistemi Uzmanları | Güneş Paneli Isı Pompası Kurulum Firması",
       description: "089 Bayern Türkiye: 2018'den beri Antalya merkezli Alman kalitesi enerji sistemleri. Antalya, Alanya, Akdeniz bölgesinde 500+ mutlu aile, 10 yıl garanti.",
       keywords: "089 bayern türkiye antalya merkezli enerji şirketi hakkında, antalya alman kalitesi enerji sistemleri uzman ekibi, dalibor bakmaz mustafa sakar enerji uzmanları biyografi, 500 aile güneş paneli ısı pompası referans projeleri, alman mühendisliği türkiye akdeniz bölgesi enerji kurulum, 2018 den beri villa enerji çözümleri antalya alanya, alman DIN standartları sertifikalı enerji sistemi montajı, 089 bayern müşteri memnuniyeti ve referanslar türkiye"
     },
     team: {
-      title: "Ekibimiz | Alman-Türk Enerji Uzmanları | 089 Bayern Antalya",
+      title: "089 Bayern Ekibimiz | Mustafa Sakar & Dalibor Bakmaz | Antalya Güneş Enerjisi Uzman Kadrosu",
       description: "089 Bayern ekibi: Dalibor Bakmaz ve Mustafa Sakar liderliğinde Alman mühendislik kalitesi. Antalya, Alanya, Muğla'da profesyonel enerji danışmanlığı.",
       keywords: "089 bayern ekibi enerji danışmanları antalya alanya, mustafa sakar ceo alman türk enerji uzmanı profili, dalibor bakmaz kurucu alman enerji mühendisi biyografi, profesyonel güneş paneli montaj ekibi akdeniz bölgesi, sertifikalı vaillant ısı pompası teknisyenleri türkiye, samsung klima yetkili kurulum uzmanları antalya, enerji danışmanlığı ücretsiz keşif hizmeti villa sahipleri, alman türk mühendislik ekibi güneş enerjisi uzmanlığı"
     },
@@ -52,42 +52,42 @@ const seoData = {
       keywords: "089 bayern kvkk kişisel verilerin korunması politikası, gizlilik politikası çerez kullanımı bilgilendirme, kullanım şartları mesafeli satış sözleşmesi, cayma hakkı ön bilgilendirme formu yasal haklar, enerji sistemi garanti şartları ve koşulları, 089 bayern iletişim şikayet ve öneri bildirimi, veri işleme aydınlatma metni ticari elektronik ileti, tüketici hakları enerji sistemi kurulum sözleşmesi"
     },
     "installation-antalya": {
-      title: "4'ü 1 Arada Enerji Sistemi Kurulumu Antalya | Güneş Paneli & Isı Pompası | 089 Bayern",
+      title: "Güneş Paneli Kurulumu Antalya Merkez | Vaillant Isı Pompası Samsung Klima Montajı Villa Fiyatları | 089 Bayern",
       description: "Antalya, Kemer, Belek, Side, Alanya'da profesyonel 4'ü 1 arada enerji sistemi kurulumu. Güneş paneli, Vaillant ısı pompası, Samsung klima ve batarya depolama. Alman kalitesi, 10 yıl garanti.",
       keywords: "antalya kemer belek side güneş paneli kurulum hizmeti, antalya merkez villa çatısı solar panel montaj fiyatları, vaillant ısı pompası profesyonel kurulum antalya alanya, samsung klima sistemi montajı akdeniz villalarında, 4 in 1 enerji sistemi antalya 10 yıl garanti alman kalitesi, antalya lara kundu döşemealtı güneş enerjisi kurulumu, güneş paneli ısı pompası klima batarya tek seferde montaj, antalya bölgesi ücretsiz keşif ve enerji analizi hizmeti"
     },
     "installation-ankara": {
-      title: "4'ü 1 Arada Enerji Sistemi Kurulumu Ankara | Güneş Paneli & Isı Pompası | 089 Bayern",
+      title: "Güneş Paneli Kurulumu Ankara | Vaillant Isı Pompası Samsung Klima Montajı Villa Çankaya Keçiören | 089 Bayern",
       description: "Ankara ve çevresinde profesyonel 4'ü 1 arada enerji sistemi kurulumu. Güneş paneli, Vaillant ısı pompası, Samsung klima ve batarya depolama. Alman kalitesi, 10 yıl garanti. Çankaya, Keçiören, Yenimahalle.",
       keywords: "ankara güneş paneli kurulumu çankaya keçiören yenimahalle, ankara villa ısı pompası montajı kış ayları verimlilik, 4 in 1 enerji sistemi ankara başkent alman mühendisliği, güneş paneli ankara kara iklim performansı soğuk havada, vaillant ısı pompası ankara merkez kurulum ve bakım, samsung klima batarya depolama ankara villa çözümleri, ankara etimesgut sincan güneş enerjisi sistemi kurulumu, ankara bölgesi ücretsiz keşif enerji tasarrufu analizi"
     },
     "installation-alanya": {
-      title: "4'ü 1 Arada Enerji Sistemi Kurulumu Alanya | Güneş Paneli & Isı Pompası | 089 Bayern Şubesi",
+      title: "Güneş Paneli Kurulumu Alanya | Vaillant Isı Pompası Samsung Klima Montajı Villa Mahmutlar Kestel | 089 Bayern Şube",
       description: "Alanya ve çevresinde profesyonel 4'ü 1 arada enerji sistemi kurulumu. 089 Bayern Alanya şubesi. Güneş paneli, Vaillant ısı pompası, Samsung klima ve batarya depolama. Mahmutlar, Kestel, Oba.",
       keywords: "alanya mahmutlar kestel oba güneş paneli kurulum hizmeti, alanya villa solar panel montaj fiyatları 089 bayern şube, vaillant ısı pompası kurulumu alanya sahil villalarında, samsung klima sistemi alanya sıcak iklim soğutma çözümü, 4 in 1 enerji sistemi alanya 300 güneşli gün avantajı, alanya gazipaşa konaklı güneş enerjisi batarya depolama, alanya bölgesi ücretsiz keşif ve enerji analizi hizmeti, akdeniz sahil villası güneş paneli ısı pompası entegrasyonu"
     },
     standorte: {
-      title: "Hizmet Bölgelerimiz | Türkiye, Hırvatistan, Yunanistan | 089 Bayern",
+      title: "089 Bayern Hizmet Bölgeleri | Antalya Alanya Muğla İzmir Güneş Paneli Kurulum Noktaları | Türkiye",
       description: "089 Bayern enerji sistemleri kurulum bölgeleri: Antalya, Alanya, Muğla, İzmir, Split, Dalmaçya. Akdeniz ve Ege'de güneş paneli, ısı pompası, klima kurulumu.",
       keywords: "089 bayern hizmet bölgeleri türkiye hırvatistan yunanistan, antalya alanya muğla izmir güneş paneli kurulum bölgeleri, fethiye bodrum marmaris enerji sistemi montaj hizmeti, akdeniz ege sahil bölgesi villa enerji çözümleri, split dalmaçya hırvatistan güneş enerjisi sistemi kurulumu, türkiye geneli villa enerji danışmanlığı ücretsiz keşif, mersin adana güney sahil enerji sistemi kurulum planı, 089 bayern yeni bölge genişleme planı 2026 hedefler"
     },
     "gunes-paneli": {
-      title: "Güneş Paneli Kurulumu Antalya | Villa Çatısı Solar Panel Montajı | 089 Bayern",
+      title: "Villa Çatısı Güneş Paneli Kurulumu Fiyatları 2026 Antalya | 6-12 kWp Solar Panel Montajı | 089 Bayern",
       description: "Antalya, Alanya, Kemer, Side'da villa çatısına profesyonel güneş paneli kurulumu. 6-12 kWp photovoltaik sistemler, tier-1 paneller, Alman kalitesi montaj. 300+ güneşli gün ile %70 elektrik tasarrufu. 10 yıl garanti.",
       keywords: "güneş paneli kurulumu antalya villa çatısı fiyatları, solar panel montajı alanya kemer belek side akdeniz, photovoltaik sistem 6 kwp 10 kwp 12 kwp villa çatısı, güneş paneli fiyatları 2026 türkiye antalya bölgesi, villa çatısına güneş paneli kaç kwp gerekir hesaplama, tier 1 güneş paneli markaları monokristal performans, güneş enerjisi ile elektrik faturası sıfıra nasıl düşer, 089 bayern güneş paneli kurulum referansları antalya alanya"
     },
     "isi-pompasi": {
-      title: "Vaillant Isı Pompası Kurulumu Antalya | Villa Isıtma Soğutma Sistemi | 089 Bayern",
+      title: "Vaillant Isı Pompası Kurulumu Fiyatları Antalya Villa | Hava Kaynaklı Isıtma Soğutma COP 5.0 | 089 Bayern",
       description: "Antalya ve Akdeniz bölgesinde Vaillant ısı pompası kurulumu. Hava kaynaklı ısı pompası ile kışın ısıtma yazın soğutma. COP 5.0 verimlilik, %60 enerji tasarrufu. Alman yetkili servis, 10 yıl garanti.",
       keywords: "vaillant ısı pompası kurulumu antalya villa fiyatları, hava kaynaklı ısı pompası akdeniz iklimi verimlilik, ısı pompası ile villa ısıtma soğutma sistemi türkiye, vaillant arotherm ısı pompası cop değeri performans, ısı pompası elektrik tüketimi ve aylık maliyet hesabı, villa ısı pompası montajı alanya kemer belek side, yerden ısıtma ısı pompası entegrasyonu akdeniz villası, 089 bayern vaillant yetkili bayi servis antalya türkiye"
     },
     klima: {
-      title: "Samsung Klima Kurulumu Antalya | WindFree Klima Sistemi Villa | 089 Bayern",
+      title: "Samsung WindFree Klima Kurulumu Fiyatları Antalya Villa | Sessiz Enerji Verimli Multi-Split Sistem | 089 Bayern",
       description: "Antalya ve Akdeniz villalarında Samsung WindFree klima sistemi kurulumu. Sessiz ve enerji verimli soğutma-ısıtma. Multi-split sistem, akıllı ev entegrasyonu. Yetkili Samsung bayii, 5 yıl garanti.",
       keywords: "samsung klima kurulumu antalya villa windfree sistemi, samsung windfree klima sessiz soğutma villa akdeniz, multi split klima sistemi villa montajı antalya alanya, samsung klima fiyatları 2026 enerji verimli inverter, villa klima sistemi kaç btu gerekir hesaplama rehberi, samsung klima akıllı ev wifi uzaktan kontrol sistemi, klima montajı profesyonel kurulum antalya kemer belek, 089 bayern samsung yetkili bayi klima servisi türkiye"
     },
     "enerji-depolama": {
-      title: "Enerji Depolama Batarya Sistemi Antalya | Lityum İyon Batarya | 089 Bayern",
+      title: "Lityum İyon Batarya Depolama Sistemi Kurulumu Antalya Villa | 10-15 kWh Güneş Enerjisi Depolama | 089 Bayern",
       description: "Antalya ve Akdeniz bölgesinde lityum iyon enerji depolama batarya sistemi kurulumu. Güneş enerjisi ile şarj, gece kullanım. 10-15 kWh kapasite, 6000+ şarj döngüsü. Kesintisiz enerji, 10 yıl garanti.",
       keywords: "enerji depolama batarya sistemi antalya villa kurulumu, lityum iyon batarya güneş paneli entegrasyonu fiyatları, ev tipi batarya depolama sistemi 10 kwh 15 kwh kapasite, güneş enerjisi gece kullanımı batarya ile depolama, samsung sdi batarya depolama sistemi yetkili bayi türkiye, off grid şebekeden bağımsız enerji batarya çözümü villa, enerji depolama sistemi fiyatları 2026 türkiye antalya, 089 bayern batarya depolama kurulum referansları akdeniz"
     }

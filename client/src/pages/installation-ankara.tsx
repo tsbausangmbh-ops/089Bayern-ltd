@@ -1255,15 +1255,7 @@ export default function InstallationAnkara() {
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
                 src={teamWorkImage} 
-                alt={{
-                  tr: "089 Bayern kurulum ekibi Ankara'da güneş paneli ve ısı pompası kurulumu yapıyor başkent",
-                  de: "089 Bayern Installationsteam bei Solarpanel- und Wärmepumpen-Installation in Ankara Hauptstadt Türkei",
-                  en: "089 Bayern installation team working on solar panel and heat pump installation in Ankara capital Turkey",
-                  ru: "089 Bayern монтажная бригада работает над установкой солнечных панелей и теплового насоса в Анкаре столица Турция",
-                  uk: "089 Bayern монтажна бригада працює над встановленням сонячних панелей та теплового насоса в Анкарі столиця Туреччина",
-                  ar: "089 Bayern فريق التركيب يعمل على تركيب الألواح الشمسية ومضخة الحرارة في أنقرة العاصمة تركيا",
-                  hr: "089 Bayern instalacijski tim radi na instalaciji solarnih panela i toplinske pumpe u Ankari glavni grad Turska"
-                }[language] || "089 Bayern installation team Ankara solar panel heat pump capital"} 
+                alt="089 Bayern kurulum ekibi Ankara villasında güneş paneli ve Vaillant ısı pompası montajı yapıyor başkent 4-in-1 enerji sistemi Çankaya Keçiören Yenimahalle" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 data-testid="img-team-work"
@@ -1272,15 +1264,7 @@ export default function InstallationAnkara() {
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
                 src={inspectionImage} 
-                alt={{
-                  tr: "089 Bayern profesyonel kurulum kontrolü ve kalite denetimi Ankara Alman standartları",
-                  de: "089 Bayern professionelle Installationskontrolle und Qualitätsprüfung Ankara deutsche Standards",
-                  en: "089 Bayern professional installation inspection and quality control Ankara German standards",
-                  ru: "089 Bayern профессиональный осмотр установки и контроль качества Анкара немецкие стандарты",
-                  uk: "089 Bayern професійна інспекція встановлення та контроль якості Анкара німецькі стандарти",
-                  ar: "089 Bayern فحص تركيب احترافي ومراقبة الجودة أنقرة المعايير الألمانية",
-                  hr: "089 Bayern profesionalna inspekcija instalacije i kontrola kvalitete Ankara njemački standardi"
-                }[language] || "089 Bayern installation inspection quality control Ankara German standards"} 
+                alt="089 Bayern profesyonel kurulum kontrolü ve kalite denetimi Ankara villa enerji sistemi Alman DIN standartları güneş paneli ısı pompası bakım servisi" 
                 className="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 data-testid="img-inspection"
