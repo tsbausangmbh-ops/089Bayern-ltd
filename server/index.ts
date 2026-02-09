@@ -39,7 +39,12 @@ if (process.env.PRERENDER_TOKEN) {
   prerender.crawlerUserAgents = [
     'googlebot',
     'Google-InspectionTool',
+    'AdsBot-Google',
+    'APIs-Google',
+    'Mediapartners-Google',
     'bingbot',
+    'BingPreview',
+    'msnbot',
     'yandex',
     'baiduspider',
     'facebookexternalhit',
@@ -55,7 +60,14 @@ if (process.env.PRERENDER_TOKEN) {
     'Claude-Web',
     'PerplexityBot',
     'Bytespider',
-    'OAI-SearchBot'
+    'OAI-SearchBot',
+    'AhrefsBot',
+    'SemrushBot',
+    'DotBot',
+    'rogerbot',
+    'Screaming Frog SEO Spider',
+    'MJ12bot',
+    'PetalBot'
   ];
   
   app.use(prerender);
