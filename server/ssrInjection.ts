@@ -9,7 +9,6 @@ function buildHeadTags(seo: SeoPayload): string {
 
   tags.push(`<title>${escapeHtml(seo.title)}</title>`);
   tags.push(`<meta name="description" content="${escapeHtml(seo.description)}" />`);
-  tags.push(`<meta name="keywords" content="${escapeHtml(seo.keywords)}" />`);
   tags.push(`<meta http-equiv="content-language" content="${seo.inLanguage}" />`);
   tags.push(`<meta name="content-language" content="${seo.inLanguage}" />`);
 

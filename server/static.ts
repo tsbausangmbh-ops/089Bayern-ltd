@@ -15,6 +15,7 @@ export function serveStatic(app: Express) {
     maxAge: '1y',
     etag: true,
     lastModified: true,
+    index: false,
     setHeaders: (res, filePath) => {
       if (filePath.endsWith('.html')) {
         res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');

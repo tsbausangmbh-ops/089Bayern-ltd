@@ -1,0 +1,30 @@
+Die Analyse des HTML‑Quellcodes von 089bayern.com zeigt, dass die Seite als JavaScript‑App ausgeliefert wird: Im Body steht lediglich ein <div id="root"> als Platzhalter. Alle Inhalte werden erst durch das React‑Bundle gerendert. Dadurch sehen Suchmaschinen und Crawler, die kein JavaScript ausführen, keine Texte oder Überschriften – ein Nachteil für SEO und Lokalsichtbarkeit.
+
+Positive SEO‑Elemente
+
+Meta‑Tags: Es gibt eindeutige Titel‑, Beschreibungs‑ und Keywords‑Tags, Kanonical‑Link und umfangreiche hreflang‑Einträge für Türkisch, Deutsch, Englisch u. a.. Geo‑Tags für Antalya/Antalya sind hinterlegt.
+
+Strukturierte Daten: Der Kopf enthält ein großes JSON‑LD‑@graph mit Daten zu Organisation, LocalBusiness, WebSite und FAQ. Darin werden u. a. Preise, Öffnungszeiten, Gebiet („Antalya, Alanya, Kemer…“) und Bewertungen definiert – das erleichtert Rich‑Snippet‑Darstellungen.
+
+Lokale Ausrichtung: Metatags und Structured Data betonen regionale Keywords (Antalya, Muğla, İzmir), Service Areas und Städte.
+
+Schwachstellen & Optimierungsvorschläge
+
+Fehlendes Server‑Side‑Rendering
+Da das initiale HTML nur einen leeren Root‑Container enthält, können viele Suchmaschinen die Inhalte nicht crawlen. Eine prerenderte Version oder echtes Server‑Side‑Rendering (SSR) sollte bereitgestellt werden, damit H‑Überschriften, Texte und Links im HTML sichtbar sind.
+
+Doppelte und redundante Tags
+Mehrere hreflang‑Links und canonical‑Elemente werden sowohl im statischen HTML als auch durch React Helmet (Kennzeichen data‑rh) generiert. Diese Duplikate können Suchmaschinen verwirren. Jedes Sprach‑/Länderkürzel sollte eine eindeutige URL erhalten (z. B. /tr, /de) und nur einmal im Kopf erscheinen.
+
+Meta‑Keywords
+Der Meta‑Keyword‑Tag enthält eine lange Liste von Suchbegriffen. Google ignoriert dieses Feld schon lange; eine übermäßige Nutzung bringt keinen Vorteil und kann als Keyword‑Stuffing gewertet werden. Besser: den Fokus auf klare Seitentitel und semantische H‑Struktur legen.
+
+Gebietsangaben im areaServed
+Das JSON‑LD listet zahlreiche Städte und sogar Deutschland und Kroatien. Für eine lokale Seite sollte areaServed nur die tatsächlich bedienten Regionen enthalten; zu viele unterschiedliche Länder können die lokale Relevanz verwässern.
+
+Konsistenz der hreflang‑Einträge
+Einige hreflang‑Links in der View‑Source und im React‑Helmet‑Output sind identisch (z. B. tr, de, en alle auf die gleiche URL). Für internationale SEO empfiehlt es sich, separate Sprachversionen mit eindeutiger URL‐Struktur zu verwenden.
+
+Fazit
+
+Die Seite enthält umfangreiche Meta‑Daten und strukturierte Informationen, die für SEO wertvoll sind. Dennoch wird sie derzeit ausschließlich clientseitig gerendert. Um Sichtbarkeit und Indexierung zu verbessern, sollte das Unternehmen eine serverseitig vorgerenderte Version (SSR oder Prerender) ausliefern. Außerdem sollten hreflang‑ und canonical‑Tags bereinigt und areaServed auf die relevanten Regionen beschränkt werden.
