@@ -140,6 +140,43 @@ if (process.env.PRERENDER_TOKEN) {
   console.log('[Prerender] Disabled - no PRERENDER_TOKEN set');
 }
 
+app.use((req: Request, res: Response, next: NextFunction) => {
+  if (req.method !== 'GET' && req.method !== 'HEAD') return next();
+  if (req.path.startsWith('/api/')) return next();
+  if (isStaticAsset(req.path)) return next();
+
+  const ua = req.headers['user-agent'] || '';
+  if (isCrawler(ua)) return next();
+
+  const originalSend = res.send;
+  const originalEnd = res.end;
+
+  function injectIfHtml(body: any): any {
+    if (typeof body === 'string' && (body.includes('<!DOCTYPE html') || body.includes('<html'))) {
+      const urlPath = req.originalUrl.split('?')[0].split('#')[0];
+      const injected = injectSeoIntoHtml(body, urlPath);
+      res.setHeader('X-SSR-Injected', 'true');
+      return injected;
+    }
+    return body;
+  }
+
+  res.send = function (body: any) {
+    return originalSend.call(this, injectIfHtml(body));
+  };
+
+  (res as any).end = function (chunk?: any, ...args: any[]) {
+    if (chunk && typeof chunk === 'string') {
+      chunk = injectIfHtml(chunk);
+    }
+    return originalEnd.call(this, chunk, ...args);
+  };
+
+  next();
+});
+
+console.log('[SSR] Server-side SEO injection active for all visitors');
+
 export { injectSeoIntoHtml };
 
 export function log(message: string, source = "express") {
