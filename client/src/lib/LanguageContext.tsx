@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { createContext, useContext, useState, useEffect, useRef, ReactNode } from "react";
 import { Language, isRTL } from "./translations";
 
 interface LanguageContextType {
@@ -20,7 +20,6 @@ const countryToLanguage: Record<string, Language> = {
 
 async function detectCountryFromIP(): Promise<string | null> {
   try {
-    // Try ipapi.co first (HTTPS, 1000 requests/day free)
     const response = await fetch("https://ipapi.co/country_code/", {
       headers: { "Accept": "text/plain" }
     });
@@ -37,10 +36,13 @@ async function detectCountryFromIP(): Promise<string | null> {
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>(() => {
+  const userExplicitlyChose = useRef(false);
+
+  const [language, setLanguageState] = useState<Language>(() => {
     if (typeof window !== "undefined") {
       const saved = localStorage.getItem("preferred-language") as Language;
       if (saved && VALID_LANGUAGES.includes(saved)) {
+        userExplicitlyChose.current = true;
         return saved;
       }
     }
@@ -50,19 +52,23 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [detectedCountry, setDetectedCountry] = useState<string | null>(null);
   const [hasAutoDetected, setHasAutoDetected] = useState(false);
 
+  const setLanguage = (lang: Language) => {
+    userExplicitlyChose.current = true;
+    localStorage.setItem("preferred-language", lang);
+    setLanguageState(lang);
+  };
+
   useEffect(() => {
     const autoDetectLanguage = async () => {
       if (typeof window === "undefined") return;
-      
-      const hasUserPreference = localStorage.getItem("preferred-language");
-      if (hasUserPreference || hasAutoDetected) return;
+      if (userExplicitlyChose.current || hasAutoDetected) return;
 
       const country = await detectCountryFromIP();
       if (country) {
         setDetectedCountry(country);
         const detectedLang = countryToLanguage[country];
         if (detectedLang && VALID_LANGUAGES.includes(detectedLang)) {
-          setLanguage(detectedLang);
+          setLanguageState(detectedLang);
         }
       }
       setHasAutoDetected(true);
@@ -72,7 +78,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, [hasAutoDetected]);
 
   useEffect(() => {
-    localStorage.setItem("preferred-language", language);
     document.documentElement.dir = isRTL(language) ? "rtl" : "ltr";
     document.documentElement.lang = language;
   }, [language]);
