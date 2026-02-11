@@ -1,23 +1,17 @@
 # 089 Bayern Enerji Sistemleri - robots.txt
 # Turk-Alman Enerji Sistemleri Sirketi
 # Merkez: Antalya, Turkiye
-# Updated: 2026-02-09
+# Updated: 2026-02-11
 
 User-agent: *
 Allow: /
-Crawl-delay: 1
 
-# Host & Sitemaps
-Host: https://089bayern.com
+# Sitemap
 Sitemap: https://089bayern.com/sitemap-index.xml
-Sitemap: https://089bayern.com/sitemap.xml
-Sitemap: https://089bayern.com/image-sitemap.xml
-Sitemap: https://089bayern.com/ai.sitemap.xml
 
 # Google (Priority for Turkey / google.com.tr)
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0
 
 User-agent: Googlebot-Image
 Allow: /
@@ -32,6 +26,7 @@ Allow: /
 # Yandex (Russian/Ukrainian tourists in Turkey)
 User-agent: Yandex
 Allow: /
+Host: https://089bayern.com
 
 # Baidu
 User-agent: Baiduspider
