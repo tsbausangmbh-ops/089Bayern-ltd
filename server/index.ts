@@ -75,6 +75,16 @@ function isStaticAsset(path: string): boolean {
   return !!(ext && STATIC_EXTENSIONS.includes(ext));
 }
 
+function hasSsrContent(html: string): boolean {
+  const rootMatch = html.match(/<div\s+id="root"[^>]*>([\s\S]*)/);
+  if (!rootMatch) return false;
+  const afterRoot = rootMatch[1];
+  const firstClosingDiv = afterRoot.indexOf('</div>');
+  if (firstClosingDiv < 0) return false;
+  const innerContent = afterRoot.substring(0, firstClosingDiv).trim();
+  return innerContent.length >= 100;
+}
+
 if (process.env.PRERENDER_TOKEN) {
   const prerenderToken = process.env.PRERENDER_TOKEN;
 
@@ -86,7 +96,7 @@ if (process.env.PRERENDER_TOKEN) {
     if (isStaticAsset(req.path)) return next();
 
     const protocol = req.headers['x-forwarded-proto'] || 'https';
-    const host = req.headers['x-forwarded-host'] || req.headers['host'] || 'localhost:5000';
+    const host = req.headers['x-forwarded-host'] || req.headers['host'] || '089bayern.com';
     const prerenderUrl = `https://service.prerender.io/${protocol}://${host}${req.url}`;
 
     let handled = false;
@@ -113,7 +123,7 @@ if (process.env.PRERENDER_TOKEN) {
         prerenderRes.on('end', () => {
           if (handled) return;
           let body = Buffer.concat(chunks).toString('utf-8');
-          if (body.length > 100) {
+          if (body.length > 500 && hasSsrContent(body)) {
             handled = true;
             body = patchPrerenderHtml(body, req.path);
             res.setHeader('Content-Type', 'text/html; charset=utf-8');
@@ -121,7 +131,7 @@ if (process.env.PRERENDER_TOKEN) {
             res.setHeader('X-SSR-Safety-Net', body.includes('application/ld+json') ? 'present' : 'injected');
             res.status(200).send(body);
           } else {
-            fallback('Empty response');
+            fallback(body.length <= 500 ? 'Empty response' : 'No rendered content in root div');
           }
         });
         prerenderRes.on('error', () => fallback('Response stream error'));
@@ -145,14 +155,14 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   if (req.path.startsWith('/api/')) return next();
   if (isStaticAsset(req.path)) return next();
 
-  const ua = req.headers['user-agent'] || '';
-  if (isCrawler(ua)) return next();
-
   const originalSend = res.send;
-  const originalEnd = res.end;
+  const originalEnd = (res as any).end as Function;
+  let alreadyInjected = false;
 
   function injectIfHtml(body: any): any {
+    if (alreadyInjected) return body;
     if (typeof body === 'string' && (body.includes('<!DOCTYPE html') || body.includes('<html'))) {
+      alreadyInjected = true;
       const urlPath = req.originalUrl.split('?')[0].split('#')[0];
       const injected = injectSeoIntoHtml(body, urlPath);
       res.setHeader('X-SSR-Injected', 'true');
@@ -165,11 +175,11 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     return originalSend.call(this, injectIfHtml(body));
   };
 
-  (res as any).end = function (chunk?: any, ...args: any[]) {
+  (res as any).end = function (chunk: any, encoding?: BufferEncoding, callback?: () => void) {
     if (chunk && typeof chunk === 'string') {
       chunk = injectIfHtml(chunk);
     }
-    return originalEnd.call(this, chunk, ...args);
+    return originalEnd.call(this, chunk, encoding, callback);
   };
 
   next();
