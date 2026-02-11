@@ -9,7 +9,7 @@ export function refreshPrerenderCache(token: string): void {
   let errors = 0;
 
   for (const url of urls) {
-    const postData = JSON.stringify({ url });
+    const postData = JSON.stringify({ url, priority: 1 });
     const options = {
       hostname: "api.prerender.io",
       path: "/recache",
