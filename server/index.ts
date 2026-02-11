@@ -3,6 +3,8 @@ import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 import https from "https";
+import { patchPrerenderHtml, injectSeoIntoHtml } from "./ssrInjection";
+import { refreshPrerenderCache } from "./prerenderRefresh";
 
 const app = express();
 const httpServer = createServer(app);
@@ -23,12 +25,10 @@ app.use(
 
 app.use(express.urlencoded({ extended: false }));
 
-// Health check endpoint for deployment monitoring
 app.get("/health", (req, res) => {
   res.status(200).send("ok");
 });
 
-// Prerender.io middleware for SEO - renders JS pages for search engine crawlers
 const CRAWLER_USER_AGENTS = [
   'googlebot',
   'Google-InspectionTool',
@@ -68,6 +68,13 @@ function isCrawler(userAgent: string): boolean {
   return CRAWLER_USER_AGENTS.some(bot => ua.includes(bot.toLowerCase()));
 }
 
+const STATIC_EXTENSIONS = ['js', 'css', 'png', 'jpg', 'jpeg', 'gif', 'svg', 'ico', 'woff', 'woff2', 'ttf', 'webp', 'mp4', 'webm', 'xml', 'txt', 'json', 'map'];
+
+function isStaticAsset(path: string): boolean {
+  const ext = path.split('.').pop()?.toLowerCase();
+  return !!(ext && STATIC_EXTENSIONS.includes(ext));
+}
+
 if (process.env.PRERENDER_TOKEN) {
   const prerenderToken = process.env.PRERENDER_TOKEN;
 
@@ -76,8 +83,7 @@ if (process.env.PRERENDER_TOKEN) {
     if (!isCrawler(ua)) return next();
     if (req.method !== 'GET' && req.method !== 'HEAD') return next();
     if (req.path.startsWith('/api/')) return next();
-    const ext = req.path.split('.').pop()?.toLowerCase();
-    if (ext && ['js', 'css', 'png', 'jpg', 'jpeg', 'gif', 'svg', 'ico', 'woff', 'woff2', 'ttf', 'webp', 'mp4', 'webm'].includes(ext)) return next();
+    if (isStaticAsset(req.path)) return next();
 
     const protocol = req.headers['x-forwarded-proto'] || 'https';
     const host = req.headers['x-forwarded-host'] || req.headers['host'] || 'localhost:5000';
@@ -87,8 +93,9 @@ if (process.env.PRERENDER_TOKEN) {
     function fallback(reason: string) {
       if (handled) return;
       handled = true;
-      console.warn(`[Prerender] ${reason} for ${req.url} - serving SPA shell`);
+      console.warn(`[Prerender] ${reason} for ${req.url} - falling back to SSR injection`);
       prerenderReq.destroy();
+      (req as any)._prerenderFailed = true;
       next();
     }
 
@@ -105,11 +112,13 @@ if (process.env.PRERENDER_TOKEN) {
         prerenderRes.on('data', (chunk: Buffer) => { if (!handled) chunks.push(chunk); });
         prerenderRes.on('end', () => {
           if (handled) return;
-          const body = Buffer.concat(chunks).toString('utf-8');
+          let body = Buffer.concat(chunks).toString('utf-8');
           if (body.length > 100) {
             handled = true;
+            body = patchPrerenderHtml(body, req.path);
             res.setHeader('Content-Type', 'text/html; charset=utf-8');
             res.setHeader('X-Prerender', 'true');
+            res.setHeader('X-SSR-Safety-Net', body.includes('application/ld+json') ? 'present' : 'injected');
             res.status(200).send(body);
           } else {
             fallback('Empty response');
@@ -126,10 +135,12 @@ if (process.env.PRERENDER_TOKEN) {
     prerenderReq.on('timeout', () => fallback('Timeout'));
   });
 
-  console.log(`[Prerender] SSR activated for ${CRAWLER_USER_AGENTS.length} crawler types (with fallback)`);
+  console.log(`[Prerender] Crawler detection active for ${CRAWLER_USER_AGENTS.length} bot types (with SSR safety net)`);
 } else {
   console.log('[Prerender] Disabled - no PRERENDER_TOKEN set');
 }
+
+export { injectSeoIntoHtml };
 
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
@@ -179,9 +190,6 @@ app.use((req, res, next) => {
     throw err;
   });
 
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
   if (process.env.NODE_ENV === "production") {
     serveStatic(app);
   } else {
@@ -189,10 +197,6 @@ app.use((req, res, next) => {
     await setupVite(httpServer, app);
   }
 
-  // ALWAYS serve the app on the port specified in the environment variable PORT
-  // Other ports are firewalled. Default to 5000 if not specified.
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
   const port = parseInt(process.env.PORT || "5000", 10);
   httpServer.listen(
     {
@@ -202,10 +206,15 @@ app.use((req, res, next) => {
     },
     () => {
       log(`serving on port ${port}`);
+
+      if (process.env.NODE_ENV === "production" && process.env.PRERENDER_TOKEN) {
+        setTimeout(() => {
+          refreshPrerenderCache(process.env.PRERENDER_TOKEN!);
+        }, 5000);
+      }
     },
   );
 
-  // Timeout settings for long-running connections
   httpServer.keepAliveTimeout = 120000;
   httpServer.headersTimeout = 120000;
 })();

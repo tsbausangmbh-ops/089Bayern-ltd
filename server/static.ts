@@ -1,6 +1,7 @@
 import express, { type Express } from "express";
 import fs from "fs";
 import path from "path";
+import { injectSeoIntoHtml } from "./ssrInjection";
 
 export function serveStatic(app: Express) {
   const distPath = path.resolve(__dirname, "public");
@@ -10,30 +11,42 @@ export function serveStatic(app: Express) {
     );
   }
 
-  // Cache static assets for 1 year (immutable files with hash)
   app.use(express.static(distPath, {
     maxAge: '1y',
     etag: true,
     lastModified: true,
     setHeaders: (res, filePath) => {
-      // HTML files should not be cached
       if (filePath.endsWith('.html')) {
         res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
       }
-      // Sitemap and robots should be cached short-term
       else if (filePath.endsWith('.xml') || filePath.endsWith('.txt')) {
-        res.setHeader('Cache-Control', 'public, max-age=86400'); // 1 day
+        res.setHeader('Cache-Control', 'public, max-age=86400');
       }
-      // Static assets (JS, CSS, images) cached long-term
       else {
         res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
       }
     }
   }));
 
-  // fall through to index.html if the file doesn't exist
-  app.use("*", (_req, res) => {
+  const indexHtmlPath = path.resolve(distPath, "index.html");
+  let indexHtmlTemplate = "";
+  try {
+    indexHtmlTemplate = fs.readFileSync(indexHtmlPath, "utf-8");
+  } catch (e) {
+    console.error("[SSR] Failed to read index.html template:", e);
+  }
+
+  app.use("*", (req, res) => {
     res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-    res.sendFile(path.resolve(distPath, "index.html"));
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+
+    if (indexHtmlTemplate) {
+      const urlPath = req.originalUrl.split("?")[0].split("#")[0];
+      const injectedHtml = injectSeoIntoHtml(indexHtmlTemplate, urlPath);
+      res.setHeader('X-SSR-Injected', 'true');
+      res.status(200).send(injectedHtml);
+    } else {
+      res.sendFile(indexHtmlPath);
+    }
   });
 }
