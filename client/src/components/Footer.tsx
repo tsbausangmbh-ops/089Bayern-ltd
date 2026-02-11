@@ -237,7 +237,7 @@ export default function Footer() {
         <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4 text-[10px] sm:text-sm text-white/60">
             <p className="text-center md:text-left">
-              &copy; 2024{" "}
+              &copy; 2026{" "}
               <a href="/" className="hover:text-white transition-colors underline" data-testid="link-089bayern">
                 089Bayern ltd.
               </a>

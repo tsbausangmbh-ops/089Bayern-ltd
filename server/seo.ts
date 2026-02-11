@@ -319,12 +319,52 @@ function buildJsonLd(page: PageType, language: Language, data: { title: string; 
       "@type": "WebPage", "@id": `${pageUrl}#webpage`, "url": pageUrl,
       "name": data.title, "description": data.description,
       "datePublished": "2024-01-01", "dateModified": "2026-02-11",
+      "copyrightYear": 2026,
+      "copyrightHolder": { "@id": "https://089bayern.com/#organization" },
       "isPartOf": { "@id": "https://089bayern.com/#website" },
       "about": { "@id": "https://089bayern.com/#organization" },
       "breadcrumb": { "@id": "https://089bayern.com/#breadcrumb" },
       "inLanguage": inLanguage
     }
   ];
+
+  if (page === "faq") {
+    const faqQuestions = [
+      {
+        q: { tr: "Güneş paneli kurulumu ne kadar sürer?", de: "Wie lange dauert die Installation einer Solaranlage?", en: "How long does solar panel installation take?" },
+        a: { tr: "4'ü 1 arada enerji sistemi kurulumu genellikle 3-5 iş günü sürer. Sadece güneş paneli kurulumu 1-2 gün sürer.", de: "Die Installation des 4-in-1 Energiesystems dauert in der Regel 3-5 Werktage. Die reine Solaranlagen-Installation dauert 1-2 Tage.", en: "The 4-in-1 energy system installation typically takes 3-5 business days. Solar panel installation alone takes 1-2 days." }
+      },
+      {
+        q: { tr: "Sistem kesintisiz güç sağlayabilir mi?", de: "Kann das System eine Notstromversorgung bieten?", en: "Can the system provide backup power?" },
+        a: { tr: "Evet, batarya depolama sistemi ile şebeke kesintilerinde evinize kesintisiz enerji sağlanır. 10-15 kWh kapasite ile 8-12 saat bağımsız çalışma.", de: "Ja, mit dem Batteriespeicher wird Ihr Haus bei Netzausfällen unterbrechungsfrei versorgt. 10-15 kWh Kapazität ermöglichen 8-12 Stunden Unabhängigkeit.", en: "Yes, the battery storage system provides uninterrupted power during grid outages. 10-15 kWh capacity supports 8-12 hours of independent operation." }
+      },
+      {
+        q: { tr: "Aşırı sıcaklıklarda performans nasıl?", de: "Wie ist die Leistung bei extremen Temperaturen?", en: "How does performance hold up in extreme temperatures?" },
+        a: { tr: "Vaillant ısı pompası -20°C ile +45°C arasında verimli çalışır. Samsung klima 50°C'ye kadar soğutma yapabilir. Akdeniz iklimi için ideal performans.", de: "Die Vaillant Wärmepumpe arbeitet effizient von -20°C bis +45°C. Die Samsung Klimaanlage kühlt bis 50°C. Ideale Leistung für das Mittelmeerklima.", en: "The Vaillant heat pump operates efficiently from -20°C to +45°C. Samsung AC cools up to 50°C. Ideal performance for Mediterranean climate." }
+      },
+      {
+        q: { tr: "4'ü 1 arada sistem fiyatı ne kadar?", de: "Was kostet das 4-in-1 System?", en: "How much does the 4-in-1 system cost?" },
+        a: { tr: "200m² villa için yaklaşık 35.000-50.000 EUR arasındadır. Standart 6kWp: ca. 31.200 EUR, Orta 10kWp: ca. 41.600 EUR, Premium 12kWp: ca. 58.500 EUR.", de: "Für eine 200m² Villa ca. 35.000-50.000 EUR. Standard 6kWp: ca. 31.200 EUR, Mittel 10kWp: ca. 41.600 EUR, Premium 12kWp: ca. 58.500 EUR.", en: "For a 200m² villa approximately 35,000-50,000 EUR. Standard 6kWp: approx. 31,200 EUR, Medium 10kWp: approx. 41,600 EUR, Premium 12kWp: approx. 58,500 EUR." }
+      },
+      {
+        q: { tr: "Türkiye'de enerji teşvikleri var mı?", de: "Gibt es Förderungen in der Türkei?", en: "Are there energy incentives in Turkey?" },
+        a: { tr: "Türkiye'de güneş enerjisi için vergi indirimleri ve net metering imkanı bulunmaktadır. Detaylı bilgi için ücretsiz danışmanlık alabilirsiniz.", de: "In der Türkei gibt es Steuererleichterungen für Solarenergie und Net-Metering. Kontaktieren Sie uns für eine kostenlose Beratung.", en: "Turkey offers tax benefits for solar energy and net metering. Contact us for free consultation on available incentives." }
+      }
+    ];
+    const lang = language as string;
+    graphItems.push({
+      "@type": "FAQPage",
+      "@id": `${pageUrl}#faqpage`,
+      "mainEntity": faqQuestions.map(fq => ({
+        "@type": "Question",
+        "name": (fq.q as any)[lang] || fq.q.tr,
+        "acceptedAnswer": { "@type": "Answer", "text": (fq.a as any)[lang] || fq.a.tr }
+      })),
+      "mainEntityOfPage": { "@id": `${pageUrl}#webpage` },
+      "dateModified": "2026-02-11",
+      "author": { "@id": "https://089bayern.com/#organization" }
+    });
+  }
 
   const pagesWithSpeakable = ["home", "systeme", "vorteile", "gunes-paneli", "isi-pompasi", "klima", "enerji-depolama", "installation-antalya", "installation-alanya", "installation-ankara"];
   if (pagesWithSpeakable.includes(page)) {

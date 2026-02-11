@@ -6,6 +6,7 @@ import type { Language } from "@/lib/translations";
 interface SEOHeadProps {
   page: "home" | "systeme" | "vorteile" | "rechner" | "faq" | "ueber-uns" | "team" | "legal" | "installation-antalya" | "installation-ankara" | "installation-alanya" | "standorte" | "gunes-paneli" | "isi-pompasi" | "klima" | "enerji-depolama";
   pageTitle?: string;
+  customFaqItems?: Array<{ question: string; answer: string }>;
 }
 
 const seoData = {
@@ -480,7 +481,7 @@ const seoData = {
   }
 };
 
-export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
+export default function SEOHead({ page, pageTitle, customFaqItems }: SEOHeadProps) {
   const { language } = useLanguage();
   
   const data = seoData[language]?.[page] || seoData.tr[page];
@@ -572,52 +573,71 @@ export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
     }
   ];
 
-  const faqSchema = page === "faq" ? {
-    "@type": "FAQPage",
-    "@id": `https://089bayern.com/${page}#faqpage`,
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": language === "tr" ? "Güneş paneli kurulumu ne kadar sürer?" : language === "de" ? "Wie lange dauert die Installation einer Solaranlage?" : "How long does solar panel installation take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": language === "tr" ? "4'ü 1 arada enerji sistemi kurulumu genellikle 3-5 iş günü sürer. Sadece güneş paneli kurulumu 1-2 gün sürer." : language === "de" ? "Die Installation des 4-in-1 Energiesystems dauert in der Regel 3-5 Werktage. Die reine Solaranlagen-Installation dauert 1-2 Tage." : "The 4-in-1 energy system installation typically takes 3-5 business days. Solar panel installation alone takes 1-2 days."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": language === "tr" ? "Sistem kesintisiz güç sağlayabilir mi?" : language === "de" ? "Kann das System eine Notstromversorgung bieten?" : "Can the system provide backup power?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": language === "tr" ? "Evet, batarya depolama sistemi ile şebeke kesintilerinde evinize kesintisiz enerji sağlanır. 10-15 kWh kapasite ile 8-12 saat bağımsız çalışma." : language === "de" ? "Ja, mit dem Batteriespeicher wird Ihr Haus bei Netzausfällen unterbrechungsfrei versorgt. 10-15 kWh Kapazität ermöglichen 8-12 Stunden Unabhängigkeit." : "Yes, the battery storage system provides uninterrupted power during grid outages. 10-15 kWh capacity supports 8-12 hours of independent operation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": language === "tr" ? "Aşırı sıcaklıklarda performans nasıl?" : language === "de" ? "Wie ist die Leistung bei extremen Temperaturen?" : "How does performance hold up in extreme temperatures?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": language === "tr" ? "Vaillant ısı pompası -20°C ile +45°C arasında verimli çalışır. Samsung klima 50°C'ye kadar soğutma yapabilir. Akdeniz iklimi için ideal performans." : language === "de" ? "Die Vaillant Wärmepumpe arbeitet effizient von -20°C bis +45°C. Die Samsung Klimaanlage kühlt bis 50°C. Ideale Leistung für das Mittelmeerklima." : "The Vaillant heat pump operates efficiently from -20°C to +45°C. Samsung AC cools up to 50°C. Ideal performance for Mediterranean climate."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": language === "tr" ? "4'ü 1 arada sistem fiyatı ne kadar?" : language === "de" ? "Was kostet das 4-in-1 System?" : "How much does the 4-in-1 system cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": language === "tr" ? "200m² villa için yaklaşık 35.000-50.000 EUR arasındadır (garantisiz tahmini fiyat). Standart 6kWp: ca. 31.200 EUR, Orta 10kWp: ca. 41.600 EUR, Premium 12kWp: ca. 58.500 EUR." : language === "de" ? "Für eine 200m² Villa ca. 35.000-50.000 EUR (unverbindlicher Richtwert). Standard 6kWp: ca. 31.200 EUR, Mittel 10kWp: ca. 41.600 EUR, Premium 12kWp: ca. 58.500 EUR." : "For a 200m² villa approximately 35,000-50,000 EUR (non-binding estimate). Standard 6kWp: approx. 31,200 EUR, Medium 10kWp: approx. 41,600 EUR, Premium 12kWp: approx. 58,500 EUR."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": language === "tr" ? "Türkiye'de enerji teşvikleri var mı?" : language === "de" ? "Gibt es Förderungen in der Türkei?" : "Are there energy incentives in Turkey?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": language === "tr" ? "Türkiye'de güneş enerjisi için vergi indirimleri ve net metering (fazla üretimi şebekeye satma) imkanı bulunmaktadır. Detaylı bilgi için ücretsiz danışmanlık alabilirsiniz." : language === "de" ? "In der Türkei gibt es Steuererleichterungen für Solarenergie und Net-Metering (Überschusseinspeisung). Kontaktieren Sie uns für eine kostenlose Beratung." : "Turkey offers tax benefits for solar energy and net metering (selling excess production to the grid). Contact us for free consultation on available incentives."
-        }
-      }
-    ]
-  } : null;
+  const stripHtml = (html: string): string => html.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+
+  const faqPageUrl = page === "faq" ? pageUrl : null;
+  const faqSchema = page === "faq" ? (() => {
+    const faqItems = customFaqItems && customFaqItems.length > 0
+      ? customFaqItems.map(item => ({
+          "@type": "Question" as const,
+          "name": stripHtml(item.question),
+          "acceptedAnswer": {
+            "@type": "Answer" as const,
+            "text": stripHtml(item.answer)
+          }
+        }))
+      : [
+          {
+            "@type": "Question" as const,
+            "name": language === "tr" ? "Güneş paneli kurulumu ne kadar sürer?" : language === "de" ? "Wie lange dauert die Installation einer Solaranlage?" : "How long does solar panel installation take?",
+            "acceptedAnswer": {
+              "@type": "Answer" as const,
+              "text": language === "tr" ? "4'ü 1 arada enerji sistemi kurulumu genellikle 3-5 iş günü sürer. Sadece güneş paneli kurulumu 1-2 gün sürer." : language === "de" ? "Die Installation des 4-in-1 Energiesystems dauert in der Regel 3-5 Werktage. Die reine Solaranlagen-Installation dauert 1-2 Tage." : "The 4-in-1 energy system installation typically takes 3-5 business days. Solar panel installation alone takes 1-2 days."
+            }
+          },
+          {
+            "@type": "Question" as const,
+            "name": language === "tr" ? "Sistem kesintisiz güç sağlayabilir mi?" : language === "de" ? "Kann das System eine Notstromversorgung bieten?" : "Can the system provide backup power?",
+            "acceptedAnswer": {
+              "@type": "Answer" as const,
+              "text": language === "tr" ? "Evet, batarya depolama sistemi ile şebeke kesintilerinde evinize kesintisiz enerji sağlanır. 10-15 kWh kapasite ile 8-12 saat bağımsız çalışma." : language === "de" ? "Ja, mit dem Batteriespeicher wird Ihr Haus bei Netzausfällen unterbrechungsfrei versorgt. 10-15 kWh Kapazität ermöglichen 8-12 Stunden Unabhängigkeit." : "Yes, the battery storage system provides uninterrupted power during grid outages. 10-15 kWh capacity supports 8-12 hours of independent operation."
+            }
+          },
+          {
+            "@type": "Question" as const,
+            "name": language === "tr" ? "Aşırı sıcaklıklarda performans nasıl?" : language === "de" ? "Wie ist die Leistung bei extremen Temperaturen?" : "How does performance hold up in extreme temperatures?",
+            "acceptedAnswer": {
+              "@type": "Answer" as const,
+              "text": language === "tr" ? "Vaillant ısı pompası -20°C ile +45°C arasında verimli çalışır. Samsung klima 50°C'ye kadar soğutma yapabilir. Akdeniz iklimi için ideal performans." : language === "de" ? "Die Vaillant Wärmepumpe arbeitet effizient von -20°C bis +45°C. Die Samsung Klimaanlage kühlt bis 50°C. Ideale Leistung für das Mittelmeerklima." : "The Vaillant heat pump operates efficiently from -20°C to +45°C. Samsung AC cools up to 50°C. Ideal performance for Mediterranean climate."
+            }
+          },
+          {
+            "@type": "Question" as const,
+            "name": language === "tr" ? "4'ü 1 arada sistem fiyatı ne kadar?" : language === "de" ? "Was kostet das 4-in-1 System?" : "How much does the 4-in-1 system cost?",
+            "acceptedAnswer": {
+              "@type": "Answer" as const,
+              "text": language === "tr" ? "200m² villa için yaklaşık 35.000-50.000 EUR arasındadır (garantisiz tahmini fiyat). Standart 6kWp: ca. 31.200 EUR, Orta 10kWp: ca. 41.600 EUR, Premium 12kWp: ca. 58.500 EUR." : language === "de" ? "Für eine 200m² Villa ca. 35.000-50.000 EUR (unverbindlicher Richtwert). Standard 6kWp: ca. 31.200 EUR, Mittel 10kWp: ca. 41.600 EUR, Premium 12kWp: ca. 58.500 EUR." : "For a 200m² villa approximately 35,000-50,000 EUR (non-binding estimate). Standard 6kWp: approx. 31,200 EUR, Medium 10kWp: approx. 41,600 EUR, Premium 12kWp: approx. 58,500 EUR."
+            }
+          },
+          {
+            "@type": "Question" as const,
+            "name": language === "tr" ? "Türkiye'de enerji teşvikleri var mı?" : language === "de" ? "Gibt es Förderungen in der Türkei?" : "Are there energy incentives in Turkey?",
+            "acceptedAnswer": {
+              "@type": "Answer" as const,
+              "text": language === "tr" ? "Türkiye'de güneş enerjisi için vergi indirimleri ve net metering (fazla üretimi şebekeye satma) imkanı bulunmaktadır. Detaylı bilgi için ücretsiz danışmanlık alabilirsiniz." : language === "de" ? "In der Türkei gibt es Steuererleichterungen für Solarenergie und Net-Metering (Überschusseinspeisung). Kontaktieren Sie uns für eine kostenlose Beratung." : "Turkey offers tax benefits for solar energy and net metering (selling excess production to the grid). Contact us for free consultation on available incentives."
+            }
+          }
+        ];
+
+    return {
+      "@type": "FAQPage",
+      "@id": `${faqPageUrl || pageUrl}#faqpage`,
+      "mainEntity": faqItems,
+      "mainEntityOfPage": { "@id": `${faqPageUrl || pageUrl}#webpage` },
+      "dateModified": "2026-02-11",
+      "author": { "@id": "https://089bayern.com/#organization" }
+    };
+  })() : null;
 
   const productPages = ["gunes-paneli", "isi-pompasi", "klima", "enerji-depolama"];
   const productSchemas: Record<string, Record<string, { name: string; description: string; brand: string; category: string }>> = {
@@ -856,7 +876,9 @@ export default function SEOHead({ page, pageTitle }: SEOHeadProps) {
       "name": title,
       "description": data.description,
       "datePublished": "2024-01-01",
-      "dateModified": "2026-02-09",
+      "dateModified": "2026-02-11",
+      "copyrightYear": 2026,
+      "copyrightHolder": { "@id": "https://089bayern.com/#organization" },
       "isPartOf": { "@id": "https://089bayern.com/#website" },
       "about": { "@id": "https://089bayern.com/#organization" },
       "breadcrumb": { "@id": "https://089bayern.com/#breadcrumb" },
