@@ -5,6 +5,7 @@ import { createServer } from "http";
 import https from "https";
 import { patchPrerenderHtml, injectSeoIntoHtml } from "./ssrInjection";
 import { refreshPrerenderCache } from "./prerenderRefresh";
+import { submitIndexNow } from "./indexNow";
 
 const app = express();
 const httpServer = createServer(app);
@@ -254,10 +255,15 @@ app.use((req, res, next) => {
     () => {
       log(`serving on port ${port}`);
 
-      if (process.env.NODE_ENV === "production" && process.env.PRERENDER_TOKEN) {
+      if (process.env.NODE_ENV === "production") {
+        if (process.env.PRERENDER_TOKEN) {
+          setTimeout(() => {
+            refreshPrerenderCache(process.env.PRERENDER_TOKEN!);
+          }, 5000);
+        }
         setTimeout(() => {
-          refreshPrerenderCache(process.env.PRERENDER_TOKEN!);
-        }, 5000);
+          submitIndexNow();
+        }, 10000);
       }
     },
   );
