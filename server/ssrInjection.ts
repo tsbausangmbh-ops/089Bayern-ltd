@@ -49,7 +49,9 @@ function buildHeadTags(seo: SeoPayload): string {
 }
 
 function buildSsrBody(seo: SeoPayload): string {
-  return `<noscript><div id="ssr-content"><h1>${escapeHtml(seo.title)}</h1><p>${escapeHtml(seo.description)}</p></div></noscript>`;
+  const siteName = seo.language === "tr" ? "089 Bayern Enerji Sistemleri" : "089 Bayern Energiesysteme";
+  const ctaText = seo.language === "tr" ? "Ücretsiz Keşif: +90 507 183 2036" : "Kostenlose Beratung: +90 507 183 2036";
+  return `<div id="ssr-content" aria-hidden="true" style="clip:rect(0,0,0,0);clip-path:inset(50%);height:1px;overflow:hidden;position:absolute;white-space:nowrap;width:1px"><h1>${escapeHtml(seo.title)}</h1><p>${escapeHtml(seo.description)}</p><p>${escapeHtml(siteName)} - ${escapeHtml(ctaText)}</p></div>`;
 }
 
 export function injectSeoIntoHtml(html: string, urlPath: string): string {
@@ -93,20 +95,37 @@ export function injectSeoIntoHtml(html: string, urlPath: string): string {
 }
 
 export function patchPrerenderHtml(html: string, urlPath: string): string {
-  const hasJsonLd = html.includes('application/ld+json');
-  const hasMetaDesc = html.includes('name="description"');
-  const hasCanonical = html.includes('rel="canonical"');
-
-  if (hasJsonLd && hasMetaDesc && hasCanonical) {
-    return html;
-  }
-
   const route = resolveRoute(urlPath);
   if (!route) return html;
   const seo = buildSeoPayload(route.page, route.language);
   if (!seo) return html;
 
   let result = html;
+
+  if (result.includes('<html')) {
+    result = result.replace(/<html([^>]*)lang="[^"]*"/, `<html$1lang="${seo.language}"`);
+    if (!result.includes('lang=')) {
+      result = result.replace('<html', `<html lang="${seo.language}"`);
+    }
+    if (seo.language === 'ar') {
+      if (result.includes('dir="')) {
+        result = result.replace(/dir="[^"]*"/, 'dir="rtl"');
+      } else {
+        result = result.replace(`lang="${seo.language}"`, `lang="${seo.language}" dir="rtl"`);
+      }
+    } else if (result.includes('dir="rtl"')) {
+      result = result.replace(/\s*dir="rtl"/, '');
+    }
+  }
+
+  const existingTitle = result.match(/<title>[^<]*<\/title>/);
+  if (existingTitle) {
+    result = result.replace(existingTitle[0], `<title>${escapeHtml(seo.title)}</title>`);
+  }
+
+  const hasJsonLd = result.includes('application/ld+json');
+  const hasMetaDesc = result.includes('name="description"');
+  const hasCanonical = result.includes('rel="canonical"');
   const patchTags: string[] = [];
 
   if (!hasJsonLd) {

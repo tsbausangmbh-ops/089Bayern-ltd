@@ -77,13 +77,23 @@ function isStaticAsset(path: string): boolean {
 }
 
 function hasSsrContent(html: string): boolean {
-  const rootMatch = html.match(/<div\s+id="root"[^>]*>([\s\S]*)/);
-  if (!rootMatch) return false;
-  const afterRoot = rootMatch[1];
-  const firstClosingDiv = afterRoot.indexOf('</div>');
-  if (firstClosingDiv < 0) return false;
-  const innerContent = afterRoot.substring(0, firstClosingDiv).trim();
-  return innerContent.length >= 100;
+  if (html.includes('<div id="root">') || html.includes('<div id="root" ')) {
+    const rootStart = html.indexOf('<div id="root"');
+    const afterRoot = html.substring(rootStart);
+    const rootTagEnd = afterRoot.indexOf('>');
+    if (rootTagEnd < 0) return false;
+    const contentAfterTag = afterRoot.substring(rootTagEnd + 1);
+    const nextClosingDiv = contentAfterTag.indexOf('</div>');
+    if (nextClosingDiv < 0) return false;
+    const inner = contentAfterTag.substring(0, nextClosingDiv).trim();
+    if (inner.length >= 50) return true;
+  }
+  const textContent = html.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return textContent.length > 500;
 }
 
 if (process.env.PRERENDER_TOKEN) {
@@ -96,9 +106,7 @@ if (process.env.PRERENDER_TOKEN) {
     if (req.path.startsWith('/api/')) return next();
     if (isStaticAsset(req.path)) return next();
 
-    const protocol = req.headers['x-forwarded-proto'] || 'https';
-    const host = req.headers['x-forwarded-host'] || req.headers['host'] || '089bayern.com';
-    const prerenderUrl = `https://service.prerender.io/${protocol}://${host}${req.url}`;
+    const prerenderUrl = `https://service.prerender.io/https://089bayern.com${req.url}`;
 
     let handled = false;
     function fallback(reason: string) {
@@ -106,6 +114,8 @@ if (process.env.PRERENDER_TOKEN) {
       handled = true;
       console.warn(`[Prerender] ${reason} for ${req.url} - falling back to SSR injection`);
       prerenderReq.destroy();
+      res.setHeader('X-SSR-Source', 'own-fallback');
+      res.setHeader('X-Prerender-Fail', reason);
       (req as any)._prerenderFailed = true;
       next();
     }
@@ -116,7 +126,7 @@ if (process.env.PRERENDER_TOKEN) {
         'User-Agent': ua,
         'Accept': 'text/html',
       },
-      timeout: 15000,
+      timeout: 25000,
     }, (prerenderRes: any) => {
       if (prerenderRes.statusCode === 200) {
         const chunks: Buffer[] = [];
@@ -124,26 +134,30 @@ if (process.env.PRERENDER_TOKEN) {
         prerenderRes.on('end', () => {
           if (handled) return;
           let body = Buffer.concat(chunks).toString('utf-8');
-          if (body.length > 500 && hasSsrContent(body)) {
+          const hasContent = body.length > 500 && hasSsrContent(body);
+          console.log(`[Prerender] Response for ${req.url}: ${body.length} bytes, hasContent: ${hasContent}`);
+          if (hasContent) {
             handled = true;
             body = patchPrerenderHtml(body, req.path);
             res.setHeader('Content-Type', 'text/html; charset=utf-8');
+            res.setHeader('X-SSR-Source', 'prerender');
             res.setHeader('X-Prerender', 'true');
+            res.setHeader('X-Prerender-Size', String(body.length));
             res.setHeader('X-SSR-Safety-Net', body.includes('application/ld+json') ? 'present' : 'injected');
             res.status(200).send(body);
           } else {
-            fallback(body.length <= 500 ? 'Empty response' : 'No rendered content in root div');
+            fallback(body.length <= 500 ? `Empty response (${body.length} bytes)` : 'No rendered content detected');
           }
         });
         prerenderRes.on('error', () => fallback('Response stream error'));
       } else {
         prerenderRes.destroy();
-        fallback(`Status ${prerenderRes.statusCode}`);
+        fallback(`HTTP ${prerenderRes.statusCode}`);
       }
     });
 
-    prerenderReq.on('error', (err: Error) => fallback(`Network error: ${err.message}`));
-    prerenderReq.on('timeout', () => fallback('Timeout'));
+    prerenderReq.on('error', (err: Error) => fallback(`Network: ${err.message}`));
+    prerenderReq.on('timeout', () => fallback('Timeout (25s)'));
   });
 
   console.log(`[Prerender] Crawler detection active for ${CRAWLER_USER_AGENTS.length} bot types (with SSR safety net)`);
@@ -167,6 +181,9 @@ app.use((req: Request, res: Response, next: NextFunction) => {
       const urlPath = req.originalUrl.split('?')[0].split('#')[0];
       const injected = injectSeoIntoHtml(body, urlPath);
       res.setHeader('X-SSR-Injected', 'true');
+      if (!res.getHeader('X-SSR-Source')) {
+        res.setHeader('X-SSR-Source', 'own-fallback');
+      }
       return injected;
     }
     return body;
