@@ -30,6 +30,12 @@ app.get("/health", (req, res) => {
   res.status(200).send("ok");
 });
 
+app.use((req, res, next) => {
+  res.setHeader('X-Build-Version', '2026-02-13-v2');
+  res.setHeader('X-Prerender-Enabled', process.env.PRERENDER_TOKEN ? 'yes' : 'no');
+  next();
+});
+
 const CRAWLER_USER_AGENTS = [
   'googlebot',
   'Google-InspectionTool',
