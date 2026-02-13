@@ -7,7 +7,6 @@ function escapeHtml(str: string): string {
 function buildHeadTags(seo: SeoPayload): string {
   const tags: string[] = [];
 
-  tags.push(`<title>${escapeHtml(seo.title)}</title>`);
   tags.push(`<meta name="description" content="${escapeHtml(seo.description)}" />`);
   tags.push(`<meta http-equiv="content-language" content="${seo.inLanguage}" />`);
   tags.push(`<meta name="content-language" content="${seo.inLanguage}" />`);
@@ -50,7 +49,7 @@ function buildHeadTags(seo: SeoPayload): string {
 }
 
 function buildSsrBody(seo: SeoPayload): string {
-  return `<div id="ssr-content" style="position:absolute;left:-9999px;overflow:hidden;width:1px;height:1px"><h1>${escapeHtml(seo.title)}</h1><p>${escapeHtml(seo.description)}</p></div>`;
+  return `<noscript><div id="ssr-content"><h1>${escapeHtml(seo.title)}</h1><p>${escapeHtml(seo.description)}</p></div></noscript>`;
 }
 
 export function injectSeoIntoHtml(html: string, urlPath: string): string {
