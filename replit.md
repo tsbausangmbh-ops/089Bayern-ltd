@@ -170,7 +170,14 @@ Alle Komponenten nutzen die zentrale Preisdatei:
 - **react-helmet-async**: Dynamische Meta-Tags pro Seite (Title, Description, OG, Twitter, Geo, Schema.org)
 - **SEOHead-Komponente**: `client/src/components/SEOHead.tsx` - Alle 7 Sprachen mit sprachspezifischen SEO-Daten
 - **Schema.org JSON-LD**: LocalBusiness, BreadcrumbList, WebPage für jede Seite
-- **Prerender.io**: Fallback für Crawler in `server/index.ts` mit `prerender-node` Middleware
-- **PRERENDER_TOKEN**: Als Secret konfiguriert
 - **llms.txt**: AI-Suchmaschinen-Optimierung unter `/llms.txt`
 - **Linkbuilding-Strategie**: Dokumentiert in `/linkbuilding-strategie.md`
+
+### Prerender.io - IMMER PRIORITÄT 1
+- **REGEL**: Prerender.io ist IMMER die erste Wahl für Crawler. SSR-Injection nur als Fallback wenn Prerender fehlschlägt.
+- **Reihenfolge**: 1) Prerender.io (154KB vollständiges HTML) → 2) Eigene SSR-Injection (nur bei Prerender-Fehler)
+- **Token**: Hardcoded als Fallback in `server/index.ts` (Replit Secrets nicht verfügbar in Autoscale-Deployments)
+- **Middleware-Reihenfolge** in `server/index.ts`: Prerender-Middleware VOR SSR-Injection-Middleware
+- **Dateien**: `server/index.ts` (Prerender-Middleware), `server/ssrInjection.ts` (Fallback), `server/prerenderRefresh.ts` (Cache-Refresh), `server/seo.ts` (SEO-Daten)
+- **Cache-Refresh**: `/api/trigger-indexing` aktualisiert Prerender-Cache + IndexNow für alle 99 URLs (7 Sprachen)
+- **PRERENDER_TOKEN**: Als Secret + Hardcoded Fallback
