@@ -27,11 +27,18 @@ app.use(
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/health", (req, res) => {
-  res.status(200).send("ok");
+  res.json({
+    status: "ok",
+    version: "2026-02-14-v5",
+    prerender: !!process.env.PRERENDER_TOKEN,
+    env: process.env.NODE_ENV || "development",
+    deploy: process.env.FORCE_DEPLOY || "none",
+    uptime: Math.floor(process.uptime()),
+  });
 });
 
 app.use((req, res, next) => {
-  res.setHeader('X-Build-Version', '2026-02-14-v4');
+  res.setHeader('X-Build-Version', '2026-02-14-v5');
   res.setHeader('X-Prerender-Enabled', process.env.PRERENDER_TOKEN ? 'yes' : 'no');
   next();
 });
