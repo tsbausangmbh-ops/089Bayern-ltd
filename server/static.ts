@@ -37,7 +37,10 @@ export function serveStatic(app: Express) {
     console.error("[SSR] Failed to read index.html template:", e);
   }
 
-  app.use("*", (req, res) => {
+  app.use("*", (req, res, next) => {
+    if (req.originalUrl.startsWith('/api/') || req.originalUrl === '/health') {
+      return next();
+    }
     res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
 
