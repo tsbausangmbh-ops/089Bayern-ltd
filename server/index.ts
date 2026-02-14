@@ -31,7 +31,7 @@ app.get("/health", (req, res) => {
 });
 
 app.use((req, res, next) => {
-  res.setHeader('X-Build-Version', '2026-02-14-v3');
+  res.setHeader('X-Build-Version', '2026-02-14-v4');
   res.setHeader('X-Prerender-Enabled', process.env.PRERENDER_TOKEN ? 'yes' : 'no');
   next();
 });
