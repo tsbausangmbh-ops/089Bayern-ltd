@@ -27,19 +27,20 @@ app.use(
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/health", (req, res) => {
+  const token = process.env.PRERENDER_TOKEN || process.env.PRERENDER_IO_TOKEN;
   res.json({
     status: "ok",
-    version: "2026-02-14-v5",
-    prerender: !!process.env.PRERENDER_TOKEN,
+    version: "2026-02-14-v6",
+    prerender: !!token,
     env: process.env.NODE_ENV || "development",
-    deploy: process.env.FORCE_DEPLOY || "none",
     uptime: Math.floor(process.uptime()),
   });
 });
 
 app.use((req, res, next) => {
-  res.setHeader('X-Build-Version', '2026-02-14-v5');
-  res.setHeader('X-Prerender-Enabled', process.env.PRERENDER_TOKEN ? 'yes' : 'no');
+  const prerenderToken = process.env.PRERENDER_TOKEN || process.env.PRERENDER_IO_TOKEN;
+  res.setHeader('X-Build-Version', '2026-02-14-v6');
+  res.setHeader('X-Prerender-Enabled', prerenderToken ? 'yes' : 'no');
   next();
 });
 
@@ -110,7 +111,7 @@ function hasSsrContent(html: string): boolean {
 }
 
 app.use((req: Request, res: Response, next: NextFunction) => {
-  const prerenderToken = process.env.PRERENDER_TOKEN;
+  const prerenderToken = process.env.PRERENDER_TOKEN || process.env.PRERENDER_IO_TOKEN;
   if (!prerenderToken) return next();
 
   const ua = req.headers['user-agent'] || '';
@@ -283,9 +284,10 @@ app.use((req, res, next) => {
       log(`serving on port ${port}`);
 
       if (process.env.NODE_ENV === "production") {
-        if (process.env.PRERENDER_TOKEN) {
+        const cacheToken = process.env.PRERENDER_TOKEN || process.env.PRERENDER_IO_TOKEN;
+        if (cacheToken) {
           setTimeout(() => {
-            refreshPrerenderCache(process.env.PRERENDER_TOKEN!);
+            refreshPrerenderCache(cacheToken);
           }, 5000);
         }
         setTimeout(() => {
