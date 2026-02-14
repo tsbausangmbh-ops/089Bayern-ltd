@@ -45,9 +45,7 @@ integrations = ["javascript_mem_db:1.0.0", "javascript_openai_ai_integrations:1.
 [userenv]
 
 [userenv.production]
-PRERENDER_IO_TOKEN = "3ULM60Hd9XroM0EMAxEP"
 
 [userenv.shared]
 
 [userenv.development]
-PRERENDER_IO_TOKEN = "3ULM60Hd9XroM0EMAxEP"
