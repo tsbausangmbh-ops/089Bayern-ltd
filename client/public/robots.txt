@@ -6,8 +6,10 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemaps
+Sitemap: https://089bayern.com/sitemap.xml
 Sitemap: https://089bayern.com/sitemap-index.xml
+Sitemap: https://089bayern.com/image-sitemap.xml
 
 # Google (Priority for Turkey / google.com.tr)
 User-agent: Googlebot
