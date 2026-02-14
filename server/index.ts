@@ -10,6 +10,8 @@ import { submitIndexNow } from "./indexNow";
 const app = express();
 const httpServer = createServer(app);
 
+const PRERENDER_TOKEN = process.env.PRERENDER_TOKEN || process.env.PRERENDER_IO_TOKEN || '3ULM60Hd9XroM0EMAxEP';
+
 declare module "http" {
   interface IncomingMessage {
     rawBody: unknown;
@@ -27,20 +29,18 @@ app.use(
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/health", (req, res) => {
-  const token = process.env.PRERENDER_TOKEN || process.env.PRERENDER_IO_TOKEN;
   res.json({
     status: "ok",
-    version: "2026-02-14-v6",
-    prerender: !!token,
+    version: "2026-02-14-v7",
+    prerender: !!PRERENDER_TOKEN,
     env: process.env.NODE_ENV || "development",
     uptime: Math.floor(process.uptime()),
   });
 });
 
 app.use((req, res, next) => {
-  const prerenderToken = process.env.PRERENDER_TOKEN || process.env.PRERENDER_IO_TOKEN;
-  res.setHeader('X-Build-Version', '2026-02-14-v6');
-  res.setHeader('X-Prerender-Enabled', prerenderToken ? 'yes' : 'no');
+  res.setHeader('X-Build-Version', '2026-02-14-v7');
+  res.setHeader('X-Prerender-Enabled', PRERENDER_TOKEN ? 'yes' : 'no');
   next();
 });
 
@@ -111,8 +111,7 @@ function hasSsrContent(html: string): boolean {
 }
 
 app.use((req: Request, res: Response, next: NextFunction) => {
-  const prerenderToken = process.env.PRERENDER_TOKEN || process.env.PRERENDER_IO_TOKEN;
-  if (!prerenderToken) return next();
+  if (!PRERENDER_TOKEN) return next();
 
   const ua = req.headers['user-agent'] || '';
   if (!isCrawler(ua)) return next();
@@ -136,7 +135,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 
   const prerenderReq = https.get(prerenderUrl, {
     headers: {
-      'X-Prerender-Token': prerenderToken,
+      'X-Prerender-Token': PRERENDER_TOKEN,
       'User-Agent': ua,
       'Accept': 'text/html',
     },
@@ -284,10 +283,9 @@ app.use((req, res, next) => {
       log(`serving on port ${port}`);
 
       if (process.env.NODE_ENV === "production") {
-        const cacheToken = process.env.PRERENDER_TOKEN || process.env.PRERENDER_IO_TOKEN;
-        if (cacheToken) {
+        if (PRERENDER_TOKEN) {
           setTimeout(() => {
-            refreshPrerenderCache(cacheToken);
+            refreshPrerenderCache(PRERENDER_TOKEN);
           }, 5000);
         }
         setTimeout(() => {
