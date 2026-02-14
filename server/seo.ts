@@ -431,13 +431,17 @@ export function buildSeoPayload(page: PageType, language: Language): SeoPayload 
 
 export function getAllCacheUrls(): string[] {
   const urls: string[] = [];
-  const primaryLangs: Language[] = ["tr", "de", "en"];
+  const allLangs: Language[] = ["tr", "de", "en", "ru", "uk", "ar", "hr"];
   const pages = Object.keys(pageToUrlKey) as PageType[];
 
-  for (const lang of primaryLangs) {
+  urls.push("https://089bayern.com/");
+
+  for (const lang of allLangs) {
     for (const page of pages) {
       const path = getPath(page, lang);
-      urls.push(`https://089bayern.com/${path}`);
+      if (path) {
+        urls.push(`https://089bayern.com/${path}`);
+      }
     }
   }
 

@@ -6,6 +6,7 @@ import https from "https";
 import { patchPrerenderHtml, injectSeoIntoHtml } from "./ssrInjection";
 import { refreshPrerenderCache } from "./prerenderRefresh";
 import { submitIndexNow } from "./indexNow";
+import { getAllCacheUrls } from "./seo";
 
 const app = express();
 const httpServer = createServer(app);
@@ -35,6 +36,21 @@ app.get("/health", (req, res) => {
     prerender: !!PRERENDER_TOKEN,
     env: process.env.NODE_ENV || "development",
     uptime: Math.floor(process.uptime()),
+  });
+});
+
+app.get("/api/trigger-indexing", (req, res) => {
+  const urls = getAllCacheUrls();
+  if (PRERENDER_TOKEN) {
+    refreshPrerenderCache(PRERENDER_TOKEN);
+  }
+  submitIndexNow();
+  res.json({
+    status: "triggered",
+    totalUrls: urls.length,
+    prerenderRefresh: !!PRERENDER_TOKEN,
+    indexNow: true,
+    urls: urls,
   });
 });
 
