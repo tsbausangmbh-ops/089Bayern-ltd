@@ -102,74 +102,71 @@ function hasSsrContent(html: string): boolean {
   return textContent.length > 500;
 }
 
-if (process.env.PRERENDER_TOKEN) {
+app.use((req: Request, res: Response, next: NextFunction) => {
   const prerenderToken = process.env.PRERENDER_TOKEN;
+  if (!prerenderToken) return next();
 
-  app.use((req: Request, res: Response, next: NextFunction) => {
-    const ua = req.headers['user-agent'] || '';
-    if (!isCrawler(ua)) return next();
-    if (req.method !== 'GET' && req.method !== 'HEAD') return next();
-    if (req.path.startsWith('/api/')) return next();
-    if (isStaticAsset(req.path)) return next();
+  const ua = req.headers['user-agent'] || '';
+  if (!isCrawler(ua)) return next();
+  if (req.method !== 'GET' && req.method !== 'HEAD') return next();
+  if (req.path.startsWith('/api/')) return next();
+  if (isStaticAsset(req.path)) return next();
 
-    const prerenderUrl = `https://service.prerender.io/https://089bayern.com${req.url}`;
+  const prerenderUrl = `https://service.prerender.io/https://089bayern.com${req.url}`;
 
-    let handled = false;
-    function fallback(reason: string) {
-      if (handled) return;
-      handled = true;
-      console.warn(`[Prerender] ${reason} for ${req.url} - falling back to SSR injection`);
-      prerenderReq.destroy();
-      res.setHeader('X-SSR-Source', 'own-fallback');
-      res.setHeader('X-Prerender-Fail', reason);
-      (req as any)._prerenderFailed = true;
-      next();
+  let handled = false;
+  function fallback(reason: string) {
+    if (handled) return;
+    handled = true;
+    console.warn(`[Prerender] ${reason} for ${req.url} - falling back to SSR injection`);
+    prerenderReq.destroy();
+    res.setHeader('X-SSR-Source', 'own-fallback');
+    res.setHeader('X-Prerender-Fail', reason);
+    (req as any)._prerenderFailed = true;
+    next();
+  }
+
+  const prerenderReq = https.get(prerenderUrl, {
+    headers: {
+      'X-Prerender-Token': prerenderToken,
+      'User-Agent': ua,
+      'Accept': 'text/html',
+    },
+    timeout: 25000,
+  }, (prerenderRes: any) => {
+    if (prerenderRes.statusCode === 200) {
+      const chunks: Buffer[] = [];
+      prerenderRes.on('data', (chunk: Buffer) => { if (!handled) chunks.push(chunk); });
+      prerenderRes.on('end', () => {
+        if (handled) return;
+        let body = Buffer.concat(chunks).toString('utf-8');
+        const hasContent = body.length > 500 && hasSsrContent(body);
+        console.log(`[Prerender] Response for ${req.url}: ${body.length} bytes, hasContent: ${hasContent}`);
+        if (hasContent) {
+          handled = true;
+          body = patchPrerenderHtml(body, req.path);
+          res.setHeader('Content-Type', 'text/html; charset=utf-8');
+          res.setHeader('X-SSR-Source', 'prerender');
+          res.setHeader('X-Prerender', 'true');
+          res.setHeader('X-Prerender-Size', String(body.length));
+          res.setHeader('X-SSR-Safety-Net', body.includes('application/ld+json') ? 'present' : 'injected');
+          res.status(200).send(body);
+        } else {
+          fallback(body.length <= 500 ? `Empty response (${body.length} bytes)` : 'No rendered content detected');
+        }
+      });
+      prerenderRes.on('error', () => fallback('Response stream error'));
+    } else {
+      prerenderRes.destroy();
+      fallback(`HTTP ${prerenderRes.statusCode}`);
     }
-
-    const prerenderReq = https.get(prerenderUrl, {
-      headers: {
-        'X-Prerender-Token': prerenderToken,
-        'User-Agent': ua,
-        'Accept': 'text/html',
-      },
-      timeout: 25000,
-    }, (prerenderRes: any) => {
-      if (prerenderRes.statusCode === 200) {
-        const chunks: Buffer[] = [];
-        prerenderRes.on('data', (chunk: Buffer) => { if (!handled) chunks.push(chunk); });
-        prerenderRes.on('end', () => {
-          if (handled) return;
-          let body = Buffer.concat(chunks).toString('utf-8');
-          const hasContent = body.length > 500 && hasSsrContent(body);
-          console.log(`[Prerender] Response for ${req.url}: ${body.length} bytes, hasContent: ${hasContent}`);
-          if (hasContent) {
-            handled = true;
-            body = patchPrerenderHtml(body, req.path);
-            res.setHeader('Content-Type', 'text/html; charset=utf-8');
-            res.setHeader('X-SSR-Source', 'prerender');
-            res.setHeader('X-Prerender', 'true');
-            res.setHeader('X-Prerender-Size', String(body.length));
-            res.setHeader('X-SSR-Safety-Net', body.includes('application/ld+json') ? 'present' : 'injected');
-            res.status(200).send(body);
-          } else {
-            fallback(body.length <= 500 ? `Empty response (${body.length} bytes)` : 'No rendered content detected');
-          }
-        });
-        prerenderRes.on('error', () => fallback('Response stream error'));
-      } else {
-        prerenderRes.destroy();
-        fallback(`HTTP ${prerenderRes.statusCode}`);
-      }
-    });
-
-    prerenderReq.on('error', (err: Error) => fallback(`Network: ${err.message}`));
-    prerenderReq.on('timeout', () => fallback('Timeout (25s)'));
   });
 
-  console.log(`[Prerender] Crawler detection active for ${CRAWLER_USER_AGENTS.length} bot types (with SSR safety net)`);
-} else {
-  console.log('[Prerender] Disabled - no PRERENDER_TOKEN set');
-}
+  prerenderReq.on('error', (err: Error) => fallback(`Network: ${err.message}`));
+  prerenderReq.on('timeout', () => fallback('Timeout (25s)'));
+});
+
+console.log(`[Prerender] Crawler detection active for ${CRAWLER_USER_AGENTS.length} bot types (runtime token check)`);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
   if (req.method !== 'GET' && req.method !== 'HEAD') return next();
