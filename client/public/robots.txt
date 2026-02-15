@@ -1,17 +1,20 @@
 # 089 Bayern Enerji Sistemleri - robots.txt
 # Turk-Alman Enerji Sistemleri Sirketi
 # Merkez: Antalya, Turkiye
-# Updated: 2026-02-11
+# Updated: 2026-02-15
 
+# === ALLE SUCHMASCHINEN ERLAUBT ===
 User-agent: *
 Allow: /
+Disallow: /api/
 
 # Sitemaps
 Sitemap: https://089bayern.com/sitemap.xml
 Sitemap: https://089bayern.com/sitemap-index.xml
-Sitemap: https://089bayern.com/image-sitemap.xml
 
-# Google (Priority for Turkey / google.com.tr)
+# === SUCHMASCHINEN (Indexierung) ===
+
+# Google
 User-agent: Googlebot
 Allow: /
 
@@ -25,7 +28,10 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-# Yandex (Russian/Ukrainian tourists in Turkey)
+User-agent: BingPreview
+Allow: /
+
+# Yandex (Russische/Ukrainische Touristen in Türkei)
 User-agent: Yandex
 Allow: /
 Host: https://089bayern.com
@@ -38,46 +44,90 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-# Applebot
+# Apple
 User-agent: Applebot
 Allow: /
 
-# AI Crawlers (GEO - Generative Engine Optimization)
-User-agent: GPTBot
+# Naver (Koreanische Touristen)
+User-agent: Yeti
 Allow: /
+
+# Seznam (Tschechische Touristen)
+User-agent: SeznamBot
+Allow: /
+
+# === AI-SUCHE ERLAUBT (zeigen unsere Seite in Ergebnissen) ===
 
 User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: Anthropic-AI
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: Bytespider
 Allow: /
 
 User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: Meta-ExternalAgent
+User-agent: PerplexityBot
 Allow: /
 
-User-agent: Gemini
-Allow: /
+# === AI-TRAINING BLOCKIERT (lernen/scrapen zum Trainieren) ===
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: Meta-ExternalFetcher
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
 
 User-agent: cohere-ai
-Allow: /
+Disallow: /
+
+User-agent: Anthropic-AI
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
+User-agent: Ai2Bot
+Disallow: /
+
+User-agent: Ai2Bot-Dolma
+Disallow: /
+
+User-agent: Webzio-Extended
+Disallow: /
+
+User-agent: FriendlyCrawler
+Disallow: /
+
+User-agent: Kangaroo Bot
+Disallow: /
+
+User-agent: PanguBot
+Disallow: /
 
 # LLM Information
 # llms.txt: https://089bayern.com/llms.txt
@@ -92,15 +142,4 @@ Allow: /
 # WEB: https://089bayern.com
 # DILLER: tr (birincil), de, en, ru, uk, ar, hr
 # VARSAYILAN-DIL: Turkce (tr-TR)
-
-# URUNLER: Gunes Paneli, Isi Pompasi, Klima, Enerji Depolama
-# MARKALAR: Vaillant, Samsung
-# HEDEF KITLE: Villa sahipleri, Akdeniz bolgesi, Antalya, Alanya, Ankara
-# SAYFA SAYISI: 95+ (7 dil, 13 sayfa + yasal)
-
-# ANAHTAR KELIMELER (TR):
-# gunes enerjisi antalya, isi pompasi turkiye, solar panel villa
-# vaillant turkiye, samsung klima, enerji tasarrufu
-# 4-in-1 enerji sistemi, solar panel fiyat 2026
-
-# SCHEMA.ORG: LocalBusiness, Organization, FAQPage, Product, Person, BreadcrumbList, WebPage, WebSite, Service, ServiceArea, SpeakableSpecification, Country
+# SAYFA SAYISI: 99 (7 Sprachen, 13+ Seiten + Legal)
