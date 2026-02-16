@@ -274,15 +274,17 @@ function buildJsonLd(page: PageType, language: Language, data: { title: string; 
       "inLanguage": ["tr-TR", "de-DE", "en-US", "ru-RU", "uk-UA", "ar-SA", "hr-HR"]
     },
     {
-      "@type": ["LocalBusiness", "Organization"],
+      "@type": ["LocalBusiness", "ProfessionalService", "Organization"],
       "@id": "https://089bayern.com/#organization",
       "name": language === "tr" ? "089 Bayern Enerji Sistemleri" : "089 Bayern Energiesysteme",
-      "alternateName": ["089 Bayern", "089Bayern"],
+      "alternateName": ["089 Bayern", "089Bayern", "089 Bayern Türkiye"],
       "description": data.description,
       "url": "https://089bayern.com",
       "telephone": "+90-507-183-2036",
       "email": "info@089bayern.com",
       "foundingDate": "2020",
+      "logo": "https://089bayern.com/images/logo-089bayern.webp",
+      "image": "https://089bayern.com/images/hero-villa-solar.webp",
       "address": {
         "@type": "PostalAddress", "streetAddress": "Antalya Merkez",
         "addressLocality": "Antalya", "addressRegion": "Antalya",
@@ -290,6 +292,18 @@ function buildJsonLd(page: PageType, language: Language, data: { title: string; 
         "addressCountry": { "@type": "Country", "name": "Türkiye", "identifier": "TR" }
       },
       "geo": { "@type": "GeoCoordinates", "latitude": 36.8969, "longitude": 30.7133 },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "15:00" }
+      ],
+      "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer", "Havale/EFT"],
+      "currenciesAccepted": "EUR, TRY, USD",
+      "knowsLanguage": ["tr", "de", "en", "hr", "ru"],
+      "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 10, "maxValue": 25 },
+      "founder": [
+        { "@type": "Person", "@id": "https://089bayern.com/#mustafa-sakar", "name": "Mustafa Sakar", "jobTitle": language === "tr" ? "CEO / Kurucu Ortak" : "CEO / Mitgründer", "telephone": "+90-507-183-2036", "email": "msakar@089bayern.com", "knowsLanguage": ["de", "tr"], "worksFor": { "@id": "https://089bayern.com/#organization" } },
+        { "@type": "Person", "@id": "https://089bayern.com/#dalibor-bakmaz", "name": "Dalibor Bakmaz", "jobTitle": language === "tr" ? "CEO / Genel Müdür" : "CEO / Geschäftsführer", "telephone": "+90-507-192-2036", "email": "dbakmaz@089bayern.com", "knowsLanguage": ["de", "hr", "en"], "worksFor": { "@id": "https://089bayern.com/#organization" } }
+      ],
       "areaServed": [
         { "@type": "Country", "name": "Türkiye", "identifier": "TR" },
         { "@type": "City", "name": "Antalya", "containedInPlace": { "@type": "AdministrativeArea", "name": "Antalya" } },
@@ -310,15 +324,34 @@ function buildJsonLd(page: PageType, language: Language, data: { title: string; 
         { "@type": "City", "name": "Mersin", "containedInPlace": { "@type": "AdministrativeArea", "name": "Mersin" } },
         { "@type": "City", "name": "Ankara", "containedInPlace": { "@type": "AdministrativeArea", "name": "Ankara" } }
       ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": language === "tr" ? "4'ü 1 Arada Enerji Sistemleri" : "4-in-1 Energiesysteme",
+        "itemListElement": [
+          { "@type": "OfferCatalog", "name": language === "tr" ? "Güneş Paneli Sistemleri" : "Solaranlagen", "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "6 kWp Güneş Paneli Kurulumu" : "6 kWp Solaranlage Installation" }, "priceCurrency": "EUR", "price": "8500", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "8500", "priceCurrency": "EUR", "referenceQuantity": { "@type": "QuantitativeValue", "value": "1", "unitCode": "SET" } } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "10 kWp Güneş Paneli Kurulumu" : "10 kWp Solaranlage Installation" }, "priceCurrency": "EUR", "price": "12500" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "12 kWp Güneş Paneli Kurulumu" : "12 kWp Solaranlage Installation" }, "priceCurrency": "EUR", "price": "16000" }
+          ]},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Vaillant Isı Pompası Kurulumu" : "Vaillant Wärmepumpe Installation" }, "priceCurrency": "EUR", "price": "9800" },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Samsung WindFree Klima Kurulumu" : "Samsung WindFree Klimaanlage Installation" }, "priceCurrency": "EUR", "price": "4500" },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Lityum Batarya Depolama" : "Lithium Batteriespeicher" }, "priceCurrency": "EUR", "price": "7500" }
+        ]
+      },
       "priceRange": "€€€",
       "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1", "ratingCount": "500", "reviewCount": "487" },
+      "review": [
+        { "@type": "Review", "author": { "@type": "Person", "name": "Mehmet Y." }, "datePublished": "2025-11-15", "reviewBody": language === "tr" ? "Villamıza 4'ü 1 arada sistem kurdurduk. Alman kalitesi gerçekten fark yaratıyor. 6 ayda elektrik faturamız %70 düştü." : "Wir haben das 4-in-1 System in unserer Villa installieren lassen. Deutsche Qualität macht wirklich den Unterschied. In 6 Monaten sank unsere Stromrechnung um 70%.", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Klaus H." }, "datePublished": "2025-09-20", "reviewBody": language === "tr" ? "Almanya'dan Antalya'ya taşındık. 089 Bayern sayesinde Alman standartlarında enerji sistemi kurduk. Mükemmel hizmet." : "Wir sind von Deutschland nach Antalya gezogen. Dank 089 Bayern haben wir ein Energiesystem nach deutschen Standards. Exzellenter Service.", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Ayşe K." }, "datePublished": "2025-07-10", "reviewBody": language === "tr" ? "Kemer'deki villamız için Vaillant ısı pompası ve güneş paneli taktırdık. Kışın bile ısınma masrafımız neredeyse sıfır." : "Für unsere Villa in Kemer haben wir eine Vaillant Wärmepumpe und Solaranlage installieren lassen. Selbst im Winter sind die Heizkosten fast null.", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } }
+      ],
       "sameAs": ["https://www.facebook.com/089bayern", "https://www.instagram.com/089bayern", "https://www.linkedin.com/company/089bayern"]
     },
     { "@type": "BreadcrumbList", "@id": "https://089bayern.com/#breadcrumb", "itemListElement": breadcrumbItems },
     {
       "@type": "WebPage", "@id": `${pageUrl}#webpage`, "url": pageUrl,
       "name": data.title, "description": data.description,
-      "datePublished": "2024-01-01", "dateModified": "2026-02-11",
+      "datePublished": "2024-01-01", "dateModified": "2026-02-16",
       "copyrightYear": 2026,
       "copyrightHolder": { "@id": "https://089bayern.com/#organization" },
       "isPartOf": { "@id": "https://089bayern.com/#website" },
@@ -327,6 +360,125 @@ function buildJsonLd(page: PageType, language: Language, data: { title: string; 
       "inLanguage": inLanguage
     }
   ];
+
+  const productPages = ["gunes-paneli", "isi-pompasi", "klima", "enerji-depolama"];
+  if (productPages.includes(page)) {
+    const productData: Record<string, any> = {
+      "gunes-paneli": {
+        name: { tr: "Güneş Paneli Kurulum Hizmeti", de: "Solaranlage Installationsservice", en: "Solar Panel Installation Service" },
+        desc: { tr: "Antalya ve Akdeniz bölgesinde profesyonel güneş paneli kurulumu. Tier-1 paneller, Alman kalitesi montaj.", de: "Professionelle Solaranlage Installation in Antalya und der Mittelmeerregion. Tier-1 Panels, deutsche Qualität.", en: "Professional solar panel installation in Antalya and the Mediterranean. Tier-1 panels, German quality." },
+        category: { tr: "Güneş Enerjisi", de: "Solarenergie", en: "Solar Energy" },
+        brand: "Tier-1 Solar Panels",
+        priceMin: "8500", priceMax: "16000",
+        image: "https://089bayern.com/images/hero-solar-panel.webp"
+      },
+      "isi-pompasi": {
+        name: { tr: "Vaillant Isı Pompası Kurulum Hizmeti", de: "Vaillant Wärmepumpe Installationsservice", en: "Vaillant Heat Pump Installation Service" },
+        desc: { tr: "Vaillant ısı pompası kurulumu. COP 5.0 verimlilik, %60 enerji tasarrufu.", de: "Vaillant Wärmepumpe Installation. COP 5.0 Effizienz, 60% Energieeinsparung.", en: "Vaillant heat pump installation. COP 5.0 efficiency, 60% energy savings." },
+        category: { tr: "Isıtma ve Soğutma", de: "Heizung und Kühlung", en: "Heating and Cooling" },
+        brand: "Vaillant",
+        priceMin: "9800", priceMax: "14500",
+        image: "https://089bayern.com/images/hero-heat-pump.webp"
+      },
+      "klima": {
+        name: { tr: "Samsung WindFree Klima Kurulum Hizmeti", de: "Samsung WindFree Klimaanlage Installationsservice", en: "Samsung WindFree AC Installation Service" },
+        desc: { tr: "Samsung WindFree klima sistemi kurulumu. Sessiz ve enerji verimli.", de: "Samsung WindFree Klimaanlage Installation. Leise und energieeffizient.", en: "Samsung WindFree AC installation. Silent and energy efficient." },
+        category: { tr: "Klima Sistemleri", de: "Klimasysteme", en: "Climate Systems" },
+        brand: "Samsung",
+        priceMin: "4500", priceMax: "8500",
+        image: "https://089bayern.com/images/hero-climate.webp"
+      },
+      "enerji-depolama": {
+        name: { tr: "Lityum Batarya Depolama Kurulum Hizmeti", de: "Lithium Batteriespeicher Installationsservice", en: "Lithium Battery Storage Installation Service" },
+        desc: { tr: "10-15 kWh lityum iyon batarya depolama sistemi. 6000+ şarj döngüsü.", de: "10-15 kWh Lithium-Ionen Batteriespeicher. 6000+ Ladezyklen.", en: "10-15 kWh lithium-ion battery storage. 6000+ charge cycles." },
+        category: { tr: "Enerji Depolama", de: "Energiespeicher", en: "Energy Storage" },
+        brand: "LiFePO4",
+        priceMin: "7500", priceMax: "12000",
+        image: "https://089bayern.com/images/hero-battery-storage.webp"
+      }
+    };
+    const pd = productData[page];
+    const lang = language as string;
+    graphItems.push({
+      "@type": "Service",
+      "@id": `${pageUrl}#service`,
+      "name": (pd.name as any)[lang] || pd.name.tr,
+      "description": (pd.desc as any)[lang] || pd.desc.tr,
+      "category": (pd.category as any)[lang] || pd.category.tr,
+      "brand": { "@type": "Brand", "name": pd.brand },
+      "image": pd.image,
+      "provider": { "@id": "https://089bayern.com/#organization" },
+      "areaServed": { "@type": "Country", "name": "Türkiye" },
+      "serviceType": language === "tr" ? "Enerji Sistemi Kurulumu" : "Energy System Installation",
+      "termsOfService": "https://089bayern.com/sartlar",
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": pd.priceMin,
+        "highPrice": pd.priceMax,
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2026-01-01",
+        "priceValidUntil": "2026-12-31",
+        "seller": { "@id": "https://089bayern.com/#organization" }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": (pd.name as any)[lang] || pd.name.tr,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": (pd.name as any)[lang] || pd.name.tr }, "priceCurrency": "EUR", "price": pd.priceMin, "availability": "https://schema.org/InStock" }
+        ]
+      }
+    });
+  }
+
+  const installPages = ["installation-antalya", "installation-alanya", "installation-ankara"];
+  if (installPages.includes(page)) {
+    const installFaqs: Array<{ q: Record<string, string>; a: Record<string, string> }> = [
+      {
+        q: { tr: "Kurulum ne kadar sürer?", de: "Wie lange dauert die Installation?", en: "How long does installation take?" },
+        a: { tr: "4'ü 1 arada enerji sistemi kurulumu genellikle 3-5 iş günü sürer. Sadece güneş paneli kurulumu 1-2 gün sürer.", de: "Die Installation des 4-in-1 Energiesystems dauert in der Regel 3-5 Werktage.", en: "The 4-in-1 energy system installation typically takes 3-5 business days." }
+      },
+      {
+        q: { tr: "Garanti süresi ne kadar?", de: "Wie lang ist die Garantiezeit?", en: "What is the warranty period?" },
+        a: { tr: "Tüm sistemlerimiz 10 yıl garanti ile gelir. Güneş panelleri 25 yıl performans garantisi sunar.", de: "Alle unsere Systeme kommen mit 10 Jahren Garantie. Solarpanels bieten 25 Jahre Leistungsgarantie.", en: "All our systems come with 10-year warranty. Solar panels offer 25-year performance guarantee." }
+      },
+      {
+        q: { tr: "Fiyat aralığı nedir?", de: "Was ist die Preisspanne?", en: "What is the price range?" },
+        a: { tr: "200m² villa için ca. 35.000-50.000 EUR. Standart 6kWp: ca. 31.200 EUR, Orta 10kWp: ca. 41.600 EUR, Premium 12kWp: ca. 58.500 EUR.", de: "Für eine 200m² Villa ca. 35.000-50.000 EUR. Standard 6kWp: ca. 31.200 EUR, Mittel 10kWp: ca. 41.600 EUR, Premium 12kWp: ca. 58.500 EUR.", en: "For a 200m² villa approx. 35,000-50,000 EUR. Standard 6kWp: ~31,200 EUR, Medium 10kWp: ~41,600 EUR, Premium 12kWp: ~58,500 EUR." }
+      }
+    ];
+    const lang = language as string;
+    graphItems.push({
+      "@type": "FAQPage",
+      "@id": `${pageUrl}#faqpage`,
+      "mainEntity": installFaqs.map(fq => ({
+        "@type": "Question",
+        "name": (fq.q as any)[lang] || fq.q.tr,
+        "acceptedAnswer": { "@type": "Answer", "text": (fq.a as any)[lang] || fq.a.tr }
+      }))
+    });
+
+    graphItems.push({
+      "@type": "HowTo",
+      "@id": `${pageUrl}#howto`,
+      "name": language === "tr" ? "4'ü 1 Arada Enerji Sistemi Kurulum Süreci" : language === "de" ? "4-in-1 Energiesystem Installationsprozess" : "4-in-1 Energy System Installation Process",
+      "description": language === "tr" ? "Villa enerji sistemi kurulum adımları" : language === "de" ? "Schritte der Villa-Energiesystem-Installation" : "Steps for villa energy system installation",
+      "totalTime": "P5D",
+      "estimatedCost": { "@type": "MonetaryAmount", "currency": "EUR", "value": "35000-50000" },
+      "tool": [
+        { "@type": "HowToTool", "name": language === "tr" ? "Güneş Panelleri (Tier-1)" : "Solar Panels (Tier-1)" },
+        { "@type": "HowToTool", "name": "Vaillant aroTHERM plus" },
+        { "@type": "HowToTool", "name": "Samsung WindFree" },
+        { "@type": "HowToTool", "name": language === "tr" ? "LiFePO4 Batarya" : "LiFePO4 Battery" }
+      ],
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": language === "tr" ? "Ücretsiz Keşif ve Analiz" : language === "de" ? "Kostenlose Beratung und Analyse" : "Free Consultation and Analysis", "text": language === "tr" ? "Uzman ekibimiz villanızı ziyaret eder, enerji ihtiyacınızı analiz eder ve kişiselleştirilmiş çözüm sunar." : language === "de" ? "Unser Expertenteam besucht Ihre Villa, analysiert Ihren Energiebedarf und bietet eine maßgeschneiderte Lösung." : "Our expert team visits your villa, analyzes energy needs and offers a personalized solution." },
+        { "@type": "HowToStep", "position": 2, "name": language === "tr" ? "Sistem Tasarımı ve Teklif" : language === "de" ? "Systemdesign und Angebot" : "System Design and Quote", "text": language === "tr" ? "DIN standartlarına uygun sistem tasarımı, detaylı maliyet ve tasarruf hesabı." : language === "de" ? "Systemdesign nach DIN-Normen, detaillierte Kosten- und Einsparungsberechnung." : "System design to DIN standards, detailed cost and savings calculation." },
+        { "@type": "HowToStep", "position": 3, "name": language === "tr" ? "Profesyonel Kurulum" : language === "de" ? "Professionelle Installation" : "Professional Installation", "text": language === "tr" ? "Sertifikalı teknisyenler tarafından 3-5 iş günü içinde kurulum tamamlanır." : language === "de" ? "Installation durch zertifizierte Techniker innerhalb von 3-5 Werktagen." : "Installation by certified technicians within 3-5 business days." },
+        { "@type": "HowToStep", "position": 4, "name": language === "tr" ? "Test ve Devreye Alma" : language === "de" ? "Test und Inbetriebnahme" : "Testing and Commissioning", "text": language === "tr" ? "Sistem testi, optimizasyon ve müşteri eğitimi. 10 yıl garanti ile teslim." : language === "de" ? "Systemtest, Optimierung und Kundeneinweisung. Übergabe mit 10 Jahren Garantie." : "System testing, optimization and customer training. Handover with 10-year warranty." }
+      ]
+    });
+  }
 
   if (page === "faq") {
     const faqQuestions = [
@@ -361,7 +513,7 @@ function buildJsonLd(page: PageType, language: Language, data: { title: string; 
         "acceptedAnswer": { "@type": "Answer", "text": (fq.a as any)[lang] || fq.a.tr }
       })),
       "mainEntityOfPage": { "@id": `${pageUrl}#webpage` },
-      "dateModified": "2026-02-11",
+      "dateModified": "2026-02-16",
       "author": { "@id": "https://089bayern.com/#organization" }
     });
   }

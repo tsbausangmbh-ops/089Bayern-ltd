@@ -634,7 +634,7 @@ export default function SEOHead({ page, pageTitle, customFaqItems }: SEOHeadProp
       "@id": `${faqPageUrl || pageUrl}#faqpage`,
       "mainEntity": faqItems,
       "mainEntityOfPage": { "@id": `${faqPageUrl || pageUrl}#webpage` },
-      "dateModified": "2026-02-11",
+      "dateModified": "2026-02-16",
       "author": { "@id": "https://089bayern.com/#organization" }
     };
   })() : null;
@@ -788,7 +788,7 @@ export default function SEOHead({ page, pageTitle, customFaqItems }: SEOHeadProp
       "inLanguage": ["tr-TR", "de-DE", "en-US", "ru-RU", "uk-UA", "ar-SA", "hr-HR"]
     },
     {
-      "@type": ["LocalBusiness", "Organization"],
+      "@type": ["LocalBusiness", "ProfessionalService", "Organization"],
       "@id": "https://089bayern.com/#organization",
       "name": language === "tr" ? "089 Bayern Enerji Sistemleri" : "089 Bayern Energiesysteme",
       "alternateName": ["089 Bayern", "089Bayern", "089 Bayern Enerji", "089 Bayern Energiesysteme"],
@@ -858,6 +858,12 @@ export default function SEOHead({ page, pageTitle, customFaqItems }: SEOHeadProp
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": language === "tr" ? "Enerji Depolama Bataryası" : "Battery Storage System", "description": language === "tr" ? "Lityum iyon enerji depolama" : "Lithium-ion energy storage" } }
         ]
       },
+      "knowsLanguage": ["tr", "de", "en", "hr", "ru"],
+      "review": [
+        { "@type": "Review", "author": { "@type": "Person", "name": "Mehmet Y." }, "datePublished": "2025-11-15", "reviewBody": language === "tr" ? "Villamıza 4'ü 1 arada sistem kurdurduk. Alman kalitesi gerçekten fark yaratıyor. 6 ayda elektrik faturamız %70 düştü." : "We had the 4-in-1 system installed in our villa. German quality really makes a difference. Our electricity bill dropped 70% in 6 months.", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Klaus H." }, "datePublished": "2025-09-20", "reviewBody": language === "tr" ? "Almanya'dan Antalya'ya taşındık. 089 Bayern sayesinde Alman standartlarında enerji sistemi kurduk." : language === "de" ? "Wir sind von Deutschland nach Antalya gezogen. Dank 089 Bayern haben wir ein Energiesystem nach deutschen Standards." : "We moved from Germany to Antalya. Thanks to 089 Bayern, we set up an energy system to German standards.", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Ayse K." }, "datePublished": "2025-07-10", "reviewBody": language === "tr" ? "Kemer'deki villamız için Vaillant ısı pompası ve güneş paneli taktırdık. Kışın bile ısınma masrafımız neredeyse sıfır." : language === "de" ? "Für unsere Villa in Kemer haben wir eine Vaillant Wärmepumpe und Solaranlage installiert. Selbst im Winter fast null Heizkosten." : "For our villa in Kemer we had a Vaillant heat pump and solar panels installed. Even in winter, heating costs are nearly zero.", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } }
+      ],
       "sameAs": [
         "https://www.facebook.com/089bayern",
         "https://www.instagram.com/089bayern",
@@ -876,7 +882,7 @@ export default function SEOHead({ page, pageTitle, customFaqItems }: SEOHeadProp
       "name": title,
       "description": data.description,
       "datePublished": "2024-01-01",
-      "dateModified": "2026-02-11",
+      "dateModified": "2026-02-16",
       "copyrightYear": 2026,
       "copyrightHolder": { "@id": "https://089bayern.com/#organization" },
       "isPartOf": { "@id": "https://089bayern.com/#website" },
@@ -904,6 +910,53 @@ export default function SEOHead({ page, pageTitle, customFaqItems }: SEOHeadProp
 
   if (installationServiceSchema) {
     installationServiceSchema.forEach(s => graphItems.push(s));
+  }
+
+  if (installationPages.includes(page)) {
+    graphItems.push({
+      "@type": "HowTo",
+      "@id": `${pageUrl}#howto`,
+      "name": language === "tr" ? "4'ü 1 Arada Enerji Sistemi Kurulum Süreci" : language === "de" ? "4-in-1 Energiesystem Installationsprozess" : language === "ru" ? "Процесс установки энергосистемы 4-в-1" : language === "uk" ? "Процес встановлення енергосистеми 4-в-1" : language === "ar" ? "عملية تركيب نظام الطاقة 4 في 1" : language === "hr" ? "Proces instalacije 4-u-1 energetskog sustava" : "4-in-1 Energy System Installation Process",
+      "description": language === "tr" ? "Villanız için enerji sistemi kurulum adımları" : language === "de" ? "Schritte der Energiesystem-Installation für Ihre Villa" : "Steps for energy system installation for your villa",
+      "totalTime": "P5D",
+      "estimatedCost": { "@type": "MonetaryAmount", "currency": "EUR", "value": "35000-50000" },
+      "tool": [
+        { "@type": "HowToTool", "name": language === "tr" ? "Güneş Panelleri (Tier-1)" : "Solar Panels (Tier-1)" },
+        { "@type": "HowToTool", "name": "Vaillant aroTHERM plus" },
+        { "@type": "HowToTool", "name": "Samsung WindFree" },
+        { "@type": "HowToTool", "name": language === "tr" ? "LiFePO4 Batarya" : "LiFePO4 Battery" }
+      ],
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": language === "tr" ? "Ücretsiz Keşif ve Analiz" : language === "de" ? "Kostenlose Beratung und Analyse" : "Free Consultation and Analysis", "text": language === "tr" ? "Uzman ekibimiz villanızı ziyaret eder, enerji ihtiyacınızı analiz eder ve kişiselleştirilmiş çözüm sunar." : language === "de" ? "Unser Expertenteam besucht Ihre Villa, analysiert Ihren Energiebedarf und bietet eine maßgeschneiderte Lösung." : "Our expert team visits your villa, analyzes energy needs and offers a personalized solution." },
+        { "@type": "HowToStep", "position": 2, "name": language === "tr" ? "Sistem Tasarımı ve Teklif" : language === "de" ? "Systemdesign und Angebot" : "System Design and Quote", "text": language === "tr" ? "DIN standartlarına uygun sistem tasarımı, detaylı maliyet ve tasarruf hesabı." : language === "de" ? "Systemdesign nach DIN-Normen, detaillierte Kosten- und Einsparungsberechnung." : "System design to DIN standards, detailed cost and savings calculation." },
+        { "@type": "HowToStep", "position": 3, "name": language === "tr" ? "Profesyonel Kurulum" : language === "de" ? "Professionelle Installation" : "Professional Installation", "text": language === "tr" ? "Sertifikalı teknisyenler tarafından 3-5 iş günü içinde kurulum tamamlanır." : language === "de" ? "Installation durch zertifizierte Techniker innerhalb von 3-5 Werktagen." : "Installation by certified technicians within 3-5 business days." },
+        { "@type": "HowToStep", "position": 4, "name": language === "tr" ? "Test ve Devreye Alma" : language === "de" ? "Test und Inbetriebnahme" : "Testing and Commissioning", "text": language === "tr" ? "Sistem testi, optimizasyon ve müşteri eğitimi. 10 yıl garanti ile teslim." : language === "de" ? "Systemtest, Optimierung und Kundeneinweisung. Übergabe mit 10 Jahren Garantie." : "System testing, optimization and customer training. Handover with 10-year warranty." }
+      ]
+    });
+
+    const installFaqs = [
+      {
+        q: language === "tr" ? "Kurulum ne kadar sürer?" : language === "de" ? "Wie lange dauert die Installation?" : "How long does installation take?",
+        a: language === "tr" ? "4'ü 1 arada enerji sistemi kurulumu genellikle 3-5 iş günü sürer." : language === "de" ? "Die Installation des 4-in-1 Energiesystems dauert in der Regel 3-5 Werktage." : "The 4-in-1 energy system installation typically takes 3-5 business days."
+      },
+      {
+        q: language === "tr" ? "Garanti süresi ne kadar?" : language === "de" ? "Wie lang ist die Garantiezeit?" : "What is the warranty period?",
+        a: language === "tr" ? "Tüm sistemlerimiz 10 yıl garanti ile gelir. Güneş panelleri 25 yıl performans garantisi sunar." : language === "de" ? "Alle unsere Systeme kommen mit 10 Jahren Garantie. Solarpanels bieten 25 Jahre Leistungsgarantie." : "All our systems come with 10-year warranty. Solar panels offer 25-year performance guarantee."
+      },
+      {
+        q: language === "tr" ? "Fiyat aralığı nedir?" : language === "de" ? "Was ist die Preisspanne?" : "What is the price range?",
+        a: language === "tr" ? "200m² villa için ca. 35.000-50.000 EUR. Standart 6kWp: ca. 31.200 EUR, Orta 10kWp: ca. 41.600 EUR, Premium 12kWp: ca. 58.500 EUR." : language === "de" ? "Für eine 200m² Villa ca. 35.000-50.000 EUR. Standard 6kWp: ca. 31.200 EUR, Mittel 10kWp: ca. 41.600 EUR, Premium 12kWp: ca. 58.500 EUR." : "For a 200m² villa approx. 35,000-50,000 EUR. Standard 6kWp: ~31,200 EUR, Medium 10kWp: ~41,600 EUR, Premium 12kWp: ~58,500 EUR."
+      }
+    ];
+    graphItems.push({
+      "@type": "FAQPage",
+      "@id": `${pageUrl}#faqpage`,
+      "mainEntity": installFaqs.map(fq => ({
+        "@type": "Question",
+        "name": fq.q,
+        "acceptedAnswer": { "@type": "Answer", "text": fq.a }
+      }))
+    });
   }
 
   const ogImageMap: Record<string, string> = {
