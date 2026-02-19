@@ -24,6 +24,8 @@ export default function HeroSection({ onCtaClick, onLearnMoreClick }: HeroSectio
         title="089 Bayern 4-in-1 enerji sistemi villa çatısı güneş paneli kurulumu Antalya fiyatları 2026"
         className="absolute inset-0 w-full h-full object-cover scale-105"
         decoding="async"
+        fetchPriority="high"
+        loading="eager"
       />
       <div className="absolute inset-0 bg-black/50" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40" />

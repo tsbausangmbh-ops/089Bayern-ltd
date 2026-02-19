@@ -325,6 +325,8 @@ export default function Klima() {
           title="Samsung WindFree klima sistemi kurulumu Antalya villa fiyatları 2026 - sessiz enerji verimli soğutma"
           className="absolute inset-0 w-full h-full object-cover"
           decoding="async"
+          fetchPriority="high"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-background" />
         

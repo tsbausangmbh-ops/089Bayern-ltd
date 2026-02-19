@@ -259,6 +259,8 @@ export default function EnerjiDepolama() {
           title="Samsung batarya depolama sistemi kurulumu Antalya villa fiyatları 2026 - 10 kWh 15 kWh kesintisiz enerji"
           className="absolute inset-0 w-full h-full object-cover"
           decoding="async"
+          fetchPriority="high"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/80 via-green-800/70 to-teal-900/80" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />

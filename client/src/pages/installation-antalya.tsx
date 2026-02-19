@@ -1086,7 +1086,7 @@ export default function InstallationAntalya() {
       
       {/* Hero Section */}
       <section className="relative pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 overflow-hidden" data-testid="section-antalya-hero">
-        <img src={heroImage} alt="089 Bayern 4'ü 1 arada enerji sistemi kurulumu Antalya Akdeniz villası güneş paneli Vaillant ısı pompası Samsung klima batarya depolama profesyonel montaj Kemer Belek Side Alanya Türkiye" title="4-in-1 enerji sistemi kurulumu Antalya villa fiyatları 2026 - güneş paneli ısı pompası klima batarya Kemer Belek Side" className="absolute inset-0 w-full h-full object-cover" decoding="async" />
+        <img src={heroImage} alt="089 Bayern 4'ü 1 arada enerji sistemi kurulumu Antalya Akdeniz villası güneş paneli Vaillant ısı pompası Samsung klima batarya depolama profesyonel montaj Kemer Belek Side Alanya Türkiye" title="4-in-1 enerji sistemi kurulumu Antalya villa fiyatları 2026 - güneş paneli ısı pompası klima batarya Kemer Belek Side" className="absolute inset-0 w-full h-full object-cover" decoding="async" fetchPriority="high" loading="eager" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8">

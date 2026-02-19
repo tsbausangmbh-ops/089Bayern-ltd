@@ -468,7 +468,7 @@ export default function Vorteile() {
       
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center pt-16 sm:pt-20" data-testid="section-vorteile-hero">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="089 Bayern 4 in 1 enerji sistemi avantajları Antalya villa güneş paneli ısı pompası klima batarya ile yüzde 70 tasarruf Akdeniz bölgesi" title="4-in-1 enerji sistemi avantajları Antalya villa - güneş paneli ısı pompası klima batarya ile %70 tasarruf 2026" className="w-full h-full object-cover" decoding="async" />
+          <img src={heroImage} alt="089 Bayern 4 in 1 enerji sistemi avantajları Antalya villa güneş paneli ısı pompası klima batarya ile yüzde 70 tasarruf Akdeniz bölgesi" title="4-in-1 enerji sistemi avantajları Antalya villa - güneş paneli ısı pompası klima batarya ile %70 tasarruf 2026" className="w-full h-full object-cover" decoding="async" fetchPriority="high" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         </div>
         

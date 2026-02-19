@@ -1041,7 +1041,8 @@ export default function SEOHead({ page, pageTitle, customFaqItems }: SEOHeadProp
       <meta name="geo.position" content={`${geoData.lat};${geoData.lng}`} />
       <meta name="geo.country" content="TR" />
       <meta name="ICBM" content={`${geoData.lat}, ${geoData.lng}`} />
-      <meta name="distribution" content="global" />
+      <meta name="distribution" content="local" />
+      <meta name="coverage" content="Turkey, Antalya, Alanya, Ankara" />
       <meta name="target" content="TR" />
       <meta name="audience" content="all" />
       
